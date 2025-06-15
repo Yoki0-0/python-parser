@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний просмотр</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>OKX Новости</td>
+        <td><a href="https://t.me/okx_ru">https://t.me/okx_ru</a></td>
+        <td>Криптовалюты</td>
+        <td>6933231</td>
+        <td>21159</td>
+        <td>1.0</td>
+        <td>-46395</td>
+        <td>-228721</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Прямой Эфир • Новости</td>
+        <td><a href="https://t.me/novosti_efir">https://t.me/novosti_efir</a></td>
+        <td>Новости и СМИ</td>
+        <td>5589314</td>
+        <td>808932</td>
+        <td>15.0</td>
+        <td>62012</td>
+        <td>605258</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Леонардо Дайвинчик</td>
+        <td><a href="https://t.me/leoday">https://t.me/leoday</a></td>
+        <td>Юмор и развлечения</td>
+        <td>5059700</td>
+        <td>302618</td>
+        <td>6.0</td>
+        <td>31365</td>
+        <td>113783</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>HAYZON</td>
+        <td><a href="https://t.me/hayzonn">https://t.me/hayzonn</a></td>
+        <td>Криптовалюты</td>
+        <td>4785634</td>
+        <td>111853</td>
+        <td>3.0</td>
+        <td>-33615</td>
+        <td>-154799</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москвач • Новости Москвы</td>
+        <td><a href="https://t.me/moscowach">https://t.me/moscowach</a></td>
+        <td>Новости и СМИ</td>
+        <td>4681696</td>
+        <td>634000</td>
+        <td>14.0</td>
+        <td>-107896</td>
+        <td>-445843</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Топор Live</td>
+        <td><a href="https://t.me/joinchat/sOj9iDAtUkMyYWQy">https://t.me/joinchat/sOj9iDAtUkMyYWQy</a></td>
+        <td>Новости и СМИ</td>
+        <td>4320534</td>
+        <td>877981</td>
+        <td>21.0</td>
+        <td>109364</td>
+        <td>74825</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МЕМАЧ</td>
+        <td><a href="https://t.me/memachh">https://t.me/memachh</a></td>
+        <td>Юмор и развлечения</td>
+        <td>4025008</td>
+        <td>378739</td>
+        <td>10.0</td>
+        <td>-41003</td>
+        <td>223292</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Crypto Wolf</td>
+        <td><a href="https://t.me/Crypto_Woolf">https://t.me/Crypto_Woolf</a></td>
+        <td>Криптовалюты</td>
+        <td>3755468</td>
+        <td>9795</td>
+        <td>1.0</td>
+        <td>-53132</td>
+        <td>-101832</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Дайте TON!</td>
+        <td><a href="https://t.me/givemetonru">https://t.me/givemetonru</a></td>
+        <td>Криптовалюты</td>
+        <td>3560855</td>
+        <td>5001</td>
+        <td>1.0</td>
+        <td>-20832</td>
+        <td>-90215</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Новости Crypto Bot</td>
+        <td><a href="https://t.me/CryptoBotRU">https://t.me/CryptoBotRU</a></td>
+        <td>Криптовалюты</td>
+        <td>3497110</td>
+        <td>166561</td>
+        <td>5.0</td>
+        <td>-20810</td>
+        <td>-104615</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>РИА Новости</td>
+        <td><a href="https://t.me/rian_ru">https://t.me/rian_ru</a></td>
+        <td>Новости и СМИ</td>
+        <td>3366350</td>
+        <td>599734</td>
+        <td>18.0</td>
+        <td>9737</td>
+        <td>1832</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Mash</td>
+        <td><a href="https://t.me/mash">https://t.me/mash</a></td>
+        <td>Новости и СМИ</td>
+        <td>3270120</td>
+        <td>1069110</td>
+        <td>33.0</td>
+        <td>14264</td>
+        <td>43802</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СМИ Россия не Москва</td>
+        <td><a href="https://t.me/smi_rf_moskva">https://t.me/smi_rf_moskva</a></td>
+        <td>Новости и СМИ</td>
+        <td>3196483</td>
+        <td>174218</td>
+        <td>6.0</td>
+        <td>-47589</td>
+        <td>2184</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Investment kingyru 💎</td>
+        <td><a href="https://t.me/investkingyru">https://t.me/investkingyru</a></td>
+        <td>Криптовалюты</td>
+        <td>3108477</td>
+        <td>12028</td>
+        <td>1.0</td>
+        <td>-17160</td>
+        <td>-92042</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>DeCenter — блокчейн, биткоин, инвестиции</td>
+        <td><a href="https://t.me/DeCenter">https://t.me/DeCenter</a></td>
+        <td>Криптовалюты</td>
+        <td>3034394</td>
+        <td>52949</td>
+        <td>2.0</td>
+        <td>-15919</td>
+        <td>-77565</td>
+        <td>9 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TON — LIVE</td>
+        <td><a href="https://t.me/tonlive">https://t.me/tonlive</a></td>
+        <td>Криптовалюты</td>
+        <td>2905704</td>
+        <td>33532</td>
+        <td>2.0</td>
+        <td>-14828</td>
+        <td>-73450</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Readovka</td>
+        <td><a href="https://t.me/readovkanews">https://t.me/readovkanews</a></td>
+        <td>Новости и СМИ</td>
+        <td>2631284</td>
+        <td>880647</td>
+        <td>34.0</td>
+        <td>3486</td>
+        <td>-17942</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>рост будет бесконечный</td>
+        <td><a href="https://t.me/tonbase">https://t.me/tonbase</a></td>
+        <td>Криптовалюты</td>
+        <td>2602410</td>
+        <td>12950</td>
+        <td>1.0</td>
+        <td>-15834</td>
+        <td>-72983</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЯЗЫКИ И ТЕМЫ ТГ ОБОИ</td>
+        <td><a href="https://t.me/temki_zvezdy">https://t.me/temki_zvezdy</a></td>
+        <td>Картинки и фото</td>
+        <td>2590516</td>
+        <td>149750</td>
+        <td>6.0</td>
+        <td>33819</td>
+        <td>35542</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ᴄᴜʟᴛ</td>
+        <td><a href="https://t.me/cultvcrypto">https://t.me/cultvcrypto</a></td>
+        <td>Криптовалюты</td>
+        <td>2544681</td>
+        <td>45100</td>
+        <td>2.0</td>
+        <td>-28679</td>
+        <td>-131828</td>
+        <td>11 месяцев 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>TikTokModCloud ☁️</td>
+        <td><a href="https://t.me/TikTokModCloud">https://t.me/TikTokModCloud</a></td>
+        <td>Софт и приложения</td>
+        <td>2513668</td>
+        <td>797607</td>
+        <td>32.0</td>
+        <td>-3676</td>
+        <td>88481</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Первый Московский</td>
+        <td><a href="https://t.me/mosguru">https://t.me/mosguru</a></td>
+        <td>Новости и СМИ</td>
+        <td>2486045</td>
+        <td>275143</td>
+        <td>12.0</td>
+        <td>-7947</td>
+        <td>72466</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>1337</td>
+        <td><a href="https://t.me/media1337">https://t.me/media1337</a></td>
+        <td>Технологии</td>
+        <td>2328595</td>
+        <td>199219</td>
+        <td>9.0</td>
+        <td>-2910</td>
+        <td>-206000</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>NewTon💎</td>
+        <td><a href="https://t.me/newsnewtons">https://t.me/newsnewtons</a></td>
+        <td>Криптовалюты</td>
+        <td>2328341</td>
+        <td>41291</td>
+        <td>2.0</td>
+        <td>-20739</td>
+        <td>-2948</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Типичный Инвестор</td>
+        <td><a href="https://t.me/eduardinvest">https://t.me/eduardinvest</a></td>
+        <td>Криптовалюты</td>
+        <td>2314973</td>
+        <td>11866</td>
+        <td>1.0</td>
+        <td>-15236</td>
+        <td>-72906</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Fintopio Новости</td>
+        <td><a href="https://t.me/fintopiochannel">https://t.me/fintopiochannel</a></td>
+        <td>Криптовалюты</td>
+        <td>2305034</td>
+        <td>8676</td>
+        <td>1.0</td>
+        <td>-13126</td>
+        <td>-69287</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Москва Live</td>
+        <td><a href="https://t.me/msk_live">https://t.me/msk_live</a></td>
+        <td>Новости и СМИ</td>
+        <td>2249274</td>
+        <td>391196</td>
+        <td>18.0</td>
+        <td>-14909</td>
+        <td>-64831</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>NN</td>
+        <td><a href="https://t.me/naebnet">https://t.me/naebnet</a></td>
+        <td>Технологии</td>
+        <td>2192531</td>
+        <td>189562</td>
+        <td>9.0</td>
+        <td>-5310</td>
+        <td>-45886</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Новости Москвы</td>
+        <td><a href="https://t.me/moscowmap">https://t.me/moscowmap</a></td>
+        <td>Новости и СМИ</td>
+        <td>2177288</td>
+        <td>694405</td>
+        <td>32.0</td>
+        <td>-611</td>
+        <td>-2370</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикерач</td>
+        <td><a href="https://t.me/stikery_emodzi_memy">https://t.me/stikery_emodzi_memy</a></td>
+        <td>Картинки и фото</td>
+        <td>2163269</td>
+        <td>430772</td>
+        <td>20.0</td>
+        <td>-36758</td>
+        <td>-51174</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бэкдор</td>
+        <td><a href="https://t.me/whackdoor">https://t.me/whackdoor</a></td>
+        <td>Технологии</td>
+        <td>2120581</td>
+        <td>152435</td>
+        <td>8.0</td>
+        <td>-33372</td>
+        <td>574457</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Kadyrov_95</td>
+        <td><a href="https://t.me/RKadyrov_95">https://t.me/RKadyrov_95</a></td>
+        <td>Политика</td>
+        <td>2058430</td>
+        <td>191773</td>
+        <td>10.0</td>
+        <td>4070</td>
+        <td>38238</td>
+        <td>8 лет 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Техномотель</td>
+        <td><a href="https://t.me/technomotel">https://t.me/technomotel</a></td>
+        <td>Технологии</td>
+        <td>2055107</td>
+        <td>172753</td>
+        <td>9.0</td>
+        <td>-20982</td>
+        <td>-23562</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>MILLIARDOM</td>
+        <td><a href="https://t.me/milliardom">https://t.me/milliardom</a></td>
+        <td>Криптовалюты</td>
+        <td>2031605</td>
+        <td>4447</td>
+        <td>1.0</td>
+        <td>-12704</td>
+        <td>-65454</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мысли Семенчука</td>
+        <td><a href="https://t.me/semenchuk">https://t.me/semenchuk</a></td>
+        <td>Криптовалюты</td>
+        <td>2022571</td>
+        <td>6373</td>
+        <td>1.0</td>
+        <td>-23891</td>
+        <td>-105231</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Москвач+</td>
+        <td><a href="https://t.me/moscowachplus">https://t.me/moscowachplus</a></td>
+        <td>Новости и СМИ</td>
+        <td>2020284</td>
+        <td>204046</td>
+        <td>11.0</td>
+        <td>-74888</td>
+        <td>-72378</td>
+        <td>2 года</td>
+      </tr>
+
+      <tr>
+        <td>Москва - это интересно</td>
+        <td><a href="https://t.me/mskint">https://t.me/mskint</a></td>
+        <td>Новости и СМИ</td>
+        <td>2015305</td>
+        <td>179964</td>
+        <td>9.0</td>
+        <td>-23868</td>
+        <td>360067</td>
+        <td>2 года 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Эксплойт</td>
+        <td><a href="https://t.me/exploitex">https://t.me/exploitex</a></td>
+        <td>Технологии</td>
+        <td>2007203</td>
+        <td>216449</td>
+        <td>11.0</td>
+        <td>-24905</td>
+        <td>-53114</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TikTok Updates 🔥</td>
+        <td><a href="https://t.me/tiktokupdatez">https://t.me/tiktokupdatez</a></td>
+        <td>Софт и приложения</td>
+        <td>1975584</td>
+        <td>749427</td>
+        <td>38.0</td>
+        <td>35859</td>
+        <td>234190</td>
+        <td>8 месяцев 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Раньше всех. Ну почти.</td>
+        <td><a href="https://t.me/bbbreaking">https://t.me/bbbreaking</a></td>
+        <td>Новости и СМИ</td>
+        <td>1949204</td>
+        <td>562322</td>
+        <td>29.0</td>
+        <td>6353</td>
+        <td>11358</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Правдивости</td>
+        <td><a href="https://t.me/joinchat/19UsJwMmEWM4Y2Ri">https://t.me/joinchat/19UsJwMmEWM4Y2Ri</a></td>
+        <td>Новости и СМИ</td>
+        <td>1936015</td>
+        <td>168201</td>
+        <td>9.0</td>
+        <td>-622</td>
+        <td>-17419</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КиберТопор</td>
+        <td><a href="https://t.me/cybers">https://t.me/cybers</a></td>
+        <td>Игры</td>
+        <td>1935330</td>
+        <td>496459</td>
+        <td>26.0</td>
+        <td>32189</td>
+        <td>16015</td>
+        <td>2 года 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Ladesov Crypto</td>
+        <td><a href="https://t.me/cryptoladesov">https://t.me/cryptoladesov</a></td>
+        <td>Криптовалюты</td>
+        <td>1861405</td>
+        <td>18343</td>
+        <td>1.0</td>
+        <td>-22505</td>
+        <td>-105739</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мир Supercell</td>
+        <td><a href="https://t.me/mir_supercell">https://t.me/mir_supercell</a></td>
+        <td>Игры</td>
+        <td>1856799</td>
+        <td>278979</td>
+        <td>15.0</td>
+        <td>6967</td>
+        <td>37172</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дима Масленников Блоггер</td>
+        <td><a href="https://t.me/maslennikovliga">https://t.me/maslennikovliga</a></td>
+        <td>Блоги</td>
+        <td>1809888</td>
+        <td>852671</td>
+        <td>48.0</td>
+        <td>1652</td>
+        <td>-25441</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TON AirDrop (RU)💎</td>
+        <td><a href="https://t.me/TonAirDrop_ru">https://t.me/TonAirDrop_ru</a></td>
+        <td>Криптовалюты</td>
+        <td>1752403</td>
+        <td>9511</td>
+        <td>1.0</td>
+        <td>-12740</td>
+        <td>-41625</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Iceberg RU</td>
+        <td><a href="https://t.me/icebergcis">https://t.me/icebergcis</a></td>
+        <td>Криптовалюты</td>
+        <td>1736392</td>
+        <td>21533</td>
+        <td>2.0</td>
+        <td>-11203</td>
+        <td>-55619</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Nodex MRKT #1</td>
+        <td><a href="https://t.me/nodexMI">https://t.me/nodexMI</a></td>
+        <td>Криптовалюты</td>
+        <td>1731681</td>
+        <td>6369</td>
+        <td>1.0</td>
+        <td>1622</td>
+        <td>-12568</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Москва сегодня</td>
+        <td><a href="https://t.me/moscow">https://t.me/moscow</a></td>
+        <td>Новости и СМИ</td>
+        <td>1729725</td>
+        <td>217035</td>
+        <td>13.0</td>
+        <td>3419</td>
+        <td>367815</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЛИТВИН</td>
+        <td><a href="https://t.me/litvintm">https://t.me/litvintm</a></td>
+        <td>Блоги</td>
+        <td>1728144</td>
+        <td>1004633</td>
+        <td>59.0</td>
+        <td>-3663</td>
+        <td>-26375</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мувы Белевского</td>
+        <td><a href="https://t.me/belevskmove">https://t.me/belevskmove</a></td>
+        <td>Криптовалюты</td>
+        <td>1724365</td>
+        <td>41701</td>
+        <td>3.0</td>
+        <td>-12664</td>
+        <td>48115</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Операция Z: Военкоры Русской Весны</td>
+        <td><a href="https://t.me/RVvoenkor">https://t.me/RVvoenkor</a></td>
+        <td>Политика</td>
+        <td>1683199</td>
+        <td>508871</td>
+        <td>31.0</td>
+        <td>2617</td>
+        <td>10886</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Дмитрий Медведев</td>
+        <td><a href="https://t.me/medvedev_telegram">https://t.me/medvedev_telegram</a></td>
+        <td>Политика</td>
+        <td>1670374</td>
+        <td>2812555</td>
+        <td>169.0</td>
+        <td>9244</td>
+        <td>48088</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Baza</td>
+        <td><a href="https://t.me/bazabazon">https://t.me/bazabazon</a></td>
+        <td>Новости и СМИ</td>
+        <td>1644497</td>
+        <td>535152</td>
+        <td>33.0</td>
+        <td>1856</td>
+        <td>24860</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Московский Портал 24</td>
+        <td><a href="https://t.me/moscowportal">https://t.me/moscowportal</a></td>
+        <td>Криптовалюты</td>
+        <td>1634545</td>
+        <td>20612</td>
+        <td>2.0</td>
+        <td>-4668</td>
+        <td>254</td>
+        <td>9 месяцев 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>🐹 Хомячий Дроп</td>
+        <td><a href="https://t.me/crypto_bumss">https://t.me/crypto_bumss</a></td>
+        <td>Криптовалюты</td>
+        <td>1632974</td>
+        <td>5658</td>
+        <td>1.0</td>
+        <td>-966</td>
+        <td>-69780</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Маркетплейс TG Каналов - продажа / покупка / гарант</td>
+        <td><a href="https://t.me/marketplacetg">https://t.me/marketplacetg</a></td>
+        <td>Криптовалюты</td>
+        <td>1631905</td>
+        <td>40409</td>
+        <td>3.0</td>
+        <td>-3577</td>
+        <td>-39628</td>
+        <td>9 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Осторожно, новости</td>
+        <td><a href="https://t.me/ostorozhno_novosti">https://t.me/ostorozhno_novosti</a></td>
+        <td>Новости и СМИ</td>
+        <td>1615874</td>
+        <td>445023</td>
+        <td>28.0</td>
+        <td>1751</td>
+        <td>4877</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>GAME_doc</td>
+        <td><a href="https://t.me/game_doc">https://t.me/game_doc</a></td>
+        <td>Игры</td>
+        <td>1593638</td>
+        <td>648</td>
+        <td>None</td>
+        <td>-8654</td>
+        <td>-42049</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ФИЛЬМЫ КИНО СЕРИАЛЫ</td>
+        <td><a href="https://t.me/kino_hd2">https://t.me/kino_hd2</a></td>
+        <td>Видео и фильмы</td>
+        <td>1547605</td>
+        <td>35129</td>
+        <td>3.0</td>
+        <td>9177</td>
+        <td>-1318</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Standoff 2</td>
+        <td><a href="https://t.me/play_standoff2">https://t.me/play_standoff2</a></td>
+        <td>Игры</td>
+        <td>1545775</td>
+        <td>900511</td>
+        <td>59.0</td>
+        <td>-28709</td>
+        <td>207237</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скриншот Правды Z</td>
+        <td><a href="https://t.me/ScreenShotTrue">https://t.me/ScreenShotTrue</a></td>
+        <td>Новости и СМИ</td>
+        <td>1536041</td>
+        <td>30046</td>
+        <td>2.0</td>
+        <td>-8400</td>
+        <td>-39377</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Цифровой Журнал | IT, Neiroseti</td>
+        <td><a href="https://t.me/chatgptv">https://t.me/chatgptv</a></td>
+        <td>Технологии</td>
+        <td>1519817</td>
+        <td>185961</td>
+        <td>13.0</td>
+        <td>-29667</td>
+        <td>-34063</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Адам Делимханов</td>
+        <td><a href="https://t.me/adelimkhanov_95">https://t.me/adelimkhanov_95</a></td>
+        <td>Политика</td>
+        <td>1519569</td>
+        <td>96864</td>
+        <td>7.0</td>
+        <td>21063</td>
+        <td>48642</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>INVEST ZONE</td>
+        <td><a href="https://t.me/invest_zonaa">https://t.me/invest_zonaa</a></td>
+        <td>Криптовалюты</td>
+        <td>1513049</td>
+        <td>39275</td>
+        <td>3.0</td>
+        <td>-9151</td>
+        <td>-44553</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Клиент всегда прав</td>
+        <td><a href="https://t.me/klientvsprav">https://t.me/klientvsprav</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>1508019</td>
+        <td>174319</td>
+        <td>12.0</td>
+        <td>-19582</td>
+        <td>-122369</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VOBLYA • новости</td>
+        <td><a href="https://t.me/voyna_novosti_moskva">https://t.me/voyna_novosti_moskva</a></td>
+        <td>Новости и СМИ</td>
+        <td>1506894</td>
+        <td>126051</td>
+        <td>9.0</td>
+        <td>4795</td>
+        <td>3426</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тачки и Точка</td>
+        <td><a href="https://t.me/tachki">https://t.me/tachki</a></td>
+        <td>Транспорт</td>
+        <td>1476743</td>
+        <td>134828</td>
+        <td>10.0</td>
+        <td>17870</td>
+        <td>144755</td>
+        <td>8 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Александр Зубарев</td>
+        <td><a href="https://t.me/zubarefff">https://t.me/zubarefff</a></td>
+        <td>Блоги</td>
+        <td>1454978</td>
+        <td>409882</td>
+        <td>29.0</td>
+        <td>-6454</td>
+        <td>-21242</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВПШ</td>
+        <td><a href="https://t.me/pravdadirty">https://t.me/pravdadirty</a></td>
+        <td>Новости и СМИ</td>
+        <td>1449714</td>
+        <td>370991</td>
+        <td>26.0</td>
+        <td>-1812</td>
+        <td>-13209</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GPT | ChatGPT | Midjourney — GPTMain News</td>
+        <td><a href="https://t.me/GPTMainNews">https://t.me/GPTMainNews</a></td>
+        <td>Технологии</td>
+        <td>1447474</td>
+        <td>187337</td>
+        <td>13.0</td>
+        <td>-307</td>
+        <td>-179</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Россия сейчас • Новости</td>
+        <td><a href="https://t.me/Ria_novosti_rossiya">https://t.me/Ria_novosti_rossiya</a></td>
+        <td>Новости и СМИ</td>
+        <td>1444600</td>
+        <td>172405</td>
+        <td>12.0</td>
+        <td>-5324</td>
+        <td>-26526</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>По Блату</td>
+        <td><a href="https://t.me/poblat">https://t.me/poblat</a></td>
+        <td>Продажи</td>
+        <td>1440657</td>
+        <td>73134</td>
+        <td>6.0</td>
+        <td>-24536</td>
+        <td>43757</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Премиум эмодзи | стикеры | Premium Emoji</td>
+        <td><a href="https://t.me/TgEmojis">https://t.me/TgEmojis</a></td>
+        <td>Telegram</td>
+        <td>1430691</td>
+        <td>287583</td>
+        <td>21.0</td>
+        <td>5241</td>
+        <td>17991</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DAILY COMBO</td>
+        <td><a href="https://t.me/dailycombo">https://t.me/dailycombo</a></td>
+        <td>Криптовалюты</td>
+        <td>1426571</td>
+        <td>20672</td>
+        <td>2.0</td>
+        <td>-12024</td>
+        <td>51908</td>
+        <td>1 год 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Техночат</td>
+        <td><a href="https://t.me/technomedia">https://t.me/technomedia</a></td>
+        <td>Технологии</td>
+        <td>1414069</td>
+        <td>143851</td>
+        <td>11.0</td>
+        <td>-47476</td>
+        <td>-80289</td>
+        <td>6 месяцев 1 день</td>
+      </tr>
+
+      <tr>
+        <td>Барон по TON</td>
+        <td><a href="https://t.me/BaronTon0">https://t.me/BaronTon0</a></td>
+        <td>Криптовалюты</td>
+        <td>1404703</td>
+        <td>22260</td>
+        <td>2.0</td>
+        <td>-14739</td>
+        <td>-72881</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Московская Хроника</td>
+        <td><a href="https://t.me/mosnews">https://t.me/mosnews</a></td>
+        <td>Новости и СМИ</td>
+        <td>1394639</td>
+        <td>155144</td>
+        <td>12.0</td>
+        <td>94977</td>
+        <td>-9568</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>The Rocket Official 🚀</td>
+        <td><a href="https://t.me/the_rocket_official">https://t.me/the_rocket_official</a></td>
+        <td>Криптовалюты</td>
+        <td>1387222</td>
+        <td>4555</td>
+        <td>1.0</td>
+        <td>-8022</td>
+        <td>-36602</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>4ch</td>
+        <td><a href="https://t.me/why4ch">https://t.me/why4ch</a></td>
+        <td>Юмор и развлечения</td>
+        <td>1383280</td>
+        <td>127069</td>
+        <td>10.0</td>
+        <td>-12462</td>
+        <td>-53801</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТОПОР - Горячие новости</td>
+        <td><a href="https://t.me/topor">https://t.me/topor</a></td>
+        <td>Юмор и развлечения</td>
+        <td>1375812</td>
+        <td>258499</td>
+        <td>19.0</td>
+        <td>888</td>
+        <td>-1847</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Hi, AI | Новости технологий</td>
+        <td><a href="https://t.me/hiaimedia">https://t.me/hiaimedia</a></td>
+        <td>Технологии</td>
+        <td>1360030</td>
+        <td>120722</td>
+        <td>9.0</td>
+        <td>-47988</td>
+        <td>127610</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>hitvpn_blog</td>
+        <td><a href="https://t.me/hitvpn_news">https://t.me/hitvpn_news</a></td>
+        <td>Технологии</td>
+        <td>1346768</td>
+        <td>797530</td>
+        <td>60.0</td>
+        <td>137431</td>
+        <td>281953</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Вячеслав Володин</td>
+        <td><a href="https://t.me/vv_volodin">https://t.me/vv_volodin</a></td>
+        <td>Политика</td>
+        <td>1340431</td>
+        <td>1197457</td>
+        <td>90.0</td>
+        <td>7526</td>
+        <td>21338</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>VilarsoFREE |CryptoTrading ¹⁸⁺</td>
+        <td><a href="https://t.me/vilarsofree">https://t.me/vilarsofree</a></td>
+        <td>Криптовалюты</td>
+        <td>1338319</td>
+        <td>8161</td>
+        <td>1.0</td>
+        <td>-10267</td>
+        <td>-49442</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лило и Стич 🍿 Смотреть</td>
+        <td><a href="https://t.me/kino_filmyc">https://t.me/kino_filmyc</a></td>
+        <td>Видео и фильмы</td>
+        <td>1337755</td>
+        <td>49017</td>
+        <td>4.0</td>
+        <td>15851</td>
+        <td>31098</td>
+        <td>5 лет 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>ЛОРД</td>
+        <td><a href="https://t.me/MDaudov_95">https://t.me/MDaudov_95</a></td>
+        <td>Политика</td>
+        <td>1325765</td>
+        <td>24490</td>
+        <td>2.0</td>
+        <td>20622</td>
+        <td>-56598</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Gem Institute (CIS)</td>
+        <td><a href="https://t.me/geminstitute_cis">https://t.me/geminstitute_cis</a></td>
+        <td>Криптовалюты</td>
+        <td>1309344</td>
+        <td>981</td>
+        <td>1.0</td>
+        <td>-7167</td>
+        <td>-37881</td>
+        <td>10 месяцев 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>E V O L U T I O N</td>
+        <td><a href="https://t.me/evo_memy">https://t.me/evo_memy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>1306390</td>
+        <td>72493</td>
+        <td>6.0</td>
+        <td>-25714</td>
+        <td>8480</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СОЛОВЬЁВ</td>
+        <td><a href="https://t.me/SolovievLive">https://t.me/SolovievLive</a></td>
+        <td>Политика</td>
+        <td>1301323</td>
+        <td>237519</td>
+        <td>19.0</td>
+        <td>1983</td>
+        <td>1411</td>
+        <td>6 лет 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>BIRD TON</td>
+        <td><a href="https://t.me/birdton">https://t.me/birdton</a></td>
+        <td>Криптовалюты</td>
+        <td>1299056</td>
+        <td>26471</td>
+        <td>2.0</td>
+        <td>-10897</td>
+        <td>-57432</td>
+        <td>1 год 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>SHOT</td>
+        <td><a href="https://t.me/shot_shot">https://t.me/shot_shot</a></td>
+        <td>Новости и СМИ</td>
+        <td>1288453</td>
+        <td>359279</td>
+        <td>28.0</td>
+        <td>4780</td>
+        <td>16226</td>
+        <td>8 лет 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>НОВОСТИ 📰</td>
+        <td><a href="https://t.me/Russica2">https://t.me/Russica2</a></td>
+        <td>Новости и СМИ</td>
+        <td>1272264</td>
+        <td>58934</td>
+        <td>5.0</td>
+        <td>-7049</td>
+        <td>-33106</td>
+        <td>9 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>The Kryptonite</td>
+        <td><a href="https://t.me/TheKryptonit">https://t.me/TheKryptonit</a></td>
+        <td>Криптовалюты</td>
+        <td>1261743</td>
+        <td>33241</td>
+        <td>3.0</td>
+        <td>-6863</td>
+        <td>-33551</td>
+        <td>11 месяцев 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Рыбарь</td>
+        <td><a href="https://t.me/rybar">https://t.me/rybar</a></td>
+        <td>Политика</td>
+        <td>1257993</td>
+        <td>204051</td>
+        <td>17.0</td>
+        <td>-1850</td>
+        <td>-8467</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Я в курсе</td>
+        <td><a href="https://t.me/joinchat/wUkpIWct1PNiMjFi">https://t.me/joinchat/wUkpIWct1PNiMjFi</a></td>
+        <td>Новости и СМИ</td>
+        <td>1256194</td>
+        <td>53840</td>
+        <td>5.0</td>
+        <td>11133</td>
+        <td>31124</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Два майора</td>
+        <td><a href="https://t.me/dva_majors">https://t.me/dva_majors</a></td>
+        <td>Новости и СМИ</td>
+        <td>1251935</td>
+        <td>284635</td>
+        <td>23.0</td>
+        <td>-556</td>
+        <td>18378</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры | Эмодзи</td>
+        <td><a href="https://t.me/stikery4">https://t.me/stikery4</a></td>
+        <td>Telegram</td>
+        <td>1246808</td>
+        <td>194210</td>
+        <td>16.0</td>
+        <td>910</td>
+        <td>-16979</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>BLACK RUSSIA</td>
+        <td><a href="https://t.me/br_dev">https://t.me/br_dev</a></td>
+        <td>Игры</td>
+        <td>1231499</td>
+        <td>586075</td>
+        <td>48.0</td>
+        <td>2336</td>
+        <td>10223</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Медуза — LIVE</td>
+        <td><a href="https://t.me/meduzalive">https://t.me/meduzalive</a></td>
+        <td>Новости и СМИ</td>
+        <td>1230326</td>
+        <td>231116</td>
+        <td>19.0</td>
+        <td>-416</td>
+        <td>-7708</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>
