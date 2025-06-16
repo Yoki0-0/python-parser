@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Шаблоны Cap Cut | Кап Кут</td>
+        <td><a href="https://t.me/capcutemplates1">https://t.me/capcutemplates1</a></td>
+        <td>Инстаграм</td>
+        <td>167710</td>
+        <td>24940</td>
+        <td>15.0</td>
+        <td>-388</td>
+        <td>-630</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Женский домик</td>
+        <td><a href="https://t.me/jenskiydom">https://t.me/jenskiydom</a></td>
+        <td>Инстаграм</td>
+        <td>133488</td>
+        <td>14490</td>
+        <td>11.0</td>
+        <td>-823</td>
+        <td>-4158</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Красивые видео для сторис</td>
+        <td><a href="https://t.me/vidstor">https://t.me/vidstor</a></td>
+        <td>Инстаграм</td>
+        <td>108505</td>
+        <td>5797</td>
+        <td>6.0</td>
+        <td>-238</td>
+        <td>-1254</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СТИКЕРЫ PNG ДЛЯ СТОРИС | ВИЗУАЛ</td>
+        <td><a href="https://t.me/visualtop">https://t.me/visualtop</a></td>
+        <td>Инстаграм</td>
+        <td>103557</td>
+        <td>21525</td>
+        <td>21.0</td>
+        <td>-136</td>
+        <td>-110</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ФОТО ДЛЯ ПРАНКА В СТОРИС</td>
+        <td><a href="https://t.me/fotodlyapranka1">https://t.me/fotodlyapranka1</a></td>
+        <td>Инстаграм</td>
+        <td>102918</td>
+        <td>32060</td>
+        <td>32.0</td>
+        <td>-266</td>
+        <td>-1049</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Шаблоны CapCut / Кап Кут</td>
+        <td><a href="https://t.me/futazhii">https://t.me/futazhii</a></td>
+        <td>Инстаграм</td>
+        <td>89872</td>
+        <td>12997</td>
+        <td>15.0</td>
+        <td>193</td>
+        <td>347</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>piaceim • пресеты & блогинг</td>
+        <td><a href="https://t.me/piaceimpresets">https://t.me/piaceimpresets</a></td>
+        <td>Инстаграм</td>
+        <td>89208</td>
+        <td>9952</td>
+        <td>12.0</td>
+        <td>393</td>
+        <td>1487</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>𝐒𝐓𝐎𝐑𝐈𝐒𝐆𝐈𝐃</td>
+        <td><a href="https://t.me/storisgid">https://t.me/storisgid</a></td>
+        <td>Инстаграм</td>
+        <td>77600</td>
+        <td>6708</td>
+        <td>9.0</td>
+        <td>-326</td>
+        <td>-1702</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Для твоих историй❤️</td>
+        <td><a href="https://t.me/foryourinst_18">https://t.me/foryourinst_18</a></td>
+        <td>Инстаграм</td>
+        <td>75576</td>
+        <td>13213</td>
+        <td>18.0</td>
+        <td>-31</td>
+        <td>-1130</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>С ГОЛОВОЙ 🎞</td>
+        <td><a href="https://t.me/s_golovoj">https://t.me/s_golovoj</a></td>
+        <td>Инстаграм</td>
+        <td>74869</td>
+        <td>11654</td>
+        <td>16.0</td>
+        <td>956</td>
+        <td>7384</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СИЛА СТОРИС</td>
+        <td><a href="https://t.me/silastories">https://t.me/silastories</a></td>
+        <td>Инстаграм</td>
+        <td>71112</td>
+        <td>19213</td>
+        <td>27.0</td>
+        <td>331</td>
+        <td>488</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры Png Сторис</td>
+        <td><a href="https://t.me/stories_sticke">https://t.me/stories_sticke</a></td>
+        <td>Инстаграм</td>
+        <td>70168</td>
+        <td>15170</td>
+        <td>22.0</td>
+        <td>-41</td>
+        <td>-167</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АТМОСФЕРНЫЕ СТОРИС | СТИКЕРЫ | PNG | ФОНЫ</td>
+        <td><a href="https://t.me/vibe_stories">https://t.me/vibe_stories</a></td>
+        <td>Инстаграм</td>
+        <td>64436</td>
+        <td>9443</td>
+        <td>15.0</td>
+        <td>-13</td>
+        <td>47</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры | png для сторис</td>
+        <td><a href="https://t.me/pngshi">https://t.me/pngshi</a></td>
+        <td>Инстаграм</td>
+        <td>62089</td>
+        <td>15380</td>
+        <td>25.0</td>
+        <td>146</td>
+        <td>958</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>💭Мемы из reels | рилс инстаграм | шаблоны</td>
+        <td><a href="https://t.me/memreels">https://t.me/memreels</a></td>
+        <td>Инстаграм</td>
+        <td>60766</td>
+        <td>8001</td>
+        <td>14.0</td>
+        <td>131</td>
+        <td>760</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>| 𝐒𝐓𝐎𝐑𝐈𝐄𝐒𝐒𝐓𝐎𝐑𝐄 |</td>
+        <td><a href="https://t.me/storiesstoreee">https://t.me/storiesstoreee</a></td>
+        <td>Инстаграм</td>
+        <td>55769</td>
+        <td>8439</td>
+        <td>16.0</td>
+        <td>-236</td>
+        <td>-955</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВСЕ ПРО СТОРИС | ПНГ | СТИКЕРЫ</td>
+        <td><a href="https://t.me/vseprostoriespng">https://t.me/vseprostoriespng</a></td>
+        <td>Инстаграм</td>
+        <td>54195</td>
+        <td>9044</td>
+        <td>17.0</td>
+        <td>109</td>
+        <td>178</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мужской домик</td>
+        <td><a href="https://t.me/mendomik">https://t.me/mendomik</a></td>
+        <td>Инстаграм</td>
+        <td>53652</td>
+        <td>5254</td>
+        <td>10.0</td>
+        <td>-237</td>
+        <td>-1172</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ФОТО НА АВУ ДЛЯ ПРАНКА, СТОРИС🎀</td>
+        <td><a href="https://t.me/inststoriesss">https://t.me/inststoriesss</a></td>
+        <td>Инстаграм</td>
+        <td>50074</td>
+        <td>16202</td>
+        <td>33.0</td>
+        <td>126</td>
+        <td>-229</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Bitch.</td>
+        <td><a href="https://t.me/BitchFake">https://t.me/BitchFake</a></td>
+        <td>Инстаграм</td>
+        <td>49278</td>
+        <td>2081</td>
+        <td>5.0</td>
+        <td>-228</td>
+        <td>-1209</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Все для твоих сторис💃</td>
+        <td><a href="https://t.me/persefoone">https://t.me/persefoone</a></td>
+        <td>Инстаграм</td>
+        <td>47733</td>
+        <td>3201</td>
+        <td>7.0</td>
+        <td>-225</td>
+        <td>-1019</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СТОРИС ☕ ДОБРОЕ УТРО 👋</td>
+        <td><a href="https://t.me/goooddaysssss">https://t.me/goooddaysssss</a></td>
+        <td>Инстаграм</td>
+        <td>47255</td>
+        <td>6998</td>
+        <td>15.0</td>
+        <td>-161</td>
+        <td>-210</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПРЕСЕТЫ | ОБРАБОТКА ФОТО</td>
+        <td><a href="https://t.me/presetyu">https://t.me/presetyu</a></td>
+        <td>Инстаграм</td>
+        <td>46930</td>
+        <td>6007</td>
+        <td>13.0</td>
+        <td>153</td>
+        <td>528</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>весь фокус здесь</td>
+        <td><a href="https://t.me/pozhiznylife">https://t.me/pozhiznylife</a></td>
+        <td>Инстаграм</td>
+        <td>46283</td>
+        <td>18889</td>
+        <td>41.0</td>
+        <td>538</td>
+        <td>17901</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>✨SMM Combo✨</td>
+        <td><a href="https://t.me/smm_combo">https://t.me/smm_combo</a></td>
+        <td>Инстаграм</td>
+        <td>46048</td>
+        <td>4656</td>
+        <td>11.0</td>
+        <td>-123</td>
+        <td>-485</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>девчачий уголок</td>
+        <td><a href="https://t.me/divizdes">https://t.me/divizdes</a></td>
+        <td>Инстаграм</td>
+        <td>45691</td>
+        <td>8715</td>
+        <td>20.0</td>
+        <td>-146</td>
+        <td>322</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Жемуж❤️</td>
+        <td><a href="https://t.me/allstori">https://t.me/allstori</a></td>
+        <td>Инстаграм</td>
+        <td>45606</td>
+        <td>9792</td>
+        <td>22.0</td>
+        <td>-290</td>
+        <td>1781</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Янчевская|по reels и блогу</td>
+        <td><a href="https://t.me/joinchat/AoSK6FR5CT5jNWQy">https://t.me/joinchat/AoSK6FR5CT5jNWQy</a></td>
+        <td>Инстаграм</td>
+        <td>44258</td>
+        <td>10546</td>
+        <td>24.0</td>
+        <td>-299</td>
+        <td>-271</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PROstories с Aniri | СТИКЕРЫ ПНГ • ШАБЛОНЫ • СТОРИС</td>
+        <td><a href="https://t.me/aniri_prostories">https://t.me/aniri_prostories</a></td>
+        <td>Инстаграм</td>
+        <td>44101</td>
+        <td>7825</td>
+        <td>18.0</td>
+        <td>38</td>
+        <td>-11</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>РИЛС | REELS ТРЕНДЫ | ШАБЛОНЫ CAPCUT | МЕМЫ</td>
+        <td><a href="https://t.me/reelstutor">https://t.me/reelstutor</a></td>
+        <td>Инстаграм</td>
+        <td>43648</td>
+        <td>5175</td>
+        <td>12.0</td>
+        <td>152</td>
+        <td>684</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>kuulesh • creative</td>
+        <td><a href="https://t.me/kuulesh">https://t.me/kuulesh</a></td>
+        <td>Инстаграм</td>
+        <td>40391</td>
+        <td>5109</td>
+        <td>13.0</td>
+        <td>-107</td>
+        <td>-507</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пацанский клуб</td>
+        <td><a href="https://t.me/menklub">https://t.me/menklub</a></td>
+        <td>Инстаграм</td>
+        <td>38920</td>
+        <td>5937</td>
+        <td>16.0</td>
+        <td>-208</td>
+        <td>-991</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры для сторис</td>
+        <td><a href="https://t.me/stickerssni">https://t.me/stickerssni</a></td>
+        <td>Инстаграм</td>
+        <td>37445</td>
+        <td>7056</td>
+        <td>19.0</td>
+        <td>111</td>
+        <td>1000</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Твоя подружка Сторисмейкер</td>
+        <td><a href="https://t.me/Storymakersss">https://t.me/Storymakersss</a></td>
+        <td>Инстаграм</td>
+        <td>36443</td>
+        <td>6384</td>
+        <td>18.0</td>
+        <td>85</td>
+        <td>642</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TOP CONTENT | STORIES | PNG</td>
+        <td><a href="https://t.me/topchikstory">https://t.me/topchikstory</a></td>
+        <td>Инстаграм</td>
+        <td>35307</td>
+        <td>4572</td>
+        <td>13.0</td>
+        <td>-140</td>
+        <td>-520</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>те самые сторис 😈</td>
+        <td><a href="https://t.me/luxstoris">https://t.me/luxstoris</a></td>
+        <td>Инстаграм</td>
+        <td>34140</td>
+        <td>2760</td>
+        <td>9.0</td>
+        <td>-228</td>
+        <td>-1011</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шаблоны сторис | готовые stories & фоны</td>
+        <td><a href="https://t.me/Oblozki_free">https://t.me/Oblozki_free</a></td>
+        <td>Инстаграм</td>
+        <td>33189</td>
+        <td>4417</td>
+        <td>14.0</td>
+        <td>11</td>
+        <td>231</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝐟𝐨𝐫 𝐲𝐨𝐮𝐫 𝐬𝐭𝐨𝐫𝐢𝐞𝐬💌</td>
+        <td><a href="https://t.me/storiesinstaa">https://t.me/storiesinstaa</a></td>
+        <td>Инстаграм</td>
+        <td>33006</td>
+        <td>8590</td>
+        <td>26.0</td>
+        <td>-129</td>
+        <td>-709</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Надписи для твоих Stories✍️</td>
+        <td><a href="https://t.me/storiesmagic2022">https://t.me/storiesmagic2022</a></td>
+        <td>Инстаграм</td>
+        <td>32785</td>
+        <td>5196</td>
+        <td>16.0</td>
+        <td>22</td>
+        <td>-79</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КРАСИВЫЙ ИНСТ | СТИКЕРЫ | ФОНЫ | ШАБЛОНЫ CAP CUT</td>
+        <td><a href="https://t.me/beautifulinsta">https://t.me/beautifulinsta</a></td>
+        <td>Инстаграм</td>
+        <td>32522</td>
+        <td>4974</td>
+        <td>16.0</td>
+        <td>4</td>
+        <td>-173</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Видео stories для соцсетей</td>
+        <td><a href="https://t.me/igripp">https://t.me/igripp</a></td>
+        <td>Инстаграм</td>
+        <td>32287</td>
+        <td>5261</td>
+        <td>17.0</td>
+        <td>-107</td>
+        <td>-133</td>
+        <td>4 года 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Сторис для бывшего</td>
+        <td><a href="https://t.me/storisexboy">https://t.me/storisexboy</a></td>
+        <td>Инстаграм</td>
+        <td>30790</td>
+        <td>1498</td>
+        <td>5.0</td>
+        <td>-198</td>
+        <td>-880</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СТОРИС НА КАЖДЫЙ ДЕНЬ</td>
+        <td><a href="https://t.me/joinchat/znPWnSVAH3o3ZTRi">https://t.me/joinchat/znPWnSVAH3o3ZTRi</a></td>
+        <td>Инстаграм</td>
+        <td>30035</td>
+        <td>5639</td>
+        <td>19.0</td>
+        <td>-119</td>
+        <td>-735</td>
+        <td>4 года 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>ГОТОВЫЕ СЦЕНАРИИ СТОРИС</td>
+        <td><a href="https://t.me/scenariistoris">https://t.me/scenariistoris</a></td>
+        <td>Инстаграм</td>
+        <td>28405</td>
+        <td>1581</td>
+        <td>6.0</td>
+        <td>-96</td>
+        <td>1284</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Делай мемы: исходники, шаблоны без текста для мемов в рилс</td>
+        <td><a href="https://t.me/delaimem">https://t.me/delaimem</a></td>
+        <td>Инстаграм</td>
+        <td>28382</td>
+        <td>3739</td>
+        <td>14.0</td>
+        <td>23</td>
+        <td>-142</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сабина про Сторис, Reels и контент</td>
+        <td><a href="https://t.me/Stories_png_7">https://t.me/Stories_png_7</a></td>
+        <td>Инстаграм</td>
+        <td>27859</td>
+        <td>7608</td>
+        <td>28.0</td>
+        <td>321</td>
+        <td>1368</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КОНТЕНТ • ЭСТЕТИКА• ВИЗУАЛ</td>
+        <td><a href="https://t.me/joinchat/AAAAAFjVLIvVx-PQ38PGSQ">https://t.me/joinchat/AAAAAFjVLIvVx-PQ38PGSQ</a></td>
+        <td>Инстаграм</td>
+        <td>27298</td>
+        <td>2894</td>
+        <td>11.0</td>
+        <td>-126</td>
+        <td>-792</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CREATIVITY</td>
+        <td><a href="https://t.me/creativity_ch">https://t.me/creativity_ch</a></td>
+        <td>Инстаграм</td>
+        <td>27243</td>
+        <td>4197</td>
+        <td>16.0</td>
+        <td>84</td>
+        <td>635</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СТИКЕРЫ | GIF | ФОНЫ ДЛЯ СТОРИС</td>
+        <td><a href="https://t.me/stiker_gifka">https://t.me/stiker_gifka</a></td>
+        <td>Инстаграм</td>
+        <td>26706</td>
+        <td>3208</td>
+        <td>12.0</td>
+        <td>-63</td>
+        <td>-141</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДЛЯ ТВОИХ ИСТОРИЙ🐁</td>
+        <td><a href="https://t.me/for_stories">https://t.me/for_stories</a></td>
+        <td>Инстаграм</td>
+        <td>26670</td>
+        <td>1327</td>
+        <td>5.0</td>
+        <td>-129</td>
+        <td>-488</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Готовые СтОрИс/Идеи для Сторис</td>
+        <td><a href="https://t.me/alena_tolmacheva">https://t.me/alena_tolmacheva</a></td>
+        <td>Инстаграм</td>
+        <td>26427</td>
+        <td>3920</td>
+        <td>15.0</td>
+        <td>226</td>
+        <td>352</td>
+        <td>5 лет 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>СТИКЕРЫ ♡/ stories / вдохновение</td>
+        <td><a href="https://t.me/stories_veis_sveta">https://t.me/stories_veis_sveta</a></td>
+        <td>Инстаграм</td>
+        <td>25428</td>
+        <td>3576</td>
+        <td>15.0</td>
+        <td>39</td>
+        <td>22</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>VIBE STEP • reels | блогинг | шаблоны CapCut</td>
+        <td><a href="https://t.me/creative_blogging">https://t.me/creative_blogging</a></td>
+        <td>Инстаграм</td>
+        <td>24909</td>
+        <td>4133</td>
+        <td>17.0</td>
+        <td>-270</td>
+        <td>1259</td>
+        <td>11 месяцев 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>ТОП СТОРИС ШРИФТЫ</td>
+        <td><a href="https://t.me/stories_gaid">https://t.me/stories_gaid</a></td>
+        <td>Инстаграм</td>
+        <td>24799</td>
+        <td>2621</td>
+        <td>11.0</td>
+        <td>-41</td>
+        <td>-136</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сторисмейкер | Валерия</td>
+        <td><a href="https://t.me/gamesinsta">https://t.me/gamesinsta</a></td>
+        <td>Инстаграм</td>
+        <td>24126</td>
+        <td>2028</td>
+        <td>9.0</td>
+        <td>-101</td>
+        <td>-389</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ᴍʏ sᴛᴏʀɪᴇs • готовые сторис</td>
+        <td><a href="https://t.me/joinchat/AAAAAFlN9aDCjWVrE8-VPQ">https://t.me/joinchat/AAAAAFlN9aDCjWVrE8-VPQ</a></td>
+        <td>Инстаграм</td>
+        <td>23981</td>
+        <td>2288</td>
+        <td>10.0</td>
+        <td>-86</td>
+        <td>-254</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🔥Зажги Stories🔥</td>
+        <td><a href="https://t.me/kalinovastories">https://t.me/kalinovastories</a></td>
+        <td>Инстаграм</td>
+        <td>23972</td>
+        <td>4890</td>
+        <td>21.0</td>
+        <td>-106</td>
+        <td>-424</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВИДЕОМЕЙКЕР</td>
+        <td><a href="https://t.me/semero4ka_videomaker">https://t.me/semero4ka_videomaker</a></td>
+        <td>Инстаграм</td>
+        <td>23659</td>
+        <td>1306</td>
+        <td>6.0</td>
+        <td>-98</td>
+        <td>712</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Aesthetic stories | reels png | Готовые сторис стикеры</td>
+        <td><a href="https://t.me/storiespng0">https://t.me/storiespng0</a></td>
+        <td>Инстаграм</td>
+        <td>23328</td>
+        <td>3053</td>
+        <td>14.0</td>
+        <td>-31</td>
+        <td>-238</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ГОТОВЫЕ СТОРИС ДЛЯ РАЗНЫХ НИШ</td>
+        <td><a href="https://t.me/pro_vizyal">https://t.me/pro_vizyal</a></td>
+        <td>Инстаграм</td>
+        <td>22958</td>
+        <td>2598</td>
+        <td>12.0</td>
+        <td>-19</td>
+        <td>-230</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>НЕЙРОСТИКЕРЫ /Стрекоза</td>
+        <td><a href="https://t.me/strekoza221122">https://t.me/strekoza221122</a></td>
+        <td>Инстаграм</td>
+        <td>22935</td>
+        <td>4308</td>
+        <td>19.0</td>
+        <td>-115</td>
+        <td>-69</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Я у мамы криэйтор 👨🏻‍🎨</td>
+        <td><a href="https://t.me/im_moms_creator">https://t.me/im_moms_creator</a></td>
+        <td>Инстаграм</td>
+        <td>22818</td>
+        <td>2352</td>
+        <td>11.0</td>
+        <td>-68</td>
+        <td>-242</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СТИКЕРЫ•STORIES•ЭСТЕТИКА</td>
+        <td><a href="https://t.me/joinchat/FPbQpzQie90yOTg6">https://t.me/joinchat/FPbQpzQie90yOTg6</a></td>
+        <td>Инстаграм</td>
+        <td>22499</td>
+        <td>5681</td>
+        <td>26.0</td>
+        <td>-110</td>
+        <td>325</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сторис штучки</td>
+        <td><a href="https://t.me/instastoriesfree">https://t.me/instastoriesfree</a></td>
+        <td>Инстаграм</td>
+        <td>22461</td>
+        <td>756</td>
+        <td>4.0</td>
+        <td>-63</td>
+        <td>-348</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ИГРЫ | ФОНЫ ДЛЯ СТОРИС STORIES</td>
+        <td><a href="https://t.me/ttvoi_pinterest">https://t.me/ttvoi_pinterest</a></td>
+        <td>Инстаграм</td>
+        <td>22162</td>
+        <td>1354</td>
+        <td>7.0</td>
+        <td>-61</td>
+        <td>-208</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Шаблоны CapCut | КапКут</td>
+        <td><a href="https://t.me/capcuttemplate2024">https://t.me/capcuttemplate2024</a></td>
+        <td>Инстаграм</td>
+        <td>22155</td>
+        <td>5083</td>
+        <td>23.0</td>
+        <td>-222</td>
+        <td>-364</td>
+        <td>None</td>
+      </tr>
+
+      <tr>
+        <td>Слава Молостов</td>
+        <td><a href="https://t.me/joinchat/AAAAAEMCs1wsyehc4O9mxg">https://t.me/joinchat/AAAAAEMCs1wsyehc4O9mxg</a></td>
+        <td>Инстаграм</td>
+        <td>21511</td>
+        <td>1286</td>
+        <td>6.0</td>
+        <td>-143</td>
+        <td>-521</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Идеи для фото 💗 Photo ideas</td>
+        <td><a href="https://t.me/ideasforphotoinst">https://t.me/ideasforphotoinst</a></td>
+        <td>Инстаграм</td>
+        <td>21200</td>
+        <td>5373</td>
+        <td>26.0</td>
+        <td>-94</td>
+        <td>-344</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТЕ САМЫЕ СТИКЕРЫ | stickers png | stories</td>
+        <td><a href="https://t.me/storiesaestheticstop">https://t.me/storiesaestheticstop</a></td>
+        <td>Инстаграм</td>
+        <td>21010</td>
+        <td>5021</td>
+        <td>24.0</td>
+        <td>-26</td>
+        <td>247</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>STORIES CLUB</td>
+        <td><a href="https://t.me/stories_club">https://t.me/stories_club</a></td>
+        <td>Инстаграм</td>
+        <td>20892</td>
+        <td>2482</td>
+        <td>12.0</td>
+        <td>-69</td>
+        <td>-200</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БЬЮТИ СТОРИС•PNG СТИКЕРЫ</td>
+        <td><a href="https://t.me/beauty_visual">https://t.me/beauty_visual</a></td>
+        <td>Инстаграм</td>
+        <td>20843</td>
+        <td>4767</td>
+        <td>23.0</td>
+        <td>-22</td>
+        <td>36</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЛЕРУШКА</td>
+        <td><a href="https://t.me/lerushka_a_a">https://t.me/lerushka_a_a</a></td>
+        <td>Инстаграм</td>
+        <td>19871</td>
+        <td>18505</td>
+        <td>94.0</td>
+        <td>187</td>
+        <td>3280</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Для твоих историй🥰</td>
+        <td><a href="https://t.me/instajoin">https://t.me/instajoin</a></td>
+        <td>Инстаграм</td>
+        <td>19854</td>
+        <td>1159</td>
+        <td>6.0</td>
+        <td>-63</td>
+        <td>-294</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ГОТОВЫЕ СТОРИС</td>
+        <td><a href="https://t.me/oformleniye_mariya">https://t.me/oformleniye_mariya</a></td>
+        <td>Инстаграм</td>
+        <td>19748</td>
+        <td>6970</td>
+        <td>36.0</td>
+        <td>204</td>
+        <td>225</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Инстаграм для Бьюти-мастера</td>
+        <td><a href="https://t.me/instagram_stories_top">https://t.me/instagram_stories_top</a></td>
+        <td>Инстаграм</td>
+        <td>19542</td>
+        <td>1</td>
+        <td>3.0</td>
+        <td>-58</td>
+        <td>-272</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Готовые сторис|Стикеры|PNG|Beauty stories</td>
+        <td><a href="https://t.me/pngmali">https://t.me/pngmali</a></td>
+        <td>Инстаграм</td>
+        <td>19494</td>
+        <td>2751</td>
+        <td>15.0</td>
+        <td>7</td>
+        <td>34</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>NETAREELS | CREATIVE ROOM</td>
+        <td><a href="https://t.me/netareels">https://t.me/netareels</a></td>
+        <td>Инстаграм</td>
+        <td>19030</td>
+        <td>1899</td>
+        <td>10.0</td>
+        <td>-73</td>
+        <td>-297</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Gamelight</td>
+        <td><a href="https://t.me/gamelight">https://t.me/gamelight</a></td>
+        <td>Инстаграм</td>
+        <td>18811</td>
+        <td>3297</td>
+        <td>18.0</td>
+        <td>-716</td>
+        <td>6816</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>@yasenkaas про блогинг</td>
+        <td><a href="https://t.me/yasenkaas">https://t.me/yasenkaas</a></td>
+        <td>Инстаграм</td>
+        <td>18520</td>
+        <td>1887</td>
+        <td>11.0</td>
+        <td>-4</td>
+        <td>-224</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Канал интенсивов от Ronina</td>
+        <td><a href="https://t.me/artemronin">https://t.me/artemronin</a></td>
+        <td>Инстаграм</td>
+        <td>18487</td>
+        <td>7895</td>
+        <td>43.0</td>
+        <td>950</td>
+        <td>3192</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТВОЙ СТОРИС</td>
+        <td><a href="https://t.me/aloyna2509">https://t.me/aloyna2509</a></td>
+        <td>Инстаграм</td>
+        <td>18420</td>
+        <td>7314</td>
+        <td>40.0</td>
+        <td>11</td>
+        <td>217</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>✨ФОТО ФОНЫ ДЛЯ СТОРИЗ✨</td>
+        <td><a href="https://t.me/agilephoto">https://t.me/agilephoto</a></td>
+        <td>Инстаграм</td>
+        <td>18411</td>
+        <td>7374</td>
+        <td>41.0</td>
+        <td>-52</td>
+        <td>-112</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПельМЕМная | Отрывки из фильмов | МЕМЫ</td>
+        <td><a href="https://t.me/pelmems_reels">https://t.me/pelmems_reels</a></td>
+        <td>Инстаграм</td>
+        <td>17540</td>
+        <td>3484</td>
+        <td>20.0</td>
+        <td>55</td>
+        <td>136</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>INSTALLATION</td>
+        <td><a href="https://t.me/installatiostories">https://t.me/installatiostories</a></td>
+        <td>Инстаграм</td>
+        <td>17525</td>
+        <td>2672</td>
+        <td>16.0</td>
+        <td>-4</td>
+        <td>-90</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PNG Стикеры | Рилс | Сторис</td>
+        <td><a href="https://t.me/png_min">https://t.me/png_min</a></td>
+        <td>Инстаграм</td>
+        <td>17270</td>
+        <td>3502</td>
+        <td>21.0</td>
+        <td>-1</td>
+        <td>122</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОLUBWI шаблоны CapCut</td>
+        <td><a href="https://t.me/po_lubwi">https://t.me/po_lubwi</a></td>
+        <td>Инстаграм</td>
+        <td>17179</td>
+        <td>2181</td>
+        <td>13.0</td>
+        <td>130</td>
+        <td>-44</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>мастерская контента</td>
+        <td><a href="https://t.me/stickersbyseredulya">https://t.me/stickersbyseredulya</a></td>
+        <td>Инстаграм</td>
+        <td>17176</td>
+        <td>1767</td>
+        <td>11.0</td>
+        <td>-51</td>
+        <td>-234</td>
+        <td>2 года 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Нейросети. Готовые сторис и посты для ваших аккаунтов.</td>
+        <td><a href="https://t.me/ValievaReginastories">https://t.me/ValievaReginastories</a></td>
+        <td>Инстаграм</td>
+        <td>17172</td>
+        <td>941</td>
+        <td>6.0</td>
+        <td>-44</td>
+        <td>-326</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ленивый криэйтор</td>
+        <td><a href="https://t.me/lazy_creator">https://t.me/lazy_creator</a></td>
+        <td>Инстаграм</td>
+        <td>17086</td>
+        <td>1557</td>
+        <td>10.0</td>
+        <td>-59</td>
+        <td>-259</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МОНТАЖ ВИДЕО</td>
+        <td><a href="https://t.me/joinchat/AAAAAE_sdKJwE8uEtNUNVg">https://t.me/joinchat/AAAAAE_sdKJwE8uEtNUNVg</a></td>
+        <td>Инстаграм</td>
+        <td>17063</td>
+        <td>1063</td>
+        <td>7.0</td>
+        <td>-8</td>
+        <td>-85</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДЛЯ ТВОИХ СТОРИЗ</td>
+        <td><a href="https://t.me/stories_foru">https://t.me/stories_foru</a></td>
+        <td>Инстаграм</td>
+        <td>16933</td>
+        <td>704</td>
+        <td>5.0</td>
+        <td>-77</td>
+        <td>-361</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сторисы для бьюти-мастеров</td>
+        <td><a href="https://t.me/content_like">https://t.me/content_like</a></td>
+        <td>Инстаграм</td>
+        <td>16646</td>
+        <td>4877</td>
+        <td>30.0</td>
+        <td>39</td>
+        <td>558</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TOP STORIES</td>
+        <td><a href="https://t.me/joinchat/g35crzsMRqthYjcy">https://t.me/joinchat/g35crzsMRqthYjcy</a></td>
+        <td>Инстаграм</td>
+        <td>16620</td>
+        <td>1788</td>
+        <td>11.0</td>
+        <td>-62</td>
+        <td>-244</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ленивый рилсмейкер</td>
+        <td><a href="https://t.me/lazy_reelsmaker">https://t.me/lazy_reelsmaker</a></td>
+        <td>Инстаграм</td>
+        <td>16614</td>
+        <td>1494</td>
+        <td>9.0</td>
+        <td>-49</td>
+        <td>-186</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Create & Go</td>
+        <td><a href="https://t.me/prosorovanastasia">https://t.me/prosorovanastasia</a></td>
+        <td>Инстаграм</td>
+        <td>16474</td>
+        <td>4346</td>
+        <td>27.0</td>
+        <td>41</td>
+        <td>935</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝙱𝚒𝚝𝚌𝚑 𝚂𝚝𝚘𝚛𝚒𝚎 | Сторисы</td>
+        <td><a href="https://t.me/bitch_storie">https://t.me/bitch_storie</a></td>
+        <td>Инстаграм</td>
+        <td>16400</td>
+        <td>707</td>
+        <td>5.0</td>
+        <td>-74</td>
+        <td>-337</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пресеты бесплатно и SMM</td>
+        <td><a href="https://t.me/fotoredaktor">https://t.me/fotoredaktor</a></td>
+        <td>Инстаграм</td>
+        <td>16302</td>
+        <td>2182</td>
+        <td>14.0</td>
+        <td>-30</td>
+        <td>-128</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Inspire stickers | стикеры, фоны, готовые сторис</td>
+        <td><a href="https://t.me/dare_to_inspire">https://t.me/dare_to_inspire</a></td>
+        <td>Инстаграм</td>
+        <td>16227</td>
+        <td>3754</td>
+        <td>24.0</td>
+        <td>-51</td>
+        <td>-187</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Душевные видео 🦋 Видео для сторис | Reels | Фоны</td>
+        <td><a href="https://t.me/soul_videoo">https://t.me/soul_videoo</a></td>
+        <td>Инстаграм</td>
+        <td>16027</td>
+        <td>3418</td>
+        <td>22.0</td>
+        <td>-37</td>
+        <td>-158</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>INSTAзнайка</td>
+        <td><a href="https://t.me/instaznayka">https://t.me/instaznayka</a></td>
+        <td>Инстаграм</td>
+        <td>15939</td>
+        <td>865</td>
+        <td>6.0</td>
+        <td>-55</td>
+        <td>-237</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

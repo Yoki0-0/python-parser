@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Ремиксы | Bosco</td>
+        <td><a href="https://t.me/Boscoomuzz">https://t.me/Boscoomuzz</a></td>
+        <td>Музыка</td>
+        <td>1115118</td>
+        <td>88183</td>
+        <td>8.0</td>
+        <td>14241</td>
+        <td>19648</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЕГОР КРИД</td>
+        <td><a href="https://t.me/egorkreed">https://t.me/egorkreed</a></td>
+        <td>Музыка</td>
+        <td>904420</td>
+        <td>407264</td>
+        <td>45.0</td>
+        <td>-7802</td>
+        <td>-4200</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Buddy Музыка</td>
+        <td><a href="https://t.me/Buddy_music">https://t.me/Buddy_music</a></td>
+        <td>Музыка</td>
+        <td>901887</td>
+        <td>66158</td>
+        <td>8.0</td>
+        <td>-10646</td>
+        <td>-24685</td>
+        <td>6 лет 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Песни | Музыка | Ремиксы</td>
+        <td><a href="https://t.me/trek_remix">https://t.me/trek_remix</a></td>
+        <td>Музыка</td>
+        <td>803736</td>
+        <td>63392</td>
+        <td>8.0</td>
+        <td>4915</td>
+        <td>12888</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Музика | Ремиксы | Треки</td>
+        <td><a href="https://t.me/muzyka_xmusix">https://t.me/muzyka_xmusix</a></td>
+        <td>Музыка</td>
+        <td>782076</td>
+        <td>67877</td>
+        <td>9.0</td>
+        <td>1547</td>
+        <td>6331</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Музыка 2025 | Песни</td>
+        <td><a href="https://t.me/sad_tracky">https://t.me/sad_tracky</a></td>
+        <td>Музыка</td>
+        <td>540113</td>
+        <td>47036</td>
+        <td>9.0</td>
+        <td>-4459</td>
+        <td>-9245</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>soundsongs | Парные авы | темы тг</td>
+        <td><a href="https://t.me/animewwp">https://t.me/animewwp</a></td>
+        <td>Музыка</td>
+        <td>509666</td>
+        <td>85529</td>
+        <td>17.0</td>
+        <td>3991</td>
+        <td>-3147</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ʟɪᴢᴀᴠᴇᴛ ᴍᴜsɪᴄ</td>
+        <td><a href="https://t.me/lizavetmusic">https://t.me/lizavetmusic</a></td>
+        <td>Музыка</td>
+        <td>459299</td>
+        <td>25445</td>
+        <td>6.0</td>
+        <td>43856</td>
+        <td>105592</td>
+        <td>8 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Рифмы и Музыка</td>
+        <td><a href="https://t.me/joinchat/VC8MmMQNaiXtfHVR">https://t.me/joinchat/VC8MmMQNaiXtfHVR</a></td>
+        <td>Музыка</td>
+        <td>421939</td>
+        <td>58224</td>
+        <td>14.0</td>
+        <td>620</td>
+        <td>12932</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ʙᴀʟᴇɴᴄɪᴀɢᴀ</td>
+        <td><a href="https://t.me/joinchat/pgput_B3CE9lZmFi">https://t.me/joinchat/pgput_B3CE9lZmFi</a></td>
+        <td>Музыка</td>
+        <td>418811</td>
+        <td>33031</td>
+        <td>8.0</td>
+        <td>7671</td>
+        <td>883</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Jordan</td>
+        <td><a href="https://t.me/joinchat/mqbpDQNjCIQ3MGJi">https://t.me/joinchat/mqbpDQNjCIQ3MGJi</a></td>
+        <td>Музыка</td>
+        <td>412276</td>
+        <td>18954</td>
+        <td>5.0</td>
+        <td>-4879</td>
+        <td>-23882</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>NS Ремиксы | Песни | Музыка</td>
+        <td><a href="https://t.me/newschool_musicx">https://t.me/newschool_musicx</a></td>
+        <td>Музыка</td>
+        <td>407547</td>
+        <td>35468</td>
+        <td>9.0</td>
+        <td>1607</td>
+        <td>-10002</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>sextazy | музыка</td>
+        <td><a href="https://t.me/sextazy_muzika">https://t.me/sextazy_muzika</a></td>
+        <td>Музыка</td>
+        <td>397578</td>
+        <td>26932</td>
+        <td>7.0</td>
+        <td>-8008</td>
+        <td>60702</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АВТО | Музыка в машину</td>
+        <td><a href="https://t.me/muscarx">https://t.me/muscarx</a></td>
+        <td>Музыка</td>
+        <td>368966</td>
+        <td>37182</td>
+        <td>11.0</td>
+        <td>3546</td>
+        <td>17702</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Toxi$</td>
+        <td><a href="https://t.me/toxisslime4">https://t.me/toxisslime4</a></td>
+        <td>Музыка</td>
+        <td>364212</td>
+        <td>120259</td>
+        <td>33.0</td>
+        <td>389</td>
+        <td>-7968</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Dushevno | Музыка | ЧБ сохры</td>
+        <td><a href="https://t.me/dushevno_pab">https://t.me/dushevno_pab</a></td>
+        <td>Музыка</td>
+        <td>360729</td>
+        <td>27837</td>
+        <td>8.0</td>
+        <td>-4533</td>
+        <td>-4407</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>BUDA +</td>
+        <td><a href="https://t.me/budaog">https://t.me/budaog</a></td>
+        <td>Музыка</td>
+        <td>347983</td>
+        <td>206039</td>
+        <td>60.0</td>
+        <td>351</td>
+        <td>341</td>
+        <td>6 лет 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>𝐬𝐨𝐯𝐤𝐮𝐬𝐨𝐦🎧 | Музыка | Новинки</td>
+        <td><a href="https://t.me/sovkusommI">https://t.me/sovkusommI</a></td>
+        <td>Музыка</td>
+        <td>339985</td>
+        <td>68594</td>
+        <td>21.0</td>
+        <td>-6139</td>
+        <td>23086</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ремиксы | Prisma</td>
+        <td><a href="https://t.me/joinchat/_xiVmSOz_0tlNThi">https://t.me/joinchat/_xiVmSOz_0tlNThi</a></td>
+        <td>Музыка</td>
+        <td>339666</td>
+        <td>46669</td>
+        <td>14.0</td>
+        <td>10383</td>
+        <td>69972</td>
+        <td>3 месяца 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Музыка</td>
+        <td><a href="https://t.me/yandexmusic_live">https://t.me/yandexmusic_live</a></td>
+        <td>Музыка</td>
+        <td>339173</td>
+        <td>35126</td>
+        <td>11.0</td>
+        <td>826</td>
+        <td>33807</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Музыка | k376kk</td>
+        <td><a href="https://t.me/k376kk">https://t.me/k376kk</a></td>
+        <td>Музыка</td>
+        <td>285673</td>
+        <td>89</td>
+        <td>3.0</td>
+        <td>-7165</td>
+        <td>-33367</td>
+        <td>10 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>𝔽𝕖𝕟𝕕𝕚_𝕥𝕣𝕒𝕔𝕥🥀 | Музыка | Треки</td>
+        <td><a href="https://t.me/pesni_remix_2024">https://t.me/pesni_remix_2024</a></td>
+        <td>Музыка</td>
+        <td>284032</td>
+        <td>5865</td>
+        <td>3.0</td>
+        <td>-2882</td>
+        <td>-13340</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Lida</td>
+        <td><a href="https://t.me/mudotalida">https://t.me/mudotalida</a></td>
+        <td>Музыка</td>
+        <td>280552</td>
+        <td>113148</td>
+        <td>41.0</td>
+        <td>196</td>
+        <td>-4729</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Платина</td>
+        <td><a href="https://t.me/sosamuzik300">https://t.me/sosamuzik300</a></td>
+        <td>Музыка</td>
+        <td>272554</td>
+        <td>198850</td>
+        <td>73.0</td>
+        <td>-114</td>
+        <td>1770</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VK Music Bot | Музыка</td>
+        <td><a href="https://t.me/vkmusicbot1">https://t.me/vkmusicbot1</a></td>
+        <td>Музыка</td>
+        <td>258687</td>
+        <td>14765</td>
+        <td>6.0</td>
+        <td>-1939</td>
+        <td>-5596</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>9mice</td>
+        <td><a href="https://t.me/the9mice">https://t.me/the9mice</a></td>
+        <td>Музыка</td>
+        <td>257363</td>
+        <td>312099</td>
+        <td>122.0</td>
+        <td>354</td>
+        <td>1071</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Музыка 2025 | Хиты | Популярные Песни</td>
+        <td><a href="https://t.me/music_muzyka_2025">https://t.me/music_muzyka_2025</a></td>
+        <td>Музыка</td>
+        <td>256887</td>
+        <td>23290</td>
+        <td>10.0</td>
+        <td>-186</td>
+        <td>-9247</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МУЗЫКА 2025|ЛУЧШИЕ ТРЕКИ</td>
+        <td><a href="https://t.me/muzikavushi4">https://t.me/muzikavushi4</a></td>
+        <td>Музыка</td>
+        <td>251529</td>
+        <td>43240</td>
+        <td>18.0</td>
+        <td>-616</td>
+        <td>1071</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Operstyle music</td>
+        <td><a href="https://t.me/joinchat/3OTfOxLpGv81ZmI6">https://t.me/joinchat/3OTfOxLpGv81ZmI6</a></td>
+        <td>Музыка</td>
+        <td>249775</td>
+        <td>15993</td>
+        <td>7.0</td>
+        <td>3143</td>
+        <td>9585</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Музыка 2025 | Треки в машину</td>
+        <td><a href="https://t.me/remix_pesny">https://t.me/remix_pesny</a></td>
+        <td>Музыка</td>
+        <td>247195</td>
+        <td>26455</td>
+        <td>11.0</td>
+        <td>-400</td>
+        <td>-2154</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Music 2025|Музыка|Лучшие треки</td>
+        <td><a href="https://t.me/muzikavushi1">https://t.me/muzikavushi1</a></td>
+        <td>Музыка</td>
+        <td>245028</td>
+        <td>65307</td>
+        <td>27.0</td>
+        <td>2359</td>
+        <td>5194</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Новое Радио</td>
+        <td><a href="https://t.me/newradioru">https://t.me/newradioru</a></td>
+        <td>Музыка</td>
+        <td>233791</td>
+        <td>56588</td>
+        <td>25.0</td>
+        <td>714</td>
+        <td>4941</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>— UsPa Polo 🇺🇸</td>
+        <td><a href="https://t.me/Xit_Bass_Music_Trend_Muzikalar">https://t.me/Xit_Bass_Music_Trend_Muzikalar</a></td>
+        <td>Музыка</td>
+        <td>228722</td>
+        <td>25657</td>
+        <td>12.0</td>
+        <td>-23821</td>
+        <td>-74041</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MAYOT</td>
+        <td><a href="https://t.me/mayotofficialchannel">https://t.me/mayotofficialchannel</a></td>
+        <td>Музыка</td>
+        <td>205091</td>
+        <td>105245</td>
+        <td>52.0</td>
+        <td>9</td>
+        <td>-1949</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Legalized | Музыка | Ремиксы</td>
+        <td><a href="https://t.me/joinchat/z0b2wqwmPr8wMDEy">https://t.me/joinchat/z0b2wqwmPr8wMDEy</a></td>
+        <td>Музыка</td>
+        <td>204082</td>
+        <td>85</td>
+        <td>6.0</td>
+        <td>747</td>
+        <td>3643</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Akula Music 🦈</td>
+        <td><a href="https://t.me/joinchat/1tm8427FNII3ODFi">https://t.me/joinchat/1tm8427FNII3ODFi</a></td>
+        <td>Музыка</td>
+        <td>201673</td>
+        <td>25686</td>
+        <td>13.0</td>
+        <td>-2753</td>
+        <td>-5820</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Треки из Тик Тока 🎵</td>
+        <td><a href="https://t.me/only_music17">https://t.me/only_music17</a></td>
+        <td>Музыка</td>
+        <td>196911</td>
+        <td>24977</td>
+        <td>13.0</td>
+        <td>-1823</td>
+        <td>-8395</td>
+        <td>3 года 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Плейлист 🎧 | Музыка для души</td>
+        <td><a href="https://t.me/playlist_muzykaa">https://t.me/playlist_muzykaa</a></td>
+        <td>Музыка</td>
+        <td>195965</td>
+        <td>17332</td>
+        <td>9.0</td>
+        <td>1160</td>
+        <td>9844</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>s ʜ ᴀ ᴍ ᴇ ʟ ᴇ s s 🎧</td>
+        <td><a href="https://t.me/joinchat/cnrnVcW5s7ZmZDZi">https://t.me/joinchat/cnrnVcW5s7ZmZDZi</a></td>
+        <td>Музыка</td>
+        <td>194422</td>
+        <td>5789</td>
+        <td>3.0</td>
+        <td>-1432</td>
+        <td>-13879</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фонк Музыка | Phonk</td>
+        <td><a href="https://t.me/phonk_xmusic">https://t.me/phonk_xmusic</a></td>
+        <td>Музыка</td>
+        <td>191390</td>
+        <td>76901</td>
+        <td>41.0</td>
+        <td>304</td>
+        <td>2026</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Lovv66</td>
+        <td><a href="https://t.me/lovvdoublesix">https://t.me/lovvdoublesix</a></td>
+        <td>Музыка</td>
+        <td>191207</td>
+        <td>63510</td>
+        <td>34.0</td>
+        <td>-242</td>
+        <td>-2361</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОШЛАЯ МОЛЛИ</td>
+        <td><a href="https://t.me/poshlayamollyofficial">https://t.me/poshlayamollyofficial</a></td>
+        <td>Музыка</td>
+        <td>188769</td>
+        <td>122961</td>
+        <td>66.0</td>
+        <td>-187</td>
+        <td>-2041</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>_𝗺𝘂𝘀𝗶𝗰.𝗾</td>
+        <td><a href="https://t.me/joinchat/0zj0wpHb_Tc3NjZi">https://t.me/joinchat/0zj0wpHb_Tc3NjZi</a></td>
+        <td>Музыка</td>
+        <td>183193</td>
+        <td>20854</td>
+        <td>12.0</td>
+        <td>1</td>
+        <td>-1225</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Stray Kids | JYP ️️</td>
+        <td><a href="https://t.me/StrayKids_JYP">https://t.me/StrayKids_JYP</a></td>
+        <td>Музыка</td>
+        <td>182424</td>
+        <td>31515</td>
+        <td>18.0</td>
+        <td>244</td>
+        <td>-2547</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝐌𝐔𝐒𝐏𝐋𝐀𝐓𝐈𝐍𝐔𝐌 | Музыка | Ремиксы</td>
+        <td><a href="https://t.me/joinchat/s1yuyaNHC2sxYWUy">https://t.me/joinchat/s1yuyaNHC2sxYWUy</a></td>
+        <td>Музыка</td>
+        <td>179631</td>
+        <td>6751</td>
+        <td>4.0</td>
+        <td>673</td>
+        <td>-8715</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MACAN</td>
+        <td><a href="https://t.me/macan_official1">https://t.me/macan_official1</a></td>
+        <td>Музыка</td>
+        <td>178442</td>
+        <td>92647</td>
+        <td>52.0</td>
+        <td>-784</td>
+        <td>-3032</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Samchuk Lena</td>
+        <td><a href="https://t.me/samchuklena">https://t.me/samchuklena</a></td>
+        <td>Музыка</td>
+        <td>174217</td>
+        <td>43771</td>
+        <td>26.0</td>
+        <td>-377</td>
+        <td>-1263</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DEEP HOUSE МУЗЫКА</td>
+        <td><a href="https://t.me/best_deeep">https://t.me/best_deeep</a></td>
+        <td>Музыка</td>
+        <td>171434</td>
+        <td>21729</td>
+        <td>13.0</td>
+        <td>71</td>
+        <td>596</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ʟɪsᴀʙᴏɴ</td>
+        <td><a href="https://t.me/joinchat/8L0eVvSQUOcxYjEy">https://t.me/joinchat/8L0eVvSQUOcxYjEy</a></td>
+        <td>Музыка</td>
+        <td>170789</td>
+        <td>16970</td>
+        <td>10.0</td>
+        <td>9716</td>
+        <td>4322</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СЛАВА КПСС \ АНТИХАЙП</td>
+        <td><a href="https://t.me/antihype_kpss">https://t.me/antihype_kpss</a></td>
+        <td>Музыка</td>
+        <td>166021</td>
+        <td>116491</td>
+        <td>71.0</td>
+        <td>1446</td>
+        <td>883</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ксб Muzic</td>
+        <td><a href="https://t.me/ksbmuz">https://t.me/ksbmuz</a></td>
+        <td>Музыка</td>
+        <td>165003</td>
+        <td>114301</td>
+        <td>70.0</td>
+        <td>89</td>
+        <td>1493</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Fesko</td>
+        <td><a href="https://t.me/joinchat/cJaOfi_gGhllYWJi">https://t.me/joinchat/cJaOfi_gGhllYWJi</a></td>
+        <td>Музыка</td>
+        <td>160045</td>
+        <td>87</td>
+        <td>1.0</td>
+        <td>-1576</td>
+        <td>11323</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SHAMAN</td>
+        <td><a href="https://t.me/shaman_channel">https://t.me/shaman_channel</a></td>
+        <td>Музыка</td>
+        <td>159201</td>
+        <td>116794</td>
+        <td>74.0</td>
+        <td>136</td>
+        <td>-1511</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Баста / Ноггано</td>
+        <td><a href="https://t.me/nogganobasta">https://t.me/nogganobasta</a></td>
+        <td>Музыка</td>
+        <td>153699</td>
+        <td>33075</td>
+        <td>22.0</td>
+        <td>1063</td>
+        <td>-20541</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ʟᴏᴠᴇ ᴛʀᴀᴄᴋ🖤 | песни | эстетика</td>
+        <td><a href="https://t.me/music_trekis">https://t.me/music_trekis</a></td>
+        <td>Музыка</td>
+        <td>151462</td>
+        <td>19629</td>
+        <td>13.0</td>
+        <td>-1139</td>
+        <td>-5540</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Oligarchc 🖤 | Треки из Тик-Тока</td>
+        <td><a href="https://t.me/oligarchc">https://t.me/oligarchc</a></td>
+        <td>Музыка</td>
+        <td>150332</td>
+        <td>34468</td>
+        <td>23.0</td>
+        <td>2881</td>
+        <td>13942</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Pepel Nahudi</td>
+        <td><a href="https://t.me/pepelnahudiAB">https://t.me/pepelnahudiAB</a></td>
+        <td>Музыка</td>
+        <td>145616</td>
+        <td>107001</td>
+        <td>74.0</td>
+        <td>51</td>
+        <td>1422</td>
+        <td>5 лет 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Мияги & Эндшпиль</td>
+        <td><a href="https://t.me/miyagi_black">https://t.me/miyagi_black</a></td>
+        <td>Музыка</td>
+        <td>145525</td>
+        <td>42333</td>
+        <td>30.0</td>
+        <td>153</td>
+        <td>1503</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>𝘾𝙖𝙢𝙚𝙡𝙡𝙞𝙖 𝙢𝙪𝙨𝙞𝙘</td>
+        <td><a href="https://t.me/joinchat/xWU51cq3yXc5MTEy">https://t.me/joinchat/xWU51cq3yXc5MTEy</a></td>
+        <td>Музыка</td>
+        <td>145209</td>
+        <td>2474</td>
+        <td>2.0</td>
+        <td>-1539</td>
+        <td>-7178</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Риса за Творчество / РЗТ</td>
+        <td><a href="https://t.me/risazatvorchestvo">https://t.me/risazatvorchestvo</a></td>
+        <td>Музыка</td>
+        <td>143017</td>
+        <td>43493</td>
+        <td>31.0</td>
+        <td>578</td>
+        <td>1160</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GSPD</td>
+        <td><a href="https://t.me/gspd2000">https://t.me/gspd2000</a></td>
+        <td>Музыка</td>
+        <td>142189</td>
+        <td>45328</td>
+        <td>32.0</td>
+        <td>742</td>
+        <td>1407</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МУЗ-ТВ</td>
+        <td><a href="https://t.me/muztv">https://t.me/muztv</a></td>
+        <td>Музыка</td>
+        <td>141882</td>
+        <td>31085</td>
+        <td>22.0</td>
+        <td>-746</td>
+        <td>2258</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Юля Годунова</td>
+        <td><a href="https://t.me/juliagodunova">https://t.me/juliagodunova</a></td>
+        <td>Музыка</td>
+        <td>140104</td>
+        <td>90015</td>
+        <td>65.0</td>
+        <td>-2617</td>
+        <td>2966</td>
+        <td>8 лет 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Музыка из Тик Тока | Сохры</td>
+        <td><a href="https://t.me/k4mstyle">https://t.me/k4mstyle</a></td>
+        <td>Музыка</td>
+        <td>135812</td>
+        <td>18840</td>
+        <td>14.0</td>
+        <td>100</td>
+        <td>3632</td>
+        <td>5 лет 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Katya Lel 🦋</td>
+        <td><a href="https://t.me/klel2935">https://t.me/klel2935</a></td>
+        <td>Музыка</td>
+        <td>134643</td>
+        <td>35597</td>
+        <td>27.0</td>
+        <td>1908</td>
+        <td>-3423</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Музыка Ремиксы 2025 | Phonk</td>
+        <td><a href="https://t.me/Fonki_funky">https://t.me/Fonki_funky</a></td>
+        <td>Музыка</td>
+        <td>134496</td>
+        <td>55452</td>
+        <td>42.0</td>
+        <td>1895</td>
+        <td>4518</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ᴇᴅɪɴʙᴜʀɢʜ 🎧</td>
+        <td><a href="https://t.me/joinchat/XjNVasMgtU05MmMy">https://t.me/joinchat/XjNVasMgtU05MmMy</a></td>
+        <td>Музыка</td>
+        <td>133260</td>
+        <td>11238</td>
+        <td>9.0</td>
+        <td>-1579</td>
+        <td>-7788</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>УННВ | Андеграунд | Эстетика</td>
+        <td><a href="https://t.me/YNNV_REMiXX">https://t.me/YNNV_REMiXX</a></td>
+        <td>Музыка</td>
+        <td>131757</td>
+        <td>16810</td>
+        <td>13.0</td>
+        <td>434</td>
+        <td>4301</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ʙᴀʟᴍᴀɪɴ | музыка | сохры🎧</td>
+        <td><a href="https://t.me/joinchat/vduwXsqriXs0NjYy">https://t.me/joinchat/vduwXsqriXs0NjYy</a></td>
+        <td>Музыка</td>
+        <td>131311</td>
+        <td>6757</td>
+        <td>6.0</td>
+        <td>-107</td>
+        <td>2452</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Макс Корж</td>
+        <td><a href="https://t.me/maxkorzh">https://t.me/maxkorzh</a></td>
+        <td>Музыка</td>
+        <td>130811</td>
+        <td>89619</td>
+        <td>69.0</td>
+        <td>71</td>
+        <td>230</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MusicHub</td>
+        <td><a href="https://t.me/joinchat/9we-Eg8dv0djNWYy">https://t.me/joinchat/9we-Eg8dv0djNWYy</a></td>
+        <td>Музыка</td>
+        <td>128185</td>
+        <td>14794</td>
+        <td>12.0</td>
+        <td>-498</td>
+        <td>-1887</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>⚜️k𝖗𝖆k𝖊𝖓_𝖒𝖚𝖟⚜️</td>
+        <td><a href="https://t.me/joinchat/Hcat5ARdxhk5ZTUy">https://t.me/joinchat/Hcat5ARdxhk5ZTUy</a></td>
+        <td>Музыка</td>
+        <td>127554</td>
+        <td>19167</td>
+        <td>15.0</td>
+        <td>994</td>
+        <td>-1217</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Heronwater</td>
+        <td><a href="https://t.me/H3ronwat3r">https://t.me/H3ronwat3r</a></td>
+        <td>Музыка</td>
+        <td>125499</td>
+        <td>116382</td>
+        <td>93.0</td>
+        <td>69</td>
+        <td>4174</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>OBLADAET PLAYERS</td>
+        <td><a href="https://t.me/oblagram">https://t.me/oblagram</a></td>
+        <td>Музыка</td>
+        <td>124696</td>
+        <td>94212</td>
+        <td>76.0</td>
+        <td>1734</td>
+        <td>2533</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Montteci🔥 | Музыка | Треки</td>
+        <td><a href="https://t.me/joinchat/QemynYfxeOdjN2My">https://t.me/joinchat/QemynYfxeOdjN2My</a></td>
+        <td>Музыка</td>
+        <td>124474</td>
+        <td>13539</td>
+        <td>11.0</td>
+        <td>-1190</td>
+        <td>-4804</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДЛЯ НАС</td>
+        <td><a href="https://t.me/dlyanxss">https://t.me/dlyanxss</a></td>
+        <td>Музыка</td>
+        <td>124123</td>
+        <td>23895</td>
+        <td>20.0</td>
+        <td>345</td>
+        <td>5503</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>KOSMOMUS | Музыка из ТикТок</td>
+        <td><a href="https://t.me/joinchat/l5Vr5N97M8VhMWFi">https://t.me/joinchat/l5Vr5N97M8VhMWFi</a></td>
+        <td>Музыка</td>
+        <td>123128</td>
+        <td>12039</td>
+        <td>10.0</td>
+        <td>-1567</td>
+        <td>-4383</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сергей Лазарев</td>
+        <td><a href="https://t.me/lazarev_official">https://t.me/lazarev_official</a></td>
+        <td>Музыка</td>
+        <td>120982</td>
+        <td>72285</td>
+        <td>60.0</td>
+        <td>70</td>
+        <td>313</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>P H A R A O H</td>
+        <td><a href="https://t.me/pharaohmoscow">https://t.me/pharaohmoscow</a></td>
+        <td>Музыка</td>
+        <td>119943</td>
+        <td>170480</td>
+        <td>143.0</td>
+        <td>42</td>
+        <td>2395</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ᴍᴀɴɪʟᴀ</td>
+        <td><a href="https://t.me/joinchat/L9QGY0fqZ5syZmYy">https://t.me/joinchat/L9QGY0fqZ5syZmYy</a></td>
+        <td>Музыка</td>
+        <td>119307</td>
+        <td>11393</td>
+        <td>10.0</td>
+        <td>2319</td>
+        <td>4500</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>In Your Mind | Музыка из ТикТок</td>
+        <td><a href="https://t.me/joinchat/KlWgugxD5kczMTIy">https://t.me/joinchat/KlWgugxD5kczMTIy</a></td>
+        <td>Музыка</td>
+        <td>118522</td>
+        <td>18688</td>
+        <td>16.0</td>
+        <td>1754</td>
+        <td>2124</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Cars Music 🔥</td>
+        <td><a href="https://t.me/carsmuzic_carmusic_bassmusic">https://t.me/carsmuzic_carmusic_bassmusic</a></td>
+        <td>Музыка</td>
+        <td>117908</td>
+        <td>40687</td>
+        <td>35.0</td>
+        <td>-231</td>
+        <td>-946</td>
+        <td>7 лет 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>ᴍɪʟᴀɴ</td>
+        <td><a href="https://t.me/joinchat/Fm0hzCzJdHM2MTU1">https://t.me/joinchat/Fm0hzCzJdHM2MTU1</a></td>
+        <td>Музыка</td>
+        <td>116198</td>
+        <td>10760</td>
+        <td>10.0</td>
+        <td>-1849</td>
+        <td>5242</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ɢ ᴇ ʀ ᴍ ᴀ ɴ ʏ 🎧</td>
+        <td><a href="https://t.me/joinchat/n5ri3VP-NXIyNjE6">https://t.me/joinchat/n5ri3VP-NXIyNjE6</a></td>
+        <td>Музыка</td>
+        <td>113821</td>
+        <td>11442</td>
+        <td>11.0</td>
+        <td>-1792</td>
+        <td>-8124</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>songs / Парные авы / темы тг</td>
+        <td><a href="https://t.me/animeuwy">https://t.me/animeuwy</a></td>
+        <td>Музыка</td>
+        <td>113566</td>
+        <td>24511</td>
+        <td>22.0</td>
+        <td>-941</td>
+        <td>-4515</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Sayonara Boy</td>
+        <td><a href="https://t.me/sayonaraboy">https://t.me/sayonaraboy</a></td>
+        <td>Музыка</td>
+        <td>113346</td>
+        <td>56669</td>
+        <td>50.0</td>
+        <td>147</td>
+        <td>572</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>💞 ФЛАДДА РЯДОМ 💞</td>
+        <td><a href="https://t.me/gonefludd132">https://t.me/gonefludd132</a></td>
+        <td>Музыка</td>
+        <td>112832</td>
+        <td>83944</td>
+        <td>75.0</td>
+        <td>363</td>
+        <td>953</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>VK X</td>
+        <td><a href="https://t.me/vkxci">https://t.me/vkxci</a></td>
+        <td>Музыка</td>
+        <td>111887</td>
+        <td>59128</td>
+        <td>53.0</td>
+        <td>281</td>
+        <td>769</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Noize MC</td>
+        <td><a href="https://t.me/NoizeMCOfficial">https://t.me/NoizeMCOfficial</a></td>
+        <td>Музыка</td>
+        <td>110424</td>
+        <td>83385</td>
+        <td>76.0</td>
+        <td>453</td>
+        <td>2443</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>VK Музыка</td>
+        <td><a href="https://t.me/vkmusic_online">https://t.me/vkmusic_online</a></td>
+        <td>Музыка</td>
+        <td>110186</td>
+        <td>38042</td>
+        <td>35.0</td>
+        <td>912</td>
+        <td>631</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>BSWEEDY</td>
+        <td><a href="https://t.me/bsweedy1">https://t.me/bsweedy1</a></td>
+        <td>Музыка</td>
+        <td>109916</td>
+        <td>124241</td>
+        <td>113.0</td>
+        <td>15773</td>
+        <td>34064</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>𝑉𝑎𝑛𝑐𝑜𝑢𝑣𝑒𝑟 𝑅𝑒𝑚𝑖𝑥</td>
+        <td><a href="https://t.me/joinchat/c3zlCiFowDhkODVi">https://t.me/joinchat/c3zlCiFowDhkODVi</a></td>
+        <td>Музыка</td>
+        <td>106974</td>
+        <td>10951</td>
+        <td>11.0</td>
+        <td>-2415</td>
+        <td>-12518</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тыва ырылар</td>
+        <td><a href="https://t.me/tuvinskiepesni">https://t.me/tuvinskiepesni</a></td>
+        <td>Музыка</td>
+        <td>106295</td>
+        <td>76331</td>
+        <td>72.0</td>
+        <td>42</td>
+        <td>-84</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VMP News</td>
+        <td><a href="https://t.me/vmp_news">https://t.me/vmp_news</a></td>
+        <td>Музыка</td>
+        <td>105821</td>
+        <td>89249</td>
+        <td>85.0</td>
+        <td>409</td>
+        <td>3946</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>RADIO TAPOK (Официальный канал)</td>
+        <td><a href="https://t.me/tapokmusic">https://t.me/tapokmusic</a></td>
+        <td>Музыка</td>
+        <td>105482</td>
+        <td>94038</td>
+        <td>90.0</td>
+        <td>413</td>
+        <td>1368</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>LIL KRYSTALLL</td>
+        <td><a href="https://t.me/lilkrystalll">https://t.me/lilkrystalll</a></td>
+        <td>Музыка</td>
+        <td>103691</td>
+        <td>73968</td>
+        <td>72.0</td>
+        <td>-262</td>
+        <td>-1526</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ᴠᴋ ᴍᴜsɪᴄ</td>
+        <td><a href="https://t.me/joinchat/5Cq2bsBBFBswNTFi">https://t.me/joinchat/5Cq2bsBBFBswNTFi</a></td>
+        <td>Музыка</td>
+        <td>103567</td>
+        <td>7236</td>
+        <td>7.0</td>
+        <td>-3833</td>
+        <td>-19359</td>
+        <td>5 месяцев 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>ЮГ 404</td>
+        <td><a href="https://t.me/ug_404">https://t.me/ug_404</a></td>
+        <td>Музыка</td>
+        <td>103125</td>
+        <td>41730</td>
+        <td>41.0</td>
+        <td>-222</td>
+        <td>-3115</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анита Цой / Anita Tsoy</td>
+        <td><a href="https://t.me/anitatsoy">https://t.me/anitatsoy</a></td>
+        <td>Музыка</td>
+        <td>102171</td>
+        <td>2698</td>
+        <td>3.0</td>
+        <td>-1279</td>
+        <td>-10903</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ᴅʀᴇᴀᴍ ᴍᴜsɪᴄ 🎧</td>
+        <td><a href="https://t.me/joinchat/TS632AtwZ9o0MmMy">https://t.me/joinchat/TS632AtwZ9o0MmMy</a></td>
+        <td>Музыка</td>
+        <td>101596</td>
+        <td>8432</td>
+        <td>9.0</td>
+        <td>-2817</td>
+        <td>-423</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

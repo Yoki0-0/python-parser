@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Математик Андрей</td>
+        <td><a href="https://t.me/matematik_andrei_channel">https://t.me/matematik_andrei_channel</a></td>
+        <td>Образование</td>
+        <td>646967</td>
+        <td>90624</td>
+        <td>14.0</td>
+        <td>-1807</td>
+        <td>-12720</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>OTVETI</td>
+        <td><a href="https://t.me/joinchat/bVcZ8Hy5Nec5MzEy">https://t.me/joinchat/bVcZ8Hy5Nec5MzEy</a></td>
+        <td>Образование</td>
+        <td>503886</td>
+        <td>50604</td>
+        <td>10.0</td>
+        <td>-18453</td>
+        <td>-57220</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ 2025</td>
+        <td><a href="https://t.me/joinchat/gnYsqjKzec1hNjMy">https://t.me/joinchat/gnYsqjKzec1hNjMy</a></td>
+        <td>Образование</td>
+        <td>374532</td>
+        <td>47150</td>
+        <td>13.0</td>
+        <td>-15537</td>
+        <td>-45047</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PANDAEX.AM | ОТВЕТЫ & ПОДГОТОВКА</td>
+        <td><a href="https://t.me/joinchat/sWx7yCuF-yk0MDcy">https://t.me/joinchat/sWx7yCuF-yk0MDcy</a></td>
+        <td>Образование</td>
+        <td>305140</td>
+        <td>32675</td>
+        <td>11.0</td>
+        <td>-15333</td>
+        <td>-27332</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Excel Hacks | Бухгалтерия и Аналитика</td>
+        <td><a href="https://t.me/hacks_excel">https://t.me/hacks_excel</a></td>
+        <td>Образование</td>
+        <td>304166</td>
+        <td>14564</td>
+        <td>5.0</td>
+        <td>-394</td>
+        <td>-1906</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SPISAL</td>
+        <td><a href="https://t.me/joinchat/OwYhedLTI8RlMGFi">https://t.me/joinchat/OwYhedLTI8RlMGFi</a></td>
+        <td>Образование</td>
+        <td>275348</td>
+        <td>17463</td>
+        <td>7.0</td>
+        <td>-9026</td>
+        <td>-50009</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Новости школы РФ (ГДЗ Боты)</td>
+        <td><a href="https://t.me/reshator_gdz">https://t.me/reshator_gdz</a></td>
+        <td>Образование</td>
+        <td>273480</td>
+        <td>71907</td>
+        <td>27.0</td>
+        <td>-10313</td>
+        <td>-39665</td>
+        <td>3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Dark Mate | ОТВЕТЫ</td>
+        <td><a href="https://t.me/joinchat/jzIg5qXPR2M1OWJi">https://t.me/joinchat/jzIg5qXPR2M1OWJi</a></td>
+        <td>Образование</td>
+        <td>262315</td>
+        <td>24445</td>
+        <td>10.0</td>
+        <td>-10003</td>
+        <td>-36629</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ответы на ЕГЭ ОГЭ</td>
+        <td><a href="https://t.me/otvety_ege">https://t.me/otvety_ege</a></td>
+        <td>Образование</td>
+        <td>823744</td>
+        <td>None</td>
+        <td>None</td>
+        <td>None</td>
+        <td>None</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Данир на связи ОГЭ Математика 2025 | Умскул</td>
+        <td><a href="https://t.me/danirmath">https://t.me/danirmath</a></td>
+        <td>Образование</td>
+        <td>193335</td>
+        <td>67207</td>
+        <td>35.0</td>
+        <td>-21102</td>
+        <td>5062</td>
+        <td>5 лет 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>МЭШ РЭШ SKYSMART | KING.ANSWER | КАНАЛ</td>
+        <td><a href="https://t.me/kingmash_official">https://t.me/kingmash_official</a></td>
+        <td>Образование</td>
+        <td>175103</td>
+        <td>20935</td>
+        <td>12.0</td>
+        <td>-2905</td>
+        <td>-11903</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Разговоры о важном</td>
+        <td><a href="https://t.me/razgovory_o_vazhnom">https://t.me/razgovory_o_vazhnom</a></td>
+        <td>Образование</td>
+        <td>173075</td>
+        <td>81221</td>
+        <td>47.0</td>
+        <td>-959</td>
+        <td>-3590</td>
+        <td>3 года</td>
+      </tr>
+
+      <tr>
+        <td>Территория русского языка | ОГЭ по русскому языку 2025 | Настя Гласная | Умскул</td>
+        <td><a href="https://t.me/nastya_umschool_russ">https://t.me/nastya_umschool_russ</a></td>
+        <td>Образование</td>
+        <td>170695</td>
+        <td>40426</td>
+        <td>24.0</td>
+        <td>-33387</td>
+        <td>9265</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Школы РФ</td>
+        <td><a href="https://t.me/joinchat/PirCimsDN3k2YWIy">https://t.me/joinchat/PirCimsDN3k2YWIy</a></td>
+        <td>Образование</td>
+        <td>170101</td>
+        <td>78822</td>
+        <td>47.0</td>
+        <td>-2131</td>
+        <td>-7637</td>
+        <td>8 месяцев 21 день</td>
+      </tr>
+
+      <tr>
+        <td>ВКРАТЦЕ | Саморазвитие</td>
+        <td><a href="https://t.me/joinchat/HCqE6TqlxPRhYWUy">https://t.me/joinchat/HCqE6TqlxPRhYWUy</a></td>
+        <td>Образование</td>
+        <td>170100</td>
+        <td>48548</td>
+        <td>29.0</td>
+        <td>31231</td>
+        <td>122</td>
+        <td>3 месяца 21 день</td>
+      </tr>
+
+      <tr>
+        <td>EZY ОГЭ 2025</td>
+        <td><a href="https://t.me/joinchat/4VyvNaMZs6ZiMzli">https://t.me/joinchat/4VyvNaMZs6ZiMzli</a></td>
+        <td>Образование</td>
+        <td>168951</td>
+        <td>13863</td>
+        <td>9.0</td>
+        <td>-10259</td>
+        <td>-10869</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ 2025 ️</td>
+        <td><a href="https://t.me/joinchat/sK66gkcTF7QwMjgy">https://t.me/joinchat/sK66gkcTF7QwMjgy</a></td>
+        <td>Образование</td>
+        <td>165600</td>
+        <td>46454</td>
+        <td>29.0</td>
+        <td>-11744</td>
+        <td>22235</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТС 2025</td>
+        <td><a href="https://t.me/otvets1">https://t.me/otvets1</a></td>
+        <td>Образование</td>
+        <td>163105</td>
+        <td>80002</td>
+        <td>49.0</td>
+        <td>-13704</td>
+        <td>25267</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>KEYOGE</td>
+        <td><a href="https://t.me/joinchat/UchH8PnQwlnLmVfZ">https://t.me/joinchat/UchH8PnQwlnLmVfZ</a></td>
+        <td>Образование</td>
+        <td>160672</td>
+        <td>18410</td>
+        <td>12.0</td>
+        <td>-5911</td>
+        <td>-15165</td>
+        <td>6 лет 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Стадика — стажировки, стипендии, обучение</td>
+        <td><a href="https://t.me/studyqa">https://t.me/studyqa</a></td>
+        <td>Образование</td>
+        <td>158738</td>
+        <td>12815</td>
+        <td>9.0</td>
+        <td>128</td>
+        <td>549</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НА 5+ ОГЭ 2025</td>
+        <td><a href="https://t.me/joinchat/3RA4HNQs7TVjNzAy">https://t.me/joinchat/3RA4HNQs7TVjNzAy</a></td>
+        <td>Образование</td>
+        <td>148157</td>
+        <td>58586</td>
+        <td>40.0</td>
+        <td>-12019</td>
+        <td>200</td>
+        <td>3 месяца 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Physics.Math.Code</td>
+        <td><a href="https://t.me/physics_lib">https://t.me/physics_lib</a></td>
+        <td>Образование</td>
+        <td>137241</td>
+        <td>20610</td>
+        <td>15.0</td>
+        <td>67</td>
+        <td>483</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ НА ОГЭ 2025</td>
+        <td><a href="https://t.me/pepsi_exam">https://t.me/pepsi_exam</a></td>
+        <td>Образование</td>
+        <td>132851</td>
+        <td>57505</td>
+        <td>44.0</td>
+        <td>-12492</td>
+        <td>36896</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Конспекты | Биология и Химия</td>
+        <td><a href="https://t.me/konspekty_ege">https://t.me/konspekty_ege</a></td>
+        <td>Образование</td>
+        <td>127965</td>
+        <td>12322</td>
+        <td>10.0</td>
+        <td>-828</td>
+        <td>-1489</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>FAST_EXAM | ПОМОЩЬ 2025</td>
+        <td><a href="https://t.me/joinchat/ymzuKEJ7rjtiYTQy">https://t.me/joinchat/ymzuKEJ7rjtiYTQy</a></td>
+        <td>Образование</td>
+        <td>119434</td>
+        <td>28340</td>
+        <td>24.0</td>
+        <td>-11079</td>
+        <td>27734</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ LITE EXAM 2025</td>
+        <td><a href="https://t.me/joinchat/SXTTcvzti6Y2MjFi">https://t.me/joinchat/SXTTcvzti6Y2MjFi</a></td>
+        <td>Образование</td>
+        <td>119080</td>
+        <td>14937</td>
+        <td>13.0</td>
+        <td>-8812</td>
+        <td>2613</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЭКЗАМЕНЫ 2025 ОТВЕТЫ</td>
+        <td><a href="https://t.me/otveti_ege_oge2025">https://t.me/otveti_ege_oge2025</a></td>
+        <td>Образование</td>
+        <td>118817</td>
+        <td>11557</td>
+        <td>10.0</td>
+        <td>545</td>
+        <td>230</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ ОГЭ</td>
+        <td><a href="https://t.me/joinchat/V3lywArhyXu5ADGe">https://t.me/joinchat/V3lywArhyXu5ADGe</a></td>
+        <td>Образование</td>
+        <td>113870</td>
+        <td>10426</td>
+        <td>10.0</td>
+        <td>-7381</td>
+        <td>70</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Новая Школа ЕГЭ | Кружок</td>
+        <td><a href="https://t.me/kruzhok_ns">https://t.me/kruzhok_ns</a></td>
+        <td>Образование</td>
+        <td>113787</td>
+        <td>7215</td>
+        <td>7.0</td>
+        <td>-6011</td>
+        <td>-15804</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ НА ОГЭ 2025</td>
+        <td><a href="https://t.me/hypeanswer">https://t.me/hypeanswer</a></td>
+        <td>Образование</td>
+        <td>110551</td>
+        <td>36602</td>
+        <td>34.0</td>
+        <td>-8762</td>
+        <td>68219</td>
+        <td>3 года 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>ОБЩЕСТВО РАВИЛЯ | Обществознание ОГЭ Умскул</td>
+        <td><a href="https://t.me/ravil_candi">https://t.me/ravil_candi</a></td>
+        <td>Образование</td>
+        <td>109191</td>
+        <td>32199</td>
+        <td>30.0</td>
+        <td>-9780</td>
+        <td>-11997</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Просто Эксель</td>
+        <td><a href="https://t.me/joinchat/19vCK2iwUic2Y2Iy">https://t.me/joinchat/19vCK2iwUic2Y2Iy</a></td>
+        <td>Образование</td>
+        <td>106064</td>
+        <td>7971</td>
+        <td>8.0</td>
+        <td>-201</td>
+        <td>-888</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Саша Обществознайка</td>
+        <td><a href="https://t.me/obshestvoznaika_el">https://t.me/obshestvoznaika_el</a></td>
+        <td>Образование</td>
+        <td>103513</td>
+        <td>27023</td>
+        <td>27.0</td>
+        <td>-2189</td>
+        <td>-3217</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПЕДАГОГИ РОССИИ</td>
+        <td><a href="https://t.me/Pedagogi_Rossii">https://t.me/Pedagogi_Rossii</a></td>
+        <td>Образование</td>
+        <td>102753</td>
+        <td>34288</td>
+        <td>34.0</td>
+        <td>643</td>
+        <td>805</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Образование Подмосковья</td>
+        <td><a href="https://t.me/obr_mo">https://t.me/obr_mo</a></td>
+        <td>Образование</td>
+        <td>101027</td>
+        <td>23797</td>
+        <td>24.0</td>
+        <td>-317</td>
+        <td>-1774</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Московское образование</td>
+        <td><a href="https://t.me/depobr_mos">https://t.me/depobr_mos</a></td>
+        <td>Образование</td>
+        <td>99827</td>
+        <td>53862</td>
+        <td>54.0</td>
+        <td>-407</td>
+        <td>-805</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПЕДАГОГИ РОССИИ: ИННОВАЦИИ В ОБРАЗОВАНИИ</td>
+        <td><a href="https://t.me/pedagogi_online">https://t.me/pedagogi_online</a></td>
+        <td>Образование</td>
+        <td>92838</td>
+        <td>18946</td>
+        <td>21.0</td>
+        <td>1824</td>
+        <td>548</td>
+        <td>5 лет 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Математика с Ильичом | ЕГЭ проф мат | 100Балльный репетитор</td>
+        <td><a href="https://t.me/ilchegg">https://t.me/ilchegg</a></td>
+        <td>Образование</td>
+        <td>89250</td>
+        <td>34387</td>
+        <td>39.0</td>
+        <td>-1254</td>
+        <td>1694</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ангелина Русичка из ЕГЭЛЕНД</td>
+        <td><a href="https://t.me/russichka_el">https://t.me/russichka_el</a></td>
+        <td>Образование</td>
+        <td>87985</td>
+        <td>19214</td>
+        <td>22.0</td>
+        <td>-3168</td>
+        <td>-9772</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Otveti full | ОТВЕТЫ</td>
+        <td><a href="https://t.me/joinchat/Aa8Bk3CpNzNjZDVi">https://t.me/joinchat/Aa8Bk3CpNzNjZDVi</a></td>
+        <td>Образование</td>
+        <td>86705</td>
+        <td>29455</td>
+        <td>34.0</td>
+        <td>-9013</td>
+        <td>34498</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Советские учебники</td>
+        <td><a href="https://t.me/sovuche">https://t.me/sovuche</a></td>
+        <td>Образование</td>
+        <td>84615</td>
+        <td>9955</td>
+        <td>12.0</td>
+        <td>305</td>
+        <td>1752</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MY-EXAM | ОГЭ ЕГЭ 2025</td>
+        <td><a href="https://t.me/joinchat/AAAAAEMnkqhagIlkX3_Dsg">https://t.me/joinchat/AAAAAEMnkqhagIlkX3_Dsg</a></td>
+        <td>Образование</td>
+        <td>79015</td>
+        <td>14257</td>
+        <td>18.0</td>
+        <td>-2636</td>
+        <td>4710</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Отличница</td>
+        <td><a href="https://t.me/otlichnica1">https://t.me/otlichnica1</a></td>
+        <td>Образование</td>
+        <td>77929</td>
+        <td>17462</td>
+        <td>23.0</td>
+        <td>603</td>
+        <td>1290</td>
+        <td>7 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ ОГЭ 2025</td>
+        <td><a href="https://t.me/otveti_oge77">https://t.me/otveti_oge77</a></td>
+        <td>Образование</td>
+        <td>76698</td>
+        <td>10693</td>
+        <td>14.0</td>
+        <td>-3581</td>
+        <td>-8240</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Школы.ру</td>
+        <td><a href="https://t.me/joinchat/gEyH7wybkNozMzUy">https://t.me/joinchat/gEyH7wybkNozMzUy</a></td>
+        <td>Образование</td>
+        <td>74432</td>
+        <td>17122</td>
+        <td>23.0</td>
+        <td>-976</td>
+        <td>-1801</td>
+        <td>7 месяцев 21 день</td>
+      </tr>
+
+      <tr>
+        <td>🇷🇺 Ответы ОГЭ 2025 | ЕГЭ 🇷🇺</td>
+        <td><a href="https://t.me/otvety_oge_ru">https://t.me/otvety_oge_ru</a></td>
+        <td>Образование</td>
+        <td>74302</td>
+        <td>19173</td>
+        <td>26.0</td>
+        <td>-8075</td>
+        <td>10963</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>sbor25.me | Сборники ЕГЭ | ОГЭ 2025</td>
+        <td><a href="https://t.me/joinchat/vTchxW_gwkRmZGQ6">https://t.me/joinchat/vTchxW_gwkRmZGQ6</a></td>
+        <td>Образование</td>
+        <td>73904</td>
+        <td>20513</td>
+        <td>28.0</td>
+        <td>-2382</td>
+        <td>-6692</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ШАГ | поступление в Университет</td>
+        <td><a href="https://t.me/stepbyshag">https://t.me/stepbyshag</a></td>
+        <td>Образование</td>
+        <td>73864</td>
+        <td>16387</td>
+        <td>23.0</td>
+        <td>401</td>
+        <td>929</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Минпросвещения России</td>
+        <td><a href="https://t.me/minprosrf">https://t.me/minprosrf</a></td>
+        <td>Образование</td>
+        <td>73122</td>
+        <td>22779</td>
+        <td>32.0</td>
+        <td>771</td>
+        <td>1940</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Умскул</td>
+        <td><a href="https://t.me/umschool_official">https://t.me/umschool_official</a></td>
+        <td>Образование</td>
+        <td>73035</td>
+        <td>13394</td>
+        <td>19.0</td>
+        <td>-1513</td>
+        <td>1611</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОГЭ ГВЭ 16 июня</td>
+        <td><a href="https://t.me/OTVETY_NA2025">https://t.me/OTVETY_NA2025</a></td>
+        <td>Образование</td>
+        <td>70492</td>
+        <td>6435</td>
+        <td>10.0</td>
+        <td>90</td>
+        <td>19297</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ответы ОГЭ 2025🇷🇺</td>
+        <td><a href="https://t.me/otvet_oge_300">https://t.me/otvet_oge_300</a></td>
+        <td>Образование</td>
+        <td>70334</td>
+        <td>87700</td>
+        <td>125.0</td>
+        <td>-7736</td>
+        <td>-2665</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русский язык с Верой ЕГЭFlex | Школа ЕГЭFlex</td>
+        <td><a href="https://t.me/vera_egeflex">https://t.me/vera_egeflex</a></td>
+        <td>Образование</td>
+        <td>70207</td>
+        <td>28184</td>
+        <td>41.0</td>
+        <td>-3020</td>
+        <td>-3853</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЭКСЕЛЬ ХАК</td>
+        <td><a href="https://t.me/excelhackru">https://t.me/excelhackru</a></td>
+        <td>Образование</td>
+        <td>69150</td>
+        <td>11140</td>
+        <td>17.0</td>
+        <td>-14</td>
+        <td>212</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ ЕГЭ ОГЭ 2025</td>
+        <td><a href="https://t.me/ege_otvety1">https://t.me/ege_otvety1</a></td>
+        <td>Образование</td>
+        <td>68828</td>
+        <td>25059</td>
+        <td>37.0</td>
+        <td>-794</td>
+        <td>-4560</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Школы России</td>
+        <td><a href="https://t.me/joinchat/P8MD_09X9FRmMjVi">https://t.me/joinchat/P8MD_09X9FRmMjVi</a></td>
+        <td>Образование</td>
+        <td>68529</td>
+        <td>28293</td>
+        <td>42.0</td>
+        <td>-703</td>
+        <td>-3567</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>LU Study Abroad👩🏼‍🎓🌎</td>
+        <td><a href="https://t.me/beyondsd">https://t.me/beyondsd</a></td>
+        <td>Образование</td>
+        <td>67700</td>
+        <td>19196</td>
+        <td>29.0</td>
+        <td>-16</td>
+        <td>-212</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Маша Птипца | Русский язык ЕГЭ | 100балльный🔥</td>
+        <td><a href="https://t.me/ege100_rus">https://t.me/ege100_rus</a></td>
+        <td>Образование</td>
+        <td>67374</td>
+        <td>28761</td>
+        <td>43.0</td>
+        <td>-615</td>
+        <td>1729</td>
+        <td>2 года 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Капитан Грантов</td>
+        <td><a href="https://t.me/cptgrantov">https://t.me/cptgrantov</a></td>
+        <td>Образование</td>
+        <td>66860</td>
+        <td>15236</td>
+        <td>23.0</td>
+        <td>93</td>
+        <td>605</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Максим Коваль. ЕГЭ по математике</td>
+        <td><a href="https://t.me/MO_EGE">https://t.me/MO_EGE</a></td>
+        <td>Образование</td>
+        <td>65374</td>
+        <td>34546</td>
+        <td>53.0</td>
+        <td>-3057</td>
+        <td>1074</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SOVPALO | ОГЭ 2025</td>
+        <td><a href="https://t.me/joinchat/VCPvoW1GFTNMNOKR">https://t.me/joinchat/VCPvoW1GFTNMNOKR</a></td>
+        <td>Образование</td>
+        <td>65052</td>
+        <td>16491</td>
+        <td>26.0</td>
+        <td>-4378</td>
+        <td>7720</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОГЭ 2025 ОТВЕТЫ</td>
+        <td><a href="https://t.me/otvettii">https://t.me/otvettii</a></td>
+        <td>Образование</td>
+        <td>63981</td>
+        <td>46761</td>
+        <td>74.0</td>
+        <td>-5957</td>
+        <td>7715</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Разговоры о важном</td>
+        <td><a href="https://t.me/razgovori_o_vajnom">https://t.me/razgovori_o_vajnom</a></td>
+        <td>Образование</td>
+        <td>63190</td>
+        <td>65302</td>
+        <td>104.0</td>
+        <td>-318</td>
+        <td>-5991</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ответы Огэ/Егэ</td>
+        <td><a href="https://t.me/joinchat/flClp0c0mLk3ZGQy">https://t.me/joinchat/flClp0c0mLk3ZGQy</a></td>
+        <td>Образование</td>
+        <td>63163</td>
+        <td>37649</td>
+        <td>60.0</td>
+        <td>-8955</td>
+        <td>-1264</td>
+        <td>4 года 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Google Таблицы</td>
+        <td><a href="https://t.me/google_sheets">https://t.me/google_sheets</a></td>
+        <td>Образование</td>
+        <td>62957</td>
+        <td>8233</td>
+        <td>14.0</td>
+        <td>-93</td>
+        <td>164</td>
+        <td>8 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Курсовая работа | Заказать курсовую</td>
+        <td><a href="https://t.me/kursovye_raboty_zakazi">https://t.me/kursovye_raboty_zakazi</a></td>
+        <td>Образование</td>
+        <td>62927</td>
+        <td>1155</td>
+        <td>2.0</td>
+        <td>-4378</td>
+        <td>14624</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Егор Кант Обществознание ОГЭ 2025 Школково</td>
+        <td><a href="https://t.me/kant_soc">https://t.me/kant_soc</a></td>
+        <td>Образование</td>
+        <td>62314</td>
+        <td>33177</td>
+        <td>54.0</td>
+        <td>-8895</td>
+        <td>-2926</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Учебник Т—Ж</td>
+        <td><a href="https://t.me/t_uchebnik">https://t.me/t_uchebnik</a></td>
+        <td>Образование</td>
+        <td>62096</td>
+        <td>4816</td>
+        <td>8.0</td>
+        <td>-12</td>
+        <td>-23</td>
+        <td>3 года 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Учу сердцем</td>
+        <td><a href="https://t.me/anna_tochka_znaniy">https://t.me/anna_tochka_znaniy</a></td>
+        <td>Образование</td>
+        <td>60754</td>
+        <td>8144</td>
+        <td>14.0</td>
+        <td>-267</td>
+        <td>-969</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Двоичный кот🐱 | ОГЭ информатика 2025 | Артём Фролов Умскул</td>
+        <td><a href="https://t.me/twocod">https://t.me/twocod</a></td>
+        <td>Образование</td>
+        <td>60738</td>
+        <td>23801</td>
+        <td>40.0</td>
+        <td>-5292</td>
+        <td>10416</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Школьный Дневник | Новости</td>
+        <td><a href="https://t.me/diary_school">https://t.me/diary_school</a></td>
+        <td>Образование</td>
+        <td>60657</td>
+        <td>14289</td>
+        <td>24.0</td>
+        <td>-1093</td>
+        <td>-3998</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СЕМЕЙНОЕ ОБРАЗОВАНИЕ ДЛЯ ЧАЙНИКОВ</td>
+        <td><a href="https://t.me/co_legko">https://t.me/co_legko</a></td>
+        <td>Образование</td>
+        <td>60516</td>
+        <td>7989</td>
+        <td>14.0</td>
+        <td>-23</td>
+        <td>-114</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>до егэ</td>
+        <td><a href="https://t.me/doegeproject">https://t.me/doegeproject</a></td>
+        <td>Образование</td>
+        <td>59953</td>
+        <td>25685</td>
+        <td>43.0</td>
+        <td>41094</td>
+        <td>55919</td>
+        <td>10 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>ГДЗ «ДВОЕЧКА»</td>
+        <td><a href="https://t.me/dvoe4chka">https://t.me/dvoe4chka</a></td>
+        <td>Образование</td>
+        <td>59824</td>
+        <td>19855</td>
+        <td>34.0</td>
+        <td>-1332</td>
+        <td>-5136</td>
+        <td>6 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ НА ОГЭ 2025 ПЕРЕСДАЧА</td>
+        <td><a href="https://t.me/shcolaotvet">https://t.me/shcolaotvet</a></td>
+        <td>Образование</td>
+        <td>59039</td>
+        <td>12792</td>
+        <td>22.0</td>
+        <td>-3589</td>
+        <td>4284</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ SPISAL OTVET | ОГЭ 2025</td>
+        <td><a href="https://t.me/joinchat/vs8qY7Zr64gzODUy">https://t.me/joinchat/vs8qY7Zr64gzODUy</a></td>
+        <td>Образование</td>
+        <td>59013</td>
+        <td>21703</td>
+        <td>37.0</td>
+        <td>-5821</td>
+        <td>7169</td>
+        <td>1 год 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Минобрнауки России</td>
+        <td><a href="https://t.me/minobrnaukiofficial">https://t.me/minobrnaukiofficial</a></td>
+        <td>Образование</td>
+        <td>58579</td>
+        <td>11689</td>
+        <td>20.0</td>
+        <td>15</td>
+        <td>162</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Маша Математичка из ЕГЭЛЕНД</td>
+        <td><a href="https://t.me/matematichka_el">https://t.me/matematichka_el</a></td>
+        <td>Образование</td>
+        <td>58240</td>
+        <td>13840</td>
+        <td>24.0</td>
+        <td>-1566</td>
+        <td>-1141</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ну да, study</td>
+        <td><a href="https://t.me/nudastudy">https://t.me/nudastudy</a></td>
+        <td>Образование</td>
+        <td>57367</td>
+        <td>12319</td>
+        <td>22.0</td>
+        <td>-700</td>
+        <td>-858</td>
+        <td>7 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>OTVETYNA5 ОГЭ 2025</td>
+        <td><a href="https://t.me/joinchat/KGwn18plnZUwMDM6">https://t.me/joinchat/KGwn18plnZUwMDM6</a></td>
+        <td>Образование</td>
+        <td>57090</td>
+        <td>6868</td>
+        <td>12.0</td>
+        <td>-10412</td>
+        <td>32345</td>
+        <td>4 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>NeoFamily | Биология | ЕГЭ-2026</td>
+        <td><a href="https://t.me/biofamily_ege">https://t.me/biofamily_ege</a></td>
+        <td>Образование</td>
+        <td>56309</td>
+        <td>13741</td>
+        <td>25.0</td>
+        <td>-112</td>
+        <td>-366</td>
+        <td>4 года 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>факультет</td>
+        <td><a href="https://t.me/studyfaculty">https://t.me/studyfaculty</a></td>
+        <td>Образование</td>
+        <td>56240</td>
+        <td>4450</td>
+        <td>8.0</td>
+        <td>-193</td>
+        <td>-1111</td>
+        <td>3 года 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Оля об учёбе</td>
+        <td><a href="https://t.me/joinchat/-7gjKI7rtyk4YzQy">https://t.me/joinchat/-7gjKI7rtyk4YzQy</a></td>
+        <td>Образование</td>
+        <td>55996</td>
+        <td>7540</td>
+        <td>14.0</td>
+        <td>-1524</td>
+        <td>-861</td>
+        <td>9 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Excel Everyday</td>
+        <td><a href="https://t.me/excel_everyday">https://t.me/excel_everyday</a></td>
+        <td>Образование</td>
+        <td>54934</td>
+        <td>7214</td>
+        <td>14.0</td>
+        <td>-46</td>
+        <td>-176</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Канал еЖанчиков | Жанна Казанская | Биология ЕГЭ Умскул 2025</td>
+        <td><a href="https://t.me/kazanZkaya">https://t.me/kazanZkaya</a></td>
+        <td>Образование</td>
+        <td>54641</td>
+        <td>9736</td>
+        <td>18.0</td>
+        <td>-529</td>
+        <td>-958</td>
+        <td>5 лет 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ НА ОГЭ 2025</td>
+        <td><a href="https://t.me/oge100">https://t.me/oge100</a></td>
+        <td>Образование</td>
+        <td>54245</td>
+        <td>39501</td>
+        <td>73.0</td>
+        <td>-6489</td>
+        <td>18133</td>
+        <td>6 лет 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Курсовые работы</td>
+        <td><a href="https://t.me/diplomnye_kursovye_raboty">https://t.me/diplomnye_kursovye_raboty</a></td>
+        <td>Образование</td>
+        <td>52942</td>
+        <td>300</td>
+        <td>1.0</td>
+        <td>5371</td>
+        <td>4481</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЦИФРОВАЯ ИСТОРИЯ – Егор Яковлев</td>
+        <td><a href="https://t.me/egoryakovleff">https://t.me/egoryakovleff</a></td>
+        <td>Образование</td>
+        <td>52735</td>
+        <td>13324</td>
+        <td>26.0</td>
+        <td>128</td>
+        <td>790</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ НА ОГЭ</td>
+        <td><a href="https://t.me/sto_ballnik">https://t.me/sto_ballnik</a></td>
+        <td>Образование</td>
+        <td>52442</td>
+        <td>6121</td>
+        <td>12.0</td>
+        <td>-1721</td>
+        <td>-7059</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НАДЕЖДА НА ПЯТЬ | ОГЭ, ЕГЭ по математике | Умскул</td>
+        <td><a href="https://t.me/nadya_matem">https://t.me/nadya_matem</a></td>
+        <td>Образование</td>
+        <td>52390</td>
+        <td>13791</td>
+        <td>27.0</td>
+        <td>-4488</td>
+        <td>4878</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ 2025🇷🇺</td>
+        <td><a href="https://t.me/joinchat/UZylTRrLXoIxZDcy">https://t.me/joinchat/UZylTRrLXoIxZDcy</a></td>
+        <td>Образование</td>
+        <td>52042</td>
+        <td>9253</td>
+        <td>18.0</td>
+        <td>-4376</td>
+        <td>310</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Учитель – не профессия, а призвание!</td>
+        <td><a href="https://t.me/Teacher_club2022">https://t.me/Teacher_club2022</a></td>
+        <td>Образование</td>
+        <td>51727</td>
+        <td>13885</td>
+        <td>27.0</td>
+        <td>423</td>
+        <td>478</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СОВУШКА</td>
+        <td><a href="https://t.me/ks_sovushka">https://t.me/ks_sovushka</a></td>
+        <td>Образование</td>
+        <td>51224</td>
+        <td>15091</td>
+        <td>30.0</td>
+        <td>-354</td>
+        <td>-45</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ ОГЭ ПЕРЕСДАЧА</td>
+        <td><a href="https://t.me/otvetiogeperezdacha">https://t.me/otvetiogeperezdacha</a></td>
+        <td>Образование</td>
+        <td>50816</td>
+        <td>13613</td>
+        <td>27.0</td>
+        <td>-1627</td>
+        <td>-7728</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Методичка воспитателя</td>
+        <td><a href="https://t.me/metodi4ka_vospitatelya">https://t.me/metodi4ka_vospitatelya</a></td>
+        <td>Образование</td>
+        <td>50586</td>
+        <td>18833</td>
+        <td>38.0</td>
+        <td>197</td>
+        <td>385</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>planning | study | учеба</td>
+        <td><a href="https://t.me/samorazvitie11">https://t.me/samorazvitie11</a></td>
+        <td>Образование</td>
+        <td>50315</td>
+        <td>2861</td>
+        <td>6.0</td>
+        <td>-169</td>
+        <td>-878</td>
+        <td>8 лет 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Таня Коваль. ЕГЭ по русскому языку</td>
+        <td><a href="https://t.me/TatiashkaEGE">https://t.me/TatiashkaEGE</a></td>
+        <td>Образование</td>
+        <td>50277</td>
+        <td>21895</td>
+        <td>44.0</td>
+        <td>-1581</td>
+        <td>-3103</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Thoisoi</td>
+        <td><a href="https://t.me/TheThoisoi">https://t.me/TheThoisoi</a></td>
+        <td>Образование</td>
+        <td>49905</td>
+        <td>25755</td>
+        <td>52.0</td>
+        <td>-105</td>
+        <td>-375</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Катя Математичка | ЕГЭЛЕНД | ОГЭ</td>
+        <td><a href="https://t.me/matematichka_oge_el">https://t.me/matematichka_oge_el</a></td>
+        <td>Образование</td>
+        <td>48850</td>
+        <td>8657</td>
+        <td>18.0</td>
+        <td>-2921</td>
+        <td>-5757</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Денис Марков | Химия ОГЭ 2025 | Умскул</td>
+        <td><a href="https://t.me/chem_den">https://t.me/chem_den</a></td>
+        <td>Образование</td>
+        <td>48770</td>
+        <td>16592</td>
+        <td>34.0</td>
+        <td>-2659</td>
+        <td>-3659</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

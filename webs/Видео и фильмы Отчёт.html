@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>ФИЛЬМЫ КИНО СЕРИАЛЫ</td>
+        <td><a href="https://t.me/kino_hd2">https://t.me/kino_hd2</a></td>
+        <td>Видео и фильмы</td>
+        <td>1549324</td>
+        <td>35129</td>
+        <td>3.0</td>
+        <td>10896</td>
+        <td>401</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лило и Стич 🍿 Смотреть</td>
+        <td><a href="https://t.me/kino_filmyc">https://t.me/kino_filmyc</a></td>
+        <td>Видео и фильмы</td>
+        <td>1335962</td>
+        <td>49017</td>
+        <td>4.0</td>
+        <td>14058</td>
+        <td>29305</td>
+        <td>5 лет 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кинопоиск | Фильмы и сериалы</td>
+        <td><a href="https://t.me/kinopoisk">https://t.me/kinopoisk</a></td>
+        <td>Видео и фильмы</td>
+        <td>874701</td>
+        <td>64744</td>
+        <td>8.0</td>
+        <td>1642</td>
+        <td>27945</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Фильмы на вечер | Как приручить Дракона</td>
+        <td><a href="https://t.me/kinosom">https://t.me/kinosom</a></td>
+        <td>Видео и фильмы</td>
+        <td>644094</td>
+        <td>33261</td>
+        <td>6.0</td>
+        <td>-20848</td>
+        <td>50343</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ФИЛЬМЫ 🍿 НОВИНКИ КИНО</td>
+        <td><a href="https://t.me/film_1080">https://t.me/film_1080</a></td>
+        <td>Видео и фильмы</td>
+        <td>518294</td>
+        <td>28205</td>
+        <td>6.0</td>
+        <td>30590</td>
+        <td>58748</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лололошка ФУ НОВОСТИ</td>
+        <td><a href="https://t.me/LololoshkaUSE">https://t.me/LololoshkaUSE</a></td>
+        <td>Видео и фильмы</td>
+        <td>500422</td>
+        <td>483221</td>
+        <td>97.0</td>
+        <td>-608</td>
+        <td>-3300</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>KinoSerialNews</td>
+        <td><a href="https://t.me/joinchat/WItaoxrIvOkwZjc6">https://t.me/joinchat/WItaoxrIvOkwZjc6</a></td>
+        <td>Видео и фильмы</td>
+        <td>478949</td>
+        <td>100551</td>
+        <td>21.0</td>
+        <td>1609</td>
+        <td>4132</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ФИЛЬМЫ СМОТРЕТЬ СКАЧАТЬ МАЙНКРАФТ</td>
+        <td><a href="https://t.me/k1noxa103">https://t.me/k1noxa103</a></td>
+        <td>Видео и фильмы</td>
+        <td>445695</td>
+        <td>14512</td>
+        <td>4.0</td>
+        <td>-3255</td>
+        <td>-24496</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фильмы | Сериалы</td>
+        <td><a href="https://t.me/movies_filmy">https://t.me/movies_filmy</a></td>
+        <td>Видео и фильмы</td>
+        <td>375570</td>
+        <td>96315</td>
+        <td>26.0</td>
+        <td>-3049</td>
+        <td>-6121</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>sndk</td>
+        <td><a href="https://t.me/sndkgram">https://t.me/sndkgram</a></td>
+        <td>Видео и фильмы</td>
+        <td>335120</td>
+        <td>247172</td>
+        <td>74.0</td>
+        <td>855</td>
+        <td>9539</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кино Сериалы Фильмы</td>
+        <td><a href="https://t.me/kinohdfilm1">https://t.me/kinohdfilm1</a></td>
+        <td>Видео и фильмы</td>
+        <td>314173</td>
+        <td>15176</td>
+        <td>5.0</td>
+        <td>-5027</td>
+        <td>-20472</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Плюс Медиа</td>
+        <td><a href="https://t.me/plus_yndx">https://t.me/plus_yndx</a></td>
+        <td>Видео и фильмы</td>
+        <td>312422</td>
+        <td>17284</td>
+        <td>6.0</td>
+        <td>-837</td>
+        <td>18313</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Киноманы 🍿Субстанция, Анора</td>
+        <td><a href="https://t.me/kinomanies">https://t.me/kinomanies</a></td>
+        <td>Видео и фильмы</td>
+        <td>277288</td>
+        <td>5404</td>
+        <td>2.0</td>
+        <td>-1889</td>
+        <td>-8689</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Давай еще одну серию?</td>
+        <td><a href="https://t.me/davay_esche">https://t.me/davay_esche</a></td>
+        <td>Видео и фильмы</td>
+        <td>256049</td>
+        <td>37241</td>
+        <td>15.0</td>
+        <td>3088</td>
+        <td>9393</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кино | Марвел | Marveloff | Dc</td>
+        <td><a href="https://t.me/kino_marvel_dc">https://t.me/kino_marvel_dc</a></td>
+        <td>Видео и фильмы</td>
+        <td>241416</td>
+        <td>11241</td>
+        <td>5.0</td>
+        <td>74907</td>
+        <td>52848</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Marvel / DC: Geek Movies</td>
+        <td><a href="https://t.me/marvel4">https://t.me/marvel4</a></td>
+        <td>Видео и фильмы</td>
+        <td>240529</td>
+        <td>53845</td>
+        <td>23.0</td>
+        <td>-905</td>
+        <td>-9028</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КИНОХА | ФИЛЬМЫ</td>
+        <td><a href="https://t.me/joinchat/AAAAAFZvnYz2hZsCRDvmiA">https://t.me/joinchat/AAAAAFZvnYz2hZsCRDvmiA</a></td>
+        <td>Видео и фильмы</td>
+        <td>237927</td>
+        <td>8370</td>
+        <td>4.0</td>
+        <td>109</td>
+        <td>1096</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КИНОМИКС | Фильм Майнкрафт онлайн</td>
+        <td><a href="https://t.me/kinoremix">https://t.me/kinoremix</a></td>
+        <td>Видео и фильмы</td>
+        <td>224532</td>
+        <td>5373</td>
+        <td>3.0</td>
+        <td>-1591</td>
+        <td>-7596</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кинобот | Фильмы | Сериалы | Кино 2025</td>
+        <td><a href="https://t.me/kinobot1">https://t.me/kinobot1</a></td>
+        <td>Видео и фильмы</td>
+        <td>218076</td>
+        <td>29189</td>
+        <td>14.0</td>
+        <td>287</td>
+        <td>-1498</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Cyber Cat Studio</td>
+        <td><a href="https://t.me/cybercatstudio">https://t.me/cybercatstudio</a></td>
+        <td>Видео и фильмы</td>
+        <td>217316</td>
+        <td>51134</td>
+        <td>24.0</td>
+        <td>-1303</td>
+        <td>-5807</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мультики и Мультфильмы</td>
+        <td><a href="https://t.me/multiki9">https://t.me/multiki9</a></td>
+        <td>Видео и фильмы</td>
+        <td>214916</td>
+        <td>49622</td>
+        <td>24.0</td>
+        <td>-561</td>
+        <td>186</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Соляноторий</td>
+        <td><a href="https://t.me/PathOfMisanthrope">https://t.me/PathOfMisanthrope</a></td>
+        <td>Видео и фильмы</td>
+        <td>208848</td>
+        <td>107599</td>
+        <td>52.0</td>
+        <td>-395</td>
+        <td>-4990</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кино Фильмы Сериалы</td>
+        <td><a href="https://t.me/kinotik1">https://t.me/kinotik1</a></td>
+        <td>Видео и фильмы</td>
+        <td>192541</td>
+        <td>3812</td>
+        <td>2.0</td>
+        <td>-1705</td>
+        <td>-8105</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пацанки Подслушано</td>
+        <td><a href="https://t.me/new_pacanki">https://t.me/new_pacanki</a></td>
+        <td>Видео и фильмы</td>
+        <td>190531</td>
+        <td>52256</td>
+        <td>28.0</td>
+        <td>-1175</td>
+        <td>-6232</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СЕРИАЛЫ 2025</td>
+        <td><a href="https://t.me/joinchat/AAAAAFkCPSydPv7GXzPXSA">https://t.me/joinchat/AAAAAFkCPSydPv7GXzPXSA</a></td>
+        <td>Видео и фильмы</td>
+        <td>190222</td>
+        <td>5955</td>
+        <td>4.0</td>
+        <td>502</td>
+        <td>2530</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Metalfamily официальный канал</td>
+        <td><a href="https://t.me/metalfamily_news">https://t.me/metalfamily_news</a></td>
+        <td>Видео и фильмы</td>
+        <td>189288</td>
+        <td>134000</td>
+        <td>71.0</td>
+        <td>-260</td>
+        <td>-1024</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АНИМЕ ТАРАКАНЫ - Аниме новости</td>
+        <td><a href="https://t.me/animetarakans">https://t.me/animetarakans</a></td>
+        <td>Видео и фильмы</td>
+        <td>182327</td>
+        <td>34959</td>
+        <td>20.0</td>
+        <td>-815</td>
+        <td>-1586</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЧТО БЫЛО ДАЛЬШЕ?</td>
+        <td><a href="https://t.me/chbdchbdchbd">https://t.me/chbdchbdchbd</a></td>
+        <td>Видео и фильмы</td>
+        <td>173588</td>
+        <td>130138</td>
+        <td>75.0</td>
+        <td>43</td>
+        <td>5244</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АниЛибрия ⚡️ Аниме новости</td>
+        <td><a href="https://t.me/anilibria">https://t.me/anilibria</a></td>
+        <td>Видео и фильмы</td>
+        <td>171499</td>
+        <td>38473</td>
+        <td>23.0</td>
+        <td>442</td>
+        <td>2066</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Союзmультфильm fan</td>
+        <td><a href="https://t.me/joinchat/89oNEhbV9ZQ2ZjBi">https://t.me/joinchat/89oNEhbV9ZQ2ZjBi</a></td>
+        <td>Видео и фильмы</td>
+        <td>168348</td>
+        <td>18203</td>
+        <td>11.0</td>
+        <td>-38</td>
+        <td>130</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КиноКайф - Лучшие фильмы</td>
+        <td><a href="https://t.me/kino_kaif">https://t.me/kino_kaif</a></td>
+        <td>Видео и фильмы</td>
+        <td>163520</td>
+        <td>36430</td>
+        <td>23.0</td>
+        <td>2359</td>
+        <td>16602</td>
+        <td>6 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Mad Movie 🎬</td>
+        <td><a href="https://t.me/joinchat/AAAAAER8_uWCJmwDrpW18Q">https://t.me/joinchat/AAAAAER8_uWCJmwDrpW18Q</a></td>
+        <td>Видео и фильмы</td>
+        <td>162011</td>
+        <td>15095</td>
+        <td>10.0</td>
+        <td>1106</td>
+        <td>-2183</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Русские сериалы</td>
+        <td><a href="https://t.me/joinchat/IXwsRM1Zs64wM2Qy">https://t.me/joinchat/IXwsRM1Zs64wM2Qy</a></td>
+        <td>Видео и фильмы</td>
+        <td>160873</td>
+        <td>4598</td>
+        <td>3.0</td>
+        <td>601</td>
+        <td>3116</td>
+        <td>4 года 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>CherevatBlog</td>
+        <td><a href="https://t.me/cherevatstreams">https://t.me/cherevatstreams</a></td>
+        <td>Видео и фильмы</td>
+        <td>159604</td>
+        <td>45239</td>
+        <td>29.0</td>
+        <td>90</td>
+        <td>-1886</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сказочный Союз | Мультфильмы</td>
+        <td><a href="https://t.me/skazka_myltfilm">https://t.me/skazka_myltfilm</a></td>
+        <td>Видео и фильмы</td>
+        <td>157520</td>
+        <td>13569</td>
+        <td>9.0</td>
+        <td>-306</td>
+        <td>-1618</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МУВИС | Фильмы и сериалы</td>
+        <td><a href="https://t.me/kinofilmy_seriali">https://t.me/kinofilmy_seriali</a></td>
+        <td>Видео и фильмы</td>
+        <td>156098</td>
+        <td>4071</td>
+        <td>3.0</td>
+        <td>-1067</td>
+        <td>-5043</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AlisaDirilis🎬</td>
+        <td><a href="https://t.me/Alisa_dirilis_osman">https://t.me/Alisa_dirilis_osman</a></td>
+        <td>Видео и фильмы</td>
+        <td>153316</td>
+        <td>138544</td>
+        <td>91.0</td>
+        <td>-709</td>
+        <td>-249</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Фильмы ру</td>
+        <td><a href="https://t.me/bednyesme">https://t.me/bednyesme</a></td>
+        <td>Видео и фильмы</td>
+        <td>147351</td>
+        <td>1666</td>
+        <td>2.0</td>
+        <td>-1716</td>
+        <td>-3103</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НОВИНКИ КИНО 🎬</td>
+        <td><a href="https://t.me/joinchat/3gaH-G3Pnrk3ODUy">https://t.me/joinchat/3gaH-G3Pnrk3ODUy</a></td>
+        <td>Видео и фильмы</td>
+        <td>142894</td>
+        <td>6579</td>
+        <td>5.0</td>
+        <td>685</td>
+        <td>3407</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КИНОМАНИЯ🍿 Фильмы и сериалы</td>
+        <td><a href="https://t.me/kineman">https://t.me/kineman</a></td>
+        <td>Видео и фильмы</td>
+        <td>141935</td>
+        <td>24463</td>
+        <td>18.0</td>
+        <td>407</td>
+        <td>1233</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Фильмы и Сериалы (ФиС)</td>
+        <td><a href="https://t.me/filmandseriallllllll">https://t.me/filmandseriallllllll</a></td>
+        <td>Видео и фильмы</td>
+        <td>141833</td>
+        <td>5677</td>
+        <td>4.0</td>
+        <td>1146</td>
+        <td>3147</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МЕСТО ВСТРЕЧИ 📺</td>
+        <td><a href="https://t.me/mesto_vstrechi_ntv">https://t.me/mesto_vstrechi_ntv</a></td>
+        <td>Видео и фильмы</td>
+        <td>140047</td>
+        <td>51229</td>
+        <td>37.0</td>
+        <td>48</td>
+        <td>966</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Movie Release</td>
+        <td><a href="https://t.me/movierls">https://t.me/movierls</a></td>
+        <td>Видео и фильмы</td>
+        <td>139252</td>
+        <td>22007</td>
+        <td>16.0</td>
+        <td>-26</td>
+        <td>-508</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ZAKATOON</td>
+        <td><a href="https://t.me/zakatoonofficial">https://t.me/zakatoonofficial</a></td>
+        <td>Видео и фильмы</td>
+        <td>135704</td>
+        <td>83443</td>
+        <td>62.0</td>
+        <td>933</td>
+        <td>378</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Экстренный вызов 112</td>
+        <td><a href="https://t.me/vizov_ren">https://t.me/vizov_ren</a></td>
+        <td>Видео и фильмы</td>
+        <td>132673</td>
+        <td>50517</td>
+        <td>39.0</td>
+        <td>415</td>
+        <td>2949</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кинотеатр</td>
+        <td><a href="https://t.me/joinchat/_zWwCaJFkUNmNWUy">https://t.me/joinchat/_zWwCaJFkUNmNWUy</a></td>
+        <td>Видео и фильмы</td>
+        <td>125114</td>
+        <td>14375</td>
+        <td>12.0</td>
+        <td>-604</td>
+        <td>3540</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Урок Сериалы 2025</td>
+        <td><a href="https://t.me/fisher_movies">https://t.me/fisher_movies</a></td>
+        <td>Видео и фильмы</td>
+        <td>120999</td>
+        <td>20776</td>
+        <td>18.0</td>
+        <td>696</td>
+        <td>3274</td>
+        <td>3 года 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>ФАБРИКА КИНО (ФК)</td>
+        <td><a href="https://t.me/fabrica_kino">https://t.me/fabrica_kino</a></td>
+        <td>Видео и фильмы</td>
+        <td>118015</td>
+        <td>9411</td>
+        <td>8.0</td>
+        <td>1864</td>
+        <td>10241</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Solek</td>
+        <td><a href="https://t.me/solek_yt">https://t.me/solek_yt</a></td>
+        <td>Видео и фильмы</td>
+        <td>117121</td>
+        <td>70664</td>
+        <td>61.0</td>
+        <td>67</td>
+        <td>3890</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КиноТочка | Острые Новости Кинематографа</td>
+        <td><a href="https://t.me/kinotochka_official">https://t.me/kinotochka_official</a></td>
+        <td>Видео и фильмы</td>
+        <td>113774</td>
+        <td>20219</td>
+        <td>18.0</td>
+        <td>857</td>
+        <td>1469</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Showy</td>
+        <td><a href="https://t.me/joinchat/8VhwIolX7o9iMGRi">https://t.me/joinchat/8VhwIolX7o9iMGRi</a></td>
+        <td>Видео и фильмы</td>
+        <td>107485</td>
+        <td>48606</td>
+        <td>46.0</td>
+        <td>-146</td>
+        <td>2342</td>
+        <td>9 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кинопоиск | Новости</td>
+        <td><a href="https://t.me/kinopoisk_soon">https://t.me/kinopoisk_soon</a></td>
+        <td>Видео и фильмы</td>
+        <td>107196</td>
+        <td>15523</td>
+        <td>15.0</td>
+        <td>-66</td>
+        <td>-286</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Кинчик и Винчик 🍿</td>
+        <td><a href="https://t.me/joinchat/8tBO0O_SGmI4MDli">https://t.me/joinchat/8tBO0O_SGmI4MDli</a></td>
+        <td>Видео и фильмы</td>
+        <td>106125</td>
+        <td>10712</td>
+        <td>11.0</td>
+        <td>639</td>
+        <td>5570</td>
+        <td>7 месяцев 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>ФИЛЬМЫ 2025 | Ужасы | Комедии</td>
+        <td><a href="https://t.me/FilmySerialyTG">https://t.me/FilmySerialyTG</a></td>
+        <td>Видео и фильмы</td>
+        <td>105931</td>
+        <td>11160</td>
+        <td>11.0</td>
+        <td>1326</td>
+        <td>344</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бедные смеются богатые плачут 🎞️</td>
+        <td><a href="https://t.me/zimorodokserialy">https://t.me/zimorodokserialy</a></td>
+        <td>Видео и фильмы</td>
+        <td>105509</td>
+        <td>54386</td>
+        <td>52.0</td>
+        <td>850</td>
+        <td>4192</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>IG project - Отель Хазбин | Адский Босс и др.</td>
+        <td><a href="https://t.me/dreamgroupe">https://t.me/dreamgroupe</a></td>
+        <td>Видео и фильмы</td>
+        <td>103375</td>
+        <td>30434</td>
+        <td>30.0</td>
+        <td>-350</td>
+        <td>-2123</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>SYILERS | Киноблогер</td>
+        <td><a href="https://t.me/syilers2019">https://t.me/syilers2019</a></td>
+        <td>Видео и фильмы</td>
+        <td>101699</td>
+        <td>52260</td>
+        <td>52.0</td>
+        <td>687</td>
+        <td>1032</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🍿 КИНОТЕАТР</td>
+        <td><a href="https://t.me/urok_bednye_smeyutsya_bogatye_2">https://t.me/urok_bednye_smeyutsya_bogatye_2</a></td>
+        <td>Видео и фильмы</td>
+        <td>100214</td>
+        <td>3914</td>
+        <td>4.0</td>
+        <td>495</td>
+        <td>475</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КИНОТВ</td>
+        <td><a href="https://t.me/kinotv">https://t.me/kinotv</a></td>
+        <td>Видео и фильмы</td>
+        <td>100088</td>
+        <td>5340</td>
+        <td>6.0</td>
+        <td>-1543</td>
+        <td>-9225</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Постучись в мою дверь</td>
+        <td><a href="https://t.me/dva_kholmaserial">https://t.me/dva_kholmaserial</a></td>
+        <td>Видео и фильмы</td>
+        <td>98001</td>
+        <td>11233</td>
+        <td>12.0</td>
+        <td>901</td>
+        <td>4480</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>ICINEMA | Все о кино | Фильмы 2025 года | Сериалы | Мультфильмы</td>
+        <td><a href="https://t.me/iKinox">https://t.me/iKinox</a></td>
+        <td>Видео и фильмы</td>
+        <td>92959</td>
+        <td>5422</td>
+        <td>6.0</td>
+        <td>-946</td>
+        <td>-4997</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Okko Кино</td>
+        <td><a href="https://t.me/okkomovies">https://t.me/okkomovies</a></td>
+        <td>Видео и фильмы</td>
+        <td>90795</td>
+        <td>11268</td>
+        <td>13.0</td>
+        <td>-1360</td>
+        <td>8941</td>
+        <td>9 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Салаты и закуски</td>
+        <td><a href="https://t.me/cookingss1">https://t.me/cookingss1</a></td>
+        <td>Видео и фильмы</td>
+        <td>89096</td>
+        <td>2399</td>
+        <td>3.0</td>
+        <td>-780</td>
+        <td>-3476</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КИНОФИЛЬМЫ | Ужастики | Боевики</td>
+        <td><a href="https://t.me/novinki_filmy">https://t.me/novinki_filmy</a></td>
+        <td>Видео и фильмы</td>
+        <td>87629</td>
+        <td>9433</td>
+        <td>11.0</td>
+        <td>-1612</td>
+        <td>-4153</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Юпикс</td>
+        <td><a href="https://t.me/Yupikex_tg">https://t.me/Yupikex_tg</a></td>
+        <td>Видео и фильмы</td>
+        <td>87488</td>
+        <td>38279</td>
+        <td>44.0</td>
+        <td>-367</td>
+        <td>-1641</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Netflix</td>
+        <td><a href="https://t.me/Tvnetflix">https://t.me/Tvnetflix</a></td>
+        <td>Видео и фильмы</td>
+        <td>86778</td>
+        <td>13331</td>
+        <td>16.0</td>
+        <td>-863</td>
+        <td>-4194</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Адские Сливы | Hazbin & Helluva Leaks</td>
+        <td><a href="https://t.me/joinchat/OFbsAkSuAfJjOGEy">https://t.me/joinchat/OFbsAkSuAfJjOGEy</a></td>
+        <td>Видео и фильмы</td>
+        <td>83953</td>
+        <td>38947</td>
+        <td>47.0</td>
+        <td>-322</td>
+        <td>-1403</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>«Мужское/Женское»</td>
+        <td><a href="https://t.me/manwoman1tv">https://t.me/manwoman1tv</a></td>
+        <td>Видео и фильмы</td>
+        <td>83684</td>
+        <td>54036</td>
+        <td>65.0</td>
+        <td>1</td>
+        <td>387</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Alisa Dirilis🎬</td>
+        <td><a href="https://t.me/Osnovanie_Osman_Tg">https://t.me/Osnovanie_Osman_Tg</a></td>
+        <td>Видео и фильмы</td>
+        <td>83410</td>
+        <td>62803</td>
+        <td>76.0</td>
+        <td>-410</td>
+        <td>77</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Soderling</td>
+        <td><a href="https://t.me/soderlingoc">https://t.me/soderlingoc</a></td>
+        <td>Видео и фильмы</td>
+        <td>83346</td>
+        <td>45292</td>
+        <td>55.0</td>
+        <td>-304</td>
+        <td>-1354</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Art Cinema | Nonconformism</td>
+        <td><a href="https://t.me/Kino_iskusstvo_vintazh">https://t.me/Kino_iskusstvo_vintazh</a></td>
+        <td>Видео и фильмы</td>
+        <td>82705</td>
+        <td>7120</td>
+        <td>9.0</td>
+        <td>-81</td>
+        <td>458</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Легион «Свобода России»</td>
+        <td><a href="https://t.me/legionoffreedom_ua">https://t.me/legionoffreedom_ua</a></td>
+        <td>Видео и фильмы</td>
+        <td>82464</td>
+        <td>1244</td>
+        <td>2.0</td>
+        <td>-2065</td>
+        <td>-51033</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>𝐚𝐛𝐛</td>
+        <td><a href="https://t.me/foryouabb">https://t.me/foryouabb</a></td>
+        <td>Видео и фильмы</td>
+        <td>81000</td>
+        <td>45469</td>
+        <td>57.0</td>
+        <td>3206</td>
+        <td>12711</td>
+        <td>10 месяцев 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Ваша любимая озвучка</td>
+        <td><a href="https://t.me/APhoenixVoice">https://t.me/APhoenixVoice</a></td>
+        <td>Видео и фильмы</td>
+        <td>80450</td>
+        <td>33410</td>
+        <td>42.0</td>
+        <td>-177</td>
+        <td>-735</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Во власти кино • КАРО</td>
+        <td><a href="https://t.me/karocinema">https://t.me/karocinema</a></td>
+        <td>Видео и фильмы</td>
+        <td>79032</td>
+        <td>7146</td>
+        <td>9.0</td>
+        <td>821</td>
+        <td>-3069</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВАН ПИС АНИМЕ</td>
+        <td><a href="https://t.me/animessam3">https://t.me/animessam3</a></td>
+        <td>Видео и фильмы</td>
+        <td>76145</td>
+        <td>67292</td>
+        <td>89.0</td>
+        <td>-524</td>
+        <td>-2443</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>JAMCLUB 2.0</td>
+        <td><a href="https://t.me/jamclub2">https://t.me/jamclub2</a></td>
+        <td>Видео и фильмы</td>
+        <td>75810</td>
+        <td>18394</td>
+        <td>25.0</td>
+        <td>-320</td>
+        <td>779</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пасхалки и Факты</td>
+        <td><a href="https://t.me/joinchat/Z-fVZlP4aUhjZTA6">https://t.me/joinchat/Z-fVZlP4aUhjZTA6</a></td>
+        <td>Видео и фильмы</td>
+        <td>74517</td>
+        <td>9177</td>
+        <td>13.0</td>
+        <td>-486</td>
+        <td>485</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Türk Dizi | Онлайн Озвучка</td>
+        <td><a href="https://t.me/turkdizi_online">https://t.me/turkdizi_online</a></td>
+        <td>Видео и фильмы</td>
+        <td>74489</td>
+        <td>21551</td>
+        <td>29.0</td>
+        <td>-890</td>
+        <td>-2033</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Слово Пацана НЕ</td>
+        <td><a href="https://t.me/joinchat/qA2shTEjiBdjMjFi">https://t.me/joinchat/qA2shTEjiBdjMjFi</a></td>
+        <td>Видео и фильмы</td>
+        <td>73647</td>
+        <td>556</td>
+        <td>1.0</td>
+        <td>-1100</td>
+        <td>-3866</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Идиоты</td>
+        <td><a href="https://t.me/joinchat/I2lTMtFcJoljMmMy">https://t.me/joinchat/I2lTMtFcJoljMmMy</a></td>
+        <td>Видео и фильмы</td>
+        <td>71434</td>
+        <td>10127</td>
+        <td>15.0</td>
+        <td>-682</td>
+        <td>-3615</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сериалы🎥«Чужие деньги»</td>
+        <td><a href="https://t.me/protiv_vsekh33">https://t.me/protiv_vsekh33</a></td>
+        <td>Видео и фильмы</td>
+        <td>71286</td>
+        <td>6553</td>
+        <td>10.0</td>
+        <td>1120</td>
+        <td>5383</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>START</td>
+        <td><a href="https://t.me/start_shows">https://t.me/start_shows</a></td>
+        <td>Видео и фильмы</td>
+        <td>69731</td>
+        <td>5471</td>
+        <td>8.0</td>
+        <td>6067</td>
+        <td>-1352</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кино, Сериалы, Новинки, Что посмотреть</td>
+        <td><a href="https://t.me/filmsandmove">https://t.me/filmsandmove</a></td>
+        <td>Видео и фильмы</td>
+        <td>68121</td>
+        <td>864</td>
+        <td>2.0</td>
+        <td>-853</td>
+        <td>-7891</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>TreshFilms | Фильмы и сериалы</td>
+        <td><a href="https://t.me/treshfilmss">https://t.me/treshfilmss</a></td>
+        <td>Видео и фильмы</td>
+        <td>67658</td>
+        <td>10063</td>
+        <td>15.0</td>
+        <td>-265</td>
+        <td>-872</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>КИНО HD | ТОP FILMS</td>
+        <td><a href="https://t.me/kinofilms28">https://t.me/kinofilms28</a></td>
+        <td>Видео и фильмы</td>
+        <td>67579</td>
+        <td>541</td>
+        <td>1.0</td>
+        <td>-728</td>
+        <td>-3430</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🌀 Аниме 🥷 Deus 🈴</td>
+        <td><a href="https://t.me/DeusAnime">https://t.me/DeusAnime</a></td>
+        <td>Видео и фильмы</td>
+        <td>67003</td>
+        <td>11747</td>
+        <td>18.0</td>
+        <td>605</td>
+        <td>2861</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Киношка на вечер🍿</td>
+        <td><a href="https://t.me/kino_online3">https://t.me/kino_online3</a></td>
+        <td>Видео и фильмы</td>
+        <td>66381</td>
+        <td>2626</td>
+        <td>4.0</td>
+        <td>-943</td>
+        <td>5097</td>
+        <td>5 лет 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Сериалы | Джинни и Джорджия 3</td>
+        <td><a href="https://t.me/serialy_v_telegram">https://t.me/serialy_v_telegram</a></td>
+        <td>Видео и фильмы</td>
+        <td>65437</td>
+        <td>34163</td>
+        <td>53.0</td>
+        <td>4602</td>
+        <td>8977</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СМОТРЕТЬ АНИМЕ ХЕНТАЙ КОМИКСЫ</td>
+        <td><a href="https://t.me/hentaicomicsianim">https://t.me/hentaicomicsianim</a></td>
+        <td>Видео и фильмы</td>
+        <td>63438</td>
+        <td>3457</td>
+        <td>6.0</td>
+        <td>-868</td>
+        <td>-3978</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДОМ 2 🔥 Горячий Дом 2</td>
+        <td><a href="https://t.me/joinchat/6t240ZafpJ9hMzUy">https://t.me/joinchat/6t240ZafpJ9hMzUy</a></td>
+        <td>Видео и фильмы</td>
+        <td>63065</td>
+        <td>22377</td>
+        <td>36.0</td>
+        <td>-235</td>
+        <td>-814</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КиноПёс</td>
+        <td><a href="https://t.me/kinopes">https://t.me/kinopes</a></td>
+        <td>Видео и фильмы</td>
+        <td>63002</td>
+        <td>15027</td>
+        <td>24.0</td>
+        <td>4560</td>
+        <td>25071</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>KinoReel</td>
+        <td><a href="https://t.me/kinoreel">https://t.me/kinoreel</a></td>
+        <td>Видео и фильмы</td>
+        <td>62397</td>
+        <td>6343</td>
+        <td>11.0</td>
+        <td>-75</td>
+        <td>-1610</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Слово Пацана | Fan communuty Не</td>
+        <td><a href="https://t.me/slovo_patscana">https://t.me/slovo_patscana</a></td>
+        <td>Видео и фильмы</td>
+        <td>62183</td>
+        <td>1691</td>
+        <td>3.0</td>
+        <td>-910</td>
+        <td>-3120</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Битва экстрасенсов ТНТ</td>
+        <td><a href="https://t.me/tntbitvaextrasensov">https://t.me/tntbitvaextrasensov</a></td>
+        <td>Видео и фильмы</td>
+        <td>61193</td>
+        <td>43789</td>
+        <td>72.0</td>
+        <td>-618</td>
+        <td>-2726</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фильмы лучшие</td>
+        <td><a href="https://t.me/film_film_2020">https://t.me/film_film_2020</a></td>
+        <td>Видео и фильмы</td>
+        <td>60893</td>
+        <td>2352</td>
+        <td>4.0</td>
+        <td>-284</td>
+        <td>-1247</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Amedia Online</td>
+        <td><a href="https://t.me/AnimeMediaNews">https://t.me/AnimeMediaNews</a></td>
+        <td>Видео и фильмы</td>
+        <td>60820</td>
+        <td>19828</td>
+        <td>33.0</td>
+        <td>388</td>
+        <td>1973</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Wink</td>
+        <td><a href="https://t.me/WinkRussia">https://t.me/WinkRussia</a></td>
+        <td>Видео и фильмы</td>
+        <td>60050</td>
+        <td>7609</td>
+        <td>13.0</td>
+        <td>-416</td>
+        <td>1588</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

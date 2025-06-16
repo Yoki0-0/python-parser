@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний просмотр</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Дима Масленников Блоггер</td>
+        <td><a href="https://t.me/maslennikovliga">https://t.me/maslennikovliga</a></td>
+        <td>Блоги</td>
+        <td>1810087</td>
+        <td>852671</td>
+        <td>48.0</td>
+        <td>1851</td>
+        <td>-25242</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЛИТВИН</td>
+        <td><a href="https://t.me/litvintm">https://t.me/litvintm</a></td>
+        <td>Блоги</td>
+        <td>1727989</td>
+        <td>1004633</td>
+        <td>59.0</td>
+        <td>-3818</td>
+        <td>-26530</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Александр Зубарев</td>
+        <td><a href="https://t.me/zubarefff">https://t.me/zubarefff</a></td>
+        <td>Блоги</td>
+        <td>1454874</td>
+        <td>409882</td>
+        <td>29.0</td>
+        <td>-6558</td>
+        <td>-21346</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бустер 🍄</td>
+        <td><a href="https://t.me/bigpencil">https://t.me/bigpencil</a></td>
+        <td>Блоги</td>
+        <td>1155409</td>
+        <td>554925</td>
+        <td>48.0</td>
+        <td>-4201</td>
+        <td>-5904</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кровавая барыня</td>
+        <td><a href="https://t.me/bloodysx">https://t.me/bloodysx</a></td>
+        <td>Блоги</td>
+        <td>1127428</td>
+        <td>233988</td>
+        <td>21.0</td>
+        <td>-1750</td>
+        <td>-7294</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Exile</td>
+        <td><a href="https://t.me/exilemusic13">https://t.me/exilemusic13</a></td>
+        <td>Блоги</td>
+        <td>1113201</td>
+        <td>757567</td>
+        <td>69.0</td>
+        <td>2953</td>
+        <td>49620</td>
+        <td>5 лет 21 день</td>
+      </tr>
+
+      <tr>
+        <td>НЕВЗОРОВ</td>
+        <td><a href="https://t.me/nevzorovtv">https://t.me/nevzorovtv</a></td>
+        <td>Блоги</td>
+        <td>1104771</td>
+        <td>515211</td>
+        <td>47.0</td>
+        <td>-1563</td>
+        <td>-5390</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ксения Бородина</td>
+        <td><a href="https://t.me/borodylia0803">https://t.me/borodylia0803</a></td>
+        <td>Блоги</td>
+        <td>1087729</td>
+        <td>384178</td>
+        <td>36.0</td>
+        <td>25264</td>
+        <td>132698</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Elena Raytman</td>
+        <td><a href="https://t.me/elenaraytman">https://t.me/elenaraytman</a></td>
+        <td>Блоги</td>
+        <td>1047365</td>
+        <td>657458</td>
+        <td>63.0</td>
+        <td>3527</td>
+        <td>14358</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>здесь живет броен</td>
+        <td><a href="https://t.me/br1anm7ps">https://t.me/br1anm7ps</a></td>
+        <td>Блоги</td>
+        <td>1043874</td>
+        <td>1265280</td>
+        <td>122.0</td>
+        <td>-583</td>
+        <td>490</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НЕ МОРГЕНШТЕРН</td>
+        <td><a href="https://t.me/nemorgenshtern">https://t.me/nemorgenshtern</a></td>
+        <td>Блоги</td>
+        <td>1022568</td>
+        <td>105254</td>
+        <td>11.0</td>
+        <td>-22695</td>
+        <td>-6649</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>В гостях у Булыча</td>
+        <td><a href="https://t.me/bulkin_live">https://t.me/bulkin_live</a></td>
+        <td>Блоги</td>
+        <td>1000664</td>
+        <td>273826</td>
+        <td>28.0</td>
+        <td>-18481</td>
+        <td>-11825</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Kuplinov ► Play</td>
+        <td><a href="https://t.me/Kuplinov_Telegram">https://t.me/Kuplinov_Telegram</a></td>
+        <td>Блоги</td>
+        <td>923957</td>
+        <td>874790</td>
+        <td>95.0</td>
+        <td>-196</td>
+        <td>-2624</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>москоутиндер</td>
+        <td><a href="https://t.me/moscowtinderr">https://t.me/moscowtinderr</a></td>
+        <td>Блоги</td>
+        <td>919294</td>
+        <td>173016</td>
+        <td>19.0</td>
+        <td>-9068</td>
+        <td>-60371</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>EDISON FAMILY</td>
+        <td><a href="https://t.me/edisonfamilia">https://t.me/edisonfamilia</a></td>
+        <td>Блоги</td>
+        <td>911711</td>
+        <td>398655</td>
+        <td>44.0</td>
+        <td>-4130</td>
+        <td>-16794</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПАРАДЕЕВИЧ</td>
+        <td><a href="https://t.me/paradeevich">https://t.me/paradeevich</a></td>
+        <td>Блоги</td>
+        <td>908562</td>
+        <td>355270</td>
+        <td>40.0</td>
+        <td>71</td>
+        <td>-11173</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дудь</td>
+        <td><a href="https://t.me/yurydud">https://t.me/yurydud</a></td>
+        <td>Блоги</td>
+        <td>892329</td>
+        <td>420594</td>
+        <td>48.0</td>
+        <td>-2317</td>
+        <td>-7066</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>GEO VAXUE</td>
+        <td><a href="https://t.me/geovaxue">https://t.me/geovaxue</a></td>
+        <td>Блоги</td>
+        <td>888624</td>
+        <td>551166</td>
+        <td>62.0</td>
+        <td>20595</td>
+        <td>106648</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>EVELONE 1️⃣9️⃣2️⃣</td>
+        <td><a href="https://t.me/evelone192gg">https://t.me/evelone192gg</a></td>
+        <td>Блоги</td>
+        <td>879741</td>
+        <td>657626</td>
+        <td>75.0</td>
+        <td>41001</td>
+        <td>101111</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сладков+</td>
+        <td><a href="https://t.me/Sladkov_plus">https://t.me/Sladkov_plus</a></td>
+        <td>Блоги</td>
+        <td>837097</td>
+        <td>271386</td>
+        <td>33.0</td>
+        <td>-1808</td>
+        <td>-9572</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Артемий Лебедев</td>
+        <td><a href="https://t.me/temalebedev">https://t.me/temalebedev</a></td>
+        <td>Блоги</td>
+        <td>827204</td>
+        <td>178929</td>
+        <td>22.0</td>
+        <td>13179</td>
+        <td>66202</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Екатерина Мизулина</td>
+        <td><a href="https://t.me/ekaterina_mizulina">https://t.me/ekaterina_mizulina</a></td>
+        <td>Блоги</td>
+        <td>825416</td>
+        <td>154786</td>
+        <td>19.0</td>
+        <td>-993</td>
+        <td>-12096</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГОРДЕЙ</td>
+        <td><a href="https://t.me/GORDEYLIVE">https://t.me/GORDEYLIVE</a></td>
+        <td>Блоги</td>
+        <td>781892</td>
+        <td>231414</td>
+        <td>30.0</td>
+        <td>-8604</td>
+        <td>-32249</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Samoylovaoxana</td>
+        <td><a href="https://t.me/sammyfam">https://t.me/sammyfam</a></td>
+        <td>Блоги</td>
+        <td>733667</td>
+        <td>331734</td>
+        <td>46.0</td>
+        <td>-2686</td>
+        <td>-14892</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>112</td>
+        <td><a href="https://t.me/joinchat/StXhF0lgIdo5M2Ey">https://t.me/joinchat/StXhF0lgIdo5M2Ey</a></td>
+        <td>Блоги</td>
+        <td>715502</td>
+        <td>109991</td>
+        <td>16.0</td>
+        <td>21113</td>
+        <td>402172</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>О!настосис</td>
+        <td><a href="https://t.me/onastasiz">https://t.me/onastasiz</a></td>
+        <td>Блоги</td>
+        <td>697587</td>
+        <td>402892</td>
+        <td>58.0</td>
+        <td>-2247</td>
+        <td>-1509</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Поддубный |Z|О|V| edition</td>
+        <td><a href="https://t.me/epoddubny">https://t.me/epoddubny</a></td>
+        <td>Блоги</td>
+        <td>692972</td>
+        <td>160515</td>
+        <td>24.0</td>
+        <td>-1599</td>
+        <td>-7870</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Глент 🚀</td>
+        <td><a href="https://t.me/vladglenttg">https://t.me/vladglenttg</a></td>
+        <td>Блоги</td>
+        <td>678898</td>
+        <td>388689</td>
+        <td>58.0</td>
+        <td>59819</td>
+        <td>48193</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кореш</td>
+        <td><a href="https://t.me/koreshzy">https://t.me/koreshzy</a></td>
+        <td>Блоги</td>
+        <td>676827</td>
+        <td>365985</td>
+        <td>55.0</td>
+        <td>124</td>
+        <td>-9735</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Аня Ищук</td>
+        <td><a href="https://t.me/anyaischukkkk">https://t.me/anyaischukkkk</a></td>
+        <td>Блоги</td>
+        <td>626931</td>
+        <td>280444</td>
+        <td>45.0</td>
+        <td>-3364</td>
+        <td>-19189</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Влад Бумага A4</td>
+        <td><a href="https://t.me/A4omg">https://t.me/A4omg</a></td>
+        <td>Блоги</td>
+        <td>612771</td>
+        <td>347426</td>
+        <td>57.0</td>
+        <td>-2715</td>
+        <td>-22739</td>
+        <td>8 лет 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Мир Михаила Онуфриенко</td>
+        <td><a href="https://t.me/Mikle1On">https://t.me/Mikle1On</a></td>
+        <td>Блоги</td>
+        <td>576983</td>
+        <td>206334</td>
+        <td>36.0</td>
+        <td>180</td>
+        <td>-3005</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>INSTASAMKA</td>
+        <td><a href="https://t.me/instasamkacore">https://t.me/instasamkacore</a></td>
+        <td>Блоги</td>
+        <td>572750</td>
+        <td>218083</td>
+        <td>39.0</td>
+        <td>-3654</td>
+        <td>-15421</td>
+        <td>4 года 1 день</td>
+      </tr>
+
+      <tr>
+        <td>[BadComedian]</td>
+        <td><a href="https://t.me/TheBadComedian">https://t.me/TheBadComedian</a></td>
+        <td>Блоги</td>
+        <td>570252</td>
+        <td>442883</td>
+        <td>78.0</td>
+        <td>78</td>
+        <td>424</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЗОВУТ ДОМЕР</td>
+        <td><a href="https://t.me/DomerGrief">https://t.me/DomerGrief</a></td>
+        <td>Блоги</td>
+        <td>567145</td>
+        <td>271318</td>
+        <td>48.0</td>
+        <td>-841</td>
+        <td>9900</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЕГОРИК</td>
+        <td><a href="https://t.me/egorikvtg">https://t.me/egorikvtg</a></td>
+        <td>Блоги</td>
+        <td>557012</td>
+        <td>361847</td>
+        <td>65.0</td>
+        <td>3565</td>
+        <td>21722</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Жидковские посиделки</td>
+        <td><a href="https://t.me/zhidkovskiy_talk">https://t.me/zhidkovskiy_talk</a></td>
+        <td>Блоги</td>
+        <td>554540</td>
+        <td>169830</td>
+        <td>31.0</td>
+        <td>-292</td>
+        <td>342</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ФРАМЕ ТАМЕР</td>
+        <td><a href="https://t.me/oieiei">https://t.me/oieiei</a></td>
+        <td>Блоги</td>
+        <td>529499</td>
+        <td>230894</td>
+        <td>44.0</td>
+        <td>-327</td>
+        <td>-6697</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Tynu40k Goblina (oper.ru)</td>
+        <td><a href="https://t.me/oper_goblin">https://t.me/oper_goblin</a></td>
+        <td>Блоги</td>
+        <td>523426</td>
+        <td>207693</td>
+        <td>40.0</td>
+        <td>-758</td>
+        <td>-9449</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дядя Слава</td>
+        <td><a href="https://t.me/slavaded1337">https://t.me/slavaded1337</a></td>
+        <td>Блоги</td>
+        <td>521760</td>
+        <td>185553</td>
+        <td>36.0</td>
+        <td>-940</td>
+        <td>-801</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Винди31🤝</td>
+        <td><a href="https://t.me/windy31room">https://t.me/windy31room</a></td>
+        <td>Блоги</td>
+        <td>505368</td>
+        <td>407503</td>
+        <td>81.0</td>
+        <td>-125</td>
+        <td>-3718</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НЕБОЖЕНА</td>
+        <td><a href="https://t.me/imnotbozhena">https://t.me/imnotbozhena</a></td>
+        <td>Блоги</td>
+        <td>505169</td>
+        <td>99295</td>
+        <td>20.0</td>
+        <td>-33</td>
+        <td>113</td>
+        <td>7 лет 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>дипинс 🤢</td>
+        <td><a href="https://t.me/deepinstv">https://t.me/deepinstv</a></td>
+        <td>Блоги</td>
+        <td>498157</td>
+        <td>359111</td>
+        <td>73.0</td>
+        <td>-732</td>
+        <td>-3105</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Логово Внизу</td>
+        <td><a href="https://t.me/nebudetgg">https://t.me/nebudetgg</a></td>
+        <td>Блоги</td>
+        <td>495555</td>
+        <td>255773</td>
+        <td>52.0</td>
+        <td>-404</td>
+        <td>-1256</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДАНИЛА ГОРИЛЛА 🦍</td>
+        <td><a href="https://t.me/danila_gorilla">https://t.me/danila_gorilla</a></td>
+        <td>Блоги</td>
+        <td>487730</td>
+        <td>218463</td>
+        <td>45.0</td>
+        <td>1648</td>
+        <td>-5012</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>СЛОВО ПАЦАНА</td>
+        <td><a href="https://t.me/slovopatsana">https://t.me/slovopatsana</a></td>
+        <td>Блоги</td>
+        <td>487309</td>
+        <td>110563</td>
+        <td>23.0</td>
+        <td>-10636</td>
+        <td>-40179</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>mzlff</td>
+        <td><a href="https://t.me/mazellovvv">https://t.me/mazellovvv</a></td>
+        <td>Блоги</td>
+        <td>482697</td>
+        <td>211537</td>
+        <td>44.0</td>
+        <td>-1633</td>
+        <td>2266</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Marmok_yt</td>
+        <td><a href="https://t.me/marmok_yt">https://t.me/marmok_yt</a></td>
+        <td>Блоги</td>
+        <td>482045</td>
+        <td>279604</td>
+        <td>58.0</td>
+        <td>-617</td>
+        <td>-3828</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>секретный тг шадоукека</td>
+        <td><a href="https://t.me/shadowkekw">https://t.me/shadowkekw</a></td>
+        <td>Блоги</td>
+        <td>471808</td>
+        <td>292045</td>
+        <td>62.0</td>
+        <td>60641</td>
+        <td>141939</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Данила Кашен</td>
+        <td><a href="https://t.me/DKNASASAL">https://t.me/DKNASASAL</a></td>
+        <td>Блоги</td>
+        <td>466596</td>
+        <td>326823</td>
+        <td>70.0</td>
+        <td>-2433</td>
+        <td>-3678</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Милашкина</td>
+        <td><a href="https://t.me/milashkina_nekrasova">https://t.me/milashkina_nekrasova</a></td>
+        <td>Блоги</td>
+        <td>453971</td>
+        <td>286703</td>
+        <td>64.0</td>
+        <td>-2166</td>
+        <td>-20539</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PLOHOY PAREN</td>
+        <td><a href="https://t.me/plohoypacan">https://t.me/plohoypacan</a></td>
+        <td>Блоги</td>
+        <td>453228</td>
+        <td>226902</td>
+        <td>51.0</td>
+        <td>-4401</td>
+        <td>-15606</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ирина Пинчук</td>
+        <td><a href="https://t.me/pinchulli">https://t.me/pinchulli</a></td>
+        <td>Блоги</td>
+        <td>440803</td>
+        <td>179163</td>
+        <td>41.0</td>
+        <td>-3287</td>
+        <td>-11815</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НАСТЕЖЬ</td>
+        <td><a href="https://t.me/ivleeva360">https://t.me/ivleeva360</a></td>
+        <td>Блоги</td>
+        <td>429050</td>
+        <td>105413</td>
+        <td>25.0</td>
+        <td>-6695</td>
+        <td>-46013</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Даник и Тайная комната</td>
+        <td><a href="https://t.me/dikiidanik">https://t.me/dikiidanik</a></td>
+        <td>Блоги</td>
+        <td>427342</td>
+        <td>61124</td>
+        <td>15.0</td>
+        <td>-5672</td>
+        <td>-26364</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ДАНКАР</td>
+        <td><a href="https://t.me/dankar">https://t.me/dankar</a></td>
+        <td>Блоги</td>
+        <td>423073</td>
+        <td>673240</td>
+        <td>160.0</td>
+        <td>-2490</td>
+        <td>1605</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🎀Karna.val🎀</td>
+        <td><a href="https://t.me/karnava1l">https://t.me/karnava1l</a></td>
+        <td>Блоги</td>
+        <td>407072</td>
+        <td>291709</td>
+        <td>72.0</td>
+        <td>-2489</td>
+        <td>-13300</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бузова</td>
+        <td><a href="https://t.me/byzovahouse">https://t.me/byzovahouse</a></td>
+        <td>Блоги</td>
+        <td>405248</td>
+        <td>109527</td>
+        <td>27.0</td>
+        <td>494</td>
+        <td>-716</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>► ► ► Паша ПЭЛ</td>
+        <td><a href="https://t.me/pel_video">https://t.me/pel_video</a></td>
+        <td>Блоги</td>
+        <td>400213</td>
+        <td>272765</td>
+        <td>69.0</td>
+        <td>-5145</td>
+        <td>7782</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГАБАР</td>
+        <td><a href="https://t.me/hardgabar">https://t.me/hardgabar</a></td>
+        <td>Блоги</td>
+        <td>398172</td>
+        <td>71989</td>
+        <td>19.0</td>
+        <td>-724</td>
+        <td>-6912</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дюшес</td>
+        <td><a href="https://t.me/duchess_official">https://t.me/duchess_official</a></td>
+        <td>Блоги</td>
+        <td>397305</td>
+        <td>116838</td>
+        <td>30.0</td>
+        <td>-10540</td>
+        <td>-51933</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>GERASEV</td>
+        <td><a href="https://t.me/joinchat/AAAAAEUO9bGFCnH77Jql0Q">https://t.me/joinchat/AAAAAEUO9bGFCnH77Jql0Q</a></td>
+        <td>Блоги</td>
+        <td>392490</td>
+        <td>157883</td>
+        <td>41.0</td>
+        <td>-4127</td>
+        <td>12947</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стрелец-Молодец</td>
+        <td><a href="https://t.me/strelets_molodec">https://t.me/strelets_molodec</a></td>
+        <td>Блоги</td>
+        <td>382892</td>
+        <td>144501</td>
+        <td>38.0</td>
+        <td>350</td>
+        <td>1040</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>дрейк</td>
+        <td><a href="https://t.me/drakestudio">https://t.me/drakestudio</a></td>
+        <td>Блоги</td>
+        <td>379371</td>
+        <td>190020</td>
+        <td>51.0</td>
+        <td>-1988</td>
+        <td>-8642</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>EDWARD BIL</td>
+        <td><a href="https://t.me/camon_edward">https://t.me/camon_edward</a></td>
+        <td>Блоги</td>
+        <td>375726</td>
+        <td>75764</td>
+        <td>21.0</td>
+        <td>-3333</td>
+        <td>-5344</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>хей! это марьяна!</td>
+        <td><a href="https://t.me/marillokelhere">https://t.me/marillokelhere</a></td>
+        <td>Блоги</td>
+        <td>372611</td>
+        <td>180043</td>
+        <td>49.0</td>
+        <td>9698</td>
+        <td>7203</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ДИМАС БЛОГ</td>
+        <td><a href="https://t.me/dimasblog333">https://t.me/dimasblog333</a></td>
+        <td>Блоги</td>
+        <td>369358</td>
+        <td>126702</td>
+        <td>35.0</td>
+        <td>-2605</td>
+        <td>-13624</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>дилблин</td>
+        <td><a href="https://t.me/dilbliin">https://t.me/dilbliin</a></td>
+        <td>Блоги</td>
+        <td>369357</td>
+        <td>127807</td>
+        <td>35.0</td>
+        <td>-1801</td>
+        <td>-15277</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CMH</td>
+        <td><a href="https://t.me/ilovesex666">https://t.me/ilovesex666</a></td>
+        <td>Блоги</td>
+        <td>364604</td>
+        <td>261206</td>
+        <td>72.0</td>
+        <td>-1810</td>
+        <td>-739</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>@petrovchanka_lera</td>
+        <td><a href="https://t.me/petrovchanka_lera">https://t.me/petrovchanka_lera</a></td>
+        <td>Блоги</td>
+        <td>354969</td>
+        <td>186957</td>
+        <td>53.0</td>
+        <td>4201</td>
+        <td>19938</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЮЛИЯ МЕНЬШОВА</td>
+        <td><a href="https://t.me/JuliaMenshovaJulia">https://t.me/JuliaMenshovaJulia</a></td>
+        <td>Блоги</td>
+        <td>354740</td>
+        <td>154353</td>
+        <td>44.0</td>
+        <td>-127</td>
+        <td>-52</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Алежа Обухов</td>
+        <td><a href="https://t.me/alezhao">https://t.me/alezhao</a></td>
+        <td>Блоги</td>
+        <td>353566</td>
+        <td>98198</td>
+        <td>28.0</td>
+        <td>-2558</td>
+        <td>-12631</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СТАС БОМБИТ</td>
+        <td><a href="https://t.me/ikakprosto">https://t.me/ikakprosto</a></td>
+        <td>Блоги</td>
+        <td>350708</td>
+        <td>278803</td>
+        <td>80.0</td>
+        <td>-131</td>
+        <td>-1141</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ликс</td>
+        <td><a href="https://t.me/dmlixxx">https://t.me/dmlixxx</a></td>
+        <td>Блоги</td>
+        <td>350454</td>
+        <td>142687</td>
+        <td>41.0</td>
+        <td>-3379</td>
+        <td>27649</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Mamix🥼</td>
+        <td><a href="https://t.me/eto_mamix">https://t.me/eto_mamix</a></td>
+        <td>Блоги</td>
+        <td>349722</td>
+        <td>143581</td>
+        <td>42.0</td>
+        <td>-3711</td>
+        <td>-11858</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Милс Кел (Play)</td>
+        <td><a href="https://t.me/meels_kel">https://t.me/meels_kel</a></td>
+        <td>Блоги</td>
+        <td>349606</td>
+        <td>240050</td>
+        <td>69.0</td>
+        <td>-541</td>
+        <td>-5692</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>короче, Гладенко</td>
+        <td><a href="https://t.me/hladenko">https://t.me/hladenko</a></td>
+        <td>Блоги</td>
+        <td>347075</td>
+        <td>189619</td>
+        <td>55.0</td>
+        <td>2167</td>
+        <td>7257</td>
+        <td>6 лет 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>СВЕТА СОЛЛАР</td>
+        <td><a href="https://t.me/joinchat/VDFTxH5D9rx_x3UC">https://t.me/joinchat/VDFTxH5D9rx_x3UC</a></td>
+        <td>Блоги</td>
+        <td>346953</td>
+        <td>92171</td>
+        <td>27.0</td>
+        <td>-1995</td>
+        <td>-18375</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Туман</td>
+        <td><a href="https://t.me/sashatyman">https://t.me/sashatyman</a></td>
+        <td>Блоги</td>
+        <td>333736</td>
+        <td>188329</td>
+        <td>57.0</td>
+        <td>-14743</td>
+        <td>-2831</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>DILARA</td>
+        <td><a href="https://t.me/dilalara753">https://t.me/dilalara753</a></td>
+        <td>Блоги</td>
+        <td>333700</td>
+        <td>139623</td>
+        <td>42.0</td>
+        <td>-1313</td>
+        <td>-14302</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СОБЧАК</td>
+        <td><a href="https://t.me/ksbchk">https://t.me/ksbchk</a></td>
+        <td>Блоги</td>
+        <td>332534</td>
+        <td>64928</td>
+        <td>20.0</td>
+        <td>170</td>
+        <td>-148</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>NADIN NADIN</td>
+        <td><a href="https://t.me/nadin_serovski_official">https://t.me/nadin_serovski_official</a></td>
+        <td>Блоги</td>
+        <td>330132</td>
+        <td>60229</td>
+        <td>19.0</td>
+        <td>-1667</td>
+        <td>-7661</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Pozov Live</td>
+        <td><a href="https://t.me/pozov">https://t.me/pozov</a></td>
+        <td>Блоги</td>
+        <td>323484</td>
+        <td>431829</td>
+        <td>134.0</td>
+        <td>6620</td>
+        <td>121413</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Utopia Show</td>
+        <td><a href="https://t.me/topapopa">https://t.me/topapopa</a></td>
+        <td>Блоги</td>
+        <td>317994</td>
+        <td>117633</td>
+        <td>37.0</td>
+        <td>-282</td>
+        <td>-2158</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тина Канделаки</td>
+        <td><a href="https://t.me/tikandelaki">https://t.me/tikandelaki</a></td>
+        <td>Блоги</td>
+        <td>311208</td>
+        <td>73167</td>
+        <td>24.0</td>
+        <td>-1393</td>
+        <td>792</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Куертов</td>
+        <td><a href="https://t.me/kuertov">https://t.me/kuertov</a></td>
+        <td>Блоги</td>
+        <td>309589</td>
+        <td>189393</td>
+        <td>62.0</td>
+        <td>-1308</td>
+        <td>-9987</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СИМКАА</td>
+        <td><a href="https://t.me/simka_lee">https://t.me/simka_lee</a></td>
+        <td>Блоги</td>
+        <td>305404</td>
+        <td>162445</td>
+        <td>54.0</td>
+        <td>-1932</td>
+        <td>-12763</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>tenderlybae💔</td>
+        <td><a href="https://t.me/plsbetenderly">https://t.me/plsbetenderly</a></td>
+        <td>Блоги</td>
+        <td>301833</td>
+        <td>142848</td>
+        <td>48.0</td>
+        <td>-896</td>
+        <td>-3440</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Женат на Марине</td>
+        <td><a href="https://t.me/zhenatnamarine1234">https://t.me/zhenatnamarine1234</a></td>
+        <td>Блоги</td>
+        <td>301116</td>
+        <td>94843</td>
+        <td>32.0</td>
+        <td>-2303</td>
+        <td>-8648</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПАША ТЕХНИК LIVE</td>
+        <td><a href="https://t.me/pashatechniqueoriginal">https://t.me/pashatechniqueoriginal</a></td>
+        <td>Блоги</td>
+        <td>296696</td>
+        <td>292690</td>
+        <td>99.0</td>
+        <td>-4231</td>
+        <td>-20613</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГЛЕБАС</td>
+        <td><a href="https://t.me/glebaseey">https://t.me/glebaseey</a></td>
+        <td>Блоги</td>
+        <td>295924</td>
+        <td>104995</td>
+        <td>36.0</td>
+        <td>-2612</td>
+        <td>-13497</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кишлак</td>
+        <td><a href="https://t.me/kishlak_family">https://t.me/kishlak_family</a></td>
+        <td>Блоги</td>
+        <td>295796</td>
+        <td>229460</td>
+        <td>78.0</td>
+        <td>-742</td>
+        <td>-3013</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>T2x2</td>
+        <td><a href="https://t.me/t2xtwitch">https://t.me/t2xtwitch</a></td>
+        <td>Блоги</td>
+        <td>294369</td>
+        <td>188706</td>
+        <td>65.0</td>
+        <td>1224</td>
+        <td>2186</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>w.bery</td>
+        <td><a href="https://t.me/joinchat/1a34-YQfNpo2NzAy">https://t.me/joinchat/1a34-YQfNpo2NzAy</a></td>
+        <td>Блоги</td>
+        <td>293627</td>
+        <td>128554</td>
+        <td>44.0</td>
+        <td>-3988</td>
+        <td>7325</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Kussia88 / Каша88</td>
+        <td><a href="https://t.me/KussiaOfficial">https://t.me/KussiaOfficial</a></td>
+        <td>Блоги</td>
+        <td>293601</td>
+        <td>231459</td>
+        <td>79.0</td>
+        <td>-854</td>
+        <td>-4861</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сергей Минаев</td>
+        <td><a href="https://t.me/minaevlife">https://t.me/minaevlife</a></td>
+        <td>Блоги</td>
+        <td>289302</td>
+        <td>67686</td>
+        <td>24.0</td>
+        <td>748</td>
+        <td>3327</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Goar Avetisyan</td>
+        <td><a href="https://t.me/goar_avetisyan7">https://t.me/goar_avetisyan7</a></td>
+        <td>Блоги</td>
+        <td>289028</td>
+        <td>49620</td>
+        <td>18.0</td>
+        <td>872</td>
+        <td>-3327</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АКУЛИЧ</td>
+        <td><a href="https://t.me/akyulenokk">https://t.me/akyulenokk</a></td>
+        <td>Блоги</td>
+        <td>286536</td>
+        <td>161060</td>
+        <td>57.0</td>
+        <td>-1210</td>
+        <td>-6100</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Точка наслаждения l Блог Сексолога 🍓</td>
+        <td><a href="https://t.me/joinchat/_lCirhDMozBiZTAy">https://t.me/joinchat/_lCirhDMozBiZTAy</a></td>
+        <td>Блоги</td>
+        <td>284202</td>
+        <td>79185</td>
+        <td>28.0</td>
+        <td>-7332</td>
+        <td>72581</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>rutkismary</td>
+        <td><a href="https://t.me/rutkismary">https://t.me/rutkismary</a></td>
+        <td>Блоги</td>
+        <td>283988</td>
+        <td>134950</td>
+        <td>48.0</td>
+        <td>2521</td>
+        <td>12900</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

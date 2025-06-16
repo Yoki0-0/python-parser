@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Моя дача</td>
+        <td><a href="https://t.me/joinchat/VDK8qHBzKyevEjFR">https://t.me/joinchat/VDK8qHBzKyevEjFR</a></td>
+        <td>Природа</td>
+        <td>541826</td>
+        <td>54933</td>
+        <td>11.0</td>
+        <td>-1620</td>
+        <td>-7231</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Собакен</td>
+        <td><a href="https://t.me/joinchat/h3atJD8y12EzOTZi">https://t.me/joinchat/h3atJD8y12EzOTZi</a></td>
+        <td>Природа</td>
+        <td>493833</td>
+        <td>132452</td>
+        <td>27.0</td>
+        <td>-1285</td>
+        <td>-6282</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дачные Хитрости</td>
+        <td><a href="https://t.me/joinchat/B746KyAtAh1iM2Yy">https://t.me/joinchat/B746KyAtAh1iM2Yy</a></td>
+        <td>Природа</td>
+        <td>450863</td>
+        <td>74174</td>
+        <td>17.0</td>
+        <td>434</td>
+        <td>943</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Котейка</td>
+        <td><a href="https://t.me/joinchat/8EkizoJF_TpjNmYy">https://t.me/joinchat/8EkizoJF_TpjNmYy</a></td>
+        <td>Природа</td>
+        <td>412238</td>
+        <td>119200</td>
+        <td>29.0</td>
+        <td>-1137</td>
+        <td>-5635</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>шерстяные проказники • коты</td>
+        <td><a href="https://t.me/koshkii_kotiki">https://t.me/koshkii_kotiki</a></td>
+        <td>Природа</td>
+        <td>399332</td>
+        <td>57906</td>
+        <td>15.0</td>
+        <td>-1038</td>
+        <td>-3286</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Комнатные Цветы 🪴</td>
+        <td><a href="https://t.me/joinchat/I2-B4Pd4ThBhOGRi">https://t.me/joinchat/I2-B4Pd4ThBhOGRi</a></td>
+        <td>Природа</td>
+        <td>383357</td>
+        <td>85599</td>
+        <td>23.0</td>
+        <td>-2164</td>
+        <td>1698</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>National Geographic</td>
+        <td><a href="https://t.me/joinchat/AAAAAEVZR6NQqIVytzIEJQ">https://t.me/joinchat/AAAAAEVZR6NQqIVytzIEJQ</a></td>
+        <td>Природа</td>
+        <td>372202</td>
+        <td>49411</td>
+        <td>14.0</td>
+        <td>1372</td>
+        <td>-4165</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Зеленый уголок | Цветы и растения</td>
+        <td><a href="https://t.me/joinchat/Saoo2xkYQVowMmFi">https://t.me/joinchat/Saoo2xkYQVowMmFi</a></td>
+        <td>Природа</td>
+        <td>364736</td>
+        <td>35878</td>
+        <td>10.0</td>
+        <td>-1558</td>
+        <td>-7322</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>National GEO</td>
+        <td><a href="https://t.me/joinchat/Ni9KhP0qu94yNjhi">https://t.me/joinchat/Ni9KhP0qu94yNjhi</a></td>
+        <td>Природа</td>
+        <td>362695</td>
+        <td>12878</td>
+        <td>4.0</td>
+        <td>-2052</td>
+        <td>-8774</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Nation Geographic</td>
+        <td><a href="https://t.me/NationGeographic">https://t.me/NationGeographic</a></td>
+        <td>Природа</td>
+        <td>360954</td>
+        <td>72839</td>
+        <td>21.0</td>
+        <td>-549</td>
+        <td>-1844</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дача мечты</td>
+        <td><a href="https://t.me/joinchat/JmCvauDzzAo5MzVi">https://t.me/joinchat/JmCvauDzzAo5MzVi</a></td>
+        <td>Природа</td>
+        <td>330112</td>
+        <td>43240</td>
+        <td>14.0</td>
+        <td>-1470</td>
+        <td>3253</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Собакеч | Собаки</td>
+        <td><a href="https://t.me/sobakech_sobaki">https://t.me/sobakech_sobaki</a></td>
+        <td>Природа</td>
+        <td>321181</td>
+        <td>71558</td>
+        <td>23.0</td>
+        <td>-1205</td>
+        <td>-5431</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Моя дача. Сад и огород</td>
+        <td><a href="https://t.me/dacha_my">https://t.me/dacha_my</a></td>
+        <td>Природа</td>
+        <td>319403</td>
+        <td>54083</td>
+        <td>17.0</td>
+        <td>541</td>
+        <td>2847</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Котяра</td>
+        <td><a href="https://t.me/kotya">https://t.me/kotya</a></td>
+        <td>Природа</td>
+        <td>270805</td>
+        <td>50455</td>
+        <td>19.0</td>
+        <td>-973</td>
+        <td>-4104</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Discovery | Животные</td>
+        <td><a href="https://t.me/joinchat/AAAAAEW7PysA07Xr68XQgg">https://t.me/joinchat/AAAAAEW7PysA07Xr68XQgg</a></td>
+        <td>Природа</td>
+        <td>257588</td>
+        <td>15740</td>
+        <td>7.0</td>
+        <td>-853</td>
+        <td>-1655</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дачные советы 🏡</td>
+        <td><a href="https://t.me/sovet_dom">https://t.me/sovet_dom</a></td>
+        <td>Природа</td>
+        <td>246758</td>
+        <td>22810</td>
+        <td>10.0</td>
+        <td>-501</td>
+        <td>-2227</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дачные будни</td>
+        <td><a href="https://t.me/dacha_ogorod">https://t.me/dacha_ogorod</a></td>
+        <td>Природа</td>
+        <td>243365</td>
+        <td>35060</td>
+        <td>15.0</td>
+        <td>-222</td>
+        <td>-46</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Котофей</td>
+        <td><a href="https://t.me/joinchat/pytPxXcUL7I0M2Ji">https://t.me/joinchat/pytPxXcUL7I0M2Ji</a></td>
+        <td>Природа</td>
+        <td>226914</td>
+        <td>35440</td>
+        <td>16.0</td>
+        <td>-507</td>
+        <td>-2409</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Идеи для Дачи | Дома</td>
+        <td><a href="https://t.me/joinchat/M7y_QRPQabU3ZWJi">https://t.me/joinchat/M7y_QRPQabU3ZWJi</a></td>
+        <td>Природа</td>
+        <td>223853</td>
+        <td>27578</td>
+        <td>13.0</td>
+        <td>894</td>
+        <td>7437</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дача | Дом | Огород</td>
+        <td><a href="https://t.me/joinchat/qxekrBe5oJU5ZmIy">https://t.me/joinchat/qxekrBe5oJU5ZmIy</a></td>
+        <td>Природа</td>
+        <td>207509</td>
+        <td>51120</td>
+        <td>25.0</td>
+        <td>895</td>
+        <td>7207</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Земная красота</td>
+        <td><a href="https://t.me/joinchat/xd0aWW_DJPE2NWQy">https://t.me/joinchat/xd0aWW_DJPE2NWQy</a></td>
+        <td>Природа</td>
+        <td>206191</td>
+        <td>19838</td>
+        <td>10.0</td>
+        <td>-615</td>
+        <td>-2720</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Наша Дача</td>
+        <td><a href="https://t.me/joinchat/qxkvJe0qJYNlNTc6">https://t.me/joinchat/qxkvJe0qJYNlNTc6</a></td>
+        <td>Природа</td>
+        <td>202918</td>
+        <td>41343</td>
+        <td>21.0</td>
+        <td>2667</td>
+        <td>24999</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Без кота и жизнь не та</td>
+        <td><a href="https://t.me/joinchat/8Ygt1hpj7zQzOWM6">https://t.me/joinchat/8Ygt1hpj7zQzOWM6</a></td>
+        <td>Природа</td>
+        <td>200578</td>
+        <td>56689</td>
+        <td>29.0</td>
+        <td>-51</td>
+        <td>36</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мой цветник</td>
+        <td><a href="https://t.me/joinchat/wMPOka20dWk5NDMy">https://t.me/joinchat/wMPOka20dWk5NDMy</a></td>
+        <td>Природа</td>
+        <td>195610</td>
+        <td>33834</td>
+        <td>18.0</td>
+        <td>-2043</td>
+        <td>-1606</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Любимый участок</td>
+        <td><a href="https://t.me/joinchat/PDizJKat9bwxYWUy">https://t.me/joinchat/PDizJKat9bwxYWUy</a></td>
+        <td>Природа</td>
+        <td>193494</td>
+        <td>56795</td>
+        <td>30.0</td>
+        <td>3969</td>
+        <td>22777</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Дачный участок</td>
+        <td><a href="https://t.me/joinchat/BdznS5MpVV01NzI6">https://t.me/joinchat/BdznS5MpVV01NzI6</a></td>
+        <td>Природа</td>
+        <td>190461</td>
+        <td>21722</td>
+        <td>12.0</td>
+        <td>-836</td>
+        <td>-3894</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Простая Рыбалка🐟</td>
+        <td><a href="https://t.me/ribalka_prostaya">https://t.me/ribalka_prostaya</a></td>
+        <td>Природа</td>
+        <td>173782</td>
+        <td>26109</td>
+        <td>15.0</td>
+        <td>934</td>
+        <td>1638</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Моя любимая дача</td>
+        <td><a href="https://t.me/joinchat/RnUpGDr2GmY0Mzky">https://t.me/joinchat/RnUpGDr2GmY0Mzky</a></td>
+        <td>Природа</td>
+        <td>171152</td>
+        <td>31214</td>
+        <td>19.0</td>
+        <td>-389</td>
+        <td>46</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🌿Семена Алтая☘️</td>
+        <td><a href="https://t.me/semenaaltaya">https://t.me/semenaaltaya</a></td>
+        <td>Природа</td>
+        <td>163604</td>
+        <td>88068</td>
+        <td>54.0</td>
+        <td>1417</td>
+        <td>5962</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дача своими руками</td>
+        <td><a href="https://t.me/joinchat/Vk_CRBCq23wwOGUy">https://t.me/joinchat/Vk_CRBCq23wwOGUy</a></td>
+        <td>Природа</td>
+        <td>161134</td>
+        <td>45383</td>
+        <td>29.0</td>
+        <td>7710</td>
+        <td>21436</td>
+        <td>7 месяцев 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Шерстяной переполох • кот</td>
+        <td><a href="https://t.me/joinchat/PjxSP7u7PUI0YzMy">https://t.me/joinchat/PjxSP7u7PUI0YzMy</a></td>
+        <td>Природа</td>
+        <td>160798</td>
+        <td>24006</td>
+        <td>15.0</td>
+        <td>-801</td>
+        <td>-1771</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Хвойная Россия 🧑‍🌾🌲</td>
+        <td><a href="https://t.me/hvoinayarussia">https://t.me/hvoinayarussia</a></td>
+        <td>Природа</td>
+        <td>157799</td>
+        <td>39870</td>
+        <td>26.0</td>
+        <td>1506</td>
+        <td>5596</td>
+        <td>10 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Рыжий фермер👩🏼‍🌾</td>
+        <td><a href="https://t.me/daryasemm">https://t.me/daryasemm</a></td>
+        <td>Природа</td>
+        <td>156813</td>
+        <td>51384</td>
+        <td>33.0</td>
+        <td>-244</td>
+        <td>-1378</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ландшафтный Дизайн</td>
+        <td><a href="https://t.me/landigos">https://t.me/landigos</a></td>
+        <td>Природа</td>
+        <td>147794</td>
+        <td>18451</td>
+        <td>13.0</td>
+        <td>78</td>
+        <td>435</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Земля | Мощь планеты</td>
+        <td><a href="https://t.me/joinchat/WUnjb1i1wulhYTdi">https://t.me/joinchat/WUnjb1i1wulhYTdi</a></td>
+        <td>Природа</td>
+        <td>147503</td>
+        <td>31962</td>
+        <td>22.0</td>
+        <td>-1731</td>
+        <td>-6947</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Московский зоопарк</td>
+        <td><a href="https://t.me/Moscowzoo_official">https://t.me/Moscowzoo_official</a></td>
+        <td>Природа</td>
+        <td>144298</td>
+        <td>33357</td>
+        <td>24.0</td>
+        <td>657</td>
+        <td>1940</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сад и огород | Дача</td>
+        <td><a href="https://t.me/joinchat/ZN44egm7BdMwNWMy">https://t.me/joinchat/ZN44egm7BdMwNWMy</a></td>
+        <td>Природа</td>
+        <td>143637</td>
+        <td>17680</td>
+        <td>13.0</td>
+        <td>209</td>
+        <td>2184</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>микроМИР</td>
+        <td><a href="https://t.me/joinchat/zCB3QYQwLo1mZGYy">https://t.me/joinchat/zCB3QYQwLo1mZGYy</a></td>
+        <td>Природа</td>
+        <td>139552</td>
+        <td>4335</td>
+        <td>4.0</td>
+        <td>-772</td>
+        <td>-1832</td>
+        <td>3 года 1 день</td>
+      </tr>
+
+      <tr>
+        <td>Poli_na_malinaa</td>
+        <td><a href="https://t.me/poli_na_malinaa">https://t.me/poli_na_malinaa</a></td>
+        <td>Природа</td>
+        <td>137024</td>
+        <td>65540</td>
+        <td>48.0</td>
+        <td>1038</td>
+        <td>1008</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>не вешай носик котёночек</td>
+        <td><a href="https://t.me/meow_meow_cute">https://t.me/meow_meow_cute</a></td>
+        <td>Природа</td>
+        <td>135992</td>
+        <td>23506</td>
+        <td>18.0</td>
+        <td>-267</td>
+        <td>-1762</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Океан</td>
+        <td><a href="https://t.me/joinchat/UsTF8vK6J4UzODRi">https://t.me/joinchat/UsTF8vK6J4UzODRi</a></td>
+        <td>Природа</td>
+        <td>135180</td>
+        <td>11139</td>
+        <td>9.0</td>
+        <td>-590</td>
+        <td>-2942</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ired.cap</td>
+        <td><a href="https://t.me/ired_cap">https://t.me/ired_cap</a></td>
+        <td>Природа</td>
+        <td>128450</td>
+        <td>49819</td>
+        <td>39.0</td>
+        <td>557</td>
+        <td>502</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Live Nature</td>
+        <td><a href="https://t.me/priroda_animal">https://t.me/priroda_animal</a></td>
+        <td>Природа</td>
+        <td>127660</td>
+        <td>12742</td>
+        <td>10.0</td>
+        <td>-393</td>
+        <td>-1377</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Цветочница 🌺</td>
+        <td><a href="https://t.me/joinchat/-k4DTF-8XplkMDFi">https://t.me/joinchat/-k4DTF-8XplkMDFi</a></td>
+        <td>Природа</td>
+        <td>127620</td>
+        <td>16830</td>
+        <td>14.0</td>
+        <td>2286</td>
+        <td>1632</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Хвостики</td>
+        <td><a href="https://t.me/joinchat/dBcMs6qJTeRkNjRi">https://t.me/joinchat/dBcMs6qJTeRkNjRi</a></td>
+        <td>Природа</td>
+        <td>126838</td>
+        <td>32059</td>
+        <td>26.0</td>
+        <td>-1010</td>
+        <td>-3998</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дневник дачника. Сад и огород</td>
+        <td><a href="https://t.me/da4niksadowod">https://t.me/da4niksadowod</a></td>
+        <td>Природа</td>
+        <td>123247</td>
+        <td>14493</td>
+        <td>12.0</td>
+        <td>-131</td>
+        <td>-224</td>
+        <td>5 лет 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Современный дачник</td>
+        <td><a href="https://t.me/dacha_blog">https://t.me/dacha_blog</a></td>
+        <td>Природа</td>
+        <td>122074</td>
+        <td>20294</td>
+        <td>17.0</td>
+        <td>-59</td>
+        <td>-104</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дачные Секреты 🏡</td>
+        <td><a href="https://t.me/joinchat/tt6qFMpT2gwxOWEy">https://t.me/joinchat/tt6qFMpT2gwxOWEy</a></td>
+        <td>Природа</td>
+        <td>120610</td>
+        <td>19952</td>
+        <td>17.0</td>
+        <td>374</td>
+        <td>1786</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Animal Planet</td>
+        <td><a href="https://t.me/animal_planeta">https://t.me/animal_planeta</a></td>
+        <td>Природа</td>
+        <td>120436</td>
+        <td>18565</td>
+        <td>16.0</td>
+        <td>-228</td>
+        <td>-16</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дикие и Опасные</td>
+        <td><a href="https://t.me/joinchat/07Xdc8jSs9ZhOGRi">https://t.me/joinchat/07Xdc8jSs9ZhOGRi</a></td>
+        <td>Природа</td>
+        <td>119758</td>
+        <td>24025</td>
+        <td>21.0</td>
+        <td>-275</td>
+        <td>618</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дача для души</td>
+        <td><a href="https://t.me/joinchat/kQRM9tTAf1AxYmIy">https://t.me/joinchat/kQRM9tTAf1AxYmIy</a></td>
+        <td>Природа</td>
+        <td>116589</td>
+        <td>37262</td>
+        <td>32.0</td>
+        <td>3177</td>
+        <td>4209</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Рыбацкий канал | Рыбалка</td>
+        <td><a href="https://t.me/joinchat/M7NK34RZoro3YTY6">https://t.me/joinchat/M7NK34RZoro3YTY6</a></td>
+        <td>Природа</td>
+        <td>113032</td>
+        <td>25921</td>
+        <td>23.0</td>
+        <td>975</td>
+        <td>2372</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>милые котики ^-^ коты</td>
+        <td><a href="https://t.me/lovemeowcats">https://t.me/lovemeowcats</a></td>
+        <td>Природа</td>
+        <td>108136</td>
+        <td>17604</td>
+        <td>17.0</td>
+        <td>-1279</td>
+        <td>-4179</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Irina_kuznecova18</td>
+        <td><a href="https://t.me/Irina_kuznecova18">https://t.me/Irina_kuznecova18</a></td>
+        <td>Природа</td>
+        <td>107334</td>
+        <td>48691</td>
+        <td>46.0</td>
+        <td>2372</td>
+        <td>6643</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Zacvetet - Все зацветёт</td>
+        <td><a href="https://t.me/zacvetet">https://t.me/zacvetet</a></td>
+        <td>Природа</td>
+        <td>105352</td>
+        <td>45257</td>
+        <td>43.0</td>
+        <td>116</td>
+        <td>-103</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дача и Дом</td>
+        <td><a href="https://t.me/joinchat/wBiwhgzYc11hNjNi">https://t.me/joinchat/wBiwhgzYc11hNjNi</a></td>
+        <td>Природа</td>
+        <td>105201</td>
+        <td>12692</td>
+        <td>13.0</td>
+        <td>-410</td>
+        <td>-1126</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дикий Мир</td>
+        <td><a href="https://t.me/joinchat/VDvYRatDCo9kMThi">https://t.me/joinchat/VDvYRatDCo9kMThi</a></td>
+        <td>Природа</td>
+        <td>104675</td>
+        <td>14772</td>
+        <td>15.0</td>
+        <td>-1741</td>
+        <td>603</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Садовый гид Лариса Зарубина</td>
+        <td><a href="https://t.me/sadovyygidlarisa">https://t.me/sadovyygidlarisa</a></td>
+        <td>Природа</td>
+        <td>104344</td>
+        <td>46023</td>
+        <td>45.0</td>
+        <td>331</td>
+        <td>1477</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дача | Мой домик</td>
+        <td><a href="https://t.me/dacha_dom">https://t.me/dacha_dom</a></td>
+        <td>Природа</td>
+        <td>102311</td>
+        <td>5261</td>
+        <td>6.0</td>
+        <td>-270</td>
+        <td>-1127</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Домик в деревне</td>
+        <td><a href="https://t.me/joinchat/R6Y4_AsQ2kY5YTBi">https://t.me/joinchat/R6Y4_AsQ2kY5YTBi</a></td>
+        <td>Природа</td>
+        <td>102065</td>
+        <td>16585</td>
+        <td>17.0</td>
+        <td>-534</td>
+        <td>-2267</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дачные идеи</td>
+        <td><a href="https://t.me/joinchat/zv_N5zjrssU5NGIy">https://t.me/joinchat/zv_N5zjrssU5NGIy</a></td>
+        <td>Природа</td>
+        <td>100962</td>
+        <td>12193</td>
+        <td>13.0</td>
+        <td>280</td>
+        <td>139</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рыбалка и Охота 🐠</td>
+        <td><a href="https://t.me/mashiny_snasti">https://t.me/mashiny_snasti</a></td>
+        <td>Природа</td>
+        <td>99381</td>
+        <td>8145</td>
+        <td>9.0</td>
+        <td>-1454</td>
+        <td>-416</td>
+        <td>5 лет 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Цветы и растения</td>
+        <td><a href="https://t.me/joinchat/c5R4uB0XRHo0NmU6">https://t.me/joinchat/c5R4uB0XRHo0NmU6</a></td>
+        <td>Природа</td>
+        <td>96264</td>
+        <td>12213</td>
+        <td>13.0</td>
+        <td>-605</td>
+        <td>-2497</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мой участок</td>
+        <td><a href="https://t.me/joinchat/Of-7B_9-njVjNWZi">https://t.me/joinchat/Of-7B_9-njVjNWZi</a></td>
+        <td>Природа</td>
+        <td>96154</td>
+        <td>20197</td>
+        <td>21.0</td>
+        <td>-635</td>
+        <td>14462</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ЯжеЦветочница | Цветы и сад</td>
+        <td><a href="https://t.me/joinchat/sA78U3Q3IfozOGUy">https://t.me/joinchat/sA78U3Q3IfozOGUy</a></td>
+        <td>Природа</td>
+        <td>95647</td>
+        <td>15974</td>
+        <td>17.0</td>
+        <td>84</td>
+        <td>9068</td>
+        <td>8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пушистый юмор| Кот&Пёс</td>
+        <td><a href="https://t.me/joinchat/FdQuvptjsXczN2Zi">https://t.me/joinchat/FdQuvptjsXczN2Zi</a></td>
+        <td>Природа</td>
+        <td>93538</td>
+        <td>17189</td>
+        <td>19.0</td>
+        <td>-108</td>
+        <td>1089</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Зверонутые 🐻</td>
+        <td><a href="https://t.me/zveronutie">https://t.me/zveronutie</a></td>
+        <td>Природа</td>
+        <td>93531</td>
+        <td>6925</td>
+        <td>8.0</td>
+        <td>-288</td>
+        <td>-6697</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дача с умом | Огород</td>
+        <td><a href="https://t.me/joinchat/JsU2znt2KPthMDEy">https://t.me/joinchat/JsU2znt2KPthMDEy</a></td>
+        <td>Природа</td>
+        <td>92816</td>
+        <td>10740</td>
+        <td>12.0</td>
+        <td>-255</td>
+        <td>-761</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Real Nature</td>
+        <td><a href="https://t.me/joinchat/AAAAAE0pV_DsE-SBXSrP6g">https://t.me/joinchat/AAAAAE0pV_DsE-SBXSrP6g</a></td>
+        <td>Природа</td>
+        <td>92351</td>
+        <td>5491</td>
+        <td>6.0</td>
+        <td>-374</td>
+        <td>-1161</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Типичный кошатник</td>
+        <td><a href="https://t.me/joinchat/tBqe-K0NVQg0Y2Vi">https://t.me/joinchat/tBqe-K0NVQg0Y2Vi</a></td>
+        <td>Природа</td>
+        <td>92057</td>
+        <td>17326</td>
+        <td>19.0</td>
+        <td>45518</td>
+        <td>47248</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Секрет дачи | Дом и Сад</td>
+        <td><a href="https://t.me/joinchat/l02vuY8ll5g5NzYy">https://t.me/joinchat/l02vuY8ll5g5NzYy</a></td>
+        <td>Природа</td>
+        <td>91913</td>
+        <td>13900</td>
+        <td>16.0</td>
+        <td>448</td>
+        <td>-244</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МАУГЛИ - Дикая природа</td>
+        <td><a href="https://t.me/joinchat/9Gw4Dp1wXnA4MDUy">https://t.me/joinchat/9Gw4Dp1wXnA4MDUy</a></td>
+        <td>Природа</td>
+        <td>89829</td>
+        <td>4239</td>
+        <td>5.0</td>
+        <td>747</td>
+        <td>-608</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бляцкие коты</td>
+        <td><a href="https://t.me/cats_cats">https://t.me/cats_cats</a></td>
+        <td>Природа</td>
+        <td>88800</td>
+        <td>19281</td>
+        <td>22.0</td>
+        <td>-147</td>
+        <td>-455</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Яков Огородник</td>
+        <td><a href="https://t.me/yakov_ogorodnik">https://t.me/yakov_ogorodnik</a></td>
+        <td>Природа</td>
+        <td>87112</td>
+        <td>94894</td>
+        <td>109.0</td>
+        <td>1249</td>
+        <td>4967</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мои любимые цветы</td>
+        <td><a href="https://t.me/joinchat/FpBsDo4KaQMwYWIy">https://t.me/joinchat/FpBsDo4KaQMwYWIy</a></td>
+        <td>Природа</td>
+        <td>85081</td>
+        <td>24250</td>
+        <td>29.0</td>
+        <td>-598</td>
+        <td>-488</td>
+        <td>7 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Nat Geo Wild</td>
+        <td><a href="https://t.me/joinchat/o1Y9B151kVpiMmYy">https://t.me/joinchat/o1Y9B151kVpiMmYy</a></td>
+        <td>Природа</td>
+        <td>80969</td>
+        <td>15845</td>
+        <td>20.0</td>
+        <td>-1462</td>
+        <td>-6895</td>
+        <td>5 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Greenway Global</td>
+        <td><a href="https://t.me/greenwayglobalofficial">https://t.me/greenwayglobalofficial</a></td>
+        <td>Природа</td>
+        <td>79600</td>
+        <td>17727</td>
+        <td>23.0</td>
+        <td>525</td>
+        <td>869</td>
+        <td>5 лет 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Nature 🌎</td>
+        <td><a href="https://t.me/Nature">https://t.me/Nature</a></td>
+        <td>Природа</td>
+        <td>79563</td>
+        <td>9158</td>
+        <td>12.0</td>
+        <td>-53</td>
+        <td>-20</td>
+        <td>8 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Discovery | Жестокая планета</td>
+        <td><a href="https://t.me/joinchat/c5WOSNhYS9s0MzJi">https://t.me/joinchat/c5WOSNhYS9s0MzJi</a></td>
+        <td>Природа</td>
+        <td>75982</td>
+        <td>5559</td>
+        <td>8.0</td>
+        <td>-345</td>
+        <td>-2783</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Цветы и растения</td>
+        <td><a href="https://t.me/joinchat/m-2TAjcKO5hlMDAy">https://t.me/joinchat/m-2TAjcKO5hlMDAy</a></td>
+        <td>Природа</td>
+        <td>73823</td>
+        <td>10363</td>
+        <td>14.0</td>
+        <td>-193</td>
+        <td>-1050</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пёсик</td>
+        <td><a href="https://t.me/PesikTG_Sobaka">https://t.me/PesikTG_Sobaka</a></td>
+        <td>Природа</td>
+        <td>71391</td>
+        <td>18568</td>
+        <td>26.0</td>
+        <td>-45</td>
+        <td>101</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дачница</td>
+        <td><a href="https://t.me/joinchat/5taV4JYLgIY4Yjhi">https://t.me/joinchat/5taV4JYLgIY4Yjhi</a></td>
+        <td>Природа</td>
+        <td>71181</td>
+        <td>8848</td>
+        <td>13.0</td>
+        <td>-231</td>
+        <td>-446</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пушистый беспредел</td>
+        <td><a href="https://t.me/joinchat/CAo2ftH0xAZiYTUy">https://t.me/joinchat/CAo2ftH0xAZiYTUy</a></td>
+        <td>Природа</td>
+        <td>70531</td>
+        <td>14558</td>
+        <td>21.0</td>
+        <td>-386</td>
+        <td>-1255</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дача: идеи и решения</td>
+        <td><a href="https://t.me/dacha_idei_reshenia">https://t.me/dacha_idei_reshenia</a></td>
+        <td>Природа</td>
+        <td>70228</td>
+        <td>10185</td>
+        <td>15.0</td>
+        <td>100</td>
+        <td>412</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дачный Уголок 🏡</td>
+        <td><a href="https://t.me/joinchat/96RcqBJw_ahiYzNi">https://t.me/joinchat/96RcqBJw_ahiYzNi</a></td>
+        <td>Природа</td>
+        <td>69146</td>
+        <td>23969</td>
+        <td>35.0</td>
+        <td>728</td>
+        <td>69049</td>
+        <td>4 месяца 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Дачный угодник</td>
+        <td><a href="https://t.me/joinchat/AC2jKlmQjwcwZDky">https://t.me/joinchat/AC2jKlmQjwcwZDky</a></td>
+        <td>Природа</td>
+        <td>68956</td>
+        <td>13189</td>
+        <td>20.0</td>
+        <td>1308</td>
+        <td>5072</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЗДЕСЬ БАЖЕНОВ</td>
+        <td><a href="https://t.me/zdesbazhenov">https://t.me/zdesbazhenov</a></td>
+        <td>Природа</td>
+        <td>68739</td>
+        <td>23826</td>
+        <td>35.0</td>
+        <td>730</td>
+        <td>4478</td>
+        <td>1 год 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>best_gryadka Блог о саде и огороде с удовольствием</td>
+        <td><a href="https://t.me/BestGryadka">https://t.me/BestGryadka</a></td>
+        <td>Природа</td>
+        <td>67392</td>
+        <td>21184</td>
+        <td>32.0</td>
+        <td>75</td>
+        <td>164</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Людмила Кудасова</td>
+        <td><a href="https://t.me/LudmilaKudasova">https://t.me/LudmilaKudasova</a></td>
+        <td>Природа</td>
+        <td>67143</td>
+        <td>20577</td>
+        <td>31.0</td>
+        <td>3438</td>
+        <td>11080</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дачка | свой маленький рай</td>
+        <td><a href="https://t.me/joinchat/Ee__WAMak0IxN2Qy">https://t.me/joinchat/Ee__WAMak0IxN2Qy</a></td>
+        <td>Природа</td>
+        <td>67141</td>
+        <td>22468</td>
+        <td>34.0</td>
+        <td>3346</td>
+        <td>23945</td>
+        <td>2 месяца 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>Парк львов ЗЕМЛЯ ПРАЙДА 🦁</td>
+        <td><a href="https://t.me/lions_moscow">https://t.me/lions_moscow</a></td>
+        <td>Природа</td>
+        <td>66303</td>
+        <td>66123</td>
+        <td>100.0</td>
+        <td>443</td>
+        <td>1865</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>NAT GEO WILD</td>
+        <td><a href="https://t.me/joinchat/asBNOmAU70I5OThi">https://t.me/joinchat/asBNOmAU70I5OThi</a></td>
+        <td>Природа</td>
+        <td>65549</td>
+        <td>5203</td>
+        <td>8.0</td>
+        <td>94</td>
+        <td>-2770</td>
+        <td>7 месяцев 21 день</td>
+      </tr>
+
+      <tr>
+        <td>ЗооМир</td>
+        <td><a href="https://t.me/joinchat/IdhJnwdlyitjYjZi">https://t.me/joinchat/IdhJnwdlyitjYjZi</a></td>
+        <td>Природа</td>
+        <td>65213</td>
+        <td>10592</td>
+        <td>17.0</td>
+        <td>-196</td>
+        <td>-940</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Цветочная</td>
+        <td><a href="https://t.me/joinchat/qYAScifhbsZkMzky">https://t.me/joinchat/qYAScifhbsZkMzky</a></td>
+        <td>Природа</td>
+        <td>64275</td>
+        <td>14752</td>
+        <td>23.0</td>
+        <td>-601</td>
+        <td>-424</td>
+        <td>4 месяца 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Псовский диктор🎙️</td>
+        <td><a href="https://t.me/psovsky_dicktor">https://t.me/psovsky_dicktor</a></td>
+        <td>Природа</td>
+        <td>63713</td>
+        <td>36116</td>
+        <td>57.0</td>
+        <td>331</td>
+        <td>1848</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Уютная Дача | Дизайн ландшафта</td>
+        <td><a href="https://t.me/yutnay_dacha">https://t.me/yutnay_dacha</a></td>
+        <td>Природа</td>
+        <td>63221</td>
+        <td>14818</td>
+        <td>24.0</td>
+        <td>-923</td>
+        <td>2935</td>
+        <td>8 месяцев 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Nat Geo WILD</td>
+        <td><a href="https://t.me/natgeowild2">https://t.me/natgeowild2</a></td>
+        <td>Природа</td>
+        <td>62284</td>
+        <td>3739</td>
+        <td>6.0</td>
+        <td>-386</td>
+        <td>-1897</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Агрофирма Партнер | Семена</td>
+        <td><a href="https://t.me/agrofirma_partner">https://t.me/agrofirma_partner</a></td>
+        <td>Природа</td>
+        <td>61367</td>
+        <td>13779</td>
+        <td>23.0</td>
+        <td>29</td>
+        <td>630</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ресайкл🌏💚♻️</td>
+        <td><a href="https://t.me/recyclemagru">https://t.me/recyclemagru</a></td>
+        <td>Природа</td>
+        <td>59603</td>
+        <td>17310</td>
+        <td>29.0</td>
+        <td>0</td>
+        <td>59</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Дачный Уют 🏡</td>
+        <td><a href="https://t.me/joinchat/q1xHeyxxJ5o5NjZi">https://t.me/joinchat/q1xHeyxxJ5o5NjZi</a></td>
+        <td>Природа</td>
+        <td>59082</td>
+        <td>18204</td>
+        <td>31.0</td>
+        <td>2163</td>
+        <td>59069</td>
+        <td>6 месяцев 22 дня</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

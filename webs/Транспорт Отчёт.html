@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Тачки и Точка</td>
+        <td><a href="https://t.me/tachki">https://t.me/tachki</a></td>
+        <td>Транспорт</td>
+        <td>1476186</td>
+        <td>134828</td>
+        <td>10.0</td>
+        <td>17313</td>
+        <td>144198</td>
+        <td>8 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>WENGALLBI</td>
+        <td><a href="https://t.me/joinchat/IdrHgxhyYsg2ODli">https://t.me/joinchat/IdrHgxhyYsg2ODli</a></td>
+        <td>Транспорт</td>
+        <td>1017964</td>
+        <td>397967</td>
+        <td>40.0</td>
+        <td>-2440</td>
+        <td>-12408</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дубровский Синдикат | Жекич Дубровский</td>
+        <td><a href="https://t.me/dubrovskiy_444">https://t.me/dubrovskiy_444</a></td>
+        <td>Транспорт</td>
+        <td>705759</td>
+        <td>253323</td>
+        <td>36.0</td>
+        <td>-11771</td>
+        <td>41131</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Автомания</td>
+        <td><a href="https://t.me/auto_manya">https://t.me/auto_manya</a></td>
+        <td>Транспорт</td>
+        <td>654616</td>
+        <td>36093</td>
+        <td>6.0</td>
+        <td>89514</td>
+        <td>83512</td>
+        <td>8 месяцев 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Автоинструктор</td>
+        <td><a href="https://t.me/auto_instruktor">https://t.me/auto_instruktor</a></td>
+        <td>Транспорт</td>
+        <td>641259</td>
+        <td>97681</td>
+        <td>16.0</td>
+        <td>42142</td>
+        <td>207511</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Гараж 54</td>
+        <td><a href="https://t.me/Garage54official">https://t.me/Garage54official</a></td>
+        <td>Транспорт</td>
+        <td>528887</td>
+        <td>175194</td>
+        <td>34.0</td>
+        <td>-19479</td>
+        <td>-47004</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Саня GoodPrice 🚘</td>
+        <td><a href="https://t.me/goodpriceauto_777">https://t.me/goodpriceauto_777</a></td>
+        <td>Транспорт</td>
+        <td>468792</td>
+        <td>32249</td>
+        <td>7.0</td>
+        <td>-26492</td>
+        <td>70911</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>D3 | Davidich Dynamic Drive</td>
+        <td><a href="https://t.me/Eric_Davidich_D3">https://t.me/Eric_Davidich_D3</a></td>
+        <td>Транспорт</td>
+        <td>445155</td>
+        <td>137907</td>
+        <td>31.0</td>
+        <td>961</td>
+        <td>-1093</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>За рулём</td>
+        <td><a href="https://t.me/driverone">https://t.me/driverone</a></td>
+        <td>Транспорт</td>
+        <td>406387</td>
+        <td>41053</td>
+        <td>11.0</td>
+        <td>-414</td>
+        <td>39</td>
+        <td>5 лет 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>АВТО БАТЯ</td>
+        <td><a href="https://t.me/joinchat/SWYxZJz-lL7aWSOk">https://t.me/joinchat/SWYxZJz-lL7aWSOk</a></td>
+        <td>Транспорт</td>
+        <td>390953</td>
+        <td>48421</td>
+        <td>13.0</td>
+        <td>-1951</td>
+        <td>-6599</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AUTOГИД</td>
+        <td><a href="https://t.me/Autogidrf">https://t.me/Autogidrf</a></td>
+        <td>Транспорт</td>
+        <td>381403</td>
+        <td>163188</td>
+        <td>43.0</td>
+        <td>1016</td>
+        <td>2490</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москоуавто</td>
+        <td><a href="https://t.me/moscowauto">https://t.me/moscowauto</a></td>
+        <td>Транспорт</td>
+        <td>373857</td>
+        <td>43524</td>
+        <td>12.0</td>
+        <td>-38642</td>
+        <td>126790</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PROавто</td>
+        <td><a href="https://t.me/proautoruu">https://t.me/proautoruu</a></td>
+        <td>Транспорт</td>
+        <td>373721</td>
+        <td>158919</td>
+        <td>43.0</td>
+        <td>1459</td>
+        <td>4512</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Автогид</td>
+        <td><a href="https://t.me/autogidus">https://t.me/autogidus</a></td>
+        <td>Транспорт</td>
+        <td>370480</td>
+        <td>52826</td>
+        <td>15.0</td>
+        <td>-1380</td>
+        <td>80</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МЕХАНИК</td>
+        <td><a href="https://t.me/imehanik">https://t.me/imehanik</a></td>
+        <td>Транспорт</td>
+        <td>364448</td>
+        <td>45769</td>
+        <td>13.0</td>
+        <td>409</td>
+        <td>783</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АвтоПульс: Новости и Тренды</td>
+        <td><a href="https://t.me/AvtoPulse_news">https://t.me/AvtoPulse_news</a></td>
+        <td>Транспорт</td>
+        <td>347480</td>
+        <td>146949</td>
+        <td>43.0</td>
+        <td>3344</td>
+        <td>5144</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АвтоPROFI</td>
+        <td><a href="https://t.me/GGWP_NewsChannel">https://t.me/GGWP_NewsChannel</a></td>
+        <td>Транспорт</td>
+        <td>330484</td>
+        <td>93408</td>
+        <td>29.0</td>
+        <td>4309</td>
+        <td>14581</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АВТОЗАКАЗ.РУ</td>
+        <td><a href="https://t.me/auto_zakazz25">https://t.me/auto_zakazz25</a></td>
+        <td>Транспорт</td>
+        <td>323932</td>
+        <td>101938</td>
+        <td>32.0</td>
+        <td>2399</td>
+        <td>15172</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Осторожно, тачки</td>
+        <td><a href="https://t.me/ostorozhno_tachki">https://t.me/ostorozhno_tachki</a></td>
+        <td>Транспорт</td>
+        <td>319532</td>
+        <td>41060</td>
+        <td>13.0</td>
+        <td>308</td>
+        <td>80</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АВТО ПО НИЗУ РЫНКА | Авторынок РФ</td>
+        <td><a href="https://t.me/joinchat/JpXNid6wC5Q5YmEy">https://t.me/joinchat/JpXNid6wC5Q5YmEy</a></td>
+        <td>Транспорт</td>
+        <td>316313</td>
+        <td>22765</td>
+        <td>8.0</td>
+        <td>-5449</td>
+        <td>-37667</td>
+        <td>2 года 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Lisarulit Sales</td>
+        <td><a href="https://t.me/lisarulitsales">https://t.me/lisarulitsales</a></td>
+        <td>Транспорт</td>
+        <td>313768</td>
+        <td>82001</td>
+        <td>27.0</td>
+        <td>-94</td>
+        <td>854</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Авто.ру</td>
+        <td><a href="https://t.me/carsnosleep">https://t.me/carsnosleep</a></td>
+        <td>Транспорт</td>
+        <td>311420</td>
+        <td>43114</td>
+        <td>14.0</td>
+        <td>-2432</td>
+        <td>2714</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТЕХНАРЬ</td>
+        <td><a href="https://t.me/joinchat/AAAAAE7B4wbJG-A833kfvw">https://t.me/joinchat/AAAAAE7B4wbJG-A833kfvw</a></td>
+        <td>Транспорт</td>
+        <td>305192</td>
+        <td>41239</td>
+        <td>14.0</td>
+        <td>-502</td>
+        <td>-167</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Любим тачки</td>
+        <td><a href="https://t.me/LubimTachki">https://t.me/LubimTachki</a></td>
+        <td>Транспорт</td>
+        <td>301604</td>
+        <td>38407</td>
+        <td>13.0</td>
+        <td>375</td>
+        <td>75</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>EVGEN AVTO</td>
+        <td><a href="https://t.me/evgenavtooo">https://t.me/evgenavtooo</a></td>
+        <td>Транспорт</td>
+        <td>298734</td>
+        <td>31283</td>
+        <td>11.0</td>
+        <td>7061</td>
+        <td>-54146</td>
+        <td>5 лет 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>AutoStyle</td>
+        <td><a href="https://t.me/AutoStyleNews">https://t.me/AutoStyleNews</a></td>
+        <td>Транспорт</td>
+        <td>291421</td>
+        <td>134474</td>
+        <td>47.0</td>
+        <td>3935</td>
+        <td>10839</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГИБДД | Все про законы и права</td>
+        <td><a href="https://t.me/joinchat/7RZ5x9mhncNiYjVi">https://t.me/joinchat/7RZ5x9mhncNiYjVi</a></td>
+        <td>Транспорт</td>
+        <td>285227</td>
+        <td>74407</td>
+        <td>27.0</td>
+        <td>1544</td>
+        <td>2854</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Инспектор</td>
+        <td><a href="https://t.me/auto_inspektor">https://t.me/auto_inspektor</a></td>
+        <td>Транспорт</td>
+        <td>282550</td>
+        <td>33918</td>
+        <td>12.0</td>
+        <td>2246</td>
+        <td>40578</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КРЫМСКИЙ МОСТ: оперативная информация</td>
+        <td><a href="https://t.me/most_official">https://t.me/most_official</a></td>
+        <td>Транспорт</td>
+        <td>275227</td>
+        <td>69102</td>
+        <td>26.0</td>
+        <td>11933</td>
+        <td>44124</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Perekupchino</td>
+        <td><a href="https://t.me/perekupchino_on">https://t.me/perekupchino_on</a></td>
+        <td>Транспорт</td>
+        <td>274471</td>
+        <td>25413</td>
+        <td>10.0</td>
+        <td>72565</td>
+        <td>67933</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АвтоФокус</td>
+        <td><a href="https://t.me/Avtoiporyadok">https://t.me/Avtoiporyadok</a></td>
+        <td>Транспорт</td>
+        <td>262778</td>
+        <td>102551</td>
+        <td>39.0</td>
+        <td>2167</td>
+        <td>6408</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Александр Шумский</td>
+        <td><a href="https://t.me/proboknet">https://t.me/proboknet</a></td>
+        <td>Транспорт</td>
+        <td>255024</td>
+        <td>84096</td>
+        <td>33.0</td>
+        <td>843</td>
+        <td>2255</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ФОРСАЖ</td>
+        <td><a href="https://t.me/forsazh_youtube">https://t.me/forsazh_youtube</a></td>
+        <td>Транспорт</td>
+        <td>250340</td>
+        <td>77141</td>
+        <td>31.0</td>
+        <td>-10849</td>
+        <td>44076</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НИКИТОС</td>
+        <td><a href="https://t.me/NIKITOSTEAM">https://t.me/NIKITOSTEAM</a></td>
+        <td>Транспорт</td>
+        <td>247528</td>
+        <td>89933</td>
+        <td>37.0</td>
+        <td>-2042</td>
+        <td>32404</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Lisarulit</td>
+        <td><a href="https://t.me/lisarulit777">https://t.me/lisarulit777</a></td>
+        <td>Транспорт</td>
+        <td>214878</td>
+        <td>90964</td>
+        <td>43.0</td>
+        <td>-1208</td>
+        <td>-6254</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МТС Юрент</td>
+        <td><a href="https://t.me/mtsurent">https://t.me/mtsurent</a></td>
+        <td>Транспорт</td>
+        <td>211272</td>
+        <td>77000</td>
+        <td>37.0</td>
+        <td>5412</td>
+        <td>19859</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВОЛКОВ</td>
+        <td><a href="https://t.me/volkov815">https://t.me/volkov815</a></td>
+        <td>Транспорт</td>
+        <td>207550</td>
+        <td>106893</td>
+        <td>52.0</td>
+        <td>7124</td>
+        <td>36800</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дорожные войны</td>
+        <td><a href="https://t.me/joinchat/UiZXcR5bKb4yNTcy">https://t.me/joinchat/UiZXcR5bKb4yNTcy</a></td>
+        <td>Транспорт</td>
+        <td>204853</td>
+        <td>18379</td>
+        <td>9.0</td>
+        <td>-902</td>
+        <td>-2349</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Первая передача</td>
+        <td><a href="https://t.me/firstgear_channel">https://t.me/firstgear_channel</a></td>
+        <td>Транспорт</td>
+        <td>204678</td>
+        <td>17851</td>
+        <td>9.0</td>
+        <td>-123</td>
+        <td>-546</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АвтоЛеди</td>
+        <td><a href="https://t.me/joinchat/FY4LWdyNxQVmZTcy">https://t.me/joinchat/FY4LWdyNxQVmZTcy</a></td>
+        <td>Транспорт</td>
+        <td>204403</td>
+        <td>38381</td>
+        <td>19.0</td>
+        <td>869</td>
+        <td>3168</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>vitaleskoles ️</td>
+        <td><a href="https://t.me/vitaleskoles1">https://t.me/vitaleskoles1</a></td>
+        <td>Транспорт</td>
+        <td>196302</td>
+        <td>49800</td>
+        <td>26.0</td>
+        <td>-1215</td>
+        <td>-1947</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АВТО АЙК Official 🏎️</td>
+        <td><a href="https://t.me/autohaykofficial">https://t.me/autohaykofficial</a></td>
+        <td>Транспорт</td>
+        <td>193160</td>
+        <td>52937</td>
+        <td>28.0</td>
+        <td>-12436</td>
+        <td>-57204</td>
+        <td>7 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Главная Дорога</td>
+        <td><a href="https://t.me/Glavnayadoroga_tg">https://t.me/Glavnayadoroga_tg</a></td>
+        <td>Транспорт</td>
+        <td>190506</td>
+        <td>27965</td>
+        <td>15.0</td>
+        <td>1115</td>
+        <td>3984</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Автолюбитель</td>
+        <td><a href="https://t.me/AutolubTG">https://t.me/AutolubTG</a></td>
+        <td>Транспорт</td>
+        <td>188279</td>
+        <td>39460</td>
+        <td>21.0</td>
+        <td>-25434</td>
+        <td>-38362</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Клубный Сервис</td>
+        <td><a href="https://t.me/klubniy_servis">https://t.me/klubniy_servis</a></td>
+        <td>Транспорт</td>
+        <td>177344</td>
+        <td>63541</td>
+        <td>36.0</td>
+        <td>633</td>
+        <td>3976</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПДД</td>
+        <td><a href="https://t.me/pdd_for_all">https://t.me/pdd_for_all</a></td>
+        <td>Транспорт</td>
+        <td>169012</td>
+        <td>6608</td>
+        <td>4.0</td>
+        <td>-1108</td>
+        <td>-4836</td>
+        <td>4 года 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Делимобиль</td>
+        <td><a href="https://t.me/delimobil">https://t.me/delimobil</a></td>
+        <td>Транспорт</td>
+        <td>157064</td>
+        <td>53404</td>
+        <td>34.0</td>
+        <td>480</td>
+        <td>2865</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Авто-подбор.рф</td>
+        <td><a href="https://t.me/ildar_auto_podbor">https://t.me/ildar_auto_podbor</a></td>
+        <td>Транспорт</td>
+        <td>154075</td>
+        <td>49742</td>
+        <td>33.0</td>
+        <td>-46</td>
+        <td>-185</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>OMODA Россия 🛞</td>
+        <td><a href="https://t.me/omodarussia">https://t.me/omodarussia</a></td>
+        <td>Транспорт</td>
+        <td>151198</td>
+        <td>4667</td>
+        <td>4.0</td>
+        <td>1460</td>
+        <td>15138</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Vasyarnd</td>
+        <td><a href="https://t.me/vasyarnd">https://t.me/vasyarnd</a></td>
+        <td>Транспорт</td>
+        <td>149438</td>
+        <td>55679</td>
+        <td>38.0</td>
+        <td>-812</td>
+        <td>-7416</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Avto_darom750 ( авто ниже рынка)</td>
+        <td><a href="https://t.me/joinchat/TGuOfElsQyRmZGVi">https://t.me/joinchat/TGuOfElsQyRmZGVi</a></td>
+        <td>Транспорт</td>
+        <td>149192</td>
+        <td>15820</td>
+        <td>11.0</td>
+        <td>-2368</td>
+        <td>-19954</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дептранс Москвы</td>
+        <td><a href="https://t.me/DtRoad">https://t.me/DtRoad</a></td>
+        <td>Транспорт</td>
+        <td>148052</td>
+        <td>24550</td>
+        <td>17.0</td>
+        <td>1432</td>
+        <td>7826</td>
+        <td>9 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НИЖЕ РЫНКА СПБ🔥</td>
+        <td><a href="https://t.me/nizherinkaspb1">https://t.me/nizherinkaspb1</a></td>
+        <td>Транспорт</td>
+        <td>147723</td>
+        <td>5069</td>
+        <td>4.0</td>
+        <td>-714</td>
+        <td>-15114</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Главная Дорога</td>
+        <td><a href="https://t.me/glavdoroga">https://t.me/glavdoroga</a></td>
+        <td>Транспорт</td>
+        <td>145211</td>
+        <td>27346</td>
+        <td>19.0</td>
+        <td>-102</td>
+        <td>-906</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ZAVOZIN</td>
+        <td><a href="https://t.me/gri_zavozin">https://t.me/gri_zavozin</a></td>
+        <td>Транспорт</td>
+        <td>145009</td>
+        <td>67712</td>
+        <td>47.0</td>
+        <td>-106</td>
+        <td>-192</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТАЧКИ ОТ ЛЕКС АВТО😈</td>
+        <td><a href="https://t.me/lexautospb1">https://t.me/lexautospb1</a></td>
+        <td>Транспорт</td>
+        <td>143267</td>
+        <td>10461</td>
+        <td>8.0</td>
+        <td>-4090</td>
+        <td>-34421</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>beardavto</td>
+        <td><a href="https://t.me/beardavtoo">https://t.me/beardavtoo</a></td>
+        <td>Транспорт</td>
+        <td>141543</td>
+        <td>11906</td>
+        <td>9.0</td>
+        <td>-18654</td>
+        <td>48033</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AUTO_KING</td>
+        <td><a href="https://t.me/auto_king01">https://t.me/auto_king01</a></td>
+        <td>Транспорт</td>
+        <td>139729</td>
+        <td>10046</td>
+        <td>8.0</td>
+        <td>-8272</td>
+        <td>-6374</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Lucky Club: Авто</td>
+        <td><a href="https://t.me/lucky_club_ru">https://t.me/lucky_club_ru</a></td>
+        <td>Транспорт</td>
+        <td>131898</td>
+        <td>36537</td>
+        <td>28.0</td>
+        <td>-1071</td>
+        <td>-9013</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОРШ!</td>
+        <td><a href="https://t.me/porshee_auto">https://t.me/porshee_auto</a></td>
+        <td>Транспорт</td>
+        <td>130682</td>
+        <td>10262</td>
+        <td>8.0</td>
+        <td>-3202</td>
+        <td>-21371</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>trif_auto</td>
+        <td><a href="https://t.me/trif_avto">https://t.me/trif_avto</a></td>
+        <td>Транспорт</td>
+        <td>127082</td>
+        <td>8094</td>
+        <td>7.0</td>
+        <td>-5803</td>
+        <td>-49337</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Перекупчино Авто</td>
+        <td><a href="https://t.me/perekupchino_avt0">https://t.me/perekupchino_avt0</a></td>
+        <td>Транспорт</td>
+        <td>124007</td>
+        <td>6734</td>
+        <td>6.0</td>
+        <td>-1131</td>
+        <td>-5721</td>
+        <td>4 года 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Андрей Скутерец</td>
+        <td><a href="https://t.me/ascooterets">https://t.me/ascooterets</a></td>
+        <td>Транспорт</td>
+        <td>122239</td>
+        <td>55278</td>
+        <td>46.0</td>
+        <td>784</td>
+        <td>1209</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>FIT SERVICE</td>
+        <td><a href="https://t.me/fitservice_official">https://t.me/fitservice_official</a></td>
+        <td>Транспорт</td>
+        <td>120107</td>
+        <td>26677</td>
+        <td>23.0</td>
+        <td>390</td>
+        <td>-8104</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ДТП и ЧП МОСКВА и МО</td>
+        <td><a href="https://t.me/dtp777">https://t.me/dtp777</a></td>
+        <td>Транспорт</td>
+        <td>119125</td>
+        <td>36809</td>
+        <td>31.0</td>
+        <td>452</td>
+        <td>2089</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>FOKEEV</td>
+        <td><a href="https://t.me/FOKEEV">https://t.me/FOKEEV</a></td>
+        <td>Транспорт</td>
+        <td>117473</td>
+        <td>16970</td>
+        <td>15.0</td>
+        <td>-6905</td>
+        <td>30624</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Долгов Авто - Машины из Кореи,Японии,Китая.</td>
+        <td><a href="https://t.me/dolgov_auto">https://t.me/dolgov_auto</a></td>
+        <td>Транспорт</td>
+        <td>117387</td>
+        <td>20317</td>
+        <td>18.0</td>
+        <td>1693</td>
+        <td>7987</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AliExpress для авто</td>
+        <td><a href="https://t.me/you_cargoods">https://t.me/you_cargoods</a></td>
+        <td>Транспорт</td>
+        <td>115925</td>
+        <td>16247</td>
+        <td>14.0</td>
+        <td>-470</td>
+        <td>-2073</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>KS CLUB</td>
+        <td><a href="https://t.me/ksautohouse">https://t.me/ksautohouse</a></td>
+        <td>Транспорт</td>
+        <td>115058</td>
+        <td>11276</td>
+        <td>10.0</td>
+        <td>-1263</td>
+        <td>-39598</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Авиаторщина</td>
+        <td><a href="https://t.me/aviatorshina">https://t.me/aviatorshina</a></td>
+        <td>Транспорт</td>
+        <td>114381</td>
+        <td>64779</td>
+        <td>57.0</td>
+        <td>550</td>
+        <td>1050</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>@AUTO_ZAO АВТОЗАО</td>
+        <td><a href="https://t.me/avtosebe">https://t.me/avtosebe</a></td>
+        <td>Транспорт</td>
+        <td>112776</td>
+        <td>5865</td>
+        <td>6.0</td>
+        <td>-10175</td>
+        <td>32031</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>wadim_wadimych</td>
+        <td><a href="https://t.me/joinchat/eY51i9xHzNw4NGNi">https://t.me/joinchat/eY51i9xHzNw4NGNi</a></td>
+        <td>Транспорт</td>
+        <td>112652</td>
+        <td>9333</td>
+        <td>9.0</td>
+        <td>-4863</td>
+        <td>-24575</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПЕРЕКУПЫ России / АВТОРЫНОК РФ</td>
+        <td><a href="https://t.me/joinchat/o2PCNR7n4fBkZDFi">https://t.me/joinchat/o2PCNR7n4fBkZDFi</a></td>
+        <td>Транспорт</td>
+        <td>110198</td>
+        <td>6680</td>
+        <td>7.0</td>
+        <td>-590</td>
+        <td>-1670</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тачки +</td>
+        <td><a href="https://t.me/tachkiplus">https://t.me/tachkiplus</a></td>
+        <td>Транспорт</td>
+        <td>107244</td>
+        <td>6695</td>
+        <td>7.0</td>
+        <td>-753</td>
+        <td>-4098</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Migalkinet</td>
+        <td><a href="https://t.me/migalkinety">https://t.me/migalkinety</a></td>
+        <td>Транспорт</td>
+        <td>104805</td>
+        <td>12316</td>
+        <td>12.0</td>
+        <td>-21545</td>
+        <td>31412</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ilya Strekal</td>
+        <td><a href="https://t.me/Strekalovsky">https://t.me/Strekalovsky</a></td>
+        <td>Транспорт</td>
+        <td>103686</td>
+        <td>31808</td>
+        <td>31.0</td>
+        <td>2542</td>
+        <td>13949</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Уральские авиалинии</td>
+        <td><a href="https://t.me/uralairlines">https://t.me/uralairlines</a></td>
+        <td>Транспорт</td>
+        <td>100145</td>
+        <td>41177</td>
+        <td>42.0</td>
+        <td>-22</td>
+        <td>729</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АВТО НИЖЕ РЫНКА | АВТОРЫНОК</td>
+        <td><a href="https://t.me/joinchat/8kwLaIq5CPIyZTQy">https://t.me/joinchat/8kwLaIq5CPIyZTQy</a></td>
+        <td>Транспорт</td>
+        <td>100135</td>
+        <td>14159</td>
+        <td>15.0</td>
+        <td>-2990</td>
+        <td>32328</td>
+        <td>3 месяца 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Дептранс. Оперативно</td>
+        <td><a href="https://t.me/DtOperativno">https://t.me/DtOperativno</a></td>
+        <td>Транспорт</td>
+        <td>98187</td>
+        <td>18975</td>
+        <td>20.0</td>
+        <td>273</td>
+        <td>451</td>
+        <td>9 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AUTOTRADE77</td>
+        <td><a href="https://t.me/joinchat/IgxA2hWxk29iOTJi">https://t.me/joinchat/IgxA2hWxk29iOTJi</a></td>
+        <td>Транспорт</td>
+        <td>94294</td>
+        <td>17296</td>
+        <td>19.0</td>
+        <td>-2255</td>
+        <td>-13969</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Полигон 98</td>
+        <td><a href="https://t.me/polygon_98">https://t.me/polygon_98</a></td>
+        <td>Транспорт</td>
+        <td>93906</td>
+        <td>75119</td>
+        <td>80.0</td>
+        <td>912</td>
+        <td>2121</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ситидрайв</td>
+        <td><a href="https://t.me/citydriveru">https://t.me/citydriveru</a></td>
+        <td>Транспорт</td>
+        <td>93001</td>
+        <td>44373</td>
+        <td>48.0</td>
+        <td>6646</td>
+        <td>11829</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Метро Петербурга</td>
+        <td><a href="https://t.me/spbmetro">https://t.me/spbmetro</a></td>
+        <td>Транспорт</td>
+        <td>92990</td>
+        <td>44294</td>
+        <td>48.0</td>
+        <td>42</td>
+        <td>746</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Perekuponline</td>
+        <td><a href="https://t.me/PerekupOnline">https://t.me/PerekupOnline</a></td>
+        <td>Транспорт</td>
+        <td>89959</td>
+        <td>8541</td>
+        <td>10.0</td>
+        <td>-3354</td>
+        <td>22127</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AliExpress для авто</td>
+        <td><a href="https://t.me/joinchat/8E5gKwq1O4xhMmUy">https://t.me/joinchat/8E5gKwq1O4xhMmUy</a></td>
+        <td>Транспорт</td>
+        <td>88496</td>
+        <td>15982</td>
+        <td>19.0</td>
+        <td>-559</td>
+        <td>-2638</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АвтоРынок | Покупка/продажа автомобилей</td>
+        <td><a href="https://t.me/joinchat/wx1TDAE_52Q1ZDYy">https://t.me/joinchat/wx1TDAE_52Q1ZDYy</a></td>
+        <td>Транспорт</td>
+        <td>86163</td>
+        <td>4119</td>
+        <td>5.0</td>
+        <td>-552</td>
+        <td>-2480</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CHERY Russia</td>
+        <td><a href="https://t.me/cheryru">https://t.me/cheryru</a></td>
+        <td>Транспорт</td>
+        <td>84112</td>
+        <td>23862</td>
+        <td>29.0</td>
+        <td>-18</td>
+        <td>-1471</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Осторожно, водятлы!</td>
+        <td><a href="https://t.me/joinchat/6OGG3T_-G11mNGRi">https://t.me/joinchat/6OGG3T_-G11mNGRi</a></td>
+        <td>Транспорт</td>
+        <td>83872</td>
+        <td>4334</td>
+        <td>6.0</td>
+        <td>-716</td>
+        <td>-3369</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Про | Водители</td>
+        <td><a href="https://t.me/driveryandex">https://t.me/driveryandex</a></td>
+        <td>Транспорт</td>
+        <td>83595</td>
+        <td>71334</td>
+        <td>86.0</td>
+        <td>35251</td>
+        <td>34730</td>
+        <td>8 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Whoosh: твой транспорт для города</td>
+        <td><a href="https://t.me/whooshbike">https://t.me/whooshbike</a></td>
+        <td>Транспорт</td>
+        <td>83326</td>
+        <td>45002</td>
+        <td>54.0</td>
+        <td>599</td>
+        <td>8557</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AvtoREVIZORRO</td>
+        <td><a href="https://t.me/avtorevizorro">https://t.me/avtorevizorro</a></td>
+        <td>Транспорт</td>
+        <td>82807</td>
+        <td>52157</td>
+        <td>63.0</td>
+        <td>-70</td>
+        <td>-192</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MAJORKA IMPORT</td>
+        <td><a href="https://t.me/parallel_majorka_import">https://t.me/parallel_majorka_import</a></td>
+        <td>Транспорт</td>
+        <td>82636</td>
+        <td>15047</td>
+        <td>19.0</td>
+        <td>-191</td>
+        <td>-680</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AUTO Group 🔥</td>
+        <td><a href="https://t.me/autogroup58">https://t.me/autogroup58</a></td>
+        <td>Транспорт</td>
+        <td>82356</td>
+        <td>6515</td>
+        <td>8.0</td>
+        <td>-16893</td>
+        <td>76637</td>
+        <td>3 года 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>EVGEN AVTO LIFE</td>
+        <td><a href="https://t.me/evgenavto01">https://t.me/evgenavto01</a></td>
+        <td>Транспорт</td>
+        <td>81743</td>
+        <td>16854</td>
+        <td>21.0</td>
+        <td>15803</td>
+        <td>-720</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AUTOKRUG</td>
+        <td><a href="https://t.me/autokrug77">https://t.me/autokrug77</a></td>
+        <td>Транспорт</td>
+        <td>81139</td>
+        <td>6047</td>
+        <td>8.0</td>
+        <td>-5727</td>
+        <td>13848</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Aviahub</td>
+        <td><a href="https://t.me/Aviahub34">https://t.me/Aviahub34</a></td>
+        <td>Транспорт</td>
+        <td>80526</td>
+        <td>72239</td>
+        <td>90.0</td>
+        <td>404</td>
+        <td>579</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОЛНЫЙ ГАЗ</td>
+        <td><a href="https://t.me/joinchat/UtXkidT0XgwxNGIy">https://t.me/joinchat/UtXkidT0XgwxNGIy</a></td>
+        <td>Транспорт</td>
+        <td>80418</td>
+        <td>3606</td>
+        <td>5.0</td>
+        <td>-677</td>
+        <td>-2477</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Правила жизни на дороге</td>
+        <td><a href="https://t.me/pddchannel">https://t.me/pddchannel</a></td>
+        <td>Транспорт</td>
+        <td>79498</td>
+        <td>4525</td>
+        <td>6.0</td>
+        <td>-299</td>
+        <td>-1401</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>KNN | AUTO</td>
+        <td><a href="https://t.me/knn_avto">https://t.me/knn_avto</a></td>
+        <td>Транспорт</td>
+        <td>79437</td>
+        <td>6800</td>
+        <td>9.0</td>
+        <td>-8964</td>
+        <td>48858</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

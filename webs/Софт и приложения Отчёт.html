@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>TikTokModCloud ☁️</td>
+        <td><a href="https://t.me/TikTokModCloud">https://t.me/TikTokModCloud</a></td>
+        <td>Софт и приложения</td>
+        <td>2516511</td>
+        <td>797607</td>
+        <td>32.0</td>
+        <td>-833</td>
+        <td>91324</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TikTok Updates 🔥</td>
+        <td><a href="https://t.me/tiktokupdatez">https://t.me/tiktokupdatez</a></td>
+        <td>Софт и приложения</td>
+        <td>1995508</td>
+        <td>749427</td>
+        <td>38.0</td>
+        <td>55783</td>
+        <td>254114</td>
+        <td>8 месяцев 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>📲 Easy APK</td>
+        <td><a href="https://t.me/EasyAPK">https://t.me/EasyAPK</a></td>
+        <td>Софт и приложения</td>
+        <td>1192420</td>
+        <td>141173</td>
+        <td>12.0</td>
+        <td>193</td>
+        <td>-3957</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЮБуст NEO - Ускоритель Ютуба для Chrome, Android, TV и Windows</td>
+        <td><a href="https://t.me/uboostrussia">https://t.me/uboostrussia</a></td>
+        <td>Софт и приложения</td>
+        <td>839151</td>
+        <td>404162</td>
+        <td>49.0</td>
+        <td>25809</td>
+        <td>90132</td>
+        <td>10 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>FreeDroid</td>
+        <td><a href="https://t.me/FreeDroidApp">https://t.me/FreeDroidApp</a></td>
+        <td>Софт и приложения</td>
+        <td>538548</td>
+        <td>44130</td>
+        <td>9.0</td>
+        <td>7549</td>
+        <td>25047</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мод на рабочий тик ток</td>
+        <td><a href="https://t.me/ttmodd">https://t.me/ttmodd</a></td>
+        <td>Софт и приложения</td>
+        <td>502969</td>
+        <td>253619</td>
+        <td>51.0</td>
+        <td>10102</td>
+        <td>9095</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мод на Тик Ток для Андроид</td>
+        <td><a href="https://t.me/ttmodan">https://t.me/ttmodan</a></td>
+        <td>Софт и приложения</td>
+        <td>464925</td>
+        <td>512140</td>
+        <td>111.0</td>
+        <td>-2544</td>
+        <td>5979</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>APK GEEK | Приложения</td>
+        <td><a href="https://t.me/ApkGeek">https://t.me/ApkGeek</a></td>
+        <td>Софт и приложения</td>
+        <td>377890</td>
+        <td>39015</td>
+        <td>11.0</td>
+        <td>-1052</td>
+        <td>24001</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>мод на тик ток</td>
+        <td><a href="https://t.me/belifity">https://t.me/belifity</a></td>
+        <td>Софт и приложения</td>
+        <td>371171</td>
+        <td>522906</td>
+        <td>141.0</td>
+        <td>14449</td>
+        <td>36552</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скачать ТикТок Мод на Андроид</td>
+        <td><a href="https://t.me/ttanmod">https://t.me/ttanmod</a></td>
+        <td>Софт и приложения</td>
+        <td>342397</td>
+        <td>586480</td>
+        <td>172.0</td>
+        <td>32381</td>
+        <td>83413</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тик ток мод на айфон | vvv</td>
+        <td><a href="https://t.me/vvveco">https://t.me/vvveco</a></td>
+        <td>Софт и приложения</td>
+        <td>333263</td>
+        <td>80070</td>
+        <td>24.0</td>
+        <td>-3719</td>
+        <td>-22527</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>💎 MUST HAVE</td>
+        <td><a href="https://t.me/alexey070315">https://t.me/alexey070315</a></td>
+        <td>Софт и приложения</td>
+        <td>322172</td>
+        <td>31425</td>
+        <td>10.0</td>
+        <td>-784</td>
+        <td>-2073</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Free Software</td>
+        <td><a href="https://t.me/FreeApkexe">https://t.me/FreeApkexe</a></td>
+        <td>Софт и приложения</td>
+        <td>318593</td>
+        <td>62400</td>
+        <td>20.0</td>
+        <td>1311</td>
+        <td>6833</td>
+        <td>6 лет 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>ТикТок Мод на Айфон</td>
+        <td><a href="https://t.me/scarlet_info">https://t.me/scarlet_info</a></td>
+        <td>Софт и приложения</td>
+        <td>307451</td>
+        <td>166136</td>
+        <td>54.0</td>
+        <td>-646</td>
+        <td>32901</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Взломанные Приложения</td>
+        <td><a href="https://t.me/daker7">https://t.me/daker7</a></td>
+        <td>Софт и приложения</td>
+        <td>304974</td>
+        <td>21926</td>
+        <td>8.0</td>
+        <td>-2641</td>
+        <td>-13691</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Amnezia VPN Новости</td>
+        <td><a href="https://t.me/amnezia_vpn_news_ru">https://t.me/amnezia_vpn_news_ru</a></td>
+        <td>Софт и приложения</td>
+        <td>275068</td>
+        <td>122852</td>
+        <td>45.0</td>
+        <td>8462</td>
+        <td>10340</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Batman: Arkham</td>
+        <td><a href="https://t.me/gftnhbvgd">https://t.me/gftnhbvgd</a></td>
+        <td>Софт и приложения</td>
+        <td>272268</td>
+        <td>23624</td>
+        <td>9.0</td>
+        <td>7287</td>
+        <td>29087</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Скачать Тик Ток мод на Андроид</td>
+        <td><a href="https://t.me/android_ttmod">https://t.me/android_ttmod</a></td>
+        <td>Софт и приложения</td>
+        <td>262128</td>
+        <td>446052</td>
+        <td>171.0</td>
+        <td>26932</td>
+        <td>101960</td>
+        <td>9 месяцев 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Тик Ток мод 2025 скачать</td>
+        <td><a href="https://t.me/tiktok_modss">https://t.me/tiktok_modss</a></td>
+        <td>Софт и приложения</td>
+        <td>257607</td>
+        <td>59620</td>
+        <td>24.0</td>
+        <td>18637</td>
+        <td>54503</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Goldroid</td>
+        <td><a href="https://t.me/goldroid">https://t.me/goldroid</a></td>
+        <td>Софт и приложения</td>
+        <td>249716</td>
+        <td>18148</td>
+        <td>8.0</td>
+        <td>1618</td>
+        <td>3051</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PDALIFE Official</td>
+        <td><a href="https://t.me/pdalife_official">https://t.me/pdalife_official</a></td>
+        <td>Софт и приложения</td>
+        <td>246777</td>
+        <td>19829</td>
+        <td>8.0</td>
+        <td>733</td>
+        <td>5404</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ульта - доступ к Discord и YouTube бесплатно</td>
+        <td><a href="https://t.me/ultarussia">https://t.me/ultarussia</a></td>
+        <td>Софт и приложения</td>
+        <td>246205</td>
+        <td>101384</td>
+        <td>42.0</td>
+        <td>5781</td>
+        <td>3318</td>
+        <td>8 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Strannik | ModZ 🔥</td>
+        <td><a href="https://t.me/alexstranniklite">https://t.me/alexstranniklite</a></td>
+        <td>Софт и приложения</td>
+        <td>212113</td>
+        <td>35456</td>
+        <td>17.0</td>
+        <td>-143</td>
+        <td>-623</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>One Software| Приложения</td>
+        <td><a href="https://t.me/OneSoftware">https://t.me/OneSoftware</a></td>
+        <td>Софт и приложения</td>
+        <td>202932</td>
+        <td>21071</td>
+        <td>11.0</td>
+        <td>439</td>
+        <td>48927</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Blink HQ — твои друзья на карте</td>
+        <td><a href="https://t.me/blinkmap">https://t.me/blinkmap</a></td>
+        <td>Софт и приложения</td>
+        <td>201783</td>
+        <td>33984</td>
+        <td>17.0</td>
+        <td>-2617</td>
+        <td>-5326</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вселенная приложений</td>
+        <td><a href="https://t.me/vseapps">https://t.me/vseapps</a></td>
+        <td>Софт и приложения</td>
+        <td>200038</td>
+        <td>23418</td>
+        <td>12.0</td>
+        <td>-298</td>
+        <td>-499</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Russian proxy</td>
+        <td><a href="https://t.me/joinchat/1Kdd51xVJgoxZTFh">https://t.me/joinchat/1Kdd51xVJgoxZTFh</a></td>
+        <td>Софт и приложения</td>
+        <td>184449</td>
+        <td>10753</td>
+        <td>6.0</td>
+        <td>9223</td>
+        <td>1660</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>📱Play Market +</td>
+        <td><a href="https://t.me/pm_plus">https://t.me/pm_plus</a></td>
+        <td>Софт и приложения</td>
+        <td>184180</td>
+        <td>14324</td>
+        <td>8.0</td>
+        <td>-2428</td>
+        <td>-5603</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>⚡Utgram⚡</td>
+        <td><a href="https://t.me/utgram">https://t.me/utgram</a></td>
+        <td>Софт и приложения</td>
+        <td>174051</td>
+        <td>22197</td>
+        <td>13.0</td>
+        <td>-1255</td>
+        <td>-5525</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Лучшие игры на Андроид скачать</td>
+        <td><a href="https://t.me/inAPK">https://t.me/inAPK</a></td>
+        <td>Софт и приложения</td>
+        <td>172214</td>
+        <td>26253</td>
+        <td>16.0</td>
+        <td>-786</td>
+        <td>-3323</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тик Ток мод на айфон | Scarlet | tokermod</td>
+        <td><a href="https://t.me/tokermod">https://t.me/tokermod</a></td>
+        <td>Софт и приложения</td>
+        <td>166270</td>
+        <td>31114</td>
+        <td>19.0</td>
+        <td>97</td>
+        <td>-2403</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Android Hack Apps</td>
+        <td><a href="https://t.me/andro_best">https://t.me/andro_best</a></td>
+        <td>Софт и приложения</td>
+        <td>162782</td>
+        <td>46383</td>
+        <td>29.0</td>
+        <td>249</td>
+        <td>480</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Смартотека</td>
+        <td><a href="https://t.me/smartoteka">https://t.me/smartoteka</a></td>
+        <td>Софт и приложения</td>
+        <td>155851</td>
+        <td>25848</td>
+        <td>17.0</td>
+        <td>563</td>
+        <td>1294</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>APK Доктор 🔐</td>
+        <td><a href="https://t.me/crack_cloud2">https://t.me/crack_cloud2</a></td>
+        <td>Софт и приложения</td>
+        <td>155527</td>
+        <td>19313</td>
+        <td>13.0</td>
+        <td>550</td>
+        <td>2031</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>📱APPS FULL</td>
+        <td><a href="https://t.me/Apps_Full">https://t.me/Apps_Full</a></td>
+        <td>Софт и приложения</td>
+        <td>147783</td>
+        <td>20360</td>
+        <td>14.0</td>
+        <td>-242</td>
+        <td>-747</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Power APK</td>
+        <td><a href="https://t.me/PowerAPK">https://t.me/PowerAPK</a></td>
+        <td>Софт и приложения</td>
+        <td>140177</td>
+        <td>21739</td>
+        <td>16.0</td>
+        <td>-286</td>
+        <td>-1381</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>⌨️ SoftFULL🖱|Программное обеспечение</td>
+        <td><a href="https://t.me/joinchat/AAAAAFZO4wGujY-pbcpTTg">https://t.me/joinchat/AAAAAFZO4wGujY-pbcpTTg</a></td>
+        <td>Софт и приложения</td>
+        <td>138925</td>
+        <td>9967</td>
+        <td>8.0</td>
+        <td>-280</td>
+        <td>278</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Anixart – Официальный канал</td>
+        <td><a href="https://t.me/anixart">https://t.me/anixart</a></td>
+        <td>Софт и приложения</td>
+        <td>136114</td>
+        <td>93405</td>
+        <td>69.0</td>
+        <td>18025</td>
+        <td>19805</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Portablik</td>
+        <td><a href="https://t.me/portablik">https://t.me/portablik</a></td>
+        <td>Софт и приложения</td>
+        <td>125996</td>
+        <td>24581</td>
+        <td>20.0</td>
+        <td>34</td>
+        <td>-542</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ipa Files Scarlet</td>
+        <td><a href="https://t.me/ipafilescr">https://t.me/ipafilescr</a></td>
+        <td>Софт и приложения</td>
+        <td>125694</td>
+        <td>18764</td>
+        <td>15.0</td>
+        <td>-155</td>
+        <td>1836</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дед VPN</td>
+        <td><a href="https://t.me/ded_vpn">https://t.me/ded_vpn</a></td>
+        <td>Софт и приложения</td>
+        <td>113143</td>
+        <td>78732</td>
+        <td>70.0</td>
+        <td>1124</td>
+        <td>724</td>
+        <td>10 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тик Ток мод 40.4.5</td>
+        <td><a href="https://t.me/mods_na_tik_tok">https://t.me/mods_na_tik_tok</a></td>
+        <td>Софт и приложения</td>
+        <td>111732</td>
+        <td>24178</td>
+        <td>22.0</td>
+        <td>6992</td>
+        <td>13747</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PREMIUM APK | Бесплатные приложения</td>
+        <td><a href="https://t.me/premium_apk3">https://t.me/premium_apk3</a></td>
+        <td>Софт и приложения</td>
+        <td>107697</td>
+        <td>4047</td>
+        <td>4.0</td>
+        <td>-1263</td>
+        <td>-6271</td>
+        <td>3 года 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>👑 SHARA APK</td>
+        <td><a href="https://t.me/SharaAPK">https://t.me/SharaAPK</a></td>
+        <td>Софт и приложения</td>
+        <td>101207</td>
+        <td>13029</td>
+        <td>13.0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>The App Box</td>
+        <td><a href="https://t.me/theappbox">https://t.me/theappbox</a></td>
+        <td>Софт и приложения</td>
+        <td>96893</td>
+        <td>13136</td>
+        <td>14.0</td>
+        <td>75</td>
+        <td>-1128</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AppStore FREE | Бесплатный Общий Аккаунт AppStore</td>
+        <td><a href="https://t.me/AppStops">https://t.me/AppStops</a></td>
+        <td>Софт и приложения</td>
+        <td>94778</td>
+        <td>70991</td>
+        <td>75.0</td>
+        <td>534</td>
+        <td>8552</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>LOOKY</td>
+        <td><a href="https://t.me/lookyapp">https://t.me/lookyapp</a></td>
+        <td>Софт и приложения</td>
+        <td>92785</td>
+        <td>7964</td>
+        <td>9.0</td>
+        <td>3873</td>
+        <td>-3945</td>
+        <td>3 года 1 день</td>
+      </tr>
+
+      <tr>
+        <td>Strong APK📲 - Игры и Приложения</td>
+        <td><a href="https://t.me/joinchat/dPf5OFaxsNs3ZmYy">https://t.me/joinchat/dPf5OFaxsNs3ZmYy</a></td>
+        <td>Софт и приложения</td>
+        <td>92533</td>
+        <td>1033</td>
+        <td>2.0</td>
+        <td>-1094</td>
+        <td>-5413</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Приложения на андроид | Игры</td>
+        <td><a href="https://t.me/modsdroid">https://t.me/modsdroid</a></td>
+        <td>Софт и приложения</td>
+        <td>92531</td>
+        <td>18618</td>
+        <td>21.0</td>
+        <td>776</td>
+        <td>1021</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VPN Россия🇷🇺Turbo Безопасный прокси</td>
+        <td><a href="https://t.me/TurboProxyVpn">https://t.me/TurboProxyVpn</a></td>
+        <td>Софт и приложения</td>
+        <td>92177</td>
+        <td>60017</td>
+        <td>66.0</td>
+        <td>444</td>
+        <td>-1369</td>
+        <td>1 год 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тик Ток мод на айфон</td>
+        <td><a href="https://t.me/modtiktokios">https://t.me/modtiktokios</a></td>
+        <td>Софт и приложения</td>
+        <td>91563</td>
+        <td>24593</td>
+        <td>27.0</td>
+        <td>-782</td>
+        <td>-5296</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Flux.1, Midjourney, Chat GPT, Stable Diffusion - Новости YES Ai</td>
+        <td><a href="https://t.me/yes_ai_official">https://t.me/yes_ai_official</a></td>
+        <td>Софт и приложения</td>
+        <td>90694</td>
+        <td>20956</td>
+        <td>24.0</td>
+        <td>1788</td>
+        <td>9142</td>
+        <td>2 года 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Владюша storage</td>
+        <td><a href="https://t.me/vladyusha_storage">https://t.me/vladyusha_storage</a></td>
+        <td>Софт и приложения</td>
+        <td>89041</td>
+        <td>74294</td>
+        <td>84.0</td>
+        <td>-39</td>
+        <td>-1529</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ipa hack iPhone | iOS</td>
+        <td><a href="https://t.me/mihalsanch">https://t.me/mihalsanch</a></td>
+        <td>Софт и приложения</td>
+        <td>88724</td>
+        <td>11948</td>
+        <td>14.0</td>
+        <td>1010</td>
+        <td>3197</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>📱 Reka APK | Приложения Андроид</td>
+        <td><a href="https://t.me/Reka_APK">https://t.me/Reka_APK</a></td>
+        <td>Софт и приложения</td>
+        <td>88400</td>
+        <td>22268</td>
+        <td>26.0</td>
+        <td>284</td>
+        <td>1101</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CRACK-PORTAL.RU | ИГРЫ И ПРОГРАММЫ НА ANDROID</td>
+        <td><a href="https://t.me/emili_apk">https://t.me/emili_apk</a></td>
+        <td>Софт и приложения</td>
+        <td>87380</td>
+        <td>5310</td>
+        <td>7.0</td>
+        <td>2391</td>
+        <td>3854</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Новый Тик Ток мод на андроид</td>
+        <td><a href="https://t.me/TT_Pobedaa">https://t.me/TT_Pobedaa</a></td>
+        <td>Софт и приложения</td>
+        <td>87344</td>
+        <td>25223</td>
+        <td>29.0</td>
+        <td>209</td>
+        <td>-3424</td>
+        <td>11 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>21Modz</td>
+        <td><a href="https://t.me/modzzz21">https://t.me/modzzz21</a></td>
+        <td>Софт и приложения</td>
+        <td>86274</td>
+        <td>28381</td>
+        <td>33.0</td>
+        <td>981</td>
+        <td>4143</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Артем Граф | игрушки</td>
+        <td><a href="https://t.me/TenApkGame">https://t.me/TenApkGame</a></td>
+        <td>Софт и приложения</td>
+        <td>85298</td>
+        <td>5826</td>
+        <td>7.0</td>
+        <td>-2156</td>
+        <td>-14168</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Premium APK</td>
+        <td><a href="https://t.me/Premium_droid">https://t.me/Premium_droid</a></td>
+        <td>Софт и приложения</td>
+        <td>85109</td>
+        <td>6458</td>
+        <td>8.0</td>
+        <td>-69</td>
+        <td>247</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Карты</td>
+        <td><a href="https://t.me/mapsyandex">https://t.me/mapsyandex</a></td>
+        <td>Софт и приложения</td>
+        <td>84269</td>
+        <td>25511</td>
+        <td>31.0</td>
+        <td>1309</td>
+        <td>41540</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PRO100 APK</td>
+        <td><a href="https://t.me/proctoapk">https://t.me/proctoapk</a></td>
+        <td>Софт и приложения</td>
+        <td>78019</td>
+        <td>4037</td>
+        <td>6.0</td>
+        <td>-483</td>
+        <td>-2353</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вселенная Андроид</td>
+        <td><a href="https://t.me/vsemods">https://t.me/vsemods</a></td>
+        <td>Софт и приложения</td>
+        <td>73837</td>
+        <td>7968</td>
+        <td>11.0</td>
+        <td>-240</td>
+        <td>-525</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Capcut Pro./Alight Motion Pro</td>
+        <td><a href="https://t.me/ccprosave">https://t.me/ccprosave</a></td>
+        <td>Софт и приложения</td>
+        <td>71318</td>
+        <td>3193</td>
+        <td>5.0</td>
+        <td>-502</td>
+        <td>-2219</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Android Приложения Apps</td>
+        <td><a href="https://t.me/androidac">https://t.me/androidac</a></td>
+        <td>Софт и приложения</td>
+        <td>71006</td>
+        <td>8083</td>
+        <td>12.0</td>
+        <td>33</td>
+        <td>264</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скачать тик ток мод | Redbic</td>
+        <td><a href="https://t.me/redbictt1">https://t.me/redbictt1</a></td>
+        <td>Софт и приложения</td>
+        <td>68980</td>
+        <td>54291</td>
+        <td>79.0</td>
+        <td>176</td>
+        <td>625</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AndroHappy</td>
+        <td><a href="https://t.me/androhappy">https://t.me/androhappy</a></td>
+        <td>Софт и приложения</td>
+        <td>68425</td>
+        <td>29814</td>
+        <td>44.0</td>
+        <td>236</td>
+        <td>572</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>iApps  | IPA Library</td>
+        <td><a href="https://t.me/joinchat/cjOB74mx-3lhNjgy">https://t.me/joinchat/cjOB74mx-3lhNjgy</a></td>
+        <td>Софт и приложения</td>
+        <td>67265</td>
+        <td>9338</td>
+        <td>14.0</td>
+        <td>-67</td>
+        <td>-286</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>izi.apk – бесплатные игры и приложения</td>
+        <td><a href="https://t.me/iziapply">https://t.me/iziapply</a></td>
+        <td>Софт и приложения</td>
+        <td>66701</td>
+        <td>2894</td>
+        <td>5.0</td>
+        <td>-1162</td>
+        <td>-2828</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>GrimClay</td>
+        <td><a href="https://t.me/GrimClay">https://t.me/GrimClay</a></td>
+        <td>Софт и приложения</td>
+        <td>63016</td>
+        <td>3228</td>
+        <td>6.0</td>
+        <td>-1161</td>
+        <td>-5246</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ЗДЕСЬ И СЕЙЧАС IPA | TikTok</td>
+        <td><a href="https://t.me/ZiSipa">https://t.me/ZiSipa</a></td>
+        <td>Софт и приложения</td>
+        <td>61120</td>
+        <td>14605</td>
+        <td>24.0</td>
+        <td>-155</td>
+        <td>-639</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скачать анонимно истории из Инстаграм</td>
+        <td><a href="https://t.me/InstaAnonymNews">https://t.me/InstaAnonymNews</a></td>
+        <td>Софт и приложения</td>
+        <td>57747</td>
+        <td>30246</td>
+        <td>53.0</td>
+        <td>688</td>
+        <td>1722</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Android TV для "чайников"</td>
+        <td><a href="https://t.me/DrAdler_ATV">https://t.me/DrAdler_ATV</a></td>
+        <td>Софт и приложения</td>
+        <td>57487</td>
+        <td>26477</td>
+        <td>47.0</td>
+        <td>36</td>
+        <td>-163</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TV HUB</td>
+        <td><a href="https://t.me/joinchat/J3sDCKQ8ZDtiZTBi">https://t.me/joinchat/J3sDCKQ8ZDtiZTBi</a></td>
+        <td>Софт и приложения</td>
+        <td>56543</td>
+        <td>18654</td>
+        <td>33.0</td>
+        <td>976</td>
+        <td>3979</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мод Тик Ток 40.4.5 Рабочий TikTok/Перезаливы модов</td>
+        <td><a href="https://t.me/mod_tt123">https://t.me/mod_tt123</a></td>
+        <td>Софт и приложения</td>
+        <td>55749</td>
+        <td>30047</td>
+        <td>54.0</td>
+        <td>3069</td>
+        <td>2323</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Взломанные программы для Smart TV и Android телефона</td>
+        <td><a href="https://t.me/androcoft">https://t.me/androcoft</a></td>
+        <td>Софт и приложения</td>
+        <td>55293</td>
+        <td>8761</td>
+        <td>16.0</td>
+        <td>395</td>
+        <td>1866</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Scarlet Store | ТикТок мод</td>
+        <td><a href="https://t.me/storescr">https://t.me/storescr</a></td>
+        <td>Софт и приложения</td>
+        <td>54069</td>
+        <td>11565</td>
+        <td>22.0</td>
+        <td>-542</td>
+        <td>-3267</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Redbic | Модификации | Тик ток</td>
+        <td><a href="https://t.me/redbictt">https://t.me/redbictt</a></td>
+        <td>Софт и приложения</td>
+        <td>53580</td>
+        <td>10676</td>
+        <td>20.0</td>
+        <td>-464</td>
+        <td>-2701</td>
+        <td>2 года 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>NyX</td>
+        <td><a href="https://t.me/nyxso2">https://t.me/nyxso2</a></td>
+        <td>Софт и приложения</td>
+        <td>52815</td>
+        <td>11594</td>
+        <td>22.0</td>
+        <td>1460</td>
+        <td>5391</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>NerestPC</td>
+        <td><a href="https://t.me/nerestpc">https://t.me/nerestpc</a></td>
+        <td>Софт и приложения</td>
+        <td>52296</td>
+        <td>27723</td>
+        <td>53.0</td>
+        <td>27</td>
+        <td>-1524</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>apk hack android</td>
+        <td><a href="https://t.me/modtit">https://t.me/modtit</a></td>
+        <td>Софт и приложения</td>
+        <td>51584</td>
+        <td>12131</td>
+        <td>24.0</td>
+        <td>1111</td>
+        <td>3527</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SHIVA VPN</td>
+        <td><a href="https://t.me/shivavpn_rus">https://t.me/shivavpn_rus</a></td>
+        <td>Софт и приложения</td>
+        <td>50995</td>
+        <td>4358</td>
+        <td>9.0</td>
+        <td>-4592</td>
+        <td>-109947</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>LazyMediaDeluxe</td>
+        <td><a href="https://t.me/lazymediadeluxe">https://t.me/lazymediadeluxe</a></td>
+        <td>Софт и приложения</td>
+        <td>49050</td>
+        <td>33143</td>
+        <td>68.0</td>
+        <td>90</td>
+        <td>631</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скачать Тик Ток мод на айфон</td>
+        <td><a href="https://t.me/qwertiktok">https://t.me/qwertiktok</a></td>
+        <td>Софт и приложения</td>
+        <td>48816</td>
+        <td>31454</td>
+        <td>65.0</td>
+        <td>804</td>
+        <td>394</td>
+        <td>2 года 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>GlowApkApps | Лучшие приложения для Андройд</td>
+        <td><a href="https://t.me/glowapkapps">https://t.me/glowapkapps</a></td>
+        <td>Софт и приложения</td>
+        <td>48814</td>
+        <td>3622</td>
+        <td>8.0</td>
+        <td>-281</td>
+        <td>-2538</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Смотри, что я нашел</td>
+        <td><a href="https://t.me/mmmorozov">https://t.me/mmmorozov</a></td>
+        <td>Софт и приложения</td>
+        <td>48660</td>
+        <td>14489</td>
+        <td>30.0</td>
+        <td>48</td>
+        <td>2630</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ислам </td>
+        <td><a href="https://t.me/islamusamanov">https://t.me/islamusamanov</a></td>
+        <td>Софт и приложения</td>
+        <td>48492</td>
+        <td>19698</td>
+        <td>41.0</td>
+        <td>1830</td>
+        <td>1799</td>
+        <td>4 года 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Kino App</td>
+        <td><a href="https://t.me/joinchat/TnzbUQOT84Q4MzIy">https://t.me/joinchat/TnzbUQOT84Q4MzIy</a></td>
+        <td>Софт и приложения</td>
+        <td>48492</td>
+        <td>14111</td>
+        <td>30.0</td>
+        <td>-94</td>
+        <td>4423</td>
+        <td>3 года 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>HackPRO APK</td>
+        <td><a href="https://t.me/hackproapk">https://t.me/hackproapk</a></td>
+        <td>Софт и приложения</td>
+        <td>48279</td>
+        <td>2531</td>
+        <td>6.0</td>
+        <td>-253</td>
+        <td>-1124</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Glory IOS</td>
+        <td><a href="https://t.me/joinchat/Ap6sIptptsdiNzk6">https://t.me/joinchat/Ap6sIptptsdiNzk6</a></td>
+        <td>Софт и приложения</td>
+        <td>47517</td>
+        <td>11011</td>
+        <td>24.0</td>
+        <td>376</td>
+        <td>2412</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>hitvpn video</td>
+        <td><a href="https://t.me/hitvpnvideo">https://t.me/hitvpnvideo</a></td>
+        <td>Софт и приложения</td>
+        <td>46784</td>
+        <td>61090</td>
+        <td>131.0</td>
+        <td>2381</td>
+        <td>3993</td>
+        <td>8 месяцев 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>MONKRUS | ADOBE MASTER COLLECTION 2025 | OFFICE | AUDITION | PHOTOSHOP | AFTER EFFECTS | PREMIERE PRO | AUTODESK | WINDOWS 11</td>
+        <td><a href="https://t.me/m0nkrus">https://t.me/m0nkrus</a></td>
+        <td>Софт и приложения</td>
+        <td>46340</td>
+        <td>19990</td>
+        <td>44.0</td>
+        <td>540</td>
+        <td>2654</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТикТок Мод На Айфон</td>
+        <td><a href="https://t.me/joinchat/Sa-PechnGj4wYTEy">https://t.me/joinchat/Sa-PechnGj4wYTEy</a></td>
+        <td>Софт и приложения</td>
+        <td>45599</td>
+        <td>4424</td>
+        <td>10.0</td>
+        <td>-662</td>
+        <td>-2814</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>тик ток мод на айфон || боже храни тик ток</td>
+        <td><a href="https://t.me/tiktokmodiph">https://t.me/tiktokmodiph</a></td>
+        <td>Софт и приложения</td>
+        <td>45521</td>
+        <td>2883</td>
+        <td>7.0</td>
+        <td>-462</td>
+        <td>-2187</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Proxy Soxy [Канал]</td>
+        <td><a href="https://t.me/proxysoxy">https://t.me/proxysoxy</a></td>
+        <td>Софт и приложения</td>
+        <td>45391</td>
+        <td>15386</td>
+        <td>34.0</td>
+        <td>790</td>
+        <td>2216</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мод ТикТок - TikTok // OKB News</td>
+        <td><a href="https://t.me/rektoks">https://t.me/rektoks</a></td>
+        <td>Софт и приложения</td>
+        <td>45254</td>
+        <td>70038</td>
+        <td>155.0</td>
+        <td>2277</td>
+        <td>3865</td>
+        <td>3 года 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>MODS FOR ANDROID</td>
+        <td><a href="https://t.me/UnlimAPK">https://t.me/UnlimAPK</a></td>
+        <td>Софт и приложения</td>
+        <td>45193</td>
+        <td>5272</td>
+        <td>12.0</td>
+        <td>-126</td>
+        <td>-503</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AndroHot</td>
+        <td><a href="https://t.me/joinchat/Glh-L_PgcqY1MzFi">https://t.me/joinchat/Glh-L_PgcqY1MzFi</a></td>
+        <td>Софт и приложения</td>
+        <td>44933</td>
+        <td>2342</td>
+        <td>6.0</td>
+        <td>-381</td>
+        <td>-1952</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тик Ток мод на айфон | Scarlet | tokermod</td>
+        <td><a href="https://t.me/tokermood">https://t.me/tokermood</a></td>
+        <td>Софт и приложения</td>
+        <td>44907</td>
+        <td>5296</td>
+        <td>12.0</td>
+        <td>-364</td>
+        <td>-1848</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТикТок мод на айфон</td>
+        <td><a href="https://t.me/ttipasc">https://t.me/ttipasc</a></td>
+        <td>Софт и приложения</td>
+        <td>44038</td>
+        <td>7546</td>
+        <td>18.0</td>
+        <td>-433</td>
+        <td>-2122</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

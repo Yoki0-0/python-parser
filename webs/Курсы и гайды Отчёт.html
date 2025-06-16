@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Бесплатное образование</td>
+        <td><a href="https://t.me/free_edu">https://t.me/free_edu</a></td>
+        <td>Курсы и гайды</td>
+        <td>342947</td>
+        <td>13410</td>
+        <td>4.0</td>
+        <td>-657</td>
+        <td>-2888</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мое Образование</td>
+        <td><a href="https://t.me/moe_obrazovanie">https://t.me/moe_obrazovanie</a></td>
+        <td>Курсы и гайды</td>
+        <td>288451</td>
+        <td>10286</td>
+        <td>4.0</td>
+        <td>-1175</td>
+        <td>-5438</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Softic</td>
+        <td><a href="https://t.me/joinchat/p0DS7Q_P8nBiNDhi">https://t.me/joinchat/p0DS7Q_P8nBiNDhi</a></td>
+        <td>Курсы и гайды</td>
+        <td>233804</td>
+        <td>74028</td>
+        <td>32.0</td>
+        <td>808</td>
+        <td>3337</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SHAREWOOD Зеркало - Платное теперь бесплатно!</td>
+        <td><a href="https://t.me/sharewood">https://t.me/sharewood</a></td>
+        <td>Курсы и гайды</td>
+        <td>206440</td>
+        <td>79696</td>
+        <td>39.0</td>
+        <td>-504</td>
+        <td>-3284</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SHAREWOOD</td>
+        <td><a href="https://t.me/sharewood_ws">https://t.me/sharewood_ws</a></td>
+        <td>Курсы и гайды</td>
+        <td>154116</td>
+        <td>7739</td>
+        <td>5.0</td>
+        <td>-111</td>
+        <td>-520</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лекториум</td>
+        <td><a href="https://t.me/lektorium20">https://t.me/lektorium20</a></td>
+        <td>Курсы и гайды</td>
+        <td>130675</td>
+        <td>6330</td>
+        <td>5.0</td>
+        <td>-309</td>
+        <td>-1284</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Soft Skill | Навыки</td>
+        <td><a href="https://t.me/iAmbitious">https://t.me/iAmbitious</a></td>
+        <td>Курсы и гайды</td>
+        <td>122691</td>
+        <td>11548</td>
+        <td>10.0</td>
+        <td>625</td>
+        <td>1236</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Эрудиция | Digital и бизнес образование</td>
+        <td><a href="https://t.me/eruditurl24">https://t.me/eruditurl24</a></td>
+        <td>Курсы и гайды</td>
+        <td>115037</td>
+        <td>1546</td>
+        <td>2.0</td>
+        <td>-347</td>
+        <td>-1532</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Лекторий</td>
+        <td><a href="https://t.me/lektoritv">https://t.me/lektoritv</a></td>
+        <td>Курсы и гайды</td>
+        <td>112524</td>
+        <td>4517</td>
+        <td>4.0</td>
+        <td>-380</td>
+        <td>-1822</td>
+        <td>5 лет 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>PROFI | Курсы гайды</td>
+        <td><a href="https://t.me/profi_kursi_gaidi">https://t.me/profi_kursi_gaidi</a></td>
+        <td>Курсы и гайды</td>
+        <td>106727</td>
+        <td>8536</td>
+        <td>8.0</td>
+        <td>-195</td>
+        <td>841</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Скиллгет | Онлайн образование</td>
+        <td><a href="https://t.me/skillget">https://t.me/skillget</a></td>
+        <td>Курсы и гайды</td>
+        <td>93460</td>
+        <td>6628</td>
+        <td>8.0</td>
+        <td>-144</td>
+        <td>-580</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ГАЙДЫ free ЧЕК-ЛИСТЫ</td>
+        <td><a href="https://t.me/sliv_freedom">https://t.me/sliv_freedom</a></td>
+        <td>Курсы и гайды</td>
+        <td>84766</td>
+        <td>3260</td>
+        <td>4.0</td>
+        <td>-200</td>
+        <td>-825</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сливы курсов</td>
+        <td><a href="https://t.me/sliwbl">https://t.me/sliwbl</a></td>
+        <td>Курсы и гайды</td>
+        <td>80691</td>
+        <td>18786</td>
+        <td>24.0</td>
+        <td>237</td>
+        <td>677</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сундук Робина</td>
+        <td><a href="https://t.me/sharewood_biz">https://t.me/sharewood_biz</a></td>
+        <td>Курсы и гайды</td>
+        <td>59009</td>
+        <td>2121</td>
+        <td>4.0</td>
+        <td>-53</td>
+        <td>-278</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Core | Культура обучение</td>
+        <td><a href="https://t.me/Kultura_obuchenie">https://t.me/Kultura_obuchenie</a></td>
+        <td>Курсы и гайды</td>
+        <td>56985</td>
+        <td>4598</td>
+        <td>9.0</td>
+        <td>-158</td>
+        <td>-763</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Архиватор | IT</td>
+        <td><a href="https://t.me/archivator_it">https://t.me/archivator_it</a></td>
+        <td>Курсы и гайды</td>
+        <td>55702</td>
+        <td>2812</td>
+        <td>5.0</td>
+        <td>-106</td>
+        <td>-545</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝕊𝕃𝕀𝕍 𝕆𝕋 𝔹𝕃𝕆𝔾𝔼ℝ𝕆𝕍 | Курсы, чек-листы, марафоны</td>
+        <td><a href="https://t.me/joinchat/LH6v1PpFGYs0YmNi">https://t.me/joinchat/LH6v1PpFGYs0YmNi</a></td>
+        <td>Курсы и гайды</td>
+        <td>55674</td>
+        <td>9260</td>
+        <td>17.0</td>
+        <td>13</td>
+        <td>-19</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чек-листы марафоны</td>
+        <td><a href="https://t.me/motionchek">https://t.me/motionchek</a></td>
+        <td>Курсы и гайды</td>
+        <td>50051</td>
+        <td>9389</td>
+        <td>19.0</td>
+        <td>-139</td>
+        <td>-610</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатные курсы каждый день на PuzzleBrain</td>
+        <td><a href="https://t.me/puzzlebrainru">https://t.me/puzzlebrainru</a></td>
+        <td>Курсы и гайды</td>
+        <td>47272</td>
+        <td>2644</td>
+        <td>6.0</td>
+        <td>-329</td>
+        <td>-1743</td>
+        <td>6 лет 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>CGSpeak</td>
+        <td><a href="https://t.me/cgspeaks">https://t.me/cgspeaks</a></td>
+        <td>Курсы и гайды</td>
+        <td>45602</td>
+        <td>8017</td>
+        <td>18.0</td>
+        <td>58</td>
+        <td>341</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сливакер | IT</td>
+        <td><a href="https://t.me/slivaker_it">https://t.me/slivaker_it</a></td>
+        <td>Курсы и гайды</td>
+        <td>43806</td>
+        <td>3903</td>
+        <td>9.0</td>
+        <td>-20</td>
+        <td>-225</td>
+        <td>4 года 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>ТОП КУРСЫ</td>
+        <td><a href="https://t.me/joinchat/0gSiVqnRBks2YTYy">https://t.me/joinchat/0gSiVqnRBks2YTYy</a></td>
+        <td>Курсы и гайды</td>
+        <td>34394</td>
+        <td>4053</td>
+        <td>12.0</td>
+        <td>-59</td>
+        <td>-305</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Архив курсов | SLIV OT BLOGEROV</td>
+        <td><a href="https://t.me/course_archive">https://t.me/course_archive</a></td>
+        <td>Курсы и гайды</td>
+        <td>32683</td>
+        <td>4457</td>
+        <td>14.0</td>
+        <td>-19</td>
+        <td>-248</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Проходим курсы, читаем книги, тренинги и спорт</td>
+        <td><a href="https://t.me/books_and_trainings">https://t.me/books_and_trainings</a></td>
+        <td>Курсы и гайды</td>
+        <td>30731</td>
+        <td>2898</td>
+        <td>10.0</td>
+        <td>72</td>
+        <td>371</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>INSTA | Гайды | Курсы</td>
+        <td><a href="https://t.me/joinchat/TYHAQVJrBa0zMTIy">https://t.me/joinchat/TYHAQVJrBa0zMTIy</a></td>
+        <td>Курсы и гайды</td>
+        <td>29505</td>
+        <td>3194</td>
+        <td>11.0</td>
+        <td>-48</td>
+        <td>-181</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>FOR GIRLS | Чек-листы, курсы</td>
+        <td><a href="https://t.me/joinchat/qt9O4hpPEj84NmE6">https://t.me/joinchat/qt9O4hpPEj84NmE6</a></td>
+        <td>Курсы и гайды</td>
+        <td>29353</td>
+        <td>4191</td>
+        <td>15.0</td>
+        <td>-26</td>
+        <td>-172</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Страдариум</td>
+        <td><a href="https://t.me/stradarium1">https://t.me/stradarium1</a></td>
+        <td>Курсы и гайды</td>
+        <td>26680</td>
+        <td>12172</td>
+        <td>46.0</td>
+        <td>-40</td>
+        <td>-55</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чек-листы</td>
+        <td><a href="https://t.me/cheklistbllogger">https://t.me/cheklistbllogger</a></td>
+        <td>Курсы и гайды</td>
+        <td>24289</td>
+        <td>1483</td>
+        <td>7.0</td>
+        <td>-83</td>
+        <td>-560</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нетология</td>
+        <td><a href="https://t.me/netology_ru">https://t.me/netology_ru</a></td>
+        <td>Курсы и гайды</td>
+        <td>23765</td>
+        <td>1916</td>
+        <td>9.0</td>
+        <td>145</td>
+        <td>34</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Blogger ИнфоПродукт</td>
+        <td><a href="https://t.me/joinchat/AAAAAFMmHrnPInSGjVjL2Q">https://t.me/joinchat/AAAAAFMmHrnPInSGjVjL2Q</a></td>
+        <td>Курсы и гайды</td>
+        <td>22646</td>
+        <td>2342</td>
+        <td>11.0</td>
+        <td>-25</td>
+        <td>-581</td>
+        <td>6 лет 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>KyrsoSliv | Курсы , гайды , складчины</td>
+        <td><a href="https://t.me/joinchat/WmAYkJJx-BcyNmQ6">https://t.me/joinchat/WmAYkJJx-BcyNmQ6</a></td>
+        <td>Курсы и гайды</td>
+        <td>21987</td>
+        <td>3469</td>
+        <td>16.0</td>
+        <td>-21</td>
+        <td>-97</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Курсы от Робина!</td>
+        <td><a href="https://t.me/sharewood_bz">https://t.me/sharewood_bz</a></td>
+        <td>Курсы и гайды</td>
+        <td>21305</td>
+        <td>895</td>
+        <td>5.0</td>
+        <td>25</td>
+        <td>42</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Stepik – онлайн-курсы</td>
+        <td><a href="https://t.me/stepik_courses">https://t.me/stepik_courses</a></td>
+        <td>Курсы и гайды</td>
+        <td>21296</td>
+        <td>6182</td>
+        <td>29.0</td>
+        <td>41</td>
+        <td>62</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МИФ.Курсы</td>
+        <td><a href="https://t.me/MIFcourses">https://t.me/MIFcourses</a></td>
+        <td>Курсы и гайды</td>
+        <td>20356</td>
+        <td>2345</td>
+        <td>12.0</td>
+        <td>123</td>
+        <td>570</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Резерв @sliv_ot_blogerov_3</td>
+        <td><a href="https://t.me/sliv_ot_blogerov_2_rezerv">https://t.me/sliv_ot_blogerov_2_rezerv</a></td>
+        <td>Курсы и гайды</td>
+        <td>20203</td>
+        <td>4196</td>
+        <td>21.0</td>
+        <td>36</td>
+        <td>6</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SMM | Курсы</td>
+        <td><a href="https://t.me/slivkb">https://t.me/slivkb</a></td>
+        <td>Курсы и гайды</td>
+        <td>19352</td>
+        <td>747</td>
+        <td>4.0</td>
+        <td>-22</td>
+        <td>-161</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Университет 2.0 | Курсы Вебинары</td>
+        <td><a href="https://t.me/universitet20">https://t.me/universitet20</a></td>
+        <td>Курсы и гайды</td>
+        <td>19175</td>
+        <td>656</td>
+        <td>4.0</td>
+        <td>-35</td>
+        <td>-143</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сливы курсов и чек-листов</td>
+        <td><a href="https://t.me/joinchat/AAAAAFfTurcX7axLxI4sIg">https://t.me/joinchat/AAAAAFfTurcX7axLxI4sIg</a></td>
+        <td>Курсы и гайды</td>
+        <td>19078</td>
+        <td>2226</td>
+        <td>12.0</td>
+        <td>-1</td>
+        <td>-45</td>
+        <td>5 лет 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Course 3D</td>
+        <td><a href="https://t.me/Source3D">https://t.me/Source3D</a></td>
+        <td>Курсы и гайды</td>
+        <td>18503</td>
+        <td>5388</td>
+        <td>30.0</td>
+        <td>192</td>
+        <td>812</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Nika.evaa | польза в inst ✨</td>
+        <td><a href="https://t.me/nikaevareels">https://t.me/nikaevareels</a></td>
+        <td>Курсы и гайды</td>
+        <td>18351</td>
+        <td>6204</td>
+        <td>34.0</td>
+        <td>267</td>
+        <td>806</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Курсы</td>
+        <td><a href="https://t.me/skladchina_kyrsi">https://t.me/skladchina_kyrsi</a></td>
+        <td>Курсы и гайды</td>
+        <td>18086</td>
+        <td>2334</td>
+        <td>13.0</td>
+        <td>-8</td>
+        <td>-158</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПРЕДЗАПИСЬ AB.BRAND</td>
+        <td><a href="https://t.me/joinchat/Y0-btx_1ectjNjEy">https://t.me/joinchat/Y0-btx_1ectjNjEy</a></td>
+        <td>Курсы и гайды</td>
+        <td>16368</td>
+        <td>1286</td>
+        <td>8.0</td>
+        <td>-62</td>
+        <td>-522</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Эксклюзивные курсы❤️</td>
+        <td><a href="https://t.me/joinchat/wI4yELxHL2gwY2Q0">https://t.me/joinchat/wI4yELxHL2gwY2Q0</a></td>
+        <td>Курсы и гайды</td>
+        <td>16056</td>
+        <td>2037</td>
+        <td>13.0</td>
+        <td>-49</td>
+        <td>-325</td>
+        <td>9 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>47.rar | Айтишка</td>
+        <td><a href="https://t.me/joinchat/xOFGQtT9zABiZWE6">https://t.me/joinchat/xOFGQtT9zABiZWE6</a></td>
+        <td>Курсы и гайды</td>
+        <td>15819</td>
+        <td>2110</td>
+        <td>14.0</td>
+        <td>8</td>
+        <td>32</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Курсы блогеров | FOR GIRLS</td>
+        <td><a href="https://t.me/kurs_archive">https://t.me/kurs_archive</a></td>
+        <td>Курсы и гайды</td>
+        <td>15736</td>
+        <td>2567</td>
+        <td>17.0</td>
+        <td>-8</td>
+        <td>-76</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Data science Архив бесплатных курсов</td>
+        <td><a href="https://t.me/joinchat/VtuFmSANJCgzMGY6">https://t.me/joinchat/VtuFmSANJCgzMGY6</a></td>
+        <td>Курсы и гайды</td>
+        <td>15694</td>
+        <td>3843</td>
+        <td>25.0</td>
+        <td>98</td>
+        <td>-34</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>САМОРАЗВИТИЕ | КУРСЫ</td>
+        <td><a href="https://t.me/joinchat/AAAAAEzVW2oczhthu6Yebw">https://t.me/joinchat/AAAAAEzVW2oczhthu6Yebw</a></td>
+        <td>Курсы и гайды</td>
+        <td>15395</td>
+        <td>565</td>
+        <td>4.0</td>
+        <td>-39</td>
+        <td>-172</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Архив курсов 🔞 | SLIV OT BLOGEROV</td>
+        <td><a href="https://t.me/archive_course">https://t.me/archive_course</a></td>
+        <td>Курсы и гайды</td>
+        <td>15020</td>
+        <td>1132</td>
+        <td>8.0</td>
+        <td>0</td>
+        <td>-47</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Онлайн курсы</td>
+        <td><a href="https://t.me/fr_edu">https://t.me/fr_edu</a></td>
+        <td>Курсы и гайды</td>
+        <td>14969</td>
+        <td>481</td>
+        <td>4.0</td>
+        <td>-70</td>
+        <td>-293</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Худей правильно | Марафоны, гайды</td>
+        <td><a href="https://t.me/joinchat/Rl-F5JLgTWc3MDIy">https://t.me/joinchat/Rl-F5JLgTWc3MDIy</a></td>
+        <td>Курсы и гайды</td>
+        <td>14424</td>
+        <td>2461</td>
+        <td>18.0</td>
+        <td>1</td>
+        <td>-35</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Beauty Курсы | Слив | Макияж, уход, волосы, массаж, бьюти</td>
+        <td><a href="https://t.me/beauty_ot_blogerov">https://t.me/beauty_ot_blogerov</a></td>
+        <td>Курсы и гайды</td>
+        <td>13086</td>
+        <td>2312</td>
+        <td>18.0</td>
+        <td>24</td>
+        <td>16</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Work247.AI — Работа</td>
+        <td><a href="https://t.me/joinchat/H87XAiKpgnZmODU0">https://t.me/joinchat/H87XAiKpgnZmODU0</a></td>
+        <td>Курсы и гайды</td>
+        <td>13040</td>
+        <td>1697</td>
+        <td>13.0</td>
+        <td>-181</td>
+        <td>-453</td>
+        <td>8 месяцев 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>IZIBIZI.SCHOOL</td>
+        <td><a href="https://t.me/izibizischool">https://t.me/izibizischool</a></td>
+        <td>Курсы и гайды</td>
+        <td>13005</td>
+        <td>639</td>
+        <td>5.0</td>
+        <td>-17</td>
+        <td>39</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MegaSlivKurs</td>
+        <td><a href="https://t.me/joinchat/AAAAAEzHHOVvTi9WnCtkqg">https://t.me/joinchat/AAAAAEzHHOVvTi9WnCtkqg</a></td>
+        <td>Курсы и гайды</td>
+        <td>12134</td>
+        <td>1234</td>
+        <td>11.0</td>
+        <td>-7</td>
+        <td>-89</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>PRESETS_OL 2.0 | КУРСЫ И ГАЙДЫ БЛОГЕРОВ🔥</td>
+        <td><a href="https://t.me/joinchat/AAAAAFBtDR00-PlNY3_Srg">https://t.me/joinchat/AAAAAFBtDR00-PlNY3_Srg</a></td>
+        <td>Курсы и гайды</td>
+        <td>11894</td>
+        <td>555</td>
+        <td>5.0</td>
+        <td>-32</td>
+        <td>-151</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>VIP Фриланс</td>
+        <td><a href="https://t.me/joinchat/AAAAAEinM3AY-AdpwVOgWA">https://t.me/joinchat/AAAAAEinM3AY-AdpwVOgWA</a></td>
+        <td>Курсы и гайды</td>
+        <td>11730</td>
+        <td>687</td>
+        <td>6.0</td>
+        <td>-20</td>
+        <td>-147</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>My Way Гайды 💜</td>
+        <td><a href="https://t.me/mywayguides">https://t.me/mywayguides</a></td>
+        <td>Курсы и гайды</td>
+        <td>11644</td>
+        <td>6824</td>
+        <td>59.0</td>
+        <td>59</td>
+        <td>418</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Курсы для кондитеров | Слив</td>
+        <td><a href="https://t.me/konditer_kyrsi">https://t.me/konditer_kyrsi</a></td>
+        <td>Курсы и гайды</td>
+        <td>11434</td>
+        <td>2823</td>
+        <td>25.0</td>
+        <td>37</td>
+        <td>69</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Free Znanija (IT)</td>
+        <td><a href="https://t.me/joinchat/rOTtUivtkkc0YzBi">https://t.me/joinchat/rOTtUivtkkc0YzBi</a></td>
+        <td>Курсы и гайды</td>
+        <td>10839</td>
+        <td>1953</td>
+        <td>18.0</td>
+        <td>28</td>
+        <td>275</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SLIVOFF.COM - Слитые курсы бесплатно!</td>
+        <td><a href="https://t.me/slivoffcom">https://t.me/slivoffcom</a></td>
+        <td>Курсы и гайды</td>
+        <td>10752</td>
+        <td>1411</td>
+        <td>14.0</td>
+        <td>-18</td>
+        <td>162</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>𝕊𝕃𝕀𝕍 𝕆𝕋 𝔹𝕃𝕆𝔾𝔼ℝ𝕆𝕍 | Курсы, чек-листы, марафоны</td>
+        <td><a href="https://t.me/slivotblogerov">https://t.me/slivotblogerov</a></td>
+        <td>Курсы и гайды</td>
+        <td>10565</td>
+        <td>2434</td>
+        <td>23.0</td>
+        <td>35</td>
+        <td>172</td>
+        <td>5 лет 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Course Bar | КУРСЫ | СЛИВ</td>
+        <td><a href="https://t.me/joinchat/AAAAAFHcmo3Sa058PeVleQ">https://t.me/joinchat/AAAAAFHcmo3Sa058PeVleQ</a></td>
+        <td>Курсы и гайды</td>
+        <td>10563</td>
+        <td>395</td>
+        <td>4.0</td>
+        <td>-19</td>
+        <td>-116</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Биржа Знаний | Курсы</td>
+        <td><a href="https://t.me/edu_goo">https://t.me/edu_goo</a></td>
+        <td>Курсы и гайды</td>
+        <td>10550</td>
+        <td>193</td>
+        <td>2.0</td>
+        <td>-33</td>
+        <td>-164</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TORTUGA.WS - Платные курсы бесплатно!</td>
+        <td><a href="https://t.me/tortuga_ws">https://t.me/tortuga_ws</a></td>
+        <td>Курсы и гайды</td>
+        <td>10499</td>
+        <td>234</td>
+        <td>3.0</td>
+        <td>-30</td>
+        <td>-186</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Edoo: курсы для IT и диджитал-специалистов</td>
+        <td><a href="https://t.me/edoocate">https://t.me/edoocate</a></td>
+        <td>Курсы и гайды</td>
+        <td>10279</td>
+        <td>569</td>
+        <td>6.0</td>
+        <td>-28</td>
+        <td>-140</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>🥭 Курс на успех | Сливки курсов</td>
+        <td><a href="https://t.me/joinchat/K932wuNWNgg0NTc6">https://t.me/joinchat/K932wuNWNgg0NTc6</a></td>
+        <td>Курсы и гайды</td>
+        <td>10057</td>
+        <td>1484</td>
+        <td>15.0</td>
+        <td>-29</td>
+        <td>-132</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Обучение Лайм</td>
+        <td><a href="https://t.me/ob_lime">https://t.me/ob_lime</a></td>
+        <td>Курсы и гайды</td>
+        <td>9843</td>
+        <td>2004</td>
+        <td>21.0</td>
+        <td>10</td>
+        <td>-6</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Коучинг и менторинг от Александры Прицкер</td>
+        <td><a href="https://t.me/aleksandrapritsker">https://t.me/aleksandrapritsker</a></td>
+        <td>Курсы и гайды</td>
+        <td>9190</td>
+        <td>801</td>
+        <td>9.0</td>
+        <td>-44</td>
+        <td>210</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПРЕСЕТЫ Lightroom</td>
+        <td><a href="https://t.me/Presets_Light">https://t.me/Presets_Light</a></td>
+        <td>Курсы и гайды</td>
+        <td>9080</td>
+        <td>1761</td>
+        <td>20.0</td>
+        <td>60</td>
+        <td>71</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Курсы Annamama</td>
+        <td><a href="https://t.me/annamamaclass">https://t.me/annamamaclass</a></td>
+        <td>Курсы и гайды</td>
+        <td>8721</td>
+        <td>1343</td>
+        <td>16.0</td>
+        <td>-19</td>
+        <td>-128</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ᴏбучᴇниᴇ ᴏᴛ иʍᴀн✨</td>
+        <td><a href="https://t.me/joinchat/17bfbrYd1KhkZjMy">https://t.me/joinchat/17bfbrYd1KhkZjMy</a></td>
+        <td>Курсы и гайды</td>
+        <td>8574</td>
+        <td>196</td>
+        <td>3.0</td>
+        <td>-51</td>
+        <td>-270</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>База Санты | Курсы. ИнфоНовости</td>
+        <td><a href="https://t.me/joinchat/7-emUtmgtw9jNjY9">https://t.me/joinchat/7-emUtmgtw9jNjY9</a></td>
+        <td>Курсы и гайды</td>
+        <td>8438</td>
+        <td>404</td>
+        <td>5.0</td>
+        <td>-68</td>
+        <td>-194</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Образование Онлайн</td>
+        <td><a href="https://t.me/joinchat/AAAAAEQmq0ZlPrsTOiUcQA">https://t.me/joinchat/AAAAAEQmq0ZlPrsTOiUcQA</a></td>
+        <td>Курсы и гайды</td>
+        <td>8358</td>
+        <td>113</td>
+        <td>2.0</td>
+        <td>-26</td>
+        <td>-132</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🍒 Курс на успех | Чек-листы. Гайды</td>
+        <td><a href="https://t.me/joinchat/uJqETnbObgcwN2Ji">https://t.me/joinchat/uJqETnbObgcwN2Ji</a></td>
+        <td>Курсы и гайды</td>
+        <td>8309</td>
+        <td>758</td>
+        <td>10.0</td>
+        <td>9</td>
+        <td>-80</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>.NET Kings</td>
+        <td><a href="https://t.me/netskings">https://t.me/netskings</a></td>
+        <td>Курсы и гайды</td>
+        <td>8144</td>
+        <td>3230</td>
+        <td>40.0</td>
+        <td>80</td>
+        <td>833</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🔗 Самоучка PRO 🔗</td>
+        <td><a href="https://t.me/joinchat/endbrWa4i1c5NjNi">https://t.me/joinchat/endbrWa4i1c5NjNi</a></td>
+        <td>Курсы и гайды</td>
+        <td>8130</td>
+        <td>1501</td>
+        <td>19.0</td>
+        <td>-18</td>
+        <td>-20</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Гайды, чек|листы, курсы .</td>
+        <td><a href="https://t.me/huikkn">https://t.me/huikkn</a></td>
+        <td>Курсы и гайды</td>
+        <td>8056</td>
+        <td>698</td>
+        <td>9.0</td>
+        <td>9</td>
+        <td>-21</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Курсы и обучения - Качай бесплатно!</td>
+        <td><a href="https://t.me/cloudcourse">https://t.me/cloudcourse</a></td>
+        <td>Курсы и гайды</td>
+        <td>7990</td>
+        <td>278</td>
+        <td>4.0</td>
+        <td>-15</td>
+        <td>-114</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Школа Эзотерики "Ключ Жизни"</td>
+        <td><a href="https://t.me/tarolegko">https://t.me/tarolegko</a></td>
+        <td>Курсы и гайды</td>
+        <td>7948</td>
+        <td>853</td>
+        <td>11.0</td>
+        <td>119</td>
+        <td>482</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Курсы | cheklist | guides</td>
+        <td><a href="https://t.me/obrabotka_promotion">https://t.me/obrabotka_promotion</a></td>
+        <td>Курсы и гайды</td>
+        <td>7900</td>
+        <td>584</td>
+        <td>8.0</td>
+        <td>-19</td>
+        <td>-115</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Bankroll | Темки 🐸</td>
+        <td><a href="https://t.me/joinchat/Wx4ChtdprRRkYTEy">https://t.me/joinchat/Wx4ChtdprRRkYTEy</a></td>
+        <td>Курсы и гайды</td>
+        <td>7848</td>
+        <td>697</td>
+        <td>9.0</td>
+        <td>-248</td>
+        <td>-1513</td>
+        <td>4 месяца 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>🔗 New Slaim 🔗</td>
+        <td><a href="https://t.me/joinchat/AAAAAFlUD0LlxNlglv9YRA">https://t.me/joinchat/AAAAAFlUD0LlxNlglv9YRA</a></td>
+        <td>Курсы и гайды</td>
+        <td>7835</td>
+        <td>381</td>
+        <td>5.0</td>
+        <td>-19</td>
+        <td>-92</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ZLIM BLOGEROV: Сливы курсов</td>
+        <td><a href="https://t.me/joinchat/AAAAAFev7ZGWs36mNEmBxw">https://t.me/joinchat/AAAAAFev7ZGWs36mNEmBxw</a></td>
+        <td>Курсы и гайды</td>
+        <td>7571</td>
+        <td>343</td>
+        <td>5.0</td>
+        <td>-23</td>
+        <td>-95</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ВМИ | мотивация | саморазвитие | дисциплина</td>
+        <td><a href="https://t.me/tochka_rosta_vmi">https://t.me/tochka_rosta_vmi</a></td>
+        <td>Курсы и гайды</td>
+        <td>7057</td>
+        <td>100</td>
+        <td>2.0</td>
+        <td>-142</td>
+        <td>3957</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТУТ ССЫЛКИ на БЕСПЛАТНЫЕ курсы и вебинары , открытые уроки, разных онлайн школ, вакансии 🤲БисмиЛлях. Для детей и сестёр</td>
+        <td><a href="https://t.me/tytbespl_onlyrok">https://t.me/tytbespl_onlyrok</a></td>
+        <td>Курсы и гайды</td>
+        <td>6956</td>
+        <td>401</td>
+        <td>6.0</td>
+        <td>16</td>
+        <td>255</td>
+        <td>3 года 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатные курсы</td>
+        <td><a href="https://t.me/darom456">https://t.me/darom456</a></td>
+        <td>Курсы и гайды</td>
+        <td>6865</td>
+        <td>1104</td>
+        <td>17.0</td>
+        <td>0</td>
+        <td>-16</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Академиум - образование и курсы</td>
+        <td><a href="https://t.me/joinchat/AAAAAE-GxPX_gRjeS-tT8g">https://t.me/joinchat/AAAAAE-GxPX_gRjeS-tT8g</a></td>
+        <td>Курсы и гайды</td>
+        <td>6808</td>
+        <td>79</td>
+        <td>2.0</td>
+        <td>-20</td>
+        <td>-67</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Курсы по инфобизнесу 💸</td>
+        <td><a href="https://t.me/infobiznesotblogerov">https://t.me/infobiznesotblogerov</a></td>
+        <td>Курсы и гайды</td>
+        <td>6643</td>
+        <td>775</td>
+        <td>12.0</td>
+        <td>11</td>
+        <td>-28</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЧЕК-ЛИСТЫ/ГАЙДЫ/марафоны</td>
+        <td><a href="https://t.me/joinchat/TqX-whY1-1djYTRi">https://t.me/joinchat/TqX-whY1-1djYTRi</a></td>
+        <td>Курсы и гайды</td>
+        <td>6629</td>
+        <td>616</td>
+        <td>10.0</td>
+        <td>-15</td>
+        <td>-57</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🔥ПЛАТНОЕ - БЕСПЛАТНО🔥</td>
+        <td><a href="https://t.me/franchizafre">https://t.me/franchizafre</a></td>
+        <td>Курсы и гайды</td>
+        <td>6540</td>
+        <td>596</td>
+        <td>10.0</td>
+        <td>-13</td>
+        <td>-60</td>
+        <td>6 лет 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>youth&career | конкурсы и стажировки</td>
+        <td><a href="https://t.me/youthandcareer">https://t.me/youthandcareer</a></td>
+        <td>Курсы и гайды</td>
+        <td>6527</td>
+        <td>1295</td>
+        <td>20.0</td>
+        <td>15</td>
+        <td>117</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Байер Китай Блог Анны Шифу Импорт</td>
+        <td><a href="https://t.me/kitay_optom">https://t.me/kitay_optom</a></td>
+        <td>Курсы и гайды</td>
+        <td>6361</td>
+        <td>902</td>
+        <td>15.0</td>
+        <td>114</td>
+        <td>291</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Отборный FrontЪ</td>
+        <td><a href="https://t.me/OtFront">https://t.me/OtFront</a></td>
+        <td>Курсы и гайды</td>
+        <td>6242</td>
+        <td>1717</td>
+        <td>28.0</td>
+        <td>21</td>
+        <td>117</td>
+        <td>3 года 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>HR sKlad</td>
+        <td><a href="https://t.me/HRsKlad">https://t.me/HRsKlad</a></td>
+        <td>Курсы и гайды</td>
+        <td>6163</td>
+        <td>707</td>
+        <td>12.0</td>
+        <td>-17</td>
+        <td>-21</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ПАЦАНЫ И ГАЙДЫ</td>
+        <td><a href="https://t.me/guidepacan">https://t.me/guidepacan</a></td>
+        <td>Курсы и гайды</td>
+        <td>6153</td>
+        <td>714</td>
+        <td>12.0</td>
+        <td>-128</td>
+        <td>-544</td>
+        <td>7 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Курсы по маркетплейсам</td>
+        <td><a href="https://t.me/joinchat/lsa-gqXJ0fNkOTQy">https://t.me/joinchat/lsa-gqXJ0fNkOTQy</a></td>
+        <td>Курсы и гайды</td>
+        <td>6071</td>
+        <td>408</td>
+        <td>7.0</td>
+        <td>6</td>
+        <td>-13</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>CROC Team</td>
+        <td><a href="https://t.me/crocteam">https://t.me/crocteam</a></td>
+        <td>Курсы и гайды</td>
+        <td>5973</td>
+        <td>2195</td>
+        <td>37.0</td>
+        <td>16</td>
+        <td>185</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Поиск курсов♻️</td>
+        <td><a href="https://t.me/joinchat/SR1c-20AldU4MTAy">https://t.me/joinchat/SR1c-20AldU4MTAy</a></td>
+        <td>Курсы и гайды</td>
+        <td>5928</td>
+        <td>2113</td>
+        <td>36.0</td>
+        <td>4</td>
+        <td>-58</td>
+        <td>1 год 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мастермайнды Онлайн Терра</td>
+        <td><a href="https://t.me/MMTerraOnline">https://t.me/MMTerraOnline</a></td>
+        <td>Курсы и гайды</td>
+        <td>5878</td>
+        <td>529</td>
+        <td>9.0</td>
+        <td>59</td>
+        <td>41</td>
+        <td>3 года 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>hanumkka</td>
+        <td><a href="https://t.me/joinchat/S7alEi0_w5bVnIt6">https://t.me/joinchat/S7alEi0_w5bVnIt6</a></td>
+        <td>Курсы и гайды</td>
+        <td>5861</td>
+        <td>1063</td>
+        <td>19.0</td>
+        <td>-25</td>
+        <td>-164</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

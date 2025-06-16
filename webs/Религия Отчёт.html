@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Константин Малофеев</td>
+        <td><a href="https://t.me/kvmalofeev">https://t.me/kvmalofeev</a></td>
+        <td>Религия</td>
+        <td>1146555</td>
+        <td>373824</td>
+        <td>33.0</td>
+        <td>5921</td>
+        <td>32240</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Нашиды | Ислам | Коран</td>
+        <td><a href="https://t.me/nashidy">https://t.me/nashidy</a></td>
+        <td>Религия</td>
+        <td>294748</td>
+        <td>98411</td>
+        <td>34.0</td>
+        <td>-1040</td>
+        <td>-2183</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Протоиерей Андрей Ткачев</td>
+        <td><a href="https://t.me/videotca_Andrea">https://t.me/videotca_Andrea</a></td>
+        <td>Религия</td>
+        <td>286879</td>
+        <td>114222</td>
+        <td>40.0</td>
+        <td>481</td>
+        <td>1309</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Молитвы на все случаи жизни☦️</td>
+        <td><a href="https://t.me/molitvaikona">https://t.me/molitvaikona</a></td>
+        <td>Религия</td>
+        <td>261995</td>
+        <td>37569</td>
+        <td>15.0</td>
+        <td>-189</td>
+        <td>-386</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Павел Островский</td>
+        <td><a href="https://t.me/pavelostrovski">https://t.me/pavelostrovski</a></td>
+        <td>Религия</td>
+        <td>221025</td>
+        <td>60695</td>
+        <td>28.0</td>
+        <td>66</td>
+        <td>-875</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Первый Православный</td>
+        <td><a href="https://t.me/joinchat/MSOREkTEj5ozNDJi">https://t.me/joinchat/MSOREkTEj5ozNDJi</a></td>
+        <td>Религия</td>
+        <td>205520</td>
+        <td>38156</td>
+        <td>19.0</td>
+        <td>-3010</td>
+        <td>48042</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝗻𝗮𝘀𝗵𝗲𝗲𝗱 | 𝗥 ོ</td>
+        <td><a href="https://t.me/rnasheeds">https://t.me/rnasheeds</a></td>
+        <td>Религия</td>
+        <td>150285</td>
+        <td>69408</td>
+        <td>47.0</td>
+        <td>-2487</td>
+        <td>-11052</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Толкования молитв ☦️ Православие</td>
+        <td><a href="https://t.me/joinchat/HL733xKl2_g3ZTdi">https://t.me/joinchat/HL733xKl2_g3ZTdi</a></td>
+        <td>Религия</td>
+        <td>139587</td>
+        <td>11863</td>
+        <td>9.0</td>
+        <td>-665</td>
+        <td>-1487</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АНДРЕЙ ТКАЧЁВ</td>
+        <td><a href="https://t.me/o_andrey_tkachev">https://t.me/o_andrey_tkachev</a></td>
+        <td>Религия</td>
+        <td>126790</td>
+        <td>58607</td>
+        <td>47.0</td>
+        <td>-293</td>
+        <td>-1128</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Православный ☦</td>
+        <td><a href="https://t.me/joinchat/R7BiwRf_aPs1Y2Iy">https://t.me/joinchat/R7BiwRf_aPs1Y2Iy</a></td>
+        <td>Религия</td>
+        <td>114798</td>
+        <td>11112</td>
+        <td>10.0</td>
+        <td>708</td>
+        <td>3831</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>☦️ Священник Антоний Русакевич ☦️ Позитивный батюшка</td>
+        <td><a href="https://t.me/joinchat/xxZ3ZDd6MY01NTky">https://t.me/joinchat/xxZ3ZDd6MY01NTky</a></td>
+        <td>Религия</td>
+        <td>114217</td>
+        <td>20380</td>
+        <td>18.0</td>
+        <td>523</td>
+        <td>2560</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Исламские книги PDF</td>
+        <td><a href="https://t.me/kniga_pdf">https://t.me/kniga_pdf</a></td>
+        <td>Религия</td>
+        <td>112057</td>
+        <td>42066</td>
+        <td>38.0</td>
+        <td>-336</td>
+        <td>-559</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>📖 Книга притч: с любовью о добре</td>
+        <td><a href="https://t.me/joinchat/VyMNqBXtBCtmOTQ6">https://t.me/joinchat/VyMNqBXtBCtmOTQ6</a></td>
+        <td>Религия</td>
+        <td>92435</td>
+        <td>7955</td>
+        <td>9.0</td>
+        <td>740</td>
+        <td>-850</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Православный Молитвослов | Молитвы</td>
+        <td><a href="https://t.me/joinchat/AAmJufk7cO8xNmYy">https://t.me/joinchat/AAmJufk7cO8xNmYy</a></td>
+        <td>Религия</td>
+        <td>91476</td>
+        <td>18635</td>
+        <td>21.0</td>
+        <td>-280</td>
+        <td>966</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Священник Владислав Береговой</td>
+        <td><a href="https://t.me/pravoslavieVtelege">https://t.me/pravoslavieVtelege</a></td>
+        <td>Религия</td>
+        <td>89529</td>
+        <td>21138</td>
+        <td>24.0</td>
+        <td>130</td>
+        <td>1165</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Телеканал СПАС</td>
+        <td><a href="https://t.me/spastv">https://t.me/spastv</a></td>
+        <td>Религия</td>
+        <td>86969</td>
+        <td>7995</td>
+        <td>10.0</td>
+        <td>263</td>
+        <td>241</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>📜 Цитата из Библии</td>
+        <td><a href="https://t.me/azbible">https://t.me/azbible</a></td>
+        <td>Религия</td>
+        <td>83282</td>
+        <td>26967</td>
+        <td>33.0</td>
+        <td>224</td>
+        <td>894</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Азбука молитвы</td>
+        <td><a href="https://t.me/azprayer">https://t.me/azprayer</a></td>
+        <td>Религия</td>
+        <td>74408</td>
+        <td>29776</td>
+        <td>40.0</td>
+        <td>-45</td>
+        <td>-268</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Сила Молитвы</td>
+        <td><a href="https://t.me/sila_molitve">https://t.me/sila_molitve</a></td>
+        <td>Религия</td>
+        <td>71750</td>
+        <td>12496</td>
+        <td>18.0</td>
+        <td>-184</td>
+        <td>620</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Журнал «Фома»</td>
+        <td><a href="https://t.me/foma_ru_glavnoe">https://t.me/foma_ru_glavnoe</a></td>
+        <td>Религия</td>
+        <td>66252</td>
+        <td>22999</td>
+        <td>35.0</td>
+        <td>509</td>
+        <td>2354</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Православная психология</td>
+        <td><a href="https://t.me/orthodoxpsiholog">https://t.me/orthodoxpsiholog</a></td>
+        <td>Религия</td>
+        <td>64883</td>
+        <td>17308</td>
+        <td>27.0</td>
+        <td>752</td>
+        <td>3013</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Православные ☦️ открытки</td>
+        <td><a href="https://t.me/protkr">https://t.me/protkr</a></td>
+        <td>Религия</td>
+        <td>62125</td>
+        <td>23587</td>
+        <td>38.0</td>
+        <td>-39</td>
+        <td>430</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Православная семья</td>
+        <td><a href="https://t.me/joinchat/xxwaXvqHtXNiNzJi">https://t.me/joinchat/xxwaXvqHtXNiNzJi</a></td>
+        <td>Религия</td>
+        <td>61583</td>
+        <td>14589</td>
+        <td>24.0</td>
+        <td>-1804</td>
+        <td>-2063</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шамиль Аляутдинов | umma.ru</td>
+        <td><a href="https://t.me/umma_ru">https://t.me/umma_ru</a></td>
+        <td>Религия</td>
+        <td>58654</td>
+        <td>11535</td>
+        <td>20.0</td>
+        <td>366</td>
+        <td>921</td>
+        <td>9 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Николай Бабкин</td>
+        <td><a href="https://t.me/nickolaybabkin">https://t.me/nickolaybabkin</a></td>
+        <td>Религия</td>
+        <td>58524</td>
+        <td>15960</td>
+        <td>28.0</td>
+        <td>276</td>
+        <td>-35</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шейх Усман Аль Хамис</td>
+        <td><a href="https://t.me/usmankhamys">https://t.me/usmankhamys</a></td>
+        <td>Религия</td>
+        <td>56410</td>
+        <td>21996</td>
+        <td>39.0</td>
+        <td>-14</td>
+        <td>-127</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Православие и дети</td>
+        <td><a href="https://t.me/pravoslavie_i_deti">https://t.me/pravoslavie_i_deti</a></td>
+        <td>Религия</td>
+        <td>55616</td>
+        <td>11422</td>
+        <td>21.0</td>
+        <td>32</td>
+        <td>65</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>mutawwa</td>
+        <td><a href="https://t.me/mutawwa">https://t.me/mutawwa</a></td>
+        <td>Религия</td>
+        <td>52854</td>
+        <td>12866</td>
+        <td>25.0</td>
+        <td>-364</td>
+        <td>-1153</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Монастырь Оптина пустынь</td>
+        <td><a href="https://t.me/optina">https://t.me/optina</a></td>
+        <td>Религия</td>
+        <td>52850</td>
+        <td>14815</td>
+        <td>28.0</td>
+        <td>348</td>
+        <td>814</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>арабские цитаты</td>
+        <td><a href="https://t.me/islamskietsitaty">https://t.me/islamskietsitaty</a></td>
+        <td>Религия</td>
+        <td>51241</td>
+        <td>25005</td>
+        <td>49.0</td>
+        <td>2057</td>
+        <td>8462</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>☦ Цветник духовный</td>
+        <td><a href="https://t.me/joinchat/ZjcMcHzvrDwwODNi">https://t.me/joinchat/ZjcMcHzvrDwwODNi</a></td>
+        <td>Религия</td>
+        <td>49976</td>
+        <td>8950</td>
+        <td>18.0</td>
+        <td>-183</td>
+        <td>-699</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Верую в Бога</td>
+        <td><a href="https://t.me/joinchat/x7bbkkN_qx80NThi">https://t.me/joinchat/x7bbkkN_qx80NThi</a></td>
+        <td>Религия</td>
+        <td>49844</td>
+        <td>9821</td>
+        <td>20.0</td>
+        <td>-160</td>
+        <td>-643</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Спаси и Сохрани | Молитвы</td>
+        <td><a href="https://t.me/pravoslavie_religiya">https://t.me/pravoslavie_religiya</a></td>
+        <td>Религия</td>
+        <td>48970</td>
+        <td>7788</td>
+        <td>16.0</td>
+        <td>-117</td>
+        <td>-509</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Главный Православный</td>
+        <td><a href="https://t.me/joinchat/rp7YfuX_G8xiOWQy">https://t.me/joinchat/rp7YfuX_G8xiOWQy</a></td>
+        <td>Религия</td>
+        <td>47777</td>
+        <td>8527</td>
+        <td>18.0</td>
+        <td>-86</td>
+        <td>-579</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Православный канал</td>
+        <td><a href="https://t.me/pravoslavnyy_kanal">https://t.me/pravoslavnyy_kanal</a></td>
+        <td>Религия</td>
+        <td>47631</td>
+        <td>18815</td>
+        <td>40.0</td>
+        <td>421</td>
+        <td>2087</td>
+        <td>8 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Духовный мир</td>
+        <td><a href="https://t.me/joinchat/_WXgM2xzZFNlOGEy">https://t.me/joinchat/_WXgM2xzZFNlOGEy</a></td>
+        <td>Религия</td>
+        <td>46050</td>
+        <td>5390</td>
+        <td>12.0</td>
+        <td>-149</td>
+        <td>-700</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Православные поздравления</td>
+        <td><a href="https://t.me/joinchat/IbmdFAhZSe04YTRi">https://t.me/joinchat/IbmdFAhZSe04YTRi</a></td>
+        <td>Религия</td>
+        <td>45356</td>
+        <td>13619</td>
+        <td>30.0</td>
+        <td>-216</td>
+        <td>1925</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Азбука веры</td>
+        <td><a href="https://t.me/azbyka">https://t.me/azbyka</a></td>
+        <td>Религия</td>
+        <td>45212</td>
+        <td>17587</td>
+        <td>39.0</td>
+        <td>101</td>
+        <td>305</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нашиды</td>
+        <td><a href="https://t.me/nasheed_55">https://t.me/nasheed_55</a></td>
+        <td>Религия</td>
+        <td>44284</td>
+        <td>18781</td>
+        <td>43.0</td>
+        <td>-198</td>
+        <td>-760</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>☦️ Прот. Дмитрий Смирнов</td>
+        <td><a href="https://t.me/joinchat/uLLawk03r8w1MDMy">https://t.me/joinchat/uLLawk03r8w1MDMy</a></td>
+        <td>Религия</td>
+        <td>43981</td>
+        <td>9355</td>
+        <td>22.0</td>
+        <td>220</td>
+        <td>4519</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СВЯЩЕННИК НИКОЛАЙ ДУБИНИН. Белгородская Митрополия.</td>
+        <td><a href="https://t.me/otec_nik">https://t.me/otec_nik</a></td>
+        <td>Религия</td>
+        <td>43765</td>
+        <td>14925</td>
+        <td>35.0</td>
+        <td>-124</td>
+        <td>889</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Женский православный</td>
+        <td><a href="https://t.me/joinchat/AkSz07ahzXk2ZWUy">https://t.me/joinchat/AkSz07ahzXk2ZWUy</a></td>
+        <td>Религия</td>
+        <td>43662</td>
+        <td>8560</td>
+        <td>20.0</td>
+        <td>-246</td>
+        <td>2646</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЭТО БОГ</td>
+        <td><a href="https://t.me/eto_bog">https://t.me/eto_bog</a></td>
+        <td>Религия</td>
+        <td>43639</td>
+        <td>41548</td>
+        <td>96.0</td>
+        <td>211</td>
+        <td>1030</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>UMMA KIDS</td>
+        <td><a href="https://t.me/muslimults">https://t.me/muslimults</a></td>
+        <td>Религия</td>
+        <td>41739</td>
+        <td>6815</td>
+        <td>17.0</td>
+        <td>-123</td>
+        <td>-479</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>☦️ Церковный календарь</td>
+        <td><a href="https://t.me/joinchat/acmhvqo5-VsxYTE6">https://t.me/joinchat/acmhvqo5-VsxYTE6</a></td>
+        <td>Религия</td>
+        <td>41056</td>
+        <td>5951</td>
+        <td>15.0</td>
+        <td>-111</td>
+        <td>-269</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ХАДИСЫ И АЯТЫ</td>
+        <td><a href="https://t.me/BookHadith">https://t.me/BookHadith</a></td>
+        <td>Религия</td>
+        <td>40082</td>
+        <td>5894</td>
+        <td>15.0</td>
+        <td>-136</td>
+        <td>72</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>«Мудрые мысли» Православный журнал</td>
+        <td><a href="https://t.me/hristianskaya_mudrost">https://t.me/hristianskaya_mudrost</a></td>
+        <td>Религия</td>
+        <td>39699</td>
+        <td>6697</td>
+        <td>17.0</td>
+        <td>-82</td>
+        <td>-246</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БИБЛИЯ ОТВЕЧАЕТ - Экзегет | Православие / Христианство</td>
+        <td><a href="https://t.me/ekzeget">https://t.me/ekzeget</a></td>
+        <td>Религия</td>
+        <td>39549</td>
+        <td>8635</td>
+        <td>22.0</td>
+        <td>801</td>
+        <td>1190</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Православный календарь ☦️</td>
+        <td><a href="https://t.me/joinchat/FzOJKXsU_5E0YzQy">https://t.me/joinchat/FzOJKXsU_5E0YzQy</a></td>
+        <td>Религия</td>
+        <td>39306</td>
+        <td>7583</td>
+        <td>20.0</td>
+        <td>153</td>
+        <td>-649</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Алексей Ильич Осипов</td>
+        <td><a href="https://t.me/professor_osipov">https://t.me/professor_osipov</a></td>
+        <td>Религия</td>
+        <td>37836</td>
+        <td>15590</td>
+        <td>42.0</td>
+        <td>103</td>
+        <td>345</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Секреты Монахов</td>
+        <td><a href="https://t.me/secretsmonk">https://t.me/secretsmonk</a></td>
+        <td>Религия</td>
+        <td>37453</td>
+        <td>5889</td>
+        <td>16.0</td>
+        <td>1078</td>
+        <td>4160</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Miracle 🌙</td>
+        <td><a href="https://t.me/Islamsklee">https://t.me/Islamsklee</a></td>
+        <td>Религия</td>
+        <td>36686</td>
+        <td>6597</td>
+        <td>18.0</td>
+        <td>-233</td>
+        <td>-1014</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Владимир Легойда</td>
+        <td><a href="https://t.me/vladimirlegoyda">https://t.me/vladimirlegoyda</a></td>
+        <td>Религия</td>
+        <td>34954</td>
+        <td>23535</td>
+        <td>68.0</td>
+        <td>-41</td>
+        <td>132</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Православный Календарь</td>
+        <td><a href="https://t.me/pravokalendar">https://t.me/pravokalendar</a></td>
+        <td>Религия</td>
+        <td>34549</td>
+        <td>10910</td>
+        <td>32.0</td>
+        <td>-98</td>
+        <td>-315</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПРОСФОРА</td>
+        <td><a href="https://t.me/prosfora_tg">https://t.me/prosfora_tg</a></td>
+        <td>Религия</td>
+        <td>34459</td>
+        <td>3931</td>
+        <td>12.0</td>
+        <td>-63</td>
+        <td>-339</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир вам - Последнее время</td>
+        <td><a href="https://t.me/shalomfromGod">https://t.me/shalomfromGod</a></td>
+        <td>Религия</td>
+        <td>34108</td>
+        <td>12395</td>
+        <td>37.0</td>
+        <td>100</td>
+        <td>158</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Институт «Дироя» | معهد الدراية</td>
+        <td><a href="https://t.me/Diroya">https://t.me/Diroya</a></td>
+        <td>Религия</td>
+        <td>33605</td>
+        <td>8338</td>
+        <td>25.0</td>
+        <td>196</td>
+        <td>488</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>арабские цитаты ☁️</td>
+        <td><a href="https://t.me/nashidytsitaty">https://t.me/nashidytsitaty</a></td>
+        <td>Религия</td>
+        <td>33196</td>
+        <td>11925</td>
+        <td>36.0</td>
+        <td>194</td>
+        <td>236</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Illuminat.</td>
+        <td><a href="https://t.me/illuminatstudio">https://t.me/illuminatstudio</a></td>
+        <td>Религия</td>
+        <td>32866</td>
+        <td>57249</td>
+        <td>175.0</td>
+        <td>1022</td>
+        <td>2958</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПОД ПОКРОВОМ СПИРИДОНА</td>
+        <td><a href="https://t.me/spiros_25">https://t.me/spiros_25</a></td>
+        <td>Религия</td>
+        <td>32796</td>
+        <td>9657</td>
+        <td>30.0</td>
+        <td>27</td>
+        <td>386</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>lumsml</td>
+        <td><a href="https://t.me/lumsmII">https://t.me/lumsmII</a></td>
+        <td>Религия</td>
+        <td>32274</td>
+        <td>13041</td>
+        <td>41.0</td>
+        <td>683</td>
+        <td>5</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЧИТАЙ | ЖЕНСКАЯ ШКОЛА</td>
+        <td><a href="https://t.me/iqraskhool">https://t.me/iqraskhool</a></td>
+        <td>Религия</td>
+        <td>32073</td>
+        <td>8612</td>
+        <td>27.0</td>
+        <td>12</td>
+        <td>398</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>12 Храмов</td>
+        <td><a href="https://t.me/i12hramov">https://t.me/i12hramov</a></td>
+        <td>Религия</td>
+        <td>31628</td>
+        <td>6779</td>
+        <td>22.0</td>
+        <td>-62</td>
+        <td>-287</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Al-FANAR SCHOOL | Таджвид | Коран</td>
+        <td><a href="https://t.me/fanar_school">https://t.me/fanar_school</a></td>
+        <td>Религия</td>
+        <td>31370</td>
+        <td>5823</td>
+        <td>19.0</td>
+        <td>-341</td>
+        <td>-1407</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Георгиевский храм</td>
+        <td><a href="https://t.me/georghram">https://t.me/georghram</a></td>
+        <td>Религия</td>
+        <td>30927</td>
+        <td>13797</td>
+        <td>45.0</td>
+        <td>61</td>
+        <td>166</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Мохамад Хамед</td>
+        <td><a href="https://t.me/doctorMohamadhamed">https://t.me/doctorMohamadhamed</a></td>
+        <td>Религия</td>
+        <td>30814</td>
+        <td>7613</td>
+        <td>25.0</td>
+        <td>-120</td>
+        <td>-318</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ahsham</td>
+        <td><a href="https://t.me/ahshammm">https://t.me/ahshammm</a></td>
+        <td>Религия</td>
+        <td>30744</td>
+        <td>15179</td>
+        <td>50.0</td>
+        <td>56</td>
+        <td>-35</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>umar sildinskiy</td>
+        <td><a href="https://t.me/Usildinskiy">https://t.me/Usildinskiy</a></td>
+        <td>Религия</td>
+        <td>30699</td>
+        <td>11531</td>
+        <td>38.0</td>
+        <td>-93</td>
+        <td>1492</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Суры из Корана</td>
+        <td><a href="https://t.me/sura114">https://t.me/sura114</a></td>
+        <td>Религия</td>
+        <td>30666</td>
+        <td>13021</td>
+        <td>43.0</td>
+        <td>17</td>
+        <td>217</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кураев</td>
+        <td><a href="https://t.me/akuraev">https://t.me/akuraev</a></td>
+        <td>Религия</td>
+        <td>30631</td>
+        <td>9535</td>
+        <td>32.0</td>
+        <td>-39</td>
+        <td>-247</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Слово Ахмада</td>
+        <td><a href="https://t.me/slovoakhmada">https://t.me/slovoakhmada</a></td>
+        <td>Религия</td>
+        <td>30539</td>
+        <td>25487</td>
+        <td>84.0</td>
+        <td>-88</td>
+        <td>-444</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Валаамский монастырь</td>
+        <td><a href="https://t.me/valaam">https://t.me/valaam</a></td>
+        <td>Религия</td>
+        <td>30329</td>
+        <td>11601</td>
+        <td>39.0</td>
+        <td>229</td>
+        <td>1219</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Семья в Исламе🌸</td>
+        <td><a href="https://t.me/islamsemya">https://t.me/islamsemya</a></td>
+        <td>Религия</td>
+        <td>30244</td>
+        <td>4503</td>
+        <td>15.0</td>
+        <td>-8</td>
+        <td>-318</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мухаммад Люхайдан | Quran</td>
+        <td><a href="https://t.me/korans_nashidy">https://t.me/korans_nashidy</a></td>
+        <td>Религия</td>
+        <td>30050</td>
+        <td>16272</td>
+        <td>55.0</td>
+        <td>1043</td>
+        <td>4618</td>
+        <td>6 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Молитвы на всякую потребу🙏</td>
+        <td><a href="https://t.me/prav_molitvy">https://t.me/prav_molitvy</a></td>
+        <td>Религия</td>
+        <td>29658</td>
+        <td>8868</td>
+        <td>30.0</td>
+        <td>149</td>
+        <td>692</td>
+        <td>9 месяцев 1 день</td>
+      </tr>
+
+      <tr>
+        <td>AlifLive</td>
+        <td><a href="https://t.me/alifarium">https://t.me/alifarium</a></td>
+        <td>Религия</td>
+        <td>29628</td>
+        <td>8249</td>
+        <td>28.0</td>
+        <td>72</td>
+        <td>196</td>
+        <td>4 года 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Рауф Гаджиев</td>
+        <td><a href="https://t.me/rauf_live">https://t.me/rauf_live</a></td>
+        <td>Религия</td>
+        <td>29500</td>
+        <td>6167</td>
+        <td>21.0</td>
+        <td>-89</td>
+        <td>-290</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Муж и жена ❤️</td>
+        <td><a href="https://t.me/timoyrai">https://t.me/timoyrai</a></td>
+        <td>Религия</td>
+        <td>29341</td>
+        <td>2568</td>
+        <td>9.0</td>
+        <td>-97</td>
+        <td>-476</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПРАВДА СИЛЬНЕЕ!!!</td>
+        <td><a href="https://t.me/PRAVDASILNEE">https://t.me/PRAVDASILNEE</a></td>
+        <td>Религия</td>
+        <td>29248</td>
+        <td>8043</td>
+        <td>28.0</td>
+        <td>179</td>
+        <td>641</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мужской Православный</td>
+        <td><a href="https://t.me/joinchat/AW0IlASSBXczYzAy">https://t.me/joinchat/AW0IlASSBXczYzAy</a></td>
+        <td>Религия</td>
+        <td>29027</td>
+        <td>4060</td>
+        <td>14.0</td>
+        <td>-148</td>
+        <td>-843</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Серафимо-Дивеевский монастырь</td>
+        <td><a href="https://t.me/diveevo_monastyr">https://t.me/diveevo_monastyr</a></td>
+        <td>Религия</td>
+        <td>28672</td>
+        <td>7984</td>
+        <td>28.0</td>
+        <td>198</td>
+        <td>610</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Юсуф Абу Закария</td>
+        <td><a href="https://t.me/yusufabuzakariya">https://t.me/yusufabuzakariya</a></td>
+        <td>Религия</td>
+        <td>28605</td>
+        <td>5748</td>
+        <td>21.0</td>
+        <td>-130</td>
+        <td>371</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>خ</td>
+        <td><a href="https://t.me/soplemenic">https://t.me/soplemenic</a></td>
+        <td>Религия</td>
+        <td>28600</td>
+        <td>7713</td>
+        <td>27.0</td>
+        <td>-298</td>
+        <td>-694</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Православие и зомби</td>
+        <td><a href="https://t.me/orthozombies">https://t.me/orthozombies</a></td>
+        <td>Религия</td>
+        <td>28570</td>
+        <td>16782</td>
+        <td>59.0</td>
+        <td>-88</td>
+        <td>243</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Cogito ergo sum (канал архиепископа Саввы)</td>
+        <td><a href="https://t.me/kartezianec">https://t.me/kartezianec</a></td>
+        <td>Религия</td>
+        <td>28455</td>
+        <td>39403</td>
+        <td>139.0</td>
+        <td>243</td>
+        <td>1998</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝐀𝐋 𝐈𝐒𝐓𝐈𝐐𝐀𝐌</td>
+        <td><a href="https://t.me/alistiqam">https://t.me/alistiqam</a></td>
+        <td>Религия</td>
+        <td>28148</td>
+        <td>6667</td>
+        <td>24.0</td>
+        <td>632</td>
+        <td>336</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Священник Валерий Сосковец</td>
+        <td><a href="https://t.me/v_soskovets">https://t.me/v_soskovets</a></td>
+        <td>Религия</td>
+        <td>26964</td>
+        <td>17613</td>
+        <td>66.0</td>
+        <td>148</td>
+        <td>730</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>священник Андрей Долгополов</td>
+        <td><a href="https://t.me/fr_andrey">https://t.me/fr_andrey</a></td>
+        <td>Религия</td>
+        <td>26502</td>
+        <td>2623</td>
+        <td>10.0</td>
+        <td>-41</td>
+        <td>-1210</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Красивое чтение Корана</td>
+        <td><a href="https://t.me/ChtenieKorana">https://t.me/ChtenieKorana</a></td>
+        <td>Религия</td>
+        <td>26377</td>
+        <td>4736</td>
+        <td>18.0</td>
+        <td>-103</td>
+        <td>-488</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>AR-RAD.🆁🆄</td>
+        <td><a href="https://t.me/arradru">https://t.me/arradru</a></td>
+        <td>Религия</td>
+        <td>26299</td>
+        <td>12547</td>
+        <td>48.0</td>
+        <td>-190</td>
+        <td>-1735</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Верую † Православие</td>
+        <td><a href="https://t.me/veruj">https://t.me/veruj</a></td>
+        <td>Религия</td>
+        <td>26202</td>
+        <td>16540</td>
+        <td>64.0</td>
+        <td>-36</td>
+        <td>-166</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДОКИНЗ</td>
+        <td><a href="https://t.me/dokinz">https://t.me/dokinz</a></td>
+        <td>Религия</td>
+        <td>26196</td>
+        <td>19775</td>
+        <td>76.0</td>
+        <td>-111</td>
+        <td>-559</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Православный Календарь</td>
+        <td><a href="https://t.me/joinchat/SME9tjEnUGoxOGIy">https://t.me/joinchat/SME9tjEnUGoxOGIy</a></td>
+        <td>Религия</td>
+        <td>25980</td>
+        <td>4768</td>
+        <td>19.0</td>
+        <td>-82</td>
+        <td>-86</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Муса | Бlе хьадис</td>
+        <td><a href="https://t.me/stohadis">https://t.me/stohadis</a></td>
+        <td>Религия</td>
+        <td>25607</td>
+        <td>3617</td>
+        <td>15.0</td>
+        <td>-94</td>
+        <td>-392</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Красивое чтение Корана</td>
+        <td><a href="https://t.me/KitabAllah">https://t.me/KitabAllah</a></td>
+        <td>Религия</td>
+        <td>25565</td>
+        <td>9798</td>
+        <td>39.0</td>
+        <td>27</td>
+        <td>158</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Православие истина</td>
+        <td><a href="https://t.me/pravoslavie24">https://t.me/pravoslavie24</a></td>
+        <td>Религия</td>
+        <td>25214</td>
+        <td>4570</td>
+        <td>19.0</td>
+        <td>-37</td>
+        <td>52</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Исламские 🌙</td>
+        <td><a href="https://t.me/islamskie8">https://t.me/islamskie8</a></td>
+        <td>Религия</td>
+        <td>24696</td>
+        <td>1516</td>
+        <td>7.0</td>
+        <td>-201</td>
+        <td>-994</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Рамадан | Исламский | Коран | Суры | Мусульмане</td>
+        <td><a href="https://t.me/halal_tg">https://t.me/halal_tg</a></td>
+        <td>Религия</td>
+        <td>24607</td>
+        <td>4460</td>
+        <td>19.0</td>
+        <td>-189</td>
+        <td>1148</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Телеканал СОЮЗ</td>
+        <td><a href="https://t.me/tv_soyuz">https://t.me/tv_soyuz</a></td>
+        <td>Религия</td>
+        <td>24469</td>
+        <td>1192</td>
+        <td>5.0</td>
+        <td>13258</td>
+        <td>13283</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Виртуальные Библейские Туры</td>
+        <td><a href="https://t.me/v_b_tours">https://t.me/v_b_tours</a></td>
+        <td>Религия</td>
+        <td>24017</td>
+        <td>16670</td>
+        <td>70.0</td>
+        <td>-16</td>
+        <td>-53</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

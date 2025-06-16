@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Вероника Степанова</td>
+        <td><a href="https://t.me/veronikastepanova20011">https://t.me/veronikastepanova20011</a></td>
+        <td>Психология</td>
+        <td>483268</td>
+        <td>149828</td>
+        <td>31.0</td>
+        <td>-1240</td>
+        <td>-10689</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кристина Егиазарова Исходный Код</td>
+        <td><a href="https://t.me/kristina_egiazarova14">https://t.me/kristina_egiazarova14</a></td>
+        <td>Психология</td>
+        <td>440402</td>
+        <td>52003</td>
+        <td>12.0</td>
+        <td>-5572</td>
+        <td>-3225</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Готовит и Живет🔪психология</td>
+        <td><a href="https://t.me/Roma_food_life">https://t.me/Roma_food_life</a></td>
+        <td>Психология</td>
+        <td>316329</td>
+        <td>87983</td>
+        <td>28.0</td>
+        <td>2</td>
+        <td>4</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОЛЬГА ВАСИЛЕНКО: СЕКСОЛОГ, ПСИХОЛОГ</td>
+        <td><a href="https://t.me/sexology_vasilenko">https://t.me/sexology_vasilenko</a></td>
+        <td>Психология</td>
+        <td>274560</td>
+        <td>66980</td>
+        <td>25.0</td>
+        <td>-416</td>
+        <td>583</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Нейрографика бесплатно от Анастасии А</td>
+        <td><a href="https://t.me/neirografica_formagiclife">https://t.me/neirografica_formagiclife</a></td>
+        <td>Психология</td>
+        <td>241153</td>
+        <td>30423</td>
+        <td>13.0</td>
+        <td>-241</td>
+        <td>-2267</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Психология</td>
+        <td><a href="https://t.me/zhenskaya_psixologiya">https://t.me/zhenskaya_psixologiya</a></td>
+        <td>Психология</td>
+        <td>227875</td>
+        <td>13884</td>
+        <td>7.0</td>
+        <td>-964</td>
+        <td>-3276</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Психология отношений</td>
+        <td><a href="https://t.me/Psychologs">https://t.me/Psychologs</a></td>
+        <td>Психология</td>
+        <td>225297</td>
+        <td>20569</td>
+        <td>10.0</td>
+        <td>-1130</td>
+        <td>-2432</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Психолог Жора</td>
+        <td><a href="https://t.me/psihzh">https://t.me/psihzh</a></td>
+        <td>Психология</td>
+        <td>223734</td>
+        <td>80881</td>
+        <td>37.0</td>
+        <td>-11</td>
+        <td>3494</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Метод Лабковского</td>
+        <td><a href="https://t.me/labkovskiy">https://t.me/labkovskiy</a></td>
+        <td>Психология</td>
+        <td>216825</td>
+        <td>72817</td>
+        <td>34.0</td>
+        <td>-203</td>
+        <td>505</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Седа Каспарова</td>
+        <td><a href="https://t.me/Seda_Kasparova_news">https://t.me/Seda_Kasparova_news</a></td>
+        <td>Психология</td>
+        <td>206524</td>
+        <td>29352</td>
+        <td>15.0</td>
+        <td>618</td>
+        <td>2060</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Уроки этикета</td>
+        <td><a href="https://t.me/joinchat/_Pd7NBtsWlBlNjAy">https://t.me/joinchat/_Pd7NBtsWlBlNjAy</a></td>
+        <td>Психология</td>
+        <td>203703</td>
+        <td>21717</td>
+        <td>11.0</td>
+        <td>1306</td>
+        <td>-511</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мария Самарина про Путь</td>
+        <td><a href="https://t.me/joinchat/OrQ2lxEXYN0yZTUy">https://t.me/joinchat/OrQ2lxEXYN0yZTUy</a></td>
+        <td>Психология</td>
+        <td>196194</td>
+        <td>29797</td>
+        <td>16.0</td>
+        <td>-560</td>
+        <td>-2291</td>
+        <td>5 лет 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Тиндер гудбай</td>
+        <td><a href="https://t.me/tinderbye">https://t.me/tinderbye</a></td>
+        <td>Психология</td>
+        <td>187037</td>
+        <td>77380</td>
+        <td>42.0</td>
+        <td>1902</td>
+        <td>39621</td>
+        <td>1 год 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Департамент Власти l Психология</td>
+        <td><a href="https://t.me/deparpower">https://t.me/deparpower</a></td>
+        <td>Психология</td>
+        <td>186001</td>
+        <td>9506</td>
+        <td>6.0</td>
+        <td>-845</td>
+        <td>-4345</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Людмила Петрановская</td>
+        <td><a href="https://t.me/lpetranovskaya">https://t.me/lpetranovskaya</a></td>
+        <td>Психология</td>
+        <td>185409</td>
+        <td>43077</td>
+        <td>24.0</td>
+        <td>132</td>
+        <td>-551</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сатья. Официальный канал</td>
+        <td><a href="https://t.me/satyadas_official">https://t.me/satyadas_official</a></td>
+        <td>Психология</td>
+        <td>177484</td>
+        <td>55728</td>
+        <td>32.0</td>
+        <td>1032</td>
+        <td>4727</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Хельга, да</td>
+        <td><a href="https://t.me/helga18plus">https://t.me/helga18plus</a></td>
+        <td>Психология</td>
+        <td>176186</td>
+        <td>57289</td>
+        <td>33.0</td>
+        <td>-684</td>
+        <td>-3275</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Счастливый разум | Саморазвитие</td>
+        <td><a href="https://t.me/happy_intelligence">https://t.me/happy_intelligence</a></td>
+        <td>Психология</td>
+        <td>166558</td>
+        <td>16749</td>
+        <td>11.0</td>
+        <td>-903</td>
+        <td>-4932</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Татьяна Мужицкая и все-все-все</td>
+        <td><a href="https://t.me/muzhitskaya">https://t.me/muzhitskaya</a></td>
+        <td>Психология</td>
+        <td>162967</td>
+        <td>43563</td>
+        <td>27.0</td>
+        <td>46</td>
+        <td>311</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Нейропсихология</td>
+        <td><a href="https://t.me/joinchat/B2ebtCsdIk5mYWY8">https://t.me/joinchat/B2ebtCsdIk5mYWY8</a></td>
+        <td>Психология</td>
+        <td>161276</td>
+        <td>30650</td>
+        <td>19.0</td>
+        <td>-1404</td>
+        <td>-6693</td>
+        <td>9 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Саморазвитие онлайн</td>
+        <td><a href="https://t.me/samorazvition">https://t.me/samorazvition</a></td>
+        <td>Психология</td>
+        <td>158003</td>
+        <td>16265</td>
+        <td>11.0</td>
+        <td>-988</td>
+        <td>-5063</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Линда | мужской блог</td>
+        <td><a href="https://t.me/joinchat/AAAAAEluz5-ddFBJQZkBPA">https://t.me/joinchat/AAAAAEluz5-ddFBJQZkBPA</a></td>
+        <td>Психология</td>
+        <td>156394</td>
+        <td>53433</td>
+        <td>35.0</td>
+        <td>6702</td>
+        <td>36761</td>
+        <td>5 лет 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Трансерфинг реальности</td>
+        <td><a href="https://t.me/transerfing_realnosti_tyt">https://t.me/transerfing_realnosti_tyt</a></td>
+        <td>Психология</td>
+        <td>154948</td>
+        <td>33271</td>
+        <td>22.0</td>
+        <td>-10</td>
+        <td>38</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Психология</td>
+        <td><a href="https://t.me/psyxo1">https://t.me/psyxo1</a></td>
+        <td>Психология</td>
+        <td>143994</td>
+        <td>10244</td>
+        <td>8.0</td>
+        <td>-462</td>
+        <td>-2475</td>
+        <td>7 лет 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Ада Кондэ - личный канал - Ada Conde</td>
+        <td><a href="https://t.me/Adaconde1">https://t.me/Adaconde1</a></td>
+        <td>Психология</td>
+        <td>143027</td>
+        <td>38627</td>
+        <td>27.0</td>
+        <td>-442</td>
+        <td>-2007</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Философия мысли | Саморазвитие</td>
+        <td><a href="https://t.me/philosophicaI_thoughts">https://t.me/philosophicaI_thoughts</a></td>
+        <td>Психология</td>
+        <td>137843</td>
+        <td>18231</td>
+        <td>14.0</td>
+        <td>-693</td>
+        <td>-719</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Психология отношений</td>
+        <td><a href="https://t.me/psyhoIogy">https://t.me/psyhoIogy</a></td>
+        <td>Психология</td>
+        <td>137164</td>
+        <td>8446</td>
+        <td>7.0</td>
+        <td>-1831</td>
+        <td>-2102</td>
+        <td>3 года 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Секреты любви | Психология отношений</td>
+        <td><a href="https://t.me/joinchat/MeDkraO_YRg1ZWEy">https://t.me/joinchat/MeDkraO_YRg1ZWEy</a></td>
+        <td>Психология</td>
+        <td>133470</td>
+        <td>20693</td>
+        <td>16.0</td>
+        <td>2351</td>
+        <td>9790</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Психология саморазвития</td>
+        <td><a href="https://t.me/SilaSlov">https://t.me/SilaSlov</a></td>
+        <td>Психология</td>
+        <td>129895</td>
+        <td>11680</td>
+        <td>9.0</td>
+        <td>-236</td>
+        <td>-1230</td>
+        <td>8 лет 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>52 недели одержимости | мотивация</td>
+        <td><a href="https://t.me/kurs_obrazovanie">https://t.me/kurs_obrazovanie</a></td>
+        <td>Психология</td>
+        <td>129371</td>
+        <td>23963</td>
+        <td>19.0</td>
+        <td>-191</td>
+        <td>-1117</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>По Фрейду | Психоанализ</td>
+        <td><a href="https://t.me/accto_freud">https://t.me/accto_freud</a></td>
+        <td>Психология</td>
+        <td>129304</td>
+        <td>26959</td>
+        <td>21.0</td>
+        <td>21636</td>
+        <td>19185</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Апгрейд | Мотивация | Бизнес</td>
+        <td><a href="https://t.me/upgrade_motivation">https://t.me/upgrade_motivation</a></td>
+        <td>Психология</td>
+        <td>125141</td>
+        <td>9858</td>
+        <td>8.0</td>
+        <td>-198</td>
+        <td>-701</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Psychologiy • Психология</td>
+        <td><a href="https://t.me/psychologiy_tg">https://t.me/psychologiy_tg</a></td>
+        <td>Психология</td>
+        <td>124967</td>
+        <td>5070</td>
+        <td>5.0</td>
+        <td>-519</td>
+        <td>-2543</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Красота слов</td>
+        <td><a href="https://t.me/joinchat/Csj8DhvkfDBjN2Iy">https://t.me/joinchat/Csj8DhvkfDBjN2Iy</a></td>
+        <td>Психология</td>
+        <td>124306</td>
+        <td>22017</td>
+        <td>18.0</td>
+        <td>1303</td>
+        <td>2198</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лариса Суркова - larangsovet</td>
+        <td><a href="https://t.me/larangsovetme">https://t.me/larangsovetme</a></td>
+        <td>Психология</td>
+        <td>122994</td>
+        <td>26820</td>
+        <td>22.0</td>
+        <td>-561</td>
+        <td>2030</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Женский психолог</td>
+        <td><a href="https://t.me/joinchat/KHp5usgbiiNhNzky">https://t.me/joinchat/KHp5usgbiiNhNzky</a></td>
+        <td>Психология</td>
+        <td>122519</td>
+        <td>7050</td>
+        <td>6.0</td>
+        <td>-610</td>
+        <td>-3370</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мастер дня | Привычки</td>
+        <td><a href="https://t.me/Master_of_Habits">https://t.me/Master_of_Habits</a></td>
+        <td>Психология</td>
+        <td>121694</td>
+        <td>39106</td>
+        <td>33.0</td>
+        <td>1347</td>
+        <td>-4502</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сила Слов (Мотивация | Саморазвитие, Книги)</td>
+        <td><a href="https://t.me/silaslovv">https://t.me/silaslovv</a></td>
+        <td>Психология</td>
+        <td>117863</td>
+        <td>12439</td>
+        <td>11.0</td>
+        <td>235</td>
+        <td>1345</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Баба Зоя</td>
+        <td><a href="https://t.me/babazoyka">https://t.me/babazoyka</a></td>
+        <td>Психология</td>
+        <td>115424</td>
+        <td>61527</td>
+        <td>54.0</td>
+        <td>-1118</td>
+        <td>2042</td>
+        <td>10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Алина Гесс</td>
+        <td><a href="https://t.me/alinaguess">https://t.me/alinaguess</a></td>
+        <td>Психология</td>
+        <td>114528</td>
+        <td>30232</td>
+        <td>27.0</td>
+        <td>-161</td>
+        <td>-482</td>
+        <td>8 лет 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Психология отношений</td>
+        <td><a href="https://t.me/psy4love">https://t.me/psy4love</a></td>
+        <td>Психология</td>
+        <td>113205</td>
+        <td>9920</td>
+        <td>9.0</td>
+        <td>-321</td>
+        <td>-1796</td>
+        <td>7 лет 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Психолог Марк Бартон</td>
+        <td><a href="https://t.me/markbarton_mb">https://t.me/markbarton_mb</a></td>
+        <td>Психология</td>
+        <td>109817</td>
+        <td>13725</td>
+        <td>13.0</td>
+        <td>249</td>
+        <td>-33</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нейрографика с Оксаной Авдеевой</td>
+        <td><a href="https://t.me/joinchat/2vyCJKUvPI8xZmRi">https://t.me/joinchat/2vyCJKUvPI8xZmRi</a></td>
+        <td>Психология</td>
+        <td>109489</td>
+        <td>14001</td>
+        <td>13.0</td>
+        <td>-72</td>
+        <td>1539</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Я что, психолог?</td>
+        <td><a href="https://t.me/yapsihologya">https://t.me/yapsihologya</a></td>
+        <td>Психология</td>
+        <td>107533</td>
+        <td>6020</td>
+        <td>6.0</td>
+        <td>-502</td>
+        <td>-2142</td>
+        <td>3 года 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Бесстыжая. Агапитова про секс и сексуальность.</td>
+        <td><a href="https://t.me/joinchat/dxpltN-lD0E5OWQ6">https://t.me/joinchat/dxpltN-lD0E5OWQ6</a></td>
+        <td>Психология</td>
+        <td>107086</td>
+        <td>12149</td>
+        <td>12.0</td>
+        <td>-818</td>
+        <td>-3046</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Психология | Мотивация</td>
+        <td><a href="https://t.me/motivation_psychoIogy">https://t.me/motivation_psychoIogy</a></td>
+        <td>Психология</td>
+        <td>106857</td>
+        <td>6948</td>
+        <td>7.0</td>
+        <td>598</td>
+        <td>1638</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Татьяна Черниговская</td>
+        <td><a href="https://t.me/tvchernigovskya">https://t.me/tvchernigovskya</a></td>
+        <td>Психология</td>
+        <td>103922</td>
+        <td>29293</td>
+        <td>29.0</td>
+        <td>107</td>
+        <td>81</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Иначе не скажешь | Саморазвитие</td>
+        <td><a href="https://t.me/books_things">https://t.me/books_things</a></td>
+        <td>Психология</td>
+        <td>99470</td>
+        <td>21464</td>
+        <td>22.0</td>
+        <td>-649</td>
+        <td>-318</td>
+        <td>9 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Ок, ясно</td>
+        <td><a href="https://t.me/yasno_live">https://t.me/yasno_live</a></td>
+        <td>Психология</td>
+        <td>94550</td>
+        <td>21344</td>
+        <td>23.0</td>
+        <td>-169</td>
+        <td>613</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>MILANA TARBA Цифровой Психолог 🥇</td>
+        <td><a href="https://t.me/milana_tarba">https://t.me/milana_tarba</a></td>
+        <td>Психология</td>
+        <td>93302</td>
+        <td>13352</td>
+        <td>15.0</td>
+        <td>142</td>
+        <td>6263</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Vse_o_socionike</td>
+        <td><a href="https://t.me/vse_o_socionike">https://t.me/vse_o_socionike</a></td>
+        <td>Психология</td>
+        <td>93248</td>
+        <td>13123</td>
+        <td>15.0</td>
+        <td>-166</td>
+        <td>-891</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лучшая версия себя</td>
+        <td><a href="https://t.me/joinchat/9kRL-aLWpKZlMTMy">https://t.me/joinchat/9kRL-aLWpKZlMTMy</a></td>
+        <td>Психология</td>
+        <td>92204</td>
+        <td>6506</td>
+        <td>8.0</td>
+        <td>-862</td>
+        <td>-4732</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>women's community | психология и саморазвитие | мотивация</td>
+        <td><a href="https://t.me/womenspsi">https://t.me/womenspsi</a></td>
+        <td>Психология</td>
+        <td>91643</td>
+        <td>3989</td>
+        <td>5.0</td>
+        <td>-867</td>
+        <td>-3590</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Переход в ТАК. Мудрость</td>
+        <td><a href="https://t.me/perexodvtak">https://t.me/perexodvtak</a></td>
+        <td>Психология</td>
+        <td>89558</td>
+        <td>15431</td>
+        <td>18.0</td>
+        <td>163</td>
+        <td>3848</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>She is 10/10</td>
+        <td><a href="https://t.me/sheis10l10">https://t.me/sheis10l10</a></td>
+        <td>Психология</td>
+        <td>89407</td>
+        <td>12779</td>
+        <td>15.0</td>
+        <td>122</td>
+        <td>-840</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Где твои манеры? • Этикет</td>
+        <td><a href="https://t.me/etiketmaneri">https://t.me/etiketmaneri</a></td>
+        <td>Психология</td>
+        <td>89290</td>
+        <td>10123</td>
+        <td>12.0</td>
+        <td>-90</td>
+        <td>-256</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сатья Дас | Cемейная психология</td>
+        <td><a href="https://t.me/joinchat/MGz4Dr6rUzhhMDdi">https://t.me/joinchat/MGz4Dr6rUzhhMDdi</a></td>
+        <td>Психология</td>
+        <td>87831</td>
+        <td>48905</td>
+        <td>56.0</td>
+        <td>-1628</td>
+        <td>185</td>
+        <td>1 месяц 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Карина Рихтере Мамазония</td>
+        <td><a href="https://t.me/mamazonija">https://t.me/mamazonija</a></td>
+        <td>Психология</td>
+        <td>87669</td>
+        <td>6851</td>
+        <td>8.0</td>
+        <td>-66</td>
+        <td>323</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>BARTON🔴LIFE</td>
+        <td><a href="https://t.me/womancan_mb">https://t.me/womancan_mb</a></td>
+        <td>Психология</td>
+        <td>87428</td>
+        <td>8292</td>
+        <td>10.0</td>
+        <td>622</td>
+        <td>747</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>девочки, трындим</td>
+        <td><a href="https://t.me/joinchat/ocoWcYFWCFozMzQy">https://t.me/joinchat/ocoWcYFWCFozMzQy</a></td>
+        <td>Психология</td>
+        <td>86973</td>
+        <td>13186</td>
+        <td>16.0</td>
+        <td>-101</td>
+        <td>-3258</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Михаил Златкин | Консультации психотерапевта</td>
+        <td><a href="https://t.me/mezlatkin">https://t.me/mezlatkin</a></td>
+        <td>Психология</td>
+        <td>86290</td>
+        <td>1636</td>
+        <td>2.0</td>
+        <td>24582</td>
+        <td>29217</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мысли | Саморазвитие</td>
+        <td><a href="https://t.me/joinchat/7WWpH3FBTF1kY2Y6">https://t.me/joinchat/7WWpH3FBTF1kY2Y6</a></td>
+        <td>Психология</td>
+        <td>85139</td>
+        <td>5214</td>
+        <td>7.0</td>
+        <td>242</td>
+        <td>-695</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЗАРАБАТЫВАЙ💰</td>
+        <td><a href="https://t.me/joinchat/yw9g905SpaQyNGNi">https://t.me/joinchat/yw9g905SpaQyNGNi</a></td>
+        <td>Психология</td>
+        <td>84517</td>
+        <td>3902</td>
+        <td>5.0</td>
+        <td>-23246</td>
+        <td>-44283</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Несоветчик о психологии</td>
+        <td><a href="https://t.me/nesovetchik">https://t.me/nesovetchik</a></td>
+        <td>Психология</td>
+        <td>83876</td>
+        <td>19977</td>
+        <td>24.0</td>
+        <td>-88</td>
+        <td>1798</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Структура счастья</td>
+        <td><a href="https://t.me/structure_happy">https://t.me/structure_happy</a></td>
+        <td>Психология</td>
+        <td>83815</td>
+        <td>15695</td>
+        <td>19.0</td>
+        <td>513</td>
+        <td>5676</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сатья Дас | Частный</td>
+        <td><a href="https://t.me/joinchat/_sthEIp8eKdlYmUx">https://t.me/joinchat/_sthEIp8eKdlYmUx</a></td>
+        <td>Психология</td>
+        <td>83750</td>
+        <td>25541</td>
+        <td>31.0</td>
+        <td>-914</td>
+        <td>-4776</td>
+        <td>4 месяца 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>МОТИВАЦИЯ|БИЗНЕС|САМОРАЗВИТИЕ|dushevn01</td>
+        <td><a href="https://t.me/motivationdushevn01">https://t.me/motivationdushevn01</a></td>
+        <td>Психология</td>
+        <td>82931</td>
+        <td>8095</td>
+        <td>10.0</td>
+        <td>523</td>
+        <td>4443</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Психологи Козыревы. ДНК Академия бережного воспитания</td>
+        <td><a href="https://t.me/natalkoz_fm">https://t.me/natalkoz_fm</a></td>
+        <td>Психология</td>
+        <td>82362</td>
+        <td>8752</td>
+        <td>11.0</td>
+        <td>-334</td>
+        <td>-697</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Кукловод | Метод управления</td>
+        <td><a href="https://t.me/ikyklovod">https://t.me/ikyklovod</a></td>
+        <td>Психология</td>
+        <td>81576</td>
+        <td>8979</td>
+        <td>11.0</td>
+        <td>-227</td>
+        <td>-1046</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Психология простым языком</td>
+        <td><a href="https://t.me/psihologiyaaaaaa0">https://t.me/psihologiyaaaaaa0</a></td>
+        <td>Психология</td>
+        <td>81216</td>
+        <td>10327</td>
+        <td>13.0</td>
+        <td>-1029</td>
+        <td>-3689</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Быть собой</td>
+        <td><a href="https://t.me/joinchat/hpEgL_g-YNkwOThi">https://t.me/joinchat/hpEgL_g-YNkwOThi</a></td>
+        <td>Психология</td>
+        <td>80156</td>
+        <td>5124</td>
+        <td>7.0</td>
+        <td>3439</td>
+        <td>8422</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Business people | Мотивация</td>
+        <td><a href="https://t.me/motivator_inc">https://t.me/motivator_inc</a></td>
+        <td>Психология</td>
+        <td>79582</td>
+        <td>4543</td>
+        <td>6.0</td>
+        <td>140</td>
+        <td>1140</td>
+        <td>5 лет 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Психологи шутят</td>
+        <td><a href="https://t.me/tsitatyf">https://t.me/tsitatyf</a></td>
+        <td>Психология</td>
+        <td>78700</td>
+        <td>7951</td>
+        <td>11.0</td>
+        <td>-187</td>
+        <td>-1133</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GLAM CLUB - красота, стиль, женская энергия и немного хулиганства</td>
+        <td><a href="https://t.me/GLAM_CLUB">https://t.me/GLAM_CLUB</a></td>
+        <td>Психология</td>
+        <td>78576</td>
+        <td>36938</td>
+        <td>47.0</td>
+        <td>12123</td>
+        <td>21968</td>
+        <td>10 месяцев 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Алексей Ситников</td>
+        <td><a href="https://t.me/drSit">https://t.me/drSit</a></td>
+        <td>Психология</td>
+        <td>78335</td>
+        <td>23612</td>
+        <td>31.0</td>
+        <td>620</td>
+        <td>1981</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сегодня | Уже не вчера</td>
+        <td><a href="https://t.me/joinchat/ka6nztnB51sxNDJi">https://t.me/joinchat/ka6nztnB51sxNDJi</a></td>
+        <td>Психология</td>
+        <td>77614</td>
+        <td>6116</td>
+        <td>8.0</td>
+        <td>577</td>
+        <td>4337</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Манеры</td>
+        <td><a href="https://t.me/joinchat/huH9ZhYKUARhYWEy">https://t.me/joinchat/huH9ZhYKUARhYWEy</a></td>
+        <td>Психология</td>
+        <td>77595</td>
+        <td>13085</td>
+        <td>17.0</td>
+        <td>114</td>
+        <td>2678</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>эстетика</td>
+        <td><a href="https://t.me/estetika_x">https://t.me/estetika_x</a></td>
+        <td>Психология</td>
+        <td>77453</td>
+        <td>8203</td>
+        <td>11.0</td>
+        <td>80</td>
+        <td>669</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анна Кирьянова: эссе о жизни и любви</td>
+        <td><a href="https://t.me/av_kiryanova">https://t.me/av_kiryanova</a></td>
+        <td>Психология</td>
+        <td>77210</td>
+        <td>37570</td>
+        <td>49.0</td>
+        <td>191</td>
+        <td>902</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сатья Дас | Психология отношений</td>
+        <td><a href="https://t.me/joinchat/2fgSgUUElwJlYWQx">https://t.me/joinchat/2fgSgUUElwJlYWQx</a></td>
+        <td>Психология</td>
+        <td>76819</td>
+        <td>20614</td>
+        <td>27.0</td>
+        <td>-1577</td>
+        <td>16299</td>
+        <td>6 месяцев 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>МОТИВАТОР</td>
+        <td><a href="https://t.me/motivator_tv">https://t.me/motivator_tv</a></td>
+        <td>Психология</td>
+        <td>75595</td>
+        <td>5198</td>
+        <td>7.0</td>
+        <td>-211</td>
+        <td>-388</td>
+        <td>3 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Аналитик Разума</td>
+        <td><a href="https://t.me/joinchat/_e9H2MO0Lgw4ZWZi">https://t.me/joinchat/_e9H2MO0Lgw4ZWZi</a></td>
+        <td>Психология</td>
+        <td>75071</td>
+        <td>11544</td>
+        <td>16.0</td>
+        <td>-1014</td>
+        <td>-2600</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПСИХОЛОГ МАКС БЛЭК</td>
+        <td><a href="https://t.me/m_sovetnik">https://t.me/m_sovetnik</a></td>
+        <td>Психология</td>
+        <td>74865</td>
+        <td>11254</td>
+        <td>15.0</td>
+        <td>-125</td>
+        <td>-1152</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Sigma Club</td>
+        <td><a href="https://t.me/sigmaclub_tg">https://t.me/sigmaclub_tg</a></td>
+        <td>Психология</td>
+        <td>74835</td>
+        <td>3473</td>
+        <td>5.0</td>
+        <td>-595</td>
+        <td>-4909</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПСИХОЛОГИЯ СО СМЫСЛОМ</td>
+        <td><a href="https://t.me/so_smislomtg">https://t.me/so_smislomtg</a></td>
+        <td>Психология</td>
+        <td>74026</td>
+        <td>13024</td>
+        <td>18.0</td>
+        <td>-269</td>
+        <td>-479</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Максим Вердикт</td>
+        <td><a href="https://t.me/verdiktt">https://t.me/verdiktt</a></td>
+        <td>Психология</td>
+        <td>73592</td>
+        <td>59214</td>
+        <td>81.0</td>
+        <td>-68</td>
+        <td>-289</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Саморазвитие Plus+</td>
+        <td><a href="https://t.me/SelfDevelopmentPlus">https://t.me/SelfDevelopmentPlus</a></td>
+        <td>Психология</td>
+        <td>73365</td>
+        <td>27937</td>
+        <td>39.0</td>
+        <td>-556</td>
+        <td>2964</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Подкасты | Аудиокниги</td>
+        <td><a href="https://t.me/podkasti_audioknigi">https://t.me/podkasti_audioknigi</a></td>
+        <td>Психология</td>
+        <td>73115</td>
+        <td>11245</td>
+        <td>16.0</td>
+        <td>288</td>
+        <td>458</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дмитрий Гухман | Сексология</td>
+        <td><a href="https://t.me/idemvmeste_dimagukhman">https://t.me/idemvmeste_dimagukhman</a></td>
+        <td>Психология</td>
+        <td>72880</td>
+        <td>7219</td>
+        <td>10.0</td>
+        <td>-140</td>
+        <td>-490</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вадим Зеланд - Трансерфинг реальности</td>
+        <td><a href="https://t.me/zelandbox">https://t.me/zelandbox</a></td>
+        <td>Психология</td>
+        <td>72688</td>
+        <td>10616</td>
+        <td>15.0</td>
+        <td>25</td>
+        <td>346</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бачинская</td>
+        <td><a href="https://t.me/bachinskaya_oxana">https://t.me/bachinskaya_oxana</a></td>
+        <td>Психология</td>
+        <td>72440</td>
+        <td>21777</td>
+        <td>31.0</td>
+        <td>1084</td>
+        <td>542</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Психолог Прокопова Ольга</td>
+        <td><a href="https://t.me/olga_prokopova_s">https://t.me/olga_prokopova_s</a></td>
+        <td>Психология</td>
+        <td>71908</td>
+        <td>19289</td>
+        <td>27.0</td>
+        <td>1126</td>
+        <td>6987</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Горд🏴‍☠️</td>
+        <td><a href="https://t.me/oskolkiblok">https://t.me/oskolkiblok</a></td>
+        <td>Психология</td>
+        <td>71807</td>
+        <td>30441</td>
+        <td>43.0</td>
+        <td>-122</td>
+        <td>-833</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>DREVS</td>
+        <td><a href="https://t.me/doktordrevs">https://t.me/doktordrevs</a></td>
+        <td>Психология</td>
+        <td>71580</td>
+        <td>8524</td>
+        <td>12.0</td>
+        <td>-117</td>
+        <td>-700</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>̶Д̶о̶к̶т̶о̶р̶ Андрей Курпатов</td>
+        <td><a href="https://t.me/kurpatov_tg">https://t.me/kurpatov_tg</a></td>
+        <td>Психология</td>
+        <td>70994</td>
+        <td>10559</td>
+        <td>15.0</td>
+        <td>20</td>
+        <td>484</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вечная философия</td>
+        <td><a href="https://t.me/tim_philosophy">https://t.me/tim_philosophy</a></td>
+        <td>Психология</td>
+        <td>70962</td>
+        <td>7887</td>
+        <td>12.0</td>
+        <td>-173</td>
+        <td>-776</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>тайлер? | Психология</td>
+        <td><a href="https://t.me/tyler_durnen">https://t.me/tyler_durnen</a></td>
+        <td>Психология</td>
+        <td>70382</td>
+        <td>3190</td>
+        <td>5.0</td>
+        <td>-910</td>
+        <td>-4293</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Катерина Ленгольд</td>
+        <td><a href="https://t.me/Katerinalengold">https://t.me/Katerinalengold</a></td>
+        <td>Психология</td>
+        <td>70265</td>
+        <td>27872</td>
+        <td>40.0</td>
+        <td>183</td>
+        <td>757</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Твой путь к цели</td>
+        <td><a href="https://t.me/aeshetic_insane">https://t.me/aeshetic_insane</a></td>
+        <td>Психология</td>
+        <td>70125</td>
+        <td>8097</td>
+        <td>12.0</td>
+        <td>-107</td>
+        <td>112</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Зина Шамоян 🫂 Психолог. Психотерапевт.</td>
+        <td><a href="https://t.me/ZinaShamoyan">https://t.me/ZinaShamoyan</a></td>
+        <td>Психология</td>
+        <td>70067</td>
+        <td>31053</td>
+        <td>45.0</td>
+        <td>-23</td>
+        <td>650</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

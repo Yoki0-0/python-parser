@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>КиберТопор</td>
+        <td><a href="https://t.me/cybers">https://t.me/cybers</a></td>
+        <td>Игры</td>
+        <td>1934811</td>
+        <td>496459</td>
+        <td>26.0</td>
+        <td>31670</td>
+        <td>15496</td>
+        <td>2 года 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мир Supercell</td>
+        <td><a href="https://t.me/mir_supercell">https://t.me/mir_supercell</a></td>
+        <td>Игры</td>
+        <td>1859634</td>
+        <td>278979</td>
+        <td>15.0</td>
+        <td>9802</td>
+        <td>40007</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GAME_doc</td>
+        <td><a href="https://t.me/game_doc">https://t.me/game_doc</a></td>
+        <td>Игры</td>
+        <td>1593230</td>
+        <td>648</td>
+        <td>None</td>
+        <td>-9062</td>
+        <td>-42457</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Standoff 2</td>
+        <td><a href="https://t.me/play_standoff2">https://t.me/play_standoff2</a></td>
+        <td>Игры</td>
+        <td>1550977</td>
+        <td>900511</td>
+        <td>59.0</td>
+        <td>-23507</td>
+        <td>212439</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>BLACK RUSSIA</td>
+        <td><a href="https://t.me/br_dev">https://t.me/br_dev</a></td>
+        <td>Игры</td>
+        <td>1231711</td>
+        <td>586075</td>
+        <td>48.0</td>
+        <td>2548</td>
+        <td>10435</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пекарня</td>
+        <td><a href="https://t.me/joinchat/VIuvvPWhb-mR4BRq">https://t.me/joinchat/VIuvvPWhb-mR4BRq</a></td>
+        <td>Игры</td>
+        <td>1145369</td>
+        <td>339300</td>
+        <td>30.0</td>
+        <td>-4427</td>
+        <td>47913</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>5PLAY⚡️Official</td>
+        <td><a href="https://t.me/joinchat/aGdpTkthBPg1YWUy">https://t.me/joinchat/aGdpTkthBPg1YWUy</a></td>
+        <td>Игры</td>
+        <td>908531</td>
+        <td>195383</td>
+        <td>22.0</td>
+        <td>9459</td>
+        <td>66839</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Linked Squad</td>
+        <td><a href="https://t.me/linkedsquad">https://t.me/linkedsquad</a></td>
+        <td>Игры</td>
+        <td>678983</td>
+        <td>301706</td>
+        <td>45.0</td>
+        <td>-4660</td>
+        <td>-28514</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Клуб Романтики — Мои Истории</td>
+        <td><a href="https://t.me/official_romanceclub">https://t.me/official_romanceclub</a></td>
+        <td>Игры</td>
+        <td>677537</td>
+        <td>331285</td>
+        <td>49.0</td>
+        <td>2372</td>
+        <td>12001</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нулс Бравл | Нуллс</td>
+        <td><a href="https://t.me/nulls_ru">https://t.me/nulls_ru</a></td>
+        <td>Игры</td>
+        <td>617270</td>
+        <td>298814</td>
+        <td>49.0</td>
+        <td>-5177</td>
+        <td>-28759</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ванильные Сливки | Genshin Impact</td>
+        <td><a href="https://t.me/vanileaks">https://t.me/vanileaks</a></td>
+        <td>Игры</td>
+        <td>608861</td>
+        <td>274725</td>
+        <td>46.0</td>
+        <td>-891</td>
+        <td>4058</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CS2NEWS | Counter-Strike 2</td>
+        <td><a href="https://t.me/newcsgo">https://t.me/newcsgo</a></td>
+        <td>Игры</td>
+        <td>543643</td>
+        <td>112163</td>
+        <td>21.0</td>
+        <td>54126</td>
+        <td>159911</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Steam Community</td>
+        <td><a href="https://t.me/joinchat/qAbQ0K81DbBmMWZi">https://t.me/joinchat/qAbQ0K81DbBmMWZi</a></td>
+        <td>Игры</td>
+        <td>534718</td>
+        <td>103195</td>
+        <td>20.0</td>
+        <td>-3073</td>
+        <td>7811</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Tanks Blitz</td>
+        <td><a href="https://t.me/tanks_blitz_official">https://t.me/tanks_blitz_official</a></td>
+        <td>Игры</td>
+        <td>531129</td>
+        <td>268301</td>
+        <td>51.0</td>
+        <td>-717</td>
+        <td>26113</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Mobile Legends: Bang Bang</td>
+        <td><a href="https://t.me/mlbbcis">https://t.me/mlbbcis</a></td>
+        <td>Игры</td>
+        <td>512266</td>
+        <td>91950</td>
+        <td>18.0</td>
+        <td>-1595</td>
+        <td>-18321</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Donatov.net - Донат есть! 💎</td>
+        <td><a href="https://t.me/donatovnet">https://t.me/donatovnet</a></td>
+        <td>Игры</td>
+        <td>482973</td>
+        <td>77162</td>
+        <td>16.0</td>
+        <td>-70</td>
+        <td>31198</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Клюкер. Физклюк ТВ</td>
+        <td><a href="https://t.me/qlyuker">https://t.me/qlyuker</a></td>
+        <td>Игры</td>
+        <td>475491</td>
+        <td>211458</td>
+        <td>45.0</td>
+        <td>7098</td>
+        <td>153288</td>
+        <td>9 месяцев 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Геншин Дроп / GenshinDrop.io - кейсы с примогемами Геншин Импакт 💎</td>
+        <td><a href="https://t.me/genshindropcom">https://t.me/genshindropcom</a></td>
+        <td>Игры</td>
+        <td>447441</td>
+        <td>67671</td>
+        <td>16.0</td>
+        <td>-2383</td>
+        <td>-9960</td>
+        <td>3 года 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Mobimes - мобильные игры</td>
+        <td><a href="https://t.me/mobi_mes">https://t.me/mobi_mes</a></td>
+        <td>Игры</td>
+        <td>443392</td>
+        <td>75884</td>
+        <td>18.0</td>
+        <td>-2664</td>
+        <td>-10496</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Genshin Impact RU</td>
+        <td><a href="https://t.me/genshin_impact_ru_off">https://t.me/genshin_impact_ru_off</a></td>
+        <td>Игры</td>
+        <td>437394</td>
+        <td>149371</td>
+        <td>35.0</td>
+        <td>-1608</td>
+        <td>-5973</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>StandChillow</td>
+        <td><a href="https://t.me/chillow">https://t.me/chillow</a></td>
+        <td>Игры</td>
+        <td>435514</td>
+        <td>287129</td>
+        <td>66.0</td>
+        <td>-5159</td>
+        <td>-22424</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🎁STANDOFF 2 ПРОМОКОДЫ</td>
+        <td><a href="https://t.me/stendoff2_promocodess">https://t.me/stendoff2_promocodess</a></td>
+        <td>Игры</td>
+        <td>394200</td>
+        <td>28440</td>
+        <td>8.0</td>
+        <td>-4542</td>
+        <td>-4163</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Steam Kupikod</td>
+        <td><a href="https://t.me/steamkupikod">https://t.me/steamkupikod</a></td>
+        <td>Игры</td>
+        <td>386189</td>
+        <td>58835</td>
+        <td>16.0</td>
+        <td>2008</td>
+        <td>-1771</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Brawl Stars Datamines | BSD</td>
+        <td><a href="https://t.me/bsdatamines">https://t.me/bsdatamines</a></td>
+        <td>Игры</td>
+        <td>371233</td>
+        <td>75704</td>
+        <td>21.0</td>
+        <td>-4444</td>
+        <td>-20951</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Brat1shka</td>
+        <td><a href="https://t.me/brat1shkaso2">https://t.me/brat1shkaso2</a></td>
+        <td>Игры</td>
+        <td>362761</td>
+        <td>110931</td>
+        <td>31.0</td>
+        <td>4378</td>
+        <td>41347</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GGSTANDOFF</td>
+        <td><a href="https://t.me/ggstandof">https://t.me/ggstandof</a></td>
+        <td>Игры</td>
+        <td>353266</td>
+        <td>29389</td>
+        <td>9.0</td>
+        <td>9876</td>
+        <td>3738</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>XPreport</td>
+        <td><a href="https://t.me/PROgame_news">https://t.me/PROgame_news</a></td>
+        <td>Игры</td>
+        <td>335763</td>
+        <td>140329</td>
+        <td>42.0</td>
+        <td>2041</td>
+        <td>8579</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Brawl Stars Live</td>
+        <td><a href="https://t.me/BrawlStarsLives">https://t.me/BrawlStarsLives</a></td>
+        <td>Игры</td>
+        <td>323531</td>
+        <td>38495</td>
+        <td>12.0</td>
+        <td>-6744</td>
+        <td>-25956</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КБ. Игры</td>
+        <td><a href="https://t.me/cb_games">https://t.me/cb_games</a></td>
+        <td>Игры</td>
+        <td>315509</td>
+        <td>68873</td>
+        <td>22.0</td>
+        <td>-1354</td>
+        <td>-8007</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТРУСЫ РАЙЗА</td>
+        <td><a href="https://t.me/raiznews">https://t.me/raiznews</a></td>
+        <td>Игры</td>
+        <td>314436</td>
+        <td>84676</td>
+        <td>27.0</td>
+        <td>13078</td>
+        <td>22279</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>PUBG MOBILE</td>
+        <td><a href="https://t.me/official_pubgmobile_ru">https://t.me/official_pubgmobile_ru</a></td>
+        <td>Игры</td>
+        <td>312520</td>
+        <td>28426</td>
+        <td>10.0</td>
+        <td>9735</td>
+        <td>22227</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DreamPubg🎃</td>
+        <td><a href="https://t.me/dreampubg">https://t.me/dreampubg</a></td>
+        <td>Игры</td>
+        <td>312493</td>
+        <td>73612</td>
+        <td>24.0</td>
+        <td>1882</td>
+        <td>-11708</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>EVELONE 192</td>
+        <td><a href="https://t.me/Eveloneg">https://t.me/Eveloneg</a></td>
+        <td>Игры</td>
+        <td>312196</td>
+        <td>5179</td>
+        <td>2.0</td>
+        <td>-5013</td>
+        <td>-26485</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Киберспорт | Mobile Legends: Bang Bang</td>
+        <td><a href="https://t.me/mlbbesports">https://t.me/mlbbesports</a></td>
+        <td>Игры</td>
+        <td>308554</td>
+        <td>37221</td>
+        <td>13.0</td>
+        <td>-4122</td>
+        <td>5639</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ctrl+Game: Гейминг Киберспорт</td>
+        <td><a href="https://t.me/CtrlGame">https://t.me/CtrlGame</a></td>
+        <td>Игры</td>
+        <td>307703</td>
+        <td>119267</td>
+        <td>39.0</td>
+        <td>32</td>
+        <td>46</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Игры и Патчи</td>
+        <td><a href="https://t.me/joinchat/tTBVTlVc3rVmOWFi">https://t.me/joinchat/tTBVTlVc3rVmOWFi</a></td>
+        <td>Игры</td>
+        <td>307555</td>
+        <td>34212</td>
+        <td>12.0</td>
+        <td>16556</td>
+        <td>27221</td>
+        <td>1 год 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Counter-Strike 2</td>
+        <td><a href="https://t.me/counter_strike2">https://t.me/counter_strike2</a></td>
+        <td>Игры</td>
+        <td>304406</td>
+        <td>39620</td>
+        <td>13.0</td>
+        <td>-13514</td>
+        <td>134807</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Bulldrop Standoff 2</td>
+        <td><a href="https://t.me/bulldrop_standoff2">https://t.me/bulldrop_standoff2</a></td>
+        <td>Игры</td>
+        <td>298394</td>
+        <td>57154</td>
+        <td>20.0</td>
+        <td>-3196</td>
+        <td>-37033</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Holdik Tele 👾</td>
+        <td><a href="https://t.me/holdiktele">https://t.me/holdiktele</a></td>
+        <td>Игры</td>
+        <td>293630</td>
+        <td>51166</td>
+        <td>18.0</td>
+        <td>-3360</td>
+        <td>-22399</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>i.roblox.queen</td>
+        <td><a href="https://t.me/FreeRobloxQueen">https://t.me/FreeRobloxQueen</a></td>
+        <td>Игры</td>
+        <td>290587</td>
+        <td>9633</td>
+        <td>4.0</td>
+        <td>-1011</td>
+        <td>-27376</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Никита Берг</td>
+        <td><a href="https://t.me/mysticsberg">https://t.me/mysticsberg</a></td>
+        <td>Игры</td>
+        <td>282109</td>
+        <td>143018</td>
+        <td>51.0</td>
+        <td>-989</td>
+        <td>-4629</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир PlayStation</td>
+        <td><a href="https://t.me/psonychannel">https://t.me/psonychannel</a></td>
+        <td>Игры</td>
+        <td>273481</td>
+        <td>80517</td>
+        <td>30.0</td>
+        <td>534</td>
+        <td>9267</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Brawl Stars</td>
+        <td><a href="https://t.me/brawIstarsikk">https://t.me/brawIstarsikk</a></td>
+        <td>Игры</td>
+        <td>271852</td>
+        <td>35953</td>
+        <td>14.0</td>
+        <td>-5704</td>
+        <td>-21095</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>УЛЬТА</td>
+        <td><a href="https://t.me/ulta_games">https://t.me/ulta_games</a></td>
+        <td>Игры</td>
+        <td>270910</td>
+        <td>17757</td>
+        <td>7.0</td>
+        <td>-11972</td>
+        <td>-14804</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Веля</td>
+        <td><a href="https://t.me/velyamedia">https://t.me/velyamedia</a></td>
+        <td>Игры</td>
+        <td>268611</td>
+        <td>46762</td>
+        <td>18.0</td>
+        <td>-3210</td>
+        <td>-18763</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мир Brawl Stars</td>
+        <td><a href="https://t.me/joinchat/8BKU1LVSFWU5ZDc0">https://t.me/joinchat/8BKU1LVSFWU5ZDc0</a></td>
+        <td>Игры</td>
+        <td>264653</td>
+        <td>70864</td>
+        <td>27.0</td>
+        <td>-11580</td>
+        <td>-13271</td>
+        <td>8 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>🎮 androeed.ru - Взломанные игры для андроид</td>
+        <td><a href="https://t.me/androeed_games">https://t.me/androeed_games</a></td>
+        <td>Игры</td>
+        <td>262941</td>
+        <td>13277</td>
+        <td>5.0</td>
+        <td>-1882</td>
+        <td>-7989</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Arizona Role Play</td>
+        <td><a href="https://t.me/arizona_rpcom">https://t.me/arizona_rpcom</a></td>
+        <td>Игры</td>
+        <td>259938</td>
+        <td>120993</td>
+        <td>47.0</td>
+        <td>890</td>
+        <td>5791</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Grow a Garden | Roblox</td>
+        <td><a href="https://t.me/GrowaGardenm">https://t.me/GrowaGardenm</a></td>
+        <td>Игры</td>
+        <td>255764</td>
+        <td>66015</td>
+        <td>26.0</td>
+        <td>78272</td>
+        <td>242237</td>
+        <td>1 месяц 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>STANDVON | GGSTANDOFF и BULLDROP</td>
+        <td><a href="https://t.me/standvon">https://t.me/standvon</a></td>
+        <td>Игры</td>
+        <td>254310</td>
+        <td>17027</td>
+        <td>7.0</td>
+        <td>1166</td>
+        <td>23871</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>1hp</td>
+        <td><a href="https://t.me/joinchat/emPTMaSnI6YxNWEy">https://t.me/joinchat/emPTMaSnI6YxNWEy</a></td>
+        <td>Игры</td>
+        <td>253661</td>
+        <td>38177</td>
+        <td>16.0</td>
+        <td>-2015</td>
+        <td>-8434</td>
+        <td>11 месяцев 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>Clash Royale</td>
+        <td><a href="https://t.me/joinchat/44Q8txd-S0c1ODBi">https://t.me/joinchat/44Q8txd-S0c1ODBi</a></td>
+        <td>Игры</td>
+        <td>252283</td>
+        <td>102153</td>
+        <td>41.0</td>
+        <td>-7825</td>
+        <td>-6880</td>
+        <td>8 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Brawl Stars Lead</td>
+        <td><a href="https://t.me/brawl_lead">https://t.me/brawl_lead</a></td>
+        <td>Игры</td>
+        <td>250573</td>
+        <td>25433</td>
+        <td>11.0</td>
+        <td>-3816</td>
+        <td>-24000</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Гильдия Быстрого Матраса</td>
+        <td><a href="https://t.me/joinchat/eu03_Ck6ruA4Njk6">https://t.me/joinchat/eu03_Ck6ruA4Njk6</a></td>
+        <td>Игры</td>
+        <td>247773</td>
+        <td>66723</td>
+        <td>27.0</td>
+        <td>-6440</td>
+        <td>-33846</td>
+        <td>11 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Playerok x Steam</td>
+        <td><a href="https://t.me/playerok">https://t.me/playerok</a></td>
+        <td>Игры</td>
+        <td>246253</td>
+        <td>36512</td>
+        <td>15.0</td>
+        <td>7168</td>
+        <td>8990</td>
+        <td>3 года 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Нулс Бравл | Null’s Brawl | Нуллс</td>
+        <td><a href="https://t.me/nulls_brawl">https://t.me/nulls_brawl</a></td>
+        <td>Игры</td>
+        <td>246227</td>
+        <td>57127</td>
+        <td>24.0</td>
+        <td>-2745</td>
+        <td>-14928</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Free Apk Pro | Взломки игр на Андроид</td>
+        <td><a href="https://t.me/freeapkpr0">https://t.me/freeapkpr0</a></td>
+        <td>Игры</td>
+        <td>242048</td>
+        <td>13124</td>
+        <td>6.0</td>
+        <td>-1386</td>
+        <td>-4849</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Dota 2</td>
+        <td><a href="https://t.me/Dota2">https://t.me/Dota2</a></td>
+        <td>Игры</td>
+        <td>238117</td>
+        <td>51132</td>
+        <td>22.0</td>
+        <td>-551</td>
+        <td>427</td>
+        <td>9 лет 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>ПРЕПОД STEAM | ВСЁ ПРО ИГРЫ НА ПК</td>
+        <td><a href="https://t.me/joinchat/7jXS5jnFp0EwMTRi">https://t.me/joinchat/7jXS5jnFp0EwMTRi</a></td>
+        <td>Игры</td>
+        <td>235194</td>
+        <td>86196</td>
+        <td>37.0</td>
+        <td>5641</td>
+        <td>7478</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ванильный Хонкай | Honkai: Star Rail</td>
+        <td><a href="https://t.me/vanihsr">https://t.me/vanihsr</a></td>
+        <td>Игры</td>
+        <td>234618</td>
+        <td>167740</td>
+        <td>72.0</td>
+        <td>206</td>
+        <td>742</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ДержиДверь</td>
+        <td><a href="https://t.me/dergidver">https://t.me/dergidver</a></td>
+        <td>Игры</td>
+        <td>232358</td>
+        <td>116100</td>
+        <td>50.0</td>
+        <td>-137</td>
+        <td>-32</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатные звёзды</td>
+        <td><a href="https://t.me/freetgst">https://t.me/freetgst</a></td>
+        <td>Игры</td>
+        <td>231220</td>
+        <td>47532</td>
+        <td>21.0</td>
+        <td>-3447</td>
+        <td>-35147</td>
+        <td>6 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>WICSUR</td>
+        <td><a href="https://t.me/ttwicsur">https://t.me/ttwicsur</a></td>
+        <td>Игры</td>
+        <td>229699</td>
+        <td>83996</td>
+        <td>37.0</td>
+        <td>-1447</td>
+        <td>-6595</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Sklad APK| Игры</td>
+        <td><a href="https://t.me/skladgames">https://t.me/skladgames</a></td>
+        <td>Игры</td>
+        <td>228886</td>
+        <td>22618</td>
+        <td>10.0</td>
+        <td>19675</td>
+        <td>70305</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>STEAM ИГРЫ ПК</td>
+        <td><a href="https://t.me/igry_stim">https://t.me/igry_stim</a></td>
+        <td>Игры</td>
+        <td>228384</td>
+        <td>22345</td>
+        <td>10.0</td>
+        <td>-2781</td>
+        <td>-4741</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТикТак</td>
+        <td><a href="https://t.me/joinchat/0686s3On3jA2Mjgy">https://t.me/joinchat/0686s3On3jA2Mjgy</a></td>
+        <td>Игры</td>
+        <td>226064</td>
+        <td>14551</td>
+        <td>7.0</td>
+        <td>-3013</td>
+        <td>-5135</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>HASSLE Online</td>
+        <td><a href="https://t.me/hassleonline">https://t.me/hassleonline</a></td>
+        <td>Игры</td>
+        <td>224312</td>
+        <td>98999</td>
+        <td>45.0</td>
+        <td>1216</td>
+        <td>2500</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Jeteed</td>
+        <td><a href="https://t.me/jeteed">https://t.me/jeteed</a></td>
+        <td>Игры</td>
+        <td>220662</td>
+        <td>16114</td>
+        <td>8.0</td>
+        <td>-2273</td>
+        <td>-10881</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Brawl Stars Land</td>
+        <td><a href="https://t.me/brawls_land">https://t.me/brawls_land</a></td>
+        <td>Игры</td>
+        <td>218651</td>
+        <td>32465</td>
+        <td>15.0</td>
+        <td>-4015</td>
+        <td>-16222</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Honkai: Star Rail RU</td>
+        <td><a href="https://t.me/honkaistarrailofficial">https://t.me/honkaistarrailofficial</a></td>
+        <td>Игры</td>
+        <td>217590</td>
+        <td>94196</td>
+        <td>44.0</td>
+        <td>-80</td>
+        <td>-718</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Логово Вверху (Братишкин)</td>
+        <td><a href="https://t.me/nebudetafk">https://t.me/nebudetafk</a></td>
+        <td>Игры</td>
+        <td>212140</td>
+        <td>132169</td>
+        <td>63.0</td>
+        <td>-164</td>
+        <td>-314</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Skins Farm - голда Standoff 2</td>
+        <td><a href="https://t.me/skinsfarmapp">https://t.me/skinsfarmapp</a></td>
+        <td>Игры</td>
+        <td>209894</td>
+        <td>11192</td>
+        <td>6.0</td>
+        <td>-3930</td>
+        <td>-18489</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КУКИСС | Моды</td>
+        <td><a href="https://t.me/thecookiss">https://t.me/thecookiss</a></td>
+        <td>Игры</td>
+        <td>208819</td>
+        <td>52312</td>
+        <td>26.0</td>
+        <td>285</td>
+        <td>-1060</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Gabe News | Dota 2</td>
+        <td><a href="https://t.me/gabenews">https://t.me/gabenews</a></td>
+        <td>Игры</td>
+        <td>200042</td>
+        <td>27455</td>
+        <td>14.0</td>
+        <td>-4209</td>
+        <td>8609</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DailyGames</td>
+        <td><a href="https://t.me/GamesDays7">https://t.me/GamesDays7</a></td>
+        <td>Игры</td>
+        <td>198202</td>
+        <td>98430</td>
+        <td>50.0</td>
+        <td>1619</td>
+        <td>6531</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кыргызча Кинолор</td>
+        <td><a href="https://t.me/kyrgyzmovie">https://t.me/kyrgyzmovie</a></td>
+        <td>Игры</td>
+        <td>196286</td>
+        <td>206247</td>
+        <td>106.0</td>
+        <td>3764</td>
+        <td>22114</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Fucking Steam</td>
+        <td><a href="https://t.me/joinchat/AAAAAE6kDjFrocnR6IRfzg">https://t.me/joinchat/AAAAAE6kDjFrocnR6IRfzg</a></td>
+        <td>Игры</td>
+        <td>196166</td>
+        <td>47180</td>
+        <td>25.0</td>
+        <td>-1883</td>
+        <td>-8011</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир Танков</td>
+        <td><a href="https://t.me/official_mirtankovru">https://t.me/official_mirtankovru</a></td>
+        <td>Игры</td>
+        <td>194499</td>
+        <td>82768</td>
+        <td>43.0</td>
+        <td>74</td>
+        <td>739</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Глеб UC</td>
+        <td><a href="https://t.me/gleb_uc">https://t.me/gleb_uc</a></td>
+        <td>Игры</td>
+        <td>194878</td>
+        <td>57982</td>
+        <td>30.0</td>
+        <td>-7100</td>
+        <td>-18797</td>
+        <td>3 года 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Grand Mobile</td>
+        <td><a href="https://t.me/grandroleplay">https://t.me/grandroleplay</a></td>
+        <td>Игры</td>
+        <td>189164</td>
+        <td>71420</td>
+        <td>38.0</td>
+        <td>-353</td>
+        <td>-4993</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Aniverse card</td>
+        <td><a href="https://t.me/aniversecard">https://t.me/aniversecard</a></td>
+        <td>Игры</td>
+        <td>188243</td>
+        <td>56703</td>
+        <td>31.0</td>
+        <td>-3555</td>
+        <td>-13243</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>CSFAIL</td>
+        <td><a href="https://t.me/csfail">https://t.me/csfail</a></td>
+        <td>Игры</td>
+        <td>187838</td>
+        <td>9848</td>
+        <td>6.0</td>
+        <td>5650</td>
+        <td>8821</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Kupikod Gold</td>
+        <td><a href="https://t.me/kupikod_gold">https://t.me/kupikod_gold</a></td>
+        <td>Игры</td>
+        <td>187532</td>
+        <td>10618</td>
+        <td>6.0</td>
+        <td>-1785</td>
+        <td>-13370</td>
+        <td>2 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>LiteApk ⚡️ Official</td>
+        <td><a href="https://t.me/ApkCheats">https://t.me/ApkCheats</a></td>
+        <td>Игры</td>
+        <td>187356</td>
+        <td>33513</td>
+        <td>18.0</td>
+        <td>-2820</td>
+        <td>-14319</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тока Бока 1.110 🍄 Скачать</td>
+        <td><a href="https://t.me/pochta_tocaboca">https://t.me/pochta_tocaboca</a></td>
+        <td>Игры</td>
+        <td>184512</td>
+        <td>53102</td>
+        <td>29.0</td>
+        <td>-969</td>
+        <td>-6849</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VG/Двач</td>
+        <td><a href="https://t.me/ru2chvg">https://t.me/ru2chvg</a></td>
+        <td>Игры</td>
+        <td>184496</td>
+        <td>59674</td>
+        <td>33.0</td>
+        <td>140</td>
+        <td>1500</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>FIXEYE / ФИКСАЙ</td>
+        <td><a href="https://t.me/fixeeye">https://t.me/fixeeye</a></td>
+        <td>Игры</td>
+        <td>181829</td>
+        <td>63068</td>
+        <td>35.0</td>
+        <td>1434</td>
+        <td>-2181</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>FunPay</td>
+        <td><a href="https://t.me/joinchat/8TIX7ztAOo5kZDYy">https://t.me/joinchat/8TIX7ztAOo5kZDYy</a></td>
+        <td>Игры</td>
+        <td>179491</td>
+        <td>52204</td>
+        <td>30.0</td>
+        <td>589</td>
+        <td>2426</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CheZee</td>
+        <td><a href="https://t.me/papachez_official">https://t.me/papachez_official</a></td>
+        <td>Игры</td>
+        <td>179265</td>
+        <td>57735</td>
+        <td>33.0</td>
+        <td>-1674</td>
+        <td>-3610</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Case-Battle 💣</td>
+        <td><a href="https://t.me/casebattle_official">https://t.me/casebattle_official</a></td>
+        <td>Игры</td>
+        <td>179253</td>
+        <td>141481</td>
+        <td>79.0</td>
+        <td>4686</td>
+        <td>13021</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Compomes - игры на ПК</td>
+        <td><a href="https://t.me/compomes">https://t.me/compomes</a></td>
+        <td>Игры</td>
+        <td>179187</td>
+        <td>55724</td>
+        <td>32.0</td>
+        <td>-84</td>
+        <td>879</td>
+        <td>7 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Brawl Stars News</td>
+        <td><a href="https://t.me/brawls_play">https://t.me/brawls_play</a></td>
+        <td>Игры</td>
+        <td>177603</td>
+        <td>24959</td>
+        <td>15.0</td>
+        <td>-2751</td>
+        <td>-19711</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>M0NESY LIFE</td>
+        <td><a href="https://t.me/m0NESY13">https://t.me/m0NESY13</a></td>
+        <td>Игры</td>
+        <td>177221</td>
+        <td>213927</td>
+        <td>121.0</td>
+        <td>611</td>
+        <td>-3877</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Stray Dungeon</td>
+        <td><a href="https://t.me/StrayDungeon228">https://t.me/StrayDungeon228</a></td>
+        <td>Игры</td>
+        <td>175765</td>
+        <td>42935</td>
+        <td>25.0</td>
+        <td>-1453</td>
+        <td>-2821</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>BetBoom Esports Dota 2</td>
+        <td><a href="https://t.me/betboom_esports">https://t.me/betboom_esports</a></td>
+        <td>Игры</td>
+        <td>174908</td>
+        <td>37778</td>
+        <td>22.0</td>
+        <td>-218</td>
+        <td>2600</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Brawl Diro</td>
+        <td><a href="https://t.me/brawldiro">https://t.me/brawldiro</a></td>
+        <td>Игры</td>
+        <td>173879</td>
+        <td>34288</td>
+        <td>20.0</td>
+        <td>-3866</td>
+        <td>-12323</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ретейк</td>
+        <td><a href="https://t.me/retakenews">https://t.me/retakenews</a></td>
+        <td>Игры</td>
+        <td>173043</td>
+        <td>39437</td>
+        <td>23.0</td>
+        <td>2064</td>
+        <td>5408</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>donk</td>
+        <td><a href="https://t.me/donk1221">https://t.me/donk1221</a></td>
+        <td>Игры</td>
+        <td>170536</td>
+        <td>144967</td>
+        <td>85.0</td>
+        <td>2409</td>
+        <td>5063</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>тока бока 1.110 💚 скачать</td>
+        <td><a href="https://t.me/vzlomtokaz">https://t.me/vzlomtokaz</a></td>
+        <td>Игры</td>
+        <td>169819</td>
+        <td>41182</td>
+        <td>25.0</td>
+        <td>-1023</td>
+        <td>-6497</td>
+        <td>3 года 2 дня</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

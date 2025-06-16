@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Потерянное прошлое</td>
+        <td><a href="https://t.me/joinchat/BrfLK-3nWcNlNDQy">https://t.me/joinchat/BrfLK-3nWcNlNDQy</a></td>
+        <td>Познавательное</td>
+        <td>835058</td>
+        <td>104341</td>
+        <td>13.0</td>
+        <td>-3032</td>
+        <td>8504</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Факт дня</td>
+        <td><a href="https://t.me/faktiru">https://t.me/faktiru</a></td>
+        <td>Познавательное</td>
+        <td>820985</td>
+        <td>28711</td>
+        <td>4.0</td>
+        <td>281</td>
+        <td>-1020</td>
+        <td>8 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Фотоаппарат</td>
+        <td><a href="https://t.me/joinchat/AAAAAEKhxnkHJHyj6l2jjQ">https://t.me/joinchat/AAAAAEKhxnkHJHyj6l2jjQ</a></td>
+        <td>Познавательное</td>
+        <td>580579</td>
+        <td>85245</td>
+        <td>15.0</td>
+        <td>-1430</td>
+        <td>-2585</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Современная Хозяйка</td>
+        <td><a href="https://t.me/joinchat/NglBOL-5_ewyZGUy">https://t.me/joinchat/NglBOL-5_ewyZGUy</a></td>
+        <td>Познавательное</td>
+        <td>546479</td>
+        <td>45448</td>
+        <td>9.0</td>
+        <td>226</td>
+        <td>-989</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тесты и точка.</td>
+        <td><a href="https://t.me/test_dot">https://t.me/test_dot</a></td>
+        <td>Познавательное</td>
+        <td>544115</td>
+        <td>80809</td>
+        <td>15.0</td>
+        <td>-2833</td>
+        <td>-13133</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТОПЛЕС</td>
+        <td><a href="https://t.me/toplesofficial">https://t.me/toplesofficial</a></td>
+        <td>Познавательное</td>
+        <td>508341</td>
+        <td>112231</td>
+        <td>23.0</td>
+        <td>503</td>
+        <td>828</td>
+        <td>7 лет 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Хитрости хозяюшки</td>
+        <td><a href="https://t.me/hitrosti_hozyaushki">https://t.me/hitrosti_hozyaushki</a></td>
+        <td>Познавательное</td>
+        <td>485287</td>
+        <td>43239</td>
+        <td>9.0</td>
+        <td>538</td>
+        <td>-19</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Че, История</td>
+        <td><a href="https://t.me/joinchat/JIFJ160WQGkxNGZi">https://t.me/joinchat/JIFJ160WQGkxNGZi</a></td>
+        <td>Познавательное</td>
+        <td>425185</td>
+        <td>14244</td>
+        <td>4.0</td>
+        <td>-1894</td>
+        <td>-8245</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фактач | Факты | История</td>
+        <td><a href="https://t.me/facta4ch">https://t.me/facta4ch</a></td>
+        <td>Познавательное</td>
+        <td>379513</td>
+        <td>13987</td>
+        <td>4.0</td>
+        <td>-3419</td>
+        <td>-33248</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>История</td>
+        <td><a href="https://t.me/history_0o">https://t.me/history_0o</a></td>
+        <td>Познавательное</td>
+        <td>355332</td>
+        <td>50313</td>
+        <td>15.0</td>
+        <td>2890</td>
+        <td>929</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🏘 Домашние Хитрости 👩🏼‍🔧</td>
+        <td><a href="https://t.me/joinchat/Crq0K2TDBLMxOWU6">https://t.me/joinchat/Crq0K2TDBLMxOWU6</a></td>
+        <td>Познавательное</td>
+        <td>353192</td>
+        <td>31197</td>
+        <td>9.0</td>
+        <td>-811</td>
+        <td>-4003</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЗАБЫТАЯ ИСТОРИЯ</td>
+        <td><a href="https://t.me/joinchat/0uOpSnasBrk4YmUy">https://t.me/joinchat/0uOpSnasBrk4YmUy</a></td>
+        <td>Познавательное</td>
+        <td>348863</td>
+        <td>25615</td>
+        <td>8.0</td>
+        <td>-2343</td>
+        <td>-9561</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Полезные лайфхаки | Хитрости жизни</td>
+        <td><a href="https://t.me/joinchat/PrpqHC0u1aVmZTEy">https://t.me/joinchat/PrpqHC0u1aVmZTEy</a></td>
+        <td>Познавательное</td>
+        <td>344462</td>
+        <td>37657</td>
+        <td>11.0</td>
+        <td>264</td>
+        <td>5744</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лайфхак на заметку</td>
+        <td><a href="https://t.me/joinchat/xKI8uVIxjX4yYWNi">https://t.me/joinchat/xKI8uVIxjX4yYWNi</a></td>
+        <td>Познавательное</td>
+        <td>323998</td>
+        <td>30742</td>
+        <td>10.0</td>
+        <td>-1317</td>
+        <td>1443</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лови Лайфхак</td>
+        <td><a href="https://t.me/joinchat/AAAAAEcGuwbTcA8NpchR4g">https://t.me/joinchat/AAAAAEcGuwbTcA8NpchR4g</a></td>
+        <td>Познавательное</td>
+        <td>319069</td>
+        <td>25130</td>
+        <td>8.0</td>
+        <td>-1238</td>
+        <td>-5760</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Кот Шрёдингера | Наука и Факты</td>
+        <td><a href="https://t.me/SchroodingerCat">https://t.me/SchroodingerCat</a></td>
+        <td>Познавательное</td>
+        <td>316947</td>
+        <td>47111</td>
+        <td>15.0</td>
+        <td>-31</td>
+        <td>799</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>1000 идей</td>
+        <td><a href="https://t.me/joinchat/gRXvAq9YnVE2NGRi">https://t.me/joinchat/gRXvAq9YnVE2NGRi</a></td>
+        <td>Познавательное</td>
+        <td>309792</td>
+        <td>21387</td>
+        <td>7.0</td>
+        <td>-1076</td>
+        <td>-2434</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Физика Просто</td>
+        <td><a href="https://t.me/joinchat/TFEfR6A7mzV2cxtM">https://t.me/joinchat/TFEfR6A7mzV2cxtM</a></td>
+        <td>Познавательное</td>
+        <td>308242</td>
+        <td>36275</td>
+        <td>12.0</td>
+        <td>-2085</td>
+        <td>20241</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Discovery</td>
+        <td><a href="https://t.me/joinchat/2XHRJacmL4tmNzBi">https://t.me/joinchat/2XHRJacmL4tmNzBi</a></td>
+        <td>Познавательное</td>
+        <td>305268</td>
+        <td>14880</td>
+        <td>5.0</td>
+        <td>-1437</td>
+        <td>-6897</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Молодость</td>
+        <td><a href="https://t.me/joinchat/tbrXsdihHtAyNWQ6">https://t.me/joinchat/tbrXsdihHtAyNWQ6</a></td>
+        <td>Познавательное</td>
+        <td>302108</td>
+        <td>19051</td>
+        <td>7.0</td>
+        <td>-1655</td>
+        <td>-7019</td>
+        <td>3 года 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Мы из СССР | История</td>
+        <td><a href="https://t.me/joinchat/AAAAAFKguTghhqjwhIHlTw">https://t.me/joinchat/AAAAAFKguTghhqjwhIHlTw</a></td>
+        <td>Познавательное</td>
+        <td>292850</td>
+        <td>35624</td>
+        <td>13.0</td>
+        <td>97</td>
+        <td>-640</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Фотоплёнка</td>
+        <td><a href="https://t.me/joinchat/AAAAAE_YYyTV7iuK90lQCw">https://t.me/joinchat/AAAAAE_YYyTV7iuK90lQCw</a></td>
+        <td>Познавательное</td>
+        <td>282511</td>
+        <td>48409</td>
+        <td>18.0</td>
+        <td>-1158</td>
+        <td>-2002</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Интересно Знать</td>
+        <td><a href="https://t.me/joinchat/AAAAAFXvyaAVPkFgP0oXVw">https://t.me/joinchat/AAAAAFXvyaAVPkFgP0oXVw</a></td>
+        <td>Познавательное</td>
+        <td>274817</td>
+        <td>20297</td>
+        <td>8.0</td>
+        <td>193</td>
+        <td>-2592</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Naked Space</td>
+        <td><a href="https://t.me/joinchat/AAAAAE94Hb8j7HveMXhVcA">https://t.me/joinchat/AAAAAE94Hb8j7HveMXhVcA</a></td>
+        <td>Познавательное</td>
+        <td>268340</td>
+        <td>16678</td>
+        <td>7.0</td>
+        <td>-551</td>
+        <td>38</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Хитрость дня | Лайфхаки</td>
+        <td><a href="https://t.me/joinchat/ItlVPlgMsDA2NzJi">https://t.me/joinchat/ItlVPlgMsDA2NzJi</a></td>
+        <td>Познавательное</td>
+        <td>260187</td>
+        <td>27915</td>
+        <td>11.0</td>
+        <td>16539</td>
+        <td>12852</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скрытая правда</td>
+        <td><a href="https://t.me/joinchat/yM2aQ1-NOrRmOGIy">https://t.me/joinchat/yM2aQ1-NOrRmOGIy</a></td>
+        <td>Познавательное</td>
+        <td>259570</td>
+        <td>23790</td>
+        <td>10.0</td>
+        <td>-558</td>
+        <td>1347</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Science | Наука</td>
+        <td><a href="https://t.me/joinchat/KUXIZ20Okuo3ZjEy">https://t.me/joinchat/KUXIZ20Okuo3ZjEy</a></td>
+        <td>Познавательное</td>
+        <td>253123</td>
+        <td>19339</td>
+        <td>8.0</td>
+        <td>392</td>
+        <td>873</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Bad History</td>
+        <td><a href="https://t.me/joinchat/AAAAAE9xq1qq4FLNDZ1AqA">https://t.me/joinchat/AAAAAE9xq1qq4FLNDZ1AqA</a></td>
+        <td>Познавательное</td>
+        <td>250049</td>
+        <td>17080</td>
+        <td>7.0</td>
+        <td>-1024</td>
+        <td>-836</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Порядок в доме</td>
+        <td><a href="https://t.me/joinchat/LucVWAl9uBVhNmUy">https://t.me/joinchat/LucVWAl9uBVhNmUy</a></td>
+        <td>Познавательное</td>
+        <td>247416</td>
+        <td>21220</td>
+        <td>9.0</td>
+        <td>-802</td>
+        <td>-3515</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ИСКУССТВО ВЫЖИВАТЬ</td>
+        <td><a href="https://t.me/joinchat/fo-75idnOHA3Mzgy">https://t.me/joinchat/fo-75idnOHA3Mzgy</a></td>
+        <td>Познавательное</td>
+        <td>240871</td>
+        <td>15016</td>
+        <td>7.0</td>
+        <td>776</td>
+        <td>324</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Это факт</td>
+        <td><a href="https://t.me/etofackt">https://t.me/etofackt</a></td>
+        <td>Познавательное</td>
+        <td>232985</td>
+        <td>28983</td>
+        <td>13.0</td>
+        <td>2034</td>
+        <td>4308</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Церебра | Наука и Факты</td>
+        <td><a href="https://t.me/cerebra_education">https://t.me/cerebra_education</a></td>
+        <td>Познавательное</td>
+        <td>230705</td>
+        <td>25781</td>
+        <td>12.0</td>
+        <td>882</td>
+        <td>4398</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Выставка | История</td>
+        <td><a href="https://t.me/joinchat/tYr7zuzJHwM5YTBi">https://t.me/joinchat/tYr7zuzJHwM5YTBi</a></td>
+        <td>Познавательное</td>
+        <td>230374</td>
+        <td>17347</td>
+        <td>8.0</td>
+        <td>-656</td>
+        <td>-3561</td>
+        <td>3 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>История</td>
+        <td><a href="https://t.me/joinchat/kZpQHIsHBFNhODFi">https://t.me/joinchat/kZpQHIsHBFNhODFi</a></td>
+        <td>Познавательное</td>
+        <td>220586</td>
+        <td>34261</td>
+        <td>16.0</td>
+        <td>-557</td>
+        <td>185</td>
+        <td>3 года 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>СОВПАДЕНИЕ</td>
+        <td><a href="https://t.me/joinchat/3G559D65KF02MjUy">https://t.me/joinchat/3G559D65KF02MjUy</a></td>
+        <td>Познавательное</td>
+        <td>220455</td>
+        <td>24351</td>
+        <td>11.0</td>
+        <td>-841</td>
+        <td>-4198</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Наука и факты</td>
+        <td><a href="https://t.me/FactTG">https://t.me/FactTG</a></td>
+        <td>Познавательное</td>
+        <td>216535</td>
+        <td>43277</td>
+        <td>20.0</td>
+        <td>-211</td>
+        <td>-1116</td>
+        <td>8 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Чудо Гаджеты</td>
+        <td><a href="https://t.me/joinchat/V4zCACoSRUg0ZTgy">https://t.me/joinchat/V4zCACoSRUg0ZTgy</a></td>
+        <td>Познавательное</td>
+        <td>214803</td>
+        <td>31266</td>
+        <td>15.0</td>
+        <td>-2352</td>
+        <td>-11817</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>История человечества</td>
+        <td><a href="https://t.me/historic_ru">https://t.me/historic_ru</a></td>
+        <td>Познавательное</td>
+        <td>214728</td>
+        <td>58933</td>
+        <td>28.0</td>
+        <td>-578</td>
+        <td>2507</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вторжение</td>
+        <td><a href="https://t.me/joinchat/9Nnm87BPDUozMjZi">https://t.me/joinchat/9Nnm87BPDUozMjZi</a></td>
+        <td>Познавательное</td>
+        <td>210878</td>
+        <td>43212</td>
+        <td>21.0</td>
+        <td>-276</td>
+        <td>4788</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Хозяйка в доме</td>
+        <td><a href="https://t.me/joinchat/xrAAME8Gdg04OTcy">https://t.me/joinchat/xrAAME8Gdg04OTcy</a></td>
+        <td>Познавательное</td>
+        <td>210657</td>
+        <td>21536</td>
+        <td>11.0</td>
+        <td>-946</td>
+        <td>-4256</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Real History</td>
+        <td><a href="https://t.me/joinchat/AAAAAE059ROYlje7zoVwYA">https://t.me/joinchat/AAAAAE059ROYlje7zoVwYA</a></td>
+        <td>Познавательное</td>
+        <td>210062</td>
+        <td>13864</td>
+        <td>7.0</td>
+        <td>16</td>
+        <td>-1364</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мгновения прошлого</td>
+        <td><a href="https://t.me/mgnovenia_proshlogo">https://t.me/mgnovenia_proshlogo</a></td>
+        <td>Познавательное</td>
+        <td>210036</td>
+        <td>19695</td>
+        <td>10.0</td>
+        <td>1073</td>
+        <td>2770</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ай, да хозяйка!</td>
+        <td><a href="https://t.me/joinchat/K-2BNt10cdEyNTNi">https://t.me/joinchat/K-2BNt10cdEyNTNi</a></td>
+        <td>Познавательное</td>
+        <td>204899</td>
+        <td>13695</td>
+        <td>7.0</td>
+        <td>-740</td>
+        <td>-3549</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>LOST</td>
+        <td><a href="https://t.me/joinchat/wqT2G-RA36o5OTky">https://t.me/joinchat/wqT2G-RA36o5OTky</a></td>
+        <td>Познавательное</td>
+        <td>204478</td>
+        <td>23431</td>
+        <td>12.0</td>
+        <td>-509</td>
+        <td>3639</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Млечный Путь</td>
+        <td><a href="https://t.me/joinchat/AAAAAE-AE81HMYputaAg0A">https://t.me/joinchat/AAAAAE-AE81HMYputaAg0A</a></td>
+        <td>Познавательное</td>
+        <td>203164</td>
+        <td>26681</td>
+        <td>14.0</td>
+        <td>-775</td>
+        <td>-1157</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>По Фактам</td>
+        <td><a href="https://t.me/pofactam_tg">https://t.me/pofactam_tg</a></td>
+        <td>Познавательное</td>
+        <td>199366</td>
+        <td>1398</td>
+        <td>1.0</td>
+        <td>-1257</td>
+        <td>-6421</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Обратно в СССР</td>
+        <td><a href="https://t.me/joinchat/KoVQf8dV_q4xNjVi">https://t.me/joinchat/KoVQf8dV_q4xNjVi</a></td>
+        <td>Познавательное</td>
+        <td>197284</td>
+        <td>16690</td>
+        <td>9.0</td>
+        <td>-857</td>
+        <td>-1999</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Naked Science</td>
+        <td><a href="https://t.me/nsmag">https://t.me/nsmag</a></td>
+        <td>Познавательное</td>
+        <td>196778</td>
+        <td>24302</td>
+        <td>13.0</td>
+        <td>-740</td>
+        <td>-3512</td>
+        <td>9 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Глазами Физика</td>
+        <td><a href="https://t.me/joinchat/kZ4ZeugPqHBiMmQy">https://t.me/joinchat/kZ4ZeugPqHBiMmQy</a></td>
+        <td>Познавательное</td>
+        <td>191250</td>
+        <td>26156</td>
+        <td>14.0</td>
+        <td>-709</td>
+        <td>-4147</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Домашние Хитрости</td>
+        <td><a href="https://t.me/joinchat/5DXkeR18iIc4MGZi">https://t.me/joinchat/5DXkeR18iIc4MGZi</a></td>
+        <td>Познавательное</td>
+        <td>191146</td>
+        <td>14404</td>
+        <td>8.0</td>
+        <td>-638</td>
+        <td>-3074</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Практичные советы | Лайфхаки</td>
+        <td><a href="https://t.me/joinchat/c7fIfOQjER8yNTZi">https://t.me/joinchat/c7fIfOQjER8yNTZi</a></td>
+        <td>Познавательное</td>
+        <td>189634</td>
+        <td>25010</td>
+        <td>14.0</td>
+        <td>318</td>
+        <td>4906</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НЕОБЪЯСНИМО</td>
+        <td><a href="https://t.me/joinchat/K2UMBFCVEHgxYjUy">https://t.me/joinchat/K2UMBFCVEHgxYjUy</a></td>
+        <td>Познавательное</td>
+        <td>188626</td>
+        <td>20995</td>
+        <td>12.0</td>
+        <td>-814</td>
+        <td>4815</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>De facto | Просвещение</td>
+        <td><a href="https://t.me/joinchat/vjwUzaGUYPRlNjgy">https://t.me/joinchat/vjwUzaGUYPRlNjgy</a></td>
+        <td>Познавательное</td>
+        <td>188089</td>
+        <td>18233</td>
+        <td>10.0</td>
+        <td>-825</td>
+        <td>1030</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Это интересно!</td>
+        <td><a href="https://t.me/very_interesno">https://t.me/very_interesno</a></td>
+        <td>Познавательное</td>
+        <td>184162</td>
+        <td>23019</td>
+        <td>13.0</td>
+        <td>-645</td>
+        <td>-43</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЧУДО ТЕХНИКА</td>
+        <td><a href="https://t.me/joinchat/279Bxm-Q6nowMjky">https://t.me/joinchat/279Bxm-Q6nowMjky</a></td>
+        <td>Познавательное</td>
+        <td>182925</td>
+        <td>35156</td>
+        <td>20.0</td>
+        <td>-1983</td>
+        <td>-3823</td>
+        <td>10 месяцев 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>History Porn</td>
+        <td><a href="https://t.me/joinchat/uIEL5GMn4YA5MTYy">https://t.me/joinchat/uIEL5GMn4YA5MTYy</a></td>
+        <td>Познавательное</td>
+        <td>180597</td>
+        <td>35750</td>
+        <td>20.0</td>
+        <td>356</td>
+        <td>371</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир под Микроскопом</td>
+        <td><a href="https://t.me/joinchat/b-u-dfYsQ2tjZjZi">https://t.me/joinchat/b-u-dfYsQ2tjZjZi</a></td>
+        <td>Познавательное</td>
+        <td>177563</td>
+        <td>4490</td>
+        <td>3.0</td>
+        <td>-686</td>
+        <td>-3064</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Саморазвитие в Опросах</td>
+        <td><a href="https://t.me/joinchat/AAAAAFAR_Puxm5ymnBNI0g">https://t.me/joinchat/AAAAAFAR_Puxm5ymnBNI0g</a></td>
+        <td>Познавательное</td>
+        <td>176028</td>
+        <td>25121</td>
+        <td>15.0</td>
+        <td>-704</td>
+        <td>-89</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Порядок своими руками</td>
+        <td><a href="https://t.me/joinchat/hZvEy4Fc0c04ZDky">https://t.me/joinchat/hZvEy4Fc0c04ZDky</a></td>
+        <td>Познавательное</td>
+        <td>175884</td>
+        <td>16765</td>
+        <td>10.0</td>
+        <td>-854</td>
+        <td>-3769</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АЛЬТЕРНАТИВНЫЙ МИР</td>
+        <td><a href="https://t.me/joinchat/VWHY2FPuWIRlMTcy">https://t.me/joinchat/VWHY2FPuWIRlMTcy</a></td>
+        <td>Познавательное</td>
+        <td>175841</td>
+        <td>14429</td>
+        <td>9.0</td>
+        <td>421</td>
+        <td>5072</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Эпоха СССР</td>
+        <td><a href="https://t.me/joinchat/Xvi_mTfDndI1ZGMy">https://t.me/joinchat/Xvi_mTfDndI1ZGMy</a></td>
+        <td>Познавательное</td>
+        <td>174475</td>
+        <td>21066</td>
+        <td>13.0</td>
+        <td>-356</td>
+        <td>-213</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Маленькие хитрости | Лайфхаки</td>
+        <td><a href="https://t.me/joinchat/AAAAAEUSYJnemuTrLi277w">https://t.me/joinchat/AAAAAEUSYJnemuTrLi277w</a></td>
+        <td>Познавательное</td>
+        <td>174085</td>
+        <td>8572</td>
+        <td>5.0</td>
+        <td>-439</td>
+        <td>-2181</td>
+        <td>5 лет 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Железные факты</td>
+        <td><a href="https://t.me/joinchat/AAAAAFG2sXeVCLviPXOirg">https://t.me/joinchat/AAAAAFG2sXeVCLviPXOirg</a></td>
+        <td>Познавательное</td>
+        <td>173776</td>
+        <td>31296</td>
+        <td>18.0</td>
+        <td>-1303</td>
+        <td>105</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бытовые хитрости</td>
+        <td><a href="https://t.me/joinchat/EN-KFE9IFKdmZmFi">https://t.me/joinchat/EN-KFE9IFKdmZmFi</a></td>
+        <td>Познавательное</td>
+        <td>172820</td>
+        <td>26885</td>
+        <td>16.0</td>
+        <td>-776</td>
+        <td>-2833</td>
+        <td>1 год 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Жуткие факты</td>
+        <td><a href="https://t.me/scary_facts11">https://t.me/scary_facts11</a></td>
+        <td>Познавательное</td>
+        <td>171698</td>
+        <td>18706</td>
+        <td>11.0</td>
+        <td>-751</td>
+        <td>-4516</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Победа. Минута в минуту</td>
+        <td><a href="https://t.me/minutavminutu">https://t.me/minutavminutu</a></td>
+        <td>Познавательное</td>
+        <td>171473</td>
+        <td>42365</td>
+        <td>25.0</td>
+        <td>-486</td>
+        <td>-1775</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>r/ретранслятор</td>
+        <td><a href="https://t.me/retra">https://t.me/retra</a></td>
+        <td>Познавательное</td>
+        <td>167727</td>
+        <td>66231</td>
+        <td>40.0</td>
+        <td>-93</td>
+        <td>336</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир Фактов</td>
+        <td><a href="https://t.me/MirFacto">https://t.me/MirFacto</a></td>
+        <td>Познавательное</td>
+        <td>164886</td>
+        <td>11072</td>
+        <td>7.0</td>
+        <td>-473</td>
+        <td>-2295</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЖЕНСКИЙ ЖУРНАЛ</td>
+        <td><a href="https://t.me/womens_zhurnal">https://t.me/womens_zhurnal</a></td>
+        <td>Познавательное</td>
+        <td>164222</td>
+        <td>23157</td>
+        <td>15.0</td>
+        <td>352</td>
+        <td>-3420</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Очумелые ручки</td>
+        <td><a href="https://t.me/joinchat/r4iR5AX1YtdkYzMy">https://t.me/joinchat/r4iR5AX1YtdkYzMy</a></td>
+        <td>Познавательное</td>
+        <td>163488</td>
+        <td>18187</td>
+        <td>12.0</td>
+        <td>704</td>
+        <td>1714</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Архив</td>
+        <td><a href="https://t.me/joinchat/r21YU-RqzZVjZDJi">https://t.me/joinchat/r21YU-RqzZVjZDJi</a></td>
+        <td>Познавательное</td>
+        <td>159683</td>
+        <td>18234</td>
+        <td>12.0</td>
+        <td>20</td>
+        <td>-1003</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чезоид</td>
+        <td><a href="https://t.me/chezzoid">https://t.me/chezzoid</a></td>
+        <td>Познавательное</td>
+        <td>159101</td>
+        <td>27257</td>
+        <td>18.0</td>
+        <td>-615</td>
+        <td>-2465</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Nechetoff | Лайфхаки</td>
+        <td><a href="https://t.me/nechetoff">https://t.me/nechetoff</a></td>
+        <td>Познавательное</td>
+        <td>155574</td>
+        <td>21999</td>
+        <td>15.0</td>
+        <td>-1652</td>
+        <td>-381</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мистическая История</td>
+        <td><a href="https://t.me/joinchat/BnZReCnaOjBjMmIy">https://t.me/joinchat/BnZReCnaOjBjMmIy</a></td>
+        <td>Познавательное</td>
+        <td>153538</td>
+        <td>3691</td>
+        <td>3.0</td>
+        <td>-772</td>
+        <td>-2780</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КУЛИБИН</td>
+        <td><a href="https://t.me/joinchat/RzdF9pVKOkU5ODFi">https://t.me/joinchat/RzdF9pVKOkU5ODFi</a></td>
+        <td>Познавательное</td>
+        <td>149394</td>
+        <td>19724</td>
+        <td>14.0</td>
+        <td>742</td>
+        <td>4122</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тайны Космоса 🔭</td>
+        <td><a href="https://t.me/mycosmos">https://t.me/mycosmos</a></td>
+        <td>Познавательное</td>
+        <td>148602</td>
+        <td>14376</td>
+        <td>10.0</td>
+        <td>-420</td>
+        <td>-13000</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Узнайка</td>
+        <td><a href="https://t.me/joinchat/KXP6ZY5tRRNmZjUy">https://t.me/joinchat/KXP6ZY5tRRNmZjUy</a></td>
+        <td>Познавательное</td>
+        <td>148180</td>
+        <td>31173</td>
+        <td>21.0</td>
+        <td>-644</td>
+        <td>-1623</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мировой Заговор</td>
+        <td><a href="https://t.me/joinchat/0mirv51qWowwMDcy">https://t.me/joinchat/0mirv51qWowwMDcy</a></td>
+        <td>Познавательное</td>
+        <td>145158</td>
+        <td>12088</td>
+        <td>9.0</td>
+        <td>-718</td>
+        <td>-3847</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Теория заговора</td>
+        <td><a href="https://t.me/joinchat/Akk-KyYN9mpjMzJi">https://t.me/joinchat/Akk-KyYN9mpjMzJi</a></td>
+        <td>Познавательное</td>
+        <td>143641</td>
+        <td>16408</td>
+        <td>12.0</td>
+        <td>-494</td>
+        <td>-2616</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Старая Москва</td>
+        <td><a href="https://t.me/old_Moscow">https://t.me/old_Moscow</a></td>
+        <td>Познавательное</td>
+        <td>142616</td>
+        <td>28207</td>
+        <td>20.0</td>
+        <td>28</td>
+        <td>-237</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Проверенные Лайфхаки</td>
+        <td><a href="https://t.me/joinchat/PdMjxZ-zq-A0MWYy">https://t.me/joinchat/PdMjxZ-zq-A0MWYy</a></td>
+        <td>Познавательное</td>
+        <td>140369</td>
+        <td>14585</td>
+        <td>11.0</td>
+        <td>-306</td>
+        <td>-234</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ностальгия</td>
+        <td><a href="https://t.me/joinchat/RKwwm9yw6KuD_8hJ">https://t.me/joinchat/RKwwm9yw6KuD_8hJ</a></td>
+        <td>Познавательное</td>
+        <td>139933</td>
+        <td>19076</td>
+        <td>14.0</td>
+        <td>-450</td>
+        <td>488</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Страдающее Средневековье</td>
+        <td><a href="https://t.me/pophistory">https://t.me/pophistory</a></td>
+        <td>Познавательное</td>
+        <td>138475</td>
+        <td>48877</td>
+        <td>36.0</td>
+        <td>144</td>
+        <td>143</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Интересные факты</td>
+        <td><a href="https://t.me/interesnie_fac">https://t.me/interesnie_fac</a></td>
+        <td>Познавательное</td>
+        <td>136871</td>
+        <td>20305</td>
+        <td>15.0</td>
+        <td>332</td>
+        <td>2149</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Qwerty 21+</td>
+        <td><a href="https://t.me/joinchat/BpEVAXjlnSQwZTZl">https://t.me/joinchat/BpEVAXjlnSQwZTZl</a></td>
+        <td>Познавательное</td>
+        <td>135813</td>
+        <td>12989</td>
+        <td>10.0</td>
+        <td>10120</td>
+        <td>15068</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>взрослая жизнь</td>
+        <td><a href="https://t.me/vzroslyaa">https://t.me/vzroslyaa</a></td>
+        <td>Познавательное</td>
+        <td>135269</td>
+        <td>9993</td>
+        <td>8.0</td>
+        <td>-169</td>
+        <td>-224</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Идеи и советы</td>
+        <td><a href="https://t.me/idei_sovetu">https://t.me/idei_sovetu</a></td>
+        <td>Познавательное</td>
+        <td>135238</td>
+        <td>9072</td>
+        <td>7.0</td>
+        <td>-386</td>
+        <td>-1731</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бытовуха</td>
+        <td><a href="https://t.me/joinchat/6J9XhrQ7Q301ODRi">https://t.me/joinchat/6J9XhrQ7Q301ODRi</a></td>
+        <td>Познавательное</td>
+        <td>133941</td>
+        <td>10417</td>
+        <td>8.0</td>
+        <td>-450</td>
+        <td>-2145</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лайфхаки</td>
+        <td><a href="https://t.me/joinchat/oWtb7pSpKAYzMDEy">https://t.me/joinchat/oWtb7pSpKAYzMDEy</a></td>
+        <td>Познавательное</td>
+        <td>130338</td>
+        <td>15238</td>
+        <td>12.0</td>
+        <td>262</td>
+        <td>133</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дневник историка</td>
+        <td><a href="https://t.me/historydiary">https://t.me/historydiary</a></td>
+        <td>Познавательное</td>
+        <td>130025</td>
+        <td>11805</td>
+        <td>10.0</td>
+        <td>-310</td>
+        <td>-1371</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Опытная Хозяйка</td>
+        <td><a href="https://t.me/joinchat/ZWV9RkQDlANlNDBi">https://t.me/joinchat/ZWV9RkQDlANlNDBi</a></td>
+        <td>Познавательное</td>
+        <td>129919</td>
+        <td>9952</td>
+        <td>8.0</td>
+        <td>-481</td>
+        <td>-2131</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Подводные Кошмары</td>
+        <td><a href="https://t.me/joinchat/X7oBlnMTSeQzZjUy">https://t.me/joinchat/X7oBlnMTSeQzZjUy</a></td>
+        <td>Познавательное</td>
+        <td>128448</td>
+        <td>7440</td>
+        <td>6.0</td>
+        <td>-390</td>
+        <td>-669</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МОЙ УМНЫЙ ДОМ</td>
+        <td><a href="https://t.me/joinchat/IHm5mX6qUA9lYWUy">https://t.me/joinchat/IHm5mX6qUA9lYWUy</a></td>
+        <td>Познавательное</td>
+        <td>125416</td>
+        <td>21342</td>
+        <td>17.0</td>
+        <td>-2176</td>
+        <td>4978</td>
+        <td>7 месяцев 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Сила рода</td>
+        <td><a href="https://t.me/joinchat/Vxpd4Ub5YKs5ZDAy">https://t.me/joinchat/Vxpd4Ub5YKs5ZDAy</a></td>
+        <td>Познавательное</td>
+        <td>124298</td>
+        <td>7253</td>
+        <td>6.0</td>
+        <td>-576</td>
+        <td>-2984</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лихие 90-е</td>
+        <td><a href="https://t.me/joinchat/AAAAAERUTeUMVu3srtYE7w">https://t.me/joinchat/AAAAAERUTeUMVu3srtYE7w</a></td>
+        <td>Познавательное</td>
+        <td>119724</td>
+        <td>19178</td>
+        <td>16.0</td>
+        <td>-480</td>
+        <td>2965</td>
+        <td>5 лет</td>
+      </tr>
+
+      <tr>
+        <td>Хитрости Домохозяйки</td>
+        <td><a href="https://t.me/joinchat/vb6BaO3QObdiYzBi">https://t.me/joinchat/vb6BaO3QObdiYzBi</a></td>
+        <td>Познавательное</td>
+        <td>118326</td>
+        <td>11707</td>
+        <td>10.0</td>
+        <td>1025</td>
+        <td>2708</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TG Space</td>
+        <td><a href="https://t.me/joinchat/G2mo_KxvrlhlYzcy">https://t.me/joinchat/G2mo_KxvrlhlYzcy</a></td>
+        <td>Познавательное</td>
+        <td>116193</td>
+        <td>12442</td>
+        <td>11.0</td>
+        <td>-301</td>
+        <td>-732</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Научпок | Наука и Факты</td>
+        <td><a href="https://t.me/joinchat/ka-cnaCs-M8zNjQy">https://t.me/joinchat/ka-cnaCs-M8zNjQy</a></td>
+        <td>Познавательное</td>
+        <td>115519</td>
+        <td>23425</td>
+        <td>21.0</td>
+        <td>-700</td>
+        <td>-3211</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Хозяйские хитрости</td>
+        <td><a href="https://t.me/joinchat/VVWWNm9GEpI3NWEy">https://t.me/joinchat/VVWWNm9GEpI3NWEy</a></td>
+        <td>Познавательное</td>
+        <td>115478</td>
+        <td>20244</td>
+        <td>18.0</td>
+        <td>-437</td>
+        <td>-1947</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Домовенок | Лайфхаки</td>
+        <td><a href="https://t.me/joinchat/koKfVMR0zNA0YTY6">https://t.me/joinchat/koKfVMR0zNA0YTY6</a></td>
+        <td>Познавательное</td>
+        <td>114828</td>
+        <td>17059</td>
+        <td>15.0</td>
+        <td>-857</td>
+        <td>-4014</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

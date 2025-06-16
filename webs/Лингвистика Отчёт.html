@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Лексикона | Образование</td>
+        <td><a href="https://t.me/lexicona">https://t.me/lexicona</a></td>
+        <td>Лингвистика</td>
+        <td>365239</td>
+        <td>19962</td>
+        <td>6.0</td>
+        <td>-1626</td>
+        <td>-7994</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Fuсking English</td>
+        <td><a href="https://t.me/fuckingenglish">https://t.me/fuckingenglish</a></td>
+        <td>Лингвистика</td>
+        <td>335605</td>
+        <td>35376</td>
+        <td>11.0</td>
+        <td>241</td>
+        <td>-1401</td>
+        <td>8 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Английский с нуля</td>
+        <td><a href="https://t.me/english2020easy">https://t.me/english2020easy</a></td>
+        <td>Лингвистика</td>
+        <td>248749</td>
+        <td>30518</td>
+        <td>13.0</td>
+        <td>-476</td>
+        <td>3248</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Русский мат</td>
+        <td><a href="https://t.me/Pycckuu_MAT">https://t.me/Pycckuu_MAT</a></td>
+        <td>Лингвистика</td>
+        <td>238134</td>
+        <td>38826</td>
+        <td>17.0</td>
+        <td>-1464</td>
+        <td>-7182</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>State English</td>
+        <td><a href="https://t.me/state_english">https://t.me/state_english</a></td>
+        <td>Лингвистика</td>
+        <td>220190</td>
+        <td>9575</td>
+        <td>5.0</td>
+        <td>-361</td>
+        <td>-3645</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Английский с нуля | Английский язык</td>
+        <td><a href="https://t.me/EnglishBestChannel">https://t.me/EnglishBestChannel</a></td>
+        <td>Лингвистика</td>
+        <td>180625</td>
+        <td>10907</td>
+        <td>6.0</td>
+        <td>452</td>
+        <td>205</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Грамотная речь | Саморазвитие</td>
+        <td><a href="https://t.me/gramotnaya_rech">https://t.me/gramotnaya_rech</a></td>
+        <td>Лингвистика</td>
+        <td>179733</td>
+        <td>25479</td>
+        <td>15.0</td>
+        <td>1678</td>
+        <td>1744</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ежу понятно</td>
+        <td><a href="https://t.me/joinchat/AZEUojqWfNQ2OTEy">https://t.me/joinchat/AZEUojqWfNQ2OTEy</a></td>
+        <td>Лингвистика</td>
+        <td>149076</td>
+        <td>18368</td>
+        <td>13.0</td>
+        <td>-760</td>
+        <td>-2481</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лингвист</td>
+        <td><a href="https://t.me/Lingvaa">https://t.me/Lingvaa</a></td>
+        <td>Лингвистика</td>
+        <td>148691</td>
+        <td>17533</td>
+        <td>12.0</td>
+        <td>-389</td>
+        <td>-1881</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русский язык | Грамотность</td>
+        <td><a href="https://t.me/ruGrammar">https://t.me/ruGrammar</a></td>
+        <td>Лингвистика</td>
+        <td>133078</td>
+        <td>18160</td>
+        <td>14.0</td>
+        <td>-225</td>
+        <td>-1212</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Немецкий язык</td>
+        <td><a href="https://t.me/deutschonline">https://t.me/deutschonline</a></td>
+        <td>Лингвистика</td>
+        <td>127874</td>
+        <td>12503</td>
+        <td>10.0</td>
+        <td>-121</td>
+        <td>-344</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>УЧИЛКА АНГЛИЙСКОГО</td>
+        <td><a href="https://t.me/englishmaria">https://t.me/englishmaria</a></td>
+        <td>Лингвистика</td>
+        <td>126022</td>
+        <td>17541</td>
+        <td>14.0</td>
+        <td>-507</td>
+        <td>-1307</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сулим про Английский</td>
+        <td><a href="https://t.me/joinchat/Iju91Cf-qhkyNjhi">https://t.me/joinchat/Iju91Cf-qhkyNjhi</a></td>
+        <td>Лингвистика</td>
+        <td>124013</td>
+        <td>9384</td>
+        <td>8.0</td>
+        <td>401</td>
+        <td>-683</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Skyeng: Английский для жизни</td>
+        <td><a href="https://t.me/skyengweekly">https://t.me/skyengweekly</a></td>
+        <td>Лингвистика</td>
+        <td>116168</td>
+        <td>14384</td>
+        <td>13.0</td>
+        <td>-46</td>
+        <td>-679</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русский язык просто</td>
+        <td><a href="https://t.me/ruProsto">https://t.me/ruProsto</a></td>
+        <td>Лингвистика</td>
+        <td>112337</td>
+        <td>11057</td>
+        <td>10.0</td>
+        <td>-297</td>
+        <td>-1348</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АНГЛИЙСКИЙ ПО СЕРИАЛАМ</td>
+        <td><a href="https://t.me/seriesenglishhh">https://t.me/seriesenglishhh</a></td>
+        <td>Лингвистика</td>
+        <td>111280</td>
+        <td>4894</td>
+        <td>5.0</td>
+        <td>-712</td>
+        <td>-2421</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Викторины на Английском</td>
+        <td><a href="https://t.me/spaceofeng">https://t.me/spaceofeng</a></td>
+        <td>Лингвистика</td>
+        <td>109066</td>
+        <td>11654</td>
+        <td>11.0</td>
+        <td>-405</td>
+        <td>7119</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Русская культура</td>
+        <td><a href="https://t.me/russiansculture">https://t.me/russiansculture</a></td>
+        <td>Лингвистика</td>
+        <td>107487</td>
+        <td>9240</td>
+        <td>9.0</td>
+        <td>-542</td>
+        <td>-2670</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Petya English</td>
+        <td><a href="https://t.me/petya_english">https://t.me/petya_english</a></td>
+        <td>Лингвистика</td>
+        <td>106135</td>
+        <td>47119</td>
+        <td>45.0</td>
+        <td>742</td>
+        <td>4194</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Английские слова для взрослых</td>
+        <td><a href="https://t.me/engslov">https://t.me/engslov</a></td>
+        <td>Лингвистика</td>
+        <td>102729</td>
+        <td>5784</td>
+        <td>6.0</td>
+        <td>-186</td>
+        <td>-967</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🇬🇧Go English🇬🇧</td>
+        <td><a href="https://t.me/GoEnglishRus">https://t.me/GoEnglishRus</a></td>
+        <td>Лингвистика</td>
+        <td>100287</td>
+        <td>7218</td>
+        <td>8.0</td>
+        <td>578</td>
+        <td>-4234</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Записки редакторки</td>
+        <td><a href="https://t.me/zapiski_redaktorki">https://t.me/zapiski_redaktorki</a></td>
+        <td>Лингвистика</td>
+        <td>99137</td>
+        <td>14093</td>
+        <td>15.0</td>
+        <td>-124</td>
+        <td>-351</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Грамотным быть модно | Русский язык ЕГЭ | Александр Долгих | Умскул</td>
+        <td><a href="https://t.me/dolgih_umrus">https://t.me/dolgih_umrus</a></td>
+        <td>Лингвистика</td>
+        <td>98793</td>
+        <td>18037</td>
+        <td>19.0</td>
+        <td>-370</td>
+        <td>2930</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>5 слов на английском</td>
+        <td><a href="https://t.me/anglyskyi_yazyk">https://t.me/anglyskyi_yazyk</a></td>
+        <td>Лингвистика</td>
+        <td>96155</td>
+        <td>6800</td>
+        <td>8.0</td>
+        <td>-279</td>
+        <td>-1377</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Словарный запас | Саморазвитие</td>
+        <td><a href="https://t.me/slovar_psikhologia">https://t.me/slovar_psikhologia</a></td>
+        <td>Лингвистика</td>
+        <td>90293</td>
+        <td>6587</td>
+        <td>8.0</td>
+        <td>-140</td>
+        <td>-644</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Константин Тябут | Supreme English</td>
+        <td><a href="https://t.me/supremeenglish2">https://t.me/supremeenglish2</a></td>
+        <td>Лингвистика</td>
+        <td>87679</td>
+        <td>7124</td>
+        <td>9.0</td>
+        <td>-376</td>
+        <td>-1619</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Английский каждый день</td>
+        <td><a href="https://t.me/eng_every_day">https://t.me/eng_every_day</a></td>
+        <td>Лингвистика</td>
+        <td>86445</td>
+        <td>9267</td>
+        <td>11.0</td>
+        <td>98</td>
+        <td>630</td>
+        <td>8 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SlovoDna</td>
+        <td><a href="https://t.me/slovodna">https://t.me/slovodna</a></td>
+        <td>Лингвистика</td>
+        <td>85257</td>
+        <td>21202</td>
+        <td>25.0</td>
+        <td>-148</td>
+        <td>-601</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Easy English Academy</td>
+        <td><a href="https://t.me/english_master_academy">https://t.me/english_master_academy</a></td>
+        <td>Лингвистика</td>
+        <td>84003</td>
+        <td>14887</td>
+        <td>18.0</td>
+        <td>-155</td>
+        <td>-1168</td>
+        <td>1 год 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Английский язык 🇬🇧</td>
+        <td><a href="https://t.me/dailyeng">https://t.me/dailyeng</a></td>
+        <td>Лингвистика</td>
+        <td>77183</td>
+        <td>4109</td>
+        <td>6.0</td>
+        <td>-244</td>
+        <td>-542</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Черчилль: английский с нуля за 6 месяцев</td>
+        <td><a href="https://t.me/immersion_club">https://t.me/immersion_club</a></td>
+        <td>Лингвистика</td>
+        <td>76155</td>
+        <td>11269</td>
+        <td>15.0</td>
+        <td>475</td>
+        <td>3150</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анна Данилова. Образование и английский</td>
+        <td><a href="https://t.me/joinchat/af-UwrqFNlo0NWIy">https://t.me/joinchat/af-UwrqFNlo0NWIy</a></td>
+        <td>Лингвистика</td>
+        <td>73973</td>
+        <td>9302</td>
+        <td>13.0</td>
+        <td>1949</td>
+        <td>7375</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Язык без костей</td>
+        <td><a href="https://t.me/yazbezkos">https://t.me/yazbezkos</a></td>
+        <td>Лингвистика</td>
+        <td>71646</td>
+        <td>27847</td>
+        <td>39.0</td>
+        <td>-206</td>
+        <td>-69</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🇬🇧 Learn English 🇬🇧</td>
+        <td><a href="https://t.me/ieltstoeflcefrr">https://t.me/ieltstoeflcefrr</a></td>
+        <td>Лингвистика</td>
+        <td>67702</td>
+        <td>5652</td>
+        <td>9.0</td>
+        <td>-57</td>
+        <td>-146</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Английский в картинках</td>
+        <td><a href="https://t.me/anglysky_yazyki">https://t.me/anglysky_yazyki</a></td>
+        <td>Лингвистика</td>
+        <td>63725</td>
+        <td>3680</td>
+        <td>6.0</td>
+        <td>-273</td>
+        <td>-315</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Корейский язык 🇰🇷</td>
+        <td><a href="https://t.me/koreanlanguage2023">https://t.me/koreanlanguage2023</a></td>
+        <td>Лингвистика</td>
+        <td>63212</td>
+        <td>14332</td>
+        <td>23.0</td>
+        <td>-35</td>
+        <td>-136</td>
+        <td>4 года 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Английский для программиста | EnglishScript</td>
+        <td><a href="https://t.me/EnglishScript">https://t.me/EnglishScript</a></td>
+        <td>Лингвистика</td>
+        <td>60760</td>
+        <td>3747</td>
+        <td>7.0</td>
+        <td>-173</td>
+        <td>-1401</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Уроки русского с Юлией Нефёдовой</td>
+        <td><a href="https://t.me/uunefedova_russ">https://t.me/uunefedova_russ</a></td>
+        <td>Лингвистика</td>
+        <td>60683</td>
+        <td>9796</td>
+        <td>17.0</td>
+        <td>-114</td>
+        <td>399</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>iteng | Английский программиста</td>
+        <td><a href="https://t.me/joinchat/gJ6qYZZPHeRkOWJi">https://t.me/joinchat/gJ6qYZZPHeRkOWJi</a></td>
+        <td>Лингвистика</td>
+        <td>60510</td>
+        <td>3351</td>
+        <td>6.0</td>
+        <td>-159</td>
+        <td>-776</td>
+        <td>3 года 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Английский язык</td>
+        <td><a href="https://t.me/englishtg1">https://t.me/englishtg1</a></td>
+        <td>Лингвистика</td>
+        <td>60439</td>
+        <td>1965</td>
+        <td>4.0</td>
+        <td>-84</td>
+        <td>-660</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Турецкий язык | Turkish language</td>
+        <td><a href="https://t.me/TurkishTG">https://t.me/TurkishTG</a></td>
+        <td>Лингвистика</td>
+        <td>60408</td>
+        <td>12155</td>
+        <td>21.0</td>
+        <td>-19</td>
+        <td>-30</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Hot Idioms</td>
+        <td><a href="https://t.me/hot_idioms">https://t.me/hot_idioms</a></td>
+        <td>Лингвистика</td>
+        <td>59421</td>
+        <td>4404</td>
+        <td>8.0</td>
+        <td>-137</td>
+        <td>-746</td>
+        <td>8 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Китайский язык</td>
+        <td><a href="https://t.me/chinese_lingvistika_slovar">https://t.me/chinese_lingvistika_slovar</a></td>
+        <td>Лингвистика</td>
+        <td>59109</td>
+        <td>5140</td>
+        <td>9.0</td>
+        <td>17</td>
+        <td>61</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>My Dream English | Английский по уровням</td>
+        <td><a href="https://t.me/EngLingo">https://t.me/EngLingo</a></td>
+        <td>Лингвистика</td>
+        <td>57920</td>
+        <td>2909</td>
+        <td>5.0</td>
+        <td>-482</td>
+        <td>-1641</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Easy English 😎</td>
+        <td><a href="https://t.me/english_easyly">https://t.me/english_easyly</a></td>
+        <td>Лингвистика</td>
+        <td>57608</td>
+        <td>6367</td>
+        <td>12.0</td>
+        <td>5060</td>
+        <td>6432</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Duolingo Community</td>
+        <td><a href="https://t.me/english_duolingo">https://t.me/english_duolingo</a></td>
+        <td>Лингвистика</td>
+        <td>57226</td>
+        <td>7529</td>
+        <td>14.0</td>
+        <td>-262</td>
+        <td>-1390</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КЛУБ | ENGLISH GALAXY | АНГЛИЙСКИЙ ЯЗЫК ПО ПЛЕЙЛИСТАМ</td>
+        <td><a href="https://t.me/englishgalaxy_school">https://t.me/englishgalaxy_school</a></td>
+        <td>Лингвистика</td>
+        <td>56993</td>
+        <td>7257</td>
+        <td>13.0</td>
+        <td>202</td>
+        <td>789</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝐋𝐢𝐧𝐠𝐮𝐚𝐭𝐢𝐦𝐞𝐬</td>
+        <td><a href="https://t.me/linguatimes">https://t.me/linguatimes</a></td>
+        <td>Лингвистика</td>
+        <td>56932</td>
+        <td>3520</td>
+        <td>7.0</td>
+        <td>-152</td>
+        <td>-799</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ENGLISH IDIOMS💗💌</td>
+        <td><a href="https://t.me/ENGLISH_ID1OMS">https://t.me/ENGLISH_ID1OMS</a></td>
+        <td>Лингвистика</td>
+        <td>56766</td>
+        <td>8531</td>
+        <td>15.0</td>
+        <td>-1077</td>
+        <td>-5287</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Немецкий язык в словах</td>
+        <td><a href="https://t.me/stylishgerman">https://t.me/stylishgerman</a></td>
+        <td>Лингвистика</td>
+        <td>55308</td>
+        <td>5882</td>
+        <td>11.0</td>
+        <td>-57</td>
+        <td>-338</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Инглекс | Заряжаемся английским</td>
+        <td><a href="https://t.me/englex_school">https://t.me/englex_school</a></td>
+        <td>Лингвистика</td>
+        <td>55197</td>
+        <td>6745</td>
+        <td>13.0</td>
+        <td>11</td>
+        <td>2478</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Movies & Books in English</td>
+        <td><a href="https://t.me/i_love_english_online">https://t.me/i_love_english_online</a></td>
+        <td>Лингвистика</td>
+        <td>55055</td>
+        <td>4187</td>
+        <td>8.0</td>
+        <td>-65</td>
+        <td>-443</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ENGLISH MIND</td>
+        <td><a href="https://t.me/english_mindd">https://t.me/english_mindd</a></td>
+        <td>Лингвистика</td>
+        <td>54818</td>
+        <td>5622</td>
+        <td>11.0</td>
+        <td>-338</td>
+        <td>-1639</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ENGLISH IN USE</td>
+        <td><a href="https://t.me/engl_use">https://t.me/engl_use</a></td>
+        <td>Лингвистика</td>
+        <td>52993</td>
+        <td>5163</td>
+        <td>10.0</td>
+        <td>121</td>
+        <td>13</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Real English. Таня Маркова</td>
+        <td><a href="https://t.me/bk_gko">https://t.me/bk_gko</a></td>
+        <td>Лингвистика</td>
+        <td>51003</td>
+        <td>3035</td>
+        <td>6.0</td>
+        <td>-128</td>
+        <td>-640</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Английский для всех!</td>
+        <td><a href="https://t.me/eng_for_all">https://t.me/eng_for_all</a></td>
+        <td>Лингвистика</td>
+        <td>50960</td>
+        <td>5696</td>
+        <td>12.0</td>
+        <td>-124</td>
+        <td>-661</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Немецкий для начинающих</td>
+        <td><a href="https://t.me/fangedeutschan">https://t.me/fangedeutschan</a></td>
+        <td>Лингвистика</td>
+        <td>50493</td>
+        <td>6737</td>
+        <td>14.0</td>
+        <td>7</td>
+        <td>-16</td>
+        <td>3 года 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Slang Bang! / Слэнг Бэнг!</td>
+        <td><a href="https://t.me/slangbang">https://t.me/slangbang</a></td>
+        <td>Лингвистика</td>
+        <td>47419</td>
+        <td>2737</td>
+        <td>6.0</td>
+        <td>-260</td>
+        <td>-568</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Острослов</td>
+        <td><a href="https://t.me/joinchat/tL0n3iRJ8bhjZjNi">https://t.me/joinchat/tL0n3iRJ8bhjZjNi</a></td>
+        <td>Лингвистика</td>
+        <td>46472</td>
+        <td>9463</td>
+        <td>21.0</td>
+        <td>-268</td>
+        <td>-1266</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Книги на Английском | Аудиокниги</td>
+        <td><a href="https://t.me/English_Books_TG">https://t.me/English_Books_TG</a></td>
+        <td>Лингвистика</td>
+        <td>46226</td>
+        <td>3353</td>
+        <td>8.0</td>
+        <td>-45</td>
+        <td>-195</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Умный Брокколь | Грамотность</td>
+        <td><a href="https://t.me/brokoledu">https://t.me/brokoledu</a></td>
+        <td>Лингвистика</td>
+        <td>46146</td>
+        <td>6232</td>
+        <td>14.0</td>
+        <td>-77</td>
+        <td>-350</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Корея 🎐 | Ты не знал этого!</td>
+        <td><a href="https://t.me/Korea_hangugo_house">https://t.me/Korea_hangugo_house</a></td>
+        <td>Лингвистика</td>
+        <td>43810</td>
+        <td>4135</td>
+        <td>10.0</td>
+        <td>-1074</td>
+        <td>-4574</td>
+        <td>2 года 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Русские пословицы | Правописание</td>
+        <td><a href="https://t.me/pos_lov">https://t.me/pos_lov</a></td>
+        <td>Лингвистика</td>
+        <td>43464</td>
+        <td>5114</td>
+        <td>12.0</td>
+        <td>-171</td>
+        <td>-853</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Muscat English | IELTS, TOEFL + репетиторы, преподаватели, студенты</td>
+        <td><a href="https://t.me/muscatenglish">https://t.me/muscatenglish</a></td>
+        <td>Лингвистика</td>
+        <td>43413</td>
+        <td>4344</td>
+        <td>10.0</td>
+        <td>155</td>
+        <td>517</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Английский на слух</td>
+        <td><a href="https://t.me/EnglishByEar">https://t.me/EnglishByEar</a></td>
+        <td>Лингвистика</td>
+        <td>42734</td>
+        <td>2108</td>
+        <td>5.0</td>
+        <td>-83</td>
+        <td>75</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Французский язык / Francais</td>
+        <td><a href="https://t.me/le_francais_french">https://t.me/le_francais_french</a></td>
+        <td>Лингвистика</td>
+        <td>41248</td>
+        <td>6219</td>
+        <td>16.0</td>
+        <td>119</td>
+        <td>577</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Grammar Nation</td>
+        <td><a href="https://t.me/grammnation">https://t.me/grammnation</a></td>
+        <td>Лингвистика</td>
+        <td>41094</td>
+        <td>12471</td>
+        <td>31.0</td>
+        <td>-277</td>
+        <td>-648</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Говори, как Lady | Лингвистика</td>
+        <td><a href="https://t.me/govorikaklady">https://t.me/govorikaklady</a></td>
+        <td>Лингвистика</td>
+        <td>40893</td>
+        <td>4929</td>
+        <td>13.0</td>
+        <td>44</td>
+        <td>-2296</td>
+        <td>5 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>IELTSC🔎PE | Английский язык</td>
+        <td><a href="https://t.me/ieltscope">https://t.me/ieltscope</a></td>
+        <td>Лингвистика</td>
+        <td>40338</td>
+        <td>1755</td>
+        <td>5.0</td>
+        <td>-56</td>
+        <td>-486</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Простым языком</td>
+        <td><a href="https://t.me/prostyazikom">https://t.me/prostyazikom</a></td>
+        <td>Лингвистика</td>
+        <td>39541</td>
+        <td>8416</td>
+        <td>22.0</td>
+        <td>1380</td>
+        <td>2875</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>РУССКИЙ ЖАРГОН</td>
+        <td><a href="https://t.me/joinchat/h-eZOIKv8pAxNjZi">https://t.me/joinchat/h-eZOIKv8pAxNjZi</a></td>
+        <td>Лингвистика</td>
+        <td>39418</td>
+        <td>7846</td>
+        <td>20.0</td>
+        <td>-385</td>
+        <td>-1828</td>
+        <td>8 месяцев 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>ЗАРАБАТЫВАЙ💰</td>
+        <td><a href="https://t.me/joinchat/kHP4ZHg3oSk3YWMy">https://t.me/joinchat/kHP4ZHg3oSk3YWMy</a></td>
+        <td>Лингвистика</td>
+        <td>39053</td>
+        <td>1487</td>
+        <td>4.0</td>
+        <td>-3930</td>
+        <td>-35186</td>
+        <td>1 год 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Грани брани</td>
+        <td><a href="https://t.me/joinchat/dxEGPjFHoCpiZjgy">https://t.me/joinchat/dxEGPjFHoCpiZjgy</a></td>
+        <td>Лингвистика</td>
+        <td>38628</td>
+        <td>4402</td>
+        <td>12.0</td>
+        <td>-282</td>
+        <td>-1276</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Испанский язык!</td>
+        <td><a href="https://t.me/espanol_spanish_castellano">https://t.me/espanol_spanish_castellano</a></td>
+        <td>Лингвистика</td>
+        <td>38559</td>
+        <td>6886</td>
+        <td>18.0</td>
+        <td>223</td>
+        <td>830</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русский язык</td>
+        <td><a href="https://t.me/joinchat/ZLuC3mO5GyU3YmVi">https://t.me/joinchat/ZLuC3mO5GyU3YmVi</a></td>
+        <td>Лингвистика</td>
+        <td>38397</td>
+        <td>7592</td>
+        <td>20.0</td>
+        <td>-313</td>
+        <td>294</td>
+        <td>11 месяцев 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>НЕДЕТСКИЙ АНГЛИЙСКИЙ</td>
+        <td><a href="https://t.me/unchildish_english">https://t.me/unchildish_english</a></td>
+        <td>Лингвистика</td>
+        <td>38068</td>
+        <td>7568</td>
+        <td>20.0</td>
+        <td>175</td>
+        <td>642</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Deutsche Lehrbücher</td>
+        <td><a href="https://t.me/DE_lehrbucher">https://t.me/DE_lehrbucher</a></td>
+        <td>Лингвистика</td>
+        <td>37585</td>
+        <td>8636</td>
+        <td>23.0</td>
+        <td>181</td>
+        <td>589</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Итальянский язык / Italiano</td>
+        <td><a href="https://t.me/italiano_russo">https://t.me/italiano_russo</a></td>
+        <td>Лингвистика</td>
+        <td>37270</td>
+        <td>5649</td>
+        <td>16.0</td>
+        <td>179</td>
+        <td>-16521</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русская словесность</td>
+        <td><a href="https://t.me/joinchat/7DM6vxIDww8yYTY6">https://t.me/joinchat/7DM6vxIDww8yYTY6</a></td>
+        <td>Лингвистика</td>
+        <td>36970</td>
+        <td>4761</td>
+        <td>13.0</td>
+        <td>-277</td>
+        <td>-1110</td>
+        <td>10 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Сладкая речь</td>
+        <td><a href="https://t.me/SladkayaRech">https://t.me/SladkayaRech</a></td>
+        <td>Лингвистика</td>
+        <td>36722</td>
+        <td>6070</td>
+        <td>17.0</td>
+        <td>-206</td>
+        <td>-1099</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Английский язык</td>
+        <td><a href="https://t.me/joinchat/yCbS-U32cKMxNmEy">https://t.me/joinchat/yCbS-U32cKMxNmEy</a></td>
+        <td>Лингвистика</td>
+        <td>36522</td>
+        <td>6187</td>
+        <td>17.0</td>
+        <td>-649</td>
+        <td>-610</td>
+        <td>7 месяцев 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Изучаем английский онлайн</td>
+        <td><a href="https://t.me/learn_repeat_check">https://t.me/learn_repeat_check</a></td>
+        <td>Лингвистика</td>
+        <td>36522</td>
+        <td>4166</td>
+        <td>12.0</td>
+        <td>-18</td>
+        <td>-243</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Английский язык</td>
+        <td><a href="https://t.me/Angliyskiy_yaziki">https://t.me/Angliyskiy_yaziki</a></td>
+        <td>Лингвистика</td>
+        <td>36095</td>
+        <td>2156</td>
+        <td>6.0</td>
+        <td>-25</td>
+        <td>-98</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Английский язык</td>
+        <td><a href="https://t.me/english_in_tele">https://t.me/english_in_tele</a></td>
+        <td>Лингвистика</td>
+        <td>36042</td>
+        <td>2591</td>
+        <td>8.0</td>
+        <td>-87</td>
+        <td>-367</td>
+        <td>8 лет 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Учитель русского | Русский язык</td>
+        <td><a href="https://t.me/teacherus">https://t.me/teacherus</a></td>
+        <td>Лингвистика</td>
+        <td>35988</td>
+        <td>3229</td>
+        <td>9.0</td>
+        <td>-91</td>
+        <td>-347</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Английский язык</td>
+        <td><a href="https://t.me/clowar">https://t.me/clowar</a></td>
+        <td>Лингвистика</td>
+        <td>35643</td>
+        <td>2842</td>
+        <td>8.0</td>
+        <td>414</td>
+        <td>-969</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>English with Mixlass 🇺🇸</td>
+        <td><a href="https://t.me/englishwithmixlasss">https://t.me/englishwithmixlasss</a></td>
+        <td>Лингвистика</td>
+        <td>35389</td>
+        <td>8957</td>
+        <td>26.0</td>
+        <td>-167</td>
+        <td>-958</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ихний экспрессо</td>
+        <td><a href="https://t.me/joinchat/1t5aP-njtZhiNjI6">https://t.me/joinchat/1t5aP-njtZhiNjI6</a></td>
+        <td>Лингвистика</td>
+        <td>35228</td>
+        <td>3501</td>
+        <td>10.0</td>
+        <td>-204</td>
+        <td>-895</td>
+        <td>1 год 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Как это переводится, Чувак?</td>
+        <td><a href="https://t.me/Dudetranslate">https://t.me/Dudetranslate</a></td>
+        <td>Лингвистика</td>
+        <td>34820</td>
+        <td>1604</td>
+        <td>5.0</td>
+        <td>-116</td>
+        <td>-443</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Archi.English | Английский язык</td>
+        <td><a href="https://t.me/archienglish7">https://t.me/archienglish7</a></td>
+        <td>Лингвистика</td>
+        <td>34745</td>
+        <td>3655</td>
+        <td>11.0</td>
+        <td>-110</td>
+        <td>-699</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Немецкий язык в тестах</td>
+        <td><a href="https://t.me/learngerm">https://t.me/learngerm</a></td>
+        <td>Лингвистика</td>
+        <td>33909</td>
+        <td>4909</td>
+        <td>15.0</td>
+        <td>-47</td>
+        <td>-228</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Заговори легко. ID English - школа английского</td>
+        <td><a href="https://t.me/idenglish_online">https://t.me/idenglish_online</a></td>
+        <td>Лингвистика</td>
+        <td>33614</td>
+        <td>1933</td>
+        <td>6.0</td>
+        <td>-47</td>
+        <td>68</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Немецкий Язык | Германия | HHDEUTSCH</td>
+        <td><a href="https://t.me/hhdeutsch">https://t.me/hhdeutsch</a></td>
+        <td>Лингвистика</td>
+        <td>33276</td>
+        <td>3600</td>
+        <td>11.0</td>
+        <td>1</td>
+        <td>-123</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Monkey English</td>
+        <td><a href="https://t.me/monkenglish">https://t.me/monkenglish</a></td>
+        <td>Лингвистика</td>
+        <td>33069</td>
+        <td>9238</td>
+        <td>28.0</td>
+        <td>441</td>
+        <td>1514</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дед, продай словарь</td>
+        <td><a href="https://t.me/joinchat/RT3QNdqwSogxMDc1">https://t.me/joinchat/RT3QNdqwSogxMDc1</a></td>
+        <td>Лингвистика</td>
+        <td>32668</td>
+        <td>6418</td>
+        <td>20.0</td>
+        <td>-367</td>
+        <td>-1622</td>
+        <td>11 месяцев 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>Английский с Курчановым</td>
+        <td><a href="https://t.me/kurchanov">https://t.me/kurchanov</a></td>
+        <td>Лингвистика</td>
+        <td>32515</td>
+        <td>3376</td>
+        <td>11.0</td>
+        <td>-70</td>
+        <td>-401</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мы не звОним, а звонИм</td>
+        <td><a href="https://t.me/llingvaa">https://t.me/llingvaa</a></td>
+        <td>Лингвистика</td>
+        <td>32501</td>
+        <td>13796</td>
+        <td>43.0</td>
+        <td>-1918</td>
+        <td>-25380</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

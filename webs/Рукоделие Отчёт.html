@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Ручки вяжут | Вязание</td>
+        <td><a href="https://t.me/hand_knit">https://t.me/hand_knit</a></td>
+        <td>Рукоделие</td>
+        <td>398678</td>
+        <td>52750</td>
+        <td>14.0</td>
+        <td>599</td>
+        <td>1968</td>
+        <td>5 лет 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>ДЕЛО ТЕХНИКИ</td>
+        <td><a href="https://t.me/delotex">https://t.me/delotex</a></td>
+        <td>Рукоделие</td>
+        <td>202729</td>
+        <td>18003</td>
+        <td>9.0</td>
+        <td>121</td>
+        <td>-194</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дом рукоделия</td>
+        <td><a href="https://t.me/joinchat/42UO8BmrQ3ZiMWUy">https://t.me/joinchat/42UO8BmrQ3ZiMWUy</a></td>
+        <td>Рукоделие</td>
+        <td>192940</td>
+        <td>20606</td>
+        <td>11.0</td>
+        <td>-790</td>
+        <td>-5967</td>
+        <td>11 месяцев 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Умелая хозяйка🧶Рукоделие</td>
+        <td><a href="https://t.me/joinchat/nqGD3-esCkg4Y2Qy">https://t.me/joinchat/nqGD3-esCkg4Y2Qy</a></td>
+        <td>Рукоделие</td>
+        <td>161353</td>
+        <td>12164</td>
+        <td>8.0</td>
+        <td>-506</td>
+        <td>-2300</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Город Мастеров | Рукоделие</td>
+        <td><a href="https://t.me/joinchat/ZORqddSmVF4yMjNi">https://t.me/joinchat/ZORqddSmVF4yMjNi</a></td>
+        <td>Рукоделие</td>
+        <td>157805</td>
+        <td>16570</td>
+        <td>11.0</td>
+        <td>647</td>
+        <td>2191</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Клуб рукоделия 🧶</td>
+        <td><a href="https://t.me/joinchat/46VCtY3tzFc2ODk6">https://t.me/joinchat/46VCtY3tzFc2ODk6</a></td>
+        <td>Рукоделие</td>
+        <td>124741</td>
+        <td>9617</td>
+        <td>8.0</td>
+        <td>-605</td>
+        <td>-2916</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ручная работа | Декор</td>
+        <td><a href="https://t.me/joinchat/Gj7w_e9_I5JiNGFi">https://t.me/joinchat/Gj7w_e9_I5JiNGFi</a></td>
+        <td>Рукоделие</td>
+        <td>101353</td>
+        <td>9672</td>
+        <td>10.0</td>
+        <td>-492</td>
+        <td>-2174</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шить просто!</td>
+        <td><a href="https://t.me/wit_prosto">https://t.me/wit_prosto</a></td>
+        <td>Рукоделие</td>
+        <td>98478</td>
+        <td>15025</td>
+        <td>16.0</td>
+        <td>-275</td>
+        <td>-1722</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Кройка и Шитье</td>
+        <td><a href="https://t.me/joinchat/a4bUf3wvJ7ZmYjAy">https://t.me/joinchat/a4bUf3wvJ7ZmYjAy</a></td>
+        <td>Рукоделие</td>
+        <td>98087</td>
+        <td>18389</td>
+        <td>19.0</td>
+        <td>-572</td>
+        <td>-2595</td>
+        <td>9 месяцев 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Я швея | Рукоделие</td>
+        <td><a href="https://t.me/joinchat/4_0ifHWXwjthNzli">https://t.me/joinchat/4_0ifHWXwjthNzli</a></td>
+        <td>Рукоделие</td>
+        <td>95355</td>
+        <td>20411</td>
+        <td>22.0</td>
+        <td>-286</td>
+        <td>-2610</td>
+        <td>9 месяцев 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Уроки Шитья</td>
+        <td><a href="https://t.me/uroki_shitya">https://t.me/uroki_shitya</a></td>
+        <td>Рукоделие</td>
+        <td>92713</td>
+        <td>11593</td>
+        <td>13.0</td>
+        <td>-320</td>
+        <td>-1513</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Идея для подарка</td>
+        <td><a href="https://t.me/joinchat/dSwoLxrVOXtiNDEy">https://t.me/joinchat/dSwoLxrVOXtiNDEy</a></td>
+        <td>Рукоделие</td>
+        <td>88864</td>
+        <td>10216</td>
+        <td>12.0</td>
+        <td>-783</td>
+        <td>-3546</td>
+        <td>7 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Рукоделие | Своими руками</td>
+        <td><a href="https://t.me/joinchat/R_9vZtWQLVBotYHN">https://t.me/joinchat/R_9vZtWQLVBotYHN</a></td>
+        <td>Рукоделие</td>
+        <td>85421</td>
+        <td>4205</td>
+        <td>5.0</td>
+        <td>-295</td>
+        <td>-1392</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир Вязания | Схемы и Узоры 🧶</td>
+        <td><a href="https://t.me/joinchat/9wNbBnzVw0tiMTgy">https://t.me/joinchat/9wNbBnzVw0tiMTgy</a></td>
+        <td>Рукоделие</td>
+        <td>83779</td>
+        <td>9656</td>
+        <td>12.0</td>
+        <td>-3</td>
+        <td>638</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шитье| Выкройки | Уроки шитья</td>
+        <td><a href="https://t.me/urokishitya">https://t.me/urokishitya</a></td>
+        <td>Рукоделие</td>
+        <td>83051</td>
+        <td>7375</td>
+        <td>9.0</td>
+        <td>13</td>
+        <td>-8</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Амигуруми | Мастер-классы</td>
+        <td><a href="https://t.me/amigurumi_mc">https://t.me/amigurumi_mc</a></td>
+        <td>Рукоделие</td>
+        <td>81341</td>
+        <td>19530</td>
+        <td>24.0</td>
+        <td>-14</td>
+        <td>316</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Творческая мастерская | Рукоделие 🧵</td>
+        <td><a href="https://t.me/joinchat/AAAAAE53f5PQqfAQCPZPWg">https://t.me/joinchat/AAAAAE53f5PQqfAQCPZPWg</a></td>
+        <td>Рукоделие</td>
+        <td>80551</td>
+        <td>8462</td>
+        <td>11.0</td>
+        <td>22</td>
+        <td>165</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вязание спицами и крючком</td>
+        <td><a href="https://t.me/spize25">https://t.me/spize25</a></td>
+        <td>Рукоделие</td>
+        <td>77923</td>
+        <td>11423</td>
+        <td>15.0</td>
+        <td>-29</td>
+        <td>-14</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Школа Вязания</td>
+        <td><a href="https://t.me/joinchat/JwYjKFOndFQ0NzIy">https://t.me/joinchat/JwYjKFOndFQ0NzIy</a></td>
+        <td>Рукоделие</td>
+        <td>72211</td>
+        <td>14214</td>
+        <td>20.0</td>
+        <td>2607</td>
+        <td>-886</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БЕСПЛАТНЫЕ ВЫКРОЙКИ PDF | ШИТЬЁ</td>
+        <td><a href="https://t.me/vikroyki_pdff">https://t.me/vikroyki_pdff</a></td>
+        <td>Рукоделие</td>
+        <td>71353</td>
+        <td>6621</td>
+        <td>10.0</td>
+        <td>85</td>
+        <td>385</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вяжем шапки, варежки, носки, свитера | МК</td>
+        <td><a href="https://t.me/joinchat/OmLPeuxqsYdhMzEy">https://t.me/joinchat/OmLPeuxqsYdhMzEy</a></td>
+        <td>Рукоделие</td>
+        <td>70442</td>
+        <td>13595</td>
+        <td>20.0</td>
+        <td>-187</td>
+        <td>370</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Баба Яга | Рукоделие</td>
+        <td><a href="https://t.me/joinchat/nPj8MfzwhqFiMTIy">https://t.me/joinchat/nPj8MfzwhqFiMTIy</a></td>
+        <td>Рукоделие</td>
+        <td>69238</td>
+        <td>4521</td>
+        <td>7.0</td>
+        <td>-207</td>
+        <td>-546</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Идеи для открыток</td>
+        <td><a href="https://t.me/otkritki_ideas">https://t.me/otkritki_ideas</a></td>
+        <td>Рукоделие</td>
+        <td>64859</td>
+        <td>15025</td>
+        <td>24.0</td>
+        <td>-203</td>
+        <td>202</td>
+        <td>7 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатные выкройки | Шитье|Рукоделие</td>
+        <td><a href="https://t.me/pdf_vikroyki">https://t.me/pdf_vikroyki</a></td>
+        <td>Рукоделие</td>
+        <td>63981</td>
+        <td>7291</td>
+        <td>12.0</td>
+        <td>112</td>
+        <td>462</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лихой ТопорЪ</td>
+        <td><a href="https://t.me/lihojtoporofficial">https://t.me/lihojtoporofficial</a></td>
+        <td>Рукоделие</td>
+        <td>56428</td>
+        <td>30055</td>
+        <td>54.0</td>
+        <td>-130</td>
+        <td>-352</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ручки шьют | Шитье</td>
+        <td><a href="https://t.me/hand_sewing">https://t.me/hand_sewing</a></td>
+        <td>Рукоделие</td>
+        <td>56160</td>
+        <td>7402</td>
+        <td>14.0</td>
+        <td>-5</td>
+        <td>633</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Уроки вязания</td>
+        <td><a href="https://t.me/joinchat/WDxVjYVuOjpjMjUy">https://t.me/joinchat/WDxVjYVuOjpjMjUy</a></td>
+        <td>Рукоделие</td>
+        <td>54710</td>
+        <td>7790</td>
+        <td>15.0</td>
+        <td>-179</td>
+        <td>-441</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ideas ✨</td>
+        <td><a href="https://t.me/ideasforgirls">https://t.me/ideasforgirls</a></td>
+        <td>Рукоделие</td>
+        <td>49580</td>
+        <td>13166</td>
+        <td>27.0</td>
+        <td>-124</td>
+        <td>1971</td>
+        <td>6 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Стильное вязание, СХЕМЫ</td>
+        <td><a href="https://t.me/stilnoe_vjazanie">https://t.me/stilnoe_vjazanie</a></td>
+        <td>Рукоделие</td>
+        <td>48470</td>
+        <td>6245</td>
+        <td>13.0</td>
+        <td>-28</td>
+        <td>141</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Моё хобби 🎀</td>
+        <td><a href="https://t.me/hobbyideas">https://t.me/hobbyideas</a></td>
+        <td>Рукоделие</td>
+        <td>47145</td>
+        <td>21391</td>
+        <td>46.0</td>
+        <td>18288</td>
+        <td>479</td>
+        <td>6 месяцев 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>ПЕРВЫЙ ШВЕЙНЫЙ | Бесплатные выкройки PDF</td>
+        <td><a href="https://t.me/vikroyky_free">https://t.me/vikroyky_free</a></td>
+        <td>Рукоделие</td>
+        <td>46830</td>
+        <td>9017</td>
+        <td>20.0</td>
+        <td>-193</td>
+        <td>-667</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вязание | Мастер-классы</td>
+        <td><a href="https://t.me/joinchat/oZ9lYobDup8xODhi">https://t.me/joinchat/oZ9lYobDup8xODhi</a></td>
+        <td>Рукоделие</td>
+        <td>45531</td>
+        <td>12555</td>
+        <td>28.0</td>
+        <td>-58</td>
+        <td>-353</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вязание | Пошаговые видео уроки</td>
+        <td><a href="https://t.me/mkcrochet">https://t.me/mkcrochet</a></td>
+        <td>Рукоделие</td>
+        <td>43945</td>
+        <td>7071</td>
+        <td>17.0</td>
+        <td>490</td>
+        <td>656</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бисероплетение Идеи Схемы</td>
+        <td><a href="https://t.me/iz_bisera_amigurumi">https://t.me/iz_bisera_amigurumi</a></td>
+        <td>Рукоделие</td>
+        <td>43498</td>
+        <td>13545</td>
+        <td>32.0</td>
+        <td>420</td>
+        <td>2893</td>
+        <td>3 года 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Амигуруми | Amigurumi</td>
+        <td><a href="https://t.me/amigurumi_knit">https://t.me/amigurumi_knit</a></td>
+        <td>Рукоделие</td>
+        <td>41298</td>
+        <td>5179</td>
+        <td>13.0</td>
+        <td>-106</td>
+        <td>-363</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Вяжите для души</td>
+        <td><a href="https://t.me/knitforsoul">https://t.me/knitforsoul</a></td>
+        <td>Рукоделие</td>
+        <td>40589</td>
+        <td>10845</td>
+        <td>27.0</td>
+        <td>261</td>
+        <td>740</td>
+        <td>4 года 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Игорь Негода</td>
+        <td><a href="https://t.me/igornegodastartuem">https://t.me/igornegodastartuem</a></td>
+        <td>Рукоделие</td>
+        <td>40257</td>
+        <td>38196</td>
+        <td>95.0</td>
+        <td>65</td>
+        <td>285</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Wool_dom. Магазин пряжи</td>
+        <td><a href="https://t.me/wool_dom_1">https://t.me/wool_dom_1</a></td>
+        <td>Рукоделие</td>
+        <td>39788</td>
+        <td>5245</td>
+        <td>14.0</td>
+        <td>158</td>
+        <td>1245</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вяжем круглый год | Вязание</td>
+        <td><a href="https://t.me/joinchat/K2tqQ26A7_AxMDAy">https://t.me/joinchat/K2tqQ26A7_AxMDAy</a></td>
+        <td>Рукоделие</td>
+        <td>38931</td>
+        <td>4565</td>
+        <td>12.0</td>
+        <td>-276</td>
+        <td>-490</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Клубок Идей | Вязание 🧶</td>
+        <td><a href="https://t.me/joinchat/2C9p2rHKpSozYWZi">https://t.me/joinchat/2C9p2rHKpSozYWZi</a></td>
+        <td>Рукоделие</td>
+        <td>38016</td>
+        <td>6175</td>
+        <td>17.0</td>
+        <td>-377</td>
+        <td>-1515</td>
+        <td>9 месяцев 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>ВЯЗАНИЕ Nataly Masters</td>
+        <td><a href="https://t.me/natalymasters">https://t.me/natalymasters</a></td>
+        <td>Рукоделие</td>
+        <td>36313</td>
+        <td>6384</td>
+        <td>18.0</td>
+        <td>283</td>
+        <td>802</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Стильное вязание</td>
+        <td><a href="https://t.me/joinchat/4TOJLJqIwwk5YmUy">https://t.me/joinchat/4TOJLJqIwwk5YmUy</a></td>
+        <td>Рукоделие</td>
+        <td>36236</td>
+        <td>6880</td>
+        <td>19.0</td>
+        <td>-160</td>
+        <td>-184</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Оригами</td>
+        <td><a href="https://t.me/origamitop1">https://t.me/origamitop1</a></td>
+        <td>Рукоделие</td>
+        <td>36104</td>
+        <td>12743</td>
+        <td>36.0</td>
+        <td>692</td>
+        <td>2090</td>
+        <td>3 месяца 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Нескучное вязание</td>
+        <td><a href="https://t.me/neskuchnovyazat">https://t.me/neskuchnovyazat</a></td>
+        <td>Рукоделие</td>
+        <td>36073</td>
+        <td>6120</td>
+        <td>17.0</td>
+        <td>-101</td>
+        <td>150</td>
+        <td>3 года 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Хочу вязать | Крючком и спицами</td>
+        <td><a href="https://t.me/hochu_vyazat">https://t.me/hochu_vyazat</a></td>
+        <td>Рукоделие</td>
+        <td>35990</td>
+        <td>5583</td>
+        <td>16.0</td>
+        <td>-51</td>
+        <td>104</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Умное вязание</td>
+        <td><a href="https://t.me/joinchat/Vfpu6Y5mzU5lZWNi">https://t.me/joinchat/Vfpu6Y5mzU5lZWNi</a></td>
+        <td>Рукоделие</td>
+        <td>35789</td>
+        <td>2970</td>
+        <td>9.0</td>
+        <td>-342</td>
+        <td>-1442</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ольга Кондратьева. Вяжем с WickedLynx</td>
+        <td><a href="https://t.me/ok_wickedlynx">https://t.me/ok_wickedlynx</a></td>
+        <td>Рукоделие</td>
+        <td>35554</td>
+        <td>17507</td>
+        <td>50.0</td>
+        <td>-5</td>
+        <td>-18</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БЕСПЛАТНЫЕ выкройки PDF | Рукоделие 🧵</td>
+        <td><a href="https://t.me/worldsewing">https://t.me/worldsewing</a></td>
+        <td>Рукоделие</td>
+        <td>34514</td>
+        <td>3112</td>
+        <td>9.0</td>
+        <td>35</td>
+        <td>133</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир вышивки | рукоделие</td>
+        <td><a href="https://t.me/vyshivkaa">https://t.me/vyshivkaa</a></td>
+        <td>Рукоделие</td>
+        <td>34454</td>
+        <td>5641</td>
+        <td>17.0</td>
+        <td>-89</td>
+        <td>-85</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Полина Майорова. Плетение из бумажной лозы</td>
+        <td><a href="https://t.me/hm_by_polina_mayorova">https://t.me/hm_by_polina_mayorova</a></td>
+        <td>Рукоделие</td>
+        <td>33980</td>
+        <td>11705</td>
+        <td>35.0</td>
+        <td>286</td>
+        <td>802</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МАСТЕРСКАЯ</td>
+        <td><a href="https://t.me/joinchat/Sv-5b0kGQxFjOWI6">https://t.me/joinchat/Sv-5b0kGQxFjOWI6</a></td>
+        <td>Рукоделие</td>
+        <td>33827</td>
+        <td>4882</td>
+        <td>15.0</td>
+        <td>0</td>
+        <td>1764</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатные Выкройки PDF | Шить</td>
+        <td><a href="https://t.me/sewingpdf">https://t.me/sewingpdf</a></td>
+        <td>Рукоделие</td>
+        <td>33442</td>
+        <td>3324</td>
+        <td>10.0</td>
+        <td>-18</td>
+        <td>-161</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рукодельный Рай | Рукоделие и вязание</td>
+        <td><a href="https://t.me/joinchat/nHeBCmGKnzdjYTM6">https://t.me/joinchat/nHeBCmGKnzdjYTM6</a></td>
+        <td>Рукоделие</td>
+        <td>32898</td>
+        <td>4656</td>
+        <td>15.0</td>
+        <td>-172</td>
+        <td>-1081</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вязаные сумки | Пледы</td>
+        <td><a href="https://t.me/joinchat/lRKRIRr_u6UxYzky">https://t.me/joinchat/lRKRIRr_u6UxYzky</a></td>
+        <td>Рукоделие</td>
+        <td>32318</td>
+        <td>18472</td>
+        <td>58.0</td>
+        <td>2223</td>
+        <td>8782</td>
+        <td>6 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Галерея Вязания</td>
+        <td><a href="https://t.me/joinchat/tmOMWN0DMANiODYy">https://t.me/joinchat/tmOMWN0DMANiODYy</a></td>
+        <td>Рукоделие</td>
+        <td>32011</td>
+        <td>5048</td>
+        <td>16.0</td>
+        <td>-131</td>
+        <td>-438</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вязание для детей</td>
+        <td><a href="https://t.me/joinchat/WMAacIM6eytkYzhi">https://t.me/joinchat/WMAacIM6eytkYzhi</a></td>
+        <td>Рукоделие</td>
+        <td>31927</td>
+        <td>9822</td>
+        <td>31.0</td>
+        <td>-96</td>
+        <td>452</td>
+        <td>8 месяцев 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Шить Здорово 🪡</td>
+        <td><a href="https://t.me/shiit_zdorovo">https://t.me/shiit_zdorovo</a></td>
+        <td>Рукоделие</td>
+        <td>31245</td>
+        <td>3103</td>
+        <td>10.0</td>
+        <td>-105</td>
+        <td>-408</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VIKISEWS PATTERNS | шей, твори, люби</td>
+        <td><a href="https://t.me/patternsvikisews">https://t.me/patternsvikisews</a></td>
+        <td>Рукоделие</td>
+        <td>30794</td>
+        <td>9354</td>
+        <td>31.0</td>
+        <td>514</td>
+        <td>959</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лозамастер| Плетение мебели</td>
+        <td><a href="https://t.me/magic_sunduchek">https://t.me/magic_sunduchek</a></td>
+        <td>Рукоделие</td>
+        <td>30491</td>
+        <td>5292</td>
+        <td>18.0</td>
+        <td>76</td>
+        <td>361</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вязание крючком</td>
+        <td><a href="https://t.me/joinchat/MSevbSfLDao1ZjAy">https://t.me/joinchat/MSevbSfLDao1ZjAy</a></td>
+        <td>Рукоделие</td>
+        <td>29912</td>
+        <td>7185</td>
+        <td>24.0</td>
+        <td>-96</td>
+        <td>-116</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вяжи со мной</td>
+        <td><a href="https://t.me/cjvyjq03">https://t.me/cjvyjq03</a></td>
+        <td>Рукоделие</td>
+        <td>29551</td>
+        <td>4403</td>
+        <td>15.0</td>
+        <td>-77</td>
+        <td>199</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ленивое шитье</td>
+        <td><a href="https://t.me/lazy_sewing">https://t.me/lazy_sewing</a></td>
+        <td>Рукоделие</td>
+        <td>29450</td>
+        <td>2384</td>
+        <td>9.0</td>
+        <td>-9</td>
+        <td>-80</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ирина Невзорова</td>
+        <td><a href="https://t.me/nevzorovaclub">https://t.me/nevzorovaclub</a></td>
+        <td>Рукоделие</td>
+        <td>29371</td>
+        <td>5993</td>
+        <td>21.0</td>
+        <td>17</td>
+        <td>69</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лёгкое вязание</td>
+        <td><a href="https://t.me/joinchat/2brxI-9WmuE0MjBi">https://t.me/joinchat/2brxI-9WmuE0MjBi</a></td>
+        <td>Рукоделие</td>
+        <td>29337</td>
+        <td>5696</td>
+        <td>20.0</td>
+        <td>127</td>
+        <td>-196</td>
+        <td>6 месяцев 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Журнал выкроек</td>
+        <td><a href="https://t.me/Journal_vykroek">https://t.me/Journal_vykroek</a></td>
+        <td>Рукоделие</td>
+        <td>29287</td>
+        <td>5190</td>
+        <td>18.0</td>
+        <td>-41</td>
+        <td>-217</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Handmade | Рукоделие</td>
+        <td><a href="https://t.me/femme_handmade">https://t.me/femme_handmade</a></td>
+        <td>Рукоделие</td>
+        <td>28875</td>
+        <td>3813</td>
+        <td>14.0</td>
+        <td>-65</td>
+        <td>-539</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Вяжем с @knitting_group_</td>
+        <td><a href="https://t.me/knitting_gr">https://t.me/knitting_gr</a></td>
+        <td>Рукоделие</td>
+        <td>28490</td>
+        <td>3423</td>
+        <td>12.0</td>
+        <td>-46</td>
+        <td>-136</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Амигуруми | МК, схемы, описания | Вязание крючком</td>
+        <td><a href="https://t.me/amigurumi_yarn">https://t.me/amigurumi_yarn</a></td>
+        <td>Рукоделие</td>
+        <td>28247</td>
+        <td>6642</td>
+        <td>24.0</td>
+        <td>54</td>
+        <td>377</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>studio.yusupova</td>
+        <td><a href="https://t.me/studioyusupova">https://t.me/studioyusupova</a></td>
+        <td>Рукоделие</td>
+        <td>28244</td>
+        <td>8741</td>
+        <td>31.0</td>
+        <td>1</td>
+        <td>238</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вязание Игрушек | Амигуруми</td>
+        <td><a href="https://t.me/amigurumi_igruwki">https://t.me/amigurumi_igruwki</a></td>
+        <td>Рукоделие</td>
+        <td>27563</td>
+        <td>3428</td>
+        <td>13.0</td>
+        <td>-111</td>
+        <td>-467</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Копилка узоров</td>
+        <td><a href="https://t.me/kopilka_uzorov">https://t.me/kopilka_uzorov</a></td>
+        <td>Рукоделие</td>
+        <td>25869</td>
+        <td>3535</td>
+        <td>14.0</td>
+        <td>-1</td>
+        <td>104</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Волшебные петельки (Вязание)</td>
+        <td><a href="https://t.me/leytuvyjuj4">https://t.me/leytuvyjuj4</a></td>
+        <td>Рукоделие</td>
+        <td>25773</td>
+        <td>3416</td>
+        <td>14.0</td>
+        <td>-66</td>
+        <td>-65</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мастерская игрушек Амигуруми</td>
+        <td><a href="https://t.me/toys_handmade">https://t.me/toys_handmade</a></td>
+        <td>Рукоделие</td>
+        <td>25673</td>
+        <td>3894</td>
+        <td>16.0</td>
+        <td>-67</td>
+        <td>200</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Амигуруми | Лучшие МК🧸</td>
+        <td><a href="https://t.me/joinchat/GyM81q7tS4oxMjAy">https://t.me/joinchat/GyM81q7tS4oxMjAy</a></td>
+        <td>Рукоделие</td>
+        <td>25651</td>
+        <td>7726</td>
+        <td>31.0</td>
+        <td>-151</td>
+        <td>-551</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вязание | Бесплатные описания</td>
+        <td><a href="https://t.me/joinchat/pts0RU_kk-VkZDMy">https://t.me/joinchat/pts0RU_kk-VkZDMy</a></td>
+        <td>Рукоделие</td>
+        <td>25355</td>
+        <td>5048</td>
+        <td>20.0</td>
+        <td>348</td>
+        <td>123</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Секреты Амигуруми</td>
+        <td><a href="https://t.me/joinchat/vkr-3FkjPSs1YTgy">https://t.me/joinchat/vkr-3FkjPSs1YTgy</a></td>
+        <td>Рукоделие</td>
+        <td>25248</td>
+        <td>2945</td>
+        <td>12.0</td>
+        <td>-77</td>
+        <td>-427</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ажурное вязание</td>
+        <td><a href="https://t.me/joinchat/l9rbexZsQEtmOTYy">https://t.me/joinchat/l9rbexZsQEtmOTYy</a></td>
+        <td>Рукоделие</td>
+        <td>25056</td>
+        <td>5391</td>
+        <td>22.0</td>
+        <td>-146</td>
+        <td>637</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Схемы амигуруми</td>
+        <td><a href="https://t.me/amigurumi_pattern_free">https://t.me/amigurumi_pattern_free</a></td>
+        <td>Рукоделие</td>
+        <td>24961</td>
+        <td>6395</td>
+        <td>26.0</td>
+        <td>30</td>
+        <td>175</td>
+        <td>2 года 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>3DMP | 3д печать | 3d принтер</td>
+        <td><a href="https://t.me/morozprint">https://t.me/morozprint</a></td>
+        <td>Рукоделие</td>
+        <td>24892</td>
+        <td>9139</td>
+        <td>37.0</td>
+        <td>206</td>
+        <td>873</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир Макраме | Уроки и идеи</td>
+        <td><a href="https://t.me/joinchat/I-OhjrEpfrQ2NjQ6">https://t.me/joinchat/I-OhjrEpfrQ2NjQ6</a></td>
+        <td>Рукоделие</td>
+        <td>24585</td>
+        <td>6511</td>
+        <td>27.0</td>
+        <td>735</td>
+        <td>1771</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Вязание Амигуруми - Просто и Мило</td>
+        <td><a href="https://t.me/vyazanieprosto">https://t.me/vyazanieprosto</a></td>
+        <td>Рукоделие</td>
+        <td>24543</td>
+        <td>6578</td>
+        <td>27.0</td>
+        <td>85</td>
+        <td>550</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Плетение кашпо из ротанга</td>
+        <td><a href="https://t.me/eco_rotang">https://t.me/eco_rotang</a></td>
+        <td>Рукоделие</td>
+        <td>24528</td>
+        <td>19137</td>
+        <td>78.0</td>
+        <td>564</td>
+        <td>2237</td>
+        <td>9 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Вязание | Лайфхаки | Уроки</td>
+        <td><a href="https://t.me/vyazanie_maria">https://t.me/vyazanie_maria</a></td>
+        <td>Рукоделие</td>
+        <td>24425</td>
+        <td>2693</td>
+        <td>11.0</td>
+        <td>-40</td>
+        <td>-191</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>❤️Вязание и Мастер классы 🧶</td>
+        <td><a href="https://t.me/joinchat/d03YAVgq5RAwNGEy">https://t.me/joinchat/d03YAVgq5RAwNGEy</a></td>
+        <td>Рукоделие</td>
+        <td>24415</td>
+        <td>4182</td>
+        <td>18.0</td>
+        <td>85</td>
+        <td>159</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книга рукодельниц | Рукоделие</td>
+        <td><a href="https://t.me/kniga_ruk">https://t.me/kniga_ruk</a></td>
+        <td>Рукоделие</td>
+        <td>24278</td>
+        <td>1744</td>
+        <td>8.0</td>
+        <td>-47</td>
+        <td>-239</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Умелые спицы | Вязание</td>
+        <td><a href="https://t.me/joinchat/MngP0HZbazk3Yjgy">https://t.me/joinchat/MngP0HZbazk3Yjgy</a></td>
+        <td>Рукоделие</td>
+        <td>24279</td>
+        <td>4367</td>
+        <td>18.0</td>
+        <td>841</td>
+        <td>2750</td>
+        <td>4 месяца 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Вязаные Идеи. Вязание</td>
+        <td><a href="https://t.me/knitideas">https://t.me/knitideas</a></td>
+        <td>Рукоделие</td>
+        <td>24264</td>
+        <td>3138</td>
+        <td>13.0</td>
+        <td>231</td>
+        <td>242</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вязание. Амигуруми. Переводы</td>
+        <td><a href="https://t.me/joinchat/2QzHf5ukKCYzMDUy">https://t.me/joinchat/2QzHf5ukKCYzMDUy</a></td>
+        <td>Рукоделие</td>
+        <td>24045</td>
+        <td>5470</td>
+        <td>23.0</td>
+        <td>4</td>
+        <td>377</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мир вязаных игрушек</td>
+        <td><a href="https://t.me/amig_time">https://t.me/amig_time</a></td>
+        <td>Рукоделие</td>
+        <td>23950</td>
+        <td>5890</td>
+        <td>25.0</td>
+        <td>192</td>
+        <td>636</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вязаные игрушки🧸</td>
+        <td><a href="https://t.me/joinchat/Uhxic-8xdk02NTFi">https://t.me/joinchat/Uhxic-8xdk02NTFi</a></td>
+        <td>Рукоделие</td>
+        <td>23737</td>
+        <td>7380</td>
+        <td>32.0</td>
+        <td>685</td>
+        <td>3117</td>
+        <td>10 месяцев 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Вязание | Переводы описаний | МК</td>
+        <td><a href="https://t.me/joinchat/HB5kpAw1LBRlNjVi">https://t.me/joinchat/HB5kpAw1LBRlNjVi</a></td>
+        <td>Рукоделие</td>
+        <td>23656</td>
+        <td>7453</td>
+        <td>32.0</td>
+        <td>-72</td>
+        <td>354</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шью Дома</td>
+        <td><a href="https://t.me/MalihEkaterina">https://t.me/MalihEkaterina</a></td>
+        <td>Рукоделие</td>
+        <td>23284</td>
+        <td>10368</td>
+        <td>45.0</td>
+        <td>147</td>
+        <td>584</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Красота своими руками | Вязание</td>
+        <td><a href="https://t.me/joinchat/UV2LjXbOdNA5NTcy">https://t.me/joinchat/UV2LjXbOdNA5NTcy</a></td>
+        <td>Рукоделие</td>
+        <td>23032</td>
+        <td>4521</td>
+        <td>20.0</td>
+        <td>643</td>
+        <td>3367</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Вяжем, девочки | Мастер-классы</td>
+        <td><a href="https://t.me/joinchat/Hr3yK1IDHLxjMmJi">https://t.me/joinchat/Hr3yK1IDHLxjMmJi</a></td>
+        <td>Рукоделие</td>
+        <td>22956</td>
+        <td>4803</td>
+        <td>21.0</td>
+        <td>-223</td>
+        <td>-966</td>
+        <td>4 месяца 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Сделай сам</td>
+        <td><a href="https://t.me/Samodelkino">https://t.me/Samodelkino</a></td>
+        <td>Рукоделие</td>
+        <td>22636</td>
+        <td>1653</td>
+        <td>8.0</td>
+        <td>-31</td>
+        <td>-122</td>
+        <td>8 лет 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Шитьё для всех</td>
+        <td><a href="https://t.me/joinchat/eX27LX4hcpIzZTZi">https://t.me/joinchat/eX27LX4hcpIzZTZi</a></td>
+        <td>Рукоделие</td>
+        <td>22618</td>
+        <td>6666</td>
+        <td>30.0</td>
+        <td>132</td>
+        <td>180</td>
+        <td>9 месяцев 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Юля Балль о Шитье и счастье☺️</td>
+        <td><a href="https://t.me/lekalaprostoru">https://t.me/lekalaprostoru</a></td>
+        <td>Рукоделие</td>
+        <td>22555</td>
+        <td>1779</td>
+        <td>8.0</td>
+        <td>-43</td>
+        <td>-146</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ASHA Вязание, фотографии, видеомастер-классы. 🍃🧶</td>
+        <td><a href="https://t.me/knittmi">https://t.me/knittmi</a></td>
+        <td>Рукоделие</td>
+        <td>22208</td>
+        <td>3439</td>
+        <td>16.0</td>
+        <td>94</td>
+        <td>377</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Милое вязание</td>
+        <td><a href="https://t.me/cuteknitting12">https://t.me/cuteknitting12</a></td>
+        <td>Рукоделие</td>
+        <td>22094</td>
+        <td>5007</td>
+        <td>23.0</td>
+        <td>-33</td>
+        <td>16</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Человек, который шьет.</td>
+        <td><a href="https://t.me/sewing_man">https://t.me/sewing_man</a></td>
+        <td>Рукоделие</td>
+        <td>21860</td>
+        <td>3070</td>
+        <td>14.0</td>
+        <td>-14</td>
+        <td>-47</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

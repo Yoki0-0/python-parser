@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>ЯЗЫКИ И ТЕМЫ ТГ ОБОИ</td>
+        <td><a href="https://t.me/temki_zvezdy">https://t.me/temki_zvezdy</a></td>
+        <td>Картинки и фото</td>
+        <td>2592691</td>
+        <td>149750</td>
+        <td>6.0</td>
+        <td>35994</td>
+        <td>37717</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикерач</td>
+        <td><a href="https://t.me/stikery_emodzi_memy">https://t.me/stikery_emodzi_memy</a></td>
+        <td>Картинки и фото</td>
+        <td>2160849</td>
+        <td>430772</td>
+        <td>20.0</td>
+        <td>-39178</td>
+        <td>-53594</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Язычки | обои | темы тг</td>
+        <td><a href="https://t.me/temki_yazykii">https://t.me/temki_yazykii</a></td>
+        <td>Картинки и фото</td>
+        <td>1076365</td>
+        <td>24973</td>
+        <td>3.0</td>
+        <td>8350</td>
+        <td>-39975</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТЕМЫ И КАРТИНКИ | ТГ ЯЗЫКИ</td>
+        <td><a href="https://t.me/anime_oboi2">https://t.me/anime_oboi2</a></td>
+        <td>Картинки и фото</td>
+        <td>639442</td>
+        <td>8711</td>
+        <td>2.0</td>
+        <td>-10991</td>
+        <td>-19302</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>я люблю</td>
+        <td><a href="https://t.me/khochu_ne_nenavizhu">https://t.me/khochu_ne_nenavizhu</a></td>
+        <td>Картинки и фото</td>
+        <td>415644</td>
+        <td>12194</td>
+        <td>3.0</td>
+        <td>12060</td>
+        <td>30952</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пресеты Лайтрум | Presets Lightroom</td>
+        <td><a href="https://t.me/presety">https://t.me/presety</a></td>
+        <td>Картинки и фото</td>
+        <td>323018</td>
+        <td>51329</td>
+        <td>16.0</td>
+        <td>192</td>
+        <td>512</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Поздравления на каждый день</td>
+        <td><a href="https://t.me/pozdravlenie_otkrytky">https://t.me/pozdravlenie_otkrytky</a></td>
+        <td>Картинки и фото</td>
+        <td>253278</td>
+        <td>117387</td>
+        <td>47.0</td>
+        <td>-462</td>
+        <td>-2636</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Поздравления и открытки</td>
+        <td><a href="https://t.me/joinchat/VlD1KM2CgJdkNmM6">https://t.me/joinchat/VlD1KM2CgJdkNmM6</a></td>
+        <td>Картинки и фото</td>
+        <td>201657</td>
+        <td>56777</td>
+        <td>29.0</td>
+        <td>2093</td>
+        <td>170</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Грустные строки | Цитаты</td>
+        <td><a href="https://t.me/estetika_pesni">https://t.me/estetika_pesni</a></td>
+        <td>Картинки и фото</td>
+        <td>190613</td>
+        <td>7810</td>
+        <td>5.0</td>
+        <td>-6165</td>
+        <td>-15499</td>
+        <td>10 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Фабрика открыток🎁</td>
+        <td><a href="https://t.me/joinchat/vvczc5Z6dqQwYTBi">https://t.me/joinchat/vvczc5Z6dqQwYTBi</a></td>
+        <td>Картинки и фото</td>
+        <td>185382</td>
+        <td>66159</td>
+        <td>36.0</td>
+        <td>18</td>
+        <td>2401</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ПОЗЫ ДЛЯ ФОТО | Уроки фотопозирования</td>
+        <td><a href="https://t.me/joinchat/DeuMWaJRHak0ZGFh">https://t.me/joinchat/DeuMWaJRHak0ZGFh</a></td>
+        <td>Картинки и фото</td>
+        <td>182609</td>
+        <td>17331</td>
+        <td>10.0</td>
+        <td>-579</td>
+        <td>-3042</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>COMMUNITY • Нейросеть Fabula AI</td>
+        <td><a href="https://t.me/fabula_community">https://t.me/fabula_community</a></td>
+        <td>Картинки и фото</td>
+        <td>180065</td>
+        <td>16602</td>
+        <td>10.0</td>
+        <td>-1106</td>
+        <td>-5193</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Midjourney Креативы</td>
+        <td><a href="https://t.me/midjourney_home">https://t.me/midjourney_home</a></td>
+        <td>Картинки и фото</td>
+        <td>176798</td>
+        <td>24097</td>
+        <td>14.0</td>
+        <td>-165</td>
+        <td>179</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВСЕ ОТКРЫТКИ ТУТ</td>
+        <td><a href="https://t.me/joinchat/8rx7F4kFhdMyZTIy">https://t.me/joinchat/8rx7F4kFhdMyZTIy</a></td>
+        <td>Картинки и фото</td>
+        <td>175750</td>
+        <td>60539</td>
+        <td>35.0</td>
+        <td>-2267</td>
+        <td>-4493</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Идеи татуировок | Женские тату</td>
+        <td><a href="https://t.me/minitatu">https://t.me/minitatu</a></td>
+        <td>Картинки и фото</td>
+        <td>174022</td>
+        <td>13118</td>
+        <td>8.0</td>
+        <td>5772</td>
+        <td>5130</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нейросеть видит</td>
+        <td><a href="https://t.me/neuroset_vidit">https://t.me/neuroset_vidit</a></td>
+        <td>Картинки и фото</td>
+        <td>169696</td>
+        <td>21477</td>
+        <td>13.0</td>
+        <td>-674</td>
+        <td>-3445</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытки | Поздравления 🥰</td>
+        <td><a href="https://t.me/joinchat/or-61_GEPKU5NTM6">https://t.me/joinchat/or-61_GEPKU5NTM6</a></td>
+        <td>Картинки и фото</td>
+        <td>166536</td>
+        <td>43775</td>
+        <td>27.0</td>
+        <td>482</td>
+        <td>1726</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Поздравления на каждый день</td>
+        <td><a href="https://t.me/otkrytki_kartinki222">https://t.me/otkrytki_kartinki222</a></td>
+        <td>Картинки и фото</td>
+        <td>166368</td>
+        <td>8382</td>
+        <td>5.0</td>
+        <td>-1955</td>
+        <td>87859</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Парные аватарки | авы</td>
+        <td><a href="https://t.me/avatarka_oboi7">https://t.me/avatarka_oboi7</a></td>
+        <td>Картинки и фото</td>
+        <td>163228</td>
+        <td>10076</td>
+        <td>7.0</td>
+        <td>-4061</td>
+        <td>-21891</td>
+        <td>10 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Вам открытка! ❤️</td>
+        <td><a href="https://t.me/joinchat/ZFIcPFcKbdQ3YTAy">https://t.me/joinchat/ZFIcPFcKbdQ3YTAy</a></td>
+        <td>Картинки и фото</td>
+        <td>161634</td>
+        <td>34576</td>
+        <td>22.0</td>
+        <td>-2099</td>
+        <td>-8576</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Открытки Добра | Пожелания</td>
+        <td><a href="https://t.me/joinchat/Swmvtq2i5atlYmEy">https://t.me/joinchat/Swmvtq2i5atlYmEy</a></td>
+        <td>Картинки и фото</td>
+        <td>154851</td>
+        <td>41322</td>
+        <td>27.0</td>
+        <td>20929</td>
+        <td>27337</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Обои для iPhone</td>
+        <td><a href="https://t.me/iwalss">https://t.me/iwalss</a></td>
+        <td>Картинки и фото</td>
+        <td>154177</td>
+        <td>32908</td>
+        <td>22.0</td>
+        <td>618</td>
+        <td>2238</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>open your eyes</td>
+        <td><a href="https://t.me/joinchat/AAAAAExWejU3XDHQuyTy_g">https://t.me/joinchat/AAAAAExWejU3XDHQuyTy_g</a></td>
+        <td>Картинки и фото</td>
+        <td>152963</td>
+        <td>24336</td>
+        <td>16.0</td>
+        <td>-121</td>
+        <td>-685</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>folwixxx | ТЕМА ИЗ ТИК ТОКА ТУТ</td>
+        <td><a href="https://t.me/folwixxx">https://t.me/folwixxx</a></td>
+        <td>Картинки и фото</td>
+        <td>150257</td>
+        <td>13606</td>
+        <td>10.0</td>
+        <td>784</td>
+        <td>4566</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Liriorial | языки и темы</td>
+        <td><a href="https://t.me/temki_yaziparnye">https://t.me/temki_yaziparnye</a></td>
+        <td>Картинки и фото</td>
+        <td>149380</td>
+        <td>88975</td>
+        <td>60.0</td>
+        <td>188</td>
+        <td>4878</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Альбом Открыток</td>
+        <td><a href="https://t.me/joinchat/KqA5dgdCCukxMmM0">https://t.me/joinchat/KqA5dgdCCukxMmM0</a></td>
+        <td>Картинки и фото</td>
+        <td>145743</td>
+        <td>40314</td>
+        <td>28.0</td>
+        <td>-1856</td>
+        <td>-11369</td>
+        <td>3 месяца 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Открыточка</td>
+        <td><a href="https://t.me/joinchat/s3bqEHZkuwdjNmEy">https://t.me/joinchat/s3bqEHZkuwdjNmEy</a></td>
+        <td>Картинки и фото</td>
+        <td>140838</td>
+        <td>66140</td>
+        <td>47.0</td>
+        <td>-1381</td>
+        <td>-7063</td>
+        <td>8 месяцев 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Открытки для души✨</td>
+        <td><a href="https://t.me/joinchat/HJ5Iwnu0128wMTUy">https://t.me/joinchat/HJ5Iwnu0128wMTUy</a></td>
+        <td>Картинки и фото</td>
+        <td>136372</td>
+        <td>42018</td>
+        <td>31.0</td>
+        <td>4455</td>
+        <td>1435</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытки Картинки Доброе</td>
+        <td><a href="https://t.me/s_utrom_dobrym">https://t.me/s_utrom_dobrym</a></td>
+        <td>Картинки и фото</td>
+        <td>131577</td>
+        <td>67010</td>
+        <td>51.0</td>
+        <td>-216</td>
+        <td>-1553</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры из ВК</td>
+        <td><a href="https://t.me/stickers_vk">https://t.me/stickers_vk</a></td>
+        <td>Картинки и фото</td>
+        <td>130969</td>
+        <td>24662</td>
+        <td>19.0</td>
+        <td>-730</td>
+        <td>-4303</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СМС c Открытками</td>
+        <td><a href="https://t.me/joinchat/9P8VXWauJf0zZTdi">https://t.me/joinchat/9P8VXWauJf0zZTdi</a></td>
+        <td>Картинки и фото</td>
+        <td>124781</td>
+        <td>199</td>
+        <td>1.0</td>
+        <td>124774</td>
+        <td>124775</td>
+        <td>4 месяца 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Твоя открытка</td>
+        <td><a href="https://t.me/tvoya_otkrytka_pozdravleniya">https://t.me/tvoya_otkrytka_pozdravleniya</a></td>
+        <td>Картинки и фото</td>
+        <td>123890</td>
+        <td>39189</td>
+        <td>32.0</td>
+        <td>-507</td>
+        <td>-1856</td>
+        <td>2 года 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Открытки от сердца💝</td>
+        <td><a href="https://t.me/joinchat/a0dCSJh6x6I0MDRi">https://t.me/joinchat/a0dCSJh6x6I0MDRi</a></td>
+        <td>Картинки и фото</td>
+        <td>123217</td>
+        <td>45040</td>
+        <td>37.0</td>
+        <td>1103</td>
+        <td>2697</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Поздравления и открытки</td>
+        <td><a href="https://t.me/Pozdravlenie">https://t.me/Pozdravlenie</a></td>
+        <td>Картинки и фото</td>
+        <td>122537</td>
+        <td>42850</td>
+        <td>35.0</td>
+        <td>-200</td>
+        <td>-982</td>
+        <td>8 лет 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Уголок открыток 🎀</td>
+        <td><a href="https://t.me/joinchat/akXxeq-KQcw1MmUy">https://t.me/joinchat/akXxeq-KQcw1MmUy</a></td>
+        <td>Картинки и фото</td>
+        <td>121365</td>
+        <td>42666</td>
+        <td>36.0</td>
+        <td>-816</td>
+        <td>-694</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>🎧ҚАЗАҚША ӘНДЕР МУЗЫКА🎧</td>
+        <td><a href="https://t.me/kazaksha_ander0">https://t.me/kazaksha_ander0</a></td>
+        <td>Картинки и фото</td>
+        <td>118854</td>
+        <td>29267</td>
+        <td>25.0</td>
+        <td>10018</td>
+        <td>67583</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Открытки для друзей🩵</td>
+        <td><a href="https://t.me/joinchat/5Yx1Way8Cpo2OWUy">https://t.me/joinchat/5Yx1Way8Cpo2OWUy</a></td>
+        <td>Картинки и фото</td>
+        <td>116548</td>
+        <td>45414</td>
+        <td>39.0</td>
+        <td>2794</td>
+        <td>5111</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Прекрасная открытка💗</td>
+        <td><a href="https://t.me/joinchat/AkgA5kFLOn5iNDIy">https://t.me/joinchat/AkgA5kFLOn5iNDIy</a></td>
+        <td>Картинки и фото</td>
+        <td>114466</td>
+        <td>31928</td>
+        <td>28.0</td>
+        <td>-577</td>
+        <td>-2795</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Любимые Открытки | Поздравления</td>
+        <td><a href="https://t.me/joinchat/6f2BR4stwcBlNGY6">https://t.me/joinchat/6f2BR4stwcBlNGY6</a></td>
+        <td>Картинки и фото</td>
+        <td>112925</td>
+        <td>36082</td>
+        <td>32.0</td>
+        <td>11570</td>
+        <td>12228</td>
+        <td>8 месяцев 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Ежедневные открытки</td>
+        <td><a href="https://t.me/joinchat/SSEYxxxe2yw2NzNi">https://t.me/joinchat/SSEYxxxe2yw2NzNi</a></td>
+        <td>Картинки и фото</td>
+        <td>112885</td>
+        <td>35436</td>
+        <td>32.0</td>
+        <td>242</td>
+        <td>-544</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Топовые татуировки</td>
+        <td><a href="https://t.me/tattoo_eskizy_sketches">https://t.me/tattoo_eskizy_sketches</a></td>
+        <td>Картинки и фото</td>
+        <td>112701</td>
+        <td>13931</td>
+        <td>13.0</td>
+        <td>-15</td>
+        <td>-842</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ғᴏʀᴡᴀʀᴅ | ᴡᴀʟʟᴘᴀᴘᴇʀ</td>
+        <td><a href="https://t.me/forwardoboi">https://t.me/forwardoboi</a></td>
+        <td>Картинки и фото</td>
+        <td>103605</td>
+        <td>324</td>
+        <td>1.0</td>
+        <td>-1230</td>
+        <td>-5515</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Открытки с днем медика отца</td>
+        <td><a href="https://t.me/pozdravlenia0">https://t.me/pozdravlenia0</a></td>
+        <td>Картинки и фото</td>
+        <td>101884</td>
+        <td>24463</td>
+        <td>24.0</td>
+        <td>-693</td>
+        <td>-3118</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Поздравления для Настроения!🍾🎉</td>
+        <td><a href="https://t.me/joinchat/wOPO-wECkYUzM2Iy">https://t.me/joinchat/wOPO-wECkYUzM2Iy</a></td>
+        <td>Картинки и фото</td>
+        <td>101492</td>
+        <td>26268</td>
+        <td>26.0</td>
+        <td>-514</td>
+        <td>-2009</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытки для вашей улыбки</td>
+        <td><a href="https://t.me/joinchat/3VTQwWGPg50yZjU0">https://t.me/joinchat/3VTQwWGPg50yZjU0</a></td>
+        <td>Картинки и фото</td>
+        <td>101113</td>
+        <td>25157</td>
+        <td>25.0</td>
+        <td>521</td>
+        <td>30</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Красивые идеи</td>
+        <td><a href="https://t.me/joinchat/E3_SMMKV1YlmZDky">https://t.me/joinchat/E3_SMMKV1YlmZDky</a></td>
+        <td>Картинки и фото</td>
+        <td>92570</td>
+        <td>14740</td>
+        <td>16.0</td>
+        <td>-375</td>
+        <td>4300</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Идеи для фото</td>
+        <td><a href="https://t.me/joinchat/gwUXEmUOdqkzY2Ni">https://t.me/joinchat/gwUXEmUOdqkzY2Ni</a></td>
+        <td>Картинки и фото</td>
+        <td>92192</td>
+        <td>9595</td>
+        <td>11.0</td>
+        <td>-271</td>
+        <td>-1196</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мастерская Открыток</td>
+        <td><a href="https://t.me/joinchat/OwjetqrpzLgxYjBk">https://t.me/joinchat/OwjetqrpzLgxYjBk</a></td>
+        <td>Картинки и фото</td>
+        <td>89981</td>
+        <td>16169</td>
+        <td>18.0</td>
+        <td>-298</td>
+        <td>-235</td>
+        <td>10 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Открытки для улыбки</td>
+        <td><a href="https://t.me/joinchat/G-k0478AdLc2OTky">https://t.me/joinchat/G-k0478AdLc2OTky</a></td>
+        <td>Картинки и фото</td>
+        <td>88835</td>
+        <td>26390</td>
+        <td>30.0</td>
+        <td>-474</td>
+        <td>-402</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытки для любимых💖</td>
+        <td><a href="https://t.me/joinchat/790dMQgsq6E3Nzcy">https://t.me/joinchat/790dMQgsq6E3Nzcy</a></td>
+        <td>Картинки и фото</td>
+        <td>86939</td>
+        <td>22750</td>
+        <td>27.0</td>
+        <td>-379</td>
+        <td>1117</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Открытки и Поздравления с Днём рождения</td>
+        <td><a href="https://t.me/joinchat/FXKMcny3rBI2Mjgy">https://t.me/joinchat/FXKMcny3rBI2Mjgy</a></td>
+        <td>Картинки и фото</td>
+        <td>84663</td>
+        <td>21141</td>
+        <td>25.0</td>
+        <td>-241</td>
+        <td>-1314</td>
+        <td>4 года 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Открыточки для вас 🎁</td>
+        <td><a href="https://t.me/joinchat/h-B6esxqnKU1ZTQy">https://t.me/joinchat/h-B6esxqnKU1ZTQy</a></td>
+        <td>Картинки и фото</td>
+        <td>84630</td>
+        <td>26658</td>
+        <td>32.0</td>
+        <td>-507</td>
+        <td>-3774</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мамины открытки💝</td>
+        <td><a href="https://t.me/joinchat/j7ddmO-uhVI3NjUy">https://t.me/joinchat/j7ddmO-uhVI3NjUy</a></td>
+        <td>Картинки и фото</td>
+        <td>83296</td>
+        <td>40745</td>
+        <td>49.0</td>
+        <td>305</td>
+        <td>1500</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пропавшая Меган | темки</td>
+        <td><a href="https://t.me/joinchat/f9rZQGPKVtcyMTEy">https://t.me/joinchat/f9rZQGPKVtcyMTEy</a></td>
+        <td>Картинки и фото</td>
+        <td>80715</td>
+        <td>29920</td>
+        <td>38.0</td>
+        <td>-830</td>
+        <td>-3025</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Женские открытки</td>
+        <td><a href="https://t.me/joinchat/E4n6Kmds2tw0ODJi">https://t.me/joinchat/E4n6Kmds2tw0ODJi</a></td>
+        <td>Картинки и фото</td>
+        <td>80695</td>
+        <td>30756</td>
+        <td>39.0</td>
+        <td>-284</td>
+        <td>-1303</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>МОИ ОТКРЫТКИ💖</td>
+        <td><a href="https://t.me/joinchat/iPrn4ymTIuFmODli">https://t.me/joinchat/iPrn4ymTIuFmODli</a></td>
+        <td>Картинки и фото</td>
+        <td>79967</td>
+        <td>36452</td>
+        <td>46.0</td>
+        <td>2750</td>
+        <td>10075</td>
+        <td>10 месяцев 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Красивые открытки 💗</td>
+        <td><a href="https://t.me/krasivvie">https://t.me/krasivvie</a></td>
+        <td>Картинки и фото</td>
+        <td>79916</td>
+        <td>32629</td>
+        <td>41.0</td>
+        <td>19</td>
+        <td>3</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Идеи для фото</td>
+        <td><a href="https://t.me/photoloverr">https://t.me/photoloverr</a></td>
+        <td>Картинки и фото</td>
+        <td>78908</td>
+        <td>7203</td>
+        <td>10.0</td>
+        <td>-434</td>
+        <td>-1226</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Живые открытки</td>
+        <td><a href="https://t.me/joinchat/dJ9fGNpfewA1NDhi">https://t.me/joinchat/dJ9fGNpfewA1NDhi</a></td>
+        <td>Картинки и фото</td>
+        <td>78869</td>
+        <td>31438</td>
+        <td>40.0</td>
+        <td>-2138</td>
+        <td>-3930</td>
+        <td>7 месяцев 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Обои для iPhone</td>
+        <td><a href="https://t.me/iphonefotohd">https://t.me/iphonefotohd</a></td>
+        <td>Картинки и фото</td>
+        <td>78228</td>
+        <td>14369</td>
+        <td>19.0</td>
+        <td>126</td>
+        <td>-154</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НейроDaily - IT и Нейросети</td>
+        <td><a href="https://t.me/pibotrus">https://t.me/pibotrus</a></td>
+        <td>Картинки и фото</td>
+        <td>78153</td>
+        <td>7794</td>
+        <td>10.0</td>
+        <td>-904</td>
+        <td>-11638</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>парные авы | only music</td>
+        <td><a href="https://t.me/parnyem">https://t.me/parnyem</a></td>
+        <td>Картинки и фото</td>
+        <td>78002</td>
+        <td>1118</td>
+        <td>2.0</td>
+        <td>-795</td>
+        <td>-3840</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MangaBuff - Лучший манга сайт 🥰</td>
+        <td><a href="https://t.me/mangabuff">https://t.me/mangabuff</a></td>
+        <td>Картинки и фото</td>
+        <td>77368</td>
+        <td>62841</td>
+        <td>82.0</td>
+        <td>465</td>
+        <td>2553</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Әңгіме</td>
+        <td><a href="https://t.me/angime_tanysu7905">https://t.me/angime_tanysu7905</a></td>
+        <td>Картинки и фото</td>
+        <td>77220</td>
+        <td>3270</td>
+        <td>5.0</td>
+        <td>16925</td>
+        <td>73284</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AnyChars | Новостной</td>
+        <td><a href="https://t.me/AnyChars">https://t.me/AnyChars</a></td>
+        <td>Картинки и фото</td>
+        <td>74520</td>
+        <td>18537</td>
+        <td>25.0</td>
+        <td>428</td>
+        <td>10702</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Живые открытки</td>
+        <td><a href="https://t.me/joinchat/7Jdir0cyS19hMWUy">https://t.me/joinchat/7Jdir0cyS19hMWUy</a></td>
+        <td>Картинки и фото</td>
+        <td>74500</td>
+        <td>22667</td>
+        <td>31.0</td>
+        <td>760</td>
+        <td>4656</td>
+        <td>2 года 1 день</td>
+      </tr>
+
+      <tr>
+        <td>Мир открыток</td>
+        <td><a href="https://t.me/joinchat/17r_CkQKSiFjODQy">https://t.me/joinchat/17r_CkQKSiFjODQy</a></td>
+        <td>Картинки и фото</td>
+        <td>72641</td>
+        <td>26159</td>
+        <td>36.0</td>
+        <td>287</td>
+        <td>1571</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Парные аватарки</td>
+        <td><a href="https://t.me/parnavichki">https://t.me/parnavichki</a></td>
+        <td>Картинки и фото</td>
+        <td>72219</td>
+        <td>3548</td>
+        <td>5.0</td>
+        <td>-1576</td>
+        <td>-8385</td>
+        <td>7 месяцев 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Музыкальные открытки</td>
+        <td><a href="https://t.me/joinchat/1XO3rT0vt040OTIy">https://t.me/joinchat/1XO3rT0vt040OTIy</a></td>
+        <td>Картинки и фото</td>
+        <td>72086</td>
+        <td>23735</td>
+        <td>33.0</td>
+        <td>-638</td>
+        <td>-2736</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытки любимым</td>
+        <td><a href="https://t.me/joinchat/mhte3-hgaqA1YmYy">https://t.me/joinchat/mhte3-hgaqA1YmYy</a></td>
+        <td>Картинки и фото</td>
+        <td>72059</td>
+        <td>19279</td>
+        <td>27.0</td>
+        <td>-570</td>
+        <td>-2457</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открыточный Мир</td>
+        <td><a href="https://t.me/joinchat/p0zhORMAnpcxZGZk">https://t.me/joinchat/p0zhORMAnpcxZGZk</a></td>
+        <td>Картинки и фото</td>
+        <td>70091</td>
+        <td>13063</td>
+        <td>19.0</td>
+        <td>196</td>
+        <td>-356</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>С Днём рождения</td>
+        <td><a href="https://t.me/joinchat/i_S_wWhpJDI3MmUy">https://t.me/joinchat/i_S_wWhpJDI3MmUy</a></td>
+        <td>Картинки и фото</td>
+        <td>68470</td>
+        <td>22299</td>
+        <td>33.0</td>
+        <td>-177</td>
+        <td>-793</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Обои на телефон HD</td>
+        <td><a href="https://t.me/oboi_foto_na_avu">https://t.me/oboi_foto_na_avu</a></td>
+        <td>Картинки и фото</td>
+        <td>68002</td>
+        <td>12514</td>
+        <td>19.0</td>
+        <td>-193</td>
+        <td>-2319</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вселенная открыток💜</td>
+        <td><a href="https://t.me/joinchat/L0ZZTWKE7nxkZWEy">https://t.me/joinchat/L0ZZTWKE7nxkZWEy</a></td>
+        <td>Картинки и фото</td>
+        <td>67460</td>
+        <td>18676</td>
+        <td>28.0</td>
+        <td>64</td>
+        <td>-506</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открыточка 💌</td>
+        <td><a href="https://t.me/joinchat/VqkU2xWwgG1kYTFi">https://t.me/joinchat/VqkU2xWwgG1kYTFi</a></td>
+        <td>Картинки и фото</td>
+        <td>67378</td>
+        <td>22128</td>
+        <td>33.0</td>
+        <td>347</td>
+        <td>287</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОДАРИ ОТКРЫТКИ 💌</td>
+        <td><a href="https://t.me/joinchat/Exq1wKWeFA8wNmU6">https://t.me/joinchat/Exq1wKWeFA8wNmU6</a></td>
+        <td>Картинки и фото</td>
+        <td>67103</td>
+        <td>15865</td>
+        <td>24.0</td>
+        <td>-2091</td>
+        <td>-10099</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Семейные Открытки💌</td>
+        <td><a href="https://t.me/joinchat/rJuIG1XMZ2RlMzMy">https://t.me/joinchat/rJuIG1XMZ2RlMzMy</a></td>
+        <td>Картинки и фото</td>
+        <td>66982</td>
+        <td>21597</td>
+        <td>33.0</td>
+        <td>-321</td>
+        <td>-1149</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Обои | Wallpapers | ғʟʏx_ᴡᴀʟʟᴘᴀᴘᴇʀs</td>
+        <td><a href="https://t.me/fwalls">https://t.me/fwalls</a></td>
+        <td>Картинки и фото</td>
+        <td>66866</td>
+        <td>4327</td>
+        <td>7.0</td>
+        <td>-338</td>
+        <td>-1082</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сфоткала? | Идеи для Фото</td>
+        <td><a href="https://t.me/PhotoideasTG">https://t.me/PhotoideasTG</a></td>
+        <td>Картинки и фото</td>
+        <td>66753</td>
+        <td>4309</td>
+        <td>7.0</td>
+        <td>-840</td>
+        <td>-4077</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Wall gif</td>
+        <td><a href="https://t.me/Wallgif">https://t.me/Wallgif</a></td>
+        <td>Картинки и фото</td>
+        <td>66298</td>
+        <td>73430</td>
+        <td>111.0</td>
+        <td>431</td>
+        <td>4340</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>damn pictures🥀</td>
+        <td><a href="https://t.me/ifonkupitemne">https://t.me/ifonkupitemne</a></td>
+        <td>Картинки и фото</td>
+        <td>65639</td>
+        <td>4674</td>
+        <td>8.0</td>
+        <td>-399</td>
+        <td>-1750</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытки Красивые Картинки</td>
+        <td><a href="https://t.me/s_dobrymi_pozhelaniami">https://t.me/s_dobrymi_pozhelaniami</a></td>
+        <td>Картинки и фото</td>
+        <td>64748</td>
+        <td>28258</td>
+        <td>44.0</td>
+        <td>-219</td>
+        <td>-1073</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пресеты Лайтрум</td>
+        <td><a href="https://t.me/presets1">https://t.me/presets1</a></td>
+        <td>Картинки и фото</td>
+        <td>64715</td>
+        <td>12172</td>
+        <td>19.0</td>
+        <td>246</td>
+        <td>763</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытки и Поздравления</td>
+        <td><a href="https://t.me/joinchat/Fs7fdssXhy0yY2Ey">https://t.me/joinchat/Fs7fdssXhy0yY2Ey</a></td>
+        <td>Картинки и фото</td>
+        <td>63903</td>
+        <td>22000</td>
+        <td>35.0</td>
+        <td>89</td>
+        <td>2517</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>࣪˖ telegram themes°🫧｡⋆</td>
+        <td><a href="https://t.me/temadly">https://t.me/temadly</a></td>
+        <td>Картинки и фото</td>
+        <td>62887</td>
+        <td>20890</td>
+        <td>34.0</td>
+        <td>141</td>
+        <td>528</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТКРЫТКИ И ПОЖЕЛАНИЯ💖</td>
+        <td><a href="https://t.me/joinchat/n0L75bouU3Y2MzQ6">https://t.me/joinchat/n0L75bouU3Y2MzQ6</a></td>
+        <td>Картинки и фото</td>
+        <td>62747</td>
+        <td>21274</td>
+        <td>34.0</td>
+        <td>370</td>
+        <td>1796</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лови Открытку | Поздравления</td>
+        <td><a href="https://t.me/joinchat/aBzb7voADHplN2Fi">https://t.me/joinchat/aBzb7voADHplN2Fi</a></td>
+        <td>Картинки и фото</td>
+        <td>62609</td>
+        <td>19636</td>
+        <td>32.0</td>
+        <td>259</td>
+        <td>1396</td>
+        <td>6 месяцев 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мультяшные открытки</td>
+        <td><a href="https://t.me/joinchat/fMW-Wr7F0WU3NjMy">https://t.me/joinchat/fMW-Wr7F0WU3NjMy</a></td>
+        <td>Картинки и фото</td>
+        <td>62280</td>
+        <td>15302</td>
+        <td>25.0</td>
+        <td>-244</td>
+        <td>-1083</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Обои | QwyxWallpaper</td>
+        <td><a href="https://t.me/qwyxwll">https://t.me/qwyxwll</a></td>
+        <td>Картинки и фото</td>
+        <td>61778</td>
+        <td>6119</td>
+        <td>10.0</td>
+        <td>-227</td>
+        <td>-1268</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Наша жизнь в открытках</td>
+        <td><a href="https://t.me/joinchat/wppv3Mrs6admYjRk">https://t.me/joinchat/wppv3Mrs6admYjRk</a></td>
+        <td>Картинки и фото</td>
+        <td>60430</td>
+        <td>14826</td>
+        <td>25.0</td>
+        <td>-440</td>
+        <td>-1764</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЛЕРА СИМКА</td>
+        <td><a href="https://t.me/lera_simka_tg">https://t.me/lera_simka_tg</a></td>
+        <td>Картинки и фото</td>
+        <td>60440</td>
+        <td>45386</td>
+        <td>76.0</td>
+        <td>1551</td>
+        <td>2671</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Эстетика момента</td>
+        <td><a href="https://t.me/joinchat/NRlgsWp9vgNlYzcy">https://t.me/joinchat/NRlgsWp9vgNlYzcy</a></td>
+        <td>Картинки и фото</td>
+        <td>60254</td>
+        <td>922</td>
+        <td>2.0</td>
+        <td>-786</td>
+        <td>-3516</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Какой завтра праздник? 🎁 Открытки поздравления гифки пожелания с днём рождения доброе утро</td>
+        <td><a href="https://t.me/otkritkitut">https://t.me/otkritkitut</a></td>
+        <td>Картинки и фото</td>
+        <td>60144</td>
+        <td>25217</td>
+        <td>42.0</td>
+        <td>326</td>
+        <td>1168</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Эмоджи буквы шрифты TelegramPremium TgEmojis</td>
+        <td><a href="https://t.me/TgEmojisFonts">https://t.me/TgEmojisFonts</a></td>
+        <td>Картинки и фото</td>
+        <td>59448</td>
+        <td>19493</td>
+        <td>33.0</td>
+        <td>658</td>
+        <td>2514</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Lr - обработка фото - vk.com/lightroomcc</td>
+        <td><a href="https://t.me/ilovelightroomcc">https://t.me/ilovelightroomcc</a></td>
+        <td>Картинки и фото</td>
+        <td>57234</td>
+        <td>8802</td>
+        <td>16.0</td>
+        <td>-146</td>
+        <td>-541</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ОТКРЫТКИ 🥰</td>
+        <td><a href="https://t.me/joinchat/lGynPNTjZmJhYzNi">https://t.me/joinchat/lGynPNTjZmJhYzNi</a></td>
+        <td>Картинки и фото</td>
+        <td>56116</td>
+        <td>21097</td>
+        <td>38.0</td>
+        <td>586</td>
+        <td>4249</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фото для пранка</td>
+        <td><a href="https://t.me/fotodliprank">https://t.me/fotodliprank</a></td>
+        <td>Картинки и фото</td>
+        <td>54765</td>
+        <td>4948</td>
+        <td>9.0</td>
+        <td>-1125</td>
+        <td>-6138</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Советские Открытки!</td>
+        <td><a href="https://t.me/joinchat/TO0hSXyVRRs5OTgy">https://t.me/joinchat/TO0hSXyVRRs5OTgy</a></td>
+        <td>Картинки и фото</td>
+        <td>54671</td>
+        <td>13757</td>
+        <td>26.0</td>
+        <td>-205</td>
+        <td>-838</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AniTik🔥 | Аниме Эдиты | Anime Edits💜</td>
+        <td><a href="https://t.me/Anitik_edits">https://t.me/Anitik_edits</a></td>
+        <td>Картинки и фото</td>
+        <td>53594</td>
+        <td>7889</td>
+        <td>15.0</td>
+        <td>-174</td>
+        <td>-1624</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

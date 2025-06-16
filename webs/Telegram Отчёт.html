@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Премиум эмодзи | стикеры | Premium Emoji</td>
+        <td><a href="https://t.me/TgEmojis">https://t.me/TgEmojis</a></td>
+        <td>Telegram</td>
+        <td>1431335</td>
+        <td>287583</td>
+        <td>21.0</td>
+        <td>5885</td>
+        <td>18635</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры | Эмодзи</td>
+        <td><a href="https://t.me/stikery4">https://t.me/stikery4</a></td>
+        <td>Telegram</td>
+        <td>1247735</td>
+        <td>194210</td>
+        <td>16.0</td>
+        <td>1837</td>
+        <td>-16052</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЯЗЫКИ И ТЕМЫ | ОБОИ ТГ</td>
+        <td><a href="https://t.me/temki_parnye">https://t.me/temki_parnye</a></td>
+        <td>Telegram</td>
+        <td>1201846</td>
+        <td>33350</td>
+        <td>3.0</td>
+        <td>-21602</td>
+        <td>-36455</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Silero News (озвучка, текст в голос).</td>
+        <td><a href="https://t.me/silero_voice_news">https://t.me/silero_voice_news</a></td>
+        <td>Telegram</td>
+        <td>927575</td>
+        <td>120607</td>
+        <td>13.0</td>
+        <td>4468</td>
+        <td>12606</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Telegram Stickers | Стикеры</td>
+        <td><a href="https://t.me/TgSticker">https://t.me/TgSticker</a></td>
+        <td>Telegram</td>
+        <td>774264</td>
+        <td>132784</td>
+        <td>18.0</td>
+        <td>2007</td>
+        <td>-2459</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Best Premium Emoji | Премиум Эмодзи</td>
+        <td><a href="https://t.me/emoji1">https://t.me/emoji1</a></td>
+        <td>Telegram</td>
+        <td>761007</td>
+        <td>468142</td>
+        <td>62.0</td>
+        <td>8594</td>
+        <td>32270</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Iris | Чат-менеджер | Канал</td>
+        <td><a href="https://t.me/iris_cm">https://t.me/iris_cm</a></td>
+        <td>Telegram</td>
+        <td>734486</td>
+        <td>433522</td>
+        <td>59.0</td>
+        <td>8034</td>
+        <td>86836</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Темы для Тг | Обои</td>
+        <td><a href="https://t.me/sokhryb">https://t.me/sokhryb</a></td>
+        <td>Telegram</td>
+        <td>621240</td>
+        <td>37003</td>
+        <td>6.0</td>
+        <td>9797</td>
+        <td>15015</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AlphaTrade News</td>
+        <td><a href="https://t.me/AlphaTtradeNews">https://t.me/AlphaTtradeNews</a></td>
+        <td>Telegram</td>
+        <td>565246</td>
+        <td>4623</td>
+        <td>1.0</td>
+        <td>-11974</td>
+        <td>-65987</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>марс | языки и темы</td>
+        <td><a href="https://t.me/ahnoee">https://t.me/ahnoee</a></td>
+        <td>Telegram</td>
+        <td>546153</td>
+        <td>61778</td>
+        <td>12.0</td>
+        <td>-1117</td>
+        <td>-11130</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SteosVoice News</td>
+        <td><a href="https://t.me/steosvoice">https://t.me/steosvoice</a></td>
+        <td>Telegram</td>
+        <td>500343</td>
+        <td>111752</td>
+        <td>23.0</td>
+        <td>5075</td>
+        <td>35853</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Premium Emoji Эмодзи и Стикеры</td>
+        <td><a href="https://t.me/Stikery_Emodzi_Emoji">https://t.me/Stikery_Emodzi_Emoji</a></td>
+        <td>Telegram</td>
+        <td>437713</td>
+        <td>18707</td>
+        <td>5.0</td>
+        <td>-2974</td>
+        <td>-13964</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатные звёзды</td>
+        <td><a href="https://t.me/fstikks">https://t.me/fstikks</a></td>
+        <td>Telegram</td>
+        <td>381943</td>
+        <td>44954</td>
+        <td>12.0</td>
+        <td>-5572</td>
+        <td>-45007</td>
+        <td>3 года 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>ЯЗЫКИ И ТЕМЫ ТГ ШРИФТЫ</td>
+        <td><a href="https://t.me/oboiparnyea">https://t.me/oboiparnyea</a></td>
+        <td>Telegram</td>
+        <td>361003</td>
+        <td>3646</td>
+        <td>1.0</td>
+        <td>7920</td>
+        <td>-6283</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>fStikBot — Создать стикеры (Favorite Stickers)</td>
+        <td><a href="https://t.me/fStikBlog">https://t.me/fStikBlog</a></td>
+        <td>Telegram</td>
+        <td>328840</td>
+        <td>99499</td>
+        <td>31.0</td>
+        <td>-1546</td>
+        <td>-7977</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>angel</td>
+        <td><a href="https://t.me/knifee">https://t.me/knifee</a></td>
+        <td>Telegram</td>
+        <td>303208</td>
+        <td>29844</td>
+        <td>10.0</td>
+        <td>2816</td>
+        <td>7418</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>язычки и темы</td>
+        <td><a href="https://t.me/yazyki_dlya_tg">https://t.me/yazyki_dlya_tg</a></td>
+        <td>Telegram</td>
+        <td>272979</td>
+        <td>41788</td>
+        <td>16.0</td>
+        <td>-521</td>
+        <td>-4700</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Starsov Earn | Новости, Раздачи</td>
+        <td><a href="https://t.me/StarsovEarn">https://t.me/StarsovEarn</a></td>
+        <td>Telegram</td>
+        <td>259451</td>
+        <td>59065</td>
+        <td>23.0</td>
+        <td>-6053</td>
+        <td>-34879</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Розыгрыши Telegram Premium Stars</td>
+        <td><a href="https://t.me/razdacha_TelegramPremium">https://t.me/razdacha_TelegramPremium</a></td>
+        <td>Telegram</td>
+        <td>225067</td>
+        <td>22847</td>
+        <td>11.0</td>
+        <td>-7034</td>
+        <td>-35219</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>стикеры | темы</td>
+        <td><a href="https://t.me/stikerk877">https://t.me/stikerk877</a></td>
+        <td>Telegram</td>
+        <td>191998</td>
+        <td>2775</td>
+        <td>2.0</td>
+        <td>-2259</td>
+        <td>-9908</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Языки и Темы ТГ | somnolent</td>
+        <td><a href="https://t.me/oboi_dlyas">https://t.me/oboi_dlyas</a></td>
+        <td>Telegram</td>
+        <td>188455</td>
+        <td>30938</td>
+        <td>17.0</td>
+        <td>-888</td>
+        <td>-4954</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Я</td>
+        <td><a href="https://t.me/joinchat/nj8u_HIUkw03NGUy">https://t.me/joinchat/nj8u_HIUkw03NGUy</a></td>
+        <td>Telegram</td>
+        <td>180598</td>
+        <td>19500</td>
+        <td>11.0</td>
+        <td>15847</td>
+        <td>3919</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>язычки и темы тг</td>
+        <td><a href="https://t.me/yazyki_dlya">https://t.me/yazyki_dlya</a></td>
+        <td>Telegram</td>
+        <td>176146</td>
+        <td>23303</td>
+        <td>14.0</td>
+        <td>-948</td>
+        <td>-5367</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мама</td>
+        <td><a href="https://t.me/joinchat/njTqrU3K1yUzOTEy">https://t.me/joinchat/njTqrU3K1yUzOTEy</a></td>
+        <td>Telegram</td>
+        <td>174454</td>
+        <td>6</td>
+        <td>15.0</td>
+        <td>-9244</td>
+        <td>-48444</td>
+        <td>4 месяца 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>lavender tea</td>
+        <td><a href="https://t.me/lavandeyaz">https://t.me/lavandeyaz</a></td>
+        <td>Telegram</td>
+        <td>168433</td>
+        <td>14396</td>
+        <td>9.0</td>
+        <td>343</td>
+        <td>2135</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>folwixxx | темы и стикеры</td>
+        <td><a href="https://t.me/f3lvixx">https://t.me/f3lvixx</a></td>
+        <td>Telegram</td>
+        <td>167251</td>
+        <td>171508</td>
+        <td>103.0</td>
+        <td>-990</td>
+        <td>720</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Клуб анонимок 💌</td>
+        <td><a href="https://t.me/anonbox_club">https://t.me/anonbox_club</a></td>
+        <td>Telegram</td>
+        <td>163993</td>
+        <td>18207</td>
+        <td>12.0</td>
+        <td>-6001</td>
+        <td>-18646</td>
+        <td>4 месяца 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Темки/язычки/авы</td>
+        <td><a href="https://t.me/temkiavatarkiyaz">https://t.me/temkiavatarkiyaz</a></td>
+        <td>Telegram</td>
+        <td>158572</td>
+        <td>3945</td>
+        <td>3.0</td>
+        <td>-1863</td>
+        <td>166</td>
+        <td>10 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры телеграм</td>
+        <td><a href="https://t.me/joinchat/joyegahIH002NDNi">https://t.me/joinchat/joyegahIH002NDNi</a></td>
+        <td>Telegram</td>
+        <td>144326</td>
+        <td>3555</td>
+        <td>3.0</td>
+        <td>-1454</td>
+        <td>-29894</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Комната стикеров | Котики | Стикеры ВК</td>
+        <td><a href="https://t.me/stickroom">https://t.me/stickroom</a></td>
+        <td>Telegram</td>
+        <td>142240</td>
+        <td>22558</td>
+        <td>16.0</td>
+        <td>-512</td>
+        <td>-2757</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Заработать звезды ️</td>
+        <td><a href="https://t.me/freestars_channel">https://t.me/freestars_channel</a></td>
+        <td>Telegram</td>
+        <td>134879</td>
+        <td>29765</td>
+        <td>23.0</td>
+        <td>-5432</td>
+        <td>-31849</td>
+        <td>6 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Live News</td>
+        <td><a href="https://t.me/nodo_live">https://t.me/nodo_live</a></td>
+        <td>Telegram</td>
+        <td>133145</td>
+        <td>11</td>
+        <td>None</td>
+        <td>-7</td>
+        <td>25</td>
+        <td>4 месяца 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Premium emoji Премиум эмодзи</td>
+        <td><a href="https://t.me/Premium_EmojiTG">https://t.me/Premium_EmojiTG</a></td>
+        <td>Telegram</td>
+        <td>127334</td>
+        <td>24217</td>
+        <td>19.0</td>
+        <td>-874</td>
+        <td>-1775</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Язычки и Темки ТГ</td>
+        <td><a href="https://t.me/parnye_avy_dlyaa">https://t.me/parnye_avy_dlyaa</a></td>
+        <td>Telegram</td>
+        <td>122817</td>
+        <td>18178</td>
+        <td>15.0</td>
+        <td>-86</td>
+        <td>-942</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ЗВЕЗДЫ ТЕЛЕГРАМ | STARS shopp</td>
+        <td><a href="https://t.me/starsshoppin">https://t.me/starsshoppin</a></td>
+        <td>Telegram</td>
+        <td>118173</td>
+        <td>14503</td>
+        <td>13.0</td>
+        <td>-2083</td>
+        <td>-11208</td>
+        <td>7 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Аниме темы</td>
+        <td><a href="https://t.me/tg_themes_anime">https://t.me/tg_themes_anime</a></td>
+        <td>Telegram</td>
+        <td>115892</td>
+        <td>10495</td>
+        <td>10.0</td>
+        <td>-411</td>
+        <td>-3087</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>темы и языки для телеграма</td>
+        <td><a href="https://t.me/temyb">https://t.me/temyb</a></td>
+        <td>Telegram</td>
+        <td>114152</td>
+        <td>40473</td>
+        <td>36.0</td>
+        <td>-403</td>
+        <td>-2001</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Звезды бесплатно | Stars</td>
+        <td><a href="https://t.me/joinchat/xGx7bTVzYLhjNTBi">https://t.me/joinchat/xGx7bTVzYLhjNTBi</a></td>
+        <td>Telegram</td>
+        <td>113028</td>
+        <td>3814</td>
+        <td>4.0</td>
+        <td>-2905</td>
+        <td>-14957</td>
+        <td>6 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>стикеры|stickers</td>
+        <td><a href="https://t.me/joinchat/6Qd7Q2nEnRIxNmYy">https://t.me/joinchat/6Qd7Q2nEnRIxNmYy</a></td>
+        <td>Telegram</td>
+        <td>112244</td>
+        <td>2693</td>
+        <td>3.0</td>
+        <td>-1664</td>
+        <td>-9358</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОТВЕТЫ ОГЭ ПЕРЕСДАЧА РЕЗЕРВ</td>
+        <td><a href="https://t.me/vpr_otvety">https://t.me/vpr_otvety</a></td>
+        <td>Telegram</td>
+        <td>110649</td>
+        <td>8983</td>
+        <td>9.0</td>
+        <td>-4846</td>
+        <td>-25523</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Розыгрыши звёзд</td>
+        <td><a href="https://t.me/strsfree">https://t.me/strsfree</a></td>
+        <td>Telegram</td>
+        <td>109790</td>
+        <td>6879</td>
+        <td>7.0</td>
+        <td>-3997</td>
+        <td>-19251</td>
+        <td>5 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Нястикс - Аниме стикеры | Эмодзи</td>
+        <td><a href="https://t.me/nyasticks">https://t.me/nyasticks</a></td>
+        <td>Telegram</td>
+        <td>108256</td>
+        <td>47713</td>
+        <td>45.0</td>
+        <td>363</td>
+        <td>1058</td>
+        <td>5 лет 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>🕵️ Telescan вещает</td>
+        <td><a href="https://t.me/TeleScanOfficial">https://t.me/TeleScanOfficial</a></td>
+        <td>Telegram</td>
+        <td>106756</td>
+        <td>12961</td>
+        <td>13.0</td>
+        <td>3142</td>
+        <td>-1590</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Розыгрыши Telegram Giveaways</td>
+        <td><a href="https://t.me/club_tg_premium">https://t.me/club_tg_premium</a></td>
+        <td>Telegram</td>
+        <td>102326</td>
+        <td>4144</td>
+        <td>4.0</td>
+        <td>-6213</td>
+        <td>-60523</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🛍МИР ТВОИХ ПОКУПОК🛍</td>
+        <td><a href="https://t.me/mirpokupoksmari">https://t.me/mirpokupoksmari</a></td>
+        <td>Telegram</td>
+        <td>100596</td>
+        <td>14521</td>
+        <td>15.0</td>
+        <td>5</td>
+        <td>215</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Канал, где все продаётся!!!🔥</td>
+        <td><a href="https://t.me/stimul2025">https://t.me/stimul2025</a></td>
+        <td>Telegram</td>
+        <td>100264</td>
+        <td>15499</td>
+        <td>16.0</td>
+        <td>-1</td>
+        <td>1</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры Телеграм Эмодзи Создать</td>
+        <td><a href="https://t.me/stickerri_tg">https://t.me/stickerri_tg</a></td>
+        <td>Telegram</td>
+        <td>99243</td>
+        <td>8065</td>
+        <td>9.0</td>
+        <td>2147</td>
+        <td>9783</td>
+        <td>7 месяцев 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>ACXAБ TAMAEB🚀</td>
+        <td><a href="https://t.me/joinchat/pnXLHfe28LhkM2Zk">https://t.me/joinchat/pnXLHfe28LhkM2Zk</a></td>
+        <td>Telegram</td>
+        <td>99039</td>
+        <td>12058</td>
+        <td>13.0</td>
+        <td>-2318</td>
+        <td>-11376</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Твои Открытки</td>
+        <td><a href="https://t.me/joinchat/bfSOJzl6CWc2NDdi">https://t.me/joinchat/bfSOJzl6CWc2NDdi</a></td>
+        <td>Telegram</td>
+        <td>95772</td>
+        <td>33221</td>
+        <td>35.0</td>
+        <td>3212</td>
+        <td>12033</td>
+        <td>7 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>somnolent | ТЕМЫ</td>
+        <td><a href="https://t.me/somnolent_themes">https://t.me/somnolent_themes</a></td>
+        <td>Telegram</td>
+        <td>92356</td>
+        <td>41541</td>
+        <td>45.0</td>
+        <td>-755</td>
+        <td>-3061</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>life lowake @mrkt</td>
+        <td><a href="https://t.me/lowake">https://t.me/lowake</a></td>
+        <td>Telegram</td>
+        <td>91163</td>
+        <td>7119</td>
+        <td>8.0</td>
+        <td>40836</td>
+        <td>60145</td>
+        <td>7 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Best Themes - телеграм темы для андроид и iOS</td>
+        <td><a href="https://t.me/ThemesBest">https://t.me/ThemesBest</a></td>
+        <td>Telegram</td>
+        <td>90515</td>
+        <td>31331</td>
+        <td>35.0</td>
+        <td>529</td>
+        <td>1584</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>уютный дом | языки и темы</td>
+        <td><a href="https://t.me/yazyki0">https://t.me/yazyki0</a></td>
+        <td>Telegram</td>
+        <td>89239</td>
+        <td>31133</td>
+        <td>35.0</td>
+        <td>-569</td>
+        <td>-1605</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Телеграм Биржа Телеспейс | Купить, продать канал</td>
+        <td><a href="https://t.me/joinchat/AAAAAENCXOlLtnzJocurfQ">https://t.me/joinchat/AAAAAENCXOlLtnzJocurfQ</a></td>
+        <td>Telegram</td>
+        <td>88687</td>
+        <td>1419</td>
+        <td>2.0</td>
+        <td>-429</td>
+        <td>-4050</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЛУЧШИЕ ОТКРЫТКИ</td>
+        <td><a href="https://t.me/joinchat/es9p2Ixt-r01MWVi">https://t.me/joinchat/es9p2Ixt-r01MWVi</a></td>
+        <td>Telegram</td>
+        <td>88289</td>
+        <td>41395</td>
+        <td>47.0</td>
+        <td>88277</td>
+        <td>88281</td>
+        <td>4 месяца 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>VipFragment x Gifts @mrkt</td>
+        <td><a href="https://t.me/vipfragment_gifts">https://t.me/vipfragment_gifts</a></td>
+        <td>Telegram</td>
+        <td>85647</td>
+        <td>3295</td>
+        <td>4.0</td>
+        <td>42756</td>
+        <td>53329</td>
+        <td>2 месяца 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Язычки и Темки ТГ</td>
+        <td><a href="https://t.me/joinchat/foeXdEHuvZE5ZWY6">https://t.me/joinchat/foeXdEHuvZE5ZWY6</a></td>
+        <td>Telegram</td>
+        <td>85479</td>
+        <td>5472</td>
+        <td>7.0</td>
+        <td>993</td>
+        <td>6738</td>
+        <td>5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мясной 🥩</td>
+        <td><a href="https://t.me/joinchat/iKa_hvQeMAIxOWIy">https://t.me/joinchat/iKa_hvQeMAIxOWIy</a></td>
+        <td>Telegram</td>
+        <td>84742</td>
+        <td>25592</td>
+        <td>31.0</td>
+        <td>-3988</td>
+        <td>1815</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Sugar Наташа 🎥</td>
+        <td><a href="https://t.me/joinchat/EQHUIS8ckK8zMjQ6">https://t.me/joinchat/EQHUIS8ckK8zMjQ6</a></td>
+        <td>Telegram</td>
+        <td>77854</td>
+        <td>28263</td>
+        <td>37.0</td>
+        <td>3309</td>
+        <td>16046</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>:] Полезные боты для бизнеса и жизни</td>
+        <td><a href="https://t.me/botsbaseru">https://t.me/botsbaseru</a></td>
+        <td>Telegram</td>
+        <td>75988</td>
+        <td>34468</td>
+        <td>46.0</td>
+        <td>743</td>
+        <td>2082</td>
+        <td>4 года 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>pinky</td>
+        <td><a href="https://t.me/joinchat/ZoM7DrK0v-QxODMy">https://t.me/joinchat/ZoM7DrK0v-QxODMy</a></td>
+        <td>Telegram</td>
+        <td>75466</td>
+        <td>131</td>
+        <td>1.0</td>
+        <td>-2695</td>
+        <td>-13995</td>
+        <td>5 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Telegram Info</td>
+        <td><a href="https://t.me/tginfo">https://t.me/tginfo</a></td>
+        <td>Telegram</td>
+        <td>73553</td>
+        <td>24947</td>
+        <td>34.0</td>
+        <td>287</td>
+        <td>678</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Plus Messenger Russian Channel</td>
+        <td><a href="https://t.me/plusmsgrru">https://t.me/plusmsgrru</a></td>
+        <td>Telegram</td>
+        <td>73381</td>
+        <td>20384</td>
+        <td>28.0</td>
+        <td>-578</td>
+        <td>-2434</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Проверка проектов</td>
+        <td><a href="https://t.me/joinchat/jqSr59NWIxMyYTVi">https://t.me/joinchat/jqSr59NWIxMyYTVi</a></td>
+        <td>Telegram</td>
+        <td>70543</td>
+        <td>480</td>
+        <td>1.0</td>
+        <td>-966</td>
+        <td>-4468</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Holiverse</td>
+        <td><a href="https://t.me/holiverse">https://t.me/holiverse</a></td>
+        <td>Telegram</td>
+        <td>69516</td>
+        <td>13428</td>
+        <td>20.0</td>
+        <td>-274</td>
+        <td>21</td>
+        <td>8 месяцев 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>прошмандовцы русской эмиграции</td>
+        <td><a href="https://t.me/blacklistrussianemigration">https://t.me/blacklistrussianemigration</a></td>
+        <td>Telegram</td>
+        <td>65595</td>
+        <td>53026</td>
+        <td>81.0</td>
+        <td>9245</td>
+        <td>505</td>
+        <td>17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Эмоджи Premium эмодзи</td>
+        <td><a href="https://t.me/EmojiRus">https://t.me/EmojiRus</a></td>
+        <td>Telegram</td>
+        <td>59185</td>
+        <td>5088</td>
+        <td>9.0</td>
+        <td>-420</td>
+        <td>-2311</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PuzzleBot :// Конструктор ботов в Telegram</td>
+        <td><a href="https://t.me/wearepuzzlebot">https://t.me/wearepuzzlebot</a></td>
+        <td>Telegram</td>
+        <td>58928</td>
+        <td>23441</td>
+        <td>40.0</td>
+        <td>456</td>
+        <td>2718</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Конкурсы Telegram</td>
+        <td><a href="https://t.me/contest_ru">https://t.me/contest_ru</a></td>
+        <td>Telegram</td>
+        <td>57555</td>
+        <td>24846</td>
+        <td>44.0</td>
+        <td>-153</td>
+        <td>-1048</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Язычки и темки для тг</td>
+        <td><a href="https://t.me/yazikydlyatg">https://t.me/yazikydlyatg</a></td>
+        <td>Telegram</td>
+        <td>57266</td>
+        <td>1057</td>
+        <td>2.0</td>
+        <td>-561</td>
+        <td>-2896</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Работа в Самаре</td>
+        <td><a href="https://t.me/vakansii_samaraw">https://t.me/vakansii_samaraw</a></td>
+        <td>Telegram</td>
+        <td>57038</td>
+        <td>1503</td>
+        <td>3.0</td>
+        <td>-17</td>
+        <td>-234</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Канал Патрика</td>
+        <td><a href="https://t.me/patrickstarsfarm">https://t.me/patrickstarsfarm</a></td>
+        <td>Telegram</td>
+        <td>57014</td>
+        <td>9757</td>
+        <td>18.0</td>
+        <td>60</td>
+        <td>6946</td>
+        <td>3 месяца 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Подарки от Скруджа</td>
+        <td><a href="https://t.me/Pepes_Gold">https://t.me/Pepes_Gold</a></td>
+        <td>Telegram</td>
+        <td>56340</td>
+        <td>11587</td>
+        <td>21.0</td>
+        <td>4345</td>
+        <td>22948</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стикеры / Stickers</td>
+        <td><a href="https://t.me/stickerus">https://t.me/stickerus</a></td>
+        <td>Telegram</td>
+        <td>56333</td>
+        <td>3587</td>
+        <td>7.0</td>
+        <td>-188</td>
+        <td>-755</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Уютная жизнь</td>
+        <td><a href="https://t.me/AlyonaInStyle">https://t.me/AlyonaInStyle</a></td>
+        <td>Telegram</td>
+        <td>55740</td>
+        <td>22901</td>
+        <td>42.0</td>
+        <td>815</td>
+        <td>1581</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>pipisa news</td>
+        <td><a href="https://t.me/pipisa_news">https://t.me/pipisa_news</a></td>
+        <td>Telegram</td>
+        <td>55357</td>
+        <td>64303</td>
+        <td>117.0</td>
+        <td>-294</td>
+        <td>-2083</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Россия 24/7</td>
+        <td><a href="https://t.me/joinchat/4c-0SdsB24djYjgy">https://t.me/joinchat/4c-0SdsB24djYjgy</a></td>
+        <td>Telegram</td>
+        <td>54999</td>
+        <td>8297</td>
+        <td>16.0</td>
+        <td>-2128</td>
+        <td>29918</td>
+        <td>7 месяцев 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Коллекционные подарки тг</td>
+        <td><a href="https://t.me/podarkitgnft">https://t.me/podarkitgnft</a></td>
+        <td>Telegram</td>
+        <td>54337</td>
+        <td>21533</td>
+        <td>40.0</td>
+        <td>-220</td>
+        <td>2991</td>
+        <td>4 месяца 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>ХЕНТАЙ СТИКЕРЫ</td>
+        <td><a href="https://t.me/joinchat/6sSR2XTkC65lMDli">https://t.me/joinchat/6sSR2XTkC65lMDli</a></td>
+        <td>Telegram</td>
+        <td>54126</td>
+        <td>1863</td>
+        <td>4.0</td>
+        <td>-597</td>
+        <td>-2180</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>КРИМИНАЛЬНЫЕ БУДНИ</td>
+        <td><a href="https://t.me/joinchat/6AP-ArTErQczODAy">https://t.me/joinchat/6AP-ArTErQczODAy</a></td>
+        <td>Telegram</td>
+        <td>53813</td>
+        <td>10407</td>
+        <td>20.0</td>
+        <td>2061</td>
+        <td>307</td>
+        <td>5 месяцев 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Zvezdopad | Бесплатные звёзды</td>
+        <td><a href="https://t.me/zvezdopadtg">https://t.me/zvezdopadtg</a></td>
+        <td>Telegram</td>
+        <td>52867</td>
+        <td>2235</td>
+        <td>5.0</td>
+        <td>-1616</td>
+        <td>-8958</td>
+        <td>5 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Блогерши Тиктокерши Стримерши DIPFEIKIM</td>
+        <td><a href="https://t.me/joinchat/OJpF9ftXQIIyNmVi">https://t.me/joinchat/OJpF9ftXQIIyNmVi</a></td>
+        <td>Telegram</td>
+        <td>52571</td>
+        <td>2184</td>
+        <td>5.0</td>
+        <td>-461</td>
+        <td>-822</td>
+        <td>10 месяцев 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатные звёзды | Подарки</td>
+        <td><a href="https://t.me/startfalls">https://t.me/startfalls</a></td>
+        <td>Telegram</td>
+        <td>51170</td>
+        <td>6251</td>
+        <td>13.0</td>
+        <td>1205</td>
+        <td>11187</td>
+        <td>3 месяца 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Премиум эмоджи у Айрата | Адаптивные Emoji и Тексты песен в Эмодзи</td>
+        <td><a href="https://t.me/AirEmojis">https://t.me/AirEmojis</a></td>
+        <td>Telegram</td>
+        <td>48218</td>
+        <td>14157</td>
+        <td>30.0</td>
+        <td>453</td>
+        <td>966</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ɜʙᴇɜды ᴏᴛ дᴀᴩьи</td>
+        <td><a href="https://t.me/stardraws">https://t.me/stardraws</a></td>
+        <td>Telegram</td>
+        <td>45901</td>
+        <td>298</td>
+        <td>1.0</td>
+        <td>-1687</td>
+        <td>11150</td>
+        <td>6 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>WalletStars | Купить Звёзды</td>
+        <td><a href="https://t.me/WalletStarsOfficial">https://t.me/WalletStarsOfficial</a></td>
+        <td>Telegram</td>
+        <td>45716</td>
+        <td>13228</td>
+        <td>29.0</td>
+        <td>-195</td>
+        <td>-2725</td>
+        <td>6 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>msgm</td>
+        <td><a href="https://t.me/msgm06">https://t.me/msgm06</a></td>
+        <td>Telegram</td>
+        <td>45551</td>
+        <td>18801</td>
+        <td>42.0</td>
+        <td>4086</td>
+        <td>545</td>
+        <td>4 месяца 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>НЕЭКОНОМНАЯ БЛОНДИНКА 🧖🏼‍♀️</td>
+        <td><a href="https://t.me/TheBlondehead013">https://t.me/TheBlondehead013</a></td>
+        <td>Telegram</td>
+        <td>44486</td>
+        <td>43028</td>
+        <td>97.0</td>
+        <td>446</td>
+        <td>3951</td>
+        <td>None</td>
+      </tr>
+
+      <tr>
+        <td>Вакансии Новосибирск</td>
+        <td><a href="https://t.me/rabota_v_novosibirskeq">https://t.me/rabota_v_novosibirskeq</a></td>
+        <td>Telegram</td>
+        <td>44115</td>
+        <td>1445</td>
+        <td>4.0</td>
+        <td>-13</td>
+        <td>-53</td>
+        <td>5 лет 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Crypto Conie</td>
+        <td><a href="https://t.me/crypto_conie">https://t.me/crypto_conie</a></td>
+        <td>Telegram</td>
+        <td>44033</td>
+        <td>2299</td>
+        <td>6.0</td>
+        <td>-8834</td>
+        <td>-25602</td>
+        <td>None</td>
+      </tr>
+
+      <tr>
+        <td>exteraGram</td>
+        <td><a href="https://t.me/exteraGram">https://t.me/exteraGram</a></td>
+        <td>Telegram</td>
+        <td>42536</td>
+        <td>28314</td>
+        <td>67.0</td>
+        <td>1143</td>
+        <td>1700</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Telegram Premium Розыгрыш Бесплатно</td>
+        <td><a href="https://t.me/loot_premium">https://t.me/loot_premium</a></td>
+        <td>Telegram</td>
+        <td>42198</td>
+        <td>413</td>
+        <td>1.0</td>
+        <td>-768</td>
+        <td>-11824</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сборник Стикеров | Стикеры</td>
+        <td><a href="https://t.me/joinchat/3YAuZWLpuWUxMDNi">https://t.me/joinchat/3YAuZWLpuWUxMDNi</a></td>
+        <td>Telegram</td>
+        <td>42183</td>
+        <td>467</td>
+        <td>2.0</td>
+        <td>-496</td>
+        <td>-2297</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Cherrygram 🍒</td>
+        <td><a href="https://t.me/Cherry_gram">https://t.me/Cherry_gram</a></td>
+        <td>Telegram</td>
+        <td>41538</td>
+        <td>20936</td>
+        <td>51.0</td>
+        <td>432</td>
+        <td>2063</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Аниме стикеры | Anime Stickers 18</td>
+        <td><a href="https://t.me/anime_sticks">https://t.me/anime_sticks</a></td>
+        <td>Telegram</td>
+        <td>41218</td>
+        <td>17435</td>
+        <td>43.0</td>
+        <td>-40</td>
+        <td>-335</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Telemetr.me channel</td>
+        <td><a href="https://t.me/telemetr_me">https://t.me/telemetr_me</a></td>
+        <td>Telegram</td>
+        <td>40880</td>
+        <td>3580</td>
+        <td>9.0</td>
+        <td>-111</td>
+        <td>-460</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Даша нашла на WB</td>
+        <td><a href="https://t.me/joinchat/d0wFkJ7MvJc3Mjky">https://t.me/joinchat/d0wFkJ7MvJc3Mjky</a></td>
+        <td>Telegram</td>
+        <td>40558</td>
+        <td>2669</td>
+        <td>7.0</td>
+        <td>16328</td>
+        <td>7793</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Emoji Letters | Эмодзи Буквы Шрифты</td>
+        <td><a href="https://t.me/emojiabc">https://t.me/emojiabc</a></td>
+        <td>Telegram</td>
+        <td>40421</td>
+        <td>24076</td>
+        <td>60.0</td>
+        <td>515</td>
+        <td>2084</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дима Ботовед 🔍</td>
+        <td><a href="https://t.me/TopTgDima">https://t.me/TopTgDima</a></td>
+        <td>Telegram</td>
+        <td>39559</td>
+        <td>8016</td>
+        <td>21.0</td>
+        <td>-400</td>
+        <td>-1793</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>✨ Premium Emojis Telegram ✨</td>
+        <td><a href="https://t.me/Premium_Emojis_Telegram">https://t.me/Premium_Emojis_Telegram</a></td>
+        <td>Telegram</td>
+        <td>38920</td>
+        <td>11097</td>
+        <td>29.0</td>
+        <td>1545</td>
+        <td>7417</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

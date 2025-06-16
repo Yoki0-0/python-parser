@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Топор. Экономика.</td>
+        <td><a href="https://t.me/ecotopor">https://t.me/ecotopor</a></td>
+        <td>Экономика</td>
+        <td>1034028</td>
+        <td>961455</td>
+        <td>93.0</td>
+        <td>1404</td>
+        <td>16234</td>
+        <td>6 месяцев 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Альфа-Банк</td>
+        <td><a href="https://t.me/AlfaBank">https://t.me/AlfaBank</a></td>
+        <td>Экономика</td>
+        <td>978786</td>
+        <td>1239100</td>
+        <td>127.0</td>
+        <td>-7291</td>
+        <td>-15518</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Сбер</td>
+        <td><a href="https://t.me/sberbank">https://t.me/sberbank</a></td>
+        <td>Экономика</td>
+        <td>881805</td>
+        <td>138471</td>
+        <td>16.0</td>
+        <td>-4737</td>
+        <td>-27085</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русская экономика</td>
+        <td><a href="https://t.me/banki_economy">https://t.me/banki_economy</a></td>
+        <td>Экономика</td>
+        <td>842037</td>
+        <td>116936</td>
+        <td>14.0</td>
+        <td>-6490</td>
+        <td>119233</td>
+        <td>7 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Беспощадный Банкстер</td>
+        <td><a href="https://t.me/bezposhady">https://t.me/bezposhady</a></td>
+        <td>Экономика</td>
+        <td>711838</td>
+        <td>87332</td>
+        <td>13.0</td>
+        <td>-8022</td>
+        <td>-26114</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Альфа-Инвестиции</td>
+        <td><a href="https://t.me/alfa_investments">https://t.me/alfa_investments</a></td>
+        <td>Экономика</td>
+        <td>686752</td>
+        <td>63039</td>
+        <td>10.0</td>
+        <td>-7187</td>
+        <td>-15381</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>The Экономист</td>
+        <td><a href="https://t.me/economica">https://t.me/economica</a></td>
+        <td>Экономика</td>
+        <td>686524</td>
+        <td>136760</td>
+        <td>20.0</td>
+        <td>-12063</td>
+        <td>37749</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мультипликатор</td>
+        <td><a href="https://t.me/multievan">https://t.me/multievan</a></td>
+        <td>Экономика</td>
+        <td>595196</td>
+        <td>246128</td>
+        <td>42.0</td>
+        <td>241</td>
+        <td>1696</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Т-Инвестиции</td>
+        <td><a href="https://t.me/tb_invest_official">https://t.me/tb_invest_official</a></td>
+        <td>Экономика</td>
+        <td>571837</td>
+        <td>59525</td>
+        <td>11.0</td>
+        <td>1194</td>
+        <td>-5217</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ольга Гогаладзе</td>
+        <td><a href="https://t.me/profinansy">https://t.me/profinansy</a></td>
+        <td>Экономика</td>
+        <td>569560</td>
+        <td>116293</td>
+        <td>21.0</td>
+        <td>7</td>
+        <td>7323</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Баррель черной икры</td>
+        <td><a href="https://t.me/banki_oil">https://t.me/banki_oil</a></td>
+        <td>Экономика</td>
+        <td>502475</td>
+        <td>129072</td>
+        <td>26.0</td>
+        <td>-1183</td>
+        <td>-7941</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Азат Валеев | Инвестиции и Финансы</td>
+        <td><a href="https://t.me/joinchat/BLEgOZKEShI0YjYy">https://t.me/joinchat/BLEgOZKEShI0YjYy</a></td>
+        <td>Экономика</td>
+        <td>458948</td>
+        <td>58944</td>
+        <td>13.0</td>
+        <td>-2283</td>
+        <td>4758</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Банкста</td>
+        <td><a href="https://t.me/banksta">https://t.me/banksta</a></td>
+        <td>Экономика</td>
+        <td>403655</td>
+        <td>91927</td>
+        <td>23.0</td>
+        <td>657</td>
+        <td>925</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Суверенная экономика</td>
+        <td><a href="https://t.me/suverenka">https://t.me/suverenka</a></td>
+        <td>Экономика</td>
+        <td>380598</td>
+        <td>107765</td>
+        <td>29.0</td>
+        <td>-807</td>
+        <td>-8831</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Банки, деньги, два офшора</td>
+        <td><a href="https://t.me/bankrollo">https://t.me/bankrollo</a></td>
+        <td>Экономика</td>
+        <td>374209</td>
+        <td>113442</td>
+        <td>31.0</td>
+        <td>1059</td>
+        <td>3012</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Coin Post – Деньги, инвестиции, биткоин</td>
+        <td><a href="https://t.me/Coin_Post">https://t.me/Coin_Post</a></td>
+        <td>Экономика</td>
+        <td>354475</td>
+        <td>38895</td>
+        <td>11.0</td>
+        <td>-2251</td>
+        <td>-2074</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кабинет инвестора</td>
+        <td><a href="https://t.me/investingcorp">https://t.me/investingcorp</a></td>
+        <td>Экономика</td>
+        <td>351439</td>
+        <td>29150</td>
+        <td>9.0</td>
+        <td>-3510</td>
+        <td>-25831</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ВТБ</td>
+        <td><a href="https://t.me/bankvtb">https://t.me/bankvtb</a></td>
+        <td>Экономика</td>
+        <td>344568</td>
+        <td>145598</td>
+        <td>43.0</td>
+        <td>527</td>
+        <td>3804</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Т-Банк</td>
+        <td><a href="https://t.me/tbank">https://t.me/tbank</a></td>
+        <td>Экономика</td>
+        <td>339003</td>
+        <td>58764</td>
+        <td>18.0</td>
+        <td>-786</td>
+        <td>-3972</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КБ. экономика</td>
+        <td><a href="https://t.me/cb_economics">https://t.me/cb_economics</a></td>
+        <td>Экономика</td>
+        <td>305321</td>
+        <td>107848</td>
+        <td>36.0</td>
+        <td>-374</td>
+        <td>687</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MarketTwits</td>
+        <td><a href="https://t.me/markettwits">https://t.me/markettwits</a></td>
+        <td>Экономика</td>
+        <td>303376</td>
+        <td>57697</td>
+        <td>19.0</td>
+        <td>686</td>
+        <td>2287</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>bitkogan</td>
+        <td><a href="https://t.me/bitkogan">https://t.me/bitkogan</a></td>
+        <td>Экономика</td>
+        <td>286429</td>
+        <td>49127</td>
+        <td>18.0</td>
+        <td>-610</td>
+        <td>-2113</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОСОБИЯ.РФ</td>
+        <td><a href="https://t.me/joinchat/4S0rfd-DTtU4OGNi">https://t.me/joinchat/4S0rfd-DTtU4OGNi</a></td>
+        <td>Экономика</td>
+        <td>279702</td>
+        <td>34408</td>
+        <td>13.0</td>
+        <td>-397</td>
+        <td>-1773</td>
+        <td>3 года 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Антонов такой Антонов</td>
+        <td><a href="https://t.me/auantonov">https://t.me/auantonov</a></td>
+        <td>Экономика</td>
+        <td>272833</td>
+        <td>199350</td>
+        <td>74.0</td>
+        <td>627</td>
+        <td>5684</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Блумберг</td>
+        <td><a href="https://t.me/bloomeconomy">https://t.me/bloomeconomy</a></td>
+        <td>Экономика</td>
+        <td>261071</td>
+        <td>68096</td>
+        <td>27.0</td>
+        <td>10516</td>
+        <td>2026</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ozon Банк</td>
+        <td><a href="https://t.me/ozon_bank_official">https://t.me/ozon_bank_official</a></td>
+        <td>Экономика</td>
+        <td>256872</td>
+        <td>127424</td>
+        <td>50.0</td>
+        <td>1863</td>
+        <td>3285</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СберИнвестиции</td>
+        <td><a href="https://t.me/SberInvestments">https://t.me/SberInvestments</a></td>
+        <td>Экономика</td>
+        <td>249478</td>
+        <td>35975</td>
+        <td>15.0</td>
+        <td>-110</td>
+        <td>-769</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Простая Экономика</td>
+        <td><a href="https://t.me/joinchat/ohuxiLiB3O43YWU6">https://t.me/joinchat/ohuxiLiB3O43YWU6</a></td>
+        <td>Экономика</td>
+        <td>246528</td>
+        <td>34536</td>
+        <td>14.0</td>
+        <td>-3032</td>
+        <td>-15045</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Forbes Russia</td>
+        <td><a href="https://t.me/forbesrussia">https://t.me/forbesrussia</a></td>
+        <td>Экономика</td>
+        <td>240027</td>
+        <td>22032</td>
+        <td>10.0</td>
+        <td>-255</td>
+        <td>-888</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Позитивная экономика</td>
+        <td><a href="https://t.me/NiceEconomy">https://t.me/NiceEconomy</a></td>
+        <td>Экономика</td>
+        <td>231205</td>
+        <td>37504</td>
+        <td>17.0</td>
+        <td>201</td>
+        <td>129</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Выплаты и Пособия 👨‍👩‍👧‍👦</td>
+        <td><a href="https://t.me/posobia_tg">https://t.me/posobia_tg</a></td>
+        <td>Экономика</td>
+        <td>227615</td>
+        <td>17202</td>
+        <td>8.0</td>
+        <td>-913</td>
+        <td>-4129</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Капуста в законе</td>
+        <td><a href="https://t.me/joinchat/NMZCqCvWHD8zMzJi">https://t.me/joinchat/NMZCqCvWHD8zMzJi</a></td>
+        <td>Экономика</td>
+        <td>227325</td>
+        <td>35681</td>
+        <td>16.0</td>
+        <td>-383</td>
+        <td>-2589</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мои Инвестиции</td>
+        <td><a href="https://t.me/omyinvestments">https://t.me/omyinvestments</a></td>
+        <td>Экономика</td>
+        <td>224506</td>
+        <td>23847</td>
+        <td>11.0</td>
+        <td>-341</td>
+        <td>-1890</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русский Уолл-стрит</td>
+        <td><a href="https://t.me/streetwall">https://t.me/streetwall</a></td>
+        <td>Экономика</td>
+        <td>224443</td>
+        <td>41024</td>
+        <td>19.0</td>
+        <td>-1429</td>
+        <td>-7600</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Банк России</td>
+        <td><a href="https://t.me/centralbank_russia">https://t.me/centralbank_russia</a></td>
+        <td>Экономика</td>
+        <td>222117</td>
+        <td>61927</td>
+        <td>28.0</td>
+        <td>-157</td>
+        <td>1847</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Налоги и Точка</td>
+        <td><a href="https://t.me/joinchat/x4XgW0gyvhE4NDQy">https://t.me/joinchat/x4XgW0gyvhE4NDQy</a></td>
+        <td>Экономика</td>
+        <td>221208</td>
+        <td>29242</td>
+        <td>14.0</td>
+        <td>-2016</td>
+        <td>-7335</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ФПИ Банк</td>
+        <td><a href="https://t.me/fpibank">https://t.me/fpibank</a></td>
+        <td>Экономика</td>
+        <td>212433</td>
+        <td>123851</td>
+        <td>59.0</td>
+        <td>-2590</td>
+        <td>-12598</td>
+        <td>7 месяцев 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>PROFIT</td>
+        <td><a href="https://t.me/joinchat/Td1ax2dj2fgzYTli">https://t.me/joinchat/Td1ax2dj2fgzYTli</a></td>
+        <td>Экономика</td>
+        <td>212171</td>
+        <td>49465</td>
+        <td>24.0</td>
+        <td>-622</td>
+        <td>-3288</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лимон на чай</td>
+        <td><a href="https://t.me/lemonfortea">https://t.me/lemonfortea</a></td>
+        <td>Экономика</td>
+        <td>209653</td>
+        <td>10433</td>
+        <td>5.0</td>
+        <td>-1636</td>
+        <td>-8508</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Моя недвижка</td>
+        <td><a href="https://t.me/nedvizechka">https://t.me/nedvizechka</a></td>
+        <td>Экономика</td>
+        <td>202406</td>
+        <td>38591</td>
+        <td>20.0</td>
+        <td>-55</td>
+        <td>5605</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Профита нет. А если найду?</td>
+        <td><a href="https://t.me/profitanet">https://t.me/profitanet</a></td>
+        <td>Экономика</td>
+        <td>201267</td>
+        <td>38043</td>
+        <td>19.0</td>
+        <td>-805</td>
+        <td>-1211</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Банкофф - Финансы</td>
+        <td><a href="https://t.me/bankoffo">https://t.me/bankoffo</a></td>
+        <td>Экономика</td>
+        <td>200271</td>
+        <td>35184</td>
+        <td>18.0</td>
+        <td>-3943</td>
+        <td>39937</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>В своей уютнее</td>
+        <td><a href="https://t.me/Vsvoey">https://t.me/Vsvoey</a></td>
+        <td>Экономика</td>
+        <td>198007</td>
+        <td>41475</td>
+        <td>21.0</td>
+        <td>-1005</td>
+        <td>-127</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>InvestFuture</td>
+        <td><a href="https://t.me/investfuture">https://t.me/investfuture</a></td>
+        <td>Экономика</td>
+        <td>195395</td>
+        <td>27589</td>
+        <td>15.0</td>
+        <td>-111</td>
+        <td>-319</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Деньги</td>
+        <td><a href="https://t.me/dengi_s_umom">https://t.me/dengi_s_umom</a></td>
+        <td>Экономика</td>
+        <td>195291</td>
+        <td>16994</td>
+        <td>9.0</td>
+        <td>-282</td>
+        <td>-2862</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Экономист</td>
+        <td><a href="https://t.me/joinchat/XWw4cnEOjzdkYmMy">https://t.me/joinchat/XWw4cnEOjzdkYmMy</a></td>
+        <td>Экономика</td>
+        <td>193038</td>
+        <td>45247</td>
+        <td>24.0</td>
+        <td>2200</td>
+        <td>1913</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Start The History</td>
+        <td><a href="https://t.me/joinchat/Hj9bW7gkrulhMGMy">https://t.me/joinchat/Hj9bW7gkrulhMGMy</a></td>
+        <td>Экономика</td>
+        <td>188312</td>
+        <td>46003</td>
+        <td>25.0</td>
+        <td>-158</td>
+        <td>-1178</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Копейка рубль бережёт</td>
+        <td><a href="https://t.me/joinchat/bGYSJODzWyUyYmVi">https://t.me/joinchat/bGYSJODzWyUyYmVi</a></td>
+        <td>Экономика</td>
+        <td>182745</td>
+        <td>26813</td>
+        <td>15.0</td>
+        <td>-2402</td>
+        <td>10074</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Карта «Халва»</td>
+        <td><a href="https://t.me/halvacard_official">https://t.me/halvacard_official</a></td>
+        <td>Экономика</td>
+        <td>176489</td>
+        <td>39149</td>
+        <td>23.0</td>
+        <td>-2262</td>
+        <td>25514</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Инвестиции Студента</td>
+        <td><a href="https://t.me/joinchat/3lTLB4gkVN9iMTli">https://t.me/joinchat/3lTLB4gkVN9iMTli</a></td>
+        <td>Экономика</td>
+        <td>174747</td>
+        <td>29700</td>
+        <td>17.0</td>
+        <td>449</td>
+        <td>658</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Злой Банкстер</td>
+        <td><a href="https://t.me/zloy_bankster">https://t.me/zloy_bankster</a></td>
+        <td>Экономика</td>
+        <td>169802</td>
+        <td>36358</td>
+        <td>22.0</td>
+        <td>-489</td>
+        <td>-802</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>пособия.ру | Гид по Льготам и Выплатам</td>
+        <td><a href="https://t.me/joinchat/XqQE_vEmSqszZTMy">https://t.me/joinchat/XqQE_vEmSqszZTMy</a></td>
+        <td>Экономика</td>
+        <td>168657</td>
+        <td>21986</td>
+        <td>13.0</td>
+        <td>1699</td>
+        <td>6506</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анастасия Тарасова Nastya_Docs</td>
+        <td><a href="https://t.me/nastya_docs">https://t.me/nastya_docs</a></td>
+        <td>Экономика</td>
+        <td>168337</td>
+        <td>45044</td>
+        <td>27.0</td>
+        <td>-363</td>
+        <td>-2118</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Банкер</td>
+        <td><a href="https://t.me/joinchat/2pzDDCEk_45hZjAy">https://t.me/joinchat/2pzDDCEk_45hZjAy</a></td>
+        <td>Экономика</td>
+        <td>166617</td>
+        <td>22236</td>
+        <td>14.0</td>
+        <td>10315</td>
+        <td>43458</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Риелтор вещает</td>
+        <td><a href="https://t.me/rieltorspeaks">https://t.me/rieltorspeaks</a></td>
+        <td>Экономика</td>
+        <td>164032</td>
+        <td>39202</td>
+        <td>24.0</td>
+        <td>-6954</td>
+        <td>-47664</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TIME | Финансы</td>
+        <td><a href="https://t.me/joinchat/MjiWB9vtkLs3MDI6">https://t.me/joinchat/MjiWB9vtkLs3MDI6</a></td>
+        <td>Экономика</td>
+        <td>162319</td>
+        <td>39695</td>
+        <td>25.0</td>
+        <td>13371</td>
+        <td>15265</td>
+        <td>11 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Invest Assistance</td>
+        <td><a href="https://t.me/joinchat/66W6dBgRop9lZWMy">https://t.me/joinchat/66W6dBgRop9lZWMy</a></td>
+        <td>Экономика</td>
+        <td>162289</td>
+        <td>29262</td>
+        <td>18.0</td>
+        <td>908</td>
+        <td>2460</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Почта Банк</td>
+        <td><a href="https://t.me/pochtabank">https://t.me/pochtabank</a></td>
+        <td>Экономика</td>
+        <td>161390</td>
+        <td>49263</td>
+        <td>31.0</td>
+        <td>-1031</td>
+        <td>-5796</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Александр Воронков | Срочный обзор ситуации</td>
+        <td><a href="https://t.me/joinchat/1NnfmC8GwBE1ODgy">https://t.me/joinchat/1NnfmC8GwBE1ODgy</a></td>
+        <td>Экономика</td>
+        <td>160683</td>
+        <td>26900</td>
+        <td>17.0</td>
+        <td>-1196</td>
+        <td>-8885</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Экономика 360°</td>
+        <td><a href="https://t.me/joinchat/LfPLYKcjzNU2MjJi">https://t.me/joinchat/LfPLYKcjzNU2MjJi</a></td>
+        <td>Экономика</td>
+        <td>159440</td>
+        <td>42882</td>
+        <td>27.0</td>
+        <td>1741</td>
+        <td>4810</td>
+        <td>3 года</td>
+      </tr>
+
+      <tr>
+        <td>Деньги в банке</td>
+        <td><a href="https://t.me/bankser">https://t.me/bankser</a></td>
+        <td>Экономика</td>
+        <td>159311</td>
+        <td>20732</td>
+        <td>13.0</td>
+        <td>-553</td>
+        <td>-2808</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Жилищный вопрос</td>
+        <td><a href="https://t.me/HomeVopros">https://t.me/HomeVopros</a></td>
+        <td>Экономика</td>
+        <td>153020</td>
+        <td>33890</td>
+        <td>23.0</td>
+        <td>-41675</td>
+        <td>-47292</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Инвест ревью | Финансы</td>
+        <td><a href="https://t.me/investorbiz">https://t.me/investorbiz</a></td>
+        <td>Экономика</td>
+        <td>150989</td>
+        <td>18093</td>
+        <td>12.0</td>
+        <td>-479</td>
+        <td>-2156</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мысли-НеМысли</td>
+        <td><a href="https://t.me/mislinemisli">https://t.me/mislinemisli</a></td>
+        <td>Экономика</td>
+        <td>150472</td>
+        <td>20433</td>
+        <td>14.0</td>
+        <td>278</td>
+        <td>1630</td>
+        <td>8 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>investify! • Финансы</td>
+        <td><a href="https://t.me/ifinvest">https://t.me/ifinvest</a></td>
+        <td>Экономика</td>
+        <td>150357</td>
+        <td>16169</td>
+        <td>11.0</td>
+        <td>-1405</td>
+        <td>-7010</td>
+        <td>4 года 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кубышка | Евгений Марченко</td>
+        <td><a href="https://t.me/BizLike">https://t.me/BizLike</a></td>
+        <td>Экономика</td>
+        <td>149081</td>
+        <td>20517</td>
+        <td>14.0</td>
+        <td>-465</td>
+        <td>-2977</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Что за Инвестор?</td>
+        <td><a href="https://t.me/joinchat/gtun441fi-s4ZTA0">https://t.me/joinchat/gtun441fi-s4ZTA0</a></td>
+        <td>Экономика</td>
+        <td>147141</td>
+        <td>28370</td>
+        <td>20.0</td>
+        <td>564</td>
+        <td>1446</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Bankless</td>
+        <td><a href="https://t.me/BanklessNews">https://t.me/BanklessNews</a></td>
+        <td>Экономика</td>
+        <td>146022</td>
+        <td>30911</td>
+        <td>22.0</td>
+        <td>-142</td>
+        <td>-239</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>финансы.про</td>
+        <td><a href="https://t.me/finance_pro_tg">https://t.me/finance_pro_tg</a></td>
+        <td>Экономика</td>
+        <td>144807</td>
+        <td>8515</td>
+        <td>6.0</td>
+        <td>-818</td>
+        <td>-2875</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Профит будет.</td>
+        <td><a href="https://t.me/joinchat/yElIw6pPpocyMDUy">https://t.me/joinchat/yElIw6pPpocyMDUy</a></td>
+        <td>Экономика</td>
+        <td>144449</td>
+        <td>22229</td>
+        <td>16.0</td>
+        <td>1950</td>
+        <td>4745</td>
+        <td>3 года 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Евгений Черных и 401🍋</td>
+        <td><a href="https://t.me/trader_chernyh">https://t.me/trader_chernyh</a></td>
+        <td>Экономика</td>
+        <td>140745</td>
+        <td>36633</td>
+        <td>26.0</td>
+        <td>-286</td>
+        <td>-2158</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Олег Артемьев | Ленивый инвестор</td>
+        <td><a href="https://t.me/ne_investor">https://t.me/ne_investor</a></td>
+        <td>Экономика</td>
+        <td>139832</td>
+        <td>31178</td>
+        <td>23.0</td>
+        <td>925</td>
+        <td>1913</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Экономика и не только</td>
+        <td><a href="https://t.me/economy_news">https://t.me/economy_news</a></td>
+        <td>Экономика</td>
+        <td>137666</td>
+        <td>26427</td>
+        <td>20.0</td>
+        <td>1624</td>
+        <td>-2025</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Экономика</td>
+        <td><a href="https://t.me/economika">https://t.me/economika</a></td>
+        <td>Экономика</td>
+        <td>137384</td>
+        <td>25395</td>
+        <td>19.0</td>
+        <td>16</td>
+        <td>531</td>
+        <td>9 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Китайская угроза</td>
+        <td><a href="https://t.me/economikal">https://t.me/economikal</a></td>
+        <td>Экономика</td>
+        <td>137218</td>
+        <td>13112</td>
+        <td>10.0</td>
+        <td>-191</td>
+        <td>-3187</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>РынкиДеньгиВласть | РДВ</td>
+        <td><a href="https://t.me/AK47pfl">https://t.me/AK47pfl</a></td>
+        <td>Экономика</td>
+        <td>134804</td>
+        <td>17846</td>
+        <td>14.0</td>
+        <td>-292</td>
+        <td>-1340</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Простая экономика</td>
+        <td><a href="https://t.me/prostoecon">https://t.me/prostoecon</a></td>
+        <td>Экономика</td>
+        <td>133312</td>
+        <td>94846</td>
+        <td>72.0</td>
+        <td>1719</td>
+        <td>5480</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>IF Stocks</td>
+        <td><a href="https://t.me/if_stocks">https://t.me/if_stocks</a></td>
+        <td>Экономика</td>
+        <td>130801</td>
+        <td>23508</td>
+        <td>18.0</td>
+        <td>-68</td>
+        <td>-45</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Spydell_finance</td>
+        <td><a href="https://t.me/spydell_finance">https://t.me/spydell_finance</a></td>
+        <td>Экономика</td>
+        <td>130738</td>
+        <td>42278</td>
+        <td>33.0</td>
+        <td>48</td>
+        <td>784</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Inv Trading</td>
+        <td><a href="https://t.me/joinchat/VX6JmDfwzPk3MzE6">https://t.me/joinchat/VX6JmDfwzPk3MzE6</a></td>
+        <td>Экономика</td>
+        <td>130086</td>
+        <td>17396</td>
+        <td>14.0</td>
+        <td>4353</td>
+        <td>28824</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>🔥Full-Time Trading</td>
+        <td><a href="https://t.me/joinchat/-_V19XANAdFkOWFi">https://t.me/joinchat/-_V19XANAdFkOWFi</a></td>
+        <td>Экономика</td>
+        <td>129882</td>
+        <td>35818</td>
+        <td>28.0</td>
+        <td>1220</td>
+        <td>2066</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сигналы РЦБ</td>
+        <td><a href="https://t.me/cbrstocks">https://t.me/cbrstocks</a></td>
+        <td>Экономика</td>
+        <td>129761</td>
+        <td>23145</td>
+        <td>18.0</td>
+        <td>-77</td>
+        <td>473</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чёрный Лебедь</td>
+        <td><a href="https://t.me/swaneconomy">https://t.me/swaneconomy</a></td>
+        <td>Экономика</td>
+        <td>129616</td>
+        <td>27720</td>
+        <td>22.0</td>
+        <td>-186</td>
+        <td>35</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Зона Фриланса</td>
+        <td><a href="https://t.me/joinchat/16APTwfHDcpjN2My">https://t.me/joinchat/16APTwfHDcpjN2My</a></td>
+        <td>Экономика</td>
+        <td>127580</td>
+        <td>4727</td>
+        <td>4.0</td>
+        <td>1979</td>
+        <td>9680</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сам ты инвестор!</td>
+        <td><a href="https://t.me/selfinvestor">https://t.me/selfinvestor</a></td>
+        <td>Экономика</td>
+        <td>125299</td>
+        <td>30566</td>
+        <td>25.0</td>
+        <td>272</td>
+        <td>1222</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Труба под Неглинной</td>
+        <td><a href="https://t.me/trubapodneglinnoy">https://t.me/trubapodneglinnoy</a></td>
+        <td>Экономика</td>
+        <td>125069</td>
+        <td>20955</td>
+        <td>17.0</td>
+        <td>65</td>
+        <td>290</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Спасибо, выгодно!</td>
+        <td><a href="https://t.me/sber_spasibo">https://t.me/sber_spasibo</a></td>
+        <td>Экономика</td>
+        <td>124376</td>
+        <td>28620</td>
+        <td>23.0</td>
+        <td>-523</td>
+        <td>19061</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Социальная Помощь 🇷🇺| Выплаты и Пособия</td>
+        <td><a href="https://t.me/joinchat/1NrhWUNk7hZkODli">https://t.me/joinchat/1NrhWUNk7hZkODli</a></td>
+        <td>Экономика</td>
+        <td>123799</td>
+        <td>19856</td>
+        <td>16.0</td>
+        <td>4192</td>
+        <td>8219</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Льготы и Пособия | Родители</td>
+        <td><a href="https://t.me/parentsnews">https://t.me/parentsnews</a></td>
+        <td>Экономика</td>
+        <td>122611</td>
+        <td>33416</td>
+        <td>28.0</td>
+        <td>-267</td>
+        <td>-1148</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>IF News</td>
+        <td><a href="https://t.me/if_market_news">https://t.me/if_market_news</a></td>
+        <td>Экономика</td>
+        <td>122378</td>
+        <td>34731</td>
+        <td>29.0</td>
+        <td>113</td>
+        <td>278</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>headlines</td>
+        <td><a href="https://t.me/headlines_for_traders">https://t.me/headlines_for_traders</a></td>
+        <td>Экономика</td>
+        <td>121655</td>
+        <td>23513</td>
+        <td>20.0</td>
+        <td>-42</td>
+        <td>-590</td>
+        <td>5 лет 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>На пенсию в 35 лет</td>
+        <td><a href="https://t.me/pensiya35">https://t.me/pensiya35</a></td>
+        <td>Экономика</td>
+        <td>117664</td>
+        <td>32673</td>
+        <td>28.0</td>
+        <td>173</td>
+        <td>2261</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Альфа-Капитал</td>
+        <td><a href="https://t.me/alfacapital">https://t.me/alfacapital</a></td>
+        <td>Экономика</td>
+        <td>116166</td>
+        <td>90417</td>
+        <td>78.0</td>
+        <td>-883</td>
+        <td>-5051</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СберПремьер</td>
+        <td><a href="https://t.me/sberpremiernew">https://t.me/sberpremiernew</a></td>
+        <td>Экономика</td>
+        <td>109557</td>
+        <td>45917</td>
+        <td>42.0</td>
+        <td>2253</td>
+        <td>1307</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Первый Финансовый</td>
+        <td><a href="https://t.me/joinchat/QRzJxI-O-bI4NmYy">https://t.me/joinchat/QRzJxI-O-bI4NmYy</a></td>
+        <td>Экономика</td>
+        <td>108466</td>
+        <td>10135</td>
+        <td>10.0</td>
+        <td>-913</td>
+        <td>-4562</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дилер</td>
+        <td><a href="https://t.me/StockMarketManipulator">https://t.me/StockMarketManipulator</a></td>
+        <td>Экономика</td>
+        <td>108452</td>
+        <td>20540</td>
+        <td>19.0</td>
+        <td>-577</td>
+        <td>-3086</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MMI</td>
+        <td><a href="https://t.me/russianmacro">https://t.me/russianmacro</a></td>
+        <td>Экономика</td>
+        <td>108133</td>
+        <td>20888</td>
+        <td>20.0</td>
+        <td>130</td>
+        <td>404</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Недвижимость инсайды</td>
+        <td><a href="https://t.me/propertyinsider">https://t.me/propertyinsider</a></td>
+        <td>Экономика</td>
+        <td>108002</td>
+        <td>21734</td>
+        <td>21.0</td>
+        <td>100</td>
+        <td>456</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес сегодня</td>
+        <td><a href="https://t.me/businesstodayy">https://t.me/businesstodayy</a></td>
+        <td>Экономика</td>
+        <td>107765</td>
+        <td>11762</td>
+        <td>11.0</td>
+        <td>-622</td>
+        <td>-2741</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Банки.ру</td>
+        <td><a href="https://t.me/bankiruofficial">https://t.me/bankiruofficial</a></td>
+        <td>Экономика</td>
+        <td>107336</td>
+        <td>14352</td>
+        <td>14.0</td>
+        <td>51144</td>
+        <td>50446</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

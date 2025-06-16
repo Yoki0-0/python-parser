@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Новости DarkNet| Приемки Хакеры Крипта Криминал и многое другое.</td>
+        <td><a href="https://t.me/joinchat/wi_brYkaIM44NjY8">https://t.me/joinchat/wi_brYkaIM44NjY8</a></td>
+        <td>Даркнет</td>
+        <td>857804</td>
+        <td>889</td>
+        <td>1.0</td>
+        <td>-157</td>
+        <td>72738</td>
+        <td>2 месяца 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Заработок | Удалёнка 24/7</td>
+        <td><a href="https://t.me/shemyzarabotocc">https://t.me/shemyzarabotocc</a></td>
+        <td>Даркнет</td>
+        <td>484262</td>
+        <td>4010</td>
+        <td>1.0</td>
+        <td>-6171</td>
+        <td>-31703</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Osint Info</td>
+        <td><a href="https://t.me/osint_info">https://t.me/osint_info</a></td>
+        <td>Даркнет</td>
+        <td>238698</td>
+        <td>33546</td>
+        <td>15.0</td>
+        <td>142</td>
+        <td>1645</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Джокер ДНР</td>
+        <td><a href="https://t.me/JokerDPR">https://t.me/JokerDPR</a></td>
+        <td>Даркнет</td>
+        <td>205613</td>
+        <td>151188</td>
+        <td>74.0</td>
+        <td>-528</td>
+        <td>-2921</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TORGRΑΜ 🟣</td>
+        <td><a href="https://t.me/joinchat/Rm8HxgPB-h0bdaLf">https://t.me/joinchat/Rm8HxgPB-h0bdaLf</a></td>
+        <td>Даркнет</td>
+        <td>184472</td>
+        <td>9692</td>
+        <td>6.0</td>
+        <td>1158</td>
+        <td>6799</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЕXPLO/Т | SОFТ 💻</td>
+        <td><a href="https://t.me/joinchat/X6LwXjagh59iMTJk">https://t.me/joinchat/X6LwXjagh59iMTJk</a></td>
+        <td>Даркнет</td>
+        <td>180004</td>
+        <td>19514</td>
+        <td>11.0</td>
+        <td>4286</td>
+        <td>-2238</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Записки Профессора</td>
+        <td><a href="https://t.me/professor_youtube_reborn">https://t.me/professor_youtube_reborn</a></td>
+        <td>Даркнет</td>
+        <td>170895</td>
+        <td>165546</td>
+        <td>97.0</td>
+        <td>1162</td>
+        <td>7751</td>
+        <td>8 месяцев 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Денежные Психи🔪</td>
+        <td><a href="https://t.me/joinchat/AAAAAFctleTXc-KAesMf2Q">https://t.me/joinchat/AAAAAFctleTXc-KAesMf2Q</a></td>
+        <td>Даркнет</td>
+        <td>141033</td>
+        <td>3139</td>
+        <td>3.0</td>
+        <td>-1054</td>
+        <td>-4751</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Утечки информации</td>
+        <td><a href="https://t.me/dataleak">https://t.me/dataleak</a></td>
+        <td>Даркнет</td>
+        <td>130552</td>
+        <td>50981</td>
+        <td>40.0</td>
+        <td>-114</td>
+        <td>-510</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АБУZZИЩЕ</td>
+        <td><a href="https://t.me/joinchat/dQ73tutz__MwMDI6">https://t.me/joinchat/dQ73tutz__MwMDI6</a></td>
+        <td>Даркнет</td>
+        <td>122305</td>
+        <td>17921</td>
+        <td>15.0</td>
+        <td>-725</td>
+        <td>-2631</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Идите лесом!</td>
+        <td><a href="https://t.me/iditelesom_help">https://t.me/iditelesom_help</a></td>
+        <td>Даркнет</td>
+        <td>113192</td>
+        <td>22557</td>
+        <td>20.0</td>
+        <td>-88</td>
+        <td>-713</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АБУЗЫ И СЛИВЫ</td>
+        <td><a href="https://t.me/joinchat/iqYFiv1KkexlOWFi">https://t.me/joinchat/iqYFiv1KkexlOWFi</a></td>
+        <td>Даркнет</td>
+        <td>110271</td>
+        <td>1204</td>
+        <td>2.0</td>
+        <td>-675</td>
+        <td>-4491</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Х@керский Уголок</td>
+        <td><a href="https://t.me/joinchat/Vmsiq0hnovRmNjAy">https://t.me/joinchat/Vmsiq0hnovRmNjAy</a></td>
+        <td>Даркнет</td>
+        <td>103890</td>
+        <td>9794</td>
+        <td>10.0</td>
+        <td>1860</td>
+        <td>13196</td>
+        <td>9 месяцев 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>ЛОУБАНК В ДЕЛЕ</td>
+        <td><a href="https://t.me/joinchat/UIc1fK_HvKBmMTYy">https://t.me/joinchat/UIc1fK_HvKBmMTYy</a></td>
+        <td>Даркнет</td>
+        <td>102504</td>
+        <td>14649</td>
+        <td>15.0</td>
+        <td>-783</td>
+        <td>-1191</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CYBER HUNTER - Кибербезопасность</td>
+        <td><a href="https://t.me/cyberbezopasno">https://t.me/cyberbezopasno</a></td>
+        <td>Даркнет</td>
+        <td>101132</td>
+        <td>2829</td>
+        <td>3.0</td>
+        <td>-480</td>
+        <td>-1784</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ReveL</td>
+        <td><a href="https://t.me/joinchat/gXHcr9fUlW1lYTky">https://t.me/joinchat/gXHcr9fUlW1lYTky</a></td>
+        <td>Даркнет</td>
+        <td>99499</td>
+        <td>16157</td>
+        <td>17.0</td>
+        <td>998</td>
+        <td>2123</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Software | Софты | Программы</td>
+        <td><a href="https://t.me/software_softs">https://t.me/software_softs</a></td>
+        <td>Даркнет</td>
+        <td>94381</td>
+        <td>4182</td>
+        <td>5.0</td>
+        <td>-428</td>
+        <td>-1496</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>BLACK®️</td>
+        <td><a href="https://t.me/joinchat/AAAAAFMx1O_mhmYRp-_nKA">https://t.me/joinchat/AAAAAFMx1O_mhmYRp-_nKA</a></td>
+        <td>Даркнет</td>
+        <td>91007</td>
+        <td>2929</td>
+        <td>4.0</td>
+        <td>-858</td>
+        <td>-2109</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>У Соседа Лучше</td>
+        <td><a href="https://t.me/joinchat/AAAAAEStGXgEzgMONTgeZw">https://t.me/joinchat/AAAAAEStGXgEzgMONTgeZw</a></td>
+        <td>Даркнет</td>
+        <td>86377</td>
+        <td>8798</td>
+        <td>11.0</td>
+        <td>-307</td>
+        <td>-1080</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Послания Хакера</td>
+        <td><a href="https://t.me/joinchat/AbLfz1JcUxQzZmQ8">https://t.me/joinchat/AbLfz1JcUxQzZmQ8</a></td>
+        <td>Даркнет</td>
+        <td>86315</td>
+        <td>18184</td>
+        <td>22.0</td>
+        <td>-2918</td>
+        <td>1332</td>
+        <td>4 месяца 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>SCM.RIP</td>
+        <td><a href="https://t.me/joinchat/vzLj7j7dR8gzODRi">https://t.me/joinchat/vzLj7j7dR8gzODRi</a></td>
+        <td>Даркнет</td>
+        <td>79993</td>
+        <td>1486</td>
+        <td>2.0</td>
+        <td>-1074</td>
+        <td>-6334</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>OVERLOAD</td>
+        <td><a href="https://t.me/overload">https://t.me/overload</a></td>
+        <td>Даркнет</td>
+        <td>77966</td>
+        <td>45213</td>
+        <td>58.0</td>
+        <td>3300</td>
+        <td>10634</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>NAVAR | BLOG</td>
+        <td><a href="https://t.me/joinchat/0ikU1vcxBbkwMDVi">https://t.me/joinchat/0ikU1vcxBbkwMDVi</a></td>
+        <td>Даркнет</td>
+        <td>74346</td>
+        <td>4936</td>
+        <td>7.0</td>
+        <td>-226</td>
+        <td>64</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кладовка Pavlu</td>
+        <td><a href="https://t.me/KladovkaPavlu">https://t.me/KladovkaPavlu</a></td>
+        <td>Даркнет</td>
+        <td>73536</td>
+        <td>18794</td>
+        <td>26.0</td>
+        <td>-195</td>
+        <td>-988</td>
+        <td>5 лет 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Хакинг RENGES</td>
+        <td><a href="https://t.me/joinchat/OjDNzE0-CRQyMTA6">https://t.me/joinchat/OjDNzE0-CRQyMTA6</a></td>
+        <td>Даркнет</td>
+        <td>73170</td>
+        <td>1244</td>
+        <td>2.0</td>
+        <td>-217</td>
+        <td>-4255</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Микро Схема</td>
+        <td><a href="https://t.me/micro_sxema">https://t.me/micro_sxema</a></td>
+        <td>Даркнет</td>
+        <td>68422</td>
+        <td>16873</td>
+        <td>25.0</td>
+        <td>284</td>
+        <td>6429</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Непубличные, секретные, безлимитные тарифы РФ</td>
+        <td><a href="https://t.me/tarifRF">https://t.me/tarifRF</a></td>
+        <td>Даркнет</td>
+        <td>66442</td>
+        <td>19932</td>
+        <td>30.0</td>
+        <td>27</td>
+        <td>302</td>
+        <td>7 лет 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>ONI | DARK</td>
+        <td><a href="https://t.me/joinchat/4mdp3kmPmFg0MmYy">https://t.me/joinchat/4mdp3kmPmFg0MmYy</a></td>
+        <td>Даркнет</td>
+        <td>59239</td>
+        <td>1222</td>
+        <td>3.0</td>
+        <td>-55</td>
+        <td>-3431</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Furuta Dark</td>
+        <td><a href="https://t.me/joinchat/TbYARS76F_84ODdi">https://t.me/joinchat/TbYARS76F_84ODdi</a></td>
+        <td>Даркнет</td>
+        <td>55633</td>
+        <td>7534</td>
+        <td>14.0</td>
+        <td>366</td>
+        <td>11335</td>
+        <td>7 месяцев 1 день</td>
+      </tr>
+
+      <tr>
+        <td>БУДНИ СКАМЕРА</td>
+        <td><a href="https://t.me/joinchat/E6zxjZpl8d80NmYy">https://t.me/joinchat/E6zxjZpl8d80NmYy</a></td>
+        <td>Даркнет</td>
+        <td>55057</td>
+        <td>1878</td>
+        <td>4.0</td>
+        <td>-634</td>
+        <td>-2809</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мемный Скaм</td>
+        <td><a href="https://t.me/mems_skam">https://t.me/mems_skam</a></td>
+        <td>Даркнет</td>
+        <td>54982</td>
+        <td>6479</td>
+        <td>12.0</td>
+        <td>-249</td>
+        <td>-772</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Onion Soft 💾</td>
+        <td><a href="https://t.me/joinchat/Z_VsOrnxIOhkNTcy">https://t.me/joinchat/Z_VsOrnxIOhkNTcy</a></td>
+        <td>Даркнет</td>
+        <td>52139</td>
+        <td>12967</td>
+        <td>25.0</td>
+        <td>19802</td>
+        <td>41760</td>
+        <td>5 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Hidden Wiki</td>
+        <td><a href="https://t.me/joinchat/TG8iGlyXoV2p1ZP7">https://t.me/joinchat/TG8iGlyXoV2p1ZP7</a></td>
+        <td>Даркнет</td>
+        <td>50067</td>
+        <td>2242</td>
+        <td>5.0</td>
+        <td>99</td>
+        <td>391</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Flanders - Убежище</td>
+        <td><a href="https://t.me/joinchat/SY2DPpqU6S44YTNi">https://t.me/joinchat/SY2DPpqU6S44YTNi</a></td>
+        <td>Даркнет</td>
+        <td>46563</td>
+        <td>15413</td>
+        <td>34.0</td>
+        <td>42</td>
+        <td>676</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Риск менеджмент</td>
+        <td><a href="https://t.me/illyuziya_obmana_risk_menedjment">https://t.me/illyuziya_obmana_risk_menedjment</a></td>
+        <td>Даркнет</td>
+        <td>41645</td>
+        <td>1999</td>
+        <td>5.0</td>
+        <td>-128</td>
+        <td>-412</td>
+        <td>6 лет 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>DIRTY CASH</td>
+        <td><a href="https://t.me/joinchat/AAAAAFKXfxDO91XPujcK8A">https://t.me/joinchat/AAAAAFKXfxDO91XPujcK8A</a></td>
+        <td>Даркнет</td>
+        <td>40623</td>
+        <td>2327</td>
+        <td>6.0</td>
+        <td>-561</td>
+        <td>-2887</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MIRROR</td>
+        <td><a href="https://t.me/joinchat/So3SWIh1-IczMmEy">https://t.me/joinchat/So3SWIh1-IczMmEy</a></td>
+        <td>Даркнет</td>
+        <td>39818</td>
+        <td>4348</td>
+        <td>11.0</td>
+        <td>1494</td>
+        <td>838</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MONEY PACK</td>
+        <td><a href="https://t.me/joinchat/AAAAAFCWhSqhfe6HLO3fAA">https://t.me/joinchat/AAAAAFCWhSqhfe6HLO3fAA</a></td>
+        <td>Даркнет</td>
+        <td>39467</td>
+        <td>469</td>
+        <td>2.0</td>
+        <td>332</td>
+        <td>-1445</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🩸 | sʜᴀᴅᴇ ᴅᴀʀᴋ</td>
+        <td><a href="https://t.me/joinchat/Wuv5-UK1SMdmMTAy">https://t.me/joinchat/Wuv5-UK1SMdmMTAy</a></td>
+        <td>Даркнет</td>
+        <td>38221</td>
+        <td>3013</td>
+        <td>8.0</td>
+        <td>1862</td>
+        <td>-1334</td>
+        <td>10 месяцев 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>White deal</td>
+        <td><a href="https://t.me/joinchat/O20xZvthVvk0OTNi">https://t.me/joinchat/O20xZvthVvk0OTNi</a></td>
+        <td>Даркнет</td>
+        <td>37035</td>
+        <td>2264</td>
+        <td>7.0</td>
+        <td>-686</td>
+        <td>-5454</td>
+        <td>9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Termux, please</td>
+        <td><a href="https://t.me/termuxplz0x41">https://t.me/termuxplz0x41</a></td>
+        <td>Даркнет</td>
+        <td>36572</td>
+        <td>6659</td>
+        <td>19.0</td>
+        <td>-83</td>
+        <td>70</td>
+        <td>5 лет 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Black D</td>
+        <td><a href="https://t.me/joinchat/oAXg8k4upTY4OWNi">https://t.me/joinchat/oAXg8k4upTY4OWNi</a></td>
+        <td>Даркнет</td>
+        <td>36440</td>
+        <td>1744</td>
+        <td>5.0</td>
+        <td>-1090</td>
+        <td>-620</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>UnderSearch | Osint News</td>
+        <td><a href="https://t.me/underlife_osint_tg">https://t.me/underlife_osint_tg</a></td>
+        <td>Даркнет</td>
+        <td>36271</td>
+        <td>12497</td>
+        <td>35.0</td>
+        <td>-1046</td>
+        <td>-1153</td>
+        <td>10 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Dark Community</td>
+        <td><a href="https://t.me/joinchat/FIqJ9X94hEMyMTEy">https://t.me/joinchat/FIqJ9X94hEMyMTEy</a></td>
+        <td>Даркнет</td>
+        <td>33842</td>
+        <td>4371</td>
+        <td>13.0</td>
+        <td>-1549</td>
+        <td>609</td>
+        <td>3 месяца 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>XRUST ABUZ</td>
+        <td><a href="https://t.me/joinchat/zp7T07mDdoQ4NGRl">https://t.me/joinchat/zp7T07mDdoQ4NGRl</a></td>
+        <td>Даркнет</td>
+        <td>33524</td>
+        <td>4679</td>
+        <td>14.0</td>
+        <td>-253</td>
+        <td>-983</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Арбузный Джо</td>
+        <td><a href="https://t.me/joinchat/ub08pa5HQ_k5OGE6">https://t.me/joinchat/ub08pa5HQ_k5OGE6</a></td>
+        <td>Даркнет</td>
+        <td>30344</td>
+        <td>2643</td>
+        <td>9.0</td>
+        <td>-324</td>
+        <td>-1195</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>SOFT SHELL</td>
+        <td><a href="https://t.me/joinchat/Z72pxFuEfvBiZDUy">https://t.me/joinchat/Z72pxFuEfvBiZDUy</a></td>
+        <td>Даркнет</td>
+        <td>30332</td>
+        <td>1812</td>
+        <td>6.0</td>
+        <td>-655</td>
+        <td>-3468</td>
+        <td>1 год</td>
+      </tr>
+
+      <tr>
+        <td>DoxGram | СВЕРЯЙТЕ ТЕГ</td>
+        <td><a href="https://t.me/DoxGramTg">https://t.me/DoxGramTg</a></td>
+        <td>Даркнет</td>
+        <td>30152</td>
+        <td>1136</td>
+        <td>4.0</td>
+        <td>-405</td>
+        <td>-4118</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Типичный Мамонт</td>
+        <td><a href="https://t.me/tmamont">https://t.me/tmamont</a></td>
+        <td>Даркнет</td>
+        <td>29918</td>
+        <td>7062</td>
+        <td>24.0</td>
+        <td>359</td>
+        <td>1954</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>👾 | НАСК РОRТАL</td>
+        <td><a href="https://t.me/joinchat/QogZUqueSxg3Y2M6">https://t.me/joinchat/QogZUqueSxg3Y2M6</a></td>
+        <td>Даркнет</td>
+        <td>28743</td>
+        <td>3516</td>
+        <td>13.0</td>
+        <td>-864</td>
+        <td>-1448</td>
+        <td>9 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>СЛУХИ ИЗ ТЕМНОГО ИНТЕРНЕТА👂</td>
+        <td><a href="https://t.me/joinchat/5YZ-W4HgDatjZmQy">https://t.me/joinchat/5YZ-W4HgDatjZmQy</a></td>
+        <td>Даркнет</td>
+        <td>28205</td>
+        <td>3923</td>
+        <td>14.0</td>
+        <td>272</td>
+        <td>6347</td>
+        <td>9 месяцев 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>STYX NEWS</td>
+        <td><a href="https://t.me/joinchat/JuJBrypU_mY4NTY1">https://t.me/joinchat/JuJBrypU_mY4NTY1</a></td>
+        <td>Даркнет</td>
+        <td>27517</td>
+        <td>8143</td>
+        <td>30.0</td>
+        <td>201</td>
+        <td>811</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Истории с DαrкNet 📕</td>
+        <td><a href="https://t.me/joinchat/dxBvoSj-PaVkM2Qy">https://t.me/joinchat/dxBvoSj-PaVkM2Qy</a></td>
+        <td>Даркнет</td>
+        <td>27170</td>
+        <td>2482</td>
+        <td>10.0</td>
+        <td>-720</td>
+        <td>152</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DeGods</td>
+        <td><a href="https://t.me/joinchat/Z3LaoiDXKT9iMWY0">https://t.me/joinchat/Z3LaoiDXKT9iMWY0</a></td>
+        <td>Даркнет</td>
+        <td>26769</td>
+        <td>758</td>
+        <td>3.0</td>
+        <td>-244</td>
+        <td>-578</td>
+        <td>None</td>
+      </tr>
+
+      <tr>
+        <td>D SIDE</td>
+        <td><a href="https://t.me/joinchat/c1CqwKx6LudjMmRi">https://t.me/joinchat/c1CqwKx6LudjMmRi</a></td>
+        <td>Даркнет</td>
+        <td>26697</td>
+        <td>2636</td>
+        <td>10.0</td>
+        <td>847</td>
+        <td>4802</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>infosecurity</td>
+        <td><a href="https://t.me/tg_infosec">https://t.me/tg_infosec</a></td>
+        <td>Даркнет</td>
+        <td>26697</td>
+        <td>4658</td>
+        <td>18.0</td>
+        <td>39</td>
+        <td>1747</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>1001 Халявная Схема</td>
+        <td><a href="https://t.me/joinchat/UHEDAgvroJx-ZFvF">https://t.me/joinchat/UHEDAgvroJx-ZFvF</a></td>
+        <td>Даркнет</td>
+        <td>25314</td>
+        <td>2782</td>
+        <td>11.0</td>
+        <td>107</td>
+        <td>35</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Mycroft Intelligence</td>
+        <td><a href="https://t.me/mycroftintel">https://t.me/mycroftintel</a></td>
+        <td>Даркнет</td>
+        <td>24798</td>
+        <td>4793</td>
+        <td>20.0</td>
+        <td>-74</td>
+        <td>-334</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Dark Place</td>
+        <td><a href="https://t.me/joinchat/AAAAAEJ3PzS9nXo4kTdcXg">https://t.me/joinchat/AAAAAEJ3PzS9nXo4kTdcXg</a></td>
+        <td>Даркнет</td>
+        <td>24480</td>
+        <td>486</td>
+        <td>2.0</td>
+        <td>-95</td>
+        <td>-513</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВЕСЕЛЫЙ Д@₽KHeT</td>
+        <td><a href="https://t.me/joinchat/dyZ0q6R0Vn04NjUy">https://t.me/joinchat/dyZ0q6R0Vn04NjUy</a></td>
+        <td>Даркнет</td>
+        <td>24376</td>
+        <td>948</td>
+        <td>4.0</td>
+        <td>-227</td>
+        <td>-961</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Venom Dark</td>
+        <td><a href="https://t.me/venom_telegi">https://t.me/venom_telegi</a></td>
+        <td>Даркнет</td>
+        <td>24252</td>
+        <td>1344</td>
+        <td>6.0</td>
+        <td>-567</td>
+        <td>-2763</td>
+        <td>9 месяцев 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Тень Франклина</td>
+        <td><a href="https://t.me/Shadow_of_Franklin">https://t.me/Shadow_of_Franklin</a></td>
+        <td>Даркнет</td>
+        <td>24206</td>
+        <td>2937</td>
+        <td>13.0</td>
+        <td>-72</td>
+        <td>-323</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Dark Room</td>
+        <td><a href="https://t.me/joinchat/nxL8odv5RVFkYjdi">https://t.me/joinchat/nxL8odv5RVFkYjdi</a></td>
+        <td>Даркнет</td>
+        <td>24172</td>
+        <td>2535</td>
+        <td>11.0</td>
+        <td>-511</td>
+        <td>-2482</td>
+        <td>6 месяцев 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>ТЫ ХAКEР? D@rkNеt</td>
+        <td><a href="https://t.me/joinchat/-zUGh0-lb6NlNDZk">https://t.me/joinchat/-zUGh0-lb6NlNDZk</a></td>
+        <td>Даркнет</td>
+        <td>23839</td>
+        <td>1223</td>
+        <td>6.0</td>
+        <td>111</td>
+        <td>-1322</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>SMURFS MANUAL</td>
+        <td><a href="https://t.me/joinchat/XjIvNkMoxtBkODIy">https://t.me/joinchat/XjIvNkMoxtBkODIy</a></td>
+        <td>Даркнет</td>
+        <td>23715</td>
+        <td>2064</td>
+        <td>9.0</td>
+        <td>-147</td>
+        <td>-769</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Солнцепек</td>
+        <td><a href="https://t.me/solntsepekZ">https://t.me/solntsepekZ</a></td>
+        <td>Даркнет</td>
+        <td>23095</td>
+        <td>10563</td>
+        <td>46.0</td>
+        <td>-99</td>
+        <td>-113</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Тайный</td>
+        <td><a href="https://t.me/joinchat/QrTYnESZ6vVhMzcy">https://t.me/joinchat/QrTYnESZ6vVhMzcy</a></td>
+        <td>Даркнет</td>
+        <td>22754</td>
+        <td>2356</td>
+        <td>11.0</td>
+        <td>-459</td>
+        <td>240</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🗞 НОВОСТИ КАВО???</td>
+        <td><a href="https://t.me/joinchat/jlMfThK3ue8wNzNi">https://t.me/joinchat/jlMfThK3ue8wNzNi</a></td>
+        <td>Даркнет</td>
+        <td>22206</td>
+        <td>1402</td>
+        <td>7.0</td>
+        <td>3298</td>
+        <td>6231</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝗗𝗔𝗧𝗔 𝗕𝗥𝗘𝗔𝗖𝗛 ™️</td>
+        <td><a href="https://t.me/joinchat/0nUC3daOwow3MzZh">https://t.me/joinchat/0nUC3daOwow3MzZh</a></td>
+        <td>Даркнет</td>
+        <td>22195</td>
+        <td>1973</td>
+        <td>9.0</td>
+        <td>-62</td>
+        <td>-300</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Библиотека разведчика | Osint | Книги | Курсы</td>
+        <td><a href="https://t.me/books_osint">https://t.me/books_osint</a></td>
+        <td>Даркнет</td>
+        <td>22190</td>
+        <td>5402</td>
+        <td>25.0</td>
+        <td>60</td>
+        <td>250</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Будни спортика</td>
+        <td><a href="https://t.me/joinchat/LP3a8ehi9ZUyY2Qx">https://t.me/joinchat/LP3a8ehi9ZUyY2Qx</a></td>
+        <td>Даркнет</td>
+        <td>21474</td>
+        <td>8492</td>
+        <td>40.0</td>
+        <td>553</td>
+        <td>1202</td>
+        <td>3 месяца 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Hack MOD🤖</td>
+        <td><a href="https://t.me/HackModTG">https://t.me/HackModTG</a></td>
+        <td>Даркнет</td>
+        <td>20792</td>
+        <td>21261</td>
+        <td>103.0</td>
+        <td>-538</td>
+        <td>5</td>
+        <td>1 месяц 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>ЛУТАЕМ КЭШ</td>
+        <td><a href="https://t.me/joinchat/kIxUksUud881NTli">https://t.me/joinchat/kIxUksUud881NTli</a></td>
+        <td>Даркнет</td>
+        <td>20546</td>
+        <td>2675</td>
+        <td>13.0</td>
+        <td>-237</td>
+        <td>1297</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>АКАДЕМИЯ ЗАРАБОТКА</td>
+        <td><a href="https://t.me/joinchat/B5WxvdMFt-s3Nzdi">https://t.me/joinchat/B5WxvdMFt-s3Nzdi</a></td>
+        <td>Даркнет</td>
+        <td>20476</td>
+        <td>1208</td>
+        <td>6.0</td>
+        <td>-444</td>
+        <td>-2142</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PAUSE</td>
+        <td><a href="https://t.me/joinchat/tENQKrGCy0w1NTIy">https://t.me/joinchat/tENQKrGCy0w1NTIy</a></td>
+        <td>Даркнет</td>
+        <td>20250</td>
+        <td>44</td>
+        <td>1.0</td>
+        <td>-584</td>
+        <td>-3412</td>
+        <td>8 месяцев 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Википедия Даркнета</td>
+        <td><a href="https://t.me/joinchat/_ZoQhac2YKgxODMy">https://t.me/joinchat/_ZoQhac2YKgxODMy</a></td>
+        <td>Даркнет</td>
+        <td>20162</td>
+        <td>1746</td>
+        <td>9.0</td>
+        <td>-125</td>
+        <td>-339</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>[YT] UnderMind</td>
+        <td><a href="https://t.me/under_public">https://t.me/under_public</a></td>
+        <td>Даркнет</td>
+        <td>19793</td>
+        <td>2777</td>
+        <td>14.0</td>
+        <td>-24</td>
+        <td>-131</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ТЕРМИНАЛ</td>
+        <td><a href="https://t.me/joinchat/34H4LSinhSZhN2Qy">https://t.me/joinchat/34H4LSinhSZhN2Qy</a></td>
+        <td>Даркнет</td>
+        <td>19779</td>
+        <td>964</td>
+        <td>5.0</td>
+        <td>-712</td>
+        <td>3305</td>
+        <td>10 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тёмный Архив🤝Схемы, Мануалы, Новости</td>
+        <td><a href="https://t.me/joinchat/ls2jahi_abBjM2Nl">https://t.me/joinchat/ls2jahi_abBjM2Nl</a></td>
+        <td>Даркнет</td>
+        <td>19774</td>
+        <td>7183</td>
+        <td>37.0</td>
+        <td>694</td>
+        <td>1359</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>QR DARK</td>
+        <td><a href="https://t.me/joinchat/bvOVxP_16S80NDUy">https://t.me/joinchat/bvOVxP_16S80NDUy</a></td>
+        <td>Даркнет</td>
+        <td>19604</td>
+        <td>1833</td>
+        <td>10.0</td>
+        <td>44</td>
+        <td>-1133</td>
+        <td>5 месяцев 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Black TOR 🟣</td>
+        <td><a href="https://t.me/joinchat/lsq8MWdTIBNlZTQy">https://t.me/joinchat/lsq8MWdTIBNlZTQy</a></td>
+        <td>Даркнет</td>
+        <td>19433</td>
+        <td>1018</td>
+        <td>6.0</td>
+        <td>-380</td>
+        <td>-1891</td>
+        <td>11 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Все о D@rkNet</td>
+        <td><a href="https://t.me/joinchat/1zlKRM5OFMYwYzJk">https://t.me/joinchat/1zlKRM5OFMYwYzJk</a></td>
+        <td>Даркнет</td>
+        <td>19180</td>
+        <td>402</td>
+        <td>3.0</td>
+        <td>-300</td>
+        <td>-1068</td>
+        <td>2 года 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Нелегальный</td>
+        <td><a href="https://t.me/joinchat/nes9FlleAtBiYTdi">https://t.me/joinchat/nes9FlleAtBiYTdi</a></td>
+        <td>Даркнет</td>
+        <td>18871</td>
+        <td>3444</td>
+        <td>19.0</td>
+        <td>-123</td>
+        <td>-596</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Записки Безопасника</td>
+        <td><a href="https://t.me/infosec_globe">https://t.me/infosec_globe</a></td>
+        <td>Даркнет</td>
+        <td>18553</td>
+        <td>2011</td>
+        <td>11.0</td>
+        <td>-26</td>
+        <td>-150</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЛЕГЕНДА</td>
+        <td><a href="https://t.me/joinchat/l6_0TXzFvnJlZDdi">https://t.me/joinchat/l6_0TXzFvnJlZDdi</a></td>
+        <td>Даркнет</td>
+        <td>18060</td>
+        <td>6326</td>
+        <td>35.0</td>
+        <td>-280</td>
+        <td>4052</td>
+        <td>9 месяцев 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>ПАВУК</td>
+        <td><a href="https://t.me/joinchat/0MqYWmtprOYyYzNh">https://t.me/joinchat/0MqYWmtprOYyYzNh</a></td>
+        <td>Даркнет</td>
+        <td>17424</td>
+        <td>2524</td>
+        <td>15.0</td>
+        <td>-147</td>
+        <td>-743</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Боты - Osint | пробив докс и деанон</td>
+        <td><a href="https://t.me/opensearching">https://t.me/opensearching</a></td>
+        <td>Даркнет</td>
+        <td>17031</td>
+        <td>16209</td>
+        <td>96.0</td>
+        <td>2034</td>
+        <td>5169</td>
+        <td>2 месяца 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Venomous</td>
+        <td><a href="https://t.me/joinchat/vl-tg4fPJX40ZTky">https://t.me/joinchat/vl-tg4fPJX40ZTky</a></td>
+        <td>Даркнет</td>
+        <td>17017</td>
+        <td>2160</td>
+        <td>13.0</td>
+        <td>-142</td>
+        <td>-1503</td>
+        <td>9 месяцев 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Eclipse Earn</td>
+        <td><a href="https://t.me/joinchat/AAAAAFg3OsvenW4p6tUtww">https://t.me/joinchat/AAAAAFg3OsvenW4p6tUtww</a></td>
+        <td>Даркнет</td>
+        <td>17011</td>
+        <td>947</td>
+        <td>6.0</td>
+        <td>-139</td>
+        <td>-398</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ШЕРЛОК</td>
+        <td><a href="https://t.me/joinchat/vuoBaVRQ42Y2MjFi">https://t.me/joinchat/vuoBaVRQ42Y2MjFi</a></td>
+        <td>Даркнет</td>
+        <td>16883</td>
+        <td>774</td>
+        <td>5.0</td>
+        <td>-431</td>
+        <td>-1800</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ΗΑCК Wiki | BLOG 📘</td>
+        <td><a href="https://t.me/joinchat/ozP07ahkLfk5OGQy">https://t.me/joinchat/ozP07ahkLfk5OGQy</a></td>
+        <td>Даркнет</td>
+        <td>16182</td>
+        <td>3232</td>
+        <td>20.0</td>
+        <td>487</td>
+        <td>3274</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Void</td>
+        <td><a href="https://t.me/joinchat/0IzpeCThUWNmMTMy">https://t.me/joinchat/0IzpeCThUWNmMTMy</a></td>
+        <td>Даркнет</td>
+        <td>16136</td>
+        <td>7970</td>
+        <td>50.0</td>
+        <td>-837</td>
+        <td>66</td>
+        <td>1 месяц 21 день</td>
+      </tr>
+
+      <tr>
+        <td>GLUSHILKI</td>
+        <td><a href="https://t.me/blocksignal">https://t.me/blocksignal</a></td>
+        <td>Даркнет</td>
+        <td>15434</td>
+        <td>7082</td>
+        <td>46.0</td>
+        <td>29</td>
+        <td>694</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Apple | Про D4rknet</td>
+        <td><a href="https://t.me/joinchat/95RVuRXs0MNlZTli">https://t.me/joinchat/95RVuRXs0MNlZTli</a></td>
+        <td>Даркнет</td>
+        <td>15259</td>
+        <td>1149</td>
+        <td>8.0</td>
+        <td>-309</td>
+        <td>-353</td>
+        <td>11 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>МИХАИЛ ШИРЯЕВ | В/У 🪪</td>
+        <td><a href="https://t.me/joinchat/ZGyhNIxtUTkwZDhl">https://t.me/joinchat/ZGyhNIxtUTkwZDhl</a></td>
+        <td>Даркнет</td>
+        <td>15088</td>
+        <td>9143</td>
+        <td>61.0</td>
+        <td>0</td>
+        <td>-8</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🛒 Аккаунты Яндекс сплит 🛒</td>
+        <td><a href="https://t.me/y_split">https://t.me/y_split</a></td>
+        <td>Даркнет</td>
+        <td>14970</td>
+        <td>8790</td>
+        <td>59.0</td>
+        <td>-3548</td>
+        <td>-4114</td>
+        <td>8 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Севастополь. СМЕРШ</td>
+        <td><a href="https://t.me/sev_smersh">https://t.me/sev_smersh</a></td>
+        <td>Даркнет</td>
+        <td>14755</td>
+        <td>9280</td>
+        <td>63.0</td>
+        <td>33</td>
+        <td>161</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MMM</td>
+        <td><a href="https://t.me/joinchat/QGrUBkgNWWRmZmYy">https://t.me/joinchat/QGrUBkgNWWRmZmYy</a></td>
+        <td>Даркнет</td>
+        <td>14212</td>
+        <td>1008</td>
+        <td>8.0</td>
+        <td>-102</td>
+        <td>-486</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Червонец 🔟</td>
+        <td><a href="https://t.me/joinchat/UTUDECTJHIRiMmQ6">https://t.me/joinchat/UTUDECTJHIRiMmQ6</a></td>
+        <td>Даркнет</td>
+        <td>14048</td>
+        <td>885</td>
+        <td>7.0</td>
+        <td>-449</td>
+        <td>-2135</td>
+        <td>8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Абузеры и арбитражники</td>
+        <td><a href="https://t.me/joinchat/PeyY6Cdr64VkYzZi">https://t.me/joinchat/PeyY6Cdr64VkYzZi</a></td>
+        <td>Даркнет</td>
+        <td>14033</td>
+        <td>11853</td>
+        <td>85.0</td>
+        <td>-65</td>
+        <td>-313</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Контрольная закупка</td>
+        <td><a href="https://t.me/joinchat/B9dN7jF9FH44NDQy">https://t.me/joinchat/B9dN7jF9FH44NDQy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>650822</td>
+        <td>141768</td>
+        <td>22.0</td>
+        <td>27869</td>
+        <td>97033</td>
+        <td>10 месяцев 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Здоровье на Тибете</td>
+        <td><a href="https://t.me/joinchat/BTcDbr93tCU0NjRi">https://t.me/joinchat/BTcDbr93tCU0NjRi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>597394</td>
+        <td>35624</td>
+        <td>6.0</td>
+        <td>-3362</td>
+        <td>-12541</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Sport Life</td>
+        <td><a href="https://t.me/joinchat/n6G6CVGwGZtlYWJi">https://t.me/joinchat/n6G6CVGwGZtlYWJi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>577059</td>
+        <td>55651</td>
+        <td>10.0</td>
+        <td>3697</td>
+        <td>11445</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Наше тело</td>
+        <td><a href="https://t.me/joinchat/AAAAAFk7LcSkwO0KCxUBEg">https://t.me/joinchat/AAAAAFk7LcSkwO0KCxUBEg</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>545671</td>
+        <td>35336</td>
+        <td>7.0</td>
+        <td>-2388</td>
+        <td>-9811</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Биохакинг</td>
+        <td><a href="https://t.me/joinchat/c6AOyjGm4RQzZDMy">https://t.me/joinchat/c6AOyjGm4RQzZDMy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>510400</td>
+        <td>52160</td>
+        <td>11.0</td>
+        <td>1570</td>
+        <td>9033</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Будем здоровы</td>
+        <td><a href="https://t.me/joinchat/oDQkIwXM0ipiMTcy">https://t.me/joinchat/oDQkIwXM0ipiMTcy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>501482</td>
+        <td>28064</td>
+        <td>6.0</td>
+        <td>-1460</td>
+        <td>-6611</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Здоровая еда</td>
+        <td><a href="https://t.me/joinchat/YnBTHsdDB1plNDNi">https://t.me/joinchat/YnBTHsdDB1plNDNi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>457459</td>
+        <td>46723</td>
+        <td>11.0</td>
+        <td>7220</td>
+        <td>15871</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Полезный доктор | Здоровье</td>
+        <td><a href="https://t.me/joinchat/Vs_KbRI4E9c2YmE6">https://t.me/joinchat/Vs_KbRI4E9c2YmE6</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>429910</td>
+        <td>28129</td>
+        <td>7.0</td>
+        <td>-2937</td>
+        <td>-9406</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Homo Sapiens</td>
+        <td><a href="https://t.me/joinchat/nox2j8BQ5qJkMzQy">https://t.me/joinchat/nox2j8BQ5qJkMzQy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>426332</td>
+        <td>31590</td>
+        <td>8.0</td>
+        <td>-2414</td>
+        <td>-10679</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Зубарева / Doctor Zubareva</td>
+        <td><a href="https://t.me/doctor_zubareva">https://t.me/doctor_zubareva</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>402343</td>
+        <td>53990</td>
+        <td>14.0</td>
+        <td>1301</td>
+        <td>-3612</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Алесь Улищенко | Врач-остеопат, канд. мед. наук | Автор фейспластики</td>
+        <td><a href="https://t.me/dr_ales">https://t.me/dr_ales</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>368206</td>
+        <td>61677</td>
+        <td>17.0</td>
+        <td>1580</td>
+        <td>13999</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатное здоровье. Рецепты красоты.</td>
+        <td><a href="https://t.me/joinchat/AAAAAEhVecc6QuE-NV8jxA">https://t.me/joinchat/AAAAAEhVecc6QuE-NV8jxA</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>347543</td>
+        <td>32663</td>
+        <td>10.0</td>
+        <td>841</td>
+        <td>5169</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВРАЧЕБНАЯ ТАЙНА</td>
+        <td><a href="https://t.me/joinchat/AAAAAEtHSQC62N1EVEMEGw">https://t.me/joinchat/AAAAAEtHSQC62N1EVEMEGw</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>323538</td>
+        <td>19991</td>
+        <td>7.0</td>
+        <td>-423</td>
+        <td>-4004</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Цигун Сила Потока</td>
+        <td><a href="https://t.me/silapotoka2">https://t.me/silapotoka2</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>322214</td>
+        <td>72190</td>
+        <td>23.0</td>
+        <td>556</td>
+        <td>934</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Gluten_free 🤍ЗОЖ💚лайфхаки 🤍ПП</td>
+        <td><a href="https://t.me/joinchat/SmZAdC56ewE4YTMy">https://t.me/joinchat/SmZAdC56ewE4YTMy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>317342</td>
+        <td>106390</td>
+        <td>34.0</td>
+        <td>9</td>
+        <td>15</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Nutrition Balance</td>
+        <td><a href="https://t.me/foodbalanceblog">https://t.me/foodbalanceblog</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>312249</td>
+        <td>145264</td>
+        <td>47.0</td>
+        <td>2</td>
+        <td>19</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Гармония тела</td>
+        <td><a href="https://t.me/joinchat/Qj-z9QSlhd85NTBi">https://t.me/joinchat/Qj-z9QSlhd85NTBi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>304617</td>
+        <td>26501</td>
+        <td>9.0</td>
+        <td>1764</td>
+        <td>9826</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Спортсмен</td>
+        <td><a href="https://t.me/sportsmens1">https://t.me/sportsmens1</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>301958</td>
+        <td>32036</td>
+        <td>11.0</td>
+        <td>-286</td>
+        <td>1445</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Биохакеры</td>
+        <td><a href="https://t.me/joinchat/SG1A9dGe6_BlZTFi">https://t.me/joinchat/SG1A9dGe6_BlZTFi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>287644</td>
+        <td>100030</td>
+        <td>35.0</td>
+        <td>10508</td>
+        <td>117255</td>
+        <td>2 месяца 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кузница Здоровья</td>
+        <td><a href="https://t.me/joinchat/28zU0z9g_MBhMzVi">https://t.me/joinchat/28zU0z9g_MBhMzVi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>284706</td>
+        <td>21997</td>
+        <td>8.0</td>
+        <td>-485</td>
+        <td>-1379</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Dzari</td>
+        <td><a href="https://t.me/DrDzari">https://t.me/DrDzari</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>277798</td>
+        <td>106260</td>
+        <td>39.0</td>
+        <td>478</td>
+        <td>4310</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Здоровье и Красота</td>
+        <td><a href="https://t.me/joinchat/ITImtdx6gnEyZDA6">https://t.me/joinchat/ITImtdx6gnEyZDA6</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>275314</td>
+        <td>20066</td>
+        <td>8.0</td>
+        <td>-670</td>
+        <td>-1928</td>
+        <td>3 года 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Худеем и Балдеем</td>
+        <td><a href="https://t.me/joinchat/_hx7ajT3Av80N2My">https://t.me/joinchat/_hx7ajT3Av80N2My</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>273322</td>
+        <td>38617</td>
+        <td>15.0</td>
+        <td>-2560</td>
+        <td>2231</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>1.5 качка / мини пекка</td>
+        <td><a href="https://t.me/poltorapomidora">https://t.me/poltorapomidora</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>268933</td>
+        <td>155407</td>
+        <td>58.0</td>
+        <td>-1274</td>
+        <td>-5930</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Домашний доктор</td>
+        <td><a href="https://t.me/joinchat/6usEYCIBns41OGRi">https://t.me/joinchat/6usEYCIBns41OGRi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>261654</td>
+        <td>18589</td>
+        <td>8.0</td>
+        <td>-424</td>
+        <td>-1689</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Потанцули</td>
+        <td><a href="https://t.me/joinchat/oJrw_-Awa7A3M2Ey">https://t.me/joinchat/oJrw_-Awa7A3M2Ey</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>259474</td>
+        <td>25151</td>
+        <td>10.0</td>
+        <td>-823</td>
+        <td>-2616</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Секреты долголетия</td>
+        <td><a href="https://t.me/joinchat/hqdMbZULz59hYmYy">https://t.me/joinchat/hqdMbZULz59hYmYy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>252079</td>
+        <td>26566</td>
+        <td>11.0</td>
+        <td>400</td>
+        <td>1692</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Формула похудения</td>
+        <td><a href="https://t.me/joinchat/cwWBZyNuexJhNGQy">https://t.me/joinchat/cwWBZyNuexJhNGQy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>251070</td>
+        <td>14238</td>
+        <td>6.0</td>
+        <td>74</td>
+        <td>-475</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Биокод</td>
+        <td><a href="https://t.me/joinchat/btgCjULB_9BiMjdi">https://t.me/joinchat/btgCjULB_9BiMjdi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>249258</td>
+        <td>32721</td>
+        <td>14.0</td>
+        <td>903</td>
+        <td>4058</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фитнес тренер🌸</td>
+        <td><a href="https://t.me/joinchat/N9OsI46KEocwN2Vi">https://t.me/joinchat/N9OsI46KEocwN2Vi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>232930</td>
+        <td>10138</td>
+        <td>5.0</td>
+        <td>-1465</td>
+        <td>-2993</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Твоё Здоровье</td>
+        <td><a href="https://t.me/joinchat/xH3cY0KKn95jMWMy">https://t.me/joinchat/xH3cY0KKn95jMWMy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>231203</td>
+        <td>22311</td>
+        <td>10.0</td>
+        <td>1617</td>
+        <td>5099</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Masha Blinova. Маша Блинова. Фитнес</td>
+        <td><a href="https://t.me/mashablinovafit">https://t.me/mashablinovafit</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>228998</td>
+        <td>50764</td>
+        <td>23.0</td>
+        <td>-1358</td>
+        <td>4227</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Для женщин про здоровье</td>
+        <td><a href="https://t.me/volkovaforwomen">https://t.me/volkovaforwomen</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>228395</td>
+        <td>32075</td>
+        <td>14.0</td>
+        <td>-1008</td>
+        <td>-3448</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Гастроэнтеролог Ольга Помойнецкая</td>
+        <td><a href="https://t.me/olga_pomoynetskaya">https://t.me/olga_pomoynetskaya</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>227838</td>
+        <td>39031</td>
+        <td>18.0</td>
+        <td>-824</td>
+        <td>-4609</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Здоровье из Японии</td>
+        <td><a href="https://t.me/joinchat/id4j4buznwUxNjYy">https://t.me/joinchat/id4j4buznwUxNjYy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>213012</td>
+        <td>22911</td>
+        <td>11.0</td>
+        <td>624</td>
+        <td>3865</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PRO-Здоровье</td>
+        <td><a href="https://t.me/pro_zdorovie_telegram">https://t.me/pro_zdorovie_telegram</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>211597</td>
+        <td>13880</td>
+        <td>7.0</td>
+        <td>-1813</td>
+        <td>-5336</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лайфхакнутая</td>
+        <td><a href="https://t.me/joinchat/LVhk8reiNQcwNzZi">https://t.me/joinchat/LVhk8reiNQcwNzZi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>201951</td>
+        <td>28876</td>
+        <td>15.0</td>
+        <td>-367</td>
+        <td>-905</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Энергия Здоровья</td>
+        <td><a href="https://t.me/joinchat/opIXbOsB5KAwNmYy">https://t.me/joinchat/opIXbOsB5KAwNmYy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>201372</td>
+        <td>17695</td>
+        <td>9.0</td>
+        <td>34</td>
+        <td>-791</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Красота & Здоровье</td>
+        <td><a href="https://t.me/joinchat/y3lK2KFtOaZmNGEy">https://t.me/joinchat/y3lK2KFtOaZmNGEy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>190788</td>
+        <td>12024</td>
+        <td>7.0</td>
+        <td>-673</td>
+        <td>-2736</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Helena Kornilova / Елена Корнилова</td>
+        <td><a href="https://t.me/helenkornilova">https://t.me/helenkornilova</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>188872</td>
+        <td>53854</td>
+        <td>29.0</td>
+        <td>19</td>
+        <td>3048</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Stretch | Растяжка | Шпагат</td>
+        <td><a href="https://t.me/StretchLab">https://t.me/StretchLab</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>188401</td>
+        <td>11462</td>
+        <td>7.0</td>
+        <td>-501</td>
+        <td>-2528</td>
+        <td>4 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тимофей Кармацкий</td>
+        <td><a href="https://t.me/karmatsky_timofey">https://t.me/karmatsky_timofey</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>181070</td>
+        <td>20372</td>
+        <td>12.0</td>
+        <td>501</td>
+        <td>1031</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Физикл | Олег Зингилевский</td>
+        <td><a href="https://t.me/fiztransform">https://t.me/fiztransform</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>180282</td>
+        <td>20997</td>
+        <td>12.0</td>
+        <td>-839</td>
+        <td>3086</td>
+        <td>6 лет 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тело в дело | Красота, Фитнес и Здоровье</td>
+        <td><a href="https://t.me/joinchat/8haRVmeMLrUzZTM6">https://t.me/joinchat/8haRVmeMLrUzZTM6</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>178131</td>
+        <td>16924</td>
+        <td>10.0</td>
+        <td>169</td>
+        <td>3634</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Я худею | ПП Рецепты</td>
+        <td><a href="https://t.me/ya_hudeu1">https://t.me/ya_hudeu1</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>177408</td>
+        <td>22498</td>
+        <td>13.0</td>
+        <td>1673</td>
+        <td>6187</td>
+        <td>1 год 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>по ГОСТу</td>
+        <td><a href="https://t.me/po_gostu_tg">https://t.me/po_gostu_tg</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>164585</td>
+        <td>28721</td>
+        <td>18.0</td>
+        <td>-608</td>
+        <td>-2907</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Йога с Ларисой Семеновой</td>
+        <td><a href="https://t.me/vivoyoga_larisa">https://t.me/vivoyoga_larisa</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>161032</td>
+        <td>17699</td>
+        <td>11.0</td>
+        <td>1331</td>
+        <td>7369</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЗАРАБАТЫВАЙ💰</td>
+        <td><a href="https://t.me/joinchat/hXulApVZpLw3NmU6">https://t.me/joinchat/hXulApVZpLw3NmU6</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>154522</td>
+        <td>6517</td>
+        <td>5.0</td>
+        <td>-28513</td>
+        <td>-63366</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Секреты здоровья</td>
+        <td><a href="https://t.me/zdorovex">https://t.me/zdorovex</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>150090</td>
+        <td>23904</td>
+        <td>16.0</td>
+        <td>-117</td>
+        <td>115</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лёгкая йога</td>
+        <td><a href="https://t.me/anyclass_bodymind">https://t.me/anyclass_bodymind</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>149894</td>
+        <td>10070</td>
+        <td>7.0</td>
+        <td>-318</td>
+        <td>584</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Метаморфоза</td>
+        <td><a href="https://t.me/Max_anti_trainer">https://t.me/Max_anti_trainer</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>148637</td>
+        <td>54572</td>
+        <td>37.0</td>
+        <td>494</td>
+        <td>6159</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>В здоровом теле</td>
+        <td><a href="https://t.me/joinchat/Vppn1jvNh3JjNTUy">https://t.me/joinchat/Vppn1jvNh3JjNTUy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>147663</td>
+        <td>11444</td>
+        <td>8.0</td>
+        <td>27</td>
+        <td>-147</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Магеря Чистка</td>
+        <td><a href="https://t.me/mageryachistka">https://t.me/mageryachistka</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>139439</td>
+        <td>24847</td>
+        <td>18.0</td>
+        <td>258</td>
+        <td>1605</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Гимнастика на каждый день</td>
+        <td><a href="https://t.me/joinchat/sgRoKvs8W9dmOTRk">https://t.me/joinchat/sgRoKvs8W9dmOTRk</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>138265</td>
+        <td>20868</td>
+        <td>16.0</td>
+        <td>-972</td>
+        <td>-4052</td>
+        <td>8 месяцев 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Йога с Лерой 🕊</td>
+        <td><a href="https://t.me/yogabylera">https://t.me/yogabylera</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>137468</td>
+        <td>22157</td>
+        <td>17.0</td>
+        <td>380</td>
+        <td>961</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Знак качества</td>
+        <td><a href="https://t.me/znak_kachestva_tg">https://t.me/znak_kachestva_tg</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>137358</td>
+        <td>21506</td>
+        <td>16.0</td>
+        <td>-555</td>
+        <td>-2981</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мария Самарина | Здоровье и долголетие</td>
+        <td><a href="https://t.me/joinchat/tQB6nSbfSSo3Mzdi">https://t.me/joinchat/tQB6nSbfSSo3Mzdi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>136153</td>
+        <td>20080</td>
+        <td>15.0</td>
+        <td>-517</td>
+        <td>7997</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Newyorkfitspo | Школа здорового фитнеса</td>
+        <td><a href="https://t.me/newyorkfitspo">https://t.me/newyorkfitspo</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>134892</td>
+        <td>20466</td>
+        <td>16.0</td>
+        <td>-355</td>
+        <td>-2252</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Гимнастика для жизни</td>
+        <td><a href="https://t.me/joinchat/H-uTUbFSPicwNDcy">https://t.me/joinchat/H-uTUbFSPicwNDcy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>129867</td>
+        <td>17236</td>
+        <td>14.0</td>
+        <td>-2115</td>
+        <td>-10159</td>
+        <td>2 месяца 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кристина Шереметьева</td>
+        <td><a href="https://t.me/joinchat/Swlb4Cf4jnxbV3DI">https://t.me/joinchat/Swlb4Cf4jnxbV3DI</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>129671</td>
+        <td>54883</td>
+        <td>43.0</td>
+        <td>-244</td>
+        <td>-2712</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Златушка🍑</td>
+        <td><a href="https://t.me/babbiebuttt">https://t.me/babbiebuttt</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>128135</td>
+        <td>35047</td>
+        <td>28.0</td>
+        <td>-233</td>
+        <td>-1280</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тело в порядке | Похудение</td>
+        <td><a href="https://t.me/joinchat/WX2tbJY4PkIxOWEy">https://t.me/joinchat/WX2tbJY4PkIxOWEy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>127701</td>
+        <td>12424</td>
+        <td>10.0</td>
+        <td>-13</td>
+        <td>3603</td>
+        <td>11 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Здоровое тело 🥑</td>
+        <td><a href="https://t.me/joinchat/KoC6vITSLccyNzI6">https://t.me/joinchat/KoC6vITSLccyNzI6</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>127675</td>
+        <td>12271</td>
+        <td>10.0</td>
+        <td>-1121</td>
+        <td>-5512</td>
+        <td>11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мне только спросить</td>
+        <td><a href="https://t.me/joinchat/6A1LCotmkFY5NDAy">https://t.me/joinchat/6A1LCotmkFY5NDAy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>126607</td>
+        <td>11899</td>
+        <td>10.0</td>
+        <td>-1676</td>
+        <td>-5680</td>
+        <td>11 месяцев 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Скорая Помощь I Здоровье 🚑</td>
+        <td><a href="https://t.me/joinchat/aeZ8CUj9kZtiZTZi">https://t.me/joinchat/aeZ8CUj9kZtiZTZi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>125504</td>
+        <td>13696</td>
+        <td>11.0</td>
+        <td>-316</td>
+        <td>-1470</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тоня ПП</td>
+        <td><a href="https://t.me/pptonya">https://t.me/pptonya</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>125090</td>
+        <td>34239</td>
+        <td>28.0</td>
+        <td>1142</td>
+        <td>582</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>BIOMACHINE</td>
+        <td><a href="https://t.me/bmchn">https://t.me/bmchn</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>124193</td>
+        <td>42500</td>
+        <td>35.0</td>
+        <td>-1097</td>
+        <td>-1034</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ExSport</td>
+        <td><a href="https://t.me/sportXpres">https://t.me/sportXpres</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>123718</td>
+        <td>26062</td>
+        <td>22.0</td>
+        <td>-407</td>
+        <td>-2626</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бегать просто</td>
+        <td><a href="https://t.me/runforhealth">https://t.me/runforhealth</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>123276</td>
+        <td>27312</td>
+        <td>23.0</td>
+        <td>398</td>
+        <td>2796</td>
+        <td>8 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Личный тренер в твоем телефоне</td>
+        <td><a href="https://t.me/flex_mybody">https://t.me/flex_mybody</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>120879</td>
+        <td>7222</td>
+        <td>6.0</td>
+        <td>681</td>
+        <td>3606</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Регина Доктор | Здоровье</td>
+        <td><a href="https://t.me/regina_doctor">https://t.me/regina_doctor</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>119252</td>
+        <td>23992</td>
+        <td>21.0</td>
+        <td>-231</td>
+        <td>-146</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КРАСОТА ЛИЦА</td>
+        <td><a href="https://t.me/joinchat/hQIgKtHAeIo0ZDgy">https://t.me/joinchat/hQIgKtHAeIo0ZDgy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>115100</td>
+        <td>14935</td>
+        <td>13.0</td>
+        <td>897</td>
+        <td>2836</td>
+        <td>10 месяцев 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Секреты здоровья</td>
+        <td><a href="https://t.me/joinchat/zhxLYMQsKigwZWNi">https://t.me/joinchat/zhxLYMQsKigwZWNi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>113372</td>
+        <td>16484</td>
+        <td>15.0</td>
+        <td>1162</td>
+        <td>7498</td>
+        <td>6 месяцев 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тренировки дома</td>
+        <td><a href="https://t.me/joinchat/I_QVl80XgGwxYTJi">https://t.me/joinchat/I_QVl80XgGwxYTJi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>112316</td>
+        <td>8017</td>
+        <td>8.0</td>
+        <td>-459</td>
+        <td>900</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Женское здоровье</td>
+        <td><a href="https://t.me/joinchat/1sQcbhk-LLFmMDE6">https://t.me/joinchat/1sQcbhk-LLFmMDE6</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>111133</td>
+        <td>8498</td>
+        <td>8.0</td>
+        <td>-392</td>
+        <td>-1509</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>SJBODY</td>
+        <td><a href="https://t.me/sjbodyfit">https://t.me/sjbodyfit</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>109461</td>
+        <td>9610</td>
+        <td>9.0</td>
+        <td>-572</td>
+        <td>-1568</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Фитнес и похудение</td>
+        <td><a href="https://t.me/joinchat/Ep4Ftm5Vz_0yYjli">https://t.me/joinchat/Ep4Ftm5Vz_0yYjli</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>105923</td>
+        <td>8019</td>
+        <td>8.0</td>
+        <td>-31</td>
+        <td>101</td>
+        <td>2 года 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Гимнастика для здоровья и фигуры</td>
+        <td><a href="https://t.me/joinchat/L2tDU2KxguczMzE6">https://t.me/joinchat/L2tDU2KxguczMzE6</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>105235</td>
+        <td>31337</td>
+        <td>30.0</td>
+        <td>896</td>
+        <td>105037</td>
+        <td>2 месяца 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Осанка, здоровье и фигура | Айгуль Ахметшина</td>
+        <td><a href="https://t.me/joinchat/3-ELaG2SfM44MzRi">https://t.me/joinchat/3-ELaG2SfM44MzRi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>105027</td>
+        <td>13389</td>
+        <td>13.0</td>
+        <td>731</td>
+        <td>5204</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мое здоровье</td>
+        <td><a href="https://t.me/joinchat/FzDzF6R6l7RjMjgy">https://t.me/joinchat/FzDzF6R6l7RjMjgy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>104157</td>
+        <td>10843</td>
+        <td>11.0</td>
+        <td>51</td>
+        <td>177</td>
+        <td>9 месяцев 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Стройность в голове | Натали Щербинина</td>
+        <td><a href="https://t.me/joinchat/8vl_elMme3syYTJi">https://t.me/joinchat/8vl_elMme3syYTJi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>103829</td>
+        <td>5260</td>
+        <td>6.0</td>
+        <td>-6</td>
+        <td>-2358</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фигура твоей мечты | ПП и Фитнес</td>
+        <td><a href="https://t.me/joinchat/4f9GjvVLHtVhZThi">https://t.me/joinchat/4f9GjvVLHtVhZThi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>103745</td>
+        <td>20312</td>
+        <td>20.0</td>
+        <td>2930</td>
+        <td>22388</td>
+        <td>3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сборник ПП Рационов</td>
+        <td><a href="https://t.me/joinchat/VtIVMOBXvGEzNTZi">https://t.me/joinchat/VtIVMOBXvGEzNTZi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>103493</td>
+        <td>14871</td>
+        <td>15.0</td>
+        <td>-1674</td>
+        <td>-4643</td>
+        <td>6 месяцев 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Материнство на СТИЛЕ и ПП 🥑🧘‍♀</td>
+        <td><a href="https://t.me/na_stile_na_pp">https://t.me/na_stile_na_pp</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>100764</td>
+        <td>84754</td>
+        <td>85.0</td>
+        <td>177</td>
+        <td>-3097</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тестостероныч | Мужской блог</td>
+        <td><a href="https://t.me/muzhskoe_zdorove_test">https://t.me/muzhskoe_zdorove_test</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>99523</td>
+        <td>16749</td>
+        <td>17.0</td>
+        <td>-297</td>
+        <td>-1193</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Основы жизни</td>
+        <td><a href="https://t.me/life_osnov">https://t.me/life_osnov</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>98833</td>
+        <td>18821</td>
+        <td>19.0</td>
+        <td>560</td>
+        <td>1546</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Полезное меню</td>
+        <td><a href="https://t.me/joinchat/fTeaHvjcpR81N2Ey">https://t.me/joinchat/fTeaHvjcpR81N2Ey</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>98618</td>
+        <td>14955</td>
+        <td>16.0</td>
+        <td>-1517</td>
+        <td>-7460</td>
+        <td>3 месяца 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Таня ППрофи</td>
+        <td><a href="https://t.me/profi_tanya">https://t.me/profi_tanya</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>96770</td>
+        <td>60020</td>
+        <td>62.0</td>
+        <td>4</td>
+        <td>19</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Настя Колсанова</td>
+        <td><a href="https://t.me/joinchat/fYQAn4EEG_ZiOWFi">https://t.me/joinchat/fYQAn4EEG_ZiOWFi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>95596</td>
+        <td>32416</td>
+        <td>34.0</td>
+        <td>-255</td>
+        <td>14</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Секреты здоровья</td>
+        <td><a href="https://t.me/joinchat/8_QN2Bpvn3AxZjcy">https://t.me/joinchat/8_QN2Bpvn3AxZjcy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>95105</td>
+        <td>11340</td>
+        <td>12.0</td>
+        <td>450</td>
+        <td>-555</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нескучный ВЕЛНЕС</td>
+        <td><a href="https://t.me/happywellness">https://t.me/happywellness</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>94903</td>
+        <td>9651</td>
+        <td>11.0</td>
+        <td>-107</td>
+        <td>-866</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПП рецепты</td>
+        <td><a href="https://t.me/avokado_xudeet">https://t.me/avokado_xudeet</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>93857</td>
+        <td>13364</td>
+        <td>15.0</td>
+        <td>-96</td>
+        <td>-442</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Травник</td>
+        <td><a href="https://t.me/joinchat/pNR3_u64QV0wYjY8">https://t.me/joinchat/pNR3_u64QV0wYjY8</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>92890</td>
+        <td>15575</td>
+        <td>17.0</td>
+        <td>-679</td>
+        <td>-3060</td>
+        <td>10 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>УМНЫЙ ФИТНЕС | MANI beauty</td>
+        <td><a href="https://t.me/manibeauty1">https://t.me/manibeauty1</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>92217</td>
+        <td>8133</td>
+        <td>9.0</td>
+        <td>552</td>
+        <td>2411</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тот самый доктор</td>
+        <td><a href="https://t.me/doc_dali">https://t.me/doc_dali</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>91341</td>
+        <td>28571</td>
+        <td>32.0</td>
+        <td>-280</td>
+        <td>16579</td>
+        <td>6 месяцев 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Здоровье Поднебесной</td>
+        <td><a href="https://t.me/joinchat/OHuPj4gyYa5lNWJi">https://t.me/joinchat/OHuPj4gyYa5lNWJi</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>90059</td>
+        <td>7225</td>
+        <td>8.0</td>
+        <td>899</td>
+        <td>4709</td>
+        <td>9 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Профессор Дадали в проекте «Оазис здоровья»</td>
+        <td><a href="https://t.me/pr_dadali">https://t.me/pr_dadali</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>87785</td>
+        <td>14503</td>
+        <td>17.0</td>
+        <td>59</td>
+        <td>1213</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>💎БУДЬ ЛУЧШЕ💎</td>
+        <td><a href="https://t.me/joinchat/2AMlbcpayRc1ZTMy">https://t.me/joinchat/2AMlbcpayRc1ZTMy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>87461</td>
+        <td>1548</td>
+        <td>2.0</td>
+        <td>-4431</td>
+        <td>-39713</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПП рецепты | Худеем Сегодня🍑</td>
+        <td><a href="https://t.me/joinchat/MPKnnUhwX98yMDMy">https://t.me/joinchat/MPKnnUhwX98yMDMy</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>87099</td>
+        <td>13942</td>
+        <td>16.0</td>
+        <td>736</td>
+        <td>4601</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ONLY CS2 · Counter-Strike 2</td>
+        <td><a href="https://t.me/csgo4love">https://t.me/csgo4love</a></td>
+        <td>Здоровье и Фитнес</td>
+        <td>86640</td>
+        <td>15516</td>
+        <td>18.0</td>
+        <td>-1218</td>
+        <td>8862</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

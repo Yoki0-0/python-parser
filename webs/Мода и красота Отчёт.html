@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Нашла на Wildberries</td>
+        <td><a href="https://t.me/joinchat/QBJtwNE7IpI3NTgy">https://t.me/joinchat/QBJtwNE7IpI3NTgy</a></td>
+        <td>Мода и красота</td>
+        <td>897433</td>
+        <td>37294</td>
+        <td>5.0</td>
+        <td>-4876</td>
+        <td>-28547</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Gold Store 🛍️</td>
+        <td><a href="https://t.me/joinchat/hOHGucwEP5s3MmRi">https://t.me/joinchat/hOHGucwEP5s3MmRi</a></td>
+        <td>Мода и красота</td>
+        <td>840413</td>
+        <td>19822</td>
+        <td>3.0</td>
+        <td>-40432</td>
+        <td>-71261</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Золотое Яблоко</td>
+        <td><a href="https://t.me/goldapple">https://t.me/goldapple</a></td>
+        <td>Мода и красота</td>
+        <td>832324</td>
+        <td>93891</td>
+        <td>12.0</td>
+        <td>-2481</td>
+        <td>21633</td>
+        <td>8 лет 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Маникюр | Ногти</td>
+        <td><a href="https://t.me/joinchat/ZkaaiAghVXxjNzRi">https://t.me/joinchat/ZkaaiAghVXxjNzRi</a></td>
+        <td>Мода и красота</td>
+        <td>603127</td>
+        <td>204864</td>
+        <td>34.0</td>
+        <td>-3379</td>
+        <td>-15379</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MIXIT.RU</td>
+        <td><a href="https://t.me/mixit_mood">https://t.me/mixit_mood</a></td>
+        <td>Мода и красота</td>
+        <td>490387</td>
+        <td>40270</td>
+        <td>9.0</td>
+        <td>-5830</td>
+        <td>-22585</td>
+        <td>5 лет 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Гимнастика для лица</td>
+        <td><a href="https://t.me/anyclass_faceonline">https://t.me/anyclass_faceonline</a></td>
+        <td>Мода и красота</td>
+        <td>441678</td>
+        <td>38670</td>
+        <td>9.0</td>
+        <td>-1255</td>
+        <td>8659</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>По моде | Тренды 2025</td>
+        <td><a href="https://t.me/joinchat/cNDuwPBHWJkyYmZi">https://t.me/joinchat/cNDuwPBHWJkyYmZi</a></td>
+        <td>Мода и красота</td>
+        <td>428740</td>
+        <td>61129</td>
+        <td>15.0</td>
+        <td>-3441</td>
+        <td>-16325</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>VOIS Cosmetics</td>
+        <td><a href="https://t.me/vois">https://t.me/vois</a></td>
+        <td>Мода и красота</td>
+        <td>400466</td>
+        <td>85519</td>
+        <td>22.0</td>
+        <td>2632</td>
+        <td>7566</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Primebery</td>
+        <td><a href="https://t.me/joinchat/VA5R96v8jDGOoPXP">https://t.me/joinchat/VA5R96v8jDGOoPXP</a></td>
+        <td>Мода и красота</td>
+        <td>393386</td>
+        <td>14803</td>
+        <td>4.0</td>
+        <td>-538</td>
+        <td>437</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Маникюр | Дизайн ногтей</td>
+        <td><a href="https://t.me/nails_nogotki">https://t.me/nails_nogotki</a></td>
+        <td>Мода и красота</td>
+        <td>374307</td>
+        <td>53378</td>
+        <td>15.0</td>
+        <td>2605</td>
+        <td>6599</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Находки Wildberries</td>
+        <td><a href="https://t.me/joinchat/EpzfwGICVUkwNmRi">https://t.me/joinchat/EpzfwGICVUkwNmRi</a></td>
+        <td>Мода и красота</td>
+        <td>349064</td>
+        <td>20659</td>
+        <td>6.0</td>
+        <td>-1712</td>
+        <td>-8253</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>WB SUN</td>
+        <td><a href="https://t.me/joinchat/anH0z15Jd7VlODYy">https://t.me/joinchat/anH0z15Jd7VlODYy</a></td>
+        <td>Мода и красота</td>
+        <td>343068</td>
+        <td>8662</td>
+        <td>3.0</td>
+        <td>-3410</td>
+        <td>-14417</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Косметика ВБ🌺 | Товары с вб</td>
+        <td><a href="https://t.me/kosmetlkawb">https://t.me/kosmetlkawb</a></td>
+        <td>Мода и красота</td>
+        <td>333100</td>
+        <td>47497</td>
+        <td>15.0</td>
+        <td>5485</td>
+        <td>3750</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОП, МАНИКЮРЧИК | НОГТИ | МАНИКЮР</td>
+        <td><a href="https://t.me/op_manic">https://t.me/op_manic</a></td>
+        <td>Мода и красота</td>
+        <td>315459</td>
+        <td>38061</td>
+        <td>13.0</td>
+        <td>1039</td>
+        <td>2039</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Секретный Wildberries</td>
+        <td><a href="https://t.me/joinchat/nMKNl0gK-vg1MDY6">https://t.me/joinchat/nMKNl0gK-vg1MDY6</a></td>
+        <td>Мода и красота</td>
+        <td>312732</td>
+        <td>18008</td>
+        <td>6.0</td>
+        <td>4736</td>
+        <td>20589</td>
+        <td>2 года 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Осторожно, стиль</td>
+        <td><a href="https://t.me/ostorozhno_style">https://t.me/ostorozhno_style</a></td>
+        <td>Мода и красота</td>
+        <td>308022</td>
+        <td>49000</td>
+        <td>16.0</td>
+        <td>6909</td>
+        <td>18954</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Стиляги</td>
+        <td><a href="https://t.me/stilyagitg">https://t.me/stilyagitg</a></td>
+        <td>Мода и красота</td>
+        <td>304401</td>
+        <td>38085</td>
+        <td>13.0</td>
+        <td>447</td>
+        <td>89</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Находки на Wildberries / WB</td>
+        <td><a href="https://t.me/joinchat/a4MbAliBsJo1ZWMy">https://t.me/joinchat/a4MbAliBsJo1ZWMy</a></td>
+        <td>Мода и красота</td>
+        <td>302097</td>
+        <td>10308</td>
+        <td>4.0</td>
+        <td>994</td>
+        <td>-8188</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>По Женской Части</td>
+        <td><a href="https://t.me/joinchat/Hfbyn_Gu-NQ4ODUy">https://t.me/joinchat/Hfbyn_Gu-NQ4ODUy</a></td>
+        <td>Мода и красота</td>
+        <td>298227</td>
+        <td>23293</td>
+        <td>8.0</td>
+        <td>290</td>
+        <td>4027</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Familia off-price</td>
+        <td><a href="https://t.me/famila_offprice">https://t.me/famila_offprice</a></td>
+        <td>Мода и красота</td>
+        <td>296910</td>
+        <td>43941</td>
+        <td>15.0</td>
+        <td>-1307</td>
+        <td>14704</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Школа Шопинга</td>
+        <td><a href="https://t.me/shoppingschoolru">https://t.me/shoppingschoolru</a></td>
+        <td>Мода и красота</td>
+        <td>294239</td>
+        <td>60139</td>
+        <td>21.0</td>
+        <td>-199</td>
+        <td>-1463</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Реальный Wildberries</td>
+        <td><a href="https://t.me/joinchat/QmCFaTyuqxM1MDJi">https://t.me/joinchat/QmCFaTyuqxM1MDJi</a></td>
+        <td>Мода и красота</td>
+        <td>287845</td>
+        <td>19460</td>
+        <td>7.0</td>
+        <td>-2352</td>
+        <td>-7569</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Это Лиза</td>
+        <td><a href="https://t.me/etolizochka">https://t.me/etolizochka</a></td>
+        <td>Мода и красота</td>
+        <td>287348</td>
+        <td>17993</td>
+        <td>7.0</td>
+        <td>-21443</td>
+        <td>1649</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЛЭТУАЛЬ</td>
+        <td><a href="https://t.me/letoileofficial">https://t.me/letoileofficial</a></td>
+        <td>Мода и красота</td>
+        <td>278893</td>
+        <td>27957</td>
+        <td>10.0</td>
+        <td>5200</td>
+        <td>26524</td>
+        <td>9 лет 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Женский Маникюр 💅🏻</td>
+        <td><a href="https://t.me/joinchat/Zj26fTht11RjY2Q6">https://t.me/joinchat/Zj26fTht11RjY2Q6</a></td>
+        <td>Мода и красота</td>
+        <td>269482</td>
+        <td>95805</td>
+        <td>36.0</td>
+        <td>982</td>
+        <td>-5115</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Nails | Летний маникюр ☀️</td>
+        <td><a href="https://t.me/nailsluv">https://t.me/nailsluv</a></td>
+        <td>Мода и красота</td>
+        <td>266911</td>
+        <td>19641</td>
+        <td>8.0</td>
+        <td>9342</td>
+        <td>12873</td>
+        <td>6 лет</td>
+      </tr>
+
+      <tr>
+        <td>Красота без фильтров и фотошопа!</td>
+        <td><a href="https://t.me/BeautyUnfiltered">https://t.me/BeautyUnfiltered</a></td>
+        <td>Мода и красота</td>
+        <td>248930</td>
+        <td>58365</td>
+        <td>24.0</td>
+        <td>8</td>
+        <td>11</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Идеи маникюра</td>
+        <td><a href="https://t.me/joinchat/YPhOSizf4pBiY2Ri">https://t.me/joinchat/YPhOSizf4pBiY2Ri</a></td>
+        <td>Мода и красота</td>
+        <td>246332</td>
+        <td>55168</td>
+        <td>23.0</td>
+        <td>-3707</td>
+        <td>8285</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Находки WB|OZON</td>
+        <td><a href="https://t.me/joinchat/fAREV4lG0MQzZDM6">https://t.me/joinchat/fAREV4lG0MQzZDM6</a></td>
+        <td>Мода и красота</td>
+        <td>236680</td>
+        <td>9748</td>
+        <td>5.0</td>
+        <td>9305</td>
+        <td>17362</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>LICHI</td>
+        <td><a href="https://t.me/lichi">https://t.me/lichi</a></td>
+        <td>Мода и красота</td>
+        <td>222561</td>
+        <td>85965</td>
+        <td>39.0</td>
+        <td>677</td>
+        <td>7244</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Заметки шопоголика</td>
+        <td><a href="https://t.me/beauty_schoolru">https://t.me/beauty_schoolru</a></td>
+        <td>Мода и красота</td>
+        <td>222105</td>
+        <td>48985</td>
+        <td>23.0</td>
+        <td>-7166</td>
+        <td>54</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Outfits</td>
+        <td><a href="https://t.me/outfits">https://t.me/outfits</a></td>
+        <td>Мода и красота</td>
+        <td>221680</td>
+        <td>28345</td>
+        <td>13.0</td>
+        <td>-1791</td>
+        <td>-9119</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GGMED Пересадка волос</td>
+        <td><a href="https://t.me/gg_med">https://t.me/gg_med</a></td>
+        <td>Мода и красота</td>
+        <td>216823</td>
+        <td>11521</td>
+        <td>6.0</td>
+        <td>-8990</td>
+        <td>-51440</td>
+        <td>11 месяцев 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Идеи Маникюра и Дизайн Ногтей</td>
+        <td><a href="https://t.me/nogti771">https://t.me/nogti771</a></td>
+        <td>Мода и красота</td>
+        <td>215327</td>
+        <td>11725</td>
+        <td>6.0</td>
+        <td>-6041</td>
+        <td>81440</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Style</td>
+        <td><a href="https://t.me/style">https://t.me/style</a></td>
+        <td>Мода и красота</td>
+        <td>213248</td>
+        <td>56377</td>
+        <td>27.0</td>
+        <td>-2679</td>
+        <td>64260</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Макияж на каждый день</td>
+        <td><a href="https://t.me/joinchat/2sy_GgoAKnthM2M6">https://t.me/joinchat/2sy_GgoAKnthM2M6</a></td>
+        <td>Мода и красота</td>
+        <td>212329</td>
+        <td>17442</td>
+        <td>9.0</td>
+        <td>-1043</td>
+        <td>-4839</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Блогирую | Бьюти</td>
+        <td><a href="https://t.me/dasha_probeauty">https://t.me/dasha_probeauty</a></td>
+        <td>Мода и красота</td>
+        <td>207137</td>
+        <td>112778</td>
+        <td>55.0</td>
+        <td>-33787</td>
+        <td>-41742</td>
+        <td>2 года 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Русская мода</td>
+        <td><a href="https://t.me/russianmoda">https://t.me/russianmoda</a></td>
+        <td>Мода и красота</td>
+        <td>205166</td>
+        <td>27963</td>
+        <td>14.0</td>
+        <td>-1570</td>
+        <td>-8342</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>MUR</td>
+        <td><a href="https://t.me/fashion_mur">https://t.me/fashion_mur</a></td>
+        <td>Мода и красота</td>
+        <td>201309</td>
+        <td>50155</td>
+        <td>25.0</td>
+        <td>-306</td>
+        <td>-1313</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Аля про AliExpress</td>
+        <td><a href="https://t.me/alyatrend">https://t.me/alyatrend</a></td>
+        <td>Мода и красота</td>
+        <td>201003</td>
+        <td>33127</td>
+        <td>17.0</td>
+        <td>766</td>
+        <td>-322</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Wildberries Халява | Скидки | Акции</td>
+        <td><a href="https://t.me/wildberriesse">https://t.me/wildberriesse</a></td>
+        <td>Мода и красота</td>
+        <td>199466</td>
+        <td>3955</td>
+        <td>2.0</td>
+        <td>-2224</td>
+        <td>-11289</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Your Look | Находки WB Wildberries | Стиль и Мода</td>
+        <td><a href="https://t.me/joinchat/Fw0ajUIFR5c5YTgy">https://t.me/joinchat/Fw0ajUIFR5c5YTgy</a></td>
+        <td>Мода и красота</td>
+        <td>196540</td>
+        <td>9712</td>
+        <td>5.0</td>
+        <td>-2315</td>
+        <td>-6180</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>IRILOOK | ХОЧУ/МОГУ | нашла клад на маркетплейсах</td>
+        <td><a href="https://t.me/irilook">https://t.me/irilook</a></td>
+        <td>Мода и красота</td>
+        <td>196107</td>
+        <td>56835</td>
+        <td>29.0</td>
+        <td>43</td>
+        <td>6140</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Первый Товарный | Wildberries+OZON</td>
+        <td><a href="https://t.me/joinchat/wyUly3-xX3o1NGEy">https://t.me/joinchat/wyUly3-xX3o1NGEy</a></td>
+        <td>Мода и красота</td>
+        <td>190930</td>
+        <td>361</td>
+        <td>1.0</td>
+        <td>-2290</td>
+        <td>-10361</td>
+        <td>2 года 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мой Wildberries</td>
+        <td><a href="https://t.me/joinchat/wniXaxSeXR5iMzIy">https://t.me/joinchat/wniXaxSeXR5iMzIy</a></td>
+        <td>Мода и красота</td>
+        <td>188935</td>
+        <td>21311</td>
+        <td>12.0</td>
+        <td>-1201</td>
+        <td>2267</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ябнадела - Мода и Стиль</td>
+        <td><a href="https://t.me/joinchat/bvP6MCokh384NzAy">https://t.me/joinchat/bvP6MCokh384NzAy</a></td>
+        <td>Мода и красота</td>
+        <td>186160</td>
+        <td>22136</td>
+        <td>12.0</td>
+        <td>-1650</td>
+        <td>-7770</td>
+        <td>11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Elena Mixit</td>
+        <td><a href="https://t.me/ElenaMixit">https://t.me/ElenaMixit</a></td>
+        <td>Мода и красота</td>
+        <td>185972</td>
+        <td>33933</td>
+        <td>19.0</td>
+        <td>2468</td>
+        <td>8862</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ROGOV</td>
+        <td><a href="https://t.me/rogov24">https://t.me/rogov24</a></td>
+        <td>Мода и красота</td>
+        <td>178056</td>
+        <td>44240</td>
+        <td>25.0</td>
+        <td>758</td>
+        <td>4006</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>WB | Дешевле нет😱</td>
+        <td><a href="https://t.me/joinchat/SyyaIspYqo1iNGIy">https://t.me/joinchat/SyyaIspYqo1iNGIy</a></td>
+        <td>Мода и красота</td>
+        <td>177703</td>
+        <td>10161</td>
+        <td>6.0</td>
+        <td>11097</td>
+        <td>26924</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Маникюр|Ногти|Дизайн</td>
+        <td><a href="https://t.me/modnailru">https://t.me/modnailru</a></td>
+        <td>Мода и красота</td>
+        <td>177434</td>
+        <td>33560</td>
+        <td>19.0</td>
+        <td>-717</td>
+        <td>-1834</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ᴀɴᴅʀᴇʏ sʜɪʟᴋᴏᴠ ʙᴇᴀᴜᴛʏ ᴘᴀɢᴇs</td>
+        <td><a href="https://t.me/ANDREYSHILKOVBEAUTYPAGES">https://t.me/ANDREYSHILKOVBEAUTYPAGES</a></td>
+        <td>Мода и красота</td>
+        <td>175357</td>
+        <td>12284</td>
+        <td>7.0</td>
+        <td>8024</td>
+        <td>29866</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Опять этот Wildberries</td>
+        <td><a href="https://t.me/joinchat/M7k3eH2f4dgyOWVi">https://t.me/joinchat/M7k3eH2f4dgyOWVi</a></td>
+        <td>Мода и красота</td>
+        <td>175000</td>
+        <td>6018</td>
+        <td>4.0</td>
+        <td>-1555</td>
+        <td>-7161</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Банки-склянки</td>
+        <td><a href="https://t.me/bankiskyanki">https://t.me/bankiskyanki</a></td>
+        <td>Мода и красота</td>
+        <td>172623</td>
+        <td>16933</td>
+        <td>10.0</td>
+        <td>-2052</td>
+        <td>-8390</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стиль на каждый день</td>
+        <td><a href="https://t.me/joinchat/bCPQPAZg-oYwZDU6">https://t.me/joinchat/bCPQPAZg-oYwZDU6</a></td>
+        <td>Мода и красота</td>
+        <td>171154</td>
+        <td>22500</td>
+        <td>14.0</td>
+        <td>-868</td>
+        <td>-3914</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бюджетный Wildberries</td>
+        <td><a href="https://t.me/joinchat/UEcGN4uOqctiZWYy">https://t.me/joinchat/UEcGN4uOqctiZWYy</a></td>
+        <td>Мода и красота</td>
+        <td>170214</td>
+        <td>12619</td>
+        <td>8.0</td>
+        <td>-1170</td>
+        <td>-5494</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>WISH-LIST WB</td>
+        <td><a href="https://t.me/joinchat/Qw7X7D1cHw80MmJi">https://t.me/joinchat/Qw7X7D1cHw80MmJi</a></td>
+        <td>Мода и красота</td>
+        <td>167387</td>
+        <td>35056</td>
+        <td>21.0</td>
+        <td>-1267</td>
+        <td>1772</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Wb Grad</td>
+        <td><a href="https://t.me/joinchat/oS6y1qQe02BhZDVi">https://t.me/joinchat/oS6y1qQe02BhZDVi</a></td>
+        <td>Мода и красота</td>
+        <td>163812</td>
+        <td>26378</td>
+        <td>17.0</td>
+        <td>64</td>
+        <td>107</td>
+        <td>10 месяцев 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Vrednayamoda</td>
+        <td><a href="https://t.me/vrednayamoda">https://t.me/vrednayamoda</a></td>
+        <td>Мода и красота</td>
+        <td>162991</td>
+        <td>63607</td>
+        <td>39.0</td>
+        <td>-307</td>
+        <td>-564</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ФИЛЬМ НА ВЕЧЕР НОВИНКИ</td>
+        <td><a href="https://t.me/joinchat/UcJLJmod5tRlYzIy">https://t.me/joinchat/UcJLJmod5tRlYzIy</a></td>
+        <td>Мода и красота</td>
+        <td>157919</td>
+        <td>2832</td>
+        <td>2.0</td>
+        <td>-1807</td>
+        <td>-8482</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Роскошь бутиков</td>
+        <td><a href="https://t.me/zhidkovskiy_beauty">https://t.me/zhidkovskiy_beauty</a></td>
+        <td>Мода и красота</td>
+        <td>157877</td>
+        <td>27962</td>
+        <td>18.0</td>
+        <td>67</td>
+        <td>-1766</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Первый по ногтям💚</td>
+        <td><a href="https://t.me/joinchat/Ne7sf8u7uEw1NDAy">https://t.me/joinchat/Ne7sf8u7uEw1NDAy</a></td>
+        <td>Мода и красота</td>
+        <td>155563</td>
+        <td>84402</td>
+        <td>55.0</td>
+        <td>-1314</td>
+        <td>-5363</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PEOPLETALK</td>
+        <td><a href="https://t.me/Peopletalkru">https://t.me/Peopletalkru</a></td>
+        <td>Мода и красота</td>
+        <td>154653</td>
+        <td>41210</td>
+        <td>27.0</td>
+        <td>-483</td>
+        <td>-3865</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скидки Wildberries💜Обзоры товаров WB</td>
+        <td><a href="https://t.me/joinchat/O1p5Xea1inQ3NmMy">https://t.me/joinchat/O1p5Xea1inQ3NmMy</a></td>
+        <td>Мода и красота</td>
+        <td>154108</td>
+        <td>10109</td>
+        <td>7.0</td>
+        <td>-848</td>
+        <td>-4088</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Подборки Скидки из Китая</td>
+        <td><a href="https://t.me/podborki_skidki_wb">https://t.me/podborki_skidki_wb</a></td>
+        <td>Мода и красота</td>
+        <td>152719</td>
+        <td>3956</td>
+        <td>3.0</td>
+        <td>-2127</td>
+        <td>-12886</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мой Маникюр</td>
+        <td><a href="https://t.me/dizain_manik">https://t.me/dizain_manik</a></td>
+        <td>Мода и красота</td>
+        <td>152578</td>
+        <td>33947</td>
+        <td>23.0</td>
+        <td>-1324</td>
+        <td>-7114</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Masha Sovetuet</td>
+        <td><a href="https://t.me/mashasovetuet">https://t.me/mashasovetuet</a></td>
+        <td>Мода и красота</td>
+        <td>151396</td>
+        <td>77913</td>
+        <td>52.0</td>
+        <td>890</td>
+        <td>3587</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Те самые находки с Wildberries</td>
+        <td><a href="https://t.me/joinchat/ybhmf6bcigE3YTEy">https://t.me/joinchat/ybhmf6bcigE3YTEy</a></td>
+        <td>Мода и красота</td>
+        <td>150001</td>
+        <td>5787</td>
+        <td>4.0</td>
+        <td>-2462</td>
+        <td>-424</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Модные прически 👩‍🦰</td>
+        <td><a href="https://t.me/joinchat/wG2LkUz7Y9VhNWNi">https://t.me/joinchat/wG2LkUz7Y9VhNWNi</a></td>
+        <td>Мода и красота</td>
+        <td>149321</td>
+        <td>19284</td>
+        <td>13.0</td>
+        <td>-1852</td>
+        <td>-1235</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дизайн ногтей | Маникюр</td>
+        <td><a href="https://t.me/manik_desing">https://t.me/manik_desing</a></td>
+        <td>Мода и красота</td>
+        <td>149008</td>
+        <td>45525</td>
+        <td>31.0</td>
+        <td>754</td>
+        <td>-347</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ИРИША МАТЕРЬ ПОКУПОК 🪄</td>
+        <td><a href="https://t.me/popka_foreverlove">https://t.me/popka_foreverlove</a></td>
+        <td>Мода и красота</td>
+        <td>147657</td>
+        <td>40112</td>
+        <td>28.0</td>
+        <td>-169</td>
+        <td>-996</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Причёска на каждый день</td>
+        <td><a href="https://t.me/joinchat/d99uGWHqiNY4NjIy">https://t.me/joinchat/d99uGWHqiNY4NjIy</a></td>
+        <td>Мода и красота</td>
+        <td>145925</td>
+        <td>15415</td>
+        <td>11.0</td>
+        <td>-931</td>
+        <td>-4918</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>VSRAP Shop</td>
+        <td><a href="https://t.me/vsrapshop">https://t.me/vsrapshop</a></td>
+        <td>Мода и красота</td>
+        <td>145421</td>
+        <td>51193</td>
+        <td>36.0</td>
+        <td>-711</td>
+        <td>4342</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нечегонадеть | Wildberries</td>
+        <td><a href="https://t.me/moda_style_look">https://t.me/moda_style_look</a></td>
+        <td>Мода и красота</td>
+        <td>145373</td>
+        <td>7531</td>
+        <td>6.0</td>
+        <td>-2775</td>
+        <td>-4</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Модница | блог стилиста</td>
+        <td><a href="https://t.me/joinchat/A_Jf_aFswPNlM2Uy">https://t.me/joinchat/A_Jf_aFswPNlM2Uy</a></td>
+        <td>Мода и красота</td>
+        <td>142550</td>
+        <td>16860</td>
+        <td>12.0</td>
+        <td>-1756</td>
+        <td>-8151</td>
+        <td>8 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Маникюр на каждый день</td>
+        <td><a href="https://t.me/joinchat/IHLWvyoaDco3OGJi">https://t.me/joinchat/IHLWvyoaDco3OGJi</a></td>
+        <td>Мода и красота</td>
+        <td>142475</td>
+        <td>34745</td>
+        <td>25.0</td>
+        <td>4845</td>
+        <td>15663</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ALENA YANCHEVSKAYA</td>
+        <td><a href="https://t.me/alenayanchevskaya">https://t.me/alenayanchevskaya</a></td>
+        <td>Мода и красота</td>
+        <td>141301</td>
+        <td>51693</td>
+        <td>37.0</td>
+        <td>-92</td>
+        <td>-2841</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WB RIGHT</td>
+        <td><a href="https://t.me/joinchat/wEW_aoNFl48yMzUy">https://t.me/joinchat/wEW_aoNFl48yMzUy</a></td>
+        <td>Мода и красота</td>
+        <td>141053</td>
+        <td>3648</td>
+        <td>3.0</td>
+        <td>-1715</td>
+        <td>-7978</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Poli_Ryzhova</td>
+        <td><a href="https://t.me/poliryzhova">https://t.me/poliryzhova</a></td>
+        <td>Мода и красота</td>
+        <td>140545</td>
+        <td>67734</td>
+        <td>49.0</td>
+        <td>-179</td>
+        <td>-393</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мода PLUS SIZE</td>
+        <td><a href="https://t.me/joinchat/DSPIE6PabypkNTQx">https://t.me/joinchat/DSPIE6PabypkNTQx</a></td>
+        <td>Мода и красота</td>
+        <td>136882</td>
+        <td>19569</td>
+        <td>15.0</td>
+        <td>-1079</td>
+        <td>-5459</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>A L E K Ó</td>
+        <td><a href="https://t.me/aleko_n17">https://t.me/aleko_n17</a></td>
+        <td>Мода и красота</td>
+        <td>136409</td>
+        <td>33859</td>
+        <td>25.0</td>
+        <td>20167</td>
+        <td>20079</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Находки с Wildberries WB</td>
+        <td><a href="https://t.me/HaxoDkiWBs">https://t.me/HaxoDkiWBs</a></td>
+        <td>Мода и красота</td>
+        <td>135675</td>
+        <td>2854</td>
+        <td>3.0</td>
+        <td>430</td>
+        <td>2342</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Амина</td>
+        <td><a href="https://t.me/dr_amina_pirmanova">https://t.me/dr_amina_pirmanova</a></td>
+        <td>Мода и красота</td>
+        <td>134596</td>
+        <td>40661</td>
+        <td>31.0</td>
+        <td>-72</td>
+        <td>-225</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Находки Wildberries</td>
+        <td><a href="https://t.me/valberis_odezhda">https://t.me/valberis_odezhda</a></td>
+        <td>Мода и красота</td>
+        <td>133153</td>
+        <td>6672</td>
+        <td>5.0</td>
+        <td>6358</td>
+        <td>6284</td>
+        <td>3 года 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>IRINAMEYK</td>
+        <td><a href="https://t.me/irinameyk">https://t.me/irinameyk</a></td>
+        <td>Мода и красота</td>
+        <td>132707</td>
+        <td>78390</td>
+        <td>60.0</td>
+        <td>-259</td>
+        <td>-1003</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Улыбка радуги</td>
+        <td><a href="https://t.me/ulybka_radugi">https://t.me/ulybka_radugi</a></td>
+        <td>Мода и красота</td>
+        <td>132357</td>
+        <td>37346</td>
+        <td>29.0</td>
+        <td>29</td>
+        <td>1443</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Находки на Wildberries</td>
+        <td><a href="https://t.me/joinchat/_YSpZ24sMb5jN2Ji">https://t.me/joinchat/_YSpZ24sMb5jN2Ji</a></td>
+        <td>Мода и красота</td>
+        <td>131234</td>
+        <td>12916</td>
+        <td>10.0</td>
+        <td>-842</td>
+        <td>-4263</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AlexisKiss_elena</td>
+        <td><a href="https://t.me/alexiskiss_elena">https://t.me/alexiskiss_elena</a></td>
+        <td>Мода и красота</td>
+        <td>129535</td>
+        <td>14886</td>
+        <td>12.0</td>
+        <td>-392</td>
+        <td>-1581</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Женские Причёски 💇‍♀️</td>
+        <td><a href="https://t.me/joinchat/PUJs7ben__Q5MWEy">https://t.me/joinchat/PUJs7ben__Q5MWEy</a></td>
+        <td>Мода и красота</td>
+        <td>127105</td>
+        <td>20298</td>
+        <td>16.0</td>
+        <td>-726</td>
+        <td>-2794</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Umbrella | WB находки</td>
+        <td><a href="https://t.me/joinchat/T2ZVv3ruSRRlN2Qy">https://t.me/joinchat/T2ZVv3ruSRRlN2Qy</a></td>
+        <td>Мода и красота</td>
+        <td>126773</td>
+        <td>15368</td>
+        <td>13.0</td>
+        <td>-563</td>
+        <td>-5929</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>чё взять | wildberries</td>
+        <td><a href="https://t.me/joinchat/qSCLAf-fxBtiOWUy">https://t.me/joinchat/qSCLAf-fxBtiOWUy</a></td>
+        <td>Мода и красота</td>
+        <td>125210</td>
+        <td>14741</td>
+        <td>12.0</td>
+        <td>-1403</td>
+        <td>-5485</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Лучшее с Wildberries</td>
+        <td><a href="https://t.me/joinchat/iJC8P7vrWjc0NDUy">https://t.me/joinchat/iJC8P7vrWjc0NDUy</a></td>
+        <td>Мода и красота</td>
+        <td>125085</td>
+        <td>5231</td>
+        <td>5.0</td>
+        <td>-1124</td>
+        <td>-3451</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Dresses</td>
+        <td><a href="https://t.me/dresses">https://t.me/dresses</a></td>
+        <td>Мода и красота</td>
+        <td>122366</td>
+        <td>44130</td>
+        <td>37.0</td>
+        <td>-1413</td>
+        <td>59942</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🔥Топ Шмотка | ВБ, ОЗОН🔥</td>
+        <td><a href="https://t.me/wb_shmotka">https://t.me/wb_shmotka</a></td>
+        <td>Мода и красота</td>
+        <td>121046</td>
+        <td>25378</td>
+        <td>21.0</td>
+        <td>-1024</td>
+        <td>-3885</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ногти для красивых | Маникюр</td>
+        <td><a href="https://t.me/joinchat/QMI-icsfzwc0MDE6">https://t.me/joinchat/QMI-icsfzwc0MDE6</a></td>
+        <td>Мода и красота</td>
+        <td>120150</td>
+        <td>44003</td>
+        <td>37.0</td>
+        <td>-118</td>
+        <td>-527</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПОКУПОЧКИ С WB</td>
+        <td><a href="https://t.me/joinchat/YEBh-8c_xrFlNmMy">https://t.me/joinchat/YEBh-8c_xrFlNmMy</a></td>
+        <td>Мода и красота</td>
+        <td>119072</td>
+        <td>7194</td>
+        <td>6.0</td>
+        <td>-219</td>
+        <td>-5269</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мира</td>
+        <td><a href="https://t.me/mira_att">https://t.me/mira_att</a></td>
+        <td>Мода и красота</td>
+        <td>118337</td>
+        <td>64098</td>
+        <td>55.0</td>
+        <td>16360</td>
+        <td>26667</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пышная Красота | PLUS SIZE</td>
+        <td><a href="https://t.me/joinchat/793D1w2w5UUwZjAy">https://t.me/joinchat/793D1w2w5UUwZjAy</a></td>
+        <td>Мода и красота</td>
+        <td>117874</td>
+        <td>18105</td>
+        <td>16.0</td>
+        <td>853</td>
+        <td>6480</td>
+        <td>8 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Polina_znaet</td>
+        <td><a href="https://t.me/polina_znaet">https://t.me/polina_znaet</a></td>
+        <td>Мода и красота</td>
+        <td>117747</td>
+        <td>19910</td>
+        <td>17.0</td>
+        <td>-75</td>
+        <td>3331</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Не бьюти единым</td>
+        <td><a href="https://t.me/nebeauty_blog">https://t.me/nebeauty_blog</a></td>
+        <td>Мода и красота</td>
+        <td>115911</td>
+        <td>9841</td>
+        <td>9.0</td>
+        <td>-735</td>
+        <td>-1644</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ищу Модель Москва</td>
+        <td><a href="https://t.me/ishchu_modelf">https://t.me/ishchu_modelf</a></td>
+        <td>Мода и красота</td>
+        <td>115770</td>
+        <td>1536</td>
+        <td>2.0</td>
+        <td>-203</td>
+        <td>18847</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

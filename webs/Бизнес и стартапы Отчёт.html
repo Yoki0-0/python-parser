@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Книги на миллион | бизнес блог</td>
+        <td><a href="https://t.me/ikniga">https://t.me/ikniga</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>1038755</td>
+        <td>75010</td>
+        <td>8.0</td>
+        <td>-4393</td>
+        <td>-26227</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>25-й час • Бизнес и Финансы</td>
+        <td><a href="https://t.me/Hour_25">https://t.me/Hour_25</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>424842</td>
+        <td>27272</td>
+        <td>7.0</td>
+        <td>1547</td>
+        <td>7680</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москоубизнес</td>
+        <td><a href="https://t.me/mosbusy">https://t.me/mosbusy</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>424014</td>
+        <td>44214</td>
+        <td>11.0</td>
+        <td>18575</td>
+        <td>140347</td>
+        <td>2 месяца 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес Идеи | Стартапы</td>
+        <td><a href="https://t.me/joinchat/IymTXnWq13cwNmNi">https://t.me/joinchat/IymTXnWq13cwNmNi</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>413040</td>
+        <td>25223</td>
+        <td>7.0</td>
+        <td>171</td>
+        <td>-1934</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СберБизнес</td>
+        <td><a href="https://t.me/sberbusiness">https://t.me/sberbusiness</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>324952</td>
+        <td>35921</td>
+        <td>12.0</td>
+        <td>-4039</td>
+        <td>3517</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Е-коммерс</td>
+        <td><a href="https://t.me/kommerc">https://t.me/kommerc</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>306907</td>
+        <td>24038</td>
+        <td>8.0</td>
+        <td>1401</td>
+        <td>-29345</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лимон 🍋 | Бизнес и стартапы</td>
+        <td><a href="https://t.me/joinchat/IrtnfZwa87BmMTgy">https://t.me/joinchat/IrtnfZwa87BmMTgy</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>301026</td>
+        <td>19407</td>
+        <td>7.0</td>
+        <td>-2303</td>
+        <td>-6164</td>
+        <td>3 года 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>CEO печатает…</td>
+        <td><a href="https://t.me/from_CEO">https://t.me/from_CEO</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>276004</td>
+        <td>66757</td>
+        <td>25.0</td>
+        <td>2310</td>
+        <td>56170</td>
+        <td>6 месяцев 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>SellerX | Все о маркетплейсах</td>
+        <td><a href="https://t.me/sellerx">https://t.me/sellerx</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>258566</td>
+        <td>23037</td>
+        <td>9.0</td>
+        <td>43</td>
+        <td>126</td>
+        <td>1 месяц 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Беспощадный ритейл</td>
+        <td><a href="https://t.me/b_retail">https://t.me/b_retail</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>253446</td>
+        <td>38198</td>
+        <td>16.0</td>
+        <td>-9279</td>
+        <td>65462</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русский ритейл и бизнес</td>
+        <td><a href="https://t.me/retailrus">https://t.me/retailrus</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>238302</td>
+        <td>27695</td>
+        <td>12.0</td>
+        <td>-5804</td>
+        <td>2756</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ритейл не спит</td>
+        <td><a href="https://t.me/Retailnespit">https://t.me/Retailnespit</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>238064</td>
+        <td>36654</td>
+        <td>16.0</td>
+        <td>1093</td>
+        <td>68</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Коммерсант</td>
+        <td><a href="https://t.me/Kommerstg">https://t.me/Kommerstg</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>234804</td>
+        <td>33628</td>
+        <td>15.0</td>
+        <td>224440</td>
+        <td>224016</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Михаил Гребенюк</td>
+        <td><a href="https://t.me/grebenukm">https://t.me/grebenukm</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>233299</td>
+        <td>57008</td>
+        <td>25.0</td>
+        <td>1898</td>
+        <td>7863</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Свой в бизнесе</td>
+        <td><a href="https://t.me/ComfortBiz">https://t.me/ComfortBiz</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>232340</td>
+        <td>32069</td>
+        <td>14.0</td>
+        <td>-270</td>
+        <td>4627</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Коммерс</td>
+        <td><a href="https://t.me/commerc24">https://t.me/commerc24</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>229856</td>
+        <td>33235</td>
+        <td>15.0</td>
+        <td>-48</td>
+        <td>52518</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мой бизнес</td>
+        <td><a href="https://t.me/moibiznestg">https://t.me/moibiznestg</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>224047</td>
+        <td>30281</td>
+        <td>14.0</td>
+        <td>218422</td>
+        <td>218366</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>5 бизнес идей</td>
+        <td><a href="https://t.me/bussideas">https://t.me/bussideas</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>221993</td>
+        <td>25369</td>
+        <td>12.0</td>
+        <td>622</td>
+        <td>2935</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Владелец бизнеса</td>
+        <td><a href="https://t.me/OwnerBiza">https://t.me/OwnerBiza</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>215745</td>
+        <td>28482</td>
+        <td>14.0</td>
+        <td>211994</td>
+        <td>211951</td>
+        <td>2 года 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Аяз</td>
+        <td><a href="https://t.me/AyazShabutdinov">https://t.me/AyazShabutdinov</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>215597</td>
+        <td>46113</td>
+        <td>22.0</td>
+        <td>-412</td>
+        <td>-2534</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Карманный бизнесмен</td>
+        <td><a href="https://t.me/karmanbiz">https://t.me/karmanbiz</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>212976</td>
+        <td>35092</td>
+        <td>17.0</td>
+        <td>1691</td>
+        <td>58</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Деловые тренды</td>
+        <td><a href="https://t.me/DeloTrends">https://t.me/DeloTrends</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>210953</td>
+        <td>16491</td>
+        <td>8.0</td>
+        <td>205410</td>
+        <td>205237</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес не кусается</td>
+        <td><a href="https://t.me/NoBizBites">https://t.me/NoBizBites</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>209072</td>
+        <td>40187</td>
+        <td>20.0</td>
+        <td>-2703</td>
+        <td>6027</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WB Партнеры</td>
+        <td><a href="https://t.me/wbsellerofficial">https://t.me/wbsellerofficial</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>207050</td>
+        <td>17446</td>
+        <td>9.0</td>
+        <td>3</td>
+        <td>-916</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Миллионы | Бизнес блог</td>
+        <td><a href="https://t.me/gain_business">https://t.me/gain_business</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>194964</td>
+        <td>27243</td>
+        <td>14.0</td>
+        <td>262</td>
+        <td>2497</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Всё про бизнес</td>
+        <td><a href="https://t.me/allprobizz">https://t.me/allprobizz</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>194421</td>
+        <td>39314</td>
+        <td>21.0</td>
+        <td>-1274</td>
+        <td>-903</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ритейл сегодня</td>
+        <td><a href="https://t.me/retailtut">https://t.me/retailtut</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>193137</td>
+        <td>31718</td>
+        <td>17.0</td>
+        <td>835</td>
+        <td>223</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Будни ритейла</td>
+        <td><a href="https://t.me/BudniRiteila">https://t.me/BudniRiteila</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>185883</td>
+        <td>32761</td>
+        <td>18.0</td>
+        <td>-422</td>
+        <td>215</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес на улице Вязов</td>
+        <td><a href="https://t.me/Viazov_st">https://t.me/Viazov_st</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>182998</td>
+        <td>20132</td>
+        <td>11.0</td>
+        <td>1596</td>
+        <td>42</td>
+        <td>11 месяцев 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Пэй</td>
+        <td><a href="https://t.me/yandexfintech">https://t.me/yandexfintech</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>182038</td>
+        <td>97235</td>
+        <td>54.0</td>
+        <td>659</td>
+        <td>36933</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнесу быть!</td>
+        <td><a href="https://t.me/BiznesuByt">https://t.me/BiznesuByt</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>178025</td>
+        <td>37995</td>
+        <td>22.0</td>
+        <td>-35273</td>
+        <td>-41893</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОПЕРШТАБ РЫБАКОВ ИГОРЬ</td>
+        <td><a href="https://t.me/rybakovigor">https://t.me/rybakovigor</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>177623</td>
+        <td>15106</td>
+        <td>9.0</td>
+        <td>-492</td>
+        <td>-2434</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес | Подкасты</td>
+        <td><a href="https://t.me/podkasty24">https://t.me/podkasty24</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>172436</td>
+        <td>21615</td>
+        <td>13.0</td>
+        <td>811</td>
+        <td>3095</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес на ходу</td>
+        <td><a href="https://t.me/biznahodu">https://t.me/biznahodu</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>166872</td>
+        <td>12875</td>
+        <td>8.0</td>
+        <td>70167</td>
+        <td>160968</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес Кийосаки</td>
+        <td><a href="https://t.me/Business_University">https://t.me/Business_University</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>163931</td>
+        <td>24212</td>
+        <td>15.0</td>
+        <td>739</td>
+        <td>3077</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>5 бизнес подкастов</td>
+        <td><a href="https://t.me/Busspod">https://t.me/Busspod</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>162423</td>
+        <td>21676</td>
+        <td>14.0</td>
+        <td>978</td>
+        <td>4347</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес в +</td>
+        <td><a href="https://t.me/BznsPlus">https://t.me/BznsPlus</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>159422</td>
+        <td>25448</td>
+        <td>16.0</td>
+        <td>3477</td>
+        <td>89</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Деньги есть везде</td>
+        <td><a href="https://t.me/dengivezde">https://t.me/dengivezde</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>158951</td>
+        <td>24907</td>
+        <td>16.0</td>
+        <td>659</td>
+        <td>3105</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мысли богатых | бизнес блог</td>
+        <td><a href="https://t.me/misli_bogatich">https://t.me/misli_bogatich</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>157426</td>
+        <td>19496</td>
+        <td>13.0</td>
+        <td>888</td>
+        <td>3262</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес Подкасты</td>
+        <td><a href="https://t.me/business_podcast">https://t.me/business_podcast</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>153664</td>
+        <td>16389</td>
+        <td>11.0</td>
+        <td>968</td>
+        <td>3735</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Свое дело</td>
+        <td><a href="https://t.me/DeloSvoe">https://t.me/DeloSvoe</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>151668</td>
+        <td>26468</td>
+        <td>18.0</td>
+        <td>732</td>
+        <td>227</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русский Бизнес | Стартапы</td>
+        <td><a href="https://t.me/rus_buzines">https://t.me/rus_buzines</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>151387</td>
+        <td>11536</td>
+        <td>8.0</td>
+        <td>-858</td>
+        <td>-4191</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес Проект</td>
+        <td><a href="https://t.me/BusinesProjects">https://t.me/BusinesProjects</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>149345</td>
+        <td>27619</td>
+        <td>19.0</td>
+        <td>542</td>
+        <td>2403</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Business Advisor</td>
+        <td><a href="https://t.me/BusinesAdvisor">https://t.me/BusinesAdvisor</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>146051</td>
+        <td>23510</td>
+        <td>17.0</td>
+        <td>1196</td>
+        <td>4861</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес — и точка!</td>
+        <td><a href="https://t.me/TochkaBzns">https://t.me/TochkaBzns</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>138570</td>
+        <td>24893</td>
+        <td>18.0</td>
+        <td>1539</td>
+        <td>167</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>«Свой Гектар»</td>
+        <td><a href="https://t.me/svoygectar">https://t.me/svoygectar</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>132496</td>
+        <td>16127</td>
+        <td>13.0</td>
+        <td>5013</td>
+        <td>7442</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фаундер | Бизнес и стартапы</td>
+        <td><a href="https://t.me/Founder_Startup">https://t.me/Founder_Startup</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>132071</td>
+        <td>22160</td>
+        <td>17.0</td>
+        <td>984</td>
+        <td>4223</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнесовая правда</td>
+        <td><a href="https://t.me/biznesovaja">https://t.me/biznesovaja</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>131633</td>
+        <td>23469</td>
+        <td>18.0</td>
+        <td>908</td>
+        <td>238</td>
+        <td>8 лет 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мастер Бизнеса</td>
+        <td><a href="https://t.me/master_businessa">https://t.me/master_businessa</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>130288</td>
+        <td>17808</td>
+        <td>14.0</td>
+        <td>901</td>
+        <td>3404</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Игра в бизнес</td>
+        <td><a href="https://t.me/GameInBzns">https://t.me/GameInBzns</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>130021</td>
+        <td>24213</td>
+        <td>19.0</td>
+        <td>1912</td>
+        <td>128</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Деловой вестник</td>
+        <td><a href="https://t.me/DelovoiVestnik">https://t.me/DelovoiVestnik</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>129179</td>
+        <td>23443</td>
+        <td>19.0</td>
+        <td>847</td>
+        <td>194</td>
+        <td>8 лет 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Закон Успеха | Бизнес, Подкасты</td>
+        <td><a href="https://t.me/zakonycnexatg">https://t.me/zakonycnexatg</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>126247</td>
+        <td>8398</td>
+        <td>7.0</td>
+        <td>-170</td>
+        <td>-1666</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес и Точка</td>
+        <td><a href="https://t.me/tochkabis">https://t.me/tochkabis</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>125390</td>
+        <td>20729</td>
+        <td>17.0</td>
+        <td>2855</td>
+        <td>7734</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Финансович | Бизнес блог</td>
+        <td><a href="https://t.me/financovich">https://t.me/financovich</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>120691</td>
+        <td>17058</td>
+        <td>15.0</td>
+        <td>689</td>
+        <td>3113</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес в России</td>
+        <td><a href="https://t.me/LentaBis">https://t.me/LentaBis</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>111321</td>
+        <td>14542</td>
+        <td>14.0</td>
+        <td>-2405</td>
+        <td>-12233</td>
+        <td>1 год 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Ритейл Медиа</td>
+        <td><a href="https://t.me/ec_retail">https://t.me/ec_retail</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>109875</td>
+        <td>14368</td>
+        <td>14.0</td>
+        <td>-1574</td>
+        <td>20724</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Финансовый инстинкт</td>
+        <td><a href="https://t.me/Finance_Instinct">https://t.me/Finance_Instinct</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>102025</td>
+        <td>23673</td>
+        <td>24.0</td>
+        <td>1140</td>
+        <td>5671</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес | Мотивация</td>
+        <td><a href="https://t.me/way_of_millionaire">https://t.me/way_of_millionaire</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>99400</td>
+        <td>7825</td>
+        <td>8.0</td>
+        <td>-82</td>
+        <td>1157</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>На маркетплейсах c Лео Шевченко ️</td>
+        <td><a href="https://t.me/namarketplacewithleo">https://t.me/namarketplacewithleo</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>98904</td>
+        <td>7157</td>
+        <td>8.0</td>
+        <td>100</td>
+        <td>118</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Sokolovskiy</td>
+        <td><a href="https://t.me/sokolay">https://t.me/sokolay</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>96508</td>
+        <td>34315</td>
+        <td>36.0</td>
+        <td>117</td>
+        <td>953</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дима Портнягин</td>
+        <td><a href="https://t.me/portnyaginlive">https://t.me/portnyaginlive</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>93106</td>
+        <td>19046</td>
+        <td>21.0</td>
+        <td>-259</td>
+        <td>-1084</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кухня ритейла</td>
+        <td><a href="https://t.me/retail_kitchen">https://t.me/retail_kitchen</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>90995</td>
+        <td>10762</td>
+        <td>12.0</td>
+        <td>-637</td>
+        <td>-1843</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Times | Финансы</td>
+        <td><a href="https://t.me/finance_money_news">https://t.me/finance_money_news</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>89299</td>
+        <td>15922</td>
+        <td>18.0</td>
+        <td>-555</td>
+        <td>-3149</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Авито для бизнеса</td>
+        <td><a href="https://t.me/avito_b2b">https://t.me/avito_b2b</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>88432</td>
+        <td>11313</td>
+        <td>13.0</td>
+        <td>-105</td>
+        <td>-2393</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MPGO</td>
+        <td><a href="https://t.me/mpgo_ru">https://t.me/mpgo_ru</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>87392</td>
+        <td>10027</td>
+        <td>12.0</td>
+        <td>121</td>
+        <td>1205</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тёмная сторона / Темнографика</td>
+        <td><a href="https://t.me/temno">https://t.me/temno</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>86455</td>
+        <td>6743</td>
+        <td>8.0</td>
+        <td>-104</td>
+        <td>-470</td>
+        <td>8 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TONIMAN/Бизнес▫️Финансы▫️Маркетинг</td>
+        <td><a href="https://t.me/finbusinesman">https://t.me/finbusinesman</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>82186</td>
+        <td>59268</td>
+        <td>73.0</td>
+        <td>1</td>
+        <td>1235</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стартап на завтрак</td>
+        <td><a href="https://t.me/startup_club24">https://t.me/startup_club24</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>82149</td>
+        <td>9260</td>
+        <td>12.0</td>
+        <td>-62</td>
+        <td>-200</td>
+        <td>5 лет 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>BUSINESS WOMAN</td>
+        <td><a href="https://t.me/businesswomanchannel">https://t.me/businesswomanchannel</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>80765</td>
+        <td>51621</td>
+        <td>64.0</td>
+        <td>2</td>
+        <td>18</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес на салфетке</td>
+        <td><a href="https://t.me/joinchat/NMcnygl7Pjc0YzUy">https://t.me/joinchat/NMcnygl7Pjc0YzUy</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>80082</td>
+        <td>8367</td>
+        <td>11.0</td>
+        <td>-322</td>
+        <td>-1326</td>
+        <td>10 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Люди PRO</td>
+        <td><a href="https://t.me/People_PRO_main">https://t.me/People_PRO_main</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>80064</td>
+        <td>14094</td>
+        <td>18.0</td>
+        <td>-330</td>
+        <td>-2538</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Иван Куриленко (Акулы Wildberries и Ozon)</td>
+        <td><a href="https://t.me/wbsharks">https://t.me/wbsharks</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>79906</td>
+        <td>9066</td>
+        <td>12.0</td>
+        <td>-180</td>
+        <td>-1198</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чирков Максим</td>
+        <td><a href="https://t.me/maxchirtop">https://t.me/maxchirtop</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>79864</td>
+        <td>12500</td>
+        <td>16.0</td>
+        <td>-829</td>
+        <td>8302</td>
+        <td>5 лет 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кухня Маркетплейсов</td>
+        <td><a href="https://t.me/vsedlyamp">https://t.me/vsedlyamp</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>78259</td>
+        <td>12179</td>
+        <td>16.0</td>
+        <td>-463</td>
+        <td>-2458</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Mikhail Tokovinin</td>
+        <td><a href="https://t.me/mtokovinin">https://t.me/mtokovinin</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>76589</td>
+        <td>46980</td>
+        <td>62.0</td>
+        <td>627</td>
+        <td>3164</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес-жилка</td>
+        <td><a href="https://t.me/JilkaB">https://t.me/JilkaB</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>75104</td>
+        <td>5945</td>
+        <td>8.0</td>
+        <td>-770</td>
+        <td>-3558</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DELO говорим</td>
+        <td><a href="https://t.me/DELO_govorim">https://t.me/DELO_govorim</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>74840</td>
+        <td>5453</td>
+        <td>8.0</td>
+        <td>-136</td>
+        <td>-391</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Женский бизнес</td>
+        <td><a href="https://t.me/joinchat/2wnIR_1Z8CJjYWJi">https://t.me/joinchat/2wnIR_1Z8CJjYWJi</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>74777</td>
+        <td>5296</td>
+        <td>8.0</td>
+        <td>-544</td>
+        <td>-2523</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Оскар Хартманн</td>
+        <td><a href="https://t.me/Oskar_Hartmann">https://t.me/Oskar_Hartmann</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>74605</td>
+        <td>23236</td>
+        <td>32.0</td>
+        <td>538</td>
+        <td>4007</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>GREAT LIFE UNION │БИЗНЕС</td>
+        <td><a href="https://t.me/great_life_union1">https://t.me/great_life_union1</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>71733</td>
+        <td>3668</td>
+        <td>6.0</td>
+        <td>-186</td>
+        <td>-733</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бизнес Идея</td>
+        <td><a href="https://t.me/joinchat/2jaPQox_FdhkZDdi">https://t.me/joinchat/2jaPQox_FdhkZDdi</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>71356</td>
+        <td>2659</td>
+        <td>4.0</td>
+        <td>-408</td>
+        <td>-1671</td>
+        <td>8 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>I’m CEO, beach</td>
+        <td><a href="https://t.me/imceobeach">https://t.me/imceobeach</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>71012</td>
+        <td>42707</td>
+        <td>61.0</td>
+        <td>-43</td>
+        <td>31</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс для предпринимателей</td>
+        <td><a href="https://t.me/yandexbusiness">https://t.me/yandexbusiness</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>69043</td>
+        <td>9034</td>
+        <td>14.0</td>
+        <td>1222</td>
+        <td>1887</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Создатель денег</td>
+        <td><a href="https://t.me/bigmoneycreator">https://t.me/bigmoneycreator</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>67839</td>
+        <td>18388</td>
+        <td>28.0</td>
+        <td>-46</td>
+        <td>19857</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стартапная | Тренды и бизнес</td>
+        <td><a href="https://t.me/startapnaya">https://t.me/startapnaya</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>67277</td>
+        <td>4683</td>
+        <td>7.0</td>
+        <td>-173</td>
+        <td>-779</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Миша про Telegram</td>
+        <td><a href="https://t.me/MishaproTelegram">https://t.me/MishaproTelegram</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>66131</td>
+        <td>8594</td>
+        <td>13.0</td>
+        <td>495</td>
+        <td>1750</td>
+        <td>2 года 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мышление Миллионера</td>
+        <td><a href="https://t.me/millionaire_thinks">https://t.me/millionaire_thinks</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>63972</td>
+        <td>8839</td>
+        <td>14.0</td>
+        <td>1475</td>
+        <td>8136</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Почерк Успеха</td>
+        <td><a href="https://t.me/RightSucess">https://t.me/RightSucess</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>63168</td>
+        <td>4143</td>
+        <td>7.0</td>
+        <td>2431</td>
+        <td>2717</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лайк про бьюти-бизнес</td>
+        <td><a href="https://t.me/like_new_challenge">https://t.me/like_new_challenge</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>62969</td>
+        <td>841</td>
+        <td>2.0</td>
+        <td>-267</td>
+        <td>-1419</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Business 🍏 Storm</td>
+        <td><a href="https://t.me/brainsstorming">https://t.me/brainsstorming</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>62539</td>
+        <td>21236</td>
+        <td>34.0</td>
+        <td>-59</td>
+        <td>-565</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Мой бизнес – малый бизнес</td>
+        <td><a href="https://t.me/moibiz">https://t.me/moibiz</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>61928</td>
+        <td>8830</td>
+        <td>15.0</td>
+        <td>2</td>
+        <td>178</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>INWAYUP | БИЗНЕС | ПОДКАСТЫ</td>
+        <td><a href="https://t.me/joinchat/tQx9drLDijAzYzg6">https://t.me/joinchat/tQx9drLDijAzYzg6</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>61592</td>
+        <td>4570</td>
+        <td>8.0</td>
+        <td>-656</td>
+        <td>2886</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>В школе этому не учат | Бизнес & Digital</td>
+        <td><a href="https://t.me/delaumoney">https://t.me/delaumoney</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>61212</td>
+        <td>2350</td>
+        <td>4.0</td>
+        <td>-163</td>
+        <td>-541</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Свой в Альфе</td>
+        <td><a href="https://t.me/joinchat/r7KHBGHxF-81M2Ey">https://t.me/joinchat/r7KHBGHxF-81M2Ey</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>60445</td>
+        <td>11491</td>
+        <td>19.0</td>
+        <td>-275</td>
+        <td>-1724</td>
+        <td>2 года 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>Real 💎 Cash</td>
+        <td><a href="https://t.me/DoRealCash">https://t.me/DoRealCash</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>59537</td>
+        <td>20424</td>
+        <td>35.0</td>
+        <td>6</td>
+        <td>-282</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стартап дня. Александр Горный.</td>
+        <td><a href="https://t.me/startupoftheday">https://t.me/startupoftheday</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>58510</td>
+        <td>7579</td>
+        <td>13.0</td>
+        <td>-144</td>
+        <td>-83</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PRO Бизнес</td>
+        <td><a href="https://t.me/PRO_biz_channel">https://t.me/PRO_biz_channel</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>57980</td>
+        <td>2107</td>
+        <td>4.0</td>
+        <td>-278</td>
+        <td>-1289</td>
+        <td>4 года 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Деньги из бетона — Недвижимость РФ</td>
+        <td><a href="https://t.me/if_estate">https://t.me/if_estate</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>57867</td>
+        <td>10235</td>
+        <td>18.0</td>
+        <td>210</td>
+        <td>1338</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>О Бизнесе</td>
+        <td><a href="https://t.me/business_ru">https://t.me/business_ru</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>57401</td>
+        <td>7365</td>
+        <td>13.0</td>
+        <td>-116</td>
+        <td>-569</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дана Малкина WB</td>
+        <td><a href="https://t.me/malkinawb">https://t.me/malkinawb</a></td>
+        <td>Бизнес и стартапы</td>
+        <td>57190</td>
+        <td>8239</td>
+        <td>15.0</td>
+        <td>-187</td>
+        <td>2715</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

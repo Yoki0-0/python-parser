@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Общий отчёт по категориям</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    nav { margin-bottom: 20px; }
+    nav a { display: inline-block; margin: 5px; padding: 5px 10px; background: #f0f0f0; border-radius: 4px; text-decoration: none; color: #333; }
+    nav a:hover { background: #ddd; }
+    iframe { width: 100%; height: 80vh; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Общий отчёт по категориям</h1>
+  <nav>
+<a href="#" onclick="loadReport('webs/Все категории Отчёт.html')">Все категории</a>
+<a href="#" onclick="loadReport('webs/Блоги Отчёт.html')">Блоги</a>
+<a href="#" onclick="loadReport('webs/Новости и СМИ Отчёт.html')">Новости и СМИ</a>
+<a href="#" onclick="loadReport('webs/Юмор и развлечения Отчёт.html')">Юмор и развлечения</a>
+<a href="#" onclick="loadReport('webs/Технологии Отчёт.html')">Технологии</a>
+<a href="#" onclick="loadReport('webs/Экономика Отчёт.html')">Экономика</a>
+<a href="#" onclick="loadReport('webs/Бизнес и стартапы Отчёт.html')">Бизнес и стартапы</a>
+<a href="#" onclick="loadReport('webs/Криптовалюты Отчёт.html')">Криптовалюты</a>
+<a href="#" onclick="loadReport('webs/Путешествия Отчёт.html')">Путешествия</a>
+<a href="#" onclick="loadReport('webs/Маркетинг, PR, реклама Отчёт.html')">Маркетинг, PR, реклама</a>
+<a href="#" onclick="loadReport('webs/Психология Отчёт.html')">Психология</a>
+<a href="#" onclick="loadReport('webs/Дизайн Отчёт.html')">Дизайн</a>
+<a href="#" onclick="loadReport('webs/Политика Отчёт.html')">Политика</a>
+<a href="#" onclick="loadReport('webs/Искусство Отчёт.html')">Искусство</a>
+<a href="#" onclick="loadReport('webs/Право Отчёт.html')">Право</a>
+<a href="#" onclick="loadReport('webs/Образование Отчёт.html')">Образование</a>
+<a href="#" onclick="loadReport('webs/Книги Отчёт.html')">Книги</a>
+<a href="#" onclick="loadReport('webs/Лингвистика Отчёт.html')">Лингвистика</a>
+<a href="#" onclick="loadReport('webs/Карьера Отчёт.html')">Карьера</a>
+<a href="#" onclick="loadReport('webs/Познавательное Отчёт.html')">Познавательное</a>
+<a href="#" onclick="loadReport('webs/Курсы и гайды Отчёт.html')">Курсы и гайды</a>
+<a href="#" onclick="loadReport('webs/Спорт Отчёт.html')">Спорт</a>
+<a href="#" onclick="loadReport('webs/Мода и красота Отчёт.html')">Мода и красота</a>
+<a href="#" onclick="loadReport('webs/Медицина Отчёт.html')">Медицина</a>
+<a href="#" onclick="loadReport('webs/Здоровье и Фитнес Отчёт.html')">Здоровье и Фитнес</a>
+<a href="#" onclick="loadReport('webs/Картинки и фото Отчёт.html')">Картинки и фото</a>
+<a href="#" onclick="loadReport('webs/Софт и приложения Отчёт.html')">Софт и приложения</a>
+<a href="#" onclick="loadReport('webs/Видео и фильмы Отчёт.html')">Видео и фильмы</a>
+<a href="#" onclick="loadReport('webs/Музыка Отчёт.html')">Музыка</a>
+<a href="#" onclick="loadReport('webs/Игры Отчёт.html')">Игры</a>
+<a href="#" onclick="loadReport('webs/Еда и кулинария Отчёт.html')">Еда и кулинария</a>
+<a href="#" onclick="loadReport('webs/Цитаты Отчёт.html')">Цитаты</a>
+<a href="#" onclick="loadReport('webs/Рукоделие Отчёт.html')">Рукоделие</a>
+<a href="#" onclick="loadReport('webs/Семья и дети Отчёт.html')">Семья и дети</a>
+<a href="#" onclick="loadReport('webs/Природа Отчёт.html')">Природа</a>
+<a href="#" onclick="loadReport('webs/Интерьер и строительство Отчёт.html')">Интерьер и строительство</a>
+<a href="#" onclick="loadReport('webs/Telegram Отчёт.html')">Telegram</a>
+<a href="#" onclick="loadReport('webs/Инстаграм Отчёт.html')">Инстаграм</a>
+<a href="#" onclick="loadReport('webs/Продажи Отчёт.html')">Продажи</a>
+<a href="#" onclick="loadReport('webs/Транспорт Отчёт.html')">Транспорт</a>
+<a href="#" onclick="loadReport('webs/Религия Отчёт.html')">Религия</a>
+<a href="#" onclick="loadReport('webs/Эзотерика Отчёт.html')">Эзотерика</a>
+<a href="#" onclick="loadReport('webs/Даркнет Отчёт.html')">Даркнет</a>
+<a href="#" onclick="loadReport('webs/Букмекерство Отчёт.html')">Букмекерство</a>
+<a href="#" onclick="loadReport('webs/Шок-контент Отчёт.html')">Шок-контент</a>
+<a href="#" onclick="loadReport('webs/Эротика Отчёт.html')">Эротика</a>
+<a href="#" onclick="loadReport('webs/Для взрослых Отчёт.html')">Для взрослых</a>
+<a href="#" onclick="loadReport('webs/Другое Отчёт.html')">Другое</a>
+
+  </nav>
+  <iframe id="reportFrame" src=""></iframe>
+
+  <script>
+    function loadReport(file) {
+      document.getElementById("reportFrame").src = file;
+    }
+  </script>
+</body>
+</html>

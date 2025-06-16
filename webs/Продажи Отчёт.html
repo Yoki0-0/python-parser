@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>По Блату</td>
+        <td><a href="https://t.me/poblat">https://t.me/poblat</a></td>
+        <td>Продажи</td>
+        <td>1438186</td>
+        <td>73134</td>
+        <td>6.0</td>
+        <td>-27007</td>
+        <td>41286</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Халявщики - Молния</td>
+        <td><a href="https://t.me/joinchat/AAAAAFBMygPj1a66vL0Itg">https://t.me/joinchat/AAAAAFBMygPj1a66vL0Itg</a></td>
+        <td>Продажи</td>
+        <td>1210551</td>
+        <td>52943</td>
+        <td>5.0</td>
+        <td>-6875</td>
+        <td>-9207</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Заяц | Акции | Скидки</td>
+        <td><a href="https://t.me/joinchat/AAAAAFJrDnftVdZXwOb6Tg">https://t.me/joinchat/AAAAAFJrDnftVdZXwOb6Tg</a></td>
+        <td>Продажи</td>
+        <td>1099702</td>
+        <td>57385</td>
+        <td>6.0</td>
+        <td>-7293</td>
+        <td>-11408</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WB Sniper | Находки с Wildberries | Скидки | Акции</td>
+        <td><a href="https://t.me/joinchat/H5PdPxdDJvVkZjk6">https://t.me/joinchat/H5PdPxdDJvVkZjk6</a></td>
+        <td>Продажи</td>
+        <td>1034809</td>
+        <td>73276</td>
+        <td>8.0</td>
+        <td>13311</td>
+        <td>25541</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>OZON</td>
+        <td><a href="https://t.me/ozonru">https://t.me/ozonru</a></td>
+        <td>Продажи</td>
+        <td>1001201</td>
+        <td>144603</td>
+        <td>15.0</td>
+        <td>-15824</td>
+        <td>-7721</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВЕЩИ ИЗ ВИДЕО</td>
+        <td><a href="https://t.me/joinchat/rzNRnT8VyDc2MmEx">https://t.me/joinchat/rzNRnT8VyDc2MmEx</a></td>
+        <td>Продажи</td>
+        <td>925905</td>
+        <td>44589</td>
+        <td>5.0</td>
+        <td>375</td>
+        <td>2449</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Мегамаркет</td>
+        <td><a href="https://t.me/megamrkt">https://t.me/megamrkt</a></td>
+        <td>Продажи</td>
+        <td>785374</td>
+        <td>78418</td>
+        <td>10.0</td>
+        <td>-5713</td>
+        <td>-31728</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Wildberries | находки</td>
+        <td><a href="https://t.me/joinchat/5Tfst_xanm8xNTVi">https://t.me/joinchat/5Tfst_xanm8xNTVi</a></td>
+        <td>Продажи</td>
+        <td>716594</td>
+        <td>101294</td>
+        <td>15.0</td>
+        <td>13718</td>
+        <td>22814</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВЫГОДА</td>
+        <td><a href="https://t.me/joinchat/LAW3vJa0s_JkZjY0">https://t.me/joinchat/LAW3vJa0s_JkZjY0</a></td>
+        <td>Продажи</td>
+        <td>525482</td>
+        <td>50858</td>
+        <td>10.0</td>
+        <td>-5718</td>
+        <td>-9626</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СЛИВ ХАЛЯВЫ 🎁</td>
+        <td><a href="https://t.me/joinchat/3t4Rg3QoSjMyMGNi">https://t.me/joinchat/3t4Rg3QoSjMyMGNi</a></td>
+        <td>Продажи</td>
+        <td>494010</td>
+        <td>18990</td>
+        <td>4.0</td>
+        <td>-3830</td>
+        <td>-17870</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Альфа-Выгодно</td>
+        <td><a href="https://t.me/alfa_vygodno">https://t.me/alfa_vygodno</a></td>
+        <td>Продажи</td>
+        <td>488676</td>
+        <td>59940</td>
+        <td>13.0</td>
+        <td>-7168</td>
+        <td>-11030</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Маркет</td>
+        <td><a href="https://t.me/yndx_market">https://t.me/yndx_market</a></td>
+        <td>Продажи</td>
+        <td>447438</td>
+        <td>63016</td>
+        <td>15.0</td>
+        <td>-8237</td>
+        <td>-21950</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Развлечения с кэшбэком</td>
+        <td><a href="https://t.me/cashback_afisha">https://t.me/cashback_afisha</a></td>
+        <td>Продажи</td>
+        <td>446052</td>
+        <td>44479</td>
+        <td>10.0</td>
+        <td>-7169</td>
+        <td>-10650</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Смотри что нашли</td>
+        <td><a href="https://t.me/joinchat/cI6DHehQ1v8zOTAy">https://t.me/joinchat/cI6DHehQ1v8zOTAy</a></td>
+        <td>Продажи</td>
+        <td>428539</td>
+        <td>7530</td>
+        <td>2.0</td>
+        <td>18948</td>
+        <td>22002</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лента</td>
+        <td><a href="https://t.me/Lentacom">https://t.me/Lentacom</a></td>
+        <td>Продажи</td>
+        <td>421751</td>
+        <td>115296</td>
+        <td>28.0</td>
+        <td>-154</td>
+        <td>11102</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Панда | Акции | Скидки</td>
+        <td><a href="https://t.me/joinchat/ckWyQxLMSd82MmU6">https://t.me/joinchat/ckWyQxLMSd82MmU6</a></td>
+        <td>Продажи</td>
+        <td>416785</td>
+        <td>57167</td>
+        <td>14.0</td>
+        <td>-4019</td>
+        <td>15391</td>
+        <td>8 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Нашли дешевле!</td>
+        <td><a href="https://t.me/joinchat/zyPuvT0wmmE0MTYy">https://t.me/joinchat/zyPuvT0wmmE0MTYy</a></td>
+        <td>Продажи</td>
+        <td>404261</td>
+        <td>12175</td>
+        <td>3.0</td>
+        <td>-1289</td>
+        <td>-7876</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мой SPAR</td>
+        <td><a href="https://t.me/myspar">https://t.me/myspar</a></td>
+        <td>Продажи</td>
+        <td>370627</td>
+        <td>21155</td>
+        <td>6.0</td>
+        <td>5792</td>
+        <td>22601</td>
+        <td>5 лет 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Волшебный wildberries</td>
+        <td><a href="https://t.me/joinchat/ZigMGv2d6WFmZTQy">https://t.me/joinchat/ZigMGv2d6WFmZTQy</a></td>
+        <td>Продажи</td>
+        <td>366206</td>
+        <td>12788</td>
+        <td>4.0</td>
+        <td>-3501</td>
+        <td>-13592</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Спортмастер</td>
+        <td><a href="https://t.me/sportmasterofficial">https://t.me/sportmasterofficial</a></td>
+        <td>Продажи</td>
+        <td>363959</td>
+        <td>34538</td>
+        <td>10.0</td>
+        <td>821</td>
+        <td>-5482</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>EASY SNEACKERS💚</td>
+        <td><a href="https://t.me/joinchat/zkKzJThD2TNmNzRi">https://t.me/joinchat/zkKzJThD2TNmNzRi</a></td>
+        <td>Продажи</td>
+        <td>361430</td>
+        <td>12831</td>
+        <td>4.0</td>
+        <td>30</td>
+        <td>4926</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Халявщики</td>
+        <td><a href="https://t.me/halyavshiki">https://t.me/halyavshiki</a></td>
+        <td>Продажи</td>
+        <td>336169</td>
+        <td>14868</td>
+        <td>5.0</td>
+        <td>-861</td>
+        <td>-924</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SKIDKI_MAMA</td>
+        <td><a href="https://t.me/joinchat/5ShvhkiTCkBhODcy">https://t.me/joinchat/5ShvhkiTCkBhODcy</a></td>
+        <td>Продажи</td>
+        <td>327628</td>
+        <td>23201</td>
+        <td>8.0</td>
+        <td>-1707</td>
+        <td>-4607</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AliExpress для мужиков</td>
+        <td><a href="https://t.me/joinchat/lwlLqVkp2i84ZjAy">https://t.me/joinchat/lwlLqVkp2i84ZjAy</a></td>
+        <td>Продажи</td>
+        <td>321374</td>
+        <td>53249</td>
+        <td>17.0</td>
+        <td>1635</td>
+        <td>25894</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПромоКот — Халява Промокоды Акции</td>
+        <td><a href="https://t.me/skidki">https://t.me/skidki</a></td>
+        <td>Продажи</td>
+        <td>320336</td>
+        <td>4301</td>
+        <td>2.0</td>
+        <td>-2729</td>
+        <td>-13111</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Aliexpress Халява | Скидки | Китай</td>
+        <td><a href="https://t.me/alikzbs_aliexpress">https://t.me/alikzbs_aliexpress</a></td>
+        <td>Продажи</td>
+        <td>302641</td>
+        <td>17859</td>
+        <td>6.0</td>
+        <td>-1054</td>
+        <td>-9056</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Товаропоиск</td>
+        <td><a href="https://t.me/joinchat/5nRh2wShfalmZDUy">https://t.me/joinchat/5nRh2wShfalmZDUy</a></td>
+        <td>Продажи</td>
+        <td>277053</td>
+        <td>7831</td>
+        <td>3.0</td>
+        <td>-3973</td>
+        <td>-8426</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТАКОЕ НАМ НАДО</td>
+        <td><a href="https://t.me/takoenamnado">https://t.me/takoenamnado</a></td>
+        <td>Продажи</td>
+        <td>276785</td>
+        <td>24450</td>
+        <td>9.0</td>
+        <td>-2151</td>
+        <td>-9866</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Уютный Wildberries</td>
+        <td><a href="https://t.me/joinchat/rEYS4G1VDmA4ZTky">https://t.me/joinchat/rEYS4G1VDmA4ZTky</a></td>
+        <td>Продажи</td>
+        <td>275338</td>
+        <td>15989</td>
+        <td>6.0</td>
+        <td>771</td>
+        <td>18876</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>AliExpress - Халявщики</td>
+        <td><a href="https://t.me/HalyavshikiAli">https://t.me/HalyavshikiAli</a></td>
+        <td>Продажи</td>
+        <td>275205</td>
+        <td>7174</td>
+        <td>3.0</td>
+        <td>-1353</td>
+        <td>-3278</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>По Карману🏷</td>
+        <td><a href="https://t.me/joinchat/AAAAAFPg4kZOlUymC51G5Q">https://t.me/joinchat/AAAAAFPg4kZOlUymC51G5Q</a></td>
+        <td>Продажи</td>
+        <td>262747</td>
+        <td>9796</td>
+        <td>4.0</td>
+        <td>552</td>
+        <td>7452</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мужской Aliexpress</td>
+        <td><a href="https://t.me/joinchat/Brd36C76Lt9mZThi">https://t.me/joinchat/Brd36C76Lt9mZThi</a></td>
+        <td>Продажи</td>
+        <td>261592</td>
+        <td>61046</td>
+        <td>24.0</td>
+        <td>6949</td>
+        <td>22339</td>
+        <td>8 месяцев 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>СКИДКИ ДНЯ С WILDBERRIES!</td>
+        <td><a href="https://t.me/joinchat/snzZuMQ1lbM0NzEy">https://t.me/joinchat/snzZuMQ1lbM0NzEy</a></td>
+        <td>Продажи</td>
+        <td>251712</td>
+        <td>15826</td>
+        <td>7.0</td>
+        <td>19</td>
+        <td>-4637</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВСЯ ХАЛЯВА</td>
+        <td><a href="https://t.me/joinchat/Od9pUbQPFSxlZmMy">https://t.me/joinchat/Od9pUbQPFSxlZmMy</a></td>
+        <td>Продажи</td>
+        <td>250055</td>
+        <td>18645</td>
+        <td>8.0</td>
+        <td>-2931</td>
+        <td>-9493</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скидки на Маркете</td>
+        <td><a href="https://t.me/marketbenefit">https://t.me/marketbenefit</a></td>
+        <td>Продажи</td>
+        <td>236524</td>
+        <td>30735</td>
+        <td>13.0</td>
+        <td>-1271</td>
+        <td>10493</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Первый Бесплатный!</td>
+        <td><a href="https://t.me/joinchat/gvhV9TV3AjdjNzJi">https://t.me/joinchat/gvhV9TV3AjdjNzJi</a></td>
+        <td>Продажи</td>
+        <td>233978</td>
+        <td>10792</td>
+        <td>5.0</td>
+        <td>-30</td>
+        <td>1231</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Hot WB | Находки с Wildberries | Скидки | Акции</td>
+        <td><a href="https://t.me/joinchat/GzRKv7gyQpcwYzE0">https://t.me/joinchat/GzRKv7gyQpcwYzE0</a></td>
+        <td>Продажи</td>
+        <td>232943</td>
+        <td>10582</td>
+        <td>5.0</td>
+        <td>-2308</td>
+        <td>-13602</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WB Купоны</td>
+        <td><a href="https://t.me/joinchat/d-h4noCdPLk4ZDRi">https://t.me/joinchat/d-h4noCdPLk4ZDRi</a></td>
+        <td>Продажи</td>
+        <td>230763</td>
+        <td>26008</td>
+        <td>12.0</td>
+        <td>-6996</td>
+        <td>14697</td>
+        <td>7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Находочка WB, OZON и Яндекс.Маркет | Скидки | Акции</td>
+        <td><a href="https://t.me/joinchat/Xaatj9s4sEFlM2Ey">https://t.me/joinchat/Xaatj9s4sEFlM2Ey</a></td>
+        <td>Продажи</td>
+        <td>229455</td>
+        <td>16697</td>
+        <td>8.0</td>
+        <td>3493</td>
+        <td>4551</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Задаром</td>
+        <td><a href="https://t.me/zadarom">https://t.me/zadarom</a></td>
+        <td>Продажи</td>
+        <td>226809</td>
+        <td>11428</td>
+        <td>5.0</td>
+        <td>-1965</td>
+        <td>-10533</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пушка | Все промокоды | Скидки | Акции</td>
+        <td><a href="https://t.me/joinchat/32qGOBzCvsdkNjRi">https://t.me/joinchat/32qGOBzCvsdkNjRi</a></td>
+        <td>Продажи</td>
+        <td>225985</td>
+        <td>16793</td>
+        <td>8.0</td>
+        <td>4821</td>
+        <td>25556</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рынок Садовод Поставщики</td>
+        <td><a href="https://t.me/sadovodk">https://t.me/sadovodk</a></td>
+        <td>Продажи</td>
+        <td>225832</td>
+        <td>4535</td>
+        <td>2.0</td>
+        <td>-2191</td>
+        <td>-11641</td>
+        <td>8 лет 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Китайская Находка</td>
+        <td><a href="https://t.me/joinchat/wzBsic5I5QI0Yjli">https://t.me/joinchat/wzBsic5I5QI0Yjli</a></td>
+        <td>Продажи</td>
+        <td>223635</td>
+        <td>27898</td>
+        <td>13.0</td>
+        <td>-2214</td>
+        <td>-10472</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SalesMap🔥</td>
+        <td><a href="https://t.me/joinchat/VI8LM57uX2cxOTAy">https://t.me/joinchat/VI8LM57uX2cxOTAy</a></td>
+        <td>Продажи</td>
+        <td>220951</td>
+        <td>7569</td>
+        <td>4.0</td>
+        <td>-1695</td>
+        <td>-9100</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Халява от Маркета WB Ozon ЯМ</td>
+        <td><a href="https://t.me/joinchat/5u2VYrmEgT5iYWZi">https://t.me/joinchat/5u2VYrmEgT5iYWZi</a></td>
+        <td>Продажи</td>
+        <td>219015</td>
+        <td>9434</td>
+        <td>5.0</td>
+        <td>-1157</td>
+        <td>-5219</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Купоны WB OZON</td>
+        <td><a href="https://t.me/yeueheessa">https://t.me/yeueheessa</a></td>
+        <td>Продажи</td>
+        <td>215593</td>
+        <td>1</td>
+        <td>None</td>
+        <td>11145</td>
+        <td>8125</td>
+        <td>10 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>METRO</td>
+        <td><a href="https://t.me/metroccrus">https://t.me/metroccrus</a></td>
+        <td>Продажи</td>
+        <td>215376</td>
+        <td>25688</td>
+        <td>12.0</td>
+        <td>-747</td>
+        <td>-3238</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Товары на каждый день</td>
+        <td><a href="https://t.me/joinchat/RtBvfwszmXA1ZDcy">https://t.me/joinchat/RtBvfwszmXA1ZDcy</a></td>
+        <td>Продажи</td>
+        <td>213437</td>
+        <td>60041</td>
+        <td>29.0</td>
+        <td>-5667</td>
+        <td>-23150</td>
+        <td>11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ХАЛЯВЩИК скидки WB</td>
+        <td><a href="https://t.me/joinchat/mO0DmQcrzbY1YzBi">https://t.me/joinchat/mO0DmQcrzbY1YzBi</a></td>
+        <td>Продажи</td>
+        <td>213454</td>
+        <td>7678</td>
+        <td>4.0</td>
+        <td>-1289</td>
+        <td>-6146</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Находки Образы WB</td>
+        <td><a href="https://t.me/joinchat/x3wKRk49hvI3MjBi">https://t.me/joinchat/x3wKRk49hvI3MjBi</a></td>
+        <td>Продажи</td>
+        <td>212857</td>
+        <td>1463</td>
+        <td>1.0</td>
+        <td>-2432</td>
+        <td>-10936</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СЕКРЕТЫ</td>
+        <td><a href="https://t.me/joinchat/BZJ1z23J4qwxM2E8">https://t.me/joinchat/BZJ1z23J4qwxM2E8</a></td>
+        <td>Продажи</td>
+        <td>212727</td>
+        <td>11149</td>
+        <td>6.0</td>
+        <td>-1917</td>
+        <td>-9496</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Alishopping_guru Обзоры</td>
+        <td><a href="https://t.me/alishopping_guru">https://t.me/alishopping_guru</a></td>
+        <td>Продажи</td>
+        <td>208953</td>
+        <td>35937</td>
+        <td>18.0</td>
+        <td>-751</td>
+        <td>-2994</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Халявщик</td>
+        <td><a href="https://t.me/joinchat/_JqPCPI89TRjMTdi">https://t.me/joinchat/_JqPCPI89TRjMTdi</a></td>
+        <td>Продажи</td>
+        <td>208927</td>
+        <td>8303</td>
+        <td>4.0</td>
+        <td>-1860</td>
+        <td>-5976</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>За полцены с WILDBERRIES!</td>
+        <td><a href="https://t.me/joinchat/uUMwQdXiCPtkODVi">https://t.me/joinchat/uUMwQdXiCPtkODVi</a></td>
+        <td>Продажи</td>
+        <td>208845</td>
+        <td>18101</td>
+        <td>9.0</td>
+        <td>6704</td>
+        <td>16643</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Платежная система «Мир»</td>
+        <td><a href="https://t.me/promomir">https://t.me/promomir</a></td>
+        <td>Продажи</td>
+        <td>203396</td>
+        <td>40014</td>
+        <td>20.0</td>
+        <td>-632</td>
+        <td>-3486</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SUNLIGHT</td>
+        <td><a href="https://t.me/sunlight_brilliant">https://t.me/sunlight_brilliant</a></td>
+        <td>Продажи</td>
+        <td>201223</td>
+        <td>40441</td>
+        <td>21.0</td>
+        <td>12995</td>
+        <td>55005</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ох уж этот Wildberries</td>
+        <td><a href="https://t.me/joinchat/-NFfmNkQwp9kNzNi">https://t.me/joinchat/-NFfmNkQwp9kNzNi</a></td>
+        <td>Продажи</td>
+        <td>195242</td>
+        <td>13269</td>
+        <td>7.0</td>
+        <td>7748</td>
+        <td>12435</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГАДЖЕТЫ ДЛЯ ЖИЗНИ</td>
+        <td><a href="https://t.me/gadgets_and_life">https://t.me/gadgets_and_life</a></td>
+        <td>Продажи</td>
+        <td>188435</td>
+        <td>16236</td>
+        <td>9.0</td>
+        <td>-1503</td>
+        <td>-6916</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ULTIMA: Промокоды - Скидки - Акции</td>
+        <td><a href="https://t.me/skidki_promokody_akcii">https://t.me/skidki_promokody_akcii</a></td>
+        <td>Продажи</td>
+        <td>186691</td>
+        <td>2761</td>
+        <td>2.0</td>
+        <td>-1403</td>
+        <td>-3062</td>
+        <td>3 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>🇲​🇦​🇬​🇦​🇿​🇮​🇳​ 🍏</td>
+        <td><a href="https://t.me/joinchat/AAAAAEYbXfJAbuseXYQ7wA">https://t.me/joinchat/AAAAAEYbXfJAbuseXYQ7wA</a></td>
+        <td>Продажи</td>
+        <td>185830</td>
+        <td>7070</td>
+        <td>4.0</td>
+        <td>-129</td>
+        <td>1435</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скидочник 🏷</td>
+        <td><a href="https://t.me/joinchat/sudj2ZsEt2diYTdi">https://t.me/joinchat/sudj2ZsEt2diYTdi</a></td>
+        <td>Продажи</td>
+        <td>184364</td>
+        <td>3581</td>
+        <td>2.0</td>
+        <td>-1534</td>
+        <td>-7467</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Просто Wildberries</td>
+        <td><a href="https://t.me/joinchat/o1tOHrn18844ODgy">https://t.me/joinchat/o1tOHrn18844ODgy</a></td>
+        <td>Продажи</td>
+        <td>184302</td>
+        <td>8974</td>
+        <td>5.0</td>
+        <td>-1833</td>
+        <td>-9023</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>kari</td>
+        <td><a href="https://t.me/kariofficial">https://t.me/kariofficial</a></td>
+        <td>Продажи</td>
+        <td>183583</td>
+        <td>18889</td>
+        <td>11.0</td>
+        <td>2632</td>
+        <td>2776</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Point Free</td>
+        <td><a href="https://t.me/joinchat/AAAAAE3HjCVdqqiA2T71YA">https://t.me/joinchat/AAAAAE3HjCVdqqiA2T71YA</a></td>
+        <td>Продажи</td>
+        <td>181996</td>
+        <td>3533</td>
+        <td>2.0</td>
+        <td>-162</td>
+        <td>-3885</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Покупочно | Промокоды | Акции | Скидки</td>
+        <td><a href="https://t.me/joinchat/Ctn2uScX-BYxOTRi">https://t.me/joinchat/Ctn2uScX-BYxOTRi</a></td>
+        <td>Продажи</td>
+        <td>180387</td>
+        <td>5560</td>
+        <td>4.0</td>
+        <td>1534</td>
+        <td>4539</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WB • ДЁШЕВО И ТОЧКА</td>
+        <td><a href="https://t.me/joinchat/d7xZViZm_vJmOGEy">https://t.me/joinchat/d7xZViZm_vJmOGEy</a></td>
+        <td>Продажи</td>
+        <td>178130</td>
+        <td>14464</td>
+        <td>9.0</td>
+        <td>-1254</td>
+        <td>-5206</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WB Search</td>
+        <td><a href="https://t.me/joinchat/dCtG63EDSKwzMzIy">https://t.me/joinchat/dCtG63EDSKwzMzIy</a></td>
+        <td>Продажи</td>
+        <td>177007</td>
+        <td>7072</td>
+        <td>4.0</td>
+        <td>-52</td>
+        <td>-8207</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PROVODOFF | Наушники | Пылесосы | Смарт-часы</td>
+        <td><a href="https://t.me/joinchat/3LX-cVdhuihiZGRi">https://t.me/joinchat/3LX-cVdhuihiZGRi</a></td>
+        <td>Продажи</td>
+        <td>174931</td>
+        <td>4120</td>
+        <td>3.0</td>
+        <td>-433</td>
+        <td>-2341</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WB Даром</td>
+        <td><a href="https://t.me/joinchat/KCDumd1dN0hkNjFi">https://t.me/joinchat/KCDumd1dN0hkNjFi</a></td>
+        <td>Продажи</td>
+        <td>174399</td>
+        <td>14601</td>
+        <td>9.0</td>
+        <td>1591</td>
+        <td>8509</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Промокоды сотрудников</td>
+        <td><a href="https://t.me/joinchat/6mtyvQpUpDQ0MjNi">https://t.me/joinchat/6mtyvQpUpDQ0MjNi</a></td>
+        <td>Продажи</td>
+        <td>172562</td>
+        <td>2734</td>
+        <td>2.0</td>
+        <td>-1354</td>
+        <td>-6344</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Китайцы делают ВЕЩИ</td>
+        <td><a href="https://t.me/joinchat/PAulqAIPLNYxZDgy">https://t.me/joinchat/PAulqAIPLNYxZDgy</a></td>
+        <td>Продажи</td>
+        <td>168690</td>
+        <td>20009</td>
+        <td>12.0</td>
+        <td>-654</td>
+        <td>-3879</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WB Radar</td>
+        <td><a href="https://t.me/joinchat/DVHuxCuQ2b0zMTE6">https://t.me/joinchat/DVHuxCuQ2b0zMTE6</a></td>
+        <td>Продажи</td>
+        <td>167007</td>
+        <td>5768</td>
+        <td>4.0</td>
+        <td>-1894</td>
+        <td>-8786</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AIRPRO | Реплики Apple и Dyson</td>
+        <td><a href="https://t.me/joinchat/fLlMCt0LcsYxMDhi">https://t.me/joinchat/fLlMCt0LcsYxMDhi</a></td>
+        <td>Продажи</td>
+        <td>166301</td>
+        <td>4872</td>
+        <td>3.0</td>
+        <td>949</td>
+        <td>263</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ИРЭН: Охота за скидками</td>
+        <td><a href="https://t.me/iren_on_sale">https://t.me/iren_on_sale</a></td>
+        <td>Продажи</td>
+        <td>163965</td>
+        <td>90845</td>
+        <td>56.0</td>
+        <td>-26821</td>
+        <td>-52767</td>
+        <td>2 года 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тот самый Wildberries | Скидки WB</td>
+        <td><a href="https://t.me/joinchat/4uOC2KVfmK80YTQy">https://t.me/joinchat/4uOC2KVfmK80YTQy</a></td>
+        <td>Продажи</td>
+        <td>162000</td>
+        <td>2103</td>
+        <td>2.0</td>
+        <td>-1639</td>
+        <td>-7072</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лавка Чудес Канал☀️</td>
+        <td><a href="https://t.me/joinchat/QyYwxFBFsTRiZWQy">https://t.me/joinchat/QyYwxFBFsTRiZWQy</a></td>
+        <td>Продажи</td>
+        <td>158959</td>
+        <td>29626</td>
+        <td>19.0</td>
+        <td>393</td>
+        <td>724</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WILDBERRIES OFFICIAL</td>
+        <td><a href="https://t.me/wildberriesru_official">https://t.me/wildberriesru_official</a></td>
+        <td>Продажи</td>
+        <td>156189</td>
+        <td>17687</td>
+        <td>12.0</td>
+        <td>2544</td>
+        <td>993</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Haunt</td>
+        <td><a href="https://t.me/joinchat/3ZtavQGGkuhjYTgy">https://t.me/joinchat/3ZtavQGGkuhjYTgy</a></td>
+        <td>Продажи</td>
+        <td>154995</td>
+        <td>3985</td>
+        <td>3.0</td>
+        <td>-1261</td>
+        <td>-398</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Pepper.ru — Свежие Скидки и Промокоды</td>
+        <td><a href="https://t.me/pepperru">https://t.me/pepperru</a></td>
+        <td>Продажи</td>
+        <td>153226</td>
+        <td>43252</td>
+        <td>29.0</td>
+        <td>23</td>
+        <td>183</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Smart</td>
+        <td><a href="https://t.me/smart_discounter">https://t.me/smart_discounter</a></td>
+        <td>Продажи</td>
+        <td>151947</td>
+        <td>40826</td>
+        <td>27.0</td>
+        <td>225</td>
+        <td>-5215</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТОВАРЫ ДЛЯ ВСЕХ</td>
+        <td><a href="https://t.me/joinchat/It9vLqGsMrQwMjRi">https://t.me/joinchat/It9vLqGsMrQwMjRi</a></td>
+        <td>Продажи</td>
+        <td>149720</td>
+        <td>7015</td>
+        <td>5.0</td>
+        <td>3677</td>
+        <td>4984</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>585 Золотой</td>
+        <td><a href="https://t.me/zolotoy585club">https://t.me/zolotoy585club</a></td>
+        <td>Продажи</td>
+        <td>148718</td>
+        <td>23181</td>
+        <td>16.0</td>
+        <td>4721</td>
+        <td>19187</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дешёвые товары WB 🛍</td>
+        <td><a href="https://t.me/joinchat/mLdO9yVgoggwOGQy">https://t.me/joinchat/mLdO9yVgoggwOGQy</a></td>
+        <td>Продажи</td>
+        <td>148666</td>
+        <td>7062</td>
+        <td>5.0</td>
+        <td>-189</td>
+        <td>247</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Даром из Китая</td>
+        <td><a href="https://t.me/joinchat/xSac3dcBvykyMjIy">https://t.me/joinchat/xSac3dcBvykyMjIy</a></td>
+        <td>Продажи</td>
+        <td>146690</td>
+        <td>38693</td>
+        <td>27.0</td>
+        <td>-1932</td>
+        <td>50324</td>
+        <td>5 месяцев 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Point Sale | Находки с Wildberries | Скидки | Акции</td>
+        <td><a href="https://t.me/joinchat/W0fLr7TK2EU1MTk6">https://t.me/joinchat/W0fLr7TK2EU1MTk6</a></td>
+        <td>Продажи</td>
+        <td>146416</td>
+        <td>5013</td>
+        <td>4.0</td>
+        <td>-1470</td>
+        <td>-5260</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Big Sale Apple</td>
+        <td><a href="https://t.me/BigSaleApple">https://t.me/BigSaleApple</a></td>
+        <td>Продажи</td>
+        <td>144938</td>
+        <td>82019</td>
+        <td>57.0</td>
+        <td>-3915</td>
+        <td>-29155</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Xiaomi | Сяоми | Скидки | Aliexpress</td>
+        <td><a href="https://t.me/xiaomi_tg">https://t.me/xiaomi_tg</a></td>
+        <td>Продажи</td>
+        <td>142615</td>
+        <td>13208</td>
+        <td>10.0</td>
+        <td>-492</td>
+        <td>-662</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лучшие товары с Wildberries 💜</td>
+        <td><a href="https://t.me/joinchat/dDqAC4OkjXtmOTY6">https://t.me/joinchat/dDqAC4OkjXtmOTY6</a></td>
+        <td>Продажи</td>
+        <td>140742</td>
+        <td>19405</td>
+        <td>14.0</td>
+        <td>2</td>
+        <td>6117</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>пенное</td>
+        <td><a href="https://t.me/joinchat/S02-o94Nl4KkXEGK">https://t.me/joinchat/S02-o94Nl4KkXEGK</a></td>
+        <td>Продажи</td>
+        <td>139428</td>
+        <td>36800</td>
+        <td>27.0</td>
+        <td>296</td>
+        <td>121</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Авито</td>
+        <td><a href="https://t.me/avito">https://t.me/avito</a></td>
+        <td>Продажи</td>
+        <td>137916</td>
+        <td>38255</td>
+        <td>28.0</td>
+        <td>4230</td>
+        <td>58142</td>
+        <td>6 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SHOPARES</td>
+        <td><a href="https://t.me/joinchat/zrIrbSYG3LUxMDM6">https://t.me/joinchat/zrIrbSYG3LUxMDM6</a></td>
+        <td>Продажи</td>
+        <td>137655</td>
+        <td>4208</td>
+        <td>4.0</td>
+        <td>-1237</td>
+        <td>-5671</td>
+        <td>5 лет 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Новинки на Wildberries</td>
+        <td><a href="https://t.me/naxodki_na_wb">https://t.me/naxodki_na_wb</a></td>
+        <td>Продажи</td>
+        <td>136540</td>
+        <td>5366</td>
+        <td>4.0</td>
+        <td>3449</td>
+        <td>1724</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Fix Price Россия</td>
+        <td><a href="https://t.me/fixprice_russia">https://t.me/fixprice_russia</a></td>
+        <td>Продажи</td>
+        <td>136537</td>
+        <td>19799</td>
+        <td>15.0</td>
+        <td>-555</td>
+        <td>4463</td>
+        <td>5 лет 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Х5 Клуб — Умножаем выгоду</td>
+        <td><a href="https://t.me/x5clubru">https://t.me/x5clubru</a></td>
+        <td>Продажи</td>
+        <td>136392</td>
+        <td>32641</td>
+        <td>24.0</td>
+        <td>-1721</td>
+        <td>1732</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WB Навигатор | Находки с Wildberries</td>
+        <td><a href="https://t.me/joinchat/-ppLbP-9tF02NGUy">https://t.me/joinchat/-ppLbP-9tF02NGUy</a></td>
+        <td>Продажи</td>
+        <td>134743</td>
+        <td>5275</td>
+        <td>4.0</td>
+        <td>-326</td>
+        <td>1004</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Современная квартира</td>
+        <td><a href="https://t.me/joinchat/ZQvbfqTTqNRmNmNi">https://t.me/joinchat/ZQvbfqTTqNRmNmNi</a></td>
+        <td>Продажи</td>
+        <td>134348</td>
+        <td>20068</td>
+        <td>15.0</td>
+        <td>-1016</td>
+        <td>-5029</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>По бюджету</td>
+        <td><a href="https://t.me/po_byudzhetu">https://t.me/po_byudzhetu</a></td>
+        <td>Продажи</td>
+        <td>133810</td>
+        <td>20744</td>
+        <td>16.0</td>
+        <td>383</td>
+        <td>3204</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москвада ишлар</td>
+        <td><a href="https://t.me/TAYANCHB">https://t.me/TAYANCHB</a></td>
+        <td>Продажи</td>
+        <td>131086</td>
+        <td>11740</td>
+        <td>9.0</td>
+        <td>-444</td>
+        <td>-1401</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Где купить? | Интересные находки</td>
+        <td><a href="https://t.me/joinchat/BCGD3AZR3-plYzY6">https://t.me/joinchat/BCGD3AZR3-plYzY6</a></td>
+        <td>Продажи</td>
+        <td>129848</td>
+        <td>22179</td>
+        <td>18.0</td>
+        <td>-2805</td>
+        <td>-14350</td>
+        <td>5 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>ФИШКИ</td>
+        <td><a href="https://t.me/joinchat/8yPcE9CwYTA5ZGJi">https://t.me/joinchat/8yPcE9CwYTA5ZGJi</a></td>
+        <td>Продажи</td>
+        <td>129088</td>
+        <td>2075</td>
+        <td>2.0</td>
+        <td>9518</td>
+        <td>3718</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

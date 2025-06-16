@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Клиент всегда прав</td>
+        <td><a href="https://t.me/klientvsprav">https://t.me/klientvsprav</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>1507469</td>
+        <td>174319</td>
+        <td>12.0</td>
+        <td>-20132</td>
+        <td>-122919</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сегодня в тренде</td>
+        <td><a href="https://t.me/trends">https://t.me/trends</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>1054652</td>
+        <td>120349</td>
+        <td>12.0</td>
+        <td>-2092</td>
+        <td>-32806</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чё по трендам?</td>
+        <td><a href="https://t.me/trendswhat">https://t.me/trendswhat</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>994707</td>
+        <td>122722</td>
+        <td>13.0</td>
+        <td>49462</td>
+        <td>463</td>
+        <td>24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Ты в тренде или уходи</td>
+        <td><a href="https://t.me/trendsetter">https://t.me/trendsetter</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>857123</td>
+        <td>62086</td>
+        <td>8.0</td>
+        <td>11189</td>
+        <td>139566</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тренды задавать</td>
+        <td><a href="https://t.me/trendi">https://t.me/trendi</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>685138</td>
+        <td>88461</td>
+        <td>13.0</td>
+        <td>144141</td>
+        <td>320</td>
+        <td>18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Семейка ботов</td>
+        <td><a href="https://t.me/FamilyBots">https://t.me/FamilyBots</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>643188</td>
+        <td>79642</td>
+        <td>13.0</td>
+        <td>-3505</td>
+        <td>-5977</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бегущий по рынку</td>
+        <td><a href="https://t.me/ryanrun">https://t.me/ryanrun</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>558314</td>
+        <td>52096</td>
+        <td>10.0</td>
+        <td>-14500</td>
+        <td>29477</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Красный маркетинг Гиязова</td>
+        <td><a href="https://t.me/aaaredmarketing">https://t.me/aaaredmarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>500298</td>
+        <td>61966</td>
+        <td>13.0</td>
+        <td>-6739</td>
+        <td>-12742</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Трендач</td>
+        <td><a href="https://t.me/trendach">https://t.me/trendach</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>413600</td>
+        <td>36809</td>
+        <td>9.0</td>
+        <td>-40132</td>
+        <td>122179</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мороженое</td>
+        <td><a href="https://t.me/na_morozhenoe">https://t.me/na_morozhenoe</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>284018</td>
+        <td>47371</td>
+        <td>17.0</td>
+        <td>-13202</td>
+        <td>-62674</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Медиа Лента | Сейчас в медиа</td>
+        <td><a href="https://t.me/media_lenta">https://t.me/media_lenta</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>274677</td>
+        <td>42560</td>
+        <td>16.0</td>
+        <td>-3490</td>
+        <td>-17256</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ок, согласовано</td>
+        <td><a href="https://t.me/notypicmarketing">https://t.me/notypicmarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>270697</td>
+        <td>31739</td>
+        <td>12.0</td>
+        <td>-2092</td>
+        <td>-10266</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НеМаркетинг</td>
+        <td><a href="https://t.me/joinchat/T6cvA7EVl541Njdi">https://t.me/joinchat/T6cvA7EVl541Njdi</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>253323</td>
+        <td>18482</td>
+        <td>8.0</td>
+        <td>-4479</td>
+        <td>-21947</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сосисочная • про маркетинг</td>
+        <td><a href="https://t.me/sosicka">https://t.me/sosicka</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>215487</td>
+        <td>36271</td>
+        <td>17.0</td>
+        <td>-2487</td>
+        <td>32962</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бренды на коне</td>
+        <td><a href="https://t.me/brand_horse">https://t.me/brand_horse</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>212304</td>
+        <td>27459</td>
+        <td>13.0</td>
+        <td>3866</td>
+        <td>105723</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>мы вам перезвоним</td>
+        <td><a href="https://t.me/ca11_you">https://t.me/ca11_you</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>204344</td>
+        <td>42459</td>
+        <td>21.0</td>
+        <td>-2312</td>
+        <td>-14559</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>кабачковая икра по акции</td>
+        <td><a href="https://t.me/sale_caviar">https://t.me/sale_caviar</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>186827</td>
+        <td>47754</td>
+        <td>26.0</td>
+        <td>1054</td>
+        <td>199</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Игорь, начинайте работу</td>
+        <td><a href="https://t.me/oplata_skoro_budet">https://t.me/oplata_skoro_budet</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>183830</td>
+        <td>24048</td>
+        <td>14.0</td>
+        <td>-1287</td>
+        <td>-8039</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Психология Маркетинга</td>
+        <td><a href="https://t.me/marketpsy">https://t.me/marketpsy</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>182252</td>
+        <td>20098</td>
+        <td>11.0</td>
+        <td>-381</td>
+        <td>-1288</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Флешка с трендами</td>
+        <td><a href="https://t.me/FFleshka">https://t.me/FFleshka</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>177725</td>
+        <td>30818</td>
+        <td>18.0</td>
+        <td>1160</td>
+        <td>10747</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>бумеры смотрят телек</td>
+        <td><a href="https://t.me/boomers_TV">https://t.me/boomers_TV</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>160896</td>
+        <td>18808</td>
+        <td>12.0</td>
+        <td>-1046</td>
+        <td>-4413</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Супермаркетинг</td>
+        <td><a href="https://t.me/supermarketng">https://t.me/supermarketng</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>158445</td>
+        <td>17168</td>
+        <td>11.0</td>
+        <td>-2793</td>
+        <td>17624</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ритейл заказывали?</td>
+        <td><a href="https://t.me/retailife">https://t.me/retailife</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>158159</td>
+        <td>20116</td>
+        <td>13.0</td>
+        <td>4527</td>
+        <td>15511</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Беспощадный пиарщик</td>
+        <td><a href="https://t.me/prbezposhady">https://t.me/prbezposhady</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>155499</td>
+        <td>36369</td>
+        <td>24.0</td>
+        <td>440</td>
+        <td>1940</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>лидер мнений среди удобрений</td>
+        <td><a href="https://t.me/lider">https://t.me/lider</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>154796</td>
+        <td>32719</td>
+        <td>22.0</td>
+        <td>-225</td>
+        <td>-2852</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Куй клиента, пока горячо!</td>
+        <td><a href="https://t.me/MarketingQui">https://t.me/MarketingQui</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>149301</td>
+        <td>11597</td>
+        <td>8.0</td>
+        <td>-2830</td>
+        <td>5470</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Передали коллегам</td>
+        <td><a href="https://t.me/collegi">https://t.me/collegi</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>147198</td>
+        <td>20777</td>
+        <td>15.0</td>
+        <td>-905</td>
+        <td>-3984</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Русский диджитал</td>
+        <td><a href="https://t.me/rudigital">https://t.me/rudigital</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>146051</td>
+        <td>16589</td>
+        <td>12.0</td>
+        <td>-3897</td>
+        <td>-23670</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>о чём говорят коллеги</td>
+        <td><a href="https://t.me/kollegi">https://t.me/kollegi</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>145126</td>
+        <td>14647</td>
+        <td>11.0</td>
+        <td>-921</td>
+        <td>-5912</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Потребитель</td>
+        <td><a href="https://t.me/potrebite1b">https://t.me/potrebite1b</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>144684</td>
+        <td>41058</td>
+        <td>29.0</td>
+        <td>-2992</td>
+        <td>-18341</td>
+        <td>4 месяца 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Креатив со звездочкой</td>
+        <td><a href="https://t.me/creative">https://t.me/creative</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>144211</td>
+        <td>26697</td>
+        <td>19.0</td>
+        <td>-208</td>
+        <td>-880</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>олдскульный маркетинг</td>
+        <td><a href="https://t.me/marketingold">https://t.me/marketingold</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>141016</td>
+        <td>14813</td>
+        <td>11.0</td>
+        <td>-305</td>
+        <td>-1431</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Попсовый маркетинг</td>
+        <td><a href="https://t.me/popsmarketing">https://t.me/popsmarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>139754</td>
+        <td>11620</td>
+        <td>9.0</td>
+        <td>-1352</td>
+        <td>-7336</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Боги маркетинга</td>
+        <td><a href="https://t.me/Godketing">https://t.me/Godketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>137443</td>
+        <td>14371</td>
+        <td>11.0</td>
+        <td>-600</td>
+        <td>-9337</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Маркетинг нефильтрованный</td>
+        <td><a href="https://t.me/costperlead">https://t.me/costperlead</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>136850</td>
+        <td>20967</td>
+        <td>16.0</td>
+        <td>-777</td>
+        <td>-11278</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Креатив на сдачу</td>
+        <td><a href="https://t.me/creoch">https://t.me/creoch</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>135273</td>
+        <td>12758</td>
+        <td>10.0</td>
+        <td>-1008</td>
+        <td>-4734</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Yumi</td>
+        <td><a href="https://t.me/yumdigital">https://t.me/yumdigital</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>134255</td>
+        <td>14552</td>
+        <td>11.0</td>
+        <td>-2542</td>
+        <td>-12005</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Русский маркетинг</td>
+        <td><a href="https://t.me/smmrus">https://t.me/smmrus</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>128645</td>
+        <td>11779</td>
+        <td>10.0</td>
+        <td>-97</td>
+        <td>-563</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>первое впечатление</td>
+        <td><a href="https://t.me/impr3ss">https://t.me/impr3ss</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>122776</td>
+        <td>5548</td>
+        <td>5.0</td>
+        <td>-2124</td>
+        <td>-17301</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бескромный</td>
+        <td><a href="https://t.me/dbeskromny">https://t.me/dbeskromny</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>112129</td>
+        <td>26402</td>
+        <td>24.0</td>
+        <td>-48</td>
+        <td>5437</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Брин про маркетинг и бизнес</td>
+        <td><a href="https://t.me/joinchat/-pvw14G6WlIyYWIy">https://t.me/joinchat/-pvw14G6WlIyYWIy</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>110803</td>
+        <td>13110</td>
+        <td>12.0</td>
+        <td>-900</td>
+        <td>-3234</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Креативная Лента</td>
+        <td><a href="https://t.me/kreolenta">https://t.me/kreolenta</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>109838</td>
+        <td>16597</td>
+        <td>16.0</td>
+        <td>-1683</td>
+        <td>-7991</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Корнеев | Первый Маркетинговый</td>
+        <td><a href="https://t.me/pervmarketing">https://t.me/pervmarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>108514</td>
+        <td>9415</td>
+        <td>9.0</td>
+        <td>-3957</td>
+        <td>1834</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>коллеги, не сутультесь</td>
+        <td><a href="https://t.me/bardachko">https://t.me/bardachko</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>107046</td>
+        <td>12668</td>
+        <td>12.0</td>
+        <td>-1873</td>
+        <td>-9772</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Горячий Маркетинг</td>
+        <td><a href="https://t.me/hotketing">https://t.me/hotketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>106847</td>
+        <td>8025</td>
+        <td>8.0</td>
+        <td>3716</td>
+        <td>21291</td>
+        <td>8 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Партизанский Маркетинг</td>
+        <td><a href="https://t.me/GuerrillaMarketing">https://t.me/GuerrillaMarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>104187</td>
+        <td>17220</td>
+        <td>17.0</td>
+        <td>-1532</td>
+        <td>-5735</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бюджет согласован</td>
+        <td><a href="https://t.me/soglasoval">https://t.me/soglasoval</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>103276</td>
+        <td>7491</td>
+        <td>8.0</td>
+        <td>-2687</td>
+        <td>-15544</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Креатив зашел!</td>
+        <td><a href="https://t.me/creativeHit">https://t.me/creativeHit</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>103174</td>
+        <td>21401</td>
+        <td>21.0</td>
+        <td>-231</td>
+        <td>1360</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СберМаркетинг</td>
+        <td><a href="https://t.me/sbermarketing">https://t.me/sbermarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>100870</td>
+        <td>5649</td>
+        <td>6.0</td>
+        <td>-6284</td>
+        <td>23087</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>гура́</td>
+        <td><a href="https://t.me/creativeee">https://t.me/creativeee</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>100032</td>
+        <td>9171</td>
+        <td>10.0</td>
+        <td>-1738</td>
+        <td>-11083</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Марзаганов вещает</td>
+        <td><a href="https://t.me/marzaganoff">https://t.me/marzaganoff</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>94534</td>
+        <td>12017</td>
+        <td>13.0</td>
+        <td>-446</td>
+        <td>-1768</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Телеблог Красноярск Норильск</td>
+        <td><a href="https://t.me/krasnoyarsx3">https://t.me/krasnoyarsx3</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>90852</td>
+        <td>5225</td>
+        <td>6.0</td>
+        <td>26934</td>
+        <td>90773</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дубровская 👊🏿</td>
+        <td><a href="https://t.me/dubrovskaya_angelina">https://t.me/dubrovskaya_angelina</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>89819</td>
+        <td>37240</td>
+        <td>42.0</td>
+        <td>-156</td>
+        <td>-729</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>99 франков. Маркетинг</td>
+        <td><a href="https://t.me/marketolog_marketing">https://t.me/marketolog_marketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>87850</td>
+        <td>3650</td>
+        <td>5.0</td>
+        <td>8</td>
+        <td>-317</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Искусство Инфоцыгана</td>
+        <td><a href="https://t.me/infocygan_ru">https://t.me/infocygan_ru</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>86653</td>
+        <td>17826</td>
+        <td>21.0</td>
+        <td>-151</td>
+        <td>-126</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Маша Полуянова</td>
+        <td><a href="https://t.me/mashapoluyanova">https://t.me/mashapoluyanova</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>84402</td>
+        <td>14324</td>
+        <td>17.0</td>
+        <td>-590</td>
+        <td>-2415</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Рыжий М.</td>
+        <td><a href="https://t.me/redmilliard">https://t.me/redmilliard</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>82764</td>
+        <td>21032</td>
+        <td>26.0</td>
+        <td>1108</td>
+        <td>2962</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CPALENTA | Арбитраж трафика</td>
+        <td><a href="https://t.me/cpa_lenta">https://t.me/cpa_lenta</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>81706</td>
+        <td>4230</td>
+        <td>6.0</td>
+        <td>30</td>
+        <td>-288</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SETTERS Media</td>
+        <td><a href="https://t.me/setters">https://t.me/setters</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>79452</td>
+        <td>6653</td>
+        <td>9.0</td>
+        <td>-173</td>
+        <td>-1045</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Павликов опять что-то написал</td>
+        <td><a href="https://t.me/potok_ads">https://t.me/potok_ads</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>78650</td>
+        <td>18578</td>
+        <td>24.0</td>
+        <td>2733</td>
+        <td>1695</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Маркетинговый ход</td>
+        <td><a href="https://t.me/MarketingPloy">https://t.me/MarketingPloy</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>78269</td>
+        <td>9280</td>
+        <td>12.0</td>
+        <td>-164</td>
+        <td>-699</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Твиттер Огилви©️</td>
+        <td><a href="https://t.me/Dogilvy">https://t.me/Dogilvy</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>73244</td>
+        <td>16079</td>
+        <td>22.0</td>
+        <td>31778</td>
+        <td>18921</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Max EVIRMA / Продвижение на Wildberries / LET`S ROCK on WB</td>
+        <td><a href="https://t.me/maxprowb">https://t.me/maxprowb</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>72630</td>
+        <td>21478</td>
+        <td>30.0</td>
+        <td>755</td>
+        <td>4039</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Главред Максим Ильяхов</td>
+        <td><a href="https://t.me/glvrdru">https://t.me/glvrdru</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>70226</td>
+        <td>11863</td>
+        <td>17.0</td>
+        <td>120</td>
+        <td>80</td>
+        <td>9 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>HOT DIGITAL by Vlad Sitnikov</td>
+        <td><a href="https://t.me/HotDigital">https://t.me/HotDigital</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>68780</td>
+        <td>15358</td>
+        <td>23.0</td>
+        <td>-6299</td>
+        <td>-107664</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DNative — блог Ткачука про SMM</td>
+        <td><a href="https://t.me/dnative">https://t.me/dnative</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>64877</td>
+        <td>5638</td>
+        <td>9.0</td>
+        <td>-16</td>
+        <td>41</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Привет, это Вайбз!</td>
+        <td><a href="https://t.me/vibes_band">https://t.me/vibes_band</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>64620</td>
+        <td>4684</td>
+        <td>8.0</td>
+        <td>-32</td>
+        <td>-461</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Зашкваркетинг</td>
+        <td><a href="https://t.me/dankmarketing">https://t.me/dankmarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>64297</td>
+        <td>12559</td>
+        <td>20.0</td>
+        <td>110</td>
+        <td>-690</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>не маркетинг, а маркетинг</td>
+        <td><a href="https://t.me/ne_digital">https://t.me/ne_digital</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>62401</td>
+        <td>8197</td>
+        <td>14.0</td>
+        <td>3126</td>
+        <td>-2336</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>вода питьевая</td>
+        <td><a href="https://t.me/drinkablewater">https://t.me/drinkablewater</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>62252</td>
+        <td>9407</td>
+        <td>16.0</td>
+        <td>-690</td>
+        <td>242</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Выкручиваем конверсии воронок</td>
+        <td><a href="https://t.me/joinchat/uNADfveoZdkwMDlk">https://t.me/joinchat/uNADfveoZdkwMDlk</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>61807</td>
+        <td>8571</td>
+        <td>14.0</td>
+        <td>-327</td>
+        <td>-440</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>-приём, это Мару</td>
+        <td><a href="https://t.me/marinapromotionnnn">https://t.me/marinapromotionnnn</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>61525</td>
+        <td>17754</td>
+        <td>29.0</td>
+        <td>639</td>
+        <td>25644</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вода из кулера</td>
+        <td><a href="https://t.me/vodakuler">https://t.me/vodakuler</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>59668</td>
+        <td>12222</td>
+        <td>21.0</td>
+        <td>-1196</td>
+        <td>-5660</td>
+        <td>1 год 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кирилл Потапов l REELS ACADEMY</td>
+        <td><a href="https://t.me/ReelsAcademyPotapovfx">https://t.me/ReelsAcademyPotapovfx</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>59500</td>
+        <td>11220</td>
+        <td>19.0</td>
+        <td>382</td>
+        <td>2208</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Зубастый маркетолог</td>
+        <td><a href="https://t.me/marketolog_digital">https://t.me/marketolog_digital</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>58116</td>
+        <td>5066</td>
+        <td>9.0</td>
+        <td>-43</td>
+        <td>-738</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>proStar | SMM | news</td>
+        <td><a href="https://t.me/joinchat/lnYXvo0T20o1MWMy">https://t.me/joinchat/lnYXvo0T20o1MWMy</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>57623</td>
+        <td>549</td>
+        <td>1.0</td>
+        <td>-617</td>
+        <td>-2822</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Метод Чувака | Арбитраж крипты</td>
+        <td><a href="https://t.me/joinchat/U1a02BwJtbg0ODY6">https://t.me/joinchat/U1a02BwJtbg0ODY6</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>55955</td>
+        <td>1580</td>
+        <td>3.0</td>
+        <td>-338</td>
+        <td>-2020</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Госпаблики – Лучшее</td>
+        <td><a href="https://t.me/gospubest">https://t.me/gospubest</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>55946</td>
+        <td>14176</td>
+        <td>26.0</td>
+        <td>122</td>
+        <td>1170</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Реклама | Обучение</td>
+        <td><a href="https://t.me/yndx_ed">https://t.me/yndx_ed</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>54651</td>
+        <td>8592</td>
+        <td>16.0</td>
+        <td>51</td>
+        <td>60</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Постмаркетинг Daily</td>
+        <td><a href="https://t.me/pstmarketing">https://t.me/pstmarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>54565</td>
+        <td>8027</td>
+        <td>15.0</td>
+        <td>392</td>
+        <td>3135</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>украла авокадо с фотостоков</td>
+        <td><a href="https://t.me/mavacado">https://t.me/mavacado</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>53511</td>
+        <td>7107</td>
+        <td>14.0</td>
+        <td>-237</td>
+        <td>-1074</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Наши страхи \ Медиа</td>
+        <td><a href="https://t.me/moystrakh">https://t.me/moystrakh</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>53132</td>
+        <td>2826</td>
+        <td>6.0</td>
+        <td>-511</td>
+        <td>-1791</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Медиавойны</td>
+        <td><a href="https://t.me/mediavoyni">https://t.me/mediavoyni</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>52400</td>
+        <td>18429</td>
+        <td>36.0</td>
+        <td>750</td>
+        <td>681</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WHY EMPIRE</td>
+        <td><a href="https://t.me/joinchat/HQMNrXPZrC1jN2Vi">https://t.me/joinchat/HQMNrXPZrC1jN2Vi</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>52089</td>
+        <td>9055</td>
+        <td>18.0</td>
+        <td>-457</td>
+        <td>-2467</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Жизнь без офиса | Никита Семчурин</td>
+        <td><a href="https://t.me/joinchat/AAAAAEUe3upPSCdGpj6E6Q">https://t.me/joinchat/AAAAAEUe3upPSCdGpj6E6Q</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>51873</td>
+        <td>1879</td>
+        <td>4.0</td>
+        <td>-254</td>
+        <td>-1096</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Дорогой редактор | Тексты</td>
+        <td><a href="https://t.me/Dorogoj_redaktor_Teksty">https://t.me/Dorogoj_redaktor_Teksty</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>51370</td>
+        <td>5406</td>
+        <td>11.0</td>
+        <td>274</td>
+        <td>821</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Годный Маркетинг – Реклама, PR, SMM</td>
+        <td><a href="https://t.me/godnymarketing">https://t.me/godnymarketing</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>50780</td>
+        <td>4861</td>
+        <td>10.0</td>
+        <td>-18</td>
+        <td>-3180</td>
+        <td>3 года 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Атлас Котлера</td>
+        <td><a href="https://t.me/atlasonair">https://t.me/atlasonair</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>49793</td>
+        <td>1645</td>
+        <td>4.0</td>
+        <td>-373</td>
+        <td>-2132</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Sostav</td>
+        <td><a href="https://t.me/sostav">https://t.me/sostav</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>49558</td>
+        <td>6022</td>
+        <td>13.0</td>
+        <td>-2</td>
+        <td>-133</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>продай мне эту ручку</td>
+        <td><a href="https://t.me/sell_me">https://t.me/sell_me</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>49331</td>
+        <td>4693</td>
+        <td>10.0</td>
+        <td>-152</td>
+        <td>-709</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Акулыч в недвижке | Роман Абдуллин | KROME Group</td>
+        <td><a href="https://t.me/roman_abdullin_plus">https://t.me/roman_abdullin_plus</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>49052</td>
+        <td>9969</td>
+        <td>21.0</td>
+        <td>-2906</td>
+        <td>-3633</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Клиент</td>
+        <td><a href="https://t.me/yourtypicalclient">https://t.me/yourtypicalclient</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>48068</td>
+        <td>29332</td>
+        <td>61.0</td>
+        <td>281</td>
+        <td>384</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Инструменты маркетолога</td>
+        <td><a href="https://t.me/profit_maker">https://t.me/profit_maker</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>47278</td>
+        <td>6733</td>
+        <td>15.0</td>
+        <td>57</td>
+        <td>57</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Диджитал-культура</td>
+        <td><a href="https://t.me/digital_sila">https://t.me/digital_sila</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>45878</td>
+        <td>6746</td>
+        <td>15.0</td>
+        <td>-177</td>
+        <td>-842</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Руслан.txt</td>
+        <td><a href="https://t.me/ruslantxt">https://t.me/ruslantxt</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>44880</td>
+        <td>8100</td>
+        <td>18.0</td>
+        <td>-178</td>
+        <td>-794</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Продвижение</td>
+        <td><a href="https://t.me/PRoddigital">https://t.me/PRoddigital</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>44174</td>
+        <td>11110</td>
+        <td>26.0</td>
+        <td>-42</td>
+        <td>424</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПродUMAнный телеграм</td>
+        <td><a href="https://t.me/joinchat/AAAAAFX6CqtqrsnZcbv4zg">https://t.me/joinchat/AAAAAFX6CqtqrsnZcbv4zg</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>43774</td>
+        <td>905</td>
+        <td>3.0</td>
+        <td>-146</td>
+        <td>-804</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Телеграм Петроченкова</td>
+        <td><a href="https://t.me/petrochenkow">https://t.me/petrochenkow</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>42177</td>
+        <td>7535</td>
+        <td>18.0</td>
+        <td>86</td>
+        <td>634</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WB Эльф</td>
+        <td><a href="https://t.me/WBMagg">https://t.me/WBMagg</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>40669</td>
+        <td>274</td>
+        <td>1.0</td>
+        <td>-8155</td>
+        <td>-9618</td>
+        <td>6 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>No Flame No Game</td>
+        <td><a href="https://t.me/proproduct">https://t.me/proproduct</a></td>
+        <td>Маркетинг, PR, реклама</td>
+        <td>40234</td>
+        <td>5748</td>
+        <td>15.0</td>
+        <td>-26</td>
+        <td>130</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

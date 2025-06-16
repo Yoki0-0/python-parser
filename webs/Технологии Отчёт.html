@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>1337</td>
+        <td><a href="https://t.me/media1337">https://t.me/media1337</a></td>
+        <td>Технологии</td>
+        <td>2333099</td>
+        <td>199219</td>
+        <td>9.0</td>
+        <td>1594</td>
+        <td>-201496</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>NN</td>
+        <td><a href="https://t.me/naebnet">https://t.me/naebnet</a></td>
+        <td>Технологии</td>
+        <td>2192340</td>
+        <td>189562</td>
+        <td>9.0</td>
+        <td>-5501</td>
+        <td>-46077</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бэкдор</td>
+        <td><a href="https://t.me/whackdoor">https://t.me/whackdoor</a></td>
+        <td>Технологии</td>
+        <td>2131058</td>
+        <td>152435</td>
+        <td>8.0</td>
+        <td>-22895</td>
+        <td>584934</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Техномотель</td>
+        <td><a href="https://t.me/technomotel">https://t.me/technomotel</a></td>
+        <td>Технологии</td>
+        <td>2054562</td>
+        <td>172753</td>
+        <td>9.0</td>
+        <td>-21527</td>
+        <td>-24107</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Эксплойт</td>
+        <td><a href="https://t.me/exploitex">https://t.me/exploitex</a></td>
+        <td>Технологии</td>
+        <td>2006663</td>
+        <td>216449</td>
+        <td>11.0</td>
+        <td>-25445</td>
+        <td>-53654</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Цифровой Журнал | IT, Neiroseti</td>
+        <td><a href="https://t.me/chatgptv">https://t.me/chatgptv</a></td>
+        <td>Технологии</td>
+        <td>1519341</td>
+        <td>185961</td>
+        <td>13.0</td>
+        <td>-30143</td>
+        <td>-34539</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GPT | ChatGPT | Midjourney — GPTMain News</td>
+        <td><a href="https://t.me/GPTMainNews">https://t.me/GPTMainNews</a></td>
+        <td>Технологии</td>
+        <td>1447281</td>
+        <td>187337</td>
+        <td>13.0</td>
+        <td>-500</td>
+        <td>-372</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Техночат</td>
+        <td><a href="https://t.me/technomedia">https://t.me/technomedia</a></td>
+        <td>Технологии</td>
+        <td>1413077</td>
+        <td>143851</td>
+        <td>11.0</td>
+        <td>-48468</td>
+        <td>-81281</td>
+        <td>6 месяцев 1 день</td>
+      </tr>
+
+      <tr>
+        <td>Hi, AI | Новости технологий</td>
+        <td><a href="https://t.me/hiaimedia">https://t.me/hiaimedia</a></td>
+        <td>Технологии</td>
+        <td>1358886</td>
+        <td>120722</td>
+        <td>9.0</td>
+        <td>-49132</td>
+        <td>126466</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>hitvpn_blog</td>
+        <td><a href="https://t.me/hitvpn_news">https://t.me/hitvpn_news</a></td>
+        <td>Технологии</td>
+        <td>1347455</td>
+        <td>797530</td>
+        <td>60.0</td>
+        <td>138118</td>
+        <td>282640</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Провод</td>
+        <td><a href="https://t.me/provod">https://t.me/provod</a></td>
+        <td>Технологии</td>
+        <td>1199892</td>
+        <td>85971</td>
+        <td>8.0</td>
+        <td>46729</td>
+        <td>277441</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Wylsacom Red</td>
+        <td><a href="https://t.me/Wylsared">https://t.me/Wylsared</a></td>
+        <td>Технологии</td>
+        <td>1125812</td>
+        <td>118036</td>
+        <td>11.0</td>
+        <td>-3685</td>
+        <td>-29646</td>
+        <td>8 лет 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>TrendWatching</td>
+        <td><a href="https://t.me/TrendWatching24">https://t.me/TrendWatching24</a></td>
+        <td>Технологии</td>
+        <td>1112796</td>
+        <td>75739</td>
+        <td>7.0</td>
+        <td>-14210</td>
+        <td>-84231</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Милорд</td>
+        <td><a href="https://t.me/milord_q">https://t.me/milord_q</a></td>
+        <td>Технологии</td>
+        <td>1017220</td>
+        <td>70110</td>
+        <td>7.0</td>
+        <td>-2532</td>
+        <td>-18071</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>в IT и выйти</td>
+        <td><a href="https://t.me/techmedia">https://t.me/techmedia</a></td>
+        <td>Технологии</td>
+        <td>988012</td>
+        <td>100845</td>
+        <td>11.0</td>
+        <td>-2488</td>
+        <td>-58795</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Не баг, а фича</td>
+        <td><a href="https://t.me/bugnotfeature">https://t.me/bugnotfeature</a></td>
+        <td>Технологии</td>
+        <td>823595</td>
+        <td>45899</td>
+        <td>6.0</td>
+        <td>5489</td>
+        <td>217881</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Romancev768</td>
+        <td><a href="https://t.me/Romancev768">https://t.me/Romancev768</a></td>
+        <td>Технологии</td>
+        <td>803382</td>
+        <td>82731</td>
+        <td>11.0</td>
+        <td>-30481</td>
+        <td>37380</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>concertzaal</td>
+        <td><a href="https://t.me/concertzaal">https://t.me/concertzaal</a></td>
+        <td>Технологии</td>
+        <td>734392</td>
+        <td>58099</td>
+        <td>8.0</td>
+        <td>9966</td>
+        <td>31186</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рестарт</td>
+        <td><a href="https://t.me/remedia">https://t.me/remedia</a></td>
+        <td>Технологии</td>
+        <td>661410</td>
+        <td>57286</td>
+        <td>9.0</td>
+        <td>-8166</td>
+        <td>-41063</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Rozetked</td>
+        <td><a href="https://t.me/rozetked">https://t.me/rozetked</a></td>
+        <td>Технологии</td>
+        <td>549074</td>
+        <td>131308</td>
+        <td>24.0</td>
+        <td>6928</td>
+        <td>29928</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Big Geek</td>
+        <td><a href="https://t.me/biggeekru">https://t.me/biggeekru</a></td>
+        <td>Технологии</td>
+        <td>506965</td>
+        <td>46503</td>
+        <td>10.0</td>
+        <td>-3836</td>
+        <td>2179</td>
+        <td>9 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тайпспейс Медиа</td>
+        <td><a href="https://t.me/typespace">https://t.me/typespace</a></td>
+        <td>Технологии</td>
+        <td>498158</td>
+        <td>80039</td>
+        <td>17.0</td>
+        <td>860</td>
+        <td>37334</td>
+        <td>10 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Технолавка</td>
+        <td><a href="https://t.me/technolavka">https://t.me/technolavka</a></td>
+        <td>Технологии</td>
+        <td>455860</td>
+        <td>43630</td>
+        <td>10.0</td>
+        <td>-1920</td>
+        <td>433</td>
+        <td>5 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Этичный Хакер</td>
+        <td><a href="https://t.me/hack_less">https://t.me/hack_less</a></td>
+        <td>Технологии</td>
+        <td>435937</td>
+        <td>23026</td>
+        <td>6.0</td>
+        <td>-2726</td>
+        <td>-18614</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Диджитальная | IT, ChatGPT</td>
+        <td><a href="https://t.me/joinchat/2QIuTPRaxgwxMjgy">https://t.me/joinchat/2QIuTPRaxgwxMjgy</a></td>
+        <td>Технологии</td>
+        <td>396375</td>
+        <td>28697</td>
+        <td>8.0</td>
+        <td>-4715</td>
+        <td>-13182</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс</td>
+        <td><a href="https://t.me/yandex">https://t.me/yandex</a></td>
+        <td>Технологии</td>
+        <td>391594</td>
+        <td>55875</td>
+        <td>15.0</td>
+        <td>63750</td>
+        <td>114277</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ChatGPT | Нейросети</td>
+        <td><a href="https://t.me/gptpublic">https://t.me/gptpublic</a></td>
+        <td>Технологии</td>
+        <td>383911</td>
+        <td>22601</td>
+        <td>6.0</td>
+        <td>237</td>
+        <td>-5453</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>GPT News | Нейросети</td>
+        <td><a href="https://t.me/gpt_news">https://t.me/gpt_news</a></td>
+        <td>Технологии</td>
+        <td>362891</td>
+        <td>29665</td>
+        <td>9.0</td>
+        <td>-842</td>
+        <td>1350</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>GigaChat</td>
+        <td><a href="https://t.me/official_gigachat">https://t.me/official_gigachat</a></td>
+        <td>Технологии</td>
+        <td>350862</td>
+        <td>47390</td>
+        <td>14.0</td>
+        <td>-2124</td>
+        <td>-16581</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Код Дурова</td>
+        <td><a href="https://t.me/d_code">https://t.me/d_code</a></td>
+        <td>Технологии</td>
+        <td>340212</td>
+        <td>34842</td>
+        <td>11.0</td>
+        <td>-1664</td>
+        <td>-9938</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>TechGPT [🅽 🅴 🆆 🆂] 🤖</td>
+        <td><a href="https://t.me/TechGPTNews">https://t.me/TechGPTNews</a></td>
+        <td>Технологии</td>
+        <td>337325</td>
+        <td>52557</td>
+        <td>16.0</td>
+        <td>429</td>
+        <td>163</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Инсайдер Hitech</td>
+        <td><a href="https://t.me/Insiderhitech">https://t.me/Insiderhitech</a></td>
+        <td>Технологии</td>
+        <td>324563</td>
+        <td>127047</td>
+        <td>40.0</td>
+        <td>2106</td>
+        <td>42</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Нейросети & Технологии | DeepTech</td>
+        <td><a href="https://t.me/DeepTechNET">https://t.me/DeepTechNET</a></td>
+        <td>Технологии</td>
+        <td>315897</td>
+        <td>54845</td>
+        <td>18.0</td>
+        <td>462</td>
+        <td>558</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Нейродвиж</td>
+        <td><a href="https://t.me/neuraldvig">https://t.me/neuraldvig</a></td>
+        <td>Технологии</td>
+        <td>313710</td>
+        <td>40948</td>
+        <td>14.0</td>
+        <td>-15649</td>
+        <td>31832</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Не баг, а фича</td>
+        <td><a href="https://t.me/bugfeature">https://t.me/bugfeature</a></td>
+        <td>Технологии</td>
+        <td>310337</td>
+        <td>24790</td>
+        <td>8.0</td>
+        <td>24522</td>
+        <td>25148</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Future Inside: Мир инноваций</td>
+        <td><a href="https://t.me/FutureInside_innovation">https://t.me/FutureInside_innovation</a></td>
+        <td>Технологии</td>
+        <td>307666</td>
+        <td>110932</td>
+        <td>37.0</td>
+        <td>28</td>
+        <td>41</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Техно</td>
+        <td><a href="https://t.me/techno_media">https://t.me/techno_media</a></td>
+        <td>Технологии</td>
+        <td>296739</td>
+        <td>13078</td>
+        <td>5.0</td>
+        <td>-2810</td>
+        <td>-12912</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Новости безопасности от YouFast VPN™</td>
+        <td><a href="https://t.me/YouFastVPN">https://t.me/YouFastVPN</a></td>
+        <td>Технологии</td>
+        <td>296725</td>
+        <td>41667</td>
+        <td>14.0</td>
+        <td>-4170</td>
+        <td>-15462</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Джейпег Малевича</td>
+        <td><a href="https://t.me/malepeg">https://t.me/malepeg</a></td>
+        <td>Технологии</td>
+        <td>291863</td>
+        <td>25802</td>
+        <td>9.0</td>
+        <td>19070</td>
+        <td>98126</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>IT|Технарь</td>
+        <td><a href="https://t.me/ittehnar">https://t.me/ittehnar</a></td>
+        <td>Технологии</td>
+        <td>282127</td>
+        <td>97825</td>
+        <td>35.0</td>
+        <td>-466</td>
+        <td>51</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бэкспейс</td>
+        <td><a href="https://t.me/backspace_mag">https://t.me/backspace_mag</a></td>
+        <td>Технологии</td>
+        <td>273348</td>
+        <td>77534</td>
+        <td>29.0</td>
+        <td>-2433</td>
+        <td>-5063</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Техноплюс</td>
+        <td><a href="https://t.me/plustexno">https://t.me/plustexno</a></td>
+        <td>Технологии</td>
+        <td>268151</td>
+        <td>37278</td>
+        <td>14.0</td>
+        <td>4314</td>
+        <td>-1068</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ChatGPT, помоги!</td>
+        <td><a href="https://t.me/GPThelp_ru">https://t.me/GPThelp_ru</a></td>
+        <td>Технологии</td>
+        <td>258446</td>
+        <td>14313</td>
+        <td>6.0</td>
+        <td>-5787</td>
+        <td>-3525</td>
+        <td>1 год 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Минцифры России</td>
+        <td><a href="https://t.me/mintsifry">https://t.me/mintsifry</a></td>
+        <td>Технологии</td>
+        <td>247387</td>
+        <td>90077</td>
+        <td>37.0</td>
+        <td>-266</td>
+        <td>-1126</td>
+        <td>5 лет 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>ГуголЪ | IT и Тренды</td>
+        <td><a href="https://t.me/joinchat/cV55XYW_5_tlMGMy">https://t.me/joinchat/cV55XYW_5_tlMGMy</a></td>
+        <td>Технологии</td>
+        <td>242108</td>
+        <td>10315</td>
+        <td>5.0</td>
+        <td>-2830</td>
+        <td>-4736</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>М.Видео | Эльдорадо</td>
+        <td><a href="https://t.me/mvideoandeldorado">https://t.me/mvideoandeldorado</a></td>
+        <td>Технологии</td>
+        <td>241195</td>
+        <td>39149</td>
+        <td>17.0</td>
+        <td>3199</td>
+        <td>35560</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CodeCamp</td>
+        <td><a href="https://t.me/codecamp">https://t.me/codecamp</a></td>
+        <td>Технологии</td>
+        <td>241123</td>
+        <td>24602</td>
+        <td>11.0</td>
+        <td>-2119</td>
+        <td>-11269</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AI и точка.</td>
+        <td><a href="https://t.me/ai4telegram">https://t.me/ai4telegram</a></td>
+        <td>Технологии</td>
+        <td>236695</td>
+        <td>24293</td>
+        <td>11.0</td>
+        <td>-5622</td>
+        <td>47172</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Neural Pony</td>
+        <td><a href="https://t.me/neuralpony">https://t.me/neuralpony</a></td>
+        <td>Технологии</td>
+        <td>234312</td>
+        <td>31300</td>
+        <td>14.0</td>
+        <td>-223</td>
+        <td>-3343</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>808</td>
+        <td><a href="https://t.me/rbtshki">https://t.me/rbtshki</a></td>
+        <td>Технологии</td>
+        <td>228572</td>
+        <td>42613</td>
+        <td>19.0</td>
+        <td>-1406</td>
+        <td>4549</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Lifegoodd</td>
+        <td><a href="https://t.me/lifegoodd1">https://t.me/lifegoodd1</a></td>
+        <td>Технологии</td>
+        <td>223911</td>
+        <td>20444</td>
+        <td>10.0</td>
+        <td>41258</td>
+        <td>11716</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Фон</td>
+        <td><a href="https://t.me/fon_tech">https://t.me/fon_tech</a></td>
+        <td>Технологии</td>
+        <td>222159</td>
+        <td>58454</td>
+        <td>27.0</td>
+        <td>22213</td>
+        <td>114793</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Технологии | Нейросети | Боты</td>
+        <td><a href="https://t.me/aiaiai">https://t.me/aiaiai</a></td>
+        <td>Технологии</td>
+        <td>219966</td>
+        <td>16045</td>
+        <td>8.0</td>
+        <td>-635</td>
+        <td>-3230</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>The Фичер</td>
+        <td><a href="https://t.me/feachermedia">https://t.me/feachermedia</a></td>
+        <td>Технологии</td>
+        <td>217156</td>
+        <td>28917</td>
+        <td>14.0</td>
+        <td>-207</td>
+        <td>184</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>XOR</td>
+        <td><a href="https://t.me/xor_journal">https://t.me/xor_journal</a></td>
+        <td>Технологии</td>
+        <td>203921</td>
+        <td>25744</td>
+        <td>13.0</td>
+        <td>-17425</td>
+        <td>39995</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Прокачай Мозг: Айти, Тренды, Технологии</td>
+        <td><a href="https://t.me/iPumpBrain">https://t.me/iPumpBrain</a></td>
+        <td>Технологии</td>
+        <td>199982</td>
+        <td>13331</td>
+        <td>7.0</td>
+        <td>-476</td>
+        <td>-895</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Айтишная</td>
+        <td><a href="https://t.me/aitshnya">https://t.me/aitshnya</a></td>
+        <td>Технологии</td>
+        <td>197872</td>
+        <td>15448</td>
+        <td>8.0</td>
+        <td>353</td>
+        <td>11752</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Machinelearning</td>
+        <td><a href="https://t.me/ai_machinelearning_big_data">https://t.me/ai_machinelearning_big_data</a></td>
+        <td>Технологии</td>
+        <td>193559</td>
+        <td>18226</td>
+        <td>10.0</td>
+        <td>2210</td>
+        <td>4102</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Технотренды от Альфа-Банка</td>
+        <td><a href="https://t.me/alfa_trends">https://t.me/alfa_trends</a></td>
+        <td>Технологии</td>
+        <td>192845</td>
+        <td>62684</td>
+        <td>33.0</td>
+        <td>-3168</td>
+        <td>12482</td>
+        <td>4 месяца 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Neuronbo</td>
+        <td><a href="https://t.me/neuronbo">https://t.me/neuronbo</a></td>
+        <td>Технологии</td>
+        <td>191760</td>
+        <td>15284</td>
+        <td>8.0</td>
+        <td>-342</td>
+        <td>-4104</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мой Компьютер</td>
+        <td><a href="https://t.me/mknewsru">https://t.me/mknewsru</a></td>
+        <td>Технологии</td>
+        <td>188514</td>
+        <td>50082</td>
+        <td>27.0</td>
+        <td>-246</td>
+        <td>-3621</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Pachev Artem | Личный блог</td>
+        <td><a href="https://t.me/pachev">https://t.me/pachev</a></td>
+        <td>Технологии</td>
+        <td>179208</td>
+        <td>120575</td>
+        <td>68.0</td>
+        <td>-3144</td>
+        <td>33524</td>
+        <td>2 года 25 дней</td>
+      </tr>
+
+      <tr>
+        <td>Робот сочинит симфонию?</td>
+        <td><a href="https://t.me/robotsymphony">https://t.me/robotsymphony</a></td>
+        <td>Технологии</td>
+        <td>177382</td>
+        <td>16724</td>
+        <td>10.0</td>
+        <td>-953</td>
+        <td>-3061</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Discovery: IT, технологии, бизнес</td>
+        <td><a href="https://t.me/discoveryit_channel">https://t.me/discoveryit_channel</a></td>
+        <td>Технологии</td>
+        <td>177109</td>
+        <td>11566</td>
+        <td>7.0</td>
+        <td>-588</td>
+        <td>-2668</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>LOLZTEAM</td>
+        <td><a href="https://t.me/lolz_legal">https://t.me/lolz_legal</a></td>
+        <td>Технологии</td>
+        <td>175583</td>
+        <td>15426</td>
+        <td>9.0</td>
+        <td>-4648</td>
+        <td>-3662</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТЕХНО: Яндекс про технологии</td>
+        <td><a href="https://t.me/techno_yandex">https://t.me/techno_yandex</a></td>
+        <td>Технологии</td>
+        <td>167832</td>
+        <td>32120</td>
+        <td>20.0</td>
+        <td>-1700</td>
+        <td>-4608</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>EDYA GPT NEWS</td>
+        <td><a href="https://t.me/edya_robot">https://t.me/edya_robot</a></td>
+        <td>Технологии</td>
+        <td>165102</td>
+        <td>38421</td>
+        <td>24.0</td>
+        <td>-786</td>
+        <td>-4980</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Apple News</td>
+        <td><a href="https://t.me/media_apple">https://t.me/media_apple</a></td>
+        <td>Технологии</td>
+        <td>163510</td>
+        <td>27507</td>
+        <td>17.0</td>
+        <td>-782</td>
+        <td>-4905</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книги для программистов</td>
+        <td><a href="https://t.me/progbook">https://t.me/progbook</a></td>
+        <td>Технологии</td>
+        <td>156947</td>
+        <td>16516</td>
+        <td>11.0</td>
+        <td>-285</td>
+        <td>-706</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бэкап</td>
+        <td><a href="https://t.me/ne_backup">https://t.me/ne_backup</a></td>
+        <td>Технологии</td>
+        <td>156239</td>
+        <td>9881</td>
+        <td>7.0</td>
+        <td>-3363</td>
+        <td>-16843</td>
+        <td>8 месяцев 1 день</td>
+      </tr>
+
+      <tr>
+        <td>СправПортал - Защита от спама и мошенников</td>
+        <td><a href="https://t.me/spravportal_whocalls">https://t.me/spravportal_whocalls</a></td>
+        <td>Технологии</td>
+        <td>149957</td>
+        <td>54658</td>
+        <td>37.0</td>
+        <td>706</td>
+        <td>7434</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>AliExpress для авто</td>
+        <td><a href="https://t.me/aliexpauto">https://t.me/aliexpauto</a></td>
+        <td>Технологии</td>
+        <td>147805</td>
+        <td>32215</td>
+        <td>22.0</td>
+        <td>-553</td>
+        <td>-2773</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Chad AI</td>
+        <td><a href="https://t.me/chadgpt_ru">https://t.me/chadgpt_ru</a></td>
+        <td>Технологии</td>
+        <td>145879</td>
+        <td>18671</td>
+        <td>13.0</td>
+        <td>-526</td>
+        <td>-2208</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Programmer & IT Memes</td>
+        <td><a href="https://t.me/itmemes">https://t.me/itmemes</a></td>
+        <td>Технологии</td>
+        <td>144075</td>
+        <td>28112</td>
+        <td>20.0</td>
+        <td>-474</td>
+        <td>-1080</td>
+        <td>5 лет 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Хлебни ИИ</td>
+        <td><a href="https://t.me/sip_ai">https://t.me/sip_ai</a></td>
+        <td>Технологии</td>
+        <td>141974</td>
+        <td>3569</td>
+        <td>3.0</td>
+        <td>2323</td>
+        <td>5611</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Простой Python | Программирование</td>
+        <td><a href="https://t.me/joinchat/xgchO1PhxKs0OTY6">https://t.me/joinchat/xgchO1PhxKs0OTY6</a></td>
+        <td>Технологии</td>
+        <td>139850</td>
+        <td>10626</td>
+        <td>8.0</td>
+        <td>-841</td>
+        <td>-3181</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Samsung Russia</td>
+        <td><a href="https://t.me/SamsungRussia">https://t.me/SamsungRussia</a></td>
+        <td>Технологии</td>
+        <td>137945</td>
+        <td>60912</td>
+        <td>45.0</td>
+        <td>-234</td>
+        <td>12125</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Нейротека</td>
+        <td><a href="https://t.me/neurotecha">https://t.me/neurotecha</a></td>
+        <td>Технологии</td>
+        <td>107288</td>
+        <td>40629</td>
+        <td>38.0</td>
+        <td>2</td>
+        <td>22</td>
+        <td>9 месяцев 29 дней</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

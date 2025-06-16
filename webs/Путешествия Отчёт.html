@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Авиакомпания «Победа»</td>
+        <td><a href="https://t.me/PobedaAirlines">https://t.me/PobedaAirlines</a></td>
+        <td>Путешествия</td>
+        <td>1166997</td>
+        <td>402853</td>
+        <td>35.0</td>
+        <td>-3515</td>
+        <td>-13110</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москва на максималках</td>
+        <td><a href="https://t.me/mosjournal">https://t.me/mosjournal</a></td>
+        <td>Путешествия</td>
+        <td>509348</td>
+        <td>58533</td>
+        <td>12.0</td>
+        <td>40713</td>
+        <td>154363</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Путешествия</td>
+        <td><a href="https://t.me/yandex_travel">https://t.me/yandex_travel</a></td>
+        <td>Путешествия</td>
+        <td>469266</td>
+        <td>39707</td>
+        <td>9.0</td>
+        <td>-5038</td>
+        <td>22894</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вагон скидок</td>
+        <td><a href="https://t.me/fpcrussia">https://t.me/fpcrussia</a></td>
+        <td>Путешествия</td>
+        <td>469043</td>
+        <td>131217</td>
+        <td>28.0</td>
+        <td>-1790</td>
+        <td>19363</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Гуляй, Москва</td>
+        <td><a href="https://t.me/moswalker">https://t.me/moswalker</a></td>
+        <td>Путешествия</td>
+        <td>431317</td>
+        <td>41477</td>
+        <td>10.0</td>
+        <td>-5587</td>
+        <td>-30714</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АЭРОФЛОТ</td>
+        <td><a href="https://t.me/aeroflot_official">https://t.me/aeroflot_official</a></td>
+        <td>Путешествия</td>
+        <td>427567</td>
+        <td>139454</td>
+        <td>33.0</td>
+        <td>2887</td>
+        <td>14688</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Способы путешествoвать почти бесплатно (RU) | Vandrouki, Вандруки, вандроки — это мы</td>
+        <td><a href="https://t.me/vandroukiru">https://t.me/vandroukiru</a></td>
+        <td>Путешествия</td>
+        <td>396174</td>
+        <td>61118</td>
+        <td>16.0</td>
+        <td>263</td>
+        <td>2309</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Путешествия с огоньком</td>
+        <td><a href="https://t.me/OgonekTravel">https://t.me/OgonekTravel</a></td>
+        <td>Путешествия</td>
+        <td>334291</td>
+        <td>51154</td>
+        <td>16.0</td>
+        <td>14767</td>
+        <td>24849</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ozon Travel</td>
+        <td><a href="https://t.me/ozontravel_official">https://t.me/ozontravel_official</a></td>
+        <td>Путешествия</td>
+        <td>324142</td>
+        <td>50531</td>
+        <td>16.0</td>
+        <td>4707</td>
+        <td>4133</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КудаМосква</td>
+        <td><a href="https://t.me/kudamsk24">https://t.me/kudamsk24</a></td>
+        <td>Путешествия</td>
+        <td>307047</td>
+        <td>38322</td>
+        <td>13.0</td>
+        <td>5685</td>
+        <td>-1923</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир.Дружба.Travel ✈️</td>
+        <td><a href="https://t.me/mdtravel">https://t.me/mdtravel</a></td>
+        <td>Путешествия</td>
+        <td>305088</td>
+        <td>10971</td>
+        <td>4.0</td>
+        <td>8769</td>
+        <td>-434</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бери Билеты</td>
+        <td><a href="https://t.me/BeriBileti">https://t.me/BeriBileti</a></td>
+        <td>Путешествия</td>
+        <td>294663</td>
+        <td>42742</td>
+        <td>15.0</td>
+        <td>1212</td>
+        <td>73</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир Наизнанку🌱</td>
+        <td><a href="https://t.me/joinchat/pc9yUEhco4Q0OGUy">https://t.me/joinchat/pc9yUEhco4Q0OGUy</a></td>
+        <td>Путешествия</td>
+        <td>290940</td>
+        <td>18981</td>
+        <td>7.0</td>
+        <td>-195</td>
+        <td>-2068</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>S7 Airlines</td>
+        <td><a href="https://t.me/s7airlines">https://t.me/s7airlines</a></td>
+        <td>Путешествия</td>
+        <td>281901</td>
+        <td>105710</td>
+        <td>38.0</td>
+        <td>-1660</td>
+        <td>1218</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Летать не вредно</td>
+        <td><a href="https://t.me/Fly_no_Cry">https://t.me/Fly_no_Cry</a></td>
+        <td>Путешествия</td>
+        <td>273031</td>
+        <td>44505</td>
+        <td>17.0</td>
+        <td>987</td>
+        <td>75</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Авиасейлс</td>
+        <td><a href="https://t.me/aviasales">https://t.me/aviasales</a></td>
+        <td>Путешествия</td>
+        <td>270053</td>
+        <td>51489</td>
+        <td>20.0</td>
+        <td>-342</td>
+        <td>-1120</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Компас</td>
+        <td><a href="https://t.me/joinchat/4lXIfieAmHEyOTE6">https://t.me/joinchat/4lXIfieAmHEyOTE6</a></td>
+        <td>Путешествия</td>
+        <td>238701</td>
+        <td>17910</td>
+        <td>8.0</td>
+        <td>-842</td>
+        <td>-8220</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Халявщики Travel</td>
+        <td><a href="https://t.me/HalyavshikiTravel">https://t.me/HalyavshikiTravel</a></td>
+        <td>Путешествия</td>
+        <td>233388</td>
+        <td>8561</td>
+        <td>4.0</td>
+        <td>-462</td>
+        <td>-492</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мир вокруг</td>
+        <td><a href="https://t.me/joinchat/c3B73QL3r9ljMTJi">https://t.me/joinchat/c3B73QL3r9ljMTJi</a></td>
+        <td>Путешествия</td>
+        <td>229917</td>
+        <td>25388</td>
+        <td>11.0</td>
+        <td>-485</td>
+        <td>-947</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TravelRadar — дешевые авиабилеты, туры, путешествия</td>
+        <td><a href="https://t.me/travelradar">https://t.me/travelradar</a></td>
+        <td>Путешествия</td>
+        <td>224123</td>
+        <td>19011</td>
+        <td>9.0</td>
+        <td>479</td>
+        <td>4146</td>
+        <td>9 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатная Москва</td>
+        <td><a href="https://t.me/moscowafishi">https://t.me/moscowafishi</a></td>
+        <td>Путешествия</td>
+        <td>223478</td>
+        <td>23025</td>
+        <td>11.0</td>
+        <td>-256</td>
+        <td>2180</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Летим?</td>
+        <td><a href="https://t.me/Letimtg">https://t.me/Letimtg</a></td>
+        <td>Путешествия</td>
+        <td>215952</td>
+        <td>43759</td>
+        <td>21.0</td>
+        <td>1463</td>
+        <td>39</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Удивительный Мир 🏝</td>
+        <td><a href="https://t.me/travelmir_tg">https://t.me/travelmir_tg</a></td>
+        <td>Путешествия</td>
+        <td>206841</td>
+        <td>17687</td>
+        <td>9.0</td>
+        <td>-627</td>
+        <td>-3139</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Путешествия по России • Go Russia</td>
+        <td><a href="https://t.me/joinchat/uOW0l4tE3tdlOWQ6">https://t.me/joinchat/uOW0l4tE3tdlOWQ6</a></td>
+        <td>Путешествия</td>
+        <td>202803</td>
+        <td>16586</td>
+        <td>9.0</td>
+        <td>-825</td>
+        <td>-3752</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>99 евро экономные туры</td>
+        <td><a href="https://t.me/eur99">https://t.me/eur99</a></td>
+        <td>Путешествия</td>
+        <td>200374</td>
+        <td>16618</td>
+        <td>9.0</td>
+        <td>8616</td>
+        <td>23553</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Discovery Aesthetic</td>
+        <td><a href="https://t.me/joinchat/tq5sU692-UpiMGMy">https://t.me/joinchat/tq5sU692-UpiMGMy</a></td>
+        <td>Путешествия</td>
+        <td>200068</td>
+        <td>18159</td>
+        <td>10.0</td>
+        <td>-847</td>
+        <td>-4004</td>
+        <td>2 года 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Туту</td>
+        <td><a href="https://t.me/tutu_travel">https://t.me/tutu_travel</a></td>
+        <td>Путешествия</td>
+        <td>197830</td>
+        <td>35010</td>
+        <td>18.0</td>
+        <td>44831</td>
+        <td>56166</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Трэвел Клик: горящие туры и билеты</td>
+        <td><a href="https://t.me/trvlclick">https://t.me/trvlclick</a></td>
+        <td>Путешествия</td>
+        <td>192797</td>
+        <td>19180</td>
+        <td>10.0</td>
+        <td>915</td>
+        <td>4875</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>вы ушли с маршрута</td>
+        <td><a href="https://t.me/ushli_s_marshruta">https://t.me/ushli_s_marshruta</a></td>
+        <td>Путешествия</td>
+        <td>192059</td>
+        <td>22772</td>
+        <td>12.0</td>
+        <td>-516</td>
+        <td>-3104</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Необычные путешествия</td>
+        <td><a href="https://t.me/mikearoundtheworld">https://t.me/mikearoundtheworld</a></td>
+        <td>Путешествия</td>
+        <td>184629</td>
+        <td>26464</td>
+        <td>15.0</td>
+        <td>-660</td>
+        <td>-1892</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Суточно.ру</td>
+        <td><a href="https://t.me/sutochnoru">https://t.me/sutochnoru</a></td>
+        <td>Путешествия</td>
+        <td>182025</td>
+        <td>55388</td>
+        <td>31.0</td>
+        <td>-3476</td>
+        <td>13059</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Моя страна - Россия! | Путешествия</td>
+        <td><a href="https://t.me/moyarossia">https://t.me/moyarossia</a></td>
+        <td>Путешествия</td>
+        <td>181847</td>
+        <td>16536</td>
+        <td>10.0</td>
+        <td>72</td>
+        <td>-93</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москва радует • Афиша</td>
+        <td><a href="https://t.me/Moscow_happy">https://t.me/Moscow_happy</a></td>
+        <td>Путешествия</td>
+        <td>178847</td>
+        <td>21444</td>
+        <td>12.0</td>
+        <td>-3047</td>
+        <td>13536</td>
+        <td>2 года 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Travel media</td>
+        <td><a href="https://t.me/joinchat/fE-7B46aUqwxNTQy">https://t.me/joinchat/fE-7B46aUqwxNTQy</a></td>
+        <td>Путешествия</td>
+        <td>177404</td>
+        <td>24802</td>
+        <td>14.0</td>
+        <td>-469</td>
+        <td>-2284</td>
+        <td>3 года 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Туры от Vandrouki</td>
+        <td><a href="https://t.me/vandroukitours">https://t.me/vandroukitours</a></td>
+        <td>Путешествия</td>
+        <td>173630</td>
+        <td>17785</td>
+        <td>11.0</td>
+        <td>620</td>
+        <td>4221</td>
+        <td>7 лет 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>МосАфиша</td>
+        <td><a href="https://t.me/joinchat/mrql-qX70-M1NzQy">https://t.me/joinchat/mrql-qX70-M1NzQy</a></td>
+        <td>Путешествия</td>
+        <td>173081</td>
+        <td>14627</td>
+        <td>9.0</td>
+        <td>-1301</td>
+        <td>-10877</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>National Geograph1c</td>
+        <td><a href="https://t.me/national_geograph1c">https://t.me/national_geograph1c</a></td>
+        <td>Путешествия</td>
+        <td>171248</td>
+        <td>21095</td>
+        <td>13.0</td>
+        <td>-408</td>
+        <td>-3298</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Путешествия в Уютную Россию</td>
+        <td><a href="https://t.me/joinchat/h-9il_D4GXk0OWM6">https://t.me/joinchat/h-9il_D4GXk0OWM6</a></td>
+        <td>Путешествия</td>
+        <td>160064</td>
+        <td>10113</td>
+        <td>7.0</td>
+        <td>-223</td>
+        <td>-1284</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Самокатус</td>
+        <td><a href="https://t.me/samokatus">https://t.me/samokatus</a></td>
+        <td>Путешествия</td>
+        <td>157600</td>
+        <td>17327</td>
+        <td>11.0</td>
+        <td>3</td>
+        <td>212</td>
+        <td>9 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Путешествуй дешево Piratesru</td>
+        <td><a href="https://t.me/piratesru">https://t.me/piratesru</a></td>
+        <td>Путешествия</td>
+        <td>157451</td>
+        <td>13307</td>
+        <td>9.0</td>
+        <td>77</td>
+        <td>719</td>
+        <td>9 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бесплатная Москва. Скидки 😊🌴🌿</td>
+        <td><a href="https://t.me/joinchat/9q7QksvGCa5jZDYy">https://t.me/joinchat/9q7QksvGCa5jZDYy</a></td>
+        <td>Путешествия</td>
+        <td>151691</td>
+        <td>25707</td>
+        <td>17.0</td>
+        <td>955</td>
+        <td>4723</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НАПРАВЛЕНИЯ</td>
+        <td><a href="https://t.me/dmitry_lukyanchuk">https://t.me/dmitry_lukyanchuk</a></td>
+        <td>Путешествия</td>
+        <td>150033</td>
+        <td>42871</td>
+        <td>29.0</td>
+        <td>-405</td>
+        <td>-1196</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Куда сходить в Москве</td>
+        <td><a href="https://t.me/mscculture">https://t.me/mscculture</a></td>
+        <td>Путешествия</td>
+        <td>144778</td>
+        <td>14566</td>
+        <td>11.0</td>
+        <td>475</td>
+        <td>1135</td>
+        <td>4 года 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Куда пойти в Москве</td>
+        <td><a href="https://t.me/go_moskva">https://t.me/go_moskva</a></td>
+        <td>Путешествия</td>
+        <td>135266</td>
+        <td>19809</td>
+        <td>15.0</td>
+        <td>704</td>
+        <td>2094</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Travelata</td>
+        <td><a href="https://t.me/travelata">https://t.me/travelata</a></td>
+        <td>Путешествия</td>
+        <td>133324</td>
+        <td>18777</td>
+        <td>15.0</td>
+        <td>-1067</td>
+        <td>1091</td>
+        <td>9 лет 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Первый Авиабилетный</td>
+        <td><a href="https://t.me/joinchat/tmvYeCD7IfxhOWMy">https://t.me/joinchat/tmvYeCD7IfxhOWMy</a></td>
+        <td>Путешествия</td>
+        <td>128423</td>
+        <td>16106</td>
+        <td>13.0</td>
+        <td>-1284</td>
+        <td>-6853</td>
+        <td>8 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Москва Летим</td>
+        <td><a href="https://t.me/joinchat/1ggAkxAj5shmODli">https://t.me/joinchat/1ggAkxAj5shmODli</a></td>
+        <td>Путешествия</td>
+        <td>126908</td>
+        <td>20916</td>
+        <td>17.0</td>
+        <td>-513</td>
+        <td>-2414</td>
+        <td>9 месяцев 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мой Сочи | Краснодарский край</td>
+        <td><a href="https://t.me/sochidar">https://t.me/sochidar</a></td>
+        <td>Путешествия</td>
+        <td>126066</td>
+        <td>17124</td>
+        <td>14.0</td>
+        <td>-438</td>
+        <td>-1950</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>OneTwoTrip!</td>
+        <td><a href="https://t.me/OneTwoTrip">https://t.me/OneTwoTrip</a></td>
+        <td>Путешествия</td>
+        <td>125728</td>
+        <td>36640</td>
+        <td>30.0</td>
+        <td>-473</td>
+        <td>-423</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Заброшенный мир</td>
+        <td><a href="https://t.me/joinchat/9HAW1K65z_xiMGQy">https://t.me/joinchat/9HAW1K65z_xiMGQy</a></td>
+        <td>Путешествия</td>
+        <td>121552</td>
+        <td>12651</td>
+        <td>11.0</td>
+        <td>-547</td>
+        <td>-872</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ну чё, народ, погнали!</td>
+        <td><a href="https://t.me/ranarod">https://t.me/ranarod</a></td>
+        <td>Путешествия</td>
+        <td>121312</td>
+        <td>18999</td>
+        <td>16.0</td>
+        <td>109</td>
+        <td>547</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Погнали! | Стас Натанзон</td>
+        <td><a href="https://t.me/pognaliofficial">https://t.me/pognaliofficial</a></td>
+        <td>Путешествия</td>
+        <td>120902</td>
+        <td>28723</td>
+        <td>24.0</td>
+        <td>657</td>
+        <td>5350</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MosTrips 🔸Афиша Москва🔸Интересные места Москвы и Подмосковья</td>
+        <td><a href="https://t.me/mostrips">https://t.me/mostrips</a></td>
+        <td>Путешествия</td>
+        <td>118659</td>
+        <td>8792</td>
+        <td>8.0</td>
+        <td>422</td>
+        <td>1149</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Московский ревизор</td>
+        <td><a href="https://t.me/mosreview">https://t.me/mosreview</a></td>
+        <td>Путешествия</td>
+        <td>117927</td>
+        <td>16497</td>
+        <td>14.0</td>
+        <td>-865</td>
+        <td>-4601</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Go Kazan•Новости Казани</td>
+        <td><a href="https://t.me/gokzn">https://t.me/gokzn</a></td>
+        <td>Путешествия</td>
+        <td>114309</td>
+        <td>23259</td>
+        <td>21.0</td>
+        <td>3437</td>
+        <td>2468</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Travel News</td>
+        <td><a href="https://t.me/travelnews">https://t.me/travelnews</a></td>
+        <td>Путешествия</td>
+        <td>113916</td>
+        <td>22394</td>
+        <td>20.0</td>
+        <td>-275</td>
+        <td>-356</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Столица Мира | Гид Москвы</td>
+        <td><a href="https://t.me/joinchat/ToZiEN5k0Ms1NmVi">https://t.me/joinchat/ToZiEN5k0Ms1NmVi</a></td>
+        <td>Путешествия</td>
+        <td>113771</td>
+        <td>12645</td>
+        <td>12.0</td>
+        <td>892</td>
+        <td>8030</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Go Moscow • Куда пойти Москва</td>
+        <td><a href="https://t.me/joinchat/_1bdubf-LpE2N2Zi">https://t.me/joinchat/_1bdubf-LpE2N2Zi</a></td>
+        <td>Путешествия</td>
+        <td>112516</td>
+        <td>13107</td>
+        <td>12.0</td>
+        <td>-409</td>
+        <td>-2003</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Первый туристический</td>
+        <td><a href="https://t.me/first_tourist">https://t.me/first_tourist</a></td>
+        <td>Путешествия</td>
+        <td>112225</td>
+        <td>14178</td>
+        <td>13.0</td>
+        <td>142</td>
+        <td>214</td>
+        <td>9 месяцев 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>Николай Левшиц - channel in Georgia / Грузия</td>
+        <td><a href="https://t.me/nlevshitstelegram">https://t.me/nlevshitstelegram</a></td>
+        <td>Путешествия</td>
+        <td>111217</td>
+        <td>24250</td>
+        <td>22.0</td>
+        <td>-113</td>
+        <td>-604</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>📍КУДА ПОЕХАТЬ</td>
+        <td><a href="https://t.me/joinchat/4_Vcs53YnPg2ZDUy">https://t.me/joinchat/4_Vcs53YnPg2ZDUy</a></td>
+        <td>Путешествия</td>
+        <td>110269</td>
+        <td>6543</td>
+        <td>6.0</td>
+        <td>-111</td>
+        <td>-1006</td>
+        <td>10 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Москвичка</td>
+        <td><a href="https://t.me/moskvichca">https://t.me/moskvichca</a></td>
+        <td>Путешествия</td>
+        <td>109822</td>
+        <td>19053</td>
+        <td>18.0</td>
+        <td>-1356</td>
+        <td>4596</td>
+        <td>11 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Московский Гид | Афиша</td>
+        <td><a href="https://t.me/joinchat/0XiQ4m5o5uw5MGQ1">https://t.me/joinchat/0XiQ4m5o5uw5MGQ1</a></td>
+        <td>Путешествия</td>
+        <td>106883</td>
+        <td>8637</td>
+        <td>9.0</td>
+        <td>-626</td>
+        <td>-2929</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Путешествуем вместе | МИР</td>
+        <td><a href="https://t.me/joinchat/pgL734oa3ss1NTMy">https://t.me/joinchat/pgL734oa3ss1NTMy</a></td>
+        <td>Путешествия</td>
+        <td>106433</td>
+        <td>9286</td>
+        <td>9.0</td>
+        <td>-665</td>
+        <td>-703</td>
+        <td>9 месяцев 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Прямой рейс | Путешествия</td>
+        <td><a href="https://t.me/joinchat/wB6NZECiDko3YmYy">https://t.me/joinchat/wB6NZECiDko3YmYy</a></td>
+        <td>Путешествия</td>
+        <td>105973</td>
+        <td>9547</td>
+        <td>9.0</td>
+        <td>154</td>
+        <td>962</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TripToDream</td>
+        <td><a href="https://t.me/triptodreamru">https://t.me/triptodreamru</a></td>
+        <td>Путешествия</td>
+        <td>104699</td>
+        <td>18979</td>
+        <td>19.0</td>
+        <td>115</td>
+        <td>582</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Своим Ходом - Виталик и Лиза</td>
+        <td><a href="https://t.me/svoimxodom">https://t.me/svoimxodom</a></td>
+        <td>Путешествия</td>
+        <td>103961</td>
+        <td>44499</td>
+        <td>43.0</td>
+        <td>339</td>
+        <td>-162</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ARINA SHUMAKOVA</td>
+        <td><a href="https://t.me/arina_travels">https://t.me/arina_travels</a></td>
+        <td>Путешествия</td>
+        <td>103777</td>
+        <td>9115</td>
+        <td>9.0</td>
+        <td>-391</td>
+        <td>-1482</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>«ОК, едем» — Путешествия | Релокация</td>
+        <td><a href="https://t.me/joinchat/rXJm3AwwpJxkMDVi">https://t.me/joinchat/rXJm3AwwpJxkMDVi</a></td>
+        <td>Путешествия</td>
+        <td>103663</td>
+        <td>4787</td>
+        <td>5.0</td>
+        <td>430</td>
+        <td>2477</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Геолокация By Alexeev</td>
+        <td><a href="https://t.me/by_alexeev">https://t.me/by_alexeev</a></td>
+        <td>Путешествия</td>
+        <td>103349</td>
+        <td>31066</td>
+        <td>31.0</td>
+        <td>189</td>
+        <td>234</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Улететь</td>
+        <td><a href="https://t.me/uletet_1">https://t.me/uletet_1</a></td>
+        <td>Путешествия</td>
+        <td>103300</td>
+        <td>18186</td>
+        <td>18.0</td>
+        <td>-105</td>
+        <td>-459</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>УЛЕТНЫЙ ОТПУСК | Путешествия</td>
+        <td><a href="https://t.me/joinchat/sS198umIFwM5YjI6">https://t.me/joinchat/sS198umIFwM5YjI6</a></td>
+        <td>Путешествия</td>
+        <td>102932</td>
+        <td>7833</td>
+        <td>8.0</td>
+        <td>-34</td>
+        <td>1203</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЗАписки ТУРиста</td>
+        <td><a href="https://t.me/zapiski_tourista">https://t.me/zapiski_tourista</a></td>
+        <td>Путешествия</td>
+        <td>101748</td>
+        <td>36717</td>
+        <td>37.0</td>
+        <td>-37</td>
+        <td>123</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КудаПитер</td>
+        <td><a href="https://t.me/kudapiter24">https://t.me/kudapiter24</a></td>
+        <td>Путешествия</td>
+        <td>101610</td>
+        <td>10979</td>
+        <td>11.0</td>
+        <td>-253</td>
+        <td>-1274</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Афиша Москва • Скидки</td>
+        <td><a href="https://t.me/moscow_kuda">https://t.me/moscow_kuda</a></td>
+        <td>Путешествия</td>
+        <td>100476</td>
+        <td>17268</td>
+        <td>18.0</td>
+        <td>-152</td>
+        <td>-1668</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Being American</td>
+        <td><a href="https://t.me/realbeingamerican">https://t.me/realbeingamerican</a></td>
+        <td>Путешествия</td>
+        <td>99409</td>
+        <td>13140</td>
+        <td>14.0</td>
+        <td>-297</td>
+        <td>-465</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кофе и билеты (в Петербурге)</td>
+        <td><a href="https://t.me/v_poiskax_chuda">https://t.me/v_poiskax_chuda</a></td>
+        <td>Путешествия</td>
+        <td>97680</td>
+        <td>8295</td>
+        <td>9.0</td>
+        <td>-81</td>
+        <td>-471</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Билеты из Сибири - Новосибирск, Томск, Омск, Кузбасс, Алтай, Красноярск, Иркутск</td>
+        <td><a href="https://t.me/travel_from_siberia">https://t.me/travel_from_siberia</a></td>
+        <td>Путешествия</td>
+        <td>97476</td>
+        <td>24504</td>
+        <td>26.0</td>
+        <td>743</td>
+        <td>3977</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ФотоКочевник</td>
+        <td><a href="https://t.me/fotokochevnik">https://t.me/fotokochevnik</a></td>
+        <td>Путешествия</td>
+        <td>97475</td>
+        <td>31699</td>
+        <td>33.0</td>
+        <td>119</td>
+        <td>1406</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Московская барыня</td>
+        <td><a href="https://t.me/joinchat/0lOFJXRdluplYzMy">https://t.me/joinchat/0lOFJXRdluplYzMy</a></td>
+        <td>Путешествия</td>
+        <td>96867</td>
+        <td>14047</td>
+        <td>15.0</td>
+        <td>12774</td>
+        <td>22775</td>
+        <td>8 месяцев 1 день</td>
+      </tr>
+
+      <tr>
+        <td>Путешествия Бесплатно. Ну почти</td>
+        <td><a href="https://t.me/joinchat/ifGDRKFR-4RlM2Yy">https://t.me/joinchat/ifGDRKFR-4RlM2Yy</a></td>
+        <td>Путешествия</td>
+        <td>96295</td>
+        <td>10386</td>
+        <td>11.0</td>
+        <td>2885</td>
+        <td>10624</td>
+        <td>5 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Летаем сами</td>
+        <td><a href="https://t.me/joinchat/RoIJ6qxWY-T9-s62">https://t.me/joinchat/RoIJ6qxWY-T9-s62</a></td>
+        <td>Путешествия</td>
+        <td>95867</td>
+        <td>10630</td>
+        <td>12.0</td>
+        <td>-129</td>
+        <td>-613</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Go Piter • Куда пойти Питер</td>
+        <td><a href="https://t.me/joinchat/OQO4INSvR4M2MGIy">https://t.me/joinchat/OQO4INSvR4M2MGIy</a></td>
+        <td>Путешествия</td>
+        <td>95654</td>
+        <td>14934</td>
+        <td>16.0</td>
+        <td>-303</td>
+        <td>-1562</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Зелёный Коридор</td>
+        <td><a href="https://t.me/green_cord">https://t.me/green_cord</a></td>
+        <td>Путешествия</td>
+        <td>94736</td>
+        <td>9801</td>
+        <td>11.0</td>
+        <td>-296</td>
+        <td>-1354</td>
+        <td>4 года 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>ДРУГОЙ МИР</td>
+        <td><a href="https://t.me/joinchat/bfmlALeqz7gxMzYy">https://t.me/joinchat/bfmlALeqz7gxMzYy</a></td>
+        <td>Путешествия</td>
+        <td>94411</td>
+        <td>16499</td>
+        <td>18.0</td>
+        <td>-973</td>
+        <td>-3612</td>
+        <td>1 год 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>Москва Детям | Афиша</td>
+        <td><a href="https://t.me/moscokids">https://t.me/moscokids</a></td>
+        <td>Путешествия</td>
+        <td>93275</td>
+        <td>27761</td>
+        <td>30.0</td>
+        <td>-2827</td>
+        <td>101</td>
+        <td>8 месяцев 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>Много — про туризм</td>
+        <td><a href="https://t.me/joinchat/KcP666gNMcJjMzRi">https://t.me/joinchat/KcP666gNMcJjMzRi</a></td>
+        <td>Путешествия</td>
+        <td>92841</td>
+        <td>6593</td>
+        <td>8.0</td>
+        <td>-1001</td>
+        <td>7684</td>
+        <td>1 год 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Питер Daily / Афиша</td>
+        <td><a href="https://t.me/joinchat/XVtNlyqtQB5kZGY6">https://t.me/joinchat/XVtNlyqtQB5kZGY6</a></td>
+        <td>Путешествия</td>
+        <td>92242</td>
+        <td>20087</td>
+        <td>22.0</td>
+        <td>244</td>
+        <td>8784</td>
+        <td>11 месяцев 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Рутрэвел</td>
+        <td><a href="https://t.me/joinchat/KLF_-KpOJq80NjIy">https://t.me/joinchat/KLF_-KpOJq80NjIy</a></td>
+        <td>Путешествия</td>
+        <td>91556</td>
+        <td>7487</td>
+        <td>9.0</td>
+        <td>-239</td>
+        <td>-1032</td>
+        <td>10 месяцев 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>Тревел Тёма</td>
+        <td><a href="https://t.me/travel_tema">https://t.me/travel_tema</a></td>
+        <td>Путешествия</td>
+        <td>91227</td>
+        <td>11950</td>
+        <td>14.0</td>
+        <td>184</td>
+        <td>650</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>В Туризме | Медиа про путешествия</td>
+        <td><a href="https://t.me/VTurisme">https://t.me/VTurisme</a></td>
+        <td>Путешествия</td>
+        <td>90011</td>
+        <td>11223</td>
+        <td>13.0</td>
+        <td>-198</td>
+        <td>-873</td>
+        <td>8 лет 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>E1.RU | Афиша | Куда сходить в Екатеринбурге</td>
+        <td><a href="https://t.me/e1_afisha">https://t.me/e1_afisha</a></td>
+        <td>Путешествия</td>
+        <td>88067</td>
+        <td>21689</td>
+        <td>25.0</td>
+        <td>747</td>
+        <td>6318</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Авиабилеты от 0 рублей</td>
+        <td><a href="https://t.me/joinchat/2wvcloapcLE3OTIy">https://t.me/joinchat/2wvcloapcLE3OTIy</a></td>
+        <td>Путешествия</td>
+        <td>87761</td>
+        <td>7925</td>
+        <td>9.0</td>
+        <td>4239</td>
+        <td>12902</td>
+        <td>9 месяцев 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Красивые места Москвы и Подмосковья</td>
+        <td><a href="https://t.me/wondermoscow">https://t.me/wondermoscow</a></td>
+        <td>Путешествия</td>
+        <td>86079</td>
+        <td>6615</td>
+        <td>8.0</td>
+        <td>64</td>
+        <td>-161</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Туризм • по-Русски | Travel Blog</td>
+        <td><a href="https://t.me/turizm_russia_1">https://t.me/turizm_russia_1</a></td>
+        <td>Путешествия</td>
+        <td>86054</td>
+        <td>7275</td>
+        <td>9.0</td>
+        <td>-282</td>
+        <td>-1324</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дешёвые билеты из Москвы</td>
+        <td><a href="https://t.me/moskvatravel">https://t.me/moskvatravel</a></td>
+        <td>Путешествия</td>
+        <td>85341</td>
+        <td>20177</td>
+        <td>24.0</td>
+        <td>3017</td>
+        <td>13493</td>
+        <td>3 месяца 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Интересная Москва</td>
+        <td><a href="https://t.me/moscowinmyheart">https://t.me/moscowinmyheart</a></td>
+        <td>Путешествия</td>
+        <td>84870</td>
+        <td>6600</td>
+        <td>8.0</td>
+        <td>348</td>
+        <td>905</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бар Путешествий</td>
+        <td><a href="https://t.me/joinchat/TsqnsiHQVHQzODcy">https://t.me/joinchat/TsqnsiHQVHQzODcy</a></td>
+        <td>Путешествия</td>
+        <td>84705</td>
+        <td>7667</td>
+        <td>10.0</td>
+        <td>309</td>
+        <td>537</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Афиша бесплатных событий Петербурга</td>
+        <td><a href="https://t.me/afishapeterburga">https://t.me/afishapeterburga</a></td>
+        <td>Путешествия</td>
+        <td>84479</td>
+        <td>11774</td>
+        <td>14.0</td>
+        <td>258</td>
+        <td>647</td>
+        <td>4 года 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Utair</td>
+        <td><a href="https://t.me/Utair">https://t.me/Utair</a></td>
+        <td>Путешествия</td>
+        <td>84391</td>
+        <td>29052</td>
+        <td>35.0</td>
+        <td>-544</td>
+        <td>-4723</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

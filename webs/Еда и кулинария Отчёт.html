@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Кулинария Рецепты Салаты 🧑‍🍳</td>
+        <td><a href="https://t.me/Kulinariya_retsept">https://t.me/Kulinariya_retsept</a></td>
+        <td>Еда и кулинария</td>
+        <td>877005</td>
+        <td>83264</td>
+        <td>10.0</td>
+        <td>5520</td>
+        <td>12427</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пятёрочка</td>
+        <td><a href="https://t.me/tspyaterochka">https://t.me/tspyaterochka</a></td>
+        <td>Еда и кулинария</td>
+        <td>707612</td>
+        <td>141246</td>
+        <td>20.0</td>
+        <td>5070</td>
+        <td>-14240</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>🎂 Мамины Рецепты 😋</td>
+        <td><a href="https://t.me/joinchat/NRZYjwzHl_NmMTZi">https://t.me/joinchat/NRZYjwzHl_NmMTZi</a></td>
+        <td>Еда и кулинария</td>
+        <td>698503</td>
+        <td>80987</td>
+        <td>12.0</td>
+        <td>5335</td>
+        <td>3174</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книга рецептов</td>
+        <td><a href="https://t.me/joinchat/AAAAAFczbli2UqYdQsHZ0g">https://t.me/joinchat/AAAAAFczbli2UqYdQsHZ0g</a></td>
+        <td>Еда и кулинария</td>
+        <td>614548</td>
+        <td>52822</td>
+        <td>9.0</td>
+        <td>-1984</td>
+        <td>-9233</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>😋 ЕшьХудей | ПП Рецепты</td>
+        <td><a href="https://t.me/joinchat/Vt1bAWcdEV43NjYy">https://t.me/joinchat/Vt1bAWcdEV43NjYy</a></td>
+        <td>Еда и кулинария</td>
+        <td>542763</td>
+        <td>31000</td>
+        <td>6.0</td>
+        <td>-1785</td>
+        <td>-5665</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Здоровое меню</td>
+        <td><a href="https://t.me/joinchat/dx7Lzu0Pgfw3YjVi">https://t.me/joinchat/dx7Lzu0Pgfw3YjVi</a></td>
+        <td>Еда и кулинария</td>
+        <td>529905</td>
+        <td>43557</td>
+        <td>9.0</td>
+        <td>-3203</td>
+        <td>-20862</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рецепты на каждый день</td>
+        <td><a href="https://t.me/joinchat/xE4tYkSzJAZiZWQy">https://t.me/joinchat/xE4tYkSzJAZiZWQy</a></td>
+        <td>Еда и кулинария</td>
+        <td>498045</td>
+        <td>42021</td>
+        <td>9.0</td>
+        <td>-1973</td>
+        <td>-7356</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Фитнес меню</td>
+        <td><a href="https://t.me/joinchat/b7xfUXiZelxhNGEy">https://t.me/joinchat/b7xfUXiZelxhNGEy</a></td>
+        <td>Еда и кулинария</td>
+        <td>465369</td>
+        <td>37498</td>
+        <td>9.0</td>
+        <td>-1761</td>
+        <td>-6829</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Простые Рецепты</td>
+        <td><a href="https://t.me/prostoy_retsept">https://t.me/prostoy_retsept</a></td>
+        <td>Еда и кулинария</td>
+        <td>459493</td>
+        <td>43967</td>
+        <td>10.0</td>
+        <td>-879</td>
+        <td>-3970</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>По-домашнему</td>
+        <td><a href="https://t.me/joinchat/P7uLZyGoRE85Zjcy">https://t.me/joinchat/P7uLZyGoRE85Zjcy</a></td>
+        <td>Еда и кулинария</td>
+        <td>452350</td>
+        <td>59246</td>
+        <td>14.0</td>
+        <td>-90</td>
+        <td>17798</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кухня наизнанку</td>
+        <td><a href="https://t.me/min2ru">https://t.me/min2ru</a></td>
+        <td>Еда и кулинария</td>
+        <td>447759</td>
+        <td>172494</td>
+        <td>39.0</td>
+        <td>816</td>
+        <td>2891</td>
+        <td>4 года 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>ПРАВИЛЬНОЕ ПИТАНИЕ🥦</td>
+        <td><a href="https://t.me/joinchat/KzT96r9XyeI1NjEy">https://t.me/joinchat/KzT96r9XyeI1NjEy</a></td>
+        <td>Еда и кулинария</td>
+        <td>431048</td>
+        <td>31575</td>
+        <td>8.0</td>
+        <td>-1701</td>
+        <td>-6421</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>САЛАТЫ ЗАКУСКИ 🥗</td>
+        <td><a href="https://t.me/joinchat/XHMpX1ikCMI1Zjdi">https://t.me/joinchat/XHMpX1ikCMI1Zjdi</a></td>
+        <td>Еда и кулинария</td>
+        <td>430618</td>
+        <td>58614</td>
+        <td>14.0</td>
+        <td>-1693</td>
+        <td>-6151</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТАРЕЛОЧКА</td>
+        <td><a href="https://t.me/joinchat/6tX5MJlIPqxiY2Iy">https://t.me/joinchat/6tX5MJlIPqxiY2Iy</a></td>
+        <td>Еда и кулинария</td>
+        <td>422081</td>
+        <td>50578</td>
+        <td>12.0</td>
+        <td>-2671</td>
+        <td>-11834</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кухня</td>
+        <td><a href="https://t.me/joinchat/AAAAAEj3r1xo5T_a_nUDEA">https://t.me/joinchat/AAAAAEj3r1xo5T_a_nUDEA</a></td>
+        <td>Еда и кулинария</td>
+        <td>415922</td>
+        <td>37922</td>
+        <td>10.0</td>
+        <td>-898</td>
+        <td>-1680</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Домашние рецепты</td>
+        <td><a href="https://t.me/joinchat/tLtmwa6OoOk4YTA6">https://t.me/joinchat/tLtmwa6OoOk4YTA6</a></td>
+        <td>Еда и кулинария</td>
+        <td>380681</td>
+        <td>7040</td>
+        <td>2.0</td>
+        <td>-5989</td>
+        <td>-28268</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Магия вкуса | рецепты</td>
+        <td><a href="https://t.me/joinchat/q6V7MPZ12ZdkMTAy">https://t.me/joinchat/q6V7MPZ12ZdkMTAy</a></td>
+        <td>Еда и кулинария</td>
+        <td>377328</td>
+        <td>41027</td>
+        <td>11.0</td>
+        <td>514</td>
+        <td>3741</td>
+        <td>5 лет 7 дней</td>
+      </tr>
+
+      <tr>
+        <td>ПП ЗАВТРАКИ 😋</td>
+        <td><a href="https://t.me/joinchat/20-uo5l-HvRhODk6">https://t.me/joinchat/20-uo5l-HvRhODk6</a></td>
+        <td>Еда и кулинария</td>
+        <td>372684</td>
+        <td>38938</td>
+        <td>11.0</td>
+        <td>2298</td>
+        <td>16776</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПП Рецепты | Быстро и Вкусно</td>
+        <td><a href="https://t.me/joinchat/xxjYd6F17slmZTNi">https://t.me/joinchat/xxjYd6F17slmZTNi</a></td>
+        <td>Еда и кулинария</td>
+        <td>366585</td>
+        <td>28783</td>
+        <td>8.0</td>
+        <td>1005</td>
+        <td>1843</td>
+        <td>5 лет 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Кулинария | Рецепты | Лайфхаки</td>
+        <td><a href="https://t.me/joinchat/nar7ug2aOD1lY2E6">https://t.me/joinchat/nar7ug2aOD1lY2E6</a></td>
+        <td>Еда и кулинария</td>
+        <td>348601</td>
+        <td>1</td>
+        <td>2.0</td>
+        <td>-2104</td>
+        <td>-22241</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПП Рецепты | Кулинария</td>
+        <td><a href="https://t.me/Recepty_Kulinaria">https://t.me/Recepty_Kulinaria</a></td>
+        <td>Еда и кулинария</td>
+        <td>344115</td>
+        <td>24242</td>
+        <td>7.0</td>
+        <td>-2852</td>
+        <td>-13343</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Правильное меню</td>
+        <td><a href="https://t.me/joinchat/OE7j5Mp8yus2MGUy">https://t.me/joinchat/OE7j5Mp8yus2MGUy</a></td>
+        <td>Еда и кулинария</td>
+        <td>333993</td>
+        <td>30536</td>
+        <td>10.0</td>
+        <td>-3332</td>
+        <td>-15974</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кулинарные хитрости</td>
+        <td><a href="https://t.me/joinchat/RI5jqcNZwHM1YzYy">https://t.me/joinchat/RI5jqcNZwHM1YzYy</a></td>
+        <td>Еда и кулинария</td>
+        <td>328437</td>
+        <td>32903</td>
+        <td>10.0</td>
+        <td>887</td>
+        <td>3375</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Еда без вреда | ПП рецепты</td>
+        <td><a href="https://t.me/pitanie798">https://t.me/pitanie798</a></td>
+        <td>Еда и кулинария</td>
+        <td>327025</td>
+        <td>36795</td>
+        <td>12.0</td>
+        <td>2276</td>
+        <td>5449</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>нетмонет</td>
+        <td><a href="https://t.me/netmonet_co">https://t.me/netmonet_co</a></td>
+        <td>Еда и кулинария</td>
+        <td>324807</td>
+        <td>25545</td>
+        <td>8.0</td>
+        <td>-5872</td>
+        <td>-2835</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>САЛАТЫ И НАРЕЗКИ 🥗</td>
+        <td><a href="https://t.me/joinchat/UfifS9wLdWQ5MmE6">https://t.me/joinchat/UfifS9wLdWQ5MmE6</a></td>
+        <td>Еда и кулинария</td>
+        <td>322193</td>
+        <td>35089</td>
+        <td>11.0</td>
+        <td>991</td>
+        <td>3532</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Кулинария Рецепты</td>
+        <td><a href="https://t.me/Kulinaria_Receptii">https://t.me/Kulinaria_Receptii</a></td>
+        <td>Еда и кулинария</td>
+        <td>311984</td>
+        <td>16307</td>
+        <td>6.0</td>
+        <td>-632</td>
+        <td>-3723</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СысоевFM</td>
+        <td><a href="https://t.me/sysoevfm">https://t.me/sysoevfm</a></td>
+        <td>Еда и кулинария</td>
+        <td>308028</td>
+        <td>44354</td>
+        <td>15.0</td>
+        <td>120</td>
+        <td>3295</td>
+        <td>9 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вкусные рецепты</td>
+        <td><a href="https://t.me/vkusnye_retseptyy">https://t.me/vkusnye_retseptyy</a></td>
+        <td>Еда и кулинария</td>
+        <td>303134</td>
+        <td>22510</td>
+        <td>8.0</td>
+        <td>-622</td>
+        <td>-2824</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Real Food</td>
+        <td><a href="https://t.me/eda2021">https://t.me/eda2021</a></td>
+        <td>Еда и кулинария</td>
+        <td>299710</td>
+        <td>25094</td>
+        <td>9.0</td>
+        <td>-654</td>
+        <td>-2917</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Дай Откусить</td>
+        <td><a href="https://t.me/dauotkysit">https://t.me/dauotkysit</a></td>
+        <td>Еда и кулинария</td>
+        <td>297242</td>
+        <td>71043</td>
+        <td>24.0</td>
+        <td>-2847</td>
+        <td>9803</td>
+        <td>4 года 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>ЧИЖИК</td>
+        <td><a href="https://t.me/chizhikmagazin">https://t.me/chizhikmagazin</a></td>
+        <td>Еда и кулинария</td>
+        <td>296100</td>
+        <td>126649</td>
+        <td>43.0</td>
+        <td>3334</td>
+        <td>17335</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПРАВИЛЬНОЕ ПИТАНИЕ 💚</td>
+        <td><a href="https://t.me/joinchat/EIwscIiglBhlY2Zi">https://t.me/joinchat/EIwscIiglBhlY2Zi</a></td>
+        <td>Еда и кулинария</td>
+        <td>288306</td>
+        <td>16341</td>
+        <td>6.0</td>
+        <td>-1291</td>
+        <td>-3505</td>
+        <td>4 года 21 день</td>
+      </tr>
+
+      <tr>
+        <td>Пальчики оближешь! 🥘 Рецепты | Салаты</td>
+        <td><a href="https://t.me/po_receptj">https://t.me/po_receptj</a></td>
+        <td>Еда и кулинария</td>
+        <td>287965</td>
+        <td>25120</td>
+        <td>9.0</td>
+        <td>277</td>
+        <td>928</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Аэрогриль | Рецепты</td>
+        <td><a href="https://t.me/aerogrill_recepti">https://t.me/aerogrill_recepti</a></td>
+        <td>Еда и кулинария</td>
+        <td>287036</td>
+        <td>68409</td>
+        <td>24.0</td>
+        <td>1654</td>
+        <td>6182</td>
+        <td>9 месяцев 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>Готовим в мультиварке | Рецепты</td>
+        <td><a href="https://t.me/joinchat/rPwuc5sf9WxiZDcy">https://t.me/joinchat/rPwuc5sf9WxiZDcy</a></td>
+        <td>Еда и кулинария</td>
+        <td>285069</td>
+        <td>37930</td>
+        <td>14.0</td>
+        <td>-261</td>
+        <td>-1403</td>
+        <td>8 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Вкусные Рецепты</td>
+        <td><a href="https://t.me/joinchat/_dMIQMEN-qg0YTJi">https://t.me/joinchat/_dMIQMEN-qg0YTJi</a></td>
+        <td>Еда и кулинария</td>
+        <td>275660</td>
+        <td>35403</td>
+        <td>13.0</td>
+        <td>874</td>
+        <td>813</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рецепты В Духовке 🥩</td>
+        <td><a href="https://t.me/joinchat/r-PaYVeLdk5kMTFi">https://t.me/joinchat/r-PaYVeLdk5kMTFi</a></td>
+        <td>Еда и кулинария</td>
+        <td>270816</td>
+        <td>40599</td>
+        <td>15.0</td>
+        <td>-1717</td>
+        <td>-5034</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сборник Рецептов</td>
+        <td><a href="https://t.me/joinchat/QQK43Nd3J2g2NmEy">https://t.me/joinchat/QQK43Nd3J2g2NmEy</a></td>
+        <td>Еда и кулинария</td>
+        <td>267065</td>
+        <td>19606</td>
+        <td>8.0</td>
+        <td>-964</td>
+        <td>-4550</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Быстрые рецепты</td>
+        <td><a href="https://t.me/Fastrecepts">https://t.me/Fastrecepts</a></td>
+        <td>Еда и кулинария</td>
+        <td>265378</td>
+        <td>25012</td>
+        <td>10.0</td>
+        <td>-448</td>
+        <td>-2233</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вкусно и дешево 🥘</td>
+        <td><a href="https://t.me/joinchat/QwJj_STYOscwNWQy">https://t.me/joinchat/QwJj_STYOscwNWQy</a></td>
+        <td>Еда и кулинария</td>
+        <td>264879</td>
+        <td>51203</td>
+        <td>20.0</td>
+        <td>28518</td>
+        <td>20112</td>
+        <td>11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чико | Корейский уголок</td>
+        <td><a href="https://t.me/chiko_russia">https://t.me/chiko_russia</a></td>
+        <td>Еда и кулинария</td>
+        <td>262147</td>
+        <td>46998</td>
+        <td>18.0</td>
+        <td>-815</td>
+        <td>3813</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Рецепты Каждый День</td>
+        <td><a href="https://t.me/topretsept">https://t.me/topretsept</a></td>
+        <td>Еда и кулинария</td>
+        <td>259135</td>
+        <td>43397</td>
+        <td>17.0</td>
+        <td>-518</td>
+        <td>-2639</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Купер</td>
+        <td><a href="https://t.me/kuper_ru">https://t.me/kuper_ru</a></td>
+        <td>Еда и кулинария</td>
+        <td>255501</td>
+        <td>28845</td>
+        <td>12.0</td>
+        <td>-1765</td>
+        <td>-7912</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вкуснофф</td>
+        <td><a href="https://t.me/joinchat/Cb0cn0Rp3z5lNTI6">https://t.me/joinchat/Cb0cn0Rp3z5lNTI6</a></td>
+        <td>Еда и кулинария</td>
+        <td>252972</td>
+        <td>17545</td>
+        <td>7.0</td>
+        <td>-845</td>
+        <td>-4012</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вкусно — и точка</td>
+        <td><a href="https://t.me/vit_russia">https://t.me/vit_russia</a></td>
+        <td>Еда и кулинария</td>
+        <td>249759</td>
+        <td>111877</td>
+        <td>45.0</td>
+        <td>-5389</td>
+        <td>-18170</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Нетипичные рецепты</td>
+        <td><a href="https://t.me/foodmog">https://t.me/foodmog</a></td>
+        <td>Еда и кулинария</td>
+        <td>239070</td>
+        <td>12212</td>
+        <td>6.0</td>
+        <td>-3738</td>
+        <td>-8566</td>
+        <td>5 лет 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Вкусно по ГOCTy🥘</td>
+        <td><a href="https://t.me/joinchat/xmB7II8tAhJmOTBi">https://t.me/joinchat/xmB7II8tAhJmOTBi</a></td>
+        <td>Еда и кулинария</td>
+        <td>235352</td>
+        <td>32820</td>
+        <td>14.0</td>
+        <td>182</td>
+        <td>-90</td>
+        <td>2 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Домашняя кухня</td>
+        <td><a href="https://t.me/joinchat/Qxlz6ejMUywEoHVa">https://t.me/joinchat/Qxlz6ejMUywEoHVa</a></td>
+        <td>Еда и кулинария</td>
+        <td>229532</td>
+        <td>9684</td>
+        <td>5.0</td>
+        <td>-548</td>
+        <td>-2488</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рецепты и заготовки</td>
+        <td><a href="https://t.me/joinchat/ue9cS-XHmyU4NDEy">https://t.me/joinchat/ue9cS-XHmyU4NDEy</a></td>
+        <td>Еда и кулинария</td>
+        <td>226942</td>
+        <td>24143</td>
+        <td>11.0</td>
+        <td>694</td>
+        <td>333</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Десерты без вреда | ПП</td>
+        <td><a href="https://t.me/joinchat/BZLqweU5qz83OGVi">https://t.me/joinchat/BZLqweU5qz83OGVi</a></td>
+        <td>Еда и кулинария</td>
+        <td>223145</td>
+        <td>20689</td>
+        <td>10.0</td>
+        <td>-773</td>
+        <td>111</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Постные рецепты</td>
+        <td><a href="https://t.me/joinchat/ffolcYbMDghiNTQy">https://t.me/joinchat/ffolcYbMDghiNTQy</a></td>
+        <td>Еда и кулинария</td>
+        <td>219953</td>
+        <td>24341</td>
+        <td>12.0</td>
+        <td>-1412</td>
+        <td>-7493</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Советская кухня</td>
+        <td><a href="https://t.me/joinchat/wI7hrQgqRbI3OGMy">https://t.me/joinchat/wI7hrQgqRbI3OGMy</a></td>
+        <td>Еда и кулинария</td>
+        <td>218074</td>
+        <td>28156</td>
+        <td>13.0</td>
+        <td>-931</td>
+        <td>-1807</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Простая кухня</td>
+        <td><a href="https://t.me/joinchat/coy61kCLINNlMzZi">https://t.me/joinchat/coy61kCLINNlMzZi</a></td>
+        <td>Еда и кулинария</td>
+        <td>217171</td>
+        <td>25532</td>
+        <td>12.0</td>
+        <td>-963</td>
+        <td>-2252</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шеф-повар Ивлев | Рецепты</td>
+        <td><a href="https://t.me/joinchat/X8qkvspIRIljY2Vi">https://t.me/joinchat/X8qkvspIRIljY2Vi</a></td>
+        <td>Еда и кулинария</td>
+        <td>217124</td>
+        <td>36524</td>
+        <td>17.0</td>
+        <td>133</td>
+        <td>-3289</td>
+        <td>7 месяцев 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>0Kkal - Низкокалорийные рецепты</td>
+        <td><a href="https://t.me/joinchat/UlW_YB8QCuk2ODBi">https://t.me/joinchat/UlW_YB8QCuk2ODBi</a></td>
+        <td>Еда и кулинария</td>
+        <td>216252</td>
+        <td>19473</td>
+        <td>9.0</td>
+        <td>-471</td>
+        <td>-2045</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Домашние рецепты 🍳</td>
+        <td><a href="https://t.me/home_recept">https://t.me/home_recept</a></td>
+        <td>Еда и кулинария</td>
+        <td>212009</td>
+        <td>40487</td>
+        <td>20.0</td>
+        <td>132</td>
+        <td>1119</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЗАГОТОВКИ 🥕</td>
+        <td><a href="https://t.me/joinchat/9_vyjLrMK1E3YzUy">https://t.me/joinchat/9_vyjLrMK1E3YzUy</a></td>
+        <td>Еда и кулинария</td>
+        <td>210979</td>
+        <td>27442</td>
+        <td>13.0</td>
+        <td>-726</td>
+        <td>-1408</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Шедевры кулинарии</td>
+        <td><a href="https://t.me/joinchat/9sbohcnNRjhjMjgy">https://t.me/joinchat/9sbohcnNRjhjMjgy</a></td>
+        <td>Еда и кулинария</td>
+        <td>209965</td>
+        <td>18138</td>
+        <td>9.0</td>
+        <td>1274</td>
+        <td>507</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПРОСТЫЕ 🥪 РЕЦЕПТЫ 🥧</td>
+        <td><a href="https://t.me/joinchat/tKmilHULY4czZWY6">https://t.me/joinchat/tKmilHULY4czZWY6</a></td>
+        <td>Еда и кулинария</td>
+        <td>209562</td>
+        <td>23023</td>
+        <td>11.0</td>
+        <td>113</td>
+        <td>1366</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Шашлык — Мужская кухня</td>
+        <td><a href="https://t.me/joinchat/NmGOpS6ZvXUyMTJi">https://t.me/joinchat/NmGOpS6ZvXUyMTJi</a></td>
+        <td>Еда и кулинария</td>
+        <td>196375</td>
+        <td>15544</td>
+        <td>8.0</td>
+        <td>-330</td>
+        <td>-399</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Шелуша Фуд | @shelusha_food | Маша Шелушенко</td>
+        <td><a href="https://t.me/shelusha_food">https://t.me/shelusha_food</a></td>
+        <td>Еда и кулинария</td>
+        <td>195107</td>
+        <td>37892</td>
+        <td>20.0</td>
+        <td>2865</td>
+        <td>11036</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рецепты | Салаты 🥗 ПП Еда</td>
+        <td><a href="https://t.me/Zakusky_Kulinaria">https://t.me/Zakusky_Kulinaria</a></td>
+        <td>Еда и кулинария</td>
+        <td>194647</td>
+        <td>20949</td>
+        <td>11.0</td>
+        <td>-2546</td>
+        <td>-12579</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ленивые рецепты | Еда за 30 мин</td>
+        <td><a href="https://t.me/joinchat/iSJ9fpVommw2NGMy">https://t.me/joinchat/iSJ9fpVommw2NGMy</a></td>
+        <td>Еда и кулинария</td>
+        <td>194445</td>
+        <td>21429</td>
+        <td>11.0</td>
+        <td>2117</td>
+        <td>10561</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СУП 🍜 Рецепты</td>
+        <td><a href="https://t.me/joinchat/ySech9TZoMg2Y2Zi">https://t.me/joinchat/ySech9TZoMg2Y2Zi</a></td>
+        <td>Еда и кулинария</td>
+        <td>190029</td>
+        <td>19607</td>
+        <td>11.0</td>
+        <td>294</td>
+        <td>2675</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Всё как есть | Яндекс Еда</td>
+        <td><a href="https://t.me/yandexedachannel">https://t.me/yandexedachannel</a></td>
+        <td>Еда и кулинария</td>
+        <td>188591</td>
+        <td>32800</td>
+        <td>18.0</td>
+        <td>-3565</td>
+        <td>34329</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Едадил – официальный канал</td>
+        <td><a href="https://t.me/edadeal_official">https://t.me/edadeal_official</a></td>
+        <td>Еда и кулинария</td>
+        <td>188449</td>
+        <td>45704</td>
+        <td>25.0</td>
+        <td>-754</td>
+        <td>31448</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Наливочка</td>
+        <td><a href="https://t.me/joinchat/yagufeNf9vxmZjRi">https://t.me/joinchat/yagufeNf9vxmZjRi</a></td>
+        <td>Еда и кулинария</td>
+        <td>186208</td>
+        <td>22700</td>
+        <td>13.0</td>
+        <td>1059</td>
+        <td>5126</td>
+        <td>1 год 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Домашняя выпечка</td>
+        <td><a href="https://t.me/domvipechka2000">https://t.me/domvipechka2000</a></td>
+        <td>Еда и кулинария</td>
+        <td>183271</td>
+        <td>22500</td>
+        <td>13.0</td>
+        <td>13007</td>
+        <td>22392</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кулинарный блог</td>
+        <td><a href="https://t.me/joinchat/HLgMYJfMGCthZTYy">https://t.me/joinchat/HLgMYJfMGCthZTYy</a></td>
+        <td>Еда и кулинария</td>
+        <td>181524</td>
+        <td>16174</td>
+        <td>9.0</td>
+        <td>-779</td>
+        <td>-3176</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЗАКУСОЧКА | Рецепты</td>
+        <td><a href="https://t.me/joinchat/7RAOLOoivuI3YWIy">https://t.me/joinchat/7RAOLOoivuI3YWIy</a></td>
+        <td>Еда и кулинария</td>
+        <td>181274</td>
+        <td>23734</td>
+        <td>14.0</td>
+        <td>-683</td>
+        <td>-2759</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рецепты | daniya_alt</td>
+        <td><a href="https://t.me/daniya_alt">https://t.me/daniya_alt</a></td>
+        <td>Еда и кулинария</td>
+        <td>177634</td>
+        <td>86059</td>
+        <td>49.0</td>
+        <td>-156</td>
+        <td>-810</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>РЕЦЕПТЫ ДИЕТЫ 🥬</td>
+        <td><a href="https://t.me/kulinaria_salaty_pp">https://t.me/kulinaria_salaty_pp</a></td>
+        <td>Еда и кулинария</td>
+        <td>170476</td>
+        <td>7256</td>
+        <td>5.0</td>
+        <td>-2299</td>
+        <td>-10442</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Р Е Ц Е П Т Ы</td>
+        <td><a href="https://t.me/joinchat/VTecJot-xKQ4NTg6">https://t.me/joinchat/VTecJot-xKQ4NTg6</a></td>
+        <td>Еда и кулинария</td>
+        <td>167021</td>
+        <td>26760</td>
+        <td>16.0</td>
+        <td>8033</td>
+        <td>38507</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Мультиварка | Рецепты</td>
+        <td><a href="https://t.me/multivarka_recept">https://t.me/multivarka_recept</a></td>
+        <td>Еда и кулинария</td>
+        <td>166444</td>
+        <td>33356</td>
+        <td>20.0</td>
+        <td>-542</td>
+        <td>-2372</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вкусно и просто</td>
+        <td><a href="https://t.me/joinchat/oixBg7y7oM4zNzJi">https://t.me/joinchat/oixBg7y7oM4zNzJi</a></td>
+        <td>Еда и кулинария</td>
+        <td>164791</td>
+        <td>24392</td>
+        <td>15.0</td>
+        <td>542</td>
+        <td>1394</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Салаты на Праздники</td>
+        <td><a href="https://t.me/joinchat/ld4qZGQlFZU0OTEy">https://t.me/joinchat/ld4qZGQlFZU0OTEy</a></td>
+        <td>Еда и кулинария</td>
+        <td>163771</td>
+        <td>19749</td>
+        <td>13.0</td>
+        <td>917</td>
+        <td>864</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БЕЗ САХАРА</td>
+        <td><a href="https://t.me/joinchat/sKrDu8CheIQ3NzQ6">https://t.me/joinchat/sKrDu8CheIQ3NzQ6</a></td>
+        <td>Еда и кулинария</td>
+        <td>159723</td>
+        <td>16552</td>
+        <td>11.0</td>
+        <td>-721</td>
+        <td>-3358</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Духовочка | Вкусные Рецепты</td>
+        <td><a href="https://t.me/joinchat/6hKHC2O0-4o4NjQy">https://t.me/joinchat/6hKHC2O0-4o4NjQy</a></td>
+        <td>Еда и кулинария</td>
+        <td>158749</td>
+        <td>27213</td>
+        <td>18.0</td>
+        <td>1306</td>
+        <td>5795</td>
+        <td>8 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Журнал Соль</td>
+        <td><a href="https://t.me/thesaltmagazine">https://t.me/thesaltmagazine</a></td>
+        <td>Еда и кулинария</td>
+        <td>157737</td>
+        <td>20719</td>
+        <td>14.0</td>
+        <td>-1166</td>
+        <td>-213</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Магнит</td>
+        <td><a href="https://t.me/magnit_retail">https://t.me/magnit_retail</a></td>
+        <td>Еда и кулинария</td>
+        <td>157409</td>
+        <td>30950</td>
+        <td>20.0</td>
+        <td>-309</td>
+        <td>-2196</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вкуснее, чем у Мамы</td>
+        <td><a href="https://t.me/joinchat/QpFlylYYjhpkNzY6">https://t.me/joinchat/QpFlylYYjhpkNzY6</a></td>
+        <td>Еда и кулинария</td>
+        <td>157404</td>
+        <td>17752</td>
+        <td>12.0</td>
+        <td>849</td>
+        <td>2109</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>КУЛИНАРНАЯ ФАНТАЗИЯ</td>
+        <td><a href="https://t.me/joinchat/5CXIKk15j1w4OTZi">https://t.me/joinchat/5CXIKk15j1w4OTZi</a></td>
+        <td>Еда и кулинария</td>
+        <td>155440</td>
+        <td>15848</td>
+        <td>11.0</td>
+        <td>-861</td>
+        <td>-2612</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Народные рецепты от Бабушки Яги</td>
+        <td><a href="https://t.me/joinchat/qe3VxMdAobBiYWMy">https://t.me/joinchat/qe3VxMdAobBiYWMy</a></td>
+        <td>Еда и кулинария</td>
+        <td>154601</td>
+        <td>15567</td>
+        <td>11.0</td>
+        <td>-70</td>
+        <td>-2046</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Супчик</td>
+        <td><a href="https://t.me/joinchat/aKeiggXCxGIzMzRi">https://t.me/joinchat/aKeiggXCxGIzMzRi</a></td>
+        <td>Еда и кулинария</td>
+        <td>142948</td>
+        <td>18634</td>
+        <td>13.0</td>
+        <td>2224</td>
+        <td>166</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бюджетные рецепты 🥪</td>
+        <td><a href="https://t.me/joinchat/tTFqaFu19ihjNTQy">https://t.me/joinchat/tTFqaFu19ihjNTQy</a></td>
+        <td>Еда и кулинария</td>
+        <td>142784</td>
+        <td>15908</td>
+        <td>12.0</td>
+        <td>2847</td>
+        <td>1613</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГРИЛЬ | Мясная кухня</td>
+        <td><a href="https://t.me/joinchat/S76w7FNUMsdDGaR7">https://t.me/joinchat/S76w7FNUMsdDGaR7</a></td>
+        <td>Еда и кулинария</td>
+        <td>142030</td>
+        <td>14191</td>
+        <td>10.0</td>
+        <td>-313</td>
+        <td>-1548</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Коте Оганезов</td>
+        <td><a href="https://t.me/koteoganezov">https://t.me/koteoganezov</a></td>
+        <td>Еда и кулинария</td>
+        <td>140069</td>
+        <td>34978</td>
+        <td>25.0</td>
+        <td>-224</td>
+        <td>-1045</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Салаты и Закуски | Рецепты</td>
+        <td><a href="https://t.me/joinchat/bM5Fd8Mcn3kyN2Yy">https://t.me/joinchat/bM5Fd8Mcn3kyN2Yy</a></td>
+        <td>Еда и кулинария</td>
+        <td>139921</td>
+        <td>14443</td>
+        <td>11.0</td>
+        <td>431</td>
+        <td>2259</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НеРестораны</td>
+        <td><a href="https://t.me/NeRestorani">https://t.me/NeRestorani</a></td>
+        <td>Еда и кулинария</td>
+        <td>137539</td>
+        <td>46122</td>
+        <td>34.0</td>
+        <td>-265</td>
+        <td>3238</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Духовка ПРОСТО</td>
+        <td><a href="https://t.me/joinchat/MmSxqXMyOMcxOWYy">https://t.me/joinchat/MmSxqXMyOMcxOWYy</a></td>
+        <td>Еда и кулинария</td>
+        <td>136958</td>
+        <td>18116</td>
+        <td>14.0</td>
+        <td>1132</td>
+        <td>2881</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Торт на день рождения</td>
+        <td><a href="https://t.me/joinchat/B4bCmc6Rlls0ZTNi">https://t.me/joinchat/B4bCmc6Rlls0ZTNi</a></td>
+        <td>Еда и кулинария</td>
+        <td>136643</td>
+        <td>31540</td>
+        <td>24.0</td>
+        <td>-1211</td>
+        <td>-3172</td>
+        <td>7 месяцев 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Легкие и Доступные рецепты</td>
+        <td><a href="https://t.me/joinchat/T5qSzbfqo6MwY2Uy">https://t.me/joinchat/T5qSzbfqo6MwY2Uy</a></td>
+        <td>Еда и кулинария</td>
+        <td>136522</td>
+        <td>20305</td>
+        <td>15.0</td>
+        <td>981</td>
+        <td>3304</td>
+        <td>1 год 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>Просто! Вкусно!</td>
+        <td><a href="https://t.me/joinchat/EkvTkrGABTszZDVi">https://t.me/joinchat/EkvTkrGABTszZDVi</a></td>
+        <td>Еда и кулинария</td>
+        <td>136420</td>
+        <td>18099</td>
+        <td>14.0</td>
+        <td>777</td>
+        <td>4485</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мультиварочка | Рецепты</td>
+        <td><a href="https://t.me/kuhnya_recepti_kulinariaa">https://t.me/kuhnya_recepti_kulinariaa</a></td>
+        <td>Еда и кулинария</td>
+        <td>135655</td>
+        <td>25656</td>
+        <td>19.0</td>
+        <td>-459</td>
+        <td>-1911</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кухня по-мужски🔪</td>
+        <td><a href="https://t.me/joinchat/qMElXeqYMVRkZjMy">https://t.me/joinchat/qMElXeqYMVRkZjMy</a></td>
+        <td>Еда и кулинария</td>
+        <td>134633</td>
+        <td>20116</td>
+        <td>15.0</td>
+        <td>972</td>
+        <td>1825</td>
+        <td>5 лет 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>ПП Рецепты | Здоровое питание</td>
+        <td><a href="https://t.me/ppreceptiki">https://t.me/ppreceptiki</a></td>
+        <td>Еда и кулинария</td>
+        <td>132282</td>
+        <td>7966</td>
+        <td>6.0</td>
+        <td>-277</td>
+        <td>-1196</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Простые Вкусняшки</td>
+        <td><a href="https://t.me/joinchat/14CSThwO5RphYTdi">https://t.me/joinchat/14CSThwO5RphYTdi</a></td>
+        <td>Еда и кулинария</td>
+        <td>131908</td>
+        <td>22924</td>
+        <td>18.0</td>
+        <td>168</td>
+        <td>2755</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Кастрюлька | Лучшие Рецепты</td>
+        <td><a href="https://t.me/joinchat/xRNrTTAsTlkzZGRi">https://t.me/joinchat/xRNrTTAsTlkzZGRi</a></td>
+        <td>Еда и кулинария</td>
+        <td>130744</td>
+        <td>20046</td>
+        <td>16.0</td>
+        <td>7767</td>
+        <td>13253</td>
+        <td>1 год 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>ЛЕНИВЫЙ КУЛИНАР @leniviy_kulinar</td>
+        <td><a href="https://t.me/kulinar_leniviy">https://t.me/kulinar_leniviy</a></td>
+        <td>Еда и кулинария</td>
+        <td>129594</td>
+        <td>37819</td>
+        <td>30.0</td>
+        <td>-168</td>
+        <td>-574</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

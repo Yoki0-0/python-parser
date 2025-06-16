@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Тихо, я читаю | Литература</td>
+        <td><a href="https://t.me/mozhno_potishe">https://t.me/mozhno_potishe</a></td>
+        <td>Книги</td>
+        <td>763670</td>
+        <td>89877</td>
+        <td>12.0</td>
+        <td>-7201</td>
+        <td>18195</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книги | Аудиокниги</td>
+        <td><a href="https://t.me/flibusta_anglysky">https://t.me/flibusta_anglysky</a></td>
+        <td>Книги</td>
+        <td>411254</td>
+        <td>18401</td>
+        <td>5.0</td>
+        <td>-904</td>
+        <td>-4097</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Manhwa Efficient | Ночь у берега / Джинкс Страстное влечение Травма альфы Скетч Собаки Сизифа Стыки Не трогай</td>
+        <td><a href="https://t.me/ManhwaEfficient">https://t.me/ManhwaEfficient</a></td>
+        <td>Книги</td>
+        <td>404616</td>
+        <td>274250</td>
+        <td>68.0</td>
+        <td>3586</td>
+        <td>11312</td>
+        <td>2 года 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>ВОЗБУДИЛЬНИК Ночь у берега|Проект Ботаник|Жемчужный мальчик Пламя|Подсветка|Поменяться местами|Страстное Влечение| Собаки сизифа</td>
+        <td><a href="https://t.me/vozbud">https://t.me/vozbud</a></td>
+        <td>Книги</td>
+        <td>323973</td>
+        <td>195932</td>
+        <td>61.0</td>
+        <td>1749</td>
+        <td>11950</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Фикбук</td>
+        <td><a href="https://t.me/ficbook_official">https://t.me/ficbook_official</a></td>
+        <td>Книги</td>
+        <td>320944</td>
+        <td>92385</td>
+        <td>29.0</td>
+        <td>-335</td>
+        <td>10205</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ещё главу и спать | Литература</td>
+        <td><a href="https://t.me/knigi_literatura">https://t.me/knigi_literatura</a></td>
+        <td>Книги</td>
+        <td>282501</td>
+        <td>37570</td>
+        <td>14.0</td>
+        <td>-336</td>
+        <td>-1436</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Аудиокниги</td>
+        <td><a href="https://t.me/AUDIOKNIGI_CHANNEL">https://t.me/AUDIOKNIGI_CHANNEL</a></td>
+        <td>Книги</td>
+        <td>279020</td>
+        <td>9814</td>
+        <td>4.0</td>
+        <td>-511</td>
+        <td>-2100</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книжное братство</td>
+        <td><a href="https://t.me/flibusta">https://t.me/flibusta</a></td>
+        <td>Книги</td>
+        <td>176683</td>
+        <td>17710</td>
+        <td>10.0</td>
+        <td>-150</td>
+        <td>-822</td>
+        <td>9 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Яндекс Книги</td>
+        <td><a href="https://t.me/booksyandex">https://t.me/booksyandex</a></td>
+        <td>Книги</td>
+        <td>170572</td>
+        <td>30936</td>
+        <td>19.0</td>
+        <td>733</td>
+        <td>28660</td>
+        <td>9 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Манга / LN Manga</td>
+        <td><a href="https://t.me/lnmanga">https://t.me/lnmanga</a></td>
+        <td>Книги</td>
+        <td>158473</td>
+        <td>20869</td>
+        <td>14.0</td>
+        <td>-338</td>
+        <td>-1483</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Жизнь в дневниках</td>
+        <td><a href="https://t.me/tsitaty_dnevniki_stikhi">https://t.me/tsitaty_dnevniki_stikhi</a></td>
+        <td>Книги</td>
+        <td>153467</td>
+        <td>29444</td>
+        <td>20.0</td>
+        <td>223</td>
+        <td>1328</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книги Flibusta 📘 Аудиокниги</td>
+        <td><a href="https://t.me/flibustabooks">https://t.me/flibustabooks</a></td>
+        <td>Книги</td>
+        <td>150841</td>
+        <td>19272</td>
+        <td>13.0</td>
+        <td>-298</td>
+        <td>-2393</td>
+        <td>6 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сила Книги | Аудиокниги | Flibusta</td>
+        <td><a href="https://t.me/silaknigi">https://t.me/silaknigi</a></td>
+        <td>Книги</td>
+        <td>137775</td>
+        <td>4354</td>
+        <td>4.0</td>
+        <td>-306</td>
+        <td>-1437</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Слезы на увядших цветах</td>
+        <td><a href="https://t.me/Tearsonwitheredflowers">https://t.me/Tearsonwitheredflowers</a></td>
+        <td>Книги</td>
+        <td>136504</td>
+        <td>143046</td>
+        <td>105.0</td>
+        <td>1137</td>
+        <td>2489</td>
+        <td>11 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>Афоризмы | Литература | Книги | Стихи</td>
+        <td><a href="https://t.me/AphorismTG">https://t.me/AphorismTG</a></td>
+        <td>Книги</td>
+        <td>127668</td>
+        <td>20618</td>
+        <td>17.0</td>
+        <td>-420</td>
+        <td>-1604</td>
+        <td>8 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Mosspaca Studio | Переводы 19 дней | Волк и найдёныш | Нань Хао и Шан Фэн | все-все-все...</td>
+        <td><a href="https://t.me/zbs_team">https://t.me/zbs_team</a></td>
+        <td>Книги</td>
+        <td>119353</td>
+        <td>70828</td>
+        <td>60.0</td>
+        <td>-62</td>
+        <td>1544</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книжный Вестник</td>
+        <td><a href="https://t.me/duosoft_books">https://t.me/duosoft_books</a></td>
+        <td>Книги</td>
+        <td>113597</td>
+        <td>14801</td>
+        <td>13.0</td>
+        <td>246</td>
+        <td>1488</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Читай-город</td>
+        <td><a href="https://t.me/chitai_gorod_official">https://t.me/chitai_gorod_official</a></td>
+        <td>Книги</td>
+        <td>108984</td>
+        <td>19032</td>
+        <td>18.0</td>
+        <td>-191</td>
+        <td>5058</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тут про книги | Литература</td>
+        <td><a href="https://t.me/joinchat/vILqIGBf8ncyOTky">https://t.me/joinchat/vILqIGBf8ncyOTky</a></td>
+        <td>Книги</td>
+        <td>102295</td>
+        <td>6558</td>
+        <td>7.0</td>
+        <td>-568</td>
+        <td>-1690</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Руманга «Вместе»</td>
+        <td><a href="https://t.me/rumangatogetherrr">https://t.me/rumangatogetherrr</a></td>
+        <td>Книги</td>
+        <td>102032</td>
+        <td>112342</td>
+        <td>111.0</td>
+        <td>674</td>
+        <td>3585</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Классические книги</td>
+        <td><a href="https://t.me/freeclassicbooks">https://t.me/freeclassicbooks</a></td>
+        <td>Книги</td>
+        <td>99156</td>
+        <td>12488</td>
+        <td>13.0</td>
+        <td>494</td>
+        <td>2287</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книга в Ухе. Аудиокниги</td>
+        <td><a href="https://t.me/kvuhe">https://t.me/kvuhe</a></td>
+        <td>Книги</td>
+        <td>96695</td>
+        <td>8596</td>
+        <td>9.0</td>
+        <td>1136</td>
+        <td>5118</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Писатель и его рассказы</td>
+        <td><a href="https://t.me/Pisatel_rasskazy">https://t.me/Pisatel_rasskazy</a></td>
+        <td>Книги</td>
+        <td>94911</td>
+        <td>12070</td>
+        <td>13.0</td>
+        <td>35</td>
+        <td>-162</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стихи давно забытого поэта</td>
+        <td><a href="https://t.me/memoryofpoets">https://t.me/memoryofpoets</a></td>
+        <td>Книги</td>
+        <td>86964</td>
+        <td>15039</td>
+        <td>18.0</td>
+        <td>-253</td>
+        <td>2112</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Книга памяти СВО</td>
+        <td><a href="https://t.me/ZmemoryZ">https://t.me/ZmemoryZ</a></td>
+        <td>Книги</td>
+        <td>84729</td>
+        <td>51160</td>
+        <td>61.0</td>
+        <td>5180</td>
+        <td>9007</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Отдел по Делам Одарённых || ПЕРЕВОД ГЛАВ БСД</td>
+        <td><a href="https://t.me/chelkadostatrans">https://t.me/chelkadostatrans</a></td>
+        <td>Книги</td>
+        <td>79353</td>
+        <td>45118</td>
+        <td>57.0</td>
+        <td>-150</td>
+        <td>-598</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анна Джейн | Твоё сердце будет того</td>
+        <td><a href="https://t.me/anna_jane">https://t.me/anna_jane</a></td>
+        <td>Книги</td>
+        <td>77830</td>
+        <td>32974</td>
+        <td>43.0</td>
+        <td>44</td>
+        <td>2469</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Антон Чехов. Лайфстайл</td>
+        <td><a href="https://t.me/chekhov_life">https://t.me/chekhov_life</a></td>
+        <td>Книги</td>
+        <td>75840</td>
+        <td>33321</td>
+        <td>44.0</td>
+        <td>-83</td>
+        <td>19</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Письма в стол📝 | Литература</td>
+        <td><a href="https://t.me/Letters_in_the_Desk">https://t.me/Letters_in_the_Desk</a></td>
+        <td>Книги</td>
+        <td>75220</td>
+        <td>9670</td>
+        <td>13.0</td>
+        <td>207</td>
+        <td>1284</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книги и Аудиокниги Flibusta</td>
+        <td><a href="https://t.me/amazingbooks">https://t.me/amazingbooks</a></td>
+        <td>Книги</td>
+        <td>72577</td>
+        <td>2675</td>
+        <td>4.0</td>
+        <td>-174</td>
+        <td>-701</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лекторий Dостоевский</td>
+        <td><a href="https://t.me/dostoevsky_fm_dostoverno">https://t.me/dostoevsky_fm_dostoverno</a></td>
+        <td>Книги</td>
+        <td>72253</td>
+        <td>27287</td>
+        <td>38.0</td>
+        <td>221</td>
+        <td>2263</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Женские истории | Рассказы</td>
+        <td><a href="https://t.me/woman_istorii">https://t.me/woman_istorii</a></td>
+        <td>Книги</td>
+        <td>72093</td>
+        <td>11867</td>
+        <td>17.0</td>
+        <td>-240</td>
+        <td>-1054</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Читать онлайн | Библиотека</td>
+        <td><a href="https://t.me/Chitat_onlain_Biblioteka">https://t.me/Chitat_onlain_Biblioteka</a></td>
+        <td>Книги</td>
+        <td>71500</td>
+        <td>7571</td>
+        <td>11.0</td>
+        <td>11</td>
+        <td>374</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Между строк • Литература</td>
+        <td><a href="https://t.me/joinchat/0myYCo21uNQyZmIy">https://t.me/joinchat/0myYCo21uNQyZmIy</a></td>
+        <td>Книги</td>
+        <td>69731</td>
+        <td>11319</td>
+        <td>17.0</td>
+        <td>918</td>
+        <td>20566</td>
+        <td>6 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Литературный уголок</td>
+        <td><a href="https://t.me/Lit_ugolok">https://t.me/Lit_ugolok</a></td>
+        <td>Книги</td>
+        <td>68304</td>
+        <td>7479</td>
+        <td>11.0</td>
+        <td>-210</td>
+        <td>-889</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мысли великих | Литература</td>
+        <td><a href="https://t.me/mysli_literature">https://t.me/mysli_literature</a></td>
+        <td>Книги</td>
+        <td>67438</td>
+        <td>7290</td>
+        <td>11.0</td>
+        <td>537</td>
+        <td>-24</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АРТ Книги | Подборки</td>
+        <td><a href="https://t.me/knigi_podborki">https://t.me/knigi_podborki</a></td>
+        <td>Книги</td>
+        <td>66116</td>
+        <td>9239</td>
+        <td>14.0</td>
+        <td>3</td>
+        <td>30</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Лучшие стихи великих поэтов | Литература</td>
+        <td><a href="https://t.me/mypoetry">https://t.me/mypoetry</a></td>
+        <td>Книги</td>
+        <td>64245</td>
+        <td>11878</td>
+        <td>19.0</td>
+        <td>-159</td>
+        <td>-66</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Библиотека. Рассказы. Книги</td>
+        <td><a href="https://t.me/biblio8">https://t.me/biblio8</a></td>
+        <td>Книги</td>
+        <td>63754</td>
+        <td>3210</td>
+        <td>5.0</td>
+        <td>-133</td>
+        <td>-456</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Руманга «Осколки снов»</td>
+        <td><a href="https://t.me/beyounddreams451">https://t.me/beyounddreams451</a></td>
+        <td>Книги</td>
+        <td>57677</td>
+        <td>67213</td>
+        <td>117.0</td>
+        <td>280</td>
+        <td>1569</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мировая Поэзия</td>
+        <td><a href="https://t.me/mir_poetry">https://t.me/mir_poetry</a></td>
+        <td>Книги</td>
+        <td>57550</td>
+        <td>16313</td>
+        <td>29.0</td>
+        <td>6</td>
+        <td>127</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DARYANEMK/Книжный блог</td>
+        <td><a href="https://t.me/daryanemk">https://t.me/daryanemk</a></td>
+        <td>Книги</td>
+        <td>55944</td>
+        <td>13844</td>
+        <td>25.0</td>
+        <td>942</td>
+        <td>2602</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Eto Boris Akunin</td>
+        <td><a href="https://t.me/EtoBorisAkunin">https://t.me/EtoBorisAkunin</a></td>
+        <td>Книги</td>
+        <td>55184</td>
+        <td>19743</td>
+        <td>36.0</td>
+        <td>-187</td>
+        <td>-730</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Комиксы BUBBLE</td>
+        <td><a href="https://t.me/bubble_comics">https://t.me/bubble_comics</a></td>
+        <td>Книги</td>
+        <td>53920</td>
+        <td>10010</td>
+        <td>19.0</td>
+        <td>-429</td>
+        <td>-1816</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Books in English | Умные книги на английском</td>
+        <td><a href="https://t.me/muscatnonfiction">https://t.me/muscatnonfiction</a></td>
+        <td>Книги</td>
+        <td>53583</td>
+        <td>6141</td>
+        <td>12.0</td>
+        <td>219</td>
+        <td>1476</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Книга в 7 утра | Бизнес | Cаморазвитие</td>
+        <td><a href="https://t.me/readSinceMorning">https://t.me/readSinceMorning</a></td>
+        <td>Книги</td>
+        <td>52995</td>
+        <td>5918</td>
+        <td>12.0</td>
+        <td>561</td>
+        <td>2185</td>
+        <td>3 года 28 дней</td>
+      </tr>
+
+      <tr>
+        <td>ReManga | РеМанга - самый лучший сайт по манге! (Рептилоиды)</td>
+        <td><a href="https://t.me/Remanga">https://t.me/Remanga</a></td>
+        <td>Книги</td>
+        <td>52911</td>
+        <td>14635</td>
+        <td>28.0</td>
+        <td>593</td>
+        <td>3927</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Определение взаимоотношений | страстное влечение/ночная песнь демона/никакой морали|остерегайся полнолуния в марте</td>
+        <td><a href="https://t.me/frejacherry">https://t.me/frejacherry</a></td>
+        <td>Книги</td>
+        <td>52862</td>
+        <td>18239</td>
+        <td>35.0</td>
+        <td>-158</td>
+        <td>-1175</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Издательство Эксмо | Книги</td>
+        <td><a href="https://t.me/eksmo">https://t.me/eksmo</a></td>
+        <td>Книги</td>
+        <td>51623</td>
+        <td>9648</td>
+        <td>19.0</td>
+        <td>40</td>
+        <td>439</td>
+        <td>9 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WorldBegemotKot † Страшные истории †</td>
+        <td><a href="https://t.me/world_begemot_kot">https://t.me/world_begemot_kot</a></td>
+        <td>Книги</td>
+        <td>51240</td>
+        <td>26703</td>
+        <td>53.0</td>
+        <td>587</td>
+        <td>2665</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>БОМБОРА 🌊 Книги, акции и океан интересного</td>
+        <td><a href="https://t.me/bombora">https://t.me/bombora</a></td>
+        <td>Книги</td>
+        <td>50281</td>
+        <td>5280</td>
+        <td>11.0</td>
+        <td>215</td>
+        <td>607</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ZOYA BOOKS</td>
+        <td><a href="https://t.me/zoyabooks">https://t.me/zoyabooks</a></td>
+        <td>Книги</td>
+        <td>50043</td>
+        <td>32812</td>
+        <td>66.0</td>
+        <td>212</td>
+        <td>1312</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рыба Лоцман</td>
+        <td><a href="https://t.me/ryba_lotsman">https://t.me/ryba_lotsman</a></td>
+        <td>Книги</td>
+        <td>49456</td>
+        <td>27455</td>
+        <td>56.0</td>
+        <td>-45</td>
+        <td>-120</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Книжный день</td>
+        <td><a href="https://t.me/knijnij_den">https://t.me/knijnij_den</a></td>
+        <td>Книги</td>
+        <td>49353</td>
+        <td>6802</td>
+        <td>14.0</td>
+        <td>-135</td>
+        <td>-208</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Книжный Лис 🦊📚</td>
+        <td><a href="https://t.me/booksfox">https://t.me/booksfox</a></td>
+        <td>Книги</td>
+        <td>49127</td>
+        <td>4177</td>
+        <td>9.0</td>
+        <td>-1</td>
+        <td>367</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Литрес</td>
+        <td><a href="https://t.me/LitRes_ebooks">https://t.me/LitRes_ebooks</a></td>
+        <td>Книги</td>
+        <td>46813</td>
+        <td>4795</td>
+        <td>11.0</td>
+        <td>-63</td>
+        <td>405</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Старая книга</td>
+        <td><a href="https://t.me/oldlibrary">https://t.me/oldlibrary</a></td>
+        <td>Книги</td>
+        <td>45897</td>
+        <td>8272</td>
+        <td>18.0</td>
+        <td>394</td>
+        <td>1266</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Издательство МИФ</td>
+        <td><a href="https://t.me/mifbooks">https://t.me/mifbooks</a></td>
+        <td>Книги</td>
+        <td>45195</td>
+        <td>8837</td>
+        <td>20.0</td>
+        <td>244</td>
+        <td>2306</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>˖࣪ 𖥨𝖼𝗆𝗈𝗅𝖾𝗋𝗐𝖻𝗈𝗈𝗄</td>
+        <td><a href="https://t.me/cmolerwbookk">https://t.me/cmolerwbookk</a></td>
+        <td>Книги</td>
+        <td>44940</td>
+        <td>10880</td>
+        <td>25.0</td>
+        <td>137</td>
+        <td>1169</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>trendbooks 📖 книги YA</td>
+        <td><a href="https://t.me/clevertrendbooks">https://t.me/clevertrendbooks</a></td>
+        <td>Книги</td>
+        <td>44826</td>
+        <td>14160</td>
+        <td>32.0</td>
+        <td>515</td>
+        <td>1852</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Поэзия полу́ночи | Литература</td>
+        <td><a href="https://t.me/midnight_poetry">https://t.me/midnight_poetry</a></td>
+        <td>Книги</td>
+        <td>44805</td>
+        <td>8551</td>
+        <td>20.0</td>
+        <td>-79</td>
+        <td>-64</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ОИК (Отрывки из книг)</td>
+        <td><a href="https://t.me/oiktg">https://t.me/oiktg</a></td>
+        <td>Книги</td>
+        <td>44465</td>
+        <td>3206</td>
+        <td>8.0</td>
+        <td>-383</td>
+        <td>-1865</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Открытые письма | Литература</td>
+        <td><a href="https://t.me/open_letters">https://t.me/open_letters</a></td>
+        <td>Книги</td>
+        <td>44226</td>
+        <td>6811</td>
+        <td>16.0</td>
+        <td>16</td>
+        <td>69</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>📚 Любовные романы</td>
+        <td><a href="https://t.me/newlovebooks">https://t.me/newlovebooks</a></td>
+        <td>Книги</td>
+        <td>43380</td>
+        <td>5968</td>
+        <td>14.0</td>
+        <td>97</td>
+        <td>232</td>
+        <td>4 года 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>Лукас | Новинки Манхв, Новелл, Дорам</td>
+        <td><a href="https://t.me/lucasmanhwa">https://t.me/lucasmanhwa</a></td>
+        <td>Книги</td>
+        <td>43089</td>
+        <td>10018</td>
+        <td>24.0</td>
+        <td>112</td>
+        <td>-369</td>
+        <td>None</td>
+      </tr>
+
+      <tr>
+        <td>RedRoom | Перевод манхв | Джинкс | Перепутье | В чужой шкуре | Репорт на Босса | Тритон Дешарова | Член гильдии по соседству</td>
+        <td><a href="https://t.me/redroomteam">https://t.me/redroomteam</a></td>
+        <td>Книги</td>
+        <td>42973</td>
+        <td>17575</td>
+        <td>41.0</td>
+        <td>287</td>
+        <td>1907</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Уютный уголок</td>
+        <td><a href="https://t.me/joinchat/YLO6_1i8n9c2NjAy">https://t.me/joinchat/YLO6_1i8n9c2NjAy</a></td>
+        <td>Книги</td>
+        <td>42787</td>
+        <td>11433</td>
+        <td>27.0</td>
+        <td>-302</td>
+        <td>-1032</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Стишки - депрессняшки</td>
+        <td><a href="https://t.me/depressnyashki">https://t.me/depressnyashki</a></td>
+        <td>Книги</td>
+        <td>42647</td>
+        <td>13558</td>
+        <td>32.0</td>
+        <td>-342</td>
+        <td>-2492</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>#ПитерЧитает</td>
+        <td><a href="https://t.me/piter_chitaet_official">https://t.me/piter_chitaet_official</a></td>
+        <td>Книги</td>
+        <td>41921</td>
+        <td>3016</td>
+        <td>8.0</td>
+        <td>-237</td>
+        <td>-1187</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>♰︎ | Секрет небес — Реквием</td>
+        <td><a href="https://t.me/heavens_secret_requiem">https://t.me/heavens_secret_requiem</a></td>
+        <td>Книги</td>
+        <td>41058</td>
+        <td>11983</td>
+        <td>30.0</td>
+        <td>347</td>
+        <td>734</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Армен и Фёдор</td>
+        <td><a href="https://t.me/armenifedor">https://t.me/armenifedor</a></td>
+        <td>Книги</td>
+        <td>40331</td>
+        <td>22820</td>
+        <td>57.0</td>
+        <td>34</td>
+        <td>182</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Медведь Обыкновенный Аудиокниги</td>
+        <td><a href="https://t.me/MedvedObyknovennyj">https://t.me/MedvedObyknovennyj</a></td>
+        <td>Книги</td>
+        <td>40230</td>
+        <td>12838</td>
+        <td>32.0</td>
+        <td>183</td>
+        <td>646</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МИФ.Проза</td>
+        <td><a href="https://t.me/mifproza">https://t.me/mifproza</a></td>
+        <td>Книги</td>
+        <td>40186</td>
+        <td>8769</td>
+        <td>22.0</td>
+        <td>2241</td>
+        <td>2588</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОМОГАЮ ЗАРАБОТАТЬ💰</td>
+        <td><a href="https://t.me/joinchat/Zpzrj1bvjCg0MTYy">https://t.me/joinchat/Zpzrj1bvjCg0MTYy</a></td>
+        <td>Книги</td>
+        <td>39947</td>
+        <td>106</td>
+        <td>1.0</td>
+        <td>-762</td>
+        <td>-3899</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лиза Лазаревская</td>
+        <td><a href="https://t.me/lazarrevskaya">https://t.me/lazarrevskaya</a></td>
+        <td>Книги</td>
+        <td>39481</td>
+        <td>20171</td>
+        <td>52.0</td>
+        <td>-133</td>
+        <td>-295</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>BL♡ bibli0manka [18+]</td>
+        <td><a href="https://t.me/bibli0manka">https://t.me/bibli0manka</a></td>
+        <td>Книги</td>
+        <td>39030</td>
+        <td>12133</td>
+        <td>32.0</td>
+        <td>744</td>
+        <td>-249</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>книжная жаба</td>
+        <td><a href="https://t.me/booktoad">https://t.me/booktoad</a></td>
+        <td>Книги</td>
+        <td>38233</td>
+        <td>10857</td>
+        <td>29.0</td>
+        <td>-149</td>
+        <td>-600</td>
+        <td>10 месяцев 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Цветы лишь приманка | Манхва</td>
+        <td><a href="https://t.me/cvety_lish_primanka">https://t.me/cvety_lish_primanka</a></td>
+        <td>Книги</td>
+        <td>37559</td>
+        <td>28649</td>
+        <td>77.0</td>
+        <td>-240</td>
+        <td>1900</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Издательство Freedom 💜</td>
+        <td><a href="https://t.me/eksmofreedom">https://t.me/eksmofreedom</a></td>
+        <td>Книги</td>
+        <td>37472</td>
+        <td>8928</td>
+        <td>24.0</td>
+        <td>-53</td>
+        <td>390</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>RC Books Stories</td>
+        <td><a href="https://t.me/rcbookscom">https://t.me/rcbookscom</a></td>
+        <td>Книги</td>
+        <td>37071</td>
+        <td>15500</td>
+        <td>42.0</td>
+        <td>-318</td>
+        <td>-1736</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Наталья pro_knigi_kino</td>
+        <td><a href="https://t.me/pro_knigi_kino">https://t.me/pro_knigi_kino</a></td>
+        <td>Книги</td>
+        <td>36595</td>
+        <td>11708</td>
+        <td>32.0</td>
+        <td>-29</td>
+        <td>-214</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Рассказы</td>
+        <td><a href="https://t.me/rasskaznic">https://t.me/rasskaznic</a></td>
+        <td>Книги</td>
+        <td>36207</td>
+        <td>4125</td>
+        <td>12.0</td>
+        <td>-165</td>
+        <td>-689</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Подписные издания</td>
+        <td><a href="https://t.me/izdaniya">https://t.me/izdaniya</a></td>
+        <td>Книги</td>
+        <td>35818</td>
+        <td>10829</td>
+        <td>31.0</td>
+        <td>204</td>
+        <td>1570</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Фёдор Достоевский. Лайфстайл</td>
+        <td><a href="https://t.me/dostoevskiy_life">https://t.me/dostoevskiy_life</a></td>
+        <td>Книги</td>
+        <td>35781</td>
+        <td>14291</td>
+        <td>40.0</td>
+        <td>53</td>
+        <td>555</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Гарри Поттер | я поттероман</td>
+        <td><a href="https://t.me/i_am_potterhead_hp">https://t.me/i_am_potterhead_hp</a></td>
+        <td>Книги</td>
+        <td>35406</td>
+        <td>6074</td>
+        <td>18.0</td>
+        <td>788</td>
+        <td>4563</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Merryweather (морсик)</td>
+        <td><a href="https://t.me/joinchat/Pv4EDJBw4181ODAy">https://t.me/joinchat/Pv4EDJBw4181ODAy</a></td>
+        <td>Книги</td>
+        <td>35085</td>
+        <td>11445</td>
+        <td>33.0</td>
+        <td>-152</td>
+        <td>-644</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Bookssloover</td>
+        <td><a href="https://t.me/bookssloveer">https://t.me/bookssloveer</a></td>
+        <td>Книги</td>
+        <td>35041</td>
+        <td>5494</td>
+        <td>16.0</td>
+        <td>119</td>
+        <td>340</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>LiveLib | Лайвлиб</td>
+        <td><a href="https://t.me/livelib_official">https://t.me/livelib_official</a></td>
+        <td>Книги</td>
+        <td>34936</td>
+        <td>5441</td>
+        <td>16.0</td>
+        <td>-33</td>
+        <td>-659</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Строки Моей Души</td>
+        <td><a href="https://t.me/joinchat/BeKUfiexnIdlYmY6">https://t.me/joinchat/BeKUfiexnIdlYmY6</a></td>
+        <td>Книги</td>
+        <td>34783</td>
+        <td>5942</td>
+        <td>18.0</td>
+        <td>-104</td>
+        <td>-313</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Литератор | Образование</td>
+        <td><a href="https://t.me/joinchat/TrbZAT8rUExjMTdi">https://t.me/joinchat/TrbZAT8rUExjMTdi</a></td>
+        <td>Книги</td>
+        <td>33839</td>
+        <td>3151</td>
+        <td>10.0</td>
+        <td>232</td>
+        <td>318</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЖЕНСКАЯ ПСИХОЛОГИЯ|ИСТОРИИ</td>
+        <td><a href="https://t.me/psikhologia_zhenskaya">https://t.me/psikhologia_zhenskaya</a></td>
+        <td>Книги</td>
+        <td>33447</td>
+        <td>5203</td>
+        <td>16.0</td>
+        <td>-5</td>
+        <td>70</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Там где живёт любовь♡</td>
+        <td><a href="https://t.me/tam_gde_zhivet_lubov">https://t.me/tam_gde_zhivet_lubov</a></td>
+        <td>Книги</td>
+        <td>32712</td>
+        <td>4444</td>
+        <td>14.0</td>
+        <td>6133</td>
+        <td>12093</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>"Из сна на свободу" Переводы Манхв</td>
+        <td><a href="https://t.me/freeindreamsmanhwas">https://t.me/freeindreamsmanhwas</a></td>
+        <td>Книги</td>
+        <td>32707</td>
+        <td>8988</td>
+        <td>28.0</td>
+        <td>-388</td>
+        <td>-718</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Cookie Run Фандом</td>
+        <td><a href="https://t.me/joinchat/JL-qnYLpC7xhOWMy">https://t.me/joinchat/JL-qnYLpC7xhOWMy</a></td>
+        <td>Книги</td>
+        <td>32523</td>
+        <td>13272</td>
+        <td>41.0</td>
+        <td>-595</td>
+        <td>3423</td>
+        <td>3 месяца 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>Блю Лок | Манга</td>
+        <td><a href="https://t.me/bluelockmanga1">https://t.me/bluelockmanga1</a></td>
+        <td>Книги</td>
+        <td>31203</td>
+        <td>17769</td>
+        <td>57.0</td>
+        <td>-37</td>
+        <td>-528</td>
+        <td>10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Издательство АСТ</td>
+        <td><a href="https://t.me/izdatelstvoast">https://t.me/izdatelstvoast</a></td>
+        <td>Книги</td>
+        <td>30798</td>
+        <td>7465</td>
+        <td>25.0</td>
+        <td>91</td>
+        <td>627</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>KRYLOV</td>
+        <td><a href="https://t.me/krylovme">https://t.me/krylovme</a></td>
+        <td>Книги</td>
+        <td>30330</td>
+        <td>11703</td>
+        <td>39.0</td>
+        <td>-137</td>
+        <td>-382</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Настя, подари нам счастье!</td>
+        <td><a href="https://t.me/book_is_my_really">https://t.me/book_is_my_really</a></td>
+        <td>Книги</td>
+        <td>29624</td>
+        <td>2856</td>
+        <td>10.0</td>
+        <td>1786</td>
+        <td>2595</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Жена Маяковского💍 | Литература ЕГЭ | Фариша Князева</td>
+        <td><a href="https://t.me/litumsch">https://t.me/litumsch</a></td>
+        <td>Книги</td>
+        <td>29264</td>
+        <td>7986</td>
+        <td>28.0</td>
+        <td>-288</td>
+        <td>-2400</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ася Лавринович</td>
+        <td><a href="https://t.me/asyalavrinovich">https://t.me/asyalavrinovich</a></td>
+        <td>Книги</td>
+        <td>28990</td>
+        <td>11878</td>
+        <td>41.0</td>
+        <td>26</td>
+        <td>-5</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Блог из морга</td>
+        <td><a href="https://t.me/joinchat/2wNydf4venRmZTFi">https://t.me/joinchat/2wNydf4venRmZTFi</a></td>
+        <td>Медицина</td>
+        <td>453331</td>
+        <td>51639</td>
+        <td>12.0</td>
+        <td>-2983</td>
+        <td>-4554</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Эндокринолог Магеря</td>
+        <td><a href="https://t.me/magerya">https://t.me/magerya</a></td>
+        <td>Медицина</td>
+        <td>296140</td>
+        <td>30859</td>
+        <td>11.0</td>
+        <td>364</td>
+        <td>1642</td>
+        <td>7 лет 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>ОПЫТНЫЙ ФАРМАЦЕВТ</td>
+        <td><a href="https://t.me/joinchat/2DUHJdFTKzgzMTFi">https://t.me/joinchat/2DUHJdFTKzgzMTFi</a></td>
+        <td>Медицина</td>
+        <td>262618</td>
+        <td>30140</td>
+        <td>12.0</td>
+        <td>457</td>
+        <td>1855</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анатомический театр</td>
+        <td><a href="https://t.me/joinchat/AAAAAEyV1dfyyFw3zSRu0g">https://t.me/joinchat/AAAAAEyV1dfyyFw3zSRu0g</a></td>
+        <td>Медицина</td>
+        <td>224462</td>
+        <td>11849</td>
+        <td>6.0</td>
+        <td>-674</td>
+        <td>-3453</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Канал доктора Шишонина</td>
+        <td><a href="https://t.me/shishonindoc">https://t.me/shishonindoc</a></td>
+        <td>Медицина</td>
+        <td>205818</td>
+        <td>43238</td>
+        <td>21.0</td>
+        <td>250</td>
+        <td>1760</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЗдравКонтроль</td>
+        <td><a href="https://t.me/martynovevgueni">https://t.me/martynovevgueni</a></td>
+        <td>Медицина</td>
+        <td>202051</td>
+        <td>32505</td>
+        <td>17.0</td>
+        <td>1360</td>
+        <td>6693</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Микерина. Роды? Зови акушера!</td>
+        <td><a href="https://t.me/mikeryna_sashaa">https://t.me/mikeryna_sashaa</a></td>
+        <td>Медицина</td>
+        <td>197211</td>
+        <td>96505</td>
+        <td>49.0</td>
+        <td>112</td>
+        <td>-58</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Записки судмедэксперта</td>
+        <td><a href="https://t.me/sudmednotes">https://t.me/sudmednotes</a></td>
+        <td>Медицина</td>
+        <td>181668</td>
+        <td>49557</td>
+        <td>28.0</td>
+        <td>-613</td>
+        <td>-1748</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДОКТОР МЯСНИКОВ</td>
+        <td><a href="https://t.me/drmyasnikov">https://t.me/drmyasnikov</a></td>
+        <td>Медицина</td>
+        <td>178710</td>
+        <td>72076</td>
+        <td>41.0</td>
+        <td>657</td>
+        <td>2725</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Медсестричка</td>
+        <td><a href="https://t.me/joinchat/qkuVi-SYBWdkN2Iy">https://t.me/joinchat/qkuVi-SYBWdkN2Iy</a></td>
+        <td>Медицина</td>
+        <td>178520</td>
+        <td>15827</td>
+        <td>9.0</td>
+        <td>-1277</td>
+        <td>-6078</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Руслан Масгутов</td>
+        <td><a href="https://t.me/rusmasgutov">https://t.me/rusmasgutov</a></td>
+        <td>Медицина</td>
+        <td>169480</td>
+        <td>31075</td>
+        <td>19.0</td>
+        <td>-133</td>
+        <td>-579</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Блог врача</td>
+        <td><a href="https://t.me/joinchat/AAAAAFKb7LFlFwFmrx12ew">https://t.me/joinchat/AAAAAFKb7LFlFwFmrx12ew</a></td>
+        <td>Медицина</td>
+        <td>163864</td>
+        <td>3559</td>
+        <td>3.0</td>
+        <td>-791</td>
+        <td>-3429</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Морг из блога</td>
+        <td><a href="https://t.me/joinchat/Lt6ZnS80wlU5Nzg6">https://t.me/joinchat/Lt6ZnS80wlU5Nzg6</a></td>
+        <td>Медицина</td>
+        <td>157089</td>
+        <td>21702</td>
+        <td>14.0</td>
+        <td>425</td>
+        <td>1269</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Человек, 1 шт.</td>
+        <td><a href="https://t.me/joinchat/f-qgtTwpKxdmMzFi">https://t.me/joinchat/f-qgtTwpKxdmMzFi</a></td>
+        <td>Медицина</td>
+        <td>154355</td>
+        <td>12236</td>
+        <td>8.0</td>
+        <td>6538</td>
+        <td>-1204</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ходорович Ольга. Руководитель маммологической клиники ФГБУ РНЦРР Минздрава РФ</td>
+        <td><a href="https://t.me/khodorovich">https://t.me/khodorovich</a></td>
+        <td>Медицина</td>
+        <td>154086</td>
+        <td>16345</td>
+        <td>11.0</td>
+        <td>8808</td>
+        <td>13247</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Садовская</td>
+        <td><a href="https://t.me/doctor_sadovskaya">https://t.me/doctor_sadovskaya</a></td>
+        <td>Медицина</td>
+        <td>150772</td>
+        <td>54278</td>
+        <td>36.0</td>
+        <td>2</td>
+        <td>8038</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Заметки детского врача</td>
+        <td><a href="https://t.me/DrButriy">https://t.me/DrButriy</a></td>
+        <td>Медицина</td>
+        <td>136440</td>
+        <td>33796</td>
+        <td>25.0</td>
+        <td>283</td>
+        <td>830</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PRO гормоны и БАДы | Диляра Лебедева эндокринолог</td>
+        <td><a href="https://t.me/lebedeva_dilyara">https://t.me/lebedeva_dilyara</a></td>
+        <td>Медицина</td>
+        <td>136222</td>
+        <td>16168</td>
+        <td>12.0</td>
+        <td>754</td>
+        <td>1385</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ДОКТОР АБАКУМОВ</td>
+        <td><a href="https://t.me/drabakumof">https://t.me/drabakumof</a></td>
+        <td>Медицина</td>
+        <td>136207</td>
+        <td>29581</td>
+        <td>22.0</td>
+        <td>-88</td>
+        <td>-549</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Виктория Орлинская</td>
+        <td><a href="https://t.me/cardiodokstories">https://t.me/cardiodokstories</a></td>
+        <td>Медицина</td>
+        <td>131159</td>
+        <td>23937</td>
+        <td>19.0</td>
+        <td>487</td>
+        <td>2783</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мистер Х | Блог уролога</td>
+        <td><a href="https://t.me/joinchat/AAAAAE8lpy5XZVYa4496Iw">https://t.me/joinchat/AAAAAE8lpy5XZVYa4496Iw</a></td>
+        <td>Медицина</td>
+        <td>124446</td>
+        <td>20122</td>
+        <td>17.0</td>
+        <td>-328</td>
+        <td>-1677</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Медициню</td>
+        <td><a href="https://t.me/joinchat/iQikeHpCNDwxYWMy">https://t.me/joinchat/iQikeHpCNDwxYWMy</a></td>
+        <td>Медицина</td>
+        <td>122310</td>
+        <td>14554</td>
+        <td>12.0</td>
+        <td>-676</td>
+        <td>-3911</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Истории со скорой</td>
+        <td><a href="https://t.me/komarova_88">https://t.me/komarova_88</a></td>
+        <td>Медицина</td>
+        <td>119955</td>
+        <td>34715</td>
+        <td>29.0</td>
+        <td>197</td>
+        <td>705</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Blog Kardiologa 🩺</td>
+        <td><a href="https://t.me/blog_kardiologa">https://t.me/blog_kardiologa</a></td>
+        <td>Медицина</td>
+        <td>116797</td>
+        <td>37584</td>
+        <td>33.0</td>
+        <td>429</td>
+        <td>2796</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Алло, скорая?!🚑</td>
+        <td><a href="https://t.me/smpvnutri">https://t.me/smpvnutri</a></td>
+        <td>Медицина</td>
+        <td>115599</td>
+        <td>63476</td>
+        <td>55.0</td>
+        <td>-187</td>
+        <td>-675</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Медицинская Россия</td>
+        <td><a href="https://t.me/mediamedics">https://t.me/mediamedics</a></td>
+        <td>Медицина</td>
+        <td>115149</td>
+        <td>32786</td>
+        <td>29.0</td>
+        <td>502</td>
+        <td>1470</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Операционная</td>
+        <td><a href="https://t.me/joinchat/XrAUNuJnqrNhODIy">https://t.me/joinchat/XrAUNuJnqrNhODIy</a></td>
+        <td>Медицина</td>
+        <td>110754</td>
+        <td>9221</td>
+        <td>9.0</td>
+        <td>-838</td>
+        <td>-3946</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ImmunoBee</td>
+        <td><a href="https://t.me/immunobee1">https://t.me/immunobee1</a></td>
+        <td>Медицина</td>
+        <td>106542</td>
+        <td>35534</td>
+        <td>34.0</td>
+        <td>255</td>
+        <td>834</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сеть аптек Апрель</td>
+        <td><a href="https://t.me/aprelapteka">https://t.me/aprelapteka</a></td>
+        <td>Медицина</td>
+        <td>105162</td>
+        <td>42210</td>
+        <td>41.0</td>
+        <td>-766</td>
+        <td>-2029</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Доктор</td>
+        <td><a href="https://t.me/joinchat/vXEIfm7DeSliM2Qy">https://t.me/joinchat/vXEIfm7DeSliM2Qy</a></td>
+        <td>Медицина</td>
+        <td>104845</td>
+        <td>13400</td>
+        <td>13.0</td>
+        <td>-1069</td>
+        <td>-2784</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Раздвиньте ноги</td>
+        <td><a href="https://t.me/joinchat/JP-iK0YYaphiMTBi">https://t.me/joinchat/JP-iK0YYaphiMTBi</a></td>
+        <td>Медицина</td>
+        <td>93969</td>
+        <td>5184</td>
+        <td>6.0</td>
+        <td>-1009</td>
+        <td>-4462</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>doctor_annamama</td>
+        <td><a href="https://t.me/doctor_annamama">https://t.me/doctor_annamama</a></td>
+        <td>Медицина</td>
+        <td>89072</td>
+        <td>18573</td>
+        <td>21.0</td>
+        <td>-74</td>
+        <td>-321</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Хирургия и Акушерство</td>
+        <td><a href="https://t.me/joinchat/80KjwPnFuhIyM2Uy">https://t.me/joinchat/80KjwPnFuhIyM2Uy</a></td>
+        <td>Медицина</td>
+        <td>87848</td>
+        <td>5887</td>
+        <td>7.0</td>
+        <td>798</td>
+        <td>-2077</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Павлова, эндокринолог</td>
+        <td><a href="https://t.me/doctorpavlova">https://t.me/doctorpavlova</a></td>
+        <td>Медицина</td>
+        <td>87602</td>
+        <td>20157</td>
+        <td>23.0</td>
+        <td>68</td>
+        <td>205</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Максим Кузнецов - Врач эндокринолог</td>
+        <td><a href="https://t.me/medic_smith">https://t.me/medic_smith</a></td>
+        <td>Медицина</td>
+        <td>83015</td>
+        <td>19297</td>
+        <td>24.0</td>
+        <td>979</td>
+        <td>10811</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пластический хирург Николаева Сандара Афанасьевна</td>
+        <td><a href="https://t.me/drNikolaevaSandara">https://t.me/drNikolaevaSandara</a></td>
+        <td>Медицина</td>
+        <td>82489</td>
+        <td>27988</td>
+        <td>34.0</td>
+        <td>69</td>
+        <td>766</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>KDL анализы</td>
+        <td><a href="https://t.me/kdl_ru">https://t.me/kdl_ru</a></td>
+        <td>Медицина</td>
+        <td>80216</td>
+        <td>18488</td>
+        <td>23.0</td>
+        <td>772</td>
+        <td>2071</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>⚕️ Дмитрий Семирядов️️ / Превентивный врач, нутрициолог / dsemiryadov</td>
+        <td><a href="https://t.me/dsemiryadov_official">https://t.me/dsemiryadov_official</a></td>
+        <td>Медицина</td>
+        <td>79915</td>
+        <td>12905</td>
+        <td>17.0</td>
+        <td>-59</td>
+        <td>-778</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Злой Медик</td>
+        <td><a href="https://t.me/joinchat/GXShmWQLoHgyNTU6">https://t.me/joinchat/GXShmWQLoHgyNTU6</a></td>
+        <td>Медицина</td>
+        <td>79735</td>
+        <td>5401</td>
+        <td>7.0</td>
+        <td>-662</td>
+        <td>-3005</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Гиппократ | Здоровье и долголетие</td>
+        <td><a href="https://t.me/joinchat/BsQgvyJjFCExZTEy">https://t.me/joinchat/BsQgvyJjFCExZTEy</a></td>
+        <td>Медицина</td>
+        <td>78272</td>
+        <td>7904</td>
+        <td>11.0</td>
+        <td>97</td>
+        <td>2023</td>
+        <td>5 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Гинеколог Дмитрий Лубнин</td>
+        <td><a href="https://t.me/dmitrylubnin">https://t.me/dmitrylubnin</a></td>
+        <td>Медицина</td>
+        <td>70341</td>
+        <td>22514</td>
+        <td>32.0</td>
+        <td>523</td>
+        <td>839</td>
+        <td>5 лет 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Московская медицина</td>
+        <td><a href="https://t.me/dzdmos">https://t.me/dzdmos</a></td>
+        <td>Медицина</td>
+        <td>69585</td>
+        <td>8795</td>
+        <td>13.0</td>
+        <td>634</td>
+        <td>713</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ИНВИТРО</td>
+        <td><a href="https://t.me/invitro_ru">https://t.me/invitro_ru</a></td>
+        <td>Медицина</td>
+        <td>69538</td>
+        <td>20139</td>
+        <td>29.0</td>
+        <td>49</td>
+        <td>1333</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Dr.Shefova / Доктор Шефова</td>
+        <td><a href="https://t.me/dr_shefova">https://t.me/dr_shefova</a></td>
+        <td>Медицина</td>
+        <td>69483</td>
+        <td>10730</td>
+        <td>16.0</td>
+        <td>-1</td>
+        <td>513</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Секреты крепкого здоровья</td>
+        <td><a href="https://t.me/joinchat/PcuCpWaD2_9mN2Zi">https://t.me/joinchat/PcuCpWaD2_9mN2Zi</a></td>
+        <td>Медицина</td>
+        <td>67906</td>
+        <td>7004</td>
+        <td>11.0</td>
+        <td>756</td>
+        <td>2395</td>
+        <td>7 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Карапетян. Пластический хирург</td>
+        <td><a href="https://t.me/drkarapetyan">https://t.me/drkarapetyan</a></td>
+        <td>Медицина</td>
+        <td>66285</td>
+        <td>5904</td>
+        <td>9.0</td>
+        <td>442</td>
+        <td>3235</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Нутрициология от Профессора</td>
+        <td><a href="https://t.me/joinchat/KEipgYxLn7A2NDA6">https://t.me/joinchat/KEipgYxLn7A2NDA6</a></td>
+        <td>Медицина</td>
+        <td>65090</td>
+        <td>13782</td>
+        <td>22.0</td>
+        <td>-513</td>
+        <td>1220</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Doc_magomedova</td>
+        <td><a href="https://t.me/doc_magomedova777">https://t.me/doc_magomedova777</a></td>
+        <td>Медицина</td>
+        <td>63165</td>
+        <td>11179</td>
+        <td>18.0</td>
+        <td>2</td>
+        <td>358</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Медики | Педиатр</td>
+        <td><a href="https://t.me/khirurg_vrachi">https://t.me/khirurg_vrachi</a></td>
+        <td>Медицина</td>
+        <td>62996</td>
+        <td>10283</td>
+        <td>17.0</td>
+        <td>271</td>
+        <td>2545</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Владислав Ченчак</td>
+        <td><a href="https://t.me/glavmamarf">https://t.me/glavmamarf</a></td>
+        <td>Медицина</td>
+        <td>62563</td>
+        <td>9495</td>
+        <td>16.0</td>
+        <td>709</td>
+        <td>4004</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>МЕДСИ</td>
+        <td><a href="https://t.me/medsigroup">https://t.me/medsigroup</a></td>
+        <td>Медицина</td>
+        <td>62382</td>
+        <td>7841</td>
+        <td>13.0</td>
+        <td>-799</td>
+        <td>-1860</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>DocDeti & DocMed</td>
+        <td><a href="https://t.me/docdeti_docmed">https://t.me/docdeti_docmed</a></td>
+        <td>Медицина</td>
+        <td>60317</td>
+        <td>12035</td>
+        <td>20.0</td>
+        <td>96</td>
+        <td>296</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Намочи манту</td>
+        <td><a href="https://t.me/namochimanturu">https://t.me/namochimanturu</a></td>
+        <td>Медицина</td>
+        <td>60176</td>
+        <td>12556</td>
+        <td>21.0</td>
+        <td>-72</td>
+        <td>-314</td>
+        <td>9 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Молодой</td>
+        <td><a href="https://t.me/doctor_dmolodoy">https://t.me/doctor_dmolodoy</a></td>
+        <td>Медицина</td>
+        <td>59610</td>
+        <td>13590</td>
+        <td>23.0</td>
+        <td>198</td>
+        <td>521</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Медбрат</td>
+        <td><a href="https://t.me/joinchat/z62c5ZeCWRtlMWI6">https://t.me/joinchat/z62c5ZeCWRtlMWI6</a></td>
+        <td>Медицина</td>
+        <td>59442</td>
+        <td>4291</td>
+        <td>8.0</td>
+        <td>-451</td>
+        <td>-2285</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PRO питание и БАДы | Диляра Лебедева гастроэнтеролог</td>
+        <td><a href="https://t.me/stomach_lebedeva">https://t.me/stomach_lebedeva</a></td>
+        <td>Медицина</td>
+        <td>58951</td>
+        <td>6019</td>
+        <td>11.0</td>
+        <td>-7</td>
+        <td>25</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Гемотест — LIVE</td>
+        <td><a href="https://t.me/gemotestlab">https://t.me/gemotestlab</a></td>
+        <td>Медицина</td>
+        <td>58491</td>
+        <td>14371</td>
+        <td>25.0</td>
+        <td>205</td>
+        <td>1142</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Dr. Abramian</td>
+        <td><a href="https://t.me/dr_abramian">https://t.me/dr_abramian</a></td>
+        <td>Медицина</td>
+        <td>56517</td>
+        <td>23257</td>
+        <td>42.0</td>
+        <td>134</td>
+        <td>751</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Врач</td>
+        <td><a href="https://t.me/joinchat/h61UqSxNQNUyZjVi">https://t.me/joinchat/h61UqSxNQNUyZjVi</a></td>
+        <td>Медицина</td>
+        <td>56423</td>
+        <td>4941</td>
+        <td>9.0</td>
+        <td>-495</td>
+        <td>-2349</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Травматологическая</td>
+        <td><a href="https://t.me/joinchat/nMs4EulkWJNlZGZi">https://t.me/joinchat/nMs4EulkWJNlZGZi</a></td>
+        <td>Медицина</td>
+        <td>56419</td>
+        <td>2542</td>
+        <td>5.0</td>
+        <td>5217</td>
+        <td>3733</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Федиатрия</td>
+        <td><a href="https://t.me/fediatrix">https://t.me/fediatrix</a></td>
+        <td>Медицина</td>
+        <td>55482</td>
+        <td>12457</td>
+        <td>23.0</td>
+        <td>13</td>
+        <td>-115</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Хирург-травматолог</td>
+        <td><a href="https://t.me/joinchat/5hkq-3b3jsc2YzYy">https://t.me/joinchat/5hkq-3b3jsc2YzYy</a></td>
+        <td>Медицина</td>
+        <td>54584</td>
+        <td>6046</td>
+        <td>12.0</td>
+        <td>-1901</td>
+        <td>-4575</td>
+        <td>4 месяца 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Мария Коновалова (Трегубова) - Всё о женском здоровье</td>
+        <td><a href="https://t.me/dockonovalovamarija">https://t.me/dockonovalovamarija</a></td>
+        <td>Медицина</td>
+        <td>53852</td>
+        <td>10549</td>
+        <td>20.0</td>
+        <td>294</td>
+        <td>1208</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>️️Пластический хирург: Христенко А.А</td>
+        <td><a href="https://t.me/dr_arthur_khristenko">https://t.me/dr_arthur_khristenko</a></td>
+        <td>Медицина</td>
+        <td>53144</td>
+        <td>33252</td>
+        <td>63.0</td>
+        <td>-2656</td>
+        <td>-5519</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Безвольные каменщики</td>
+        <td><a href="https://t.me/kamenschiki">https://t.me/kamenschiki</a></td>
+        <td>Медицина</td>
+        <td>52801</td>
+        <td>16230</td>
+        <td>31.0</td>
+        <td>29</td>
+        <td>279</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кардиолог Чайковская</td>
+        <td><a href="https://t.me/cardiolog_chaykovskaya">https://t.me/cardiolog_chaykovskaya</a></td>
+        <td>Медицина</td>
+        <td>52771</td>
+        <td>14962</td>
+        <td>29.0</td>
+        <td>238</td>
+        <td>708</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Минздрав России</td>
+        <td><a href="https://t.me/minzdrav_ru">https://t.me/minzdrav_ru</a></td>
+        <td>Медицина</td>
+        <td>52062</td>
+        <td>13094</td>
+        <td>26.0</td>
+        <td>136</td>
+        <td>392</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Гастроэнтеролог ХАРИТОНОВ Андрей Геннадьевич</td>
+        <td><a href="https://t.me/kharitonov_ag">https://t.me/kharitonov_ag</a></td>
+        <td>Медицина</td>
+        <td>50927</td>
+        <td>12855</td>
+        <td>26.0</td>
+        <td>127</td>
+        <td>409</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Антон Алексеев</td>
+        <td><a href="https://t.me/Ant0HAlex">https://t.me/Ant0HAlex</a></td>
+        <td>Медицина</td>
+        <td>49784</td>
+        <td>34299</td>
+        <td>69.0</td>
+        <td>-62</td>
+        <td>-195</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Блог врача Андролога</td>
+        <td><a href="https://t.me/joinchat/1ex82N6PKkdmNDVi">https://t.me/joinchat/1ex82N6PKkdmNDVi</a></td>
+        <td>Медицина</td>
+        <td>48750</td>
+        <td>6349</td>
+        <td>13.0</td>
+        <td>77</td>
+        <td>16</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Заметки невролога Овсянникова КС</td>
+        <td><a href="https://t.me/zametki_nevrologa">https://t.me/zametki_nevrologa</a></td>
+        <td>Медицина</td>
+        <td>48591</td>
+        <td>15523</td>
+        <td>32.0</td>
+        <td>323</td>
+        <td>1292</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дерматология Быканова</td>
+        <td><a href="https://t.me/dr_bykanov">https://t.me/dr_bykanov</a></td>
+        <td>Медицина</td>
+        <td>47806</td>
+        <td>21419</td>
+        <td>45.0</td>
+        <td>125</td>
+        <td>1008</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Сычев</td>
+        <td><a href="https://t.me/dr_sychev">https://t.me/dr_sychev</a></td>
+        <td>Медицина</td>
+        <td>47213</td>
+        <td>14313</td>
+        <td>31.0</td>
+        <td>-20</td>
+        <td>266</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Семейный Доктор</td>
+        <td><a href="https://t.me/fdoctor_ru">https://t.me/fdoctor_ru</a></td>
+        <td>Медицина</td>
+        <td>46731</td>
+        <td>9705</td>
+        <td>21.0</td>
+        <td>-142</td>
+        <td>3007</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Доктор Павлов</td>
+        <td><a href="https://t.me/doc_gastro_life">https://t.me/doc_gastro_life</a></td>
+        <td>Медицина</td>
+        <td>45968</td>
+        <td>8585</td>
+        <td>19.0</td>
+        <td>1137</td>
+        <td>1646</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Malysheva.live</td>
+        <td><a href="https://t.me/malyshevalives">https://t.me/malyshevalives</a></td>
+        <td>Медицина</td>
+        <td>45858</td>
+        <td>16651</td>
+        <td>37.0</td>
+        <td>-9</td>
+        <td>-18</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Немедицина</td>
+        <td><a href="https://t.me/ybody">https://t.me/ybody</a></td>
+        <td>Медицина</td>
+        <td>45668</td>
+        <td>10800</td>
+        <td>24.0</td>
+        <td>-82</td>
+        <td>-490</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Галина | ГИНЕКОЛОГ 🔥 ДО | ПОСЛЕ 🔞 💔</td>
+        <td><a href="https://t.me/ginecolog05">https://t.me/ginecolog05</a></td>
+        <td>Медицина</td>
+        <td>45047</td>
+        <td>10813</td>
+        <td>24.0</td>
+        <td>79</td>
+        <td>1520</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Екатерина Сугак</td>
+        <td><a href="https://t.me/ekaterinasugak">https://t.me/ekaterinasugak</a></td>
+        <td>Медицина</td>
+        <td>44579</td>
+        <td>28542</td>
+        <td>64.0</td>
+        <td>45</td>
+        <td>690</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Медсестра!</td>
+        <td><a href="https://t.me/msestra">https://t.me/msestra</a></td>
+        <td>Медицина</td>
+        <td>44136</td>
+        <td>23535</td>
+        <td>54.0</td>
+        <td>35</td>
+        <td>356</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><a href=""></a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

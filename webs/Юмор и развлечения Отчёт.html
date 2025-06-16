@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Леонардо Дайвинчик</td>
+        <td><a href="https://t.me/leoday">https://t.me/leoday</a></td>
+        <td>Юмор и развлечения</td>
+        <td>5060171</td>
+        <td>302618</td>
+        <td>6.0</td>
+        <td>31836</td>
+        <td>114254</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МЕМАЧ</td>
+        <td><a href="https://t.me/memachh">https://t.me/memachh</a></td>
+        <td>Юмор и развлечения</td>
+        <td>4023392</td>
+        <td>378739</td>
+        <td>10.0</td>
+        <td>-42619</td>
+        <td>221676</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>4ch</td>
+        <td><a href="https://t.me/why4ch">https://t.me/why4ch</a></td>
+        <td>Юмор и развлечения</td>
+        <td>1382926</td>
+        <td>127069</td>
+        <td>10.0</td>
+        <td>-12816</td>
+        <td>-54155</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТОПОР - Горячие новости</td>
+        <td><a href="https://t.me/topor">https://t.me/topor</a></td>
+        <td>Юмор и развлечения</td>
+        <td>1375803</td>
+        <td>258499</td>
+        <td>19.0</td>
+        <td>879</td>
+        <td>-1856</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>E V O L U T I O N</td>
+        <td><a href="https://t.me/evo_memy">https://t.me/evo_memy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>1305519</td>
+        <td>72493</td>
+        <td>6.0</td>
+        <td>-26585</td>
+        <td>7609</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Двач</td>
+        <td><a href="https://t.me/dvachannel">https://t.me/dvachannel</a></td>
+        <td>Юмор и развлечения</td>
+        <td>915883</td>
+        <td>299038</td>
+        <td>33.0</td>
+        <td>109</td>
+        <td>745</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КРУГИ НА ПОЛЯХ</td>
+        <td><a href="https://t.me/kruginapole">https://t.me/kruginapole</a></td>
+        <td>Юмор и развлечения</td>
+        <td>814194</td>
+        <td>61774</td>
+        <td>8.0</td>
+        <td>5015</td>
+        <td>-32372</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СУПЕР СТАС (тут любят еду )</td>
+        <td><a href="https://t.me/supestas1">https://t.me/supestas1</a></td>
+        <td>Юмор и развлечения</td>
+        <td>694594</td>
+        <td>148985</td>
+        <td>22.0</td>
+        <td>21946</td>
+        <td>-36867</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ЭТО ЗНАК</td>
+        <td><a href="https://t.me/etoznakmag">https://t.me/etoznakmag</a></td>
+        <td>Юмор и развлечения</td>
+        <td>690361</td>
+        <td>470411</td>
+        <td>69.0</td>
+        <td>-1114</td>
+        <td>-3950</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TELEGRA4CH</td>
+        <td><a href="https://t.me/telegrachan">https://t.me/telegrachan</a></td>
+        <td>Юмор и развлечения</td>
+        <td>646585</td>
+        <td>34259</td>
+        <td>6.0</td>
+        <td>-3848</td>
+        <td>-17569</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КБ</td>
+        <td><a href="https://t.me/Cbpub">https://t.me/Cbpub</a></td>
+        <td>Юмор и развлечения</td>
+        <td>614426</td>
+        <td>243125</td>
+        <td>40.0</td>
+        <td>436</td>
+        <td>-119</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пездуза</td>
+        <td><a href="https://t.me/pezduza">https://t.me/pezduza</a></td>
+        <td>Юмор и развлечения</td>
+        <td>591135</td>
+        <td>164687</td>
+        <td>28.0</td>
+        <td>-1995</td>
+        <td>-11092</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СПАРТА</td>
+        <td><a href="https://t.me/joinchat/AAAAAFWTTinvD2KhH4nH6g">https://t.me/joinchat/AAAAAFWTTinvD2KhH4nH6g</a></td>
+        <td>Юмор и развлечения</td>
+        <td>590478</td>
+        <td>50877</td>
+        <td>9.0</td>
+        <td>-1304</td>
+        <td>-5767</td>
+        <td>5 лет 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>CUBE.VIDEO</td>
+        <td><a href="https://t.me/joinchat/Prk3HC5DifwxZjli">https://t.me/joinchat/Prk3HC5DifwxZjli</a></td>
+        <td>Юмор и развлечения</td>
+        <td>572742</td>
+        <td>50174</td>
+        <td>9.0</td>
+        <td>-3816</td>
+        <td>-17317</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MDK</td>
+        <td><a href="https://t.me/mudak">https://t.me/mudak</a></td>
+        <td>Юмор и развлечения</td>
+        <td>537690</td>
+        <td>74144</td>
+        <td>14.0</td>
+        <td>-715</td>
+        <td>9149</td>
+        <td>9 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОЗОР</td>
+        <td><a href="https://t.me/pozor88">https://t.me/pozor88</a></td>
+        <td>Юмор и развлечения</td>
+        <td>528036</td>
+        <td>72747</td>
+        <td>14.0</td>
+        <td>-1524</td>
+        <td>-7420</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БАЛАМУТ</td>
+        <td><a href="https://t.me/joinchat/-bDm5Yaa3cxlMzky">https://t.me/joinchat/-bDm5Yaa3cxlMzky</a></td>
+        <td>Юмор и развлечения</td>
+        <td>499938</td>
+        <td>36934</td>
+        <td>8.0</td>
+        <td>-2609</td>
+        <td>-12856</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>BATEK_OFFICIAL</td>
+        <td><a href="https://t.me/batek_official">https://t.me/batek_official</a></td>
+        <td>Юмор и развлечения</td>
+        <td>493762</td>
+        <td>290319</td>
+        <td>59.0</td>
+        <td>6463</td>
+        <td>73245</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>FEMALE MEMES</td>
+        <td><a href="https://t.me/femalememes">https://t.me/femalememes</a></td>
+        <td>Юмор и развлечения</td>
+        <td>461592</td>
+        <td>165970</td>
+        <td>36.0</td>
+        <td>-2008</td>
+        <td>-9564</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🧂 Солевые приколы | Видео смешных мудаков под солями</td>
+        <td><a href="https://t.me/joinchat/k6VdGdi9SVowNGY6">https://t.me/joinchat/k6VdGdi9SVowNGY6</a></td>
+        <td>Юмор и развлечения</td>
+        <td>459551</td>
+        <td>658</td>
+        <td>1.0</td>
+        <td>141</td>
+        <td>96290</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Yaplakal.com</td>
+        <td><a href="https://t.me/yaplakal">https://t.me/yaplakal</a></td>
+        <td>Юмор и развлечения</td>
+        <td>452450</td>
+        <td>122703</td>
+        <td>28.0</td>
+        <td>-131</td>
+        <td>-898</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Улётные приколы😂</td>
+        <td><a href="https://t.me/funXD_yumor_prikoly_memyXD">https://t.me/funXD_yumor_prikoly_memyXD</a></td>
+        <td>Юмор и развлечения</td>
+        <td>444333</td>
+        <td>137549</td>
+        <td>31.0</td>
+        <td>235</td>
+        <td>512</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лука Ебков</td>
+        <td><a href="https://t.me/luka_ebkov">https://t.me/luka_ebkov</a></td>
+        <td>Юмор и развлечения</td>
+        <td>418685</td>
+        <td>220975</td>
+        <td>53.0</td>
+        <td>871</td>
+        <td>-14444</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Русский Колобок и Зелёный Торчок</td>
+        <td><a href="https://t.me/joinchat/UWPaITdY_AVkMWIy">https://t.me/joinchat/UWPaITdY_AVkMWIy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>416481</td>
+        <td>183991</td>
+        <td>45.0</td>
+        <td>-16260</td>
+        <td>469</td>
+        <td>1 месяц 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>orno.tut</td>
+        <td><a href="https://t.me/joinchat/AAAAAETQab5v5QH2C6iDJA">https://t.me/joinchat/AAAAAETQab5v5QH2C6iDJA</a></td>
+        <td>Юмор и развлечения</td>
+        <td>415071</td>
+        <td>30331</td>
+        <td>8.0</td>
+        <td>-1990</td>
+        <td>-10121</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Юморист</td>
+        <td><a href="https://t.me/joinchat/HSuLi3_bcKxjNDk6">https://t.me/joinchat/HSuLi3_bcKxjNDk6</a></td>
+        <td>Юмор и развлечения</td>
+        <td>406836</td>
+        <td>149067</td>
+        <td>37.0</td>
+        <td>-1731</td>
+        <td>-8692</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Женский юмор</td>
+        <td><a href="https://t.me/joinchat/wDBjbgU5X9o3ODFi">https://t.me/joinchat/wDBjbgU5X9o3ODFi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>406541</td>
+        <td>90557</td>
+        <td>23.0</td>
+        <td>-2474</td>
+        <td>-3805</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЖЮ 🧡 Videos</td>
+        <td><a href="https://t.me/lifeyt">https://t.me/lifeyt</a></td>
+        <td>Юмор и развлечения</td>
+        <td>386445</td>
+        <td>65502</td>
+        <td>17.0</td>
+        <td>3222</td>
+        <td>2170</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВИДЕО ДОЛБОЁБА</td>
+        <td><a href="https://t.me/joinchat/meWwdmpdNI0zYTE6">https://t.me/joinchat/meWwdmpdNI0zYTE6</a></td>
+        <td>Юмор и развлечения</td>
+        <td>371657</td>
+        <td>46931</td>
+        <td>13.0</td>
+        <td>229</td>
+        <td>2419</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Лепра</td>
+        <td><a href="https://t.me/Lepragram">https://t.me/Lepragram</a></td>
+        <td>Юмор и развлечения</td>
+        <td>369622</td>
+        <td>107451</td>
+        <td>30.0</td>
+        <td>-382</td>
+        <td>-1984</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пездуза</td>
+        <td><a href="https://t.me/pezduzalive">https://t.me/pezduzalive</a></td>
+        <td>Юмор и развлечения</td>
+        <td>365789</td>
+        <td>202589</td>
+        <td>56.0</td>
+        <td>-827</td>
+        <td>-2512</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Зажигалка</td>
+        <td><a href="https://t.me/zhiga">https://t.me/zhiga</a></td>
+        <td>Юмор и развлечения</td>
+        <td>359690</td>
+        <td>49640</td>
+        <td>14.0</td>
+        <td>-2704</td>
+        <td>-12505</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>москоугёрлз</td>
+        <td><a href="https://t.me/mossgirls">https://t.me/mossgirls</a></td>
+        <td>Юмор и развлечения</td>
+        <td>355330</td>
+        <td>54082</td>
+        <td>16.0</td>
+        <td>32136</td>
+        <td>61533</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>БЛОГ ГАЛИНЫ</td>
+        <td><a href="https://t.me/bloggalini">https://t.me/bloggalini</a></td>
+        <td>Юмор и развлечения</td>
+        <td>346561</td>
+        <td>74790</td>
+        <td>22.0</td>
+        <td>-2311</td>
+        <td>-11732</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Бутылка</td>
+        <td><a href="https://t.me/joinchat/-ODCL_ppXSw4YWZi">https://t.me/joinchat/-ODCL_ppXSw4YWZi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>345127</td>
+        <td>180893</td>
+        <td>53.0</td>
+        <td>451</td>
+        <td>9565</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вадяо</td>
+        <td><a href="https://t.me/vadim_telega_rush">https://t.me/vadim_telega_rush</a></td>
+        <td>Юмор и развлечения</td>
+        <td>337067</td>
+        <td>180417</td>
+        <td>54.0</td>
+        <td>-808</td>
+        <td>-1857</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PornoMemes</td>
+        <td><a href="https://t.me/joinchat/AAAAAFjXKL78VZhFr2yKnw">https://t.me/joinchat/AAAAAFjXKL78VZhFr2yKnw</a></td>
+        <td>Юмор и развлечения</td>
+        <td>329949</td>
+        <td>59466</td>
+        <td>18.0</td>
+        <td>-1770</td>
+        <td>-6576</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Гусь ГаГарик | Юмор</td>
+        <td><a href="https://t.me/joinchat/nc02PZmSlPoyNTcy">https://t.me/joinchat/nc02PZmSlPoyNTcy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>326085</td>
+        <td>76182</td>
+        <td>24.0</td>
+        <td>99</td>
+        <td>1139</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>твиттота</td>
+        <td><a href="https://t.me/twitt_ota">https://t.me/twitt_ota</a></td>
+        <td>Юмор и развлечения</td>
+        <td>306852</td>
+        <td>113828</td>
+        <td>38.0</td>
+        <td>2369</td>
+        <td>2843</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДаНуЕгоНахуй 🤔</td>
+        <td><a href="https://t.me/joinchat/-908wSerzrc1ODVi">https://t.me/joinchat/-908wSerzrc1ODVi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>305167</td>
+        <td>8211</td>
+        <td>3.0</td>
+        <td>1295</td>
+        <td>1496</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Телеканал ТНТ</td>
+        <td><a href="https://t.me/TNT_television">https://t.me/TNT_television</a></td>
+        <td>Юмор и развлечения</td>
+        <td>304984</td>
+        <td>75429</td>
+        <td>25.0</td>
+        <td>3204</td>
+        <td>6615</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MDK PREMIUM</td>
+        <td><a href="https://t.me/joinchat/AAAAAFLuPbjrKvdiq9o9rg">https://t.me/joinchat/AAAAAFLuPbjrKvdiq9o9rg</a></td>
+        <td>Юмор и развлечения</td>
+        <td>302838</td>
+        <td>46490</td>
+        <td>16.0</td>
+        <td>-1147</td>
+        <td>9039</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Таки да, еврейский юмор</td>
+        <td><a href="https://t.me/Jewish_hmr">https://t.me/Jewish_hmr</a></td>
+        <td>Юмор и развлечения</td>
+        <td>301461</td>
+        <td>11792</td>
+        <td>4.0</td>
+        <td>-2268</td>
+        <td>-7013</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПОЗОРИЩЕ</td>
+        <td><a href="https://t.me/joinchat/AAAAAEzcRVuVL6Qguo3JpQ">https://t.me/joinchat/AAAAAEzcRVuVL6Qguo3JpQ</a></td>
+        <td>Юмор и развлечения</td>
+        <td>295176</td>
+        <td>29108</td>
+        <td>10.0</td>
+        <td>-1187</td>
+        <td>-6166</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Кружки для диалогов</td>
+        <td><a href="https://t.me/memsheroes">https://t.me/memsheroes</a></td>
+        <td>Юмор и развлечения</td>
+        <td>273855</td>
+        <td>14832</td>
+        <td>6.0</td>
+        <td>-5817</td>
+        <td>-28738</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сальвадор в Дали | Юмор 😉</td>
+        <td><a href="https://t.me/joinchat/UwJP4kTxnPCJtkH4">https://t.me/joinchat/UwJP4kTxnPCJtkH4</a></td>
+        <td>Юмор и развлечения</td>
+        <td>273182</td>
+        <td>57897</td>
+        <td>22.0</td>
+        <td>408</td>
+        <td>665</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ИМПРОВИЗАТОРЫ</td>
+        <td><a href="https://t.me/theimprovisatorsshow">https://t.me/theimprovisatorsshow</a></td>
+        <td>Юмор и развлечения</td>
+        <td>271283</td>
+        <td>145255</td>
+        <td>54.0</td>
+        <td>852</td>
+        <td>-165</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PRANK_TG | Зверолаш</td>
+        <td><a href="https://t.me/joinchat/i3guEBoFcutkYTBi">https://t.me/joinchat/i3guEBoFcutkYTBi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>270294</td>
+        <td>39779</td>
+        <td>15.0</td>
+        <td>-793</td>
+        <td>-3765</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Видео Долбоёба</td>
+        <td><a href="https://t.me/video_dolboeba">https://t.me/video_dolboeba</a></td>
+        <td>Юмор и развлечения</td>
+        <td>269641</td>
+        <td>20361</td>
+        <td>8.0</td>
+        <td>-1104</td>
+        <td>-5247</td>
+        <td>8 лет 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>МАСТЕРСКАЯ</td>
+        <td><a href="https://t.me/joinchat/AAAAAFhAOtz_XSxmsdd-WA">https://t.me/joinchat/AAAAAFhAOtz_XSxmsdd-WA</a></td>
+        <td>Юмор и развлечения</td>
+        <td>267522</td>
+        <td>20669</td>
+        <td>8.0</td>
+        <td>388</td>
+        <td>-1063</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Крошка Енот | Юмор</td>
+        <td><a href="https://t.me/Yumor_humor">https://t.me/Yumor_humor</a></td>
+        <td>Юмор и развлечения</td>
+        <td>267009</td>
+        <td>56445</td>
+        <td>22.0</td>
+        <td>-1195</td>
+        <td>-5324</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пикабу</td>
+        <td><a href="https://t.me/pikabu">https://t.me/pikabu</a></td>
+        <td>Юмор и развлечения</td>
+        <td>264461</td>
+        <td>53566</td>
+        <td>21.0</td>
+        <td>-87</td>
+        <td>-276</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НОС</td>
+        <td><a href="https://t.me/nos_chanel">https://t.me/nos_chanel</a></td>
+        <td>Юмор и развлечения</td>
+        <td>263213</td>
+        <td>59820</td>
+        <td>23.0</td>
+        <td>268</td>
+        <td>1623</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>SEX MEMES</td>
+        <td><a href="https://t.me/joinchat/ay5qeLHdjhtiNWVi">https://t.me/joinchat/ay5qeLHdjhtiNWVi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>263128</td>
+        <td>47852</td>
+        <td>19.0</td>
+        <td>-1595</td>
+        <td>-8276</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ХАЗЯЕВА В МОМЕНТЕ</td>
+        <td><a href="https://t.me/xazayeva">https://t.me/xazayeva</a></td>
+        <td>Юмор и развлечения</td>
+        <td>261767</td>
+        <td>116393</td>
+        <td>45.0</td>
+        <td>-1274</td>
+        <td>-8321</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Sex Memes</td>
+        <td><a href="https://t.me/joinchat/UIy0ICVWXuNhYTgy">https://t.me/joinchat/UIy0ICVWXuNhYTgy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>261465</td>
+        <td>42150</td>
+        <td>17.0</td>
+        <td>-1529</td>
+        <td>-5831</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Трепутин Лорд / Treputin Lord</td>
+        <td><a href="https://t.me/treputinofficial">https://t.me/treputinofficial</a></td>
+        <td>Юмор и развлечения</td>
+        <td>245669</td>
+        <td>15706</td>
+        <td>7.0</td>
+        <td>-27571</td>
+        <td>108371</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БАРМАЛЕЙ</td>
+        <td><a href="https://t.me/joinchat/AAAAAFYHdZIj3MUuOm7AtQ">https://t.me/joinchat/AAAAAFYHdZIj3MUuOm7AtQ</a></td>
+        <td>Юмор и развлечения</td>
+        <td>244990</td>
+        <td>20129</td>
+        <td>9.0</td>
+        <td>967</td>
+        <td>-1610</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Граф Юморец</td>
+        <td><a href="https://t.me/joinchat/pX0ajha4E9AyMDNi">https://t.me/joinchat/pX0ajha4E9AyMDNi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>239024</td>
+        <td>61498</td>
+        <td>26.0</td>
+        <td>-919</td>
+        <td>-3628</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Раневская.LIVE</td>
+        <td><a href="https://t.me/joinchat/ADSqQCKpgSZlOThi">https://t.me/joinchat/ADSqQCKpgSZlOThi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>235811</td>
+        <td>50328</td>
+        <td>22.0</td>
+        <td>-712</td>
+        <td>-2824</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Смешные видео😂</td>
+        <td><a href="https://t.me/ptencoff">https://t.me/ptencoff</a></td>
+        <td>Юмор и развлечения</td>
+        <td>219279</td>
+        <td>139211</td>
+        <td>64.0</td>
+        <td>132</td>
+        <td>4302</td>
+        <td>8 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БОРЩ</td>
+        <td><a href="https://t.me/joinchat/9jDoU4md3g04MjBi">https://t.me/joinchat/9jDoU4md3g04MjBi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>215117</td>
+        <td>6749</td>
+        <td>4.0</td>
+        <td>-1402</td>
+        <td>-6279</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Премия Дарвина 🔞</td>
+        <td><a href="https://t.me/joinchat/a4vT-K3rqMdjMWYy">https://t.me/joinchat/a4vT-K3rqMdjMWYy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>213274</td>
+        <td>19560</td>
+        <td>10.0</td>
+        <td>-893</td>
+        <td>-686</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ХаХаски | Юмор</td>
+        <td><a href="https://t.me/xaxaski_tg">https://t.me/xaxaski_tg</a></td>
+        <td>Юмор и развлечения</td>
+        <td>213218</td>
+        <td>54273</td>
+        <td>26.0</td>
+        <td>-840</td>
+        <td>-3852</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Видео Приколы</td>
+        <td><a href="https://t.me/joinchat/AAAAAFM8GchGMKA2WZzHsA">https://t.me/joinchat/AAAAAFM8GchGMKA2WZzHsA</a></td>
+        <td>Юмор и развлечения</td>
+        <td>212687</td>
+        <td>27603</td>
+        <td>13.0</td>
+        <td>-351</td>
+        <td>-951</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ФЕЙЛ</td>
+        <td><a href="https://t.me/joinchat/AAAAAFUNOs7T5ZKCUbdwYg">https://t.me/joinchat/AAAAAFUNOs7T5ZKCUbdwYg</a></td>
+        <td>Юмор и развлечения</td>
+        <td>211967</td>
+        <td>13633</td>
+        <td>7.0</td>
+        <td>-1143</td>
+        <td>-5466</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>4chan</td>
+        <td><a href="https://t.me/ru4chan">https://t.me/ru4chan</a></td>
+        <td>Юмор и развлечения</td>
+        <td>209259</td>
+        <td>40933</td>
+        <td>20.0</td>
+        <td>-2616</td>
+        <td>38696</td>
+        <td>8 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Kikomedia</td>
+        <td><a href="https://t.me/kikomedia">https://t.me/kikomedia</a></td>
+        <td>Юмор и развлечения</td>
+        <td>205404</td>
+        <td>32759</td>
+        <td>16.0</td>
+        <td>-3828</td>
+        <td>-14636</td>
+        <td>9 месяцев 27 дней</td>
+      </tr>
+
+      <tr>
+        <td>Саваничи 🇷🇺</td>
+        <td><a href="https://t.me/savanichi">https://t.me/savanichi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>205269</td>
+        <td>91548</td>
+        <td>45.0</td>
+        <td>187</td>
+        <td>2036</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Улыбатор</td>
+        <td><a href="https://t.me/joinchat/AAAAAEx9glOeNqFAG-lT_w">https://t.me/joinchat/AAAAAEx9glOeNqFAG-lT_w</a></td>
+        <td>Юмор и развлечения</td>
+        <td>201604</td>
+        <td>25117</td>
+        <td>13.0</td>
+        <td>-23</td>
+        <td>-2341</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MEDIA HUB</td>
+        <td><a href="https://t.me/joinchat/VUcHWLmLOiplYmU6">https://t.me/joinchat/VUcHWLmLOiplYmU6</a></td>
+        <td>Юмор и развлечения</td>
+        <td>200739</td>
+        <td>7492</td>
+        <td>4.0</td>
+        <td>-2346</td>
+        <td>-10802</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВПШ Lite</td>
+        <td><a href="https://t.me/joinchat/_Ic8QxWkaGBiMzBi">https://t.me/joinchat/_Ic8QxWkaGBiMzBi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>200185</td>
+        <td>65547</td>
+        <td>33.0</td>
+        <td>1846</td>
+        <td>5362</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Картинки для настроения</td>
+        <td><a href="https://t.me/joinchat/HPJlAS3le943ODYy">https://t.me/joinchat/HPJlAS3le943ODYy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>197968</td>
+        <td>62289</td>
+        <td>32.0</td>
+        <td>-3179</td>
+        <td>296</td>
+        <td>9 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>Двачер</td>
+        <td><a href="https://t.me/joinchat/nibB2z4X8LQxMWEy">https://t.me/joinchat/nibB2z4X8LQxMWEy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>196423</td>
+        <td>5859</td>
+        <td>3.0</td>
+        <td>-1735</td>
+        <td>-8671</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Рандомач/Двач</td>
+        <td><a href="https://t.me/rand2ch">https://t.me/rand2ch</a></td>
+        <td>Юмор и развлечения</td>
+        <td>196419</td>
+        <td>43147</td>
+        <td>22.0</td>
+        <td>-697</td>
+        <td>-2856</td>
+        <td>7 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АХУ*ТЬ</td>
+        <td><a href="https://t.me/joinchat/AAAAAEGf080OSZBP_khItg">https://t.me/joinchat/AAAAAEGf080OSZBP_khItg</a></td>
+        <td>Юмор и развлечения</td>
+        <td>191246</td>
+        <td>40061</td>
+        <td>21.0</td>
+        <td>8</td>
+        <td>1423</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПЕРЕЦ 🌶</td>
+        <td><a href="https://t.me/joinchat/AAAAAFjc1aIJjf4TD2MJCg">https://t.me/joinchat/AAAAAFjc1aIJjf4TD2MJCg</a></td>
+        <td>Юмор и развлечения</td>
+        <td>189758</td>
+        <td>14362</td>
+        <td>8.0</td>
+        <td>-1168</td>
+        <td>-206</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Убойные приколы</td>
+        <td><a href="https://t.me/joinchat/Kct4zVnD5p5kZjVi">https://t.me/joinchat/Kct4zVnD5p5kZjVi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>187560</td>
+        <td>26540</td>
+        <td>15.0</td>
+        <td>631</td>
+        <td>-88</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>С нами стыдно, зато весело!</td>
+        <td><a href="https://t.me/joinchat/Suus5bm47VUwYWUy">https://t.me/joinchat/Suus5bm47VUwYWUy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>185320</td>
+        <td>32727</td>
+        <td>18.0</td>
+        <td>-979</td>
+        <td>-1336</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Овсянка+</td>
+        <td><a href="https://t.me/joinchat/AAAAAEcUj_yfVMD0kcu_9A">https://t.me/joinchat/AAAAAEcUj_yfVMD0kcu_9A</a></td>
+        <td>Юмор и развлечения</td>
+        <td>185315</td>
+        <td>33318</td>
+        <td>18.0</td>
+        <td>-646</td>
+        <td>-3098</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PUSSY MEMES</td>
+        <td><a href="https://t.me/joinchat/AAAAAFelUVg3qZ2WtLOrQw">https://t.me/joinchat/AAAAAFelUVg3qZ2WtLOrQw</a></td>
+        <td>Юмор и развлечения</td>
+        <td>177628</td>
+        <td>6610</td>
+        <td>4.0</td>
+        <td>-989</td>
+        <td>-4496</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Плачем от смеха!</td>
+        <td><a href="https://t.me/joinchat/bDNPci8e7P04MTIy">https://t.me/joinchat/bDNPci8e7P04MTIy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>175526</td>
+        <td>30486</td>
+        <td>18.0</td>
+        <td>-251</td>
+        <td>-724</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>БАРМАЛЕЙ 18+</td>
+        <td><a href="https://t.me/joinchat/AAAAAFZNJjqZfffa0XpQRQ">https://t.me/joinchat/AAAAAFZNJjqZfffa0XpQRQ</a></td>
+        <td>Юмор и развлечения</td>
+        <td>173027</td>
+        <td>19236</td>
+        <td>12.0</td>
+        <td>-1639</td>
+        <td>-1403</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мысли Жопера | 5opka - Пятёрка</td>
+        <td><a href="https://t.me/joper5">https://t.me/joper5</a></td>
+        <td>Юмор и развлечения</td>
+        <td>172676</td>
+        <td>56812</td>
+        <td>33.0</td>
+        <td>-129</td>
+        <td>-3499</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мемперия Катерины Побоженко | Шаблоны и оригиналы | Мемы в REELS</td>
+        <td><a href="https://t.me/formemas">https://t.me/formemas</a></td>
+        <td>Юмор и развлечения</td>
+        <td>168912</td>
+        <td>17901</td>
+        <td>11.0</td>
+        <td>-23</td>
+        <td>-158</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МЕДОВИК</td>
+        <td><a href="https://t.me/joinchat/pPWIbwgtp-00MTNi">https://t.me/joinchat/pPWIbwgtp-00MTNi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>166778</td>
+        <td>4697</td>
+        <td>3.0</td>
+        <td>-4659</td>
+        <td>-16646</td>
+        <td>5 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Ох, Девоньки!</td>
+        <td><a href="https://t.me/joinchat/o_trARl4Zf02YThi">https://t.me/joinchat/o_trARl4Zf02YThi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>166194</td>
+        <td>35598</td>
+        <td>22.0</td>
+        <td>231</td>
+        <td>533</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анекдоты😂🔞</td>
+        <td><a href="https://t.me/joinchat/AAAAAD889wF0IIEmFdgSsQ">https://t.me/joinchat/AAAAAD889wF0IIEmFdgSsQ</a></td>
+        <td>Юмор и развлечения</td>
+        <td>165218</td>
+        <td>10274</td>
+        <td>7.0</td>
+        <td>-741</td>
+        <td>-3704</td>
+        <td>8 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Капец Юморец</td>
+        <td><a href="https://t.me/joinchat/YHS4AIaGUZM0Yjcy">https://t.me/joinchat/YHS4AIaGUZM0Yjcy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>164524</td>
+        <td>41117</td>
+        <td>25.0</td>
+        <td>-594</td>
+        <td>-2969</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ретроградный Меркурий</td>
+        <td><a href="https://t.me/retrogrademercury">https://t.me/retrogrademercury</a></td>
+        <td>Юмор и развлечения</td>
+        <td>162794</td>
+        <td>77472</td>
+        <td>48.0</td>
+        <td>53</td>
+        <td>872</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Раневская. ONLINE</td>
+        <td><a href="https://t.me/joinchat/-KtATDQR9cI4MzZi">https://t.me/joinchat/-KtATDQR9cI4MzZi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>162539</td>
+        <td>32097</td>
+        <td>20.0</td>
+        <td>-726</td>
+        <td>-1733</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Tits Tweets</td>
+        <td><a href="https://t.me/tits_tweets">https://t.me/tits_tweets</a></td>
+        <td>Юмор и развлечения</td>
+        <td>160483</td>
+        <td>50335</td>
+        <td>32.0</td>
+        <td>-309</td>
+        <td>-167</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КРУГЛЯШИКИ</td>
+        <td><a href="https://t.me/kruglyashiki">https://t.me/kruglyashiki</a></td>
+        <td>Юмор и развлечения</td>
+        <td>160259</td>
+        <td>21123</td>
+        <td>14.0</td>
+        <td>-411</td>
+        <td>-2062</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>За секунду до…</td>
+        <td><a href="https://t.me/prikoly">https://t.me/prikoly</a></td>
+        <td>Юмор и развлечения</td>
+        <td>159755</td>
+        <td>23741</td>
+        <td>15.0</td>
+        <td>-515</td>
+        <td>-2315</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Анонимно | Подслушано</td>
+        <td><a href="https://t.me/anonimno_podslushano">https://t.me/anonimno_podslushano</a></td>
+        <td>Юмор и развлечения</td>
+        <td>159296</td>
+        <td>9589</td>
+        <td>6.0</td>
+        <td>-639</td>
+        <td>-2940</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Да, я такая!</td>
+        <td><a href="https://t.me/joinchat/4r2Nge7VIz1hMDNi">https://t.me/joinchat/4r2Nge7VIz1hMDNi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>158513</td>
+        <td>45926</td>
+        <td>29.0</td>
+        <td>279</td>
+        <td>2192</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Like</td>
+        <td><a href="https://t.me/joinchat/dGQK7a2V0B43ODBi">https://t.me/joinchat/dGQK7a2V0B43ODBi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>154382</td>
+        <td>3008</td>
+        <td>2.0</td>
+        <td>-1571</td>
+        <td>-7566</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Смеемся вместе</td>
+        <td><a href="https://t.me/joinchat/57UxoschKxs3Y2Iy">https://t.me/joinchat/57UxoschKxs3Y2Iy</a></td>
+        <td>Юмор и развлечения</td>
+        <td>153516</td>
+        <td>82078</td>
+        <td>54.0</td>
+        <td>153505</td>
+        <td>81</td>
+        <td>11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чёрный юмор</td>
+        <td><a href="https://t.me/joinchat/AAAAAErX9Qw0VZ-fjyasUA">https://t.me/joinchat/AAAAAErX9Qw0VZ-fjyasUA</a></td>
+        <td>Юмор и развлечения</td>
+        <td>151217</td>
+        <td>21097</td>
+        <td>14.0</td>
+        <td>-452</td>
+        <td>-2508</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Скрытые видео</td>
+        <td><a href="https://t.me/joinchat/1AUKSWi156w0NzJi">https://t.me/joinchat/1AUKSWi156w0NzJi</a></td>
+        <td>Юмор и развлечения</td>
+        <td>150425</td>
+        <td>28680</td>
+        <td>20.0</td>
+        <td>10</td>
+        <td>-426</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Kadyrov_95</td>
+        <td><a href="https://t.me/RKadyrov_95">https://t.me/RKadyrov_95</a></td>
+        <td>Политика</td>
+        <td>2057897</td>
+        <td>191773</td>
+        <td>10.0</td>
+        <td>3537</td>
+        <td>37705</td>
+        <td>8 лет 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>Операция Z: Военкоры Русской Весны</td>
+        <td><a href="https://t.me/RVvoenkor">https://t.me/RVvoenkor</a></td>
+        <td>Политика</td>
+        <td>1683222</td>
+        <td>508871</td>
+        <td>31.0</td>
+        <td>2640</td>
+        <td>10909</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Дмитрий Медведев</td>
+        <td><a href="https://t.me/medvedev_telegram">https://t.me/medvedev_telegram</a></td>
+        <td>Политика</td>
+        <td>1671543</td>
+        <td>2812555</td>
+        <td>169.0</td>
+        <td>10413</td>
+        <td>49257</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Адам Делимханов</td>
+        <td><a href="https://t.me/adelimkhanov_95">https://t.me/adelimkhanov_95</a></td>
+        <td>Политика</td>
+        <td>1518828</td>
+        <td>96864</td>
+        <td>7.0</td>
+        <td>20322</td>
+        <td>47901</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вячеслав Володин</td>
+        <td><a href="https://t.me/vv_volodin">https://t.me/vv_volodin</a></td>
+        <td>Политика</td>
+        <td>1340506</td>
+        <td>1197457</td>
+        <td>90.0</td>
+        <td>7601</td>
+        <td>21413</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЛОРД</td>
+        <td><a href="https://t.me/MDaudov_95">https://t.me/MDaudov_95</a></td>
+        <td>Политика</td>
+        <td>1321931</td>
+        <td>24490</td>
+        <td>2.0</td>
+        <td>16788</td>
+        <td>-60432</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СОЛОВЬЁВ</td>
+        <td><a href="https://t.me/SolovievLive">https://t.me/SolovievLive</a></td>
+        <td>Политика</td>
+        <td>1301571</td>
+        <td>237519</td>
+        <td>19.0</td>
+        <td>2231</td>
+        <td>1659</td>
+        <td>6 лет 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>Рыбарь</td>
+        <td><a href="https://t.me/rybar">https://t.me/rybar</a></td>
+        <td>Политика</td>
+        <td>1257824</td>
+        <td>204051</td>
+        <td>17.0</td>
+        <td>-2019</td>
+        <td>-8636</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Саня во Флориде</td>
+        <td><a href="https://t.me/sanya_florida">https://t.me/sanya_florida</a></td>
+        <td>Политика</td>
+        <td>944276</td>
+        <td>519914</td>
+        <td>56.0</td>
+        <td>2996</td>
+        <td>12937</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Colonelcassad</td>
+        <td><a href="https://t.me/boris_rozhin">https://t.me/boris_rozhin</a></td>
+        <td>Политика</td>
+        <td>847378</td>
+        <td>183669</td>
+        <td>22.0</td>
+        <td>4727</td>
+        <td>3434</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПУТИН в Telegram</td>
+        <td><a href="https://t.me/joinchat/mfhcUYNSXBtkY2Iy">https://t.me/joinchat/mfhcUYNSXBtkY2Iy</a></td>
+        <td>Политика</td>
+        <td>817400</td>
+        <td>170448</td>
+        <td>21.0</td>
+        <td>-3145</td>
+        <td>-12867</td>
+        <td>4 года 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>Дмитрий Никотин</td>
+        <td><a href="https://t.me/dmitrynikotin">https://t.me/dmitrynikotin</a></td>
+        <td>Политика</td>
+        <td>729163</td>
+        <td>334425</td>
+        <td>46.0</td>
+        <td>693</td>
+        <td>1348</td>
+        <td>8 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Русская Община ZOV</td>
+        <td><a href="https://t.me/obshina_ru">https://t.me/obshina_ru</a></td>
+        <td>Политика</td>
+        <td>654165</td>
+        <td>99692</td>
+        <td>16.0</td>
+        <td>1689</td>
+        <td>5874</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Минобороны России</td>
+        <td><a href="https://t.me/mod_russia">https://t.me/mod_russia</a></td>
+        <td>Политика</td>
+        <td>646794</td>
+        <td>84657</td>
+        <td>14.0</td>
+        <td>1494</td>
+        <td>17128</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЕЖ</td>
+        <td><a href="https://t.me/ejdailyru">https://t.me/ejdailyru</a></td>
+        <td>Политика</td>
+        <td>574386</td>
+        <td>58618</td>
+        <td>11.0</td>
+        <td>32213</td>
+        <td>27490</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Старше Эдды</td>
+        <td><a href="https://t.me/vysokygovorit">https://t.me/vysokygovorit</a></td>
+        <td>Политика</td>
+        <td>572413</td>
+        <td>203159</td>
+        <td>36.0</td>
+        <td>143</td>
+        <td>-3304</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Маргарита Симоньян</td>
+        <td><a href="https://t.me/margaritasimonyan">https://t.me/margaritasimonyan</a></td>
+        <td>Политика</td>
+        <td>557064</td>
+        <td>331128</td>
+        <td>60.0</td>
+        <td>-330</td>
+        <td>4685</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МИГ России</td>
+        <td><a href="https://t.me/mig41">https://t.me/mig41</a></td>
+        <td>Политика</td>
+        <td>552832</td>
+        <td>185566</td>
+        <td>34.0</td>
+        <td>2533</td>
+        <td>9820</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мария Захарова</td>
+        <td><a href="https://t.me/MariaVladimirovnaZakharova">https://t.me/MariaVladimirovnaZakharova</a></td>
+        <td>Политика</td>
+        <td>524137</td>
+        <td>139986</td>
+        <td>27.0</td>
+        <td>-579</td>
+        <td>-1975</td>
+        <td>4 года 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Оперативные сводки</td>
+        <td><a href="https://t.me/opersvodki">https://t.me/opersvodki</a></td>
+        <td>Политика</td>
+        <td>470789</td>
+        <td>121604</td>
+        <td>26.0</td>
+        <td>-962</td>
+        <td>-3445</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Настоящий Гладков</td>
+        <td><a href="https://t.me/vvgladkov">https://t.me/vvgladkov</a></td>
+        <td>Политика</td>
+        <td>465097</td>
+        <td>180279</td>
+        <td>39.0</td>
+        <td>177</td>
+        <td>-989</td>
+        <td>4 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ватное болото</td>
+        <td><a href="https://t.me/vatnoeboloto">https://t.me/vatnoeboloto</a></td>
+        <td>Политика</td>
+        <td>447196</td>
+        <td>214046</td>
+        <td>48.0</td>
+        <td>-1110</td>
+        <td>-4839</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тайная канцелярия</td>
+        <td><a href="https://t.me/Taynaya_kantselyariya">https://t.me/Taynaya_kantselyariya</a></td>
+        <td>Политика</td>
+        <td>445872</td>
+        <td>253091</td>
+        <td>57.0</td>
+        <td>7950</td>
+        <td>26864</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ZERGULIO🇷🇺</td>
+        <td><a href="https://t.me/SergeyKolyasnikov">https://t.me/SergeyKolyasnikov</a></td>
+        <td>Политика</td>
+        <td>422874</td>
+        <td>162728</td>
+        <td>39.0</td>
+        <td>-1704</td>
+        <td>430</td>
+        <td>9 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Выпускайте КракенаZ!</td>
+        <td><a href="https://t.me/rlz_the_kraken">https://t.me/rlz_the_kraken</a></td>
+        <td>Политика</td>
+        <td>422701</td>
+        <td>65698</td>
+        <td>16.0</td>
+        <td>-3464</td>
+        <td>-29403</td>
+        <td>8 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>БЕСОГОН</td>
+        <td><a href="https://t.me/nikitabsg">https://t.me/nikitabsg</a></td>
+        <td>Политика</td>
+        <td>406984</td>
+        <td>217495</td>
+        <td>54.0</td>
+        <td>-219</td>
+        <td>992</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Операция Z</td>
+        <td><a href="https://t.me/joinchat/7-d9TpFiSpplMzVi">https://t.me/joinchat/7-d9TpFiSpplMzVi</a></td>
+        <td>Политика</td>
+        <td>404215</td>
+        <td>89831</td>
+        <td>23.0</td>
+        <td>-1586</td>
+        <td>-950</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Стрелков Игорь Иванович</td>
+        <td><a href="https://t.me/strelkovii">https://t.me/strelkovii</a></td>
+        <td>Политика</td>
+        <td>395104</td>
+        <td>202717</td>
+        <td>52.0</td>
+        <td>-457</td>
+        <td>-3243</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Александр Ходаковский</td>
+        <td><a href="https://t.me/aleksandr_skif">https://t.me/aleksandr_skif</a></td>
+        <td>Политика</td>
+        <td>393438</td>
+        <td>174786</td>
+        <td>45.0</td>
+        <td>-1408</td>
+        <td>-7182</td>
+        <td>8 лет 17 дней</td>
+      </tr>
+
+      <tr>
+        <td>Fox News Russia</td>
+        <td><a href="https://t.me/Putin_tramp_mobilizaciya_migrant">https://t.me/Putin_tramp_mobilizaciya_migrant</a></td>
+        <td>Политика</td>
+        <td>386387</td>
+        <td>42643</td>
+        <td>11.0</td>
+        <td>1669</td>
+        <td>-7860</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>РУССКИЙ ФОРМАТ</td>
+        <td><a href="https://t.me/joinchat/ehtKrVptq_YwNTky">https://t.me/joinchat/ehtKrVptq_YwNTky</a></td>
+        <td>Политика</td>
+        <td>379247</td>
+        <td>30637</td>
+        <td>9.0</td>
+        <td>2181</td>
+        <td>4545</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Многонационал</td>
+        <td><a href="https://t.me/mnogonazi">https://t.me/mnogonazi</a></td>
+        <td>Политика</td>
+        <td>368561</td>
+        <td>177020</td>
+        <td>48.0</td>
+        <td>927</td>
+        <td>4670</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Сталингулаг</td>
+        <td><a href="https://t.me/stalin_gulag">https://t.me/stalin_gulag</a></td>
+        <td>Политика</td>
+        <td>364006</td>
+        <td>202767</td>
+        <td>56.0</td>
+        <td>-1309</td>
+        <td>-4255</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Военкор Котенок</td>
+        <td><a href="https://t.me/voenkorKotenok">https://t.me/voenkorKotenok</a></td>
+        <td>Политика</td>
+        <td>361927</td>
+        <td>89626</td>
+        <td>25.0</td>
+        <td>-574</td>
+        <td>-2098</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НЕЗЫГАРЬ</td>
+        <td><a href="https://t.me/russicaRU">https://t.me/russicaRU</a></td>
+        <td>Политика</td>
+        <td>359496</td>
+        <td>48987</td>
+        <td>14.0</td>
+        <td>9981</td>
+        <td>11949</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Пул N3</td>
+        <td><a href="https://t.me/dimsmirnov175">https://t.me/dimsmirnov175</a></td>
+        <td>Политика</td>
+        <td>352911</td>
+        <td>73098</td>
+        <td>21.0</td>
+        <td>970</td>
+        <td>-129</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Екатерина Шульман</td>
+        <td><a href="https://t.me/eschulmann">https://t.me/eschulmann</a></td>
+        <td>Политика</td>
+        <td>350297</td>
+        <td>85556</td>
+        <td>25.0</td>
+        <td>-996</td>
+        <td>-4484</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Генерал СВР</td>
+        <td><a href="https://t.me/generalsvr">https://t.me/generalsvr</a></td>
+        <td>Политика</td>
+        <td>327340</td>
+        <td>271921</td>
+        <td>84.0</td>
+        <td>-1368</td>
+        <td>-5073</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мэр Москвы Сергей Собянин</td>
+        <td><a href="https://t.me/mos_sobyanin">https://t.me/mos_sobyanin</a></td>
+        <td>Политика</td>
+        <td>323711</td>
+        <td>116636</td>
+        <td>36.0</td>
+        <td>-280</td>
+        <td>14939</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Скотт Риттер в Telegram</td>
+        <td><a href="https://t.me/joinchat/RNIO7YUTqsE2MTJi">https://t.me/joinchat/RNIO7YUTqsE2MTJi</a></td>
+        <td>Политика</td>
+        <td>323660</td>
+        <td>43182</td>
+        <td>14.0</td>
+        <td>-1359</td>
+        <td>-6684</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Соловьиный Помёт</td>
+        <td><a href="https://t.me/slvn_pomet">https://t.me/slvn_pomet</a></td>
+        <td>Политика</td>
+        <td>323259</td>
+        <td>105104</td>
+        <td>33.0</td>
+        <td>-892</td>
+        <td>-3419</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ШЕЙНИН</td>
+        <td><a href="https://t.me/GardeZ66">https://t.me/GardeZ66</a></td>
+        <td>Политика</td>
+        <td>317494</td>
+        <td>100583</td>
+        <td>32.0</td>
+        <td>-262</td>
+        <td>-113</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мейстер</td>
+        <td><a href="https://t.me/maester">https://t.me/maester</a></td>
+        <td>Политика</td>
+        <td>317318</td>
+        <td>73326</td>
+        <td>24.0</td>
+        <td>1850</td>
+        <td>9993</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Неофициальный Безсонов</td>
+        <td><a href="https://t.me/NeoficialniyBeZsonoV">https://t.me/NeoficialniyBeZsonoV</a></td>
+        <td>Политика</td>
+        <td>300381</td>
+        <td>85515</td>
+        <td>29.0</td>
+        <td>196</td>
+        <td>227</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Политический Вестник</td>
+        <td><a href="https://t.me/politnewstg">https://t.me/politnewstg</a></td>
+        <td>Политика</td>
+        <td>283817</td>
+        <td>65333</td>
+        <td>23.0</td>
+        <td>27318</td>
+        <td>58</td>
+        <td>4 месяца 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Быть Или</td>
+        <td><a href="https://t.me/ToBeOr_Official">https://t.me/ToBeOr_Official</a></td>
+        <td>Политика</td>
+        <td>281065</td>
+        <td>162765</td>
+        <td>58.0</td>
+        <td>430</td>
+        <td>1370</td>
+        <td>7 лет 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кремль. Новости</td>
+        <td><a href="https://t.me/news_kremlin">https://t.me/news_kremlin</a></td>
+        <td>Политика</td>
+        <td>279721</td>
+        <td>123215</td>
+        <td>44.0</td>
+        <td>-254</td>
+        <td>-1012</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кепка Пригожина</td>
+        <td><a href="https://t.me/Prigozhin_hat">https://t.me/Prigozhin_hat</a></td>
+        <td>Политика</td>
+        <td>274318</td>
+        <td>326012</td>
+        <td>119.0</td>
+        <td>-929</td>
+        <td>-4197</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Три Богатыря и Зеленский наркоман</td>
+        <td><a href="https://t.me/joinchat/_vuwCPdpy9liMjQy">https://t.me/joinchat/_vuwCPdpy9liMjQy</a></td>
+        <td>Политика</td>
+        <td>271582</td>
+        <td>73807</td>
+        <td>28.0</td>
+        <td>-1265</td>
+        <td>-5225</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АДЕКВАТ Z</td>
+        <td><a href="https://t.me/politadequate">https://t.me/politadequate</a></td>
+        <td>Политика</td>
+        <td>268892</td>
+        <td>80313</td>
+        <td>30.0</td>
+        <td>-1309</td>
+        <td>750</td>
+        <td>7 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВЧК-ОГПУ</td>
+        <td><a href="https://t.me/vchkogpu_ru">https://t.me/vchkogpu_ru</a></td>
+        <td>Политика</td>
+        <td>264784</td>
+        <td>7623</td>
+        <td>3.0</td>
+        <td>32039</td>
+        <td>131113</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Скабеева</td>
+        <td><a href="https://t.me/skabeeva">https://t.me/skabeeva</a></td>
+        <td>Политика</td>
+        <td>260872</td>
+        <td>91551</td>
+        <td>36.0</td>
+        <td>-77</td>
+        <td>-434</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Апти Алаудинов «АХМАТ»</td>
+        <td><a href="https://t.me/AptiAlaudinovAKHMAT">https://t.me/AptiAlaudinovAKHMAT</a></td>
+        <td>Политика</td>
+        <td>260619</td>
+        <td>49130</td>
+        <td>19.0</td>
+        <td>-173</td>
+        <td>-4436</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Александр Хинштейн</td>
+        <td><a href="https://t.me/Hinshtein">https://t.me/Hinshtein</a></td>
+        <td>Политика</td>
+        <td>254819</td>
+        <td>97106</td>
+        <td>39.0</td>
+        <td>368</td>
+        <td>149</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Хазин</td>
+        <td><a href="https://t.me/khazinml">https://t.me/khazinml</a></td>
+        <td>Политика</td>
+        <td>252190</td>
+        <td>121412</td>
+        <td>49.0</td>
+        <td>-14</td>
+        <td>299</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ДШРГ Русич 🇷🇺</td>
+        <td><a href="https://t.me/dshrg2">https://t.me/dshrg2</a></td>
+        <td>Политика</td>
+        <td>251210</td>
+        <td>162129</td>
+        <td>65.0</td>
+        <td>4</td>
+        <td>1821</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Политджойстик / Politjoystic ™</td>
+        <td><a href="https://t.me/politjoystic">https://t.me/politjoystic</a></td>
+        <td>Политика</td>
+        <td>237538</td>
+        <td>51114</td>
+        <td>22.0</td>
+        <td>765</td>
+        <td>986</td>
+        <td>8 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Сергей Михеев</td>
+        <td><a href="https://t.me/ironlogica">https://t.me/ironlogica</a></td>
+        <td>Политика</td>
+        <td>234558</td>
+        <td>62547</td>
+        <td>27.0</td>
+        <td>-199</td>
+        <td>-1098</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Усы Пескова</td>
+        <td><a href="https://t.me/Sandymustache">https://t.me/Sandymustache</a></td>
+        <td>Политика</td>
+        <td>230684</td>
+        <td>60435</td>
+        <td>27.0</td>
+        <td>-396</td>
+        <td>-1595</td>
+        <td>8 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>СЛУЦКИЙ</td>
+        <td><a href="https://t.me/slutsky_l">https://t.me/slutsky_l</a></td>
+        <td>Политика</td>
+        <td>229700</td>
+        <td>206082</td>
+        <td>90.0</td>
+        <td>-7534</td>
+        <td>-14982</td>
+        <td>7 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Навстречу Трансферу</td>
+        <td><a href="https://t.me/hellotransfer">https://t.me/hellotransfer</a></td>
+        <td>Политика</td>
+        <td>228886</td>
+        <td>21092</td>
+        <td>10.0</td>
+        <td>215</td>
+        <td>4109</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МАРДАН</td>
+        <td><a href="https://t.me/mardanaka">https://t.me/mardanaka</a></td>
+        <td>Политика</td>
+        <td>226491</td>
+        <td>73869</td>
+        <td>33.0</td>
+        <td>64</td>
+        <td>-4288</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Владлен Татарский</td>
+        <td><a href="https://t.me/vladlentatarsky">https://t.me/vladlentatarsky</a></td>
+        <td>Политика</td>
+        <td>217706</td>
+        <td>38696</td>
+        <td>18.0</td>
+        <td>-546</td>
+        <td>-2756</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Город Глуповъ</td>
+        <td><a href="https://t.me/gorodglupov">https://t.me/gorodglupov</a></td>
+        <td>Политика</td>
+        <td>216601</td>
+        <td>102565</td>
+        <td>48.0</td>
+        <td>-109</td>
+        <td>-1362</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КОНФЛИКТ ИРАН ИЗРАИЛЬ ВОЙНА</td>
+        <td><a href="https://t.me/novosty29">https://t.me/novosty29</a></td>
+        <td>Политика</td>
+        <td>215978</td>
+        <td>45276</td>
+        <td>21.0</td>
+        <td>-2067</td>
+        <td>11635</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Марат Хуснуллин</td>
+        <td><a href="https://t.me/mkhusnullin">https://t.me/mkhusnullin</a></td>
+        <td>Политика</td>
+        <td>215143</td>
+        <td>52414</td>
+        <td>25.0</td>
+        <td>2731</td>
+        <td>4809</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТРОЙКА 🏴‍☠️</td>
+        <td><a href="https://t.me/rustroyka1945">https://t.me/rustroyka1945</a></td>
+        <td>Политика</td>
+        <td>214786</td>
+        <td>75479</td>
+        <td>36.0</td>
+        <td>-184</td>
+        <td>-2067</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Темник</td>
+        <td><a href="https://t.me/polittemnik">https://t.me/polittemnik</a></td>
+        <td>Политика</td>
+        <td>212240</td>
+        <td>52317</td>
+        <td>25.0</td>
+        <td>4721</td>
+        <td>4164</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ГАСПАРЯН</td>
+        <td><a href="https://t.me/ASGasparyan">https://t.me/ASGasparyan</a></td>
+        <td>Политика</td>
+        <td>209748</td>
+        <td>64473</td>
+        <td>31.0</td>
+        <td>-23</td>
+        <td>-145</td>
+        <td>7 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Оперштаб Курской области 🇷🇺</td>
+        <td><a href="https://t.me/gubernator_46">https://t.me/gubernator_46</a></td>
+        <td>Политика</td>
+        <td>206390</td>
+        <td>131535</td>
+        <td>64.0</td>
+        <td>-393</td>
+        <td>63</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>РаZVожаев</td>
+        <td><a href="https://t.me/razvozhaev">https://t.me/razvozhaev</a></td>
+        <td>Политика</td>
+        <td>204803</td>
+        <td>66199</td>
+        <td>33.0</td>
+        <td>352</td>
+        <td>65</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Друзья Дональда</td>
+        <td><a href="https://t.me/steven_bb">https://t.me/steven_bb</a></td>
+        <td>Политика</td>
+        <td>204660</td>
+        <td>20006</td>
+        <td>10.0</td>
+        <td>257</td>
+        <td>3378</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Вован и Лексус</td>
+        <td><a href="https://t.me/Russiacalling">https://t.me/Russiacalling</a></td>
+        <td>Политика</td>
+        <td>204545</td>
+        <td>39907</td>
+        <td>20.0</td>
+        <td>-1042</td>
+        <td>-4781</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Профессор смотрит в мiръ. Авторский Анонимный канал Дмитрия Евстафьева</td>
+        <td><a href="https://t.me/dimonundmir">https://t.me/dimonundmir</a></td>
+        <td>Политика</td>
+        <td>203802</td>
+        <td>81670</td>
+        <td>41.0</td>
+        <td>1277</td>
+        <td>5532</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Движение Первых</td>
+        <td><a href="https://t.me/mypervie">https://t.me/mypervie</a></td>
+        <td>Политика</td>
+        <td>202275</td>
+        <td>21763</td>
+        <td>11.0</td>
+        <td>-1054</td>
+        <td>-3418</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КСТАТИ</td>
+        <td><a href="https://t.me/kstati_p">https://t.me/kstati_p</a></td>
+        <td>Политика</td>
+        <td>199128</td>
+        <td>43618</td>
+        <td>22.0</td>
+        <td>-1086</td>
+        <td>-5112</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Русский меч</td>
+        <td><a href="https://t.me/Rrussiansword">https://t.me/Rrussiansword</a></td>
+        <td>Политика</td>
+        <td>198603</td>
+        <td>72021</td>
+        <td>37.0</td>
+        <td>-411</td>
+        <td>-2098</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>aavst2022</td>
+        <td><a href="https://t.me/aavst2022">https://t.me/aavst2022</a></td>
+        <td>Политика</td>
+        <td>196793</td>
+        <td>137122</td>
+        <td>70.0</td>
+        <td>111</td>
+        <td>-971</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Елена Панина</td>
+        <td><a href="https://t.me/EvPanina">https://t.me/EvPanina</a></td>
+        <td>Политика</td>
+        <td>195541</td>
+        <td>45622</td>
+        <td>24.0</td>
+        <td>880</td>
+        <td>4634</td>
+        <td>6 лет 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Капитал</td>
+        <td><a href="https://t.me/politkremlin">https://t.me/politkremlin</a></td>
+        <td>Политика</td>
+        <td>192770</td>
+        <td>34206</td>
+        <td>18.0</td>
+        <td>5839</td>
+        <td>10237</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Жизнь насекомых</td>
+        <td><a href="https://t.me/insect_life">https://t.me/insect_life</a></td>
+        <td>Политика</td>
+        <td>192556</td>
+        <td>114671</td>
+        <td>60.0</td>
+        <td>252</td>
+        <td>1821</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Орда</td>
+        <td><a href="https://t.me/orda_mordora">https://t.me/orda_mordora</a></td>
+        <td>Политика</td>
+        <td>192343</td>
+        <td>78622</td>
+        <td>41.0</td>
+        <td>462</td>
+        <td>24</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Михаил Ходорковский</td>
+        <td><a href="https://t.me/khodorkovski">https://t.me/khodorkovski</a></td>
+        <td>Политика</td>
+        <td>185353</td>
+        <td>72165</td>
+        <td>39.0</td>
+        <td>-464</td>
+        <td>-2460</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Вестник Шевцова</td>
+        <td><a href="https://t.me/jolynews">https://t.me/jolynews</a></td>
+        <td>Политика</td>
+        <td>184735</td>
+        <td>124442</td>
+        <td>68.0</td>
+        <td>-53</td>
+        <td>-5327</td>
+        <td>3 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Игорь Артамонов</td>
+        <td><a href="https://t.me/igor_artamonov48">https://t.me/igor_artamonov48</a></td>
+        <td>Политика</td>
+        <td>184312</td>
+        <td>130078</td>
+        <td>71.0</td>
+        <td>51</td>
+        <td>8432</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бульдоги под ковром</td>
+        <td><a href="https://t.me/kremlin_bulldogs">https://t.me/kremlin_bulldogs</a></td>
+        <td>Политика</td>
+        <td>183345</td>
+        <td>77051</td>
+        <td>42.0</td>
+        <td>-452</td>
+        <td>305</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Илья Яшин</td>
+        <td><a href="https://t.me/yashin_russia">https://t.me/yashin_russia</a></td>
+        <td>Политика</td>
+        <td>181781</td>
+        <td>84864</td>
+        <td>47.0</td>
+        <td>-723</td>
+        <td>-3450</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МИГРАНТ</td>
+        <td><a href="https://t.me/joinchat/nBQCPvQT3Z4yYjky">https://t.me/joinchat/nBQCPvQT3Z4yYjky</a></td>
+        <td>Политика</td>
+        <td>178723</td>
+        <td>10473</td>
+        <td>6.0</td>
+        <td>-1384</td>
+        <td>-7525</td>
+        <td>10 месяцев 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>Владимир Мединский</td>
+        <td><a href="https://t.me/vr_medinskiy">https://t.me/vr_medinskiy</a></td>
+        <td>Политика</td>
+        <td>178268</td>
+        <td>210199</td>
+        <td>118.0</td>
+        <td>8130</td>
+        <td>20770</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Андрей Медведев</td>
+        <td><a href="https://t.me/MedvedevVesti">https://t.me/MedvedevVesti</a></td>
+        <td>Политика</td>
+        <td>178030</td>
+        <td>88842</td>
+        <td>50.0</td>
+        <td>161</td>
+        <td>-421</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дабл Ять</td>
+        <td><a href="https://t.me/otsuka_bld">https://t.me/otsuka_bld</a></td>
+        <td>Политика</td>
+        <td>177773</td>
+        <td>55372</td>
+        <td>32.0</td>
+        <td>-466</td>
+        <td>-1379</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Правительство России</td>
+        <td><a href="https://t.me/government_rus">https://t.me/government_rus</a></td>
+        <td>Политика</td>
+        <td>173834</td>
+        <td>22838</td>
+        <td>14.0</td>
+        <td>-269</td>
+        <td>-1131</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Образ будущего</td>
+        <td><a href="https://t.me/obrazbuduschego2">https://t.me/obrazbuduschego2</a></td>
+        <td>Политика</td>
+        <td>172560</td>
+        <td>59554</td>
+        <td>35.0</td>
+        <td>-500</td>
+        <td>-1949</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мюсли вслух</td>
+        <td><a href="https://t.me/mysly">https://t.me/mysly</a></td>
+        <td>Политика</td>
+        <td>170659</td>
+        <td>34765</td>
+        <td>21.0</td>
+        <td>-152</td>
+        <td>1510</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Политический обозреватель 🎖</td>
+        <td><a href="https://t.me/protiktok">https://t.me/protiktok</a></td>
+        <td>Политика</td>
+        <td>167985</td>
+        <td>35065</td>
+        <td>21.0</td>
+        <td>7201</td>
+        <td>21573</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ПолитСатирКа</td>
+        <td><a href="https://t.me/satirkka">https://t.me/satirkka</a></td>
+        <td>Политика</td>
+        <td>167854</td>
+        <td>53614</td>
+        <td>32.0</td>
+        <td>-638</td>
+        <td>-2131</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Государственная Дума</td>
+        <td><a href="https://t.me/duma_gov_ru">https://t.me/duma_gov_ru</a></td>
+        <td>Политика</td>
+        <td>162542</td>
+        <td>26644</td>
+        <td>17.0</td>
+        <td>363</td>
+        <td>20989</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Vladimir Pastukhov</td>
+        <td><a href="https://t.me/v_pastukhov">https://t.me/v_pastukhov</a></td>
+        <td>Политика</td>
+        <td>161181</td>
+        <td>140833</td>
+        <td>88.0</td>
+        <td>-254</td>
+        <td>-674</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кремлёвский мамковед</td>
+        <td><a href="https://t.me/kremlin_mother_expert">https://t.me/kremlin_mother_expert</a></td>
+        <td>Политика</td>
+        <td>158767</td>
+        <td>73554</td>
+        <td>47.0</td>
+        <td>1888</td>
+        <td>2850</td>
+        <td>9 лет 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>Голос Мордора</td>
+        <td><a href="https://t.me/golosmordora">https://t.me/golosmordora</a></td>
+        <td>Политика</td>
+        <td>158512</td>
+        <td>52284</td>
+        <td>33.0</td>
+        <td>343</td>
+        <td>-628</td>
+        <td>8 лет 15 дней</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1281 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Прямой Эфир • Новости</td>
+        <td><a href="https://t.me/novosti_efir">https://t.me/novosti_efir</a></td>
+        <td>Новости и СМИ</td>
+        <td>5587901</td>
+        <td>808932</td>
+        <td>15.0</td>
+        <td>60599</td>
+        <td>603845</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Москвач • Новости Москвы</td>
+        <td><a href="https://t.me/moscowach">https://t.me/moscowach</a></td>
+        <td>Новости и СМИ</td>
+        <td>4679283</td>
+        <td>634000</td>
+        <td>14.0</td>
+        <td>-110309</td>
+        <td>-448256</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Топор Live</td>
+        <td><a href="https://t.me/joinchat/sOj9iDAtUkMyYWQy">https://t.me/joinchat/sOj9iDAtUkMyYWQy</a></td>
+        <td>Новости и СМИ</td>
+        <td>4320639</td>
+        <td>877981</td>
+        <td>21.0</td>
+        <td>109469</td>
+        <td>74930</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>РИА Новости</td>
+        <td><a href="https://t.me/rian_ru">https://t.me/rian_ru</a></td>
+        <td>Новости и СМИ</td>
+        <td>3366469</td>
+        <td>599734</td>
+        <td>18.0</td>
+        <td>9856</td>
+        <td>1951</td>
+        <td>8 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Mash</td>
+        <td><a href="https://t.me/mash">https://t.me/mash</a></td>
+        <td>Новости и СМИ</td>
+        <td>3270579</td>
+        <td>1069110</td>
+        <td>33.0</td>
+        <td>14723</td>
+        <td>44261</td>
+        <td>8 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СМИ Россия не Москва</td>
+        <td><a href="https://t.me/smi_rf_moskva">https://t.me/smi_rf_moskva</a></td>
+        <td>Новости и СМИ</td>
+        <td>3195005</td>
+        <td>174218</td>
+        <td>6.0</td>
+        <td>-49067</td>
+        <td>706</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Readovka</td>
+        <td><a href="https://t.me/readovkanews">https://t.me/readovkanews</a></td>
+        <td>Новости и СМИ</td>
+        <td>2630529</td>
+        <td>880647</td>
+        <td>34.0</td>
+        <td>2731</td>
+        <td>-18697</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Первый Московский</td>
+        <td><a href="https://t.me/mosguru">https://t.me/mosguru</a></td>
+        <td>Новости и СМИ</td>
+        <td>2484875</td>
+        <td>275143</td>
+        <td>12.0</td>
+        <td>-9117</td>
+        <td>71296</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Москва Live</td>
+        <td><a href="https://t.me/msk_live">https://t.me/msk_live</a></td>
+        <td>Новости и СМИ</td>
+        <td>2248874</td>
+        <td>391196</td>
+        <td>18.0</td>
+        <td>-15309</td>
+        <td>-65231</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Новости Москвы</td>
+        <td><a href="https://t.me/moscowmap">https://t.me/moscowmap</a></td>
+        <td>Новости и СМИ</td>
+        <td>2177182</td>
+        <td>694405</td>
+        <td>32.0</td>
+        <td>-717</td>
+        <td>-2476</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москвач+</td>
+        <td><a href="https://t.me/moscowachplus">https://t.me/moscowachplus</a></td>
+        <td>Новости и СМИ</td>
+        <td>2019045</td>
+        <td>204046</td>
+        <td>11.0</td>
+        <td>-76127</td>
+        <td>-73617</td>
+        <td>2 года</td>
+      </tr>
+
+      <tr>
+        <td>Москва - это интересно</td>
+        <td><a href="https://t.me/mskint">https://t.me/mskint</a></td>
+        <td>Новости и СМИ</td>
+        <td>2014479</td>
+        <td>179964</td>
+        <td>9.0</td>
+        <td>-24694</td>
+        <td>359241</td>
+        <td>2 года 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>Раньше всех. Ну почти.</td>
+        <td><a href="https://t.me/bbbreaking">https://t.me/bbbreaking</a></td>
+        <td>Новости и СМИ</td>
+        <td>1949388</td>
+        <td>562322</td>
+        <td>29.0</td>
+        <td>6537</td>
+        <td>11542</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Правдивости</td>
+        <td><a href="https://t.me/joinchat/19UsJwMmEWM4Y2Ri">https://t.me/joinchat/19UsJwMmEWM4Y2Ri</a></td>
+        <td>Новости и СМИ</td>
+        <td>1934552</td>
+        <td>168201</td>
+        <td>9.0</td>
+        <td>-2085</td>
+        <td>-18882</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Москва сегодня</td>
+        <td><a href="https://t.me/moscow">https://t.me/moscow</a></td>
+        <td>Новости и СМИ</td>
+        <td>1734534</td>
+        <td>217035</td>
+        <td>13.0</td>
+        <td>8228</td>
+        <td>372624</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Baza</td>
+        <td><a href="https://t.me/bazabazon">https://t.me/bazabazon</a></td>
+        <td>Новости и СМИ</td>
+        <td>1644558</td>
+        <td>535152</td>
+        <td>33.0</td>
+        <td>1917</td>
+        <td>24921</td>
+        <td>6 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Осторожно, новости</td>
+        <td><a href="https://t.me/ostorozhno_novosti">https://t.me/ostorozhno_novosti</a></td>
+        <td>Новости и СМИ</td>
+        <td>1616007</td>
+        <td>445023</td>
+        <td>28.0</td>
+        <td>1884</td>
+        <td>5010</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Скриншот Правды Z</td>
+        <td><a href="https://t.me/ScreenShotTrue">https://t.me/ScreenShotTrue</a></td>
+        <td>Новости и СМИ</td>
+        <td>1536041</td>
+        <td>30046</td>
+        <td>2.0</td>
+        <td>-8400</td>
+        <td>-39377</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VOBLYA • новости</td>
+        <td><a href="https://t.me/voyna_novosti_moskva">https://t.me/voyna_novosti_moskva</a></td>
+        <td>Новости и СМИ</td>
+        <td>1506900</td>
+        <td>126051</td>
+        <td>9.0</td>
+        <td>4801</td>
+        <td>3432</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВПШ</td>
+        <td><a href="https://t.me/pravdadirty">https://t.me/pravdadirty</a></td>
+        <td>Новости и СМИ</td>
+        <td>1449703</td>
+        <td>370991</td>
+        <td>26.0</td>
+        <td>-1823</td>
+        <td>-13220</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Россия сейчас • Новости</td>
+        <td><a href="https://t.me/Ria_novosti_rossiya">https://t.me/Ria_novosti_rossiya</a></td>
+        <td>Новости и СМИ</td>
+        <td>1444462</td>
+        <td>172405</td>
+        <td>12.0</td>
+        <td>-5462</td>
+        <td>-26664</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Московская Хроника</td>
+        <td><a href="https://t.me/mosnews">https://t.me/mosnews</a></td>
+        <td>Новости и СМИ</td>
+        <td>1396275</td>
+        <td>155144</td>
+        <td>12.0</td>
+        <td>96613</td>
+        <td>-7932</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>SHOT</td>
+        <td><a href="https://t.me/shot_shot">https://t.me/shot_shot</a></td>
+        <td>Новости и СМИ</td>
+        <td>1288636</td>
+        <td>359279</td>
+        <td>28.0</td>
+        <td>4963</td>
+        <td>16409</td>
+        <td>8 лет 6 дней</td>
+      </tr>
+
+      <tr>
+        <td>НОВОСТИ 📰</td>
+        <td><a href="https://t.me/Russica2">https://t.me/Russica2</a></td>
+        <td>Новости и СМИ</td>
+        <td>1271993</td>
+        <td>58934</td>
+        <td>5.0</td>
+        <td>-7320</td>
+        <td>-33377</td>
+        <td>9 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Я в курсе</td>
+        <td><a href="https://t.me/joinchat/wUkpIWct1PNiMjFi">https://t.me/joinchat/wUkpIWct1PNiMjFi</a></td>
+        <td>Новости и СМИ</td>
+        <td>1255488</td>
+        <td>53840</td>
+        <td>5.0</td>
+        <td>10427</td>
+        <td>30418</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Два майора</td>
+        <td><a href="https://t.me/dva_majors">https://t.me/dva_majors</a></td>
+        <td>Новости и СМИ</td>
+        <td>1251954</td>
+        <td>284635</td>
+        <td>23.0</td>
+        <td>-537</td>
+        <td>18397</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Медуза — LIVE</td>
+        <td><a href="https://t.me/meduzalive">https://t.me/meduzalive</a></td>
+        <td>Новости и СМИ</td>
+        <td>1230320</td>
+        <td>231116</td>
+        <td>19.0</td>
+        <td>-422</td>
+        <td>-7714</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Россия 360°</td>
+        <td><a href="https://t.me/joinchat/2ZNG-hocWnkxM2Ey">https://t.me/joinchat/2ZNG-hocWnkxM2Ey</a></td>
+        <td>Новости и СМИ</td>
+        <td>1223963</td>
+        <td>202508</td>
+        <td>17.0</td>
+        <td>1092</td>
+        <td>42455</td>
+        <td>10 месяцев 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Москва 24/7</td>
+        <td><a href="https://t.me/msk7days">https://t.me/msk7days</a></td>
+        <td>Новости и СМИ</td>
+        <td>1208907</td>
+        <td>196495</td>
+        <td>17.0</td>
+        <td>-19290</td>
+        <td>10816</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Что произошло?</td>
+        <td><a href="https://t.me/joinchat/R4FxuC4e9nTKlg2S">https://t.me/joinchat/R4FxuC4e9nTKlg2S</a></td>
+        <td>Новости и СМИ</td>
+        <td>1188071</td>
+        <td>69132</td>
+        <td>6.0</td>
+        <td>4574</td>
+        <td>-12400</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Рифмы и Панчи 🤯</td>
+        <td><a href="https://t.me/rhymestg">https://t.me/rhymestg</a></td>
+        <td>Новости и СМИ</td>
+        <td>1178281</td>
+        <td>170214</td>
+        <td>15.0</td>
+        <td>4516</td>
+        <td>-6585</td>
+        <td>8 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Varlamov News</td>
+        <td><a href="https://t.me/varlamov_news">https://t.me/varlamov_news</a></td>
+        <td>Новости и СМИ</td>
+        <td>1137401</td>
+        <td>349456</td>
+        <td>31.0</td>
+        <td>1829</td>
+        <td>-6386</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Госуслуги</td>
+        <td><a href="https://t.me/gosuslugi">https://t.me/gosuslugi</a></td>
+        <td>Новости и СМИ</td>
+        <td>1097746</td>
+        <td>458427</td>
+        <td>42.0</td>
+        <td>4</td>
+        <td>814</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>NЕ.САХАР</td>
+        <td><a href="https://t.me/joinchat/v-P0xT4ViGI4Yzg6">https://t.me/joinchat/v-P0xT4ViGI4Yzg6</a></td>
+        <td>Новости и СМИ</td>
+        <td>1081071</td>
+        <td>227979</td>
+        <td>22.0</td>
+        <td>-4524</td>
+        <td>-10447</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>RT на русском</td>
+        <td><a href="https://t.me/rt_russian">https://t.me/rt_russian</a></td>
+        <td>Новости и СМИ</td>
+        <td>1048179</td>
+        <td>201693</td>
+        <td>20.0</td>
+        <td>4726</td>
+        <td>7684</td>
+        <td>9 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>moskovsky!</td>
+        <td><a href="https://t.me/msky_media">https://t.me/msky_media</a></td>
+        <td>Новости и СМИ</td>
+        <td>1044173</td>
+        <td>81370</td>
+        <td>8.0</td>
+        <td>-9312</td>
+        <td>1583</td>
+        <td>4 месяца 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>ПАТРОН</td>
+        <td><a href="https://t.me/joinchat/8lFELgo6HTk4NTEy">https://t.me/joinchat/8lFELgo6HTk4NTEy</a></td>
+        <td>Новости и СМИ</td>
+        <td>998323</td>
+        <td>48181</td>
+        <td>5.0</td>
+        <td>-3597</td>
+        <td>-7706</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>💥 ВСПЫШКА</td>
+        <td><a href="https://t.me/joinchat/KE7giTglFexmYTUy">https://t.me/joinchat/KE7giTglFexmYTUy</a></td>
+        <td>Новости и СМИ</td>
+        <td>969484</td>
+        <td>45043</td>
+        <td>5.0</td>
+        <td>-25588</td>
+        <td>-62756</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Мышеловка</td>
+        <td><a href="https://t.me/joinchat/AAAAAFQdoNVarTLkfTf06g">https://t.me/joinchat/AAAAAFQdoNVarTLkfTf06g</a></td>
+        <td>Новости и СМИ</td>
+        <td>954577</td>
+        <td>107870</td>
+        <td>12.0</td>
+        <td>-4983</td>
+        <td>-23824</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Медийка</td>
+        <td><a href="https://t.me/mediyca">https://t.me/mediyca</a></td>
+        <td>Новости и СМИ</td>
+        <td>920677</td>
+        <td>163301</td>
+        <td>18.0</td>
+        <td>-6463</td>
+        <td>26091</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Первый Народный | Новости</td>
+        <td><a href="https://t.me/joinchat/Wmo2yumY10djNTky">https://t.me/joinchat/Wmo2yumY10djNTky</a></td>
+        <td>Новости и СМИ</td>
+        <td>918489</td>
+        <td>92521</td>
+        <td>11.0</td>
+        <td>-2948</td>
+        <td>-15048</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>WarGonzo</td>
+        <td><a href="https://t.me/wargonzo">https://t.me/wargonzo</a></td>
+        <td>Новости и СМИ</td>
+        <td>915085</td>
+        <td>111543</td>
+        <td>13.0</td>
+        <td>-2504</td>
+        <td>-12293</td>
+        <td>8 лет 8 дней</td>
+      </tr>
+
+      <tr>
+        <td>КОНТЕКСТ</td>
+        <td><a href="https://t.me/kontext_channel">https://t.me/kontext_channel</a></td>
+        <td>Новости и СМИ</td>
+        <td>894645</td>
+        <td>254913</td>
+        <td>29.0</td>
+        <td>-286</td>
+        <td>-3962</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Радар по всей России | БПЛА, ракеты, самолёты</td>
+        <td><a href="https://t.me/radarrussiia">https://t.me/radarrussiia</a></td>
+        <td>Новости и СМИ</td>
+        <td>871495</td>
+        <td>244329</td>
+        <td>28.0</td>
+        <td>5244</td>
+        <td>71866</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Поздняков 3.0</td>
+        <td><a href="https://t.me/joinchat/k_Z9AGYLs7g5ZGUy">https://t.me/joinchat/k_Z9AGYLs7g5ZGUy</a></td>
+        <td>Новости и СМИ</td>
+        <td>768760</td>
+        <td>410469</td>
+        <td>54.0</td>
+        <td>-11935</td>
+        <td>38086</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>РБК. Новости. Главное</td>
+        <td><a href="https://t.me/rbc_news">https://t.me/rbc_news</a></td>
+        <td>Новости и СМИ</td>
+        <td>765115</td>
+        <td>138638</td>
+        <td>19.0</td>
+        <td>27470</td>
+        <td>49757</td>
+        <td>8 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Повёрнутые на войне 🇷🇺</td>
+        <td><a href="https://t.me/voenacher">https://t.me/voenacher</a></td>
+        <td>Новости и СМИ</td>
+        <td>738551</td>
+        <td>158994</td>
+        <td>22.0</td>
+        <td>280</td>
+        <td>2937</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Баклажан</td>
+        <td><a href="https://t.me/joinchat/6vMzYO4aHjwzNzIy">https://t.me/joinchat/6vMzYO4aHjwzNzIy</a></td>
+        <td>Новости и СМИ</td>
+        <td>719068</td>
+        <td>44610</td>
+        <td>7.0</td>
+        <td>-3792</td>
+        <td>-28664</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Z-News | Армия 🅉 18+ 🔥</td>
+        <td><a href="https://t.me/joinchat/DNfjh3jXoGQ2NzBi">https://t.me/joinchat/DNfjh3jXoGQ2NzBi</a></td>
+        <td>Новости и СМИ</td>
+        <td>716648</td>
+        <td>61455</td>
+        <td>9.0</td>
+        <td>-2667</td>
+        <td>-15580</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>KOSTI</td>
+        <td><a href="https://t.me/kosti">https://t.me/kosti</a></td>
+        <td>Новости и СМИ</td>
+        <td>679651</td>
+        <td>146722</td>
+        <td>22.0</td>
+        <td>-12716</td>
+        <td>65700</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Zлой Пруф️</td>
+        <td><a href="https://t.me/proofzzz">https://t.me/proofzzz</a></td>
+        <td>Новости и СМИ</td>
+        <td>670507</td>
+        <td>214877</td>
+        <td>32.0</td>
+        <td>-2367</td>
+        <td>-13490</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Короче 18+</td>
+        <td><a href="https://t.me/koroche_112">https://t.me/koroche_112</a></td>
+        <td>Новости и СМИ</td>
+        <td>654897</td>
+        <td>58272</td>
+        <td>9.0</td>
+        <td>-4916</td>
+        <td>-26844</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Военный Осведомитель</td>
+        <td><a href="https://t.me/milinfolive">https://t.me/milinfolive</a></td>
+        <td>Новости и СМИ</td>
+        <td>630029</td>
+        <td>142305</td>
+        <td>23.0</td>
+        <td>3388</td>
+        <td>24080</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Жесть Белгород</td>
+        <td><a href="https://t.me/zhest_belgorod">https://t.me/zhest_belgorod</a></td>
+        <td>Новости и СМИ</td>
+        <td>625047</td>
+        <td>163993</td>
+        <td>27.0</td>
+        <td>45</td>
+        <td>-5565</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Короче</td>
+        <td><a href="https://t.me/koroche_novostnoy">https://t.me/koroche_novostnoy</a></td>
+        <td>Новости и СМИ</td>
+        <td>614231</td>
+        <td>36801</td>
+        <td>6.0</td>
+        <td>-4025</td>
+        <td>-20520</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Уголок (не) чушпанов</td>
+        <td><a href="https://t.me/joinchat/poPFka5_9N5lZTYy">https://t.me/joinchat/poPFka5_9N5lZTYy</a></td>
+        <td>Новости и СМИ</td>
+        <td>604624</td>
+        <td>17382</td>
+        <td>3.0</td>
+        <td>-4521</td>
+        <td>-40740</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Что там, Москва?</td>
+        <td><a href="https://t.me/joinchat/kP2na-2M8sw5MTVi">https://t.me/joinchat/kP2na-2M8sw5MTVi</a></td>
+        <td>Новости и СМИ</td>
+        <td>600964</td>
+        <td>180992</td>
+        <td>31.0</td>
+        <td>-3848</td>
+        <td>-21315</td>
+        <td>9 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Ateo Breaking</td>
+        <td><a href="https://t.me/Ateobreaking">https://t.me/Ateobreaking</a></td>
+        <td>Новости и СМИ</td>
+        <td>581898</td>
+        <td>208011</td>
+        <td>36.0</td>
+        <td>3728</td>
+        <td>6114</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ньюсач/Двач</td>
+        <td><a href="https://t.me/ru2ch">https://t.me/ru2ch</a></td>
+        <td>Новости и СМИ</td>
+        <td>579150</td>
+        <td>213525</td>
+        <td>37.0</td>
+        <td>3058</td>
+        <td>3505</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москва сейчас</td>
+        <td><a href="https://t.me/moscowow">https://t.me/moscowow</a></td>
+        <td>Новости и СМИ</td>
+        <td>574931</td>
+        <td>81220</td>
+        <td>15.0</td>
+        <td>84982</td>
+        <td>151078</td>
+        <td>6 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Наблюдатель👁LIVE</td>
+        <td><a href="https://t.me/joinchat/d7cGeZhCa3tlMzgy">https://t.me/joinchat/d7cGeZhCa3tlMzgy</a></td>
+        <td>Новости и СМИ</td>
+        <td>573987</td>
+        <td>24332</td>
+        <td>5.0</td>
+        <td>-543</td>
+        <td>-3986</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Типичная Москва</td>
+        <td><a href="https://t.me/moskva_only">https://t.me/moskva_only</a></td>
+        <td>Новости и СМИ</td>
+        <td>565166</td>
+        <td>60789</td>
+        <td>11.0</td>
+        <td>-46036</td>
+        <td>246078</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КК</td>
+        <td><a href="https://t.me/petrovtel">https://t.me/petrovtel</a></td>
+        <td>Новости и СМИ</td>
+        <td>565004</td>
+        <td>122194</td>
+        <td>22.0</td>
+        <td>655</td>
+        <td>1223</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Kotsnews</td>
+        <td><a href="https://t.me/sashakots">https://t.me/sashakots</a></td>
+        <td>Новости и СМИ</td>
+        <td>556921</td>
+        <td>119498</td>
+        <td>22.0</td>
+        <td>-1267</td>
+        <td>-3293</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>На ПередоVой 🇷🇺</td>
+        <td><a href="https://t.me/joinchat/2q2Pt3Y_0E41ODQy">https://t.me/joinchat/2q2Pt3Y_0E41ODQy</a></td>
+        <td>Новости и СМИ</td>
+        <td>549118</td>
+        <td>56039</td>
+        <td>11.0</td>
+        <td>1818</td>
+        <td>-2599</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТАСС</td>
+        <td><a href="https://t.me/tass_agency">https://t.me/tass_agency</a></td>
+        <td>Новости и СМИ</td>
+        <td>548925</td>
+        <td>82835</td>
+        <td>16.0</td>
+        <td>1991</td>
+        <td>6170</td>
+        <td>9 лет 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Срочные Новости</td>
+        <td><a href="https://t.me/joinchat/wYubS2-3ljk0ZWRi">https://t.me/joinchat/wYubS2-3ljk0ZWRi</a></td>
+        <td>Новости и СМИ</td>
+        <td>531203</td>
+        <td>44425</td>
+        <td>9.0</td>
+        <td>-2897</td>
+        <td>-14440</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЗАРУБИН</td>
+        <td><a href="https://t.me/zarubinreporter">https://t.me/zarubinreporter</a></td>
+        <td>Новости и СМИ</td>
+        <td>530134</td>
+        <td>376232</td>
+        <td>71.0</td>
+        <td>-1456</td>
+        <td>9378</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Кирилл Фёдоров / Война История Оружие</td>
+        <td><a href="https://t.me/warhistoryalconafter">https://t.me/warhistoryalconafter</a></td>
+        <td>Новости и СМИ</td>
+        <td>528953</td>
+        <td>113582</td>
+        <td>22.0</td>
+        <td>1177</td>
+        <td>5931</td>
+        <td>4 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СОКОЛ</td>
+        <td><a href="https://t.me/joinchat/pnE0SPW9msNlZTky">https://t.me/joinchat/pnE0SPW9msNlZTky</a></td>
+        <td>Новости и СМИ</td>
+        <td>522886</td>
+        <td>76089</td>
+        <td>15.0</td>
+        <td>-4805</td>
+        <td>-27097</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Спецоперация Z</td>
+        <td><a href="https://t.me/joinchat/vcZKvvMe3-xhYWY6">https://t.me/joinchat/vcZKvvMe3-xhYWY6</a></td>
+        <td>Новости и СМИ</td>
+        <td>516213</td>
+        <td>56064</td>
+        <td>11.0</td>
+        <td>-4289</td>
+        <td>-14528</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мой Питер</td>
+        <td><a href="https://t.me/joinchat/SKuhgz9thygyZXJI">https://t.me/joinchat/SKuhgz9thygyZXJI</a></td>
+        <td>Новости и СМИ</td>
+        <td>514222</td>
+        <td>74821</td>
+        <td>15.0</td>
+        <td>-764</td>
+        <td>-4775</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>#МОНТЯН!</td>
+        <td><a href="https://t.me/montyan2">https://t.me/montyan2</a></td>
+        <td>Новости и СМИ</td>
+        <td>508301</td>
+        <td>244193</td>
+        <td>48.0</td>
+        <td>785</td>
+        <td>1602</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КД 18+</td>
+        <td><a href="https://t.me/novosti_112">https://t.me/novosti_112</a></td>
+        <td>Новости и СМИ</td>
+        <td>507556</td>
+        <td>38345</td>
+        <td>8.0</td>
+        <td>-2626</td>
+        <td>-13685</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Питер Live</td>
+        <td><a href="https://t.me/live_piter">https://t.me/live_piter</a></td>
+        <td>Новости и СМИ</td>
+        <td>507223</td>
+        <td>107711</td>
+        <td>22.0</td>
+        <td>-1097</td>
+        <td>-6791</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СИГНАЛ</td>
+        <td><a href="https://t.me/ssigny">https://t.me/ssigny</a></td>
+        <td>Новости и СМИ</td>
+        <td>505389</td>
+        <td>31783</td>
+        <td>7.0</td>
+        <td>15626</td>
+        <td>41433</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЁЖ - О БЛОГЕРАХ</td>
+        <td><a href="https://t.me/tgezh">https://t.me/tgezh</a></td>
+        <td>Новости и СМИ</td>
+        <td>487940</td>
+        <td>111488</td>
+        <td>23.0</td>
+        <td>-5566</td>
+        <td>-53693</td>
+        <td>2 года 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>Моя Москва</td>
+        <td><a href="https://t.me/moscowmi">https://t.me/moscowmi</a></td>
+        <td>Новости и СМИ</td>
+        <td>483355</td>
+        <td>51973</td>
+        <td>11.0</td>
+        <td>697</td>
+        <td>76065</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Федерация</td>
+        <td><a href="https://t.me/joinchat/4P6RNr9XvrkwMGI6">https://t.me/joinchat/4P6RNr9XvrkwMGI6</a></td>
+        <td>Новости и СМИ</td>
+        <td>475371</td>
+        <td>49658</td>
+        <td>11.0</td>
+        <td>-3304</td>
+        <td>-12414</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Телеканал Дождь</td>
+        <td><a href="https://t.me/tvrain">https://t.me/tvrain</a></td>
+        <td>Новости и СМИ</td>
+        <td>467975</td>
+        <td>62842</td>
+        <td>14.0</td>
+        <td>-561</td>
+        <td>-3099</td>
+        <td>9 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Вечерний Телеграмъ</td>
+        <td><a href="https://t.me/tele_eve">https://t.me/tele_eve</a></td>
+        <td>Новости и СМИ</td>
+        <td>464860</td>
+        <td>79675</td>
+        <td>18.0</td>
+        <td>-12673</td>
+        <td>2660</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Можем объяснить</td>
+        <td><a href="https://t.me/mozhemobyasnit">https://t.me/mozhemobyasnit</a></td>
+        <td>Новости и СМИ</td>
+        <td>464381</td>
+        <td>134473</td>
+        <td>29.0</td>
+        <td>-3200</td>
+        <td>-5498</td>
+        <td>8 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЧТД</td>
+        <td><a href="https://t.me/chtddd">https://t.me/chtddd</a></td>
+        <td>Новости и СМИ</td>
+        <td>460626</td>
+        <td>99696</td>
+        <td>22.0</td>
+        <td>-594</td>
+        <td>3483</td>
+        <td>8 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москва 24</td>
+        <td><a href="https://t.me/infomoscow24">https://t.me/infomoscow24</a></td>
+        <td>Новости и СМИ</td>
+        <td>447621</td>
+        <td>89495</td>
+        <td>20.0</td>
+        <td>-1162</td>
+        <td>-2023</td>
+        <td>7 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Война с фейками</td>
+        <td><a href="https://t.me/warfakes">https://t.me/warfakes</a></td>
+        <td>Новости и СМИ</td>
+        <td>445753</td>
+        <td>127488</td>
+        <td>29.0</td>
+        <td>-1079</td>
+        <td>-1622</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>SHTOLL NEWS💋</td>
+        <td><a href="https://t.me/SHTOLLNEWS">https://t.me/SHTOLLNEWS</a></td>
+        <td>Новости и СМИ</td>
+        <td>439400</td>
+        <td>101710</td>
+        <td>24.0</td>
+        <td>866</td>
+        <td>-7123</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москва • Новости • Москвик</td>
+        <td><a href="https://t.me/moskvik">https://t.me/moskvik</a></td>
+        <td>Новости и СМИ</td>
+        <td>423355</td>
+        <td>107802</td>
+        <td>26.0</td>
+        <td>-927</td>
+        <td>-4838</td>
+        <td>8 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WarZona18+ | События | Новости | | Зона боевых действий |</td>
+        <td><a href="https://t.me/warzona18">https://t.me/warzona18</a></td>
+        <td>Новости и СМИ</td>
+        <td>422332</td>
+        <td>36227</td>
+        <td>9.0</td>
+        <td>46033</td>
+        <td>176222</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Осташко! Важное</td>
+        <td><a href="https://t.me/OstashkoNews">https://t.me/OstashkoNews</a></td>
+        <td>Новости и СМИ</td>
+        <td>419802</td>
+        <td>102633</td>
+        <td>25.0</td>
+        <td>328</td>
+        <td>10157</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЧП / Крым</td>
+        <td><a href="https://t.me/chp_crimea">https://t.me/chp_crimea</a></td>
+        <td>Новости и СМИ</td>
+        <td>413967</td>
+        <td>129371</td>
+        <td>32.0</td>
+        <td>2958</td>
+        <td>11035</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДОБРОВОЛЕЦ</td>
+        <td><a href="https://t.me/rusich_army_novosti">https://t.me/rusich_army_novosti</a></td>
+        <td>Новости и СМИ</td>
+        <td>411149</td>
+        <td>34520</td>
+        <td>9.0</td>
+        <td>-2316</td>
+        <td>-11840</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Москва Live</td>
+        <td><a href="https://t.me/mosclive">https://t.me/mosclive</a></td>
+        <td>Новости и СМИ</td>
+        <td>408117</td>
+        <td>95396</td>
+        <td>24.0</td>
+        <td>-6757</td>
+        <td>-10562</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Социальный фонд России</td>
+        <td><a href="https://t.me/sfr_gov">https://t.me/sfr_gov</a></td>
+        <td>Новости и СМИ</td>
+        <td>407129</td>
+        <td>184599</td>
+        <td>46.0</td>
+        <td>974</td>
+        <td>4936</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MADS</td>
+        <td><a href="https://t.me/joinchat/RFHu_nvo7kBjNTgy">https://t.me/joinchat/RFHu_nvo7kBjNTgy</a></td>
+        <td>Новости и СМИ</td>
+        <td>405666</td>
+        <td>61720</td>
+        <td>16.0</td>
+        <td>58170</td>
+        <td>44003</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>НЕ ZЛИ РУССКОГО МЕДVЕДЯ 🇷🇺</td>
+        <td><a href="https://t.me/joinchat/RZLcxO6cyiY0YWUy">https://t.me/joinchat/RZLcxO6cyiY0YWUy</a></td>
+        <td>Новости и СМИ</td>
+        <td>404645</td>
+        <td>38180</td>
+        <td>10.0</td>
+        <td>2426</td>
+        <td>-809</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Рифмы и Морген 🕊</td>
+        <td><a href="https://t.me/RhymesMorgen">https://t.me/RhymesMorgen</a></td>
+        <td>Новости и СМИ</td>
+        <td>404094</td>
+        <td>53746</td>
+        <td>14.0</td>
+        <td>-1716</td>
+        <td>-9900</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>BBC News | Русская служба</td>
+        <td><a href="https://t.me/bbcrussian">https://t.me/bbcrussian</a></td>
+        <td>Новости и СМИ</td>
+        <td>401717</td>
+        <td>78484</td>
+        <td>20.0</td>
+        <td>763</td>
+        <td>-549</td>
+        <td>9 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>С МЕСТА СОБЫТИЯ</td>
+        <td><a href="https://t.me/smestanews">https://t.me/smestanews</a></td>
+        <td>Новости и СМИ</td>
+        <td>400770</td>
+        <td>51576</td>
+        <td>13.0</td>
+        <td>-1347</td>
+        <td>-9875</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Иван Утенков | Новости</td>
+        <td><a href="https://t.me/ivan_utenkov13">https://t.me/ivan_utenkov13</a></td>
+        <td>Новости и СМИ</td>
+        <td>400216</td>
+        <td>139351</td>
+        <td>35.0</td>
+        <td>-400</td>
+        <td>-1063</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ситуация 112|ЧП РОССИИ🔊</td>
+        <td><a href="https://t.me/joinchat/E-cYGsyFxnQ4ODUy">https://t.me/joinchat/E-cYGsyFxnQ4ODUy</a></td>
+        <td>Новости и СМИ</td>
+        <td>397725</td>
+        <td>40871</td>
+        <td>11.0</td>
+        <td>465</td>
+        <td>26937</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    // Снять старую подсветку
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    // Добавить новую стрелку
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    // Подсветить колонку
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>
