@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Топор+</td>
+        <td><a href="https://t.me/joinchat/ScL1FOCgJCbFNJK1">https://t.me/joinchat/ScL1FOCgJCbFNJK1</a></td>
+        <td>Шок-контент</td>
+        <td>9019341</td>
+        <td>1957280</td>
+        <td>22.0</td>
+        <td>6269</td>
+        <td>138606</td>
+        <td>6 лет 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Наблюдатель👁️</td>
+        <td><a href="https://t.me/joinchat/algGOzXN7sRhNGVi">https://t.me/joinchat/algGOzXN7sRhNGVi</a></td>
+        <td>Шок-контент</td>
+        <td>2902824</td>
+        <td>186616</td>
+        <td>7.0</td>
+        <td>14077</td>
+        <td>47304</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Жесть дня</td>
+        <td><a href="https://t.me/zhestnovosty">https://t.me/zhestnovosty</a></td>
+        <td>Шок-контент</td>
+        <td>1978912</td>
+        <td>75007</td>
+        <td>4.0</td>
+        <td>27146</td>
+        <td>70525</td>
+        <td>8 лет 21 день</td>
+      </tr>
+
+      <tr>
+        <td>ЖЕСТЬ ВИДЕО | ЧП 18+</td>
+        <td><a href="https://t.me/joinchat/ptX_z_fUlY8wMzhi">https://t.me/joinchat/ptX_z_fUlY8wMzhi</a></td>
+        <td>Шок-контент</td>
+        <td>1706669</td>
+        <td>53606</td>
+        <td>4.0</td>
+        <td>8710</td>
+        <td>-46908</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НОКАУТ</td>
+        <td><a href="https://t.me/joinchat/i4AIn7aMACk0ZmEy">https://t.me/joinchat/i4AIn7aMACk0ZmEy</a></td>
+        <td>Шок-контент</td>
+        <td>1415649</td>
+        <td>153627</td>
+        <td>11.0</td>
+        <td>34147</td>
+        <td>179362</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АРХАНГЕЛ СПЕЦНАЗА</td>
+        <td><a href="https://t.me/rusich_army">https://t.me/rusich_army</a></td>
+        <td>Шок-контент</td>
+        <td>1135778</td>
+        <td>280982</td>
+        <td>25.0</td>
+        <td>-41</td>
+        <td>-8203</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЗЛОЙ КРОЛИК +</td>
+        <td><a href="https://t.me/joinchat/__QHr5SUZ-cwNjBi">https://t.me/joinchat/__QHr5SUZ-cwNjBi</a></td>
+        <td>Шок-контент</td>
+        <td>931952</td>
+        <td>52906</td>
+        <td>6.0</td>
+        <td>5933</td>
+        <td>7822</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Rus_criminal</td>
+        <td><a href="https://t.me/joinchat/AAAAAEG9D2xsO4xhFP_EFQ">https://t.me/joinchat/AAAAAEG9D2xsO4xhFP_EFQ</a></td>
+        <td>Шок-контент</td>
+        <td>910864</td>
+        <td>106784</td>
+        <td>12.0</td>
+        <td>40</td>
+        <td>346</td>
+        <td>8 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Запрещёнка</td>
+        <td><a href="https://t.me/joinchat/jYI7LNDcvFw2ODRh">https://t.me/joinchat/jYI7LNDcvFw2ODRh</a></td>
+        <td>Шок-контент</td>
+        <td>827070</td>
+        <td>39647</td>
+        <td>5.0</td>
+        <td>-4991</td>
+        <td>-20917</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Lpr 1</td>
+        <td><a href="https://t.me/lpr1_treugolnik">https://t.me/lpr1_treugolnik</a></td>
+        <td>Шок-контент</td>
+        <td>786526</td>
+        <td>107885</td>
+        <td>14.0</td>
+        <td>2633</td>
+        <td>13880</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Плохие новости 18+</td>
+        <td><a href="https://t.me/joinchat/AAAAAFcF8lv6w7Y4RfSW5Q">https://t.me/joinchat/AAAAAFcF8lv6w7Y4RfSW5Q</a></td>
+        <td>Шок-контент</td>
+        <td>776402</td>
+        <td>236321</td>
+        <td>31.0</td>
+        <td>3559</td>
+        <td>11505</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Рифмы и Новости 🫵🏼😳</td>
+        <td><a href="https://t.me/joinchat/AAAAAFICycTTzCsGbBIwFg">https://t.me/joinchat/AAAAAFICycTTzCsGbBIwFg</a></td>
+        <td>Шок-контент</td>
+        <td>700692</td>
+        <td>83562</td>
+        <td>12.0</td>
+        <td>16790</td>
+        <td>6575</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Эфир +</td>
+        <td><a href="https://t.me/joinchat/uxJFa1f63VphZWYy">https://t.me/joinchat/uxJFa1f63VphZWYy</a></td>
+        <td>Шок-контент</td>
+        <td>675239</td>
+        <td>121315</td>
+        <td>18.0</td>
+        <td>1243</td>
+        <td>-3574</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КБ плюс</td>
+        <td><a href="https://t.me/cb_ai">https://t.me/cb_ai</a></td>
+        <td>Шок-контент</td>
+        <td>650823</td>
+        <td>272697</td>
+        <td>42.0</td>
+        <td>-1322</td>
+        <td>-5697</td>
+        <td>6 лет 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>PZDC</td>
+        <td><a href="https://t.me/joinchat/AAAAAFElevcbuyK0EeBX9Q">https://t.me/joinchat/AAAAAFElevcbuyK0EeBX9Q</a></td>
+        <td>Шок-контент</td>
+        <td>584437</td>
+        <td>44562</td>
+        <td>8.0</td>
+        <td>-3385</td>
+        <td>-11604</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Око Войны</td>
+        <td><a href="https://t.me/joinchat/6CpGNHCyGyBmZTFi">https://t.me/joinchat/6CpGNHCyGyBmZTFi</a></td>
+        <td>Шок-контент</td>
+        <td>572191</td>
+        <td>44247</td>
+        <td>8.0</td>
+        <td>-69</td>
+        <td>1244</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>KAOTIC</td>
+        <td><a href="https://t.me/joinchat/BVV8meRPiHkwNDdi">https://t.me/joinchat/BVV8meRPiHkwNDdi</a></td>
+        <td>Шок-контент</td>
+        <td>568730</td>
+        <td>52928</td>
+        <td>10.0</td>
+        <td>-2053</td>
+        <td>-11887</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>НОКАУТ 👉🏻 @NOKAUT_TG</td>
+        <td><a href="https://t.me/joinchat/vzDRQu2A9GgzNTRi">https://t.me/joinchat/vzDRQu2A9GgzNTRi</a></td>
+        <td>Шок-контент</td>
+        <td>558655</td>
+        <td>3906</td>
+        <td>1.0</td>
+        <td>-8047</td>
+        <td>-37916</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Новости дня 18+</td>
+        <td><a href="https://t.me/novosti_days18">https://t.me/novosti_days18</a></td>
+        <td>Шок-контент</td>
+        <td>547488</td>
+        <td>10604</td>
+        <td>2.0</td>
+        <td>2310</td>
+        <td>2776</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПУЛЯ</td>
+        <td><a href="https://t.me/joinchat/TiX9zQzcsTI2MTMy">https://t.me/joinchat/TiX9zQzcsTI2MTMy</a></td>
+        <td>Шок-контент</td>
+        <td>535711</td>
+        <td>78841</td>
+        <td>15.0</td>
+        <td>-2287</td>
+        <td>-11725</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЁП</td>
+        <td><a href="https://t.me/joinchat/AAAAAEr2OL3_qM0FQdEzcw">https://t.me/joinchat/AAAAAEr2OL3_qM0FQdEzcw</a></td>
+        <td>Шок-контент</td>
+        <td>510538</td>
+        <td>37388</td>
+        <td>8.0</td>
+        <td>-1713</td>
+        <td>-13627</td>
+        <td>5 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПИЛА</td>
+        <td><a href="https://t.me/joinchat/rI5D3hwU7f1mMDUy">https://t.me/joinchat/rI5D3hwU7f1mMDUy</a></td>
+        <td>Шок-контент</td>
+        <td>505407</td>
+        <td>58709</td>
+        <td>12.0</td>
+        <td>2419</td>
+        <td>77115</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>сливная крыса🐀</td>
+        <td><a href="https://t.me/joinchat/AAAAAEZpXWl_yw-M6mrz5w">https://t.me/joinchat/AAAAAEZpXWl_yw-M6mrz5w</a></td>
+        <td>Шок-контент</td>
+        <td>485006</td>
+        <td>94660</td>
+        <td>20.0</td>
+        <td>569</td>
+        <td>-2411</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>КРИСА🐀</td>
+        <td><a href="https://t.me/joinchat/TOmT436B1_BkMjIy">https://t.me/joinchat/TOmT436B1_BkMjIy</a></td>
+        <td>Шок-контент</td>
+        <td>470064</td>
+        <td>62598</td>
+        <td>14.0</td>
+        <td>-3487</td>
+        <td>-14929</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Заходи не Бойся 😱</td>
+        <td><a href="https://t.me/joinchat/uf3xSkKR_2U2MjMy">https://t.me/joinchat/uf3xSkKR_2U2MjMy</a></td>
+        <td>Шок-контент</td>
+        <td>446023</td>
+        <td>21767</td>
+        <td>5.0</td>
+        <td>-10760</td>
+        <td>-65223</td>
+        <td>10 месяцев 12 дней</td>
+      </tr>
+
+      <tr>
+        <td>ПУЛЯ 18+</td>
+        <td><a href="https://t.me/joinchat/6VsBVWAMik4wZmEy">https://t.me/joinchat/6VsBVWAMik4wZmEy</a></td>
+        <td>Шок-контент</td>
+        <td>422032</td>
+        <td>48205</td>
+        <td>12.0</td>
+        <td>756</td>
+        <td>6680</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Техника Безопасности</td>
+        <td><a href="https://t.me/joinchat/dGGWxiFJ8FVkMmYy">https://t.me/joinchat/dGGWxiFJ8FVkMmYy</a></td>
+        <td>Шок-контент</td>
+        <td>401726</td>
+        <td>49691</td>
+        <td>13.0</td>
+        <td>837</td>
+        <td>-2290</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВЫЖИМАЛКА 18+</td>
+        <td><a href="https://t.me/joinchat/AAAAAEjdcgYjXcxOf3uJ2g">https://t.me/joinchat/AAAAAEjdcgYjXcxOf3uJ2g</a></td>
+        <td>Шок-контент</td>
+        <td>400947</td>
+        <td>4226</td>
+        <td>2.0</td>
+        <td>-4891</td>
+        <td>-18893</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СОКОЛ 2.0</td>
+        <td><a href="https://t.me/joinchat/6oNre0j9FvcxOThi">https://t.me/joinchat/6oNre0j9FvcxOThi</a></td>
+        <td>Шок-контент</td>
+        <td>388647</td>
+        <td>28370</td>
+        <td>8.0</td>
+        <td>-8539</td>
+        <td>-52118</td>
+        <td>4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ДЕКСТЕР ✌🏻🔞</td>
+        <td><a href="https://t.me/joinchat/AAAAAEsrQsiEvxHoFXMtwQ">https://t.me/joinchat/AAAAAEsrQsiEvxHoFXMtwQ</a></td>
+        <td>Шок-контент</td>
+        <td>368335</td>
+        <td>214154</td>
+        <td>59.0</td>
+        <td>-1798</td>
+        <td>-5178</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Anubis</td>
+        <td><a href="https://t.me/joinchat/4722jeM1N5EwYzBi">https://t.me/joinchat/4722jeM1N5EwYzBi</a></td>
+        <td>Шок-контент</td>
+        <td>351978</td>
+        <td>32157</td>
+        <td>10.0</td>
+        <td>-759</td>
+        <td>-1948</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Штопор 18+</td>
+        <td><a href="https://t.me/joinchat/bLbiOOhNmDNjYWVi">https://t.me/joinchat/bLbiOOhNmDNjYWVi</a></td>
+        <td>Шок-контент</td>
+        <td>349440</td>
+        <td>26989</td>
+        <td>8.0</td>
+        <td>-2564</td>
+        <td>-10935</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ДТПшник | Автоновости</td>
+        <td><a href="https://t.me/autosvodka">https://t.me/autosvodka</a></td>
+        <td>Шок-контент</td>
+        <td>348123</td>
+        <td>116079</td>
+        <td>34.0</td>
+        <td>-17736</td>
+        <td>-58643</td>
+        <td>2 месяца 15 дней</td>
+      </tr>
+
+      <tr>
+        <td>TIGMAN</td>
+        <td><a href="https://t.me/vgostyaxman">https://t.me/vgostyaxman</a></td>
+        <td>Шок-контент</td>
+        <td>330567</td>
+        <td>87092</td>
+        <td>27.0</td>
+        <td>-1692</td>
+        <td>-6247</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>BOMB NEWS 18+ 💣</td>
+        <td><a href="https://t.me/joinchat/WfxwLrJSW20yMzA6">https://t.me/joinchat/WfxwLrJSW20yMzA6</a></td>
+        <td>Шок-контент</td>
+        <td>327260</td>
+        <td>11547</td>
+        <td>4.0</td>
+        <td>-1905</td>
+        <td>-11487</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Безобразие 😱</td>
+        <td><a href="https://t.me/joinchat/wIk-Hp6ghMRkZDEy">https://t.me/joinchat/wIk-Hp6ghMRkZDEy</a></td>
+        <td>Шок-контент</td>
+        <td>324460</td>
+        <td>29559</td>
+        <td>10.0</td>
+        <td>4552</td>
+        <td>29703</td>
+        <td>4 месяца 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>ZАПИСКИ VЕТЕРАНА 🇷🇺</td>
+        <td><a href="https://t.me/notes_veterans">https://t.me/notes_veterans</a></td>
+        <td>Шок-контент</td>
+        <td>324414</td>
+        <td>111866</td>
+        <td>35.0</td>
+        <td>-7182</td>
+        <td>-9186</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТЕРАПИЯ</td>
+        <td><a href="https://t.me/joinchat/w04IJ3GC6T5hNjIy">https://t.me/joinchat/w04IJ3GC6T5hNjIy</a></td>
+        <td>Шок-контент</td>
+        <td>315755</td>
+        <td>13690</td>
+        <td>5.0</td>
+        <td>-2358</td>
+        <td>-11379</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Чё случилось? | Новости</td>
+        <td><a href="https://t.me/joinchat/VtzsdzOnyJI2OGIy">https://t.me/joinchat/VtzsdzOnyJI2OGIy</a></td>
+        <td>Шок-контент</td>
+        <td>311920</td>
+        <td>22909</td>
+        <td>8.0</td>
+        <td>-1707</td>
+        <td>-8902</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ИНФАЧ НОВОСТИ</td>
+        <td><a href="https://t.me/joinchat/AAAAAEUTTJtpQl8xNn0Rxw">https://t.me/joinchat/AAAAAEUTTJtpQl8xNn0Rxw</a></td>
+        <td>Шок-контент</td>
+        <td>309864</td>
+        <td>29269</td>
+        <td>10.0</td>
+        <td>760</td>
+        <td>270</td>
+        <td>6 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>БУНТ 21+</td>
+        <td><a href="https://t.me/joinchat/tHBRNkO5tNwxODIy">https://t.me/joinchat/tHBRNkO5tNwxODIy</a></td>
+        <td>Шок-контент</td>
+        <td>305943</td>
+        <td>3278</td>
+        <td>2.0</td>
+        <td>-3131</td>
+        <td>-16200</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Премия Дарвина</td>
+        <td><a href="https://t.me/joinchat/AAAAAEEM58HiTlUI2hjmDQ">https://t.me/joinchat/AAAAAEEM58HiTlUI2hjmDQ</a></td>
+        <td>Шок-контент</td>
+        <td>304154</td>
+        <td>43749</td>
+        <td>15.0</td>
+        <td>-1238</td>
+        <td>-3527</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПРИТОН</td>
+        <td><a href="https://t.me/joinchat/zfb7oo-3ltg3MTE6">https://t.me/joinchat/zfb7oo-3ltg3MTE6</a></td>
+        <td>Шок-контент</td>
+        <td>303692</td>
+        <td>15065</td>
+        <td>5.0</td>
+        <td>-2110</td>
+        <td>-10285</td>
+        <td>3 года 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>ХУЛИГАН 21+</td>
+        <td><a href="https://t.me/joinchat/_XR2SJrXAM4zMTQ6">https://t.me/joinchat/_XR2SJrXAM4zMTQ6</a></td>
+        <td>Шок-контент</td>
+        <td>303210</td>
+        <td>7563</td>
+        <td>3.0</td>
+        <td>-3084</td>
+        <td>-15552</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Безобразие 🔞</td>
+        <td><a href="https://t.me/novosti_rus18">https://t.me/novosti_rus18</a></td>
+        <td>Шок-контент</td>
+        <td>291539</td>
+        <td>9606</td>
+        <td>4.0</td>
+        <td>-1822</td>
+        <td>-9633</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>AUTIZM 18+</td>
+        <td><a href="https://t.me/joinchat/VF91exY0hiQxYTgy">https://t.me/joinchat/VF91exY0hiQxYTgy</a></td>
+        <td>Шок-контент</td>
+        <td>288491</td>
+        <td>5848</td>
+        <td>2.0</td>
+        <td>-3459</td>
+        <td>-17904</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>красти краб +</td>
+        <td><a href="https://t.me/joinchat/lpSkWBsnp_k4MWIy">https://t.me/joinchat/lpSkWBsnp_k4MWIy</a></td>
+        <td>Шок-контент</td>
+        <td>288257</td>
+        <td>18845</td>
+        <td>7.0</td>
+        <td>-2734</td>
+        <td>-13913</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Vashchenko TRASH VIDEO</td>
+        <td><a href="https://t.me/joinchat/ARDe3znOqbFjNmU6">https://t.me/joinchat/ARDe3znOqbFjNmU6</a></td>
+        <td>Шок-контент</td>
+        <td>285582</td>
+        <td>119465</td>
+        <td>42.0</td>
+        <td>-1680</td>
+        <td>-9489</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ВПИСАЛИ</td>
+        <td><a href="https://t.me/Vpisali_sliv">https://t.me/Vpisali_sliv</a></td>
+        <td>Шок-контент</td>
+        <td>282475</td>
+        <td>9116</td>
+        <td>4.0</td>
+        <td>-1942</td>
+        <td>-9164</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ахуеть</td>
+        <td><a href="https://t.me/joinchat/dlY4AruFkG9kYWRi">https://t.me/joinchat/dlY4AruFkG9kYWRi</a></td>
+        <td>Шок-контент</td>
+        <td>278010</td>
+        <td>15956</td>
+        <td>6.0</td>
+        <td>-18</td>
+        <td>-190</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЕБ*НУТЬСЯ</td>
+        <td><a href="https://t.me/joinchat/AAAAAEQEPa5152dIefIhhg">https://t.me/joinchat/AAAAAEQEPa5152dIefIhhg</a></td>
+        <td>Шок-контент</td>
+        <td>275118</td>
+        <td>60133</td>
+        <td>22.0</td>
+        <td>-83</td>
+        <td>-185</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>WAR_VIDEO_TELEGRAM</td>
+        <td><a href="https://t.me/joinchat/UqDrlVID_H6F30-m">https://t.me/joinchat/UqDrlVID_H6F30-m</a></td>
+        <td>Шок-контент</td>
+        <td>273404</td>
+        <td>28933</td>
+        <td>11.0</td>
+        <td>-9</td>
+        <td>-3075</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Прессач</td>
+        <td><a href="https://t.me/joinchat/mkJbSmoVByQ3ZGYy">https://t.me/joinchat/mkJbSmoVByQ3ZGYy</a></td>
+        <td>Шок-контент</td>
+        <td>268716</td>
+        <td>8193</td>
+        <td>3.0</td>
+        <td>730</td>
+        <td>-2285</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВИДЕО ДОЛБОЁБА 21+ 2.0</td>
+        <td><a href="https://t.me/joinchat/4rN4rbplfqtmZTli">https://t.me/joinchat/4rN4rbplfqtmZTli</a></td>
+        <td>Шок-контент</td>
+        <td>267302</td>
+        <td>109651</td>
+        <td>41.0</td>
+        <td>1728</td>
+        <td>9203</td>
+        <td>8 месяцев 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>ЧП САНКТ-ПЕТЕРБУРГ НОВОСТИ</td>
+        <td><a href="https://t.me/piter_dtp78">https://t.me/piter_dtp78</a></td>
+        <td>Шок-контент</td>
+        <td>263521</td>
+        <td>2076</td>
+        <td>1.0</td>
+        <td>-5830</td>
+        <td>-32579</td>
+        <td>6 месяцев 14 дней</td>
+      </tr>
+
+      <tr>
+        <td>Ateo Blacked</td>
+        <td><a href="https://t.me/joinchat/cLopZt2dJS8wZjBk">https://t.me/joinchat/cLopZt2dJS8wZjBk</a></td>
+        <td>Шок-контент</td>
+        <td>262144</td>
+        <td>125843</td>
+        <td>48.0</td>
+        <td>652</td>
+        <td>7111</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Пожёстче</td>
+        <td><a href="https://t.me/joinchat/AAAAAFAFupWJk5Lo_5GzqQ">https://t.me/joinchat/AAAAAFAFupWJk5Lo_5GzqQ</a></td>
+        <td>Шок-контент</td>
+        <td>261402</td>
+        <td>17572</td>
+        <td>7.0</td>
+        <td>-970</td>
+        <td>-5123</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Обезьяна с гранатой</td>
+        <td><a href="https://t.me/joinchat/QIty5K07uz85Mzli">https://t.me/joinchat/QIty5K07uz85Mzli</a></td>
+        <td>Шок-контент</td>
+        <td>260438</td>
+        <td>22038</td>
+        <td>9.0</td>
+        <td>-1159</td>
+        <td>-6563</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГРЯЗЬ</td>
+        <td><a href="https://t.me/joinchat/2QQhHoIOLpBiM2Ux">https://t.me/joinchat/2QQhHoIOLpBiM2Ux</a></td>
+        <td>Шок-контент</td>
+        <td>260396</td>
+        <td>18166</td>
+        <td>7.0</td>
+        <td>-112</td>
+        <td>49090</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>N/A</td>
+        <td><a href="None">None</a></td>
+        <td>Шок-контент</td>
+        <td>259536</td>
+        <td>114857</td>
+        <td>45.0</td>
+        <td>1704</td>
+        <td>7310</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВОРОЖБИТОВ</td>
+        <td><a href="https://t.me/joinchat/XufFz8GGR0o3Njky">https://t.me/joinchat/XufFz8GGR0o3Njky</a></td>
+        <td>Шок-контент</td>
+        <td>257376</td>
+        <td>68010</td>
+        <td>27.0</td>
+        <td>-637</td>
+        <td>-3047</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЕБЕМ УКРОПОВ 18+</td>
+        <td><a href="https://t.me/joinchat/yPe6DtD5SlEzZTU6">https://t.me/joinchat/yPe6DtD5SlEzZTU6</a></td>
+        <td>Шок-контент</td>
+        <td>255810</td>
+        <td>33753</td>
+        <td>14.0</td>
+        <td>2606</td>
+        <td>12781</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЛЕЙКА 🔞 +</td>
+        <td><a href="https://t.me/joinchat/Bq3J6M3ZDFo2MTAy">https://t.me/joinchat/Bq3J6M3ZDFo2MTAy</a></td>
+        <td>Шок-контент</td>
+        <td>251818</td>
+        <td>11566</td>
+        <td>5.0</td>
+        <td>459</td>
+        <td>662</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МРАК | Криминальные новости</td>
+        <td><a href="https://t.me/joinchat/k71XHr0T8c04NTNi">https://t.me/joinchat/k71XHr0T8c04NTNi</a></td>
+        <td>Шок-контент</td>
+        <td>248249</td>
+        <td>70973</td>
+        <td>29.0</td>
+        <td>1898</td>
+        <td>2601</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>УДАР</td>
+        <td><a href="https://t.me/joinchat/aO_sr1FyxLtiODgy">https://t.me/joinchat/aO_sr1FyxLtiODgy</a></td>
+        <td>Шок-контент</td>
+        <td>245199</td>
+        <td>20188</td>
+        <td>9.0</td>
+        <td>-2993</td>
+        <td>-14681</td>
+        <td>8 месяцев 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>Хлам+</td>
+        <td><a href="https://t.me/joinchat/8G0gnOe5tsA4YTY6">https://t.me/joinchat/8G0gnOe5tsA4YTY6</a></td>
+        <td>Шок-контент</td>
+        <td>245040</td>
+        <td>11216</td>
+        <td>5.0</td>
+        <td>357</td>
+        <td>7448</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Коси Коса</td>
+        <td><a href="https://t.me/joinchat/C8TrFyzdqxJkOGI6">https://t.me/joinchat/C8TrFyzdqxJkOGI6</a></td>
+        <td>Шок-контент</td>
+        <td>243563</td>
+        <td>14209</td>
+        <td>6.0</td>
+        <td>1249</td>
+        <td>-4277</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Иришка Чики-Пики и Ко.</td>
+        <td><a href="https://t.me/Iriskaciki">https://t.me/Iriskaciki</a></td>
+        <td>Шок-контент</td>
+        <td>233266</td>
+        <td>181074</td>
+        <td>78.0</td>
+        <td>836</td>
+        <td>1167</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТОПОР НОВОСТИ 18+</td>
+        <td><a href="https://t.me/zhest_tresh_videoj">https://t.me/zhest_tresh_videoj</a></td>
+        <td>Шок-контент</td>
+        <td>233016</td>
+        <td>2112</td>
+        <td>1.0</td>
+        <td>-3202</td>
+        <td>-19582</td>
+        <td>2 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КИПЯТОК</td>
+        <td><a href="https://t.me/joinchat/1IRRYLfAh_5iZTIy">https://t.me/joinchat/1IRRYLfAh_5iZTIy</a></td>
+        <td>Шок-контент</td>
+        <td>230292</td>
+        <td>28574</td>
+        <td>13.0</td>
+        <td>-968</td>
+        <td>-771</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КУВАЛДА 18+</td>
+        <td><a href="https://t.me/joinchat/3HMLalkG5lU4MzYy">https://t.me/joinchat/3HMLalkG5lU4MzYy</a></td>
+        <td>Шок-контент</td>
+        <td>224851</td>
+        <td>54187</td>
+        <td>25.0</td>
+        <td>-523</td>
+        <td>-1459</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Куда прёшь?!?</td>
+        <td><a href="https://t.me/joinchat/AAAAAE5BJXmhwUUXgxlLig">https://t.me/joinchat/AAAAAE5BJXmhwUUXgxlLig</a></td>
+        <td>Шок-контент</td>
+        <td>218483</td>
+        <td>16551</td>
+        <td>8.0</td>
+        <td>-810</td>
+        <td>-3069</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВЫЖИМАЛКА</td>
+        <td><a href="https://t.me/joinchat/9Zq2d1dicw85YTli">https://t.me/joinchat/9Zq2d1dicw85YTli</a></td>
+        <td>Шок-контент</td>
+        <td>211335</td>
+        <td>2849</td>
+        <td>2.0</td>
+        <td>-2918</td>
+        <td>-12579</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>4chan +</td>
+        <td><a href="https://t.me/ru4chan18">https://t.me/ru4chan18</a></td>
+        <td>Шок-контент</td>
+        <td>210142</td>
+        <td>50649</td>
+        <td>25.0</td>
+        <td>27710</td>
+        <td>145294</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Тёмная сторона</td>
+        <td><a href="https://t.me/joinchat/Q1Rnv5sj60U0NDBi">https://t.me/joinchat/Q1Rnv5sj60U0NDBi</a></td>
+        <td>Шок-контент</td>
+        <td>209717</td>
+        <td>5892</td>
+        <td>3.0</td>
+        <td>-1930</td>
+        <td>-6544</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Crime Planet</td>
+        <td><a href="https://t.me/joinchat/cmqVD-34uLQ0ZWE0">https://t.me/joinchat/cmqVD-34uLQ0ZWE0</a></td>
+        <td>Шок-контент</td>
+        <td>209500</td>
+        <td>14783</td>
+        <td>8.0</td>
+        <td>-1019</td>
+        <td>-5086</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПУЛЯ 18+</td>
+        <td><a href="https://t.me/joinchat/VhXpzYjy8FgyNzEy">https://t.me/joinchat/VhXpzYjy8FgyNzEy</a></td>
+        <td>Шок-контент</td>
+        <td>208944</td>
+        <td>29985</td>
+        <td>15.0</td>
+        <td>-782</td>
+        <td>-4003</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПОЗДНЯКОВ 3.0</td>
+        <td><a href="https://t.me/chastnyi_butylka_novosty_vlad">https://t.me/chastnyi_butylka_novosty_vlad</a></td>
+        <td>Шок-контент</td>
+        <td>208675</td>
+        <td>2315</td>
+        <td>2.0</td>
+        <td>-65517</td>
+        <td>-180599</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>𝐁𝐎𝐑𝐙🐺𝐌𝐌𝐀</td>
+        <td><a href="https://t.me/joinchat/rxtRuqJXVuMzOWQy">https://t.me/joinchat/rxtRuqJXVuMzOWQy</a></td>
+        <td>Шок-контент</td>
+        <td>208455</td>
+        <td>39558</td>
+        <td>19.0</td>
+        <td>-3065</td>
+        <td>-6931</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>FIGHT CLUB</td>
+        <td><a href="https://t.me/joinchat/AAAAAFI0WYyYeQifAWAzSw">https://t.me/joinchat/AAAAAFI0WYyYeQifAWAzSw</a></td>
+        <td>Шок-контент</td>
+        <td>206651</td>
+        <td>16156</td>
+        <td>8.0</td>
+        <td>-822</td>
+        <td>-4338</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Военный начальник</td>
+        <td><a href="https://t.me/voenachalnik1">https://t.me/voenachalnik1</a></td>
+        <td>Шок-контент</td>
+        <td>206609</td>
+        <td>51409</td>
+        <td>25.0</td>
+        <td>10438</td>
+        <td>62</td>
+        <td>5 месяцев 1 день</td>
+      </tr>
+
+      <tr>
+        <td>МРАК 18+</td>
+        <td><a href="https://t.me/joinchat/pW5GS6SRSPI5YTIy">https://t.me/joinchat/pW5GS6SRSPI5YTIy</a></td>
+        <td>Шок-контент</td>
+        <td>206203</td>
+        <td>112934</td>
+        <td>55.0</td>
+        <td>1612</td>
+        <td>3579</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>УТК +</td>
+        <td><a href="https://t.me/joinchat/UG8awfbtry41Yjky">https://t.me/joinchat/UG8awfbtry41Yjky</a></td>
+        <td>Шок-контент</td>
+        <td>205972</td>
+        <td>5119</td>
+        <td>3.0</td>
+        <td>4350</td>
+        <td>-175</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ensensinou 18+</td>
+        <td><a href="https://t.me/joinchat/sc50jzf_knQyMDJi">https://t.me/joinchat/sc50jzf_knQyMDJi</a></td>
+        <td>Шок-контент</td>
+        <td>205432</td>
+        <td>26532</td>
+        <td>13.0</td>
+        <td>4916</td>
+        <td>26610</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>✙ Груз 200 ✙ ∆</td>
+        <td><a href="https://t.me/gruz_200_rus">https://t.me/gruz_200_rus</a></td>
+        <td>Шок-контент</td>
+        <td>200985</td>
+        <td>78937</td>
+        <td>40.0</td>
+        <td>-259</td>
+        <td>-493</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Черная Лента</td>
+        <td><a href="https://t.me/joinchat/ESVpKlHo7o44MTky">https://t.me/joinchat/ESVpKlHo7o44MTky</a></td>
+        <td>Шок-контент</td>
+        <td>198449</td>
+        <td>7617</td>
+        <td>4.0</td>
+        <td>143</td>
+        <td>-456</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ракета 18+</td>
+        <td><a href="https://t.me/raketa18">https://t.me/raketa18</a></td>
+        <td>Шок-контент</td>
+        <td>198448</td>
+        <td>4687</td>
+        <td>3.0</td>
+        <td>-980</td>
+        <td>-4745</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ох</td>
+        <td><a href="https://t.me/theohdaily">https://t.me/theohdaily</a></td>
+        <td>Шок-контент</td>
+        <td>197709</td>
+        <td>36676</td>
+        <td>19.0</td>
+        <td>-1383</td>
+        <td>-5663</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MED+</td>
+        <td><a href="https://t.me/joinchat/7ZjNLl57Cvo1YTQ6">https://t.me/joinchat/7ZjNLl57Cvo1YTQ6</a></td>
+        <td>Шок-контент</td>
+        <td>196497</td>
+        <td>7632</td>
+        <td>4.0</td>
+        <td>-1309</td>
+        <td>-6108</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Медицина 18+</td>
+        <td><a href="https://t.me/joinchat/AAAAAEif0ENRjqVV6kbNbw">https://t.me/joinchat/AAAAAEif0ENRjqVV6kbNbw</a></td>
+        <td>Шок-контент</td>
+        <td>195383</td>
+        <td>14571</td>
+        <td>8.0</td>
+        <td>-805</td>
+        <td>-3170</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>SIEMENS NEWS</td>
+        <td><a href="https://t.me/sienews">https://t.me/sienews</a></td>
+        <td>Шок-контент</td>
+        <td>192406</td>
+        <td>72575</td>
+        <td>38.0</td>
+        <td>-842</td>
+        <td>17242</td>
+        <td>8 месяцев 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>ЖЕСТЬ ВИДЕО | ЧП 18+</td>
+        <td><a href="https://t.me/joinchat/AAAAAEYt-CV0CXvE70fKaA">https://t.me/joinchat/AAAAAEYt-CV0CXvE70fKaA</a></td>
+        <td>Шок-контент</td>
+        <td>192267</td>
+        <td>4611</td>
+        <td>3.0</td>
+        <td>-1213</td>
+        <td>-5716</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Саратов. Жесть 18+</td>
+        <td><a href="https://t.me/saratov_zhest">https://t.me/saratov_zhest</a></td>
+        <td>Шок-контент</td>
+        <td>188622</td>
+        <td>52214</td>
+        <td>28.0</td>
+        <td>198</td>
+        <td>7253</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТОПОР 18+</td>
+        <td><a href="https://t.me/Voina_zhest_novosty_video">https://t.me/Voina_zhest_novosty_video</a></td>
+        <td>Шок-контент</td>
+        <td>188426</td>
+        <td>9892</td>
+        <td>6.0</td>
+        <td>-866</td>
+        <td>-4609</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ФУЛЛЫЧ</td>
+        <td><a href="https://t.me/joinchat/WG52MZ8zfSRmYTYy">https://t.me/joinchat/WG52MZ8zfSRmYTYy</a></td>
+        <td>Шок-контент</td>
+        <td>188181</td>
+        <td>2638</td>
+        <td>2.0</td>
+        <td>-1893</td>
+        <td>-9346</td>
+        <td>1 год 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ПАЦАНКИ</td>
+        <td><a href="https://t.me/pacanki_new1">https://t.me/pacanki_new1</a></td>
+        <td>Шок-контент</td>
+        <td>186077</td>
+        <td>47119</td>
+        <td>26.0</td>
+        <td>-1997</td>
+        <td>-41018</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>КРИМИНАЛЬНАЯ РОССИЯ</td>
+        <td><a href="https://t.me/joinchat/ubNeXDLgQ8A2ZDFi">https://t.me/joinchat/ubNeXDLgQ8A2ZDFi</a></td>
+        <td>Шок-контент</td>
+        <td>185589</td>
+        <td>22529</td>
+        <td>13.0</td>
+        <td>-981</td>
+        <td>-4831</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Слива</td>
+        <td><a href="https://t.me/joinchat/-fPk8EWAOOoyNDcy">https://t.me/joinchat/-fPk8EWAOOoyNDcy</a></td>
+        <td>Шок-контент</td>
+        <td>184209</td>
+        <td>4519</td>
+        <td>3.0</td>
+        <td>-1109</td>
+        <td>-5452</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Дарвин в шоке</td>
+        <td><a href="https://t.me/joinchat/xr0EXzZLhk1kOThi">https://t.me/joinchat/xr0EXzZLhk1kOThi</a></td>
+        <td>Шок-контент</td>
+        <td>180021</td>
+        <td>22202</td>
+        <td>13.0</td>
+        <td>-1132</td>
+        <td>-6201</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Cringe</td>
+        <td><a href="https://t.me/joinchat/D2LbMP2avhg1Y2Iy">https://t.me/joinchat/D2LbMP2avhg1Y2Iy</a></td>
+        <td>Шок-контент</td>
+        <td>180011</td>
+        <td>12993</td>
+        <td>8.0</td>
+        <td>23166</td>
+        <td>19975</td>
+        <td>4 месяца 8 дней</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

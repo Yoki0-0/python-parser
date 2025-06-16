@@ -1256,16 +1256,13 @@
 
     for (var row of rows) table.tBodies[0].appendChild(row);
 
-    // Снять старую подсветку
     var ths = table.tHead.rows[0].cells;
     for (var i = 0; i < ths.length; i++) {
       ths[i].classList.remove("sorted-asc", "sorted-desc");
     }
 
-    // Добавить новую стрелку
     ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
 
-    // Подсветить колонку
     for (var r of rows) {
       for (var i = 0; i < r.cells.length; i++) {
         r.cells[i].classList.toggle("active-col", i == n);

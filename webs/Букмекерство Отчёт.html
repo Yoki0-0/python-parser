@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>1win</td>
+        <td><a href="https://t.me/joinchat/Q5YX4RslpXpjYzcy">https://t.me/joinchat/Q5YX4RslpXpjYzcy</a></td>
+        <td>Букмекерство</td>
+        <td>2255469</td>
+        <td>82145</td>
+        <td>4.0</td>
+        <td>-2545</td>
+        <td>-8961</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МЕЛЛСТРОЙ ДВИЖ</td>
+        <td><a href="https://t.me/joinchat/-l9Gwg5_7fwxNDcy">https://t.me/joinchat/-l9Gwg5_7fwxNDcy</a></td>
+        <td>Букмекерство</td>
+        <td>1440418</td>
+        <td>103866</td>
+        <td>8.0</td>
+        <td>4242</td>
+        <td>-9752</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АСХАБ ТАМАЕВ 🚀</td>
+        <td><a href="https://t.me/joinchat/vpXUX8ohCHZhMGRi">https://t.me/joinchat/vpXUX8ohCHZhMGRi</a></td>
+        <td>Букмекерство</td>
+        <td>1426350</td>
+        <td>467183</td>
+        <td>33.0</td>
+        <td>-12775</td>
+        <td>-57603</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Crypto Homer</td>
+        <td><a href="https://t.me/HomerAndCrypto">https://t.me/HomerAndCrypto</a></td>
+        <td>Букмекерство</td>
+        <td>721265</td>
+        <td>25932</td>
+        <td>4.0</td>
+        <td>36387</td>
+        <td>22352</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/mellstroy">https://t.me/mellstroy</a></td>
+        <td>Букмекерство</td>
+        <td>647093</td>
+        <td>60732</td>
+        <td>10.0</td>
+        <td>15313</td>
+        <td>49469</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY ДВИЖ</td>
+        <td><a href="https://t.me/MelsTG">https://t.me/MelsTG</a></td>
+        <td>Букмекерство</td>
+        <td>586708</td>
+        <td>2607</td>
+        <td>1.0</td>
+        <td>-7209</td>
+        <td>-37391</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/joinchat/VUBP9pRiaVBIWr4W">https://t.me/joinchat/VUBP9pRiaVBIWr4W</a></td>
+        <td>Букмекерство</td>
+        <td>565860</td>
+        <td>2785</td>
+        <td>1.0</td>
+        <td>-7661</td>
+        <td>-36886</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Best Casino 🎰</td>
+        <td><a href="https://t.me/Beat_the_Casino">https://t.me/Beat_the_Casino</a></td>
+        <td>Букмекерство</td>
+        <td>505851</td>
+        <td>24641</td>
+        <td>5.0</td>
+        <td>-1214</td>
+        <td>-6810</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Бустероид 🥋🥊</td>
+        <td><a href="https://t.me/busteroid3000">https://t.me/busteroid3000</a></td>
+        <td>Букмекерство</td>
+        <td>419825</td>
+        <td>99036</td>
+        <td>24.0</td>
+        <td>-6964</td>
+        <td>-3319</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/mellstroyks">https://t.me/mellstroyks</a></td>
+        <td>Букмекерство</td>
+        <td>359998</td>
+        <td>133464</td>
+        <td>38.0</td>
+        <td>7101</td>
+        <td>36</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>РАЙЗ ЛАВ Ю</td>
+        <td><a href="https://t.me/raiz">https://t.me/raiz</a></td>
+        <td>Букмекерство</td>
+        <td>347612</td>
+        <td>170342</td>
+        <td>49.0</td>
+        <td>4702</td>
+        <td>4615</td>
+        <td>6 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/mellstroybonus">https://t.me/mellstroybonus</a></td>
+        <td>Букмекерство</td>
+        <td>338457</td>
+        <td>214518</td>
+        <td>64.0</td>
+        <td>-789</td>
+        <td>-2072</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Paul Blog</td>
+        <td><a href="https://t.me/x100dollars">https://t.me/x100dollars</a></td>
+        <td>Букмекерство</td>
+        <td>322149</td>
+        <td>45720</td>
+        <td>15.0</td>
+        <td>-13834</td>
+        <td>-32338</td>
+        <td>4 месяца 24 дня</td>
+      </tr>
+
+      <tr>
+        <td>TON Покер Новости</td>
+        <td><a href="https://t.me/tonpokerroomnews">https://t.me/tonpokerroomnews</a></td>
+        <td>Букмекерство</td>
+        <td>308183</td>
+        <td>1371</td>
+        <td>1.0</td>
+        <td>-2289</td>
+        <td>-10217</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НовостиВелвуры 📱</td>
+        <td><a href="https://t.me/velvura_welvura_nvuti_kabura">https://t.me/velvura_welvura_nvuti_kabura</a></td>
+        <td>Букмекерство</td>
+        <td>282288</td>
+        <td>54964</td>
+        <td>20.0</td>
+        <td>870</td>
+        <td>4321</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТравоБет🐳</td>
+        <td><a href="https://t.me/travobet">https://t.me/travobet</a></td>
+        <td>Букмекерство</td>
+        <td>280302</td>
+        <td>27635</td>
+        <td>10.0</td>
+        <td>-5360</td>
+        <td>-7736</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/joinchat/FsZ_gLcz5VFiNzZi">https://t.me/joinchat/FsZ_gLcz5VFiNzZi</a></td>
+        <td>Букмекерство</td>
+        <td>260756</td>
+        <td>9833</td>
+        <td>4.0</td>
+        <td>-3033</td>
+        <td>-7855</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>UP-X</td>
+        <td><a href="https://t.me/joinchat/US73u8vTUyNwYIXX">https://t.me/joinchat/US73u8vTUyNwYIXX</a></td>
+        <td>Букмекерство</td>
+        <td>246760</td>
+        <td>15152</td>
+        <td>7.0</td>
+        <td>-3082</td>
+        <td>-10624</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>HOTSKINS</td>
+        <td><a href="https://t.me/hotskinsclub">https://t.me/hotskinsclub</a></td>
+        <td>Букмекерство</td>
+        <td>241049</td>
+        <td>65341</td>
+        <td>28.0</td>
+        <td>-2840</td>
+        <td>1200</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>киси писи</td>
+        <td><a href="https://t.me/joinchat/WjckoiIHtU1mMzdi">https://t.me/joinchat/WjckoiIHtU1mMzdi</a></td>
+        <td>Букмекерство</td>
+        <td>235375</td>
+        <td>582</td>
+        <td>1.0</td>
+        <td>7238</td>
+        <td>13266</td>
+        <td>8 месяцев 11 дней</td>
+      </tr>
+
+      <tr>
+        <td>Dragon Money</td>
+        <td><a href="https://t.me/drgnmoneyreserve">https://t.me/drgnmoneyreserve</a></td>
+        <td>Букмекерство</td>
+        <td>231722</td>
+        <td>67616</td>
+        <td>30.0</td>
+        <td>72567</td>
+        <td>181157</td>
+        <td>1 месяц 29 дней</td>
+      </tr>
+
+      <tr>
+        <td>VayCasino</td>
+        <td><a href="https://t.me/vaycasino">https://t.me/vaycasino</a></td>
+        <td>Букмекерство</td>
+        <td>222260</td>
+        <td>31481</td>
+        <td>15.0</td>
+        <td>2077</td>
+        <td>18691</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MOSTBET</td>
+        <td><a href="https://t.me/joinchat/l0WnZvjc2N1jY2Rk">https://t.me/joinchat/l0WnZvjc2N1jY2Rk</a></td>
+        <td>Букмекерство</td>
+        <td>219651</td>
+        <td>9704</td>
+        <td>5.0</td>
+        <td>-3335</td>
+        <td>-18338</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ezcash</td>
+        <td><a href="https://t.me/ezcash">https://t.me/ezcash</a></td>
+        <td>Букмекерство</td>
+        <td>214811</td>
+        <td>58048</td>
+        <td>27.0</td>
+        <td>1539</td>
+        <td>6203</td>
+        <td>5 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>TOR.BLACK | Казино 🎰</td>
+        <td><a href="https://t.me/CasinoTorBlack">https://t.me/CasinoTorBlack</a></td>
+        <td>Букмекерство</td>
+        <td>209561</td>
+        <td>4</td>
+        <td>None</td>
+        <td>7</td>
+        <td>6</td>
+        <td>9 месяцев 22 дня</td>
+      </tr>
+
+      <tr>
+        <td>zubarefffburmalda</td>
+        <td><a href="https://t.me/zubarefffburda">https://t.me/zubarefffburda</a></td>
+        <td>Букмекерство</td>
+        <td>209004</td>
+        <td>17016</td>
+        <td>9.0</td>
+        <td>-4328</td>
+        <td>-29994</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АСХАБ ТАМАЕВ🚀 DRIVE</td>
+        <td><a href="https://t.me/joinchat/1YLU2jOOr_plNDU0">https://t.me/joinchat/1YLU2jOOr_plNDU0</a></td>
+        <td>Букмекерство</td>
+        <td>204339</td>
+        <td>4720</td>
+        <td>3.0</td>
+        <td>-3119</td>
+        <td>-17255</td>
+        <td>6 лет 26 дней</td>
+      </tr>
+
+      <tr>
+        <td>новостиОТвелвуры</td>
+        <td><a href="https://t.me/getx_upx_cabura_welvura_x">https://t.me/getx_upx_cabura_welvura_x</a></td>
+        <td>Букмекерство</td>
+        <td>204113</td>
+        <td>2168</td>
+        <td>2.0</td>
+        <td>-3675</td>
+        <td>-18760</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Bunker</td>
+        <td><a href="https://t.me/joinchat/sd4zznSARFQyOGUy">https://t.me/joinchat/sd4zznSARFQyOGUy</a></td>
+        <td>Букмекерство</td>
+        <td>197711</td>
+        <td>4318</td>
+        <td>3.0</td>
+        <td>-728</td>
+        <td>2913</td>
+        <td>5 лет 5 дней</td>
+      </tr>
+
+      <tr>
+        <td>Winline</td>
+        <td><a href="https://t.me/winline">https://t.me/winline</a></td>
+        <td>Букмекерство</td>
+        <td>195495</td>
+        <td>24720</td>
+        <td>13.0</td>
+        <td>1333</td>
+        <td>1116</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Усы на голове</td>
+        <td><a href="https://t.me/nixtalk">https://t.me/nixtalk</a></td>
+        <td>Букмекерство</td>
+        <td>192657</td>
+        <td>98605</td>
+        <td>52.0</td>
+        <td>-571</td>
+        <td>-1255</td>
+        <td>4 года 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>👨‍💻 СТАВКИ НА ФУТБОЛ ПРОГНОЗЫ</td>
+        <td><a href="https://t.me/na_sport_stavkii">https://t.me/na_sport_stavkii</a></td>
+        <td>Букмекерство</td>
+        <td>190210</td>
+        <td>3228</td>
+        <td>2.0</td>
+        <td>40634</td>
+        <td>183418</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Selector | Селектор</td>
+        <td><a href="https://t.me/selector">https://t.me/selector</a></td>
+        <td>Букмекерство</td>
+        <td>188767</td>
+        <td>27105</td>
+        <td>15.0</td>
+        <td>1035</td>
+        <td>6213</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>FONBET</td>
+        <td><a href="https://t.me/fonbet_official">https://t.me/fonbet_official</a></td>
+        <td>Букмекерство</td>
+        <td>183584</td>
+        <td>25348</td>
+        <td>14.0</td>
+        <td>-360</td>
+        <td>7351</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MaxBetov</td>
+        <td><a href="https://t.me/burdakekw">https://t.me/burdakekw</a></td>
+        <td>Букмекерство</td>
+        <td>173445</td>
+        <td>49477</td>
+        <td>29.0</td>
+        <td>54274</td>
+        <td>108412</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MB</td>
+        <td><a href="https://t.me/joinchat/AAAAAE72I6_7uJ8bN59OjQ">https://t.me/joinchat/AAAAAE72I6_7uJ8bN59OjQ</a></td>
+        <td>Букмекерство</td>
+        <td>172603</td>
+        <td>3094</td>
+        <td>2.0</td>
+        <td>1409</td>
+        <td>4339</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/mellstroynot">https://t.me/mellstroynot</a></td>
+        <td>Букмекерство</td>
+        <td>164238</td>
+        <td>21477</td>
+        <td>14.0</td>
+        <td>-173</td>
+        <td>-1117</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Renatko и Шачир</td>
+        <td><a href="https://t.me/renatkotv">https://t.me/renatkotv</a></td>
+        <td>Букмекерство</td>
+        <td>155595</td>
+        <td>46134</td>
+        <td>30.0</td>
+        <td>-439</td>
+        <td>7718</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>BEAR MONEY🐻</td>
+        <td><a href="https://t.me/BearMoney">https://t.me/BearMoney</a></td>
+        <td>Букмекерство</td>
+        <td>152990</td>
+        <td>246</td>
+        <td>1.0</td>
+        <td>-1249</td>
+        <td>-8652</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>OverDrive | 20 ЛЕТ В АРКАДЕ</td>
+        <td><a href="https://t.me/ihuntnoobs">https://t.me/ihuntnoobs</a></td>
+        <td>Букмекерство</td>
+        <td>149895</td>
+        <td>85215</td>
+        <td>57.0</td>
+        <td>6267</td>
+        <td>8648</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Live Bet 🏆</td>
+        <td><a href="https://t.me/joinchat/AAAAAE3Eei2hbgbtZSXUeA">https://t.me/joinchat/AAAAAE3Eei2hbgbtZSXUeA</a></td>
+        <td>Букмекерство</td>
+        <td>149650</td>
+        <td>3423</td>
+        <td>3.0</td>
+        <td>-748</td>
+        <td>3683</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>JetTon Bonus</td>
+        <td><a href="https://t.me/jettonbonus">https://t.me/jettonbonus</a></td>
+        <td>Букмекерство</td>
+        <td>145650</td>
+        <td>20108</td>
+        <td>14.0</td>
+        <td>14455</td>
+        <td>-8765</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Welvura | Велвура</td>
+        <td><a href="https://t.me/welvura">https://t.me/welvura</a></td>
+        <td>Букмекерство</td>
+        <td>145076</td>
+        <td>45322</td>
+        <td>32.0</td>
+        <td>152</td>
+        <td>-1047</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>NAREK 🏆 CLASH ROYALE</td>
+        <td><a href="https://t.me/Narek_Cr">https://t.me/Narek_Cr</a></td>
+        <td>Букмекерство</td>
+        <td>142309</td>
+        <td>91894</td>
+        <td>65.0</td>
+        <td>584</td>
+        <td>2509</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>BetBoom</td>
+        <td><a href="https://t.me/betboomru">https://t.me/betboomru</a></td>
+        <td>Букмекерство</td>
+        <td>134895</td>
+        <td>30224</td>
+        <td>23.0</td>
+        <td>-1820</td>
+        <td>4977</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>RANDX</td>
+        <td><a href="https://t.me/randxplay">https://t.me/randxplay</a></td>
+        <td>Букмекерство</td>
+        <td>134535</td>
+        <td>32515</td>
+        <td>25.0</td>
+        <td>-1091</td>
+        <td>1308</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>LUXEBET</td>
+        <td><a href="https://t.me/joinchat/NnRirfwmx2RmMzhi">https://t.me/joinchat/NnRirfwmx2RmMzhi</a></td>
+        <td>Букмекерство</td>
+        <td>133732</td>
+        <td>19276</td>
+        <td>15.0</td>
+        <td>461</td>
+        <td>2895</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MaxWin | Заносы и Обзоры</td>
+        <td><a href="https://t.me/maxwinru">https://t.me/maxwinru</a></td>
+        <td>Букмекерство</td>
+        <td>132822</td>
+        <td>46767</td>
+        <td>36.0</td>
+        <td>-958</td>
+        <td>9792</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Mellstroy Live</td>
+        <td><a href="https://t.me/joinchat/JCYJNlbuD7c0NDUy">https://t.me/joinchat/JCYJNlbuD7c0NDUy</a></td>
+        <td>Букмекерство</td>
+        <td>126929</td>
+        <td>4511</td>
+        <td>4.0</td>
+        <td>-1714</td>
+        <td>-8509</td>
+        <td>3 года 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>ДанЛудан / danludan</td>
+        <td><a href="https://t.me/danludan_real">https://t.me/danludan_real</a></td>
+        <td>Букмекерство</td>
+        <td>124372</td>
+        <td>12907</td>
+        <td>11.0</td>
+        <td>-4148</td>
+        <td>-15107</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>СтрогоБогСтавок</td>
+        <td><a href="https://t.me/strogostavit">https://t.me/strogostavit</a></td>
+        <td>Букмекерство</td>
+        <td>123732</td>
+        <td>67321</td>
+        <td>55.0</td>
+        <td>-1122</td>
+        <td>3252</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PARI</td>
+        <td><a href="https://t.me/bc_pari">https://t.me/bc_pari</a></td>
+        <td>Букмекерство</td>
+        <td>121920</td>
+        <td>12405</td>
+        <td>11.0</td>
+        <td>-663</td>
+        <td>-1946</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Розыгрыши от Москвача</td>
+        <td><a href="https://t.me/itogimos">https://t.me/itogimos</a></td>
+        <td>Букмекерство</td>
+        <td>121414</td>
+        <td>139958</td>
+        <td>116.0</td>
+        <td>6225</td>
+        <td>7096</td>
+        <td>9 месяцев 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>Meta M5</td>
+        <td><a href="https://t.me/m5_ton">https://t.me/m5_ton</a></td>
+        <td>Букмекерство</td>
+        <td>120807</td>
+        <td>2729</td>
+        <td>3.0</td>
+        <td>-967</td>
+        <td>-5402</td>
+        <td>11 месяцев 13 дней</td>
+      </tr>
+
+      <tr>
+        <td>VLAD KAPUSTA - FC MOBILE</td>
+        <td><a href="https://t.me/crownbet777">https://t.me/crownbet777</a></td>
+        <td>Букмекерство</td>
+        <td>120639</td>
+        <td>40348</td>
+        <td>34.0</td>
+        <td>368</td>
+        <td>-1969</td>
+        <td>5 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>НовостиUPXоGETX</td>
+        <td><a href="https://t.me/upx_getx_promokodyhs_na_taker_x">https://t.me/upx_getx_promokodyhs_na_taker_x</a></td>
+        <td>Букмекерство</td>
+        <td>119824</td>
+        <td>1579</td>
+        <td>2.0</td>
+        <td>-1985</td>
+        <td>-9937</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PINCO Casino</td>
+        <td><a href="https://t.me/joinchat/AAAAAFcIkzzlyvqJE2dpmA">https://t.me/joinchat/AAAAAFcIkzzlyvqJE2dpmA</a></td>
+        <td>Букмекерство</td>
+        <td>118691</td>
+        <td>25605</td>
+        <td>22.0</td>
+        <td>-260</td>
+        <td>-1525</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Казино Пин Ап ПинУп онлайн</td>
+        <td><a href="https://t.me/kazino_pinup">https://t.me/kazino_pinup</a></td>
+        <td>Букмекерство</td>
+        <td>117802</td>
+        <td>74365</td>
+        <td>64.0</td>
+        <td>20403</td>
+        <td>2137</td>
+        <td>3 года 1 день</td>
+      </tr>
+
+      <tr>
+        <td>Brillx | Бриликс</td>
+        <td><a href="https://t.me/brillx_official">https://t.me/brillx_official</a></td>
+        <td>Букмекерство</td>
+        <td>116760</td>
+        <td>14380</td>
+        <td>13.0</td>
+        <td>769</td>
+        <td>4762</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VAVADA</td>
+        <td><a href="https://t.me/mvavada">https://t.me/mvavada</a></td>
+        <td>Букмекерство</td>
+        <td>115925</td>
+        <td>1107</td>
+        <td>1.0</td>
+        <td>-13172</td>
+        <td>-55214</td>
+        <td>3 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ЧУГУНДА</td>
+        <td><a href="https://t.me/chugunda">https://t.me/chugunda</a></td>
+        <td>Букмекерство</td>
+        <td>115471</td>
+        <td>19013</td>
+        <td>17.0</td>
+        <td>-1153</td>
+        <td>-5220</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Fanton RU</td>
+        <td><a href="https://t.me/fanton_nft_ru">https://t.me/fanton_nft_ru</a></td>
+        <td>Букмекерство</td>
+        <td>110961</td>
+        <td>1011</td>
+        <td>1.0</td>
+        <td>-849</td>
+        <td>-3885</td>
+        <td>4 года</td>
+      </tr>
+
+      <tr>
+        <td>BBET</td>
+        <td><a href="https://t.me/joinchat/AAAAAFT074UW_1WPpy0YVQ">https://t.me/joinchat/AAAAAFT074UW_1WPpy0YVQ</a></td>
+        <td>Букмекерство</td>
+        <td>109714</td>
+        <td>5961</td>
+        <td>6.0</td>
+        <td>-279</td>
+        <td>1247</td>
+        <td>4 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лига Ставок</td>
+        <td><a href="https://t.me/ligastavok">https://t.me/ligastavok</a></td>
+        <td>Букмекерство</td>
+        <td>109000</td>
+        <td>15624</td>
+        <td>15.0</td>
+        <td>1337</td>
+        <td>723</td>
+        <td>4 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MONEY-X</td>
+        <td><a href="https://t.me/moneyx12">https://t.me/moneyx12</a></td>
+        <td>Букмекерство</td>
+        <td>108611</td>
+        <td>28231</td>
+        <td>26.0</td>
+        <td>314</td>
+        <td>733</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ТРИКС | TRIX</td>
+        <td><a href="https://t.me/trixxfun">https://t.me/trixxfun</a></td>
+        <td>Букмекерство</td>
+        <td>108314</td>
+        <td>4996</td>
+        <td>5.0</td>
+        <td>-8355</td>
+        <td>28229</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Логово Стронга 🚀 | FC MOBILE</td>
+        <td><a href="https://t.me/strongfifa_bet">https://t.me/strongfifa_bet</a></td>
+        <td>Букмекерство</td>
+        <td>107832</td>
+        <td>37072</td>
+        <td>35.0</td>
+        <td>2855</td>
+        <td>807</td>
+        <td>4 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>OLIMPBET</td>
+        <td><a href="https://t.me/olimpbet">https://t.me/olimpbet</a></td>
+        <td>Букмекерство</td>
+        <td>104790</td>
+        <td>12571</td>
+        <td>12.0</td>
+        <td>95</td>
+        <td>3424</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ramzi666</td>
+        <td><a href="https://t.me/Ramzesasd">https://t.me/Ramzesasd</a></td>
+        <td>Букмекерство</td>
+        <td>104518</td>
+        <td>39917</td>
+        <td>39.0</td>
+        <td>-29</td>
+        <td>6509</td>
+        <td>3 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY</td>
+        <td><a href="https://t.me/joinchat/HioNcc8REEdkNzQy">https://t.me/joinchat/HioNcc8REEdkNzQy</a></td>
+        <td>Букмекерство</td>
+        <td>104390</td>
+        <td>5529</td>
+        <td>6.0</td>
+        <td>-1693</td>
+        <td>-6190</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY и «Друзья»</td>
+        <td><a href="https://t.me/ludobuc">https://t.me/ludobuc</a></td>
+        <td>Букмекерство</td>
+        <td>103747</td>
+        <td>57929</td>
+        <td>56.0</td>
+        <td>-59</td>
+        <td>-494</td>
+        <td>3 года 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY и «Друзья»</td>
+        <td><a href="https://t.me/mellstroy_247">https://t.me/mellstroy_247</a></td>
+        <td>Букмекерство</td>
+        <td>101956</td>
+        <td>57457</td>
+        <td>57.0</td>
+        <td>-252</td>
+        <td>4843</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Taker Play</td>
+        <td><a href="https://t.me/taker_play">https://t.me/taker_play</a></td>
+        <td>Букмекерство</td>
+        <td>99401</td>
+        <td>4627</td>
+        <td>5.0</td>
+        <td>-613</td>
+        <td>-3411</td>
+        <td>3 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Arthas Лудизи - Казино Блог</td>
+        <td><a href="https://t.me/ludeeezy">https://t.me/ludeeezy</a></td>
+        <td>Букмекерство</td>
+        <td>99355</td>
+        <td>33702</td>
+        <td>34.0</td>
+        <td>-314</td>
+        <td>-3080</td>
+        <td>6 лет 23 дня</td>
+      </tr>
+
+      <tr>
+        <td>Raidbet®️</td>
+        <td><a href="https://t.me/joinchat/AAAAAFIXkG9kWQqiyBUgLg">https://t.me/joinchat/AAAAAFIXkG9kWQqiyBUgLg</a></td>
+        <td>Букмекерство</td>
+        <td>98667</td>
+        <td>4057</td>
+        <td>5.0</td>
+        <td>-537</td>
+        <td>-1839</td>
+        <td>7 лет 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Friends | Френдс</td>
+        <td><a href="https://t.me/friends_casino_off">https://t.me/friends_casino_off</a></td>
+        <td>Букмекерство</td>
+        <td>98613</td>
+        <td>11294</td>
+        <td>12.0</td>
+        <td>824</td>
+        <td>4820</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Turbo | Турбо</td>
+        <td><a href="https://t.me/turbo_casino">https://t.me/turbo_casino</a></td>
+        <td>Букмекерство</td>
+        <td>97803</td>
+        <td>11388</td>
+        <td>12.0</td>
+        <td>1160</td>
+        <td>5930</td>
+        <td>2 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>VIP | Спортивная аналитика</td>
+        <td><a href="https://t.me/joinchat/btfckjElo6o3MTY6">https://t.me/joinchat/btfckjElo6o3MTY6</a></td>
+        <td>Букмекерство</td>
+        <td>97205</td>
+        <td>9934</td>
+        <td>11.0</td>
+        <td>-596</td>
+        <td>-2863</td>
+        <td>4 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Асхаб Тамаев 🔥 | Гонка с Венгалби</td>
+        <td><a href="https://t.me/joinchat/CRCwpGcc9MkxMDRk">https://t.me/joinchat/CRCwpGcc9MkxMDRk</a></td>
+        <td>Букмекерство</td>
+        <td>96869</td>
+        <td>1758</td>
+        <td>2.0</td>
+        <td>-1955</td>
+        <td>-9445</td>
+        <td>5 лет 10 дней</td>
+      </tr>
+
+      <tr>
+        <td>AVIATOR MAGIC 🔮</td>
+        <td><a href="https://t.me/joinchat/PiztVnCT2g02Mzhi">https://t.me/joinchat/PiztVnCT2g02Mzhi</a></td>
+        <td>Букмекерство</td>
+        <td>94124</td>
+        <td>1028</td>
+        <td>2.0</td>
+        <td>-918</td>
+        <td>-4624</td>
+        <td>4 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🔥 AM BET 🔥</td>
+        <td><a href="https://t.me/joinchat/AAAAAEl841zcVkbdSHV1cg">https://t.me/joinchat/AAAAAEl841zcVkbdSHV1cg</a></td>
+        <td>Букмекерство</td>
+        <td>92936</td>
+        <td>4988</td>
+        <td>6.0</td>
+        <td>-61</td>
+        <td>-1404</td>
+        <td>7 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY 18+</td>
+        <td><a href="https://t.me/joinchat/sflPKcEVntwwMTYy">https://t.me/joinchat/sflPKcEVntwwMTYy</a></td>
+        <td>Букмекерство</td>
+        <td>91755</td>
+        <td>8984</td>
+        <td>10.0</td>
+        <td>13746</td>
+        <td>3758</td>
+        <td>2 месяца 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/telemellstroy">https://t.me/telemellstroy</a></td>
+        <td>Букмекерство</td>
+        <td>88064</td>
+        <td>5774</td>
+        <td>7.0</td>
+        <td>12</td>
+        <td>47</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>FEH1KC СТРИМЫ</td>
+        <td><a href="https://t.me/FEH1KC">https://t.me/FEH1KC</a></td>
+        <td>Букмекерство</td>
+        <td>86612</td>
+        <td>8677</td>
+        <td>10.0</td>
+        <td>-51</td>
+        <td>2971</td>
+        <td>3 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Делайтик 💬</td>
+        <td><a href="https://t.me/delighttg">https://t.me/delighttg</a></td>
+        <td>Букмекерство</td>
+        <td>86408</td>
+        <td>25530</td>
+        <td>30.0</td>
+        <td>-771</td>
+        <td>-3410</td>
+        <td>5 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY BONUS</td>
+        <td><a href="https://t.me/joinchat/H8XFVvUr4gg1NTM1">https://t.me/joinchat/H8XFVvUr4gg1NTM1</a></td>
+        <td>Букмекерство</td>
+        <td>85499</td>
+        <td>7570</td>
+        <td>9.0</td>
+        <td>56302</td>
+        <td>59030</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>#железнаяставка</td>
+        <td><a href="https://t.me/joinchat/AAAAAEnu-YKIukoOaerR-g">https://t.me/joinchat/AAAAAEnu-YKIukoOaerR-g</a></td>
+        <td>Букмекерство</td>
+        <td>84656</td>
+        <td>5195</td>
+        <td>7.0</td>
+        <td>-307</td>
+        <td>-1308</td>
+        <td>7 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>RAMENBET</td>
+        <td><a href="https://t.me/ramenbet_casino_betting">https://t.me/ramenbet_casino_betting</a></td>
+        <td>Букмекерство</td>
+        <td>84345</td>
+        <td>2990</td>
+        <td>4.0</td>
+        <td>-1096</td>
+        <td>-23898</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>АСХАБ ТАМАЕВ 🚀</td>
+        <td><a href="https://t.me/tamaev_blog">https://t.me/tamaev_blog</a></td>
+        <td>Букмекерство</td>
+        <td>83636</td>
+        <td>2853</td>
+        <td>4.0</td>
+        <td>-2365</td>
+        <td>-11825</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Винокуров ТВ ️️📺</td>
+        <td><a href="https://t.me/joinchat/ldZGxT2OqeViMTMy">https://t.me/joinchat/ldZGxT2OqeViMTMy</a></td>
+        <td>Букмекерство</td>
+        <td>81581</td>
+        <td>21018</td>
+        <td>26.0</td>
+        <td>353</td>
+        <td>2319</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>EZ 25</td>
+        <td><a href="https://t.me/ez25xd">https://t.me/ez25xd</a></td>
+        <td>Букмекерство</td>
+        <td>81388</td>
+        <td>42635</td>
+        <td>53.0</td>
+        <td>-120</td>
+        <td>-948</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ALEXANDER OSIPOV • LIVE👨‍💻</td>
+        <td><a href="https://t.me/alexanderosipov_live">https://t.me/alexanderosipov_live</a></td>
+        <td>Букмекерство</td>
+        <td>80575</td>
+        <td>635</td>
+        <td>1.0</td>
+        <td>-3476</td>
+        <td>-2560</td>
+        <td>7 лет 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МЕЛЛСТРОЙ ДВИЖ</td>
+        <td><a href="https://t.me/mellstroy_dvish_bonus">https://t.me/mellstroy_dvish_bonus</a></td>
+        <td>Букмекерство</td>
+        <td>80170</td>
+        <td>105</td>
+        <td>1.0</td>
+        <td>-1036</td>
+        <td>-5104</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>🧑🏻‍💻СПОРТИВНЫЙ АНАЛИТИК 📊</td>
+        <td><a href="https://t.me/joinchat/AAAAAENr30MxjxXXJx9bqw">https://t.me/joinchat/AAAAAENr30MxjxXXJx9bqw</a></td>
+        <td>Букмекерство</td>
+        <td>79841</td>
+        <td>5841</td>
+        <td>8.0</td>
+        <td>-75</td>
+        <td>-775</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Игорная зона «Красная Поляна»</td>
+        <td><a href="https://t.me/casinosochiofficial">https://t.me/casinosochiofficial</a></td>
+        <td>Букмекерство</td>
+        <td>78825</td>
+        <td>2125</td>
+        <td>3.0</td>
+        <td>-1413</td>
+        <td>-3298</td>
+        <td>8 лет 1 день</td>
+      </tr>
+
+      <tr>
+        <td>МОКРИВСКИЙ БЕТ</td>
+        <td><a href="https://t.me/mokrivskiybet">https://t.me/mokrivskiybet</a></td>
+        <td>Букмекерство</td>
+        <td>78383</td>
+        <td>47701</td>
+        <td>61.0</td>
+        <td>-1731</td>
+        <td>-5879</td>
+        <td>7 месяцев 4 дня</td>
+      </tr>
+
+      <tr>
+        <td>ALEXANDER OSIPOV • LIVE</td>
+        <td><a href="https://t.me/alexandrosipof_live">https://t.me/alexandrosipof_live</a></td>
+        <td>Букмекерство</td>
+        <td>77530</td>
+        <td>2218</td>
+        <td>3.0</td>
+        <td>-170</td>
+        <td>-1623</td>
+        <td>5 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Асхаб Тамаев 🚀</td>
+        <td><a href="https://t.me/ashaab_fan">https://t.me/ashaab_fan</a></td>
+        <td>Букмекерство</td>
+        <td>77522</td>
+        <td>15985</td>
+        <td>21.0</td>
+        <td>18862</td>
+        <td>65001</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MARK BULAH HYPE! 💦</td>
+        <td><a href="https://t.me/markbulahmoney">https://t.me/markbulahmoney</a></td>
+        <td>Букмекерство</td>
+        <td>77441</td>
+        <td>42846</td>
+        <td>56.0</td>
+        <td>-254</td>
+        <td>-492</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Для души 💸</td>
+        <td><a href="https://t.me/joinchat/bg4xDuuliTk3Y2Zi">https://t.me/joinchat/bg4xDuuliTk3Y2Zi</a></td>
+        <td>Букмекерство</td>
+        <td>77235</td>
+        <td>3556</td>
+        <td>5.0</td>
+        <td>-1090</td>
+        <td>-6771</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>

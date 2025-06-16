@@ -1,0 +1,1278 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Отчёт по каналам</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f0f0f0; cursor: pointer; position: relative; }
+    th.sorted-asc::after { content: " ↑"; position: absolute; right: 8px; }
+    th.sorted-desc::after { content: " ↓"; position: absolute; right: 8px; }
+    tbody td.active-col { background-color: #f9f9f9; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Отчёт по каналам</h1>
+  <table id="channelsTable">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Название</th>
+        <th onclick="sortTable(1)">Ссылка</th>
+        <th onclick="sortTable(2)">Категория</th>
+        <th onclick="sortTable(3)">Подписчики</th>
+        <th onclick="sortTable(4)">Средний охват</th>
+        <th onclick="sortTable(5)">ERR (%)</th>
+        <th onclick="sortTable(6)">Миграция 7д</th>
+        <th onclick="sortTable(7)">Миграция 30д</th>
+        <th onclick="sortTable(8)">Возраст</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>ТРЕШ блогеры 18+ | Сливы Скандалы Фрики Стримы Хайп Дичь Видео Секс</td>
+        <td><a href="https://t.me/joinchat/_26zbfnk-ChiMmRi">https://t.me/joinchat/_26zbfnk-ChiMmRi</a></td>
+        <td>Для взрослых</td>
+        <td>979809</td>
+        <td>15336</td>
+        <td>2.0</td>
+        <td>204</td>
+        <td>-44648</td>
+        <td>2 месяца 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>🍑 Студентки - Тинки | Видео откровенных девочек</td>
+        <td><a href="https://t.me/joinchat/3yT9VjAaHf9kYWVi">https://t.me/joinchat/3yT9VjAaHf9kYWVi</a></td>
+        <td>Для взрослых</td>
+        <td>930862</td>
+        <td>11014</td>
+        <td>2.0</td>
+        <td>1858</td>
+        <td>193953</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🫦 Вписки и Сливы 18+ | Секс Драки Порно Видео Молодые Студентки</td>
+        <td><a href="https://t.me/joinchat/928NYvfClUFiNWVi">https://t.me/joinchat/928NYvfClUFiNWVi</a></td>
+        <td>Для взрослых</td>
+        <td>889756</td>
+        <td>12639</td>
+        <td>2.0</td>
+        <td>1517</td>
+        <td>204640</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>MELLSTROY ДВИЖ</td>
+        <td><a href="https://t.me/tellstroy">https://t.me/tellstroy</a></td>
+        <td>Для взрослых</td>
+        <td>883115</td>
+        <td>446175</td>
+        <td>51.0</td>
+        <td>-6014</td>
+        <td>-10832</td>
+        <td>5 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Поговорим о сексе 💦</td>
+        <td><a href="https://t.me/joinchat/dC59Q3q8nMYyY2U6">https://t.me/joinchat/dC59Q3q8nMYyY2U6</a></td>
+        <td>Для взрослых</td>
+        <td>875534</td>
+        <td>121330</td>
+        <td>14.0</td>
+        <td>17404</td>
+        <td>37023</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Мука</td>
+        <td><a href="https://t.me/joinchat/8aD4IfUacZFjZjky">https://t.me/joinchat/8aD4IfUacZFjZjky</a></td>
+        <td>Для взрослых</td>
+        <td>865789</td>
+        <td>151939</td>
+        <td>18.0</td>
+        <td>8570</td>
+        <td>34618</td>
+        <td>3 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЗУМЕРЫ</td>
+        <td><a href="https://t.me/joinchat/ubib-YL6mwkzYThi">https://t.me/joinchat/ubib-YL6mwkzYThi</a></td>
+        <td>Для взрослых</td>
+        <td>807325</td>
+        <td>16917</td>
+        <td>3.0</td>
+        <td>1728</td>
+        <td>-34914</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Фапач</td>
+        <td><a href="https://t.me/ru2ch_ban">https://t.me/ru2ch_ban</a></td>
+        <td>Для взрослых</td>
+        <td>690693</td>
+        <td>351346</td>
+        <td>51.0</td>
+        <td>5199</td>
+        <td>10374</td>
+        <td>5 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Отдохни</td>
+        <td><a href="https://t.me/joinchat/PTl_vNGejYs2ZGEy">https://t.me/joinchat/PTl_vNGejYs2ZGEy</a></td>
+        <td>Для взрослых</td>
+        <td>690460</td>
+        <td>125392</td>
+        <td>19.0</td>
+        <td>18269</td>
+        <td>18063</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Blackpiratexx 🏴‍☠️</td>
+        <td><a href="https://t.me/joinchat/7CqC7lbty44zYjRi">https://t.me/joinchat/7CqC7lbty44zYjRi</a></td>
+        <td>Для взрослых</td>
+        <td>566857</td>
+        <td>56564</td>
+        <td>10.0</td>
+        <td>2291</td>
+        <td>3275</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Взрослые мультфильмы</td>
+        <td><a href="https://t.me/joinchat/aKZv_qDq-Bc3MDA6">https://t.me/joinchat/aKZv_qDq-Bc3MDA6</a></td>
+        <td>Для взрослых</td>
+        <td>483746</td>
+        <td>49207</td>
+        <td>11.0</td>
+        <td>-1540</td>
+        <td>-7901</td>
+        <td>6 лет 2 дня</td>
+      </tr>
+
+      <tr>
+        <td>СТЫД</td>
+        <td><a href="https://t.me/joinchat/qV1Gis6Uk54wZDcy">https://t.me/joinchat/qV1Gis6Uk54wZDcy</a></td>
+        <td>Для взрослых</td>
+        <td>433901</td>
+        <td>37221</td>
+        <td>9.0</td>
+        <td>-2117</td>
+        <td>-7226</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>В САЛФЕТКУ 💦</td>
+        <td><a href="https://t.me/joinchat/jPeDlcSL-HQ5Yzgy">https://t.me/joinchat/jPeDlcSL-HQ5Yzgy</a></td>
+        <td>Для взрослых</td>
+        <td>417403</td>
+        <td>110158</td>
+        <td>27.0</td>
+        <td>27656</td>
+        <td>118428</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TIK TOK 18+</td>
+        <td><a href="https://t.me/joinchat/nE2sp9SuhKNiOGQy">https://t.me/joinchat/nE2sp9SuhKNiOGQy</a></td>
+        <td>Для взрослых</td>
+        <td>395775</td>
+        <td>1438</td>
+        <td>1.0</td>
+        <td>-150</td>
+        <td>18979</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Между ножек👅</td>
+        <td><a href="https://t.me/joinchat/AAAAAFYyxrvR2Tod45cGxA">https://t.me/joinchat/AAAAAFYyxrvR2Tod45cGxA</a></td>
+        <td>Для взрослых</td>
+        <td>356002</td>
+        <td>14379</td>
+        <td>4.0</td>
+        <td>2849</td>
+        <td>12531</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>NAKED TikTok 18+</td>
+        <td><a href="https://t.me/Naked_tiktok2">https://t.me/Naked_tiktok2</a></td>
+        <td>Для взрослых</td>
+        <td>347677</td>
+        <td>28144</td>
+        <td>9.0</td>
+        <td>1408</td>
+        <td>7626</td>
+        <td>4 года 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>СТЫДНЫЕ ИСТОРИИ</td>
+        <td><a href="https://t.me/joinchat/DJkxOQlwNJc3YTMy">https://t.me/joinchat/DJkxOQlwNJc3YTMy</a></td>
+        <td>Для взрослых</td>
+        <td>333100</td>
+        <td>29252</td>
+        <td>9.0</td>
+        <td>-7173</td>
+        <td>-31541</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Чисто с пацанами</td>
+        <td><a href="https://t.me/joinchat/ZJq9GknoMscwYjRi">https://t.me/joinchat/ZJq9GknoMscwYjRi</a></td>
+        <td>Для взрослых</td>
+        <td>328869</td>
+        <td>119385</td>
+        <td>37.0</td>
+        <td>440</td>
+        <td>828</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Eros TikTokos | Антон и Люба</td>
+        <td><a href="https://t.me/joinchat/87saG2jD6dBiNjFi">https://t.me/joinchat/87saG2jD6dBiNjFi</a></td>
+        <td>Для взрослых</td>
+        <td>316104</td>
+        <td>57586</td>
+        <td>19.0</td>
+        <td>2117</td>
+        <td>8019</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ТикТок+ @kotkit18</td>
+        <td><a href="https://t.me/joinchat/AAAAAFlOis98WjRaAFwbvg">https://t.me/joinchat/AAAAAFlOis98WjRaAFwbvg</a></td>
+        <td>Для взрослых</td>
+        <td>291306</td>
+        <td>33229</td>
+        <td>12.0</td>
+        <td>-557</td>
+        <td>-3788</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ПОШЛЫЕ ИСТОРИИ</td>
+        <td><a href="https://t.me/joinchat/4vfSi-jPg31jZjhi">https://t.me/joinchat/4vfSi-jPg31jZjhi</a></td>
+        <td>Для взрослых</td>
+        <td>286546</td>
+        <td>6933</td>
+        <td>3.0</td>
+        <td>-1236</td>
+        <td>-5790</td>
+        <td>3 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>SEX💦</td>
+        <td><a href="https://t.me/joinchat/AAAAAEagKG2l4Qu5-N3gow">https://t.me/joinchat/AAAAAEagKG2l4Qu5-N3gow</a></td>
+        <td>Для взрослых</td>
+        <td>285623</td>
+        <td>7880</td>
+        <td>3.0</td>
+        <td>4284</td>
+        <td>20509</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PORNHUB</td>
+        <td><a href="https://t.me/joinchat/Ok3p01aNzGNkODJi">https://t.me/joinchat/Ok3p01aNzGNkODJi</a></td>
+        <td>Для взрослых</td>
+        <td>278526</td>
+        <td>5066</td>
+        <td>2.0</td>
+        <td>14685</td>
+        <td>50117</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Наслаждение</td>
+        <td><a href="https://t.me/joinchat/mNw_Tme30TJkYTNh">https://t.me/joinchat/mNw_Tme30TJkYTNh</a></td>
+        <td>Для взрослых</td>
+        <td>273359</td>
+        <td>54020</td>
+        <td>20.0</td>
+        <td>9189</td>
+        <td>48235</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>МАМКИ 🔥</td>
+        <td><a href="https://t.me/joinchat/EqVHUADvNwA4Mzhi">https://t.me/joinchat/EqVHUADvNwA4Mzhi</a></td>
+        <td>Для взрослых</td>
+        <td>272933</td>
+        <td>9525</td>
+        <td>4.0</td>
+        <td>16697</td>
+        <td>55200</td>
+        <td>11 месяцев 20 дней</td>
+      </tr>
+
+      <tr>
+        <td>ДОМАШКА</td>
+        <td><a href="https://t.me/joinchat/v68vVecg7H0xYWIy">https://t.me/joinchat/v68vVecg7H0xYWIy</a></td>
+        <td>Для взрослых</td>
+        <td>266016</td>
+        <td>12730</td>
+        <td>5.0</td>
+        <td>9390</td>
+        <td>33619</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Злой Заяц</td>
+        <td><a href="https://t.me/joinchat/q3owQiup07o5OTcy">https://t.me/joinchat/q3owQiup07o5OTcy</a></td>
+        <td>Для взрослых</td>
+        <td>265485</td>
+        <td>12289</td>
+        <td>5.0</td>
+        <td>-1642</td>
+        <td>-7363</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Eva Elfie</td>
+        <td><a href="https://t.me/evaelfie_life">https://t.me/evaelfie_life</a></td>
+        <td>Для взрослых</td>
+        <td>262780</td>
+        <td>242438</td>
+        <td>93.0</td>
+        <td>6098</td>
+        <td>14978</td>
+        <td>4 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Азиаточки Анимешницы ✨ AA 💓✨</td>
+        <td><a href="https://t.me/joinchat/3Bmj1huh73k5NzFi">https://t.me/joinchat/3Bmj1huh73k5NzFi</a></td>
+        <td>Для взрослых</td>
+        <td>262670</td>
+        <td>13533</td>
+        <td>6.0</td>
+        <td>-194</td>
+        <td>-1234</td>
+        <td>3 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Косплей 18+ 2.0</td>
+        <td><a href="https://t.me/joinchat/03hZaCgIlhg3YjM6">https://t.me/joinchat/03hZaCgIlhg3YjM6</a></td>
+        <td>Для взрослых</td>
+        <td>261873</td>
+        <td>36658</td>
+        <td>14.0</td>
+        <td>-1231</td>
+        <td>-5332</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Хентай Серии | Hentai Series</td>
+        <td><a href="https://t.me/joinchat/5CcfLKTlsto3NGJi">https://t.me/joinchat/5CcfLKTlsto3NGJi</a></td>
+        <td>Для взрослых</td>
+        <td>261393</td>
+        <td>25978</td>
+        <td>10.0</td>
+        <td>-2398</td>
+        <td>-9095</td>
+        <td>2 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СТЫДОБА</td>
+        <td><a href="https://t.me/joinchat/AAAAAFIzp19sa6GARbssnw">https://t.me/joinchat/AAAAAFIzp19sa6GARbssnw</a></td>
+        <td>Для взрослых</td>
+        <td>259631</td>
+        <td>17285</td>
+        <td>7.0</td>
+        <td>-1383</td>
+        <td>-3300</td>
+        <td>6 лет 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Пошлые истории</td>
+        <td><a href="https://t.me/joinchat/AAAAAECNoFHG6v4M5JZOhw">https://t.me/joinchat/AAAAAECNoFHG6v4M5JZOhw</a></td>
+        <td>Для взрослых</td>
+        <td>259359</td>
+        <td>14150</td>
+        <td>6.0</td>
+        <td>-2373</td>
+        <td>-13334</td>
+        <td>7 лет 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Comics_ty 18+</td>
+        <td><a href="https://t.me/joinchat/Bq_z4BeXW2IwOTgy">https://t.me/joinchat/Bq_z4BeXW2IwOTgy</a></td>
+        <td>Для взрослых</td>
+        <td>254846</td>
+        <td>18529</td>
+        <td>8.0</td>
+        <td>-1321</td>
+        <td>-6374</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Porn for you</td>
+        <td><a href="https://t.me/random_porn">https://t.me/random_porn</a></td>
+        <td>Для взрослых</td>
+        <td>250853</td>
+        <td>164496</td>
+        <td>66.0</td>
+        <td>5842</td>
+        <td>22564</td>
+        <td>6 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МультHUB.mp4 🔞🍀</td>
+        <td><a href="https://t.me/joinchat/_WTayOl9xccwMDRi">https://t.me/joinchat/_WTayOl9xccwMDRi</a></td>
+        <td>Для взрослых</td>
+        <td>248832</td>
+        <td>37131</td>
+        <td>15.0</td>
+        <td>6621</td>
+        <td>34110</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>LO❤️E IS</td>
+        <td><a href="https://t.me/joinchat/HPHKg5vJ48YxMTUy">https://t.me/joinchat/HPHKg5vJ48YxMTUy</a></td>
+        <td>Для взрослых</td>
+        <td>245773</td>
+        <td>10575</td>
+        <td>5.0</td>
+        <td>1785</td>
+        <td>9820</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Tiktoks Prohibidos📱🔞</td>
+        <td><a href="https://t.me/joinchat/uzlwazogWXI3ODIx">https://t.me/joinchat/uzlwazogWXI3ODIx</a></td>
+        <td>Для взрослых</td>
+        <td>240610</td>
+        <td>17546</td>
+        <td>8.0</td>
+        <td>-1473</td>
+        <td>-10989</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Азиаточки</td>
+        <td><a href="https://t.me/joinchat/ZefXjigYDI4xYzcy">https://t.me/joinchat/ZefXjigYDI4xYzcy</a></td>
+        <td>Для взрослых</td>
+        <td>239167</td>
+        <td>1831</td>
+        <td>1.0</td>
+        <td>13228</td>
+        <td>43731</td>
+        <td>11 месяцев 16 дней</td>
+      </tr>
+
+      <tr>
+        <td>вДул</td>
+        <td><a href="https://t.me/joinchat/MPrziO4MaYQzZWVi">https://t.me/joinchat/MPrziO4MaYQzZWVi</a></td>
+        <td>Для взрослых</td>
+        <td>232127</td>
+        <td>39686</td>
+        <td>18.0</td>
+        <td>7085</td>
+        <td>37060</td>
+        <td>2 года 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>МИЛФЫ</td>
+        <td><a href="https://t.me/joinchat/kSc28ye24IE2Mzcy">https://t.me/joinchat/kSc28ye24IE2Mzcy</a></td>
+        <td>Для взрослых</td>
+        <td>231728</td>
+        <td>3416</td>
+        <td>2.0</td>
+        <td>14792</td>
+        <td>49131</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>FULL VIDEO</td>
+        <td><a href="https://t.me/joinchat/SYQY8Bt_Wu81YTZi">https://t.me/joinchat/SYQY8Bt_Wu81YTZi</a></td>
+        <td>Для взрослых</td>
+        <td>231718</td>
+        <td>8937</td>
+        <td>4.0</td>
+        <td>1723</td>
+        <td>8302</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ГДЕ МОЙ ФУЛЛ?? 🤬</td>
+        <td><a href="https://t.me/joinchat/_wyf4XaNwFw5OWQy">https://t.me/joinchat/_wyf4XaNwFw5OWQy</a></td>
+        <td>Для взрослых</td>
+        <td>230937</td>
+        <td>14374</td>
+        <td>7.0</td>
+        <td>376</td>
+        <td>6683</td>
+        <td>2 года 3 дня</td>
+      </tr>
+
+      <tr>
+        <td>Phub COMICS</td>
+        <td><a href="https://t.me/joinchat/E1aQslw21Mg3MTRi">https://t.me/joinchat/E1aQslw21Mg3MTRi</a></td>
+        <td>Для взрослых</td>
+        <td>228126</td>
+        <td>22973</td>
+        <td>11.0</td>
+        <td>-474</td>
+        <td>-4206</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БАНДИТ🪓</td>
+        <td><a href="https://t.me/joinchat/rwdfbx1865s4NTZi">https://t.me/joinchat/rwdfbx1865s4NTZi</a></td>
+        <td>Для взрослых</td>
+        <td>227961</td>
+        <td>17763</td>
+        <td>8.0</td>
+        <td>2818</td>
+        <td>17045</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Групповое | PornHub</td>
+        <td><a href="https://t.me/joinchat/HGZQ2dVcEUg4Njc6">https://t.me/joinchat/HGZQ2dVcEUg4Njc6</a></td>
+        <td>Для взрослых</td>
+        <td>227239</td>
+        <td>2049</td>
+        <td>1.0</td>
+        <td>13747</td>
+        <td>47124</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>PHub COSPLAY</td>
+        <td><a href="https://t.me/joinchat/-WPmSD8EnFZmNWMy">https://t.me/joinchat/-WPmSD8EnFZmNWMy</a></td>
+        <td>Для взрослых</td>
+        <td>226919</td>
+        <td>13442</td>
+        <td>6.0</td>
+        <td>-2434</td>
+        <td>-11799</td>
+        <td>2 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PornHub</td>
+        <td><a href="https://t.me/joinchat/AAAAAFXnlYIvIix_z_gA9A">https://t.me/joinchat/AAAAAFXnlYIvIix_z_gA9A</a></td>
+        <td>Для взрослых</td>
+        <td>226519</td>
+        <td>63805</td>
+        <td>29.0</td>
+        <td>5595</td>
+        <td>6744</td>
+        <td>6 лет 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Pornogram🔞</td>
+        <td><a href="https://t.me/joinchat/AAAAAECYwEYyQ4wub73TQQ">https://t.me/joinchat/AAAAAECYwEYyQ4wub73TQQ</a></td>
+        <td>Для взрослых</td>
+        <td>222892</td>
+        <td>5719</td>
+        <td>3.0</td>
+        <td>3324</td>
+        <td>14926</td>
+        <td>8 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Студенты 365</td>
+        <td><a href="https://t.me/joinchat/N4gc5gSklC83ZTUy">https://t.me/joinchat/N4gc5gSklC83ZTUy</a></td>
+        <td>Для взрослых</td>
+        <td>222162</td>
+        <td>1378</td>
+        <td>1.0</td>
+        <td>14239</td>
+        <td>47286</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Развейся</td>
+        <td><a href="https://t.me/joinchat/hw_dN55a9Ec0YjIy">https://t.me/joinchat/hw_dN55a9Ec0YjIy</a></td>
+        <td>Для взрослых</td>
+        <td>219589</td>
+        <td>38843</td>
+        <td>18.0</td>
+        <td>5316</td>
+        <td>20414</td>
+        <td>2 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Milf & Mature +18</td>
+        <td><a href="https://t.me/joinchat/V4kUYBZh96gQKo8E">https://t.me/joinchat/V4kUYBZh96gQKo8E</a></td>
+        <td>Для взрослых</td>
+        <td>217843</td>
+        <td>45174</td>
+        <td>21.0</td>
+        <td>1847</td>
+        <td>4528</td>
+        <td>5 лет 1 день</td>
+      </tr>
+
+      <tr>
+        <td>FAP АРХИВ</td>
+        <td><a href="https://t.me/joinchat/_R2acIByt3AxYmJi">https://t.me/joinchat/_R2acIByt3AxYmJi</a></td>
+        <td>Для взрослых</td>
+        <td>216345</td>
+        <td>11028</td>
+        <td>6.0</td>
+        <td>1427</td>
+        <td>6777</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Vulgar VIDEO💦</td>
+        <td><a href="https://t.me/joinchat/AAAAAE_Tkrw8jceelIKw5Q">https://t.me/joinchat/AAAAAE_Tkrw8jceelIKw5Q</a></td>
+        <td>Для взрослых</td>
+        <td>214149</td>
+        <td>4907</td>
+        <td>3.0</td>
+        <td>1738</td>
+        <td>13910</td>
+        <td>5 лет 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ТАРХУН</td>
+        <td><a href="https://t.me/joinchat/_ZUvwnGCRcAyNjVi">https://t.me/joinchat/_ZUvwnGCRcAyNjVi</a></td>
+        <td>Для взрослых</td>
+        <td>213332</td>
+        <td>21598</td>
+        <td>11.0</td>
+        <td>-593</td>
+        <td>555</td>
+        <td>6 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>HENTAI GTFO 18 +</td>
+        <td><a href="https://t.me/joinchat/AAAAAFVbazLXq5JUXcUKTQ">https://t.me/joinchat/AAAAAFVbazLXq5JUXcUKTQ</a></td>
+        <td>Для взрослых</td>
+        <td>209583</td>
+        <td>24806</td>
+        <td>12.0</td>
+        <td>936</td>
+        <td>3976</td>
+        <td>4 года 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВЫДРОЧКА 🦦</td>
+        <td><a href="https://t.me/joinchat/PFywZPOaqFQ5NjQy">https://t.me/joinchat/PFywZPOaqFQ5NjQy</a></td>
+        <td>Для взрослых</td>
+        <td>204572</td>
+        <td>20217</td>
+        <td>10.0</td>
+        <td>-165</td>
+        <td>127</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Porno GIF🔞</td>
+        <td><a href="https://t.me/joinchat/AAAAAD9z5c6HL9M_KFYrHA">https://t.me/joinchat/AAAAAD9z5c6HL9M_KFYrHA</a></td>
+        <td>Для взрослых</td>
+        <td>203079</td>
+        <td>3514</td>
+        <td>2.0</td>
+        <td>1339</td>
+        <td>11981</td>
+        <td>8 лет 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ВЫЖИМАЛКА | ГРЯЗЬ</td>
+        <td><a href="https://t.me/joinchat/Avb3iwggm3piNTIy">https://t.me/joinchat/Avb3iwggm3piNTIy</a></td>
+        <td>Для взрослых</td>
+        <td>198933</td>
+        <td>3038</td>
+        <td>2.0</td>
+        <td>-2039</td>
+        <td>-9813</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Ксанни Банни ZEF</td>
+        <td><a href="https://t.me/Xanybanny">https://t.me/Xanybanny</a></td>
+        <td>Для взрослых</td>
+        <td>198154</td>
+        <td>11024</td>
+        <td>6.0</td>
+        <td>-2291</td>
+        <td>-12682</td>
+        <td>2 года 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>ЛюдиPRO треш</td>
+        <td><a href="https://t.me/joinchat/hqqtFWq7Vg0wMDI6">https://t.me/joinchat/hqqtFWq7Vg0wMDI6</a></td>
+        <td>Для взрослых</td>
+        <td>197539</td>
+        <td>24888</td>
+        <td>13.0</td>
+        <td>-2803</td>
+        <td>-7842</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CrazyHub</td>
+        <td><a href="https://t.me/joinchat/3UGq9yGDVf9jYTYy">https://t.me/joinchat/3UGq9yGDVf9jYTYy</a></td>
+        <td>Для взрослых</td>
+        <td>193715</td>
+        <td>6548</td>
+        <td>4.0</td>
+        <td>-1595</td>
+        <td>-7638</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Sweet SEX🎂</td>
+        <td><a href="https://t.me/joinchat/AAAAAFNabptdXVNEPxAp9g">https://t.me/joinchat/AAAAAFNabptdXVNEPxAp9g</a></td>
+        <td>Для взрослых</td>
+        <td>193507</td>
+        <td>4947</td>
+        <td>3.0</td>
+        <td>1011</td>
+        <td>10250</td>
+        <td>6 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Лапа Треш</td>
+        <td><a href="https://t.me/lapa_hapas">https://t.me/lapa_hapas</a></td>
+        <td>Для взрослых</td>
+        <td>193314</td>
+        <td>6171</td>
+        <td>4.0</td>
+        <td>-2576</td>
+        <td>-12369</td>
+        <td>1 год 3 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Резервный BrazzersTG</td>
+        <td><a href="https://t.me/joinchat/AAAAAEa2HAUjxhTr163vag">https://t.me/joinchat/AAAAAEa2HAUjxhTr163vag</a></td>
+        <td>Для взрослых</td>
+        <td>191612</td>
+        <td>19028</td>
+        <td>10.0</td>
+        <td>518</td>
+        <td>-2904</td>
+        <td>4 года 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БОЛЬШИЕ МАМКИ</td>
+        <td><a href="https://t.me/joinchat/7mlf1U0Mljg3MjJi">https://t.me/joinchat/7mlf1U0Mljg3MjJi</a></td>
+        <td>Для взрослых</td>
+        <td>187882</td>
+        <td>10457</td>
+        <td>6.0</td>
+        <td>1954</td>
+        <td>7785</td>
+        <td>1 год 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Actress Proda</td>
+        <td><a href="https://t.me/joinchat/MsYzGRAcM2I1NGM6">https://t.me/joinchat/MsYzGRAcM2I1NGM6</a></td>
+        <td>Для взрослых</td>
+        <td>186021</td>
+        <td>28980</td>
+        <td>16.0</td>
+        <td>-3359</td>
+        <td>-18205</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Круглосуточный ⏳💞</td>
+        <td><a href="https://t.me/joinchat/iV_6KHZGxG1mNTIy">https://t.me/joinchat/iV_6KHZGxG1mNTIy</a></td>
+        <td>Для взрослых</td>
+        <td>185992</td>
+        <td>27501</td>
+        <td>15.0</td>
+        <td>-3195</td>
+        <td>-16749</td>
+        <td>2 года 6 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Азбука Отношений</td>
+        <td><a href="https://t.me/azbukasexx">https://t.me/azbukasexx</a></td>
+        <td>Для взрослых</td>
+        <td>185700</td>
+        <td>1675</td>
+        <td>1.0</td>
+        <td>-2475</td>
+        <td>-11500</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Студенты | PornHub</td>
+        <td><a href="https://t.me/joinchat/uD4HrU0tI_83NTAy">https://t.me/joinchat/uD4HrU0tI_83NTAy</a></td>
+        <td>Для взрослых</td>
+        <td>185040</td>
+        <td>4498</td>
+        <td>3.0</td>
+        <td>10872</td>
+        <td>31184</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Скрытая камера 18+</td>
+        <td><a href="https://t.me/joinchat/IH9Ch7Hd3EwxYTRi">https://t.me/joinchat/IH9Ch7Hd3EwxYTRi</a></td>
+        <td>Для взрослых</td>
+        <td>184560</td>
+        <td>4359</td>
+        <td>3.0</td>
+        <td>10420</td>
+        <td>27557</td>
+        <td>3 года 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>PREMIUM АРХИB 📂</td>
+        <td><a href="https://t.me/joinchat/etY7CzbfINk4OTVi">https://t.me/joinchat/etY7CzbfINk4OTVi</a></td>
+        <td>Для взрослых</td>
+        <td>182988</td>
+        <td>2125</td>
+        <td>2.0</td>
+        <td>7803</td>
+        <td>24825</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Палата №6</td>
+        <td><a href="https://t.me/palata6_tg">https://t.me/palata6_tg</a></td>
+        <td>Для взрослых</td>
+        <td>181924</td>
+        <td>7884</td>
+        <td>5.0</td>
+        <td>-1982</td>
+        <td>-10053</td>
+        <td>1 год 9 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>CumHub</td>
+        <td><a href="https://t.me/joinchat/p6t_MuFnZfU5NTc6">https://t.me/joinchat/p6t_MuFnZfU5NTc6</a></td>
+        <td>Для взрослых</td>
+        <td>180718</td>
+        <td>41237</td>
+        <td>23.0</td>
+        <td>-2070</td>
+        <td>-4492</td>
+        <td>2 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>TIKTOK 21+</td>
+        <td><a href="https://t.me/joinchat/32vtyHwBcQNmOGQy">https://t.me/joinchat/32vtyHwBcQNmOGQy</a></td>
+        <td>Для взрослых</td>
+        <td>177700</td>
+        <td>2573</td>
+        <td>2.0</td>
+        <td>8211</td>
+        <td>32865</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Proda Dvizh</td>
+        <td><a href="https://t.me/joinchat/DB3uBW9BVYs3MmIy">https://t.me/joinchat/DB3uBW9BVYs3MmIy</a></td>
+        <td>Для взрослых</td>
+        <td>177489</td>
+        <td>20674</td>
+        <td>12.0</td>
+        <td>-1214</td>
+        <td>-6033</td>
+        <td>3 года 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ANAL</td>
+        <td><a href="https://t.me/joinchat/PQ-Zof6DdTE1YmZi">https://t.me/joinchat/PQ-Zof6DdTE1YmZi</a></td>
+        <td>Для взрослых</td>
+        <td>177032</td>
+        <td>3098</td>
+        <td>2.0</td>
+        <td>7371</td>
+        <td>30647</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>RUSSIAN GUYS 18+</td>
+        <td><a href="https://t.me/joinchat/AAAAAEmjut2e2cKnXcsNYQ">https://t.me/joinchat/AAAAAEmjut2e2cKnXcsNYQ</a></td>
+        <td>Для взрослых</td>
+        <td>176669</td>
+        <td>13667</td>
+        <td>8.0</td>
+        <td>1026</td>
+        <td>2162</td>
+        <td>5 лет 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>РУССКАЯ ДОМАШКA</td>
+        <td><a href="https://t.me/joinchat/XQEu7WkD8pIyNTAy">https://t.me/joinchat/XQEu7WkD8pIyNTAy</a></td>
+        <td>Для взрослых</td>
+        <td>175885</td>
+        <td>19713</td>
+        <td>12.0</td>
+        <td>31363</td>
+        <td>125275</td>
+        <td>10 месяцев 9 дней</td>
+      </tr>
+
+      <tr>
+        <td>Мразь?</td>
+        <td><a href="https://t.me/joinchat/oH3yFoFNBqk5ZGVi">https://t.me/joinchat/oH3yFoFNBqk5ZGVi</a></td>
+        <td>Для взрослых</td>
+        <td>175434</td>
+        <td>3809</td>
+        <td>3.0</td>
+        <td>-1908</td>
+        <td>-8573</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>ЛЕСБИЯНКИ</td>
+        <td><a href="https://t.me/joinchat/UUpcch90ScQwYWMy">https://t.me/joinchat/UUpcch90ScQwYWMy</a></td>
+        <td>Для взрослых</td>
+        <td>174073</td>
+        <td>2913</td>
+        <td>2.0</td>
+        <td>9111</td>
+        <td>33313</td>
+        <td>1 год 5 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>PornHub Premium</td>
+        <td><a href="https://t.me/joinchat/ayLFpjgEKR5kOTQ6">https://t.me/joinchat/ayLFpjgEKR5kOTQ6</a></td>
+        <td>Для взрослых</td>
+        <td>173334</td>
+        <td>23247</td>
+        <td>14.0</td>
+        <td>-633</td>
+        <td>-2963</td>
+        <td>3 года 18 дней</td>
+      </tr>
+
+      <tr>
+        <td>ДОМАШКA 18+</td>
+        <td><a href="https://t.me/joinchat/6XTjwxU5AdBjOTZi">https://t.me/joinchat/6XTjwxU5AdBjOTZi</a></td>
+        <td>Для взрослых</td>
+        <td>173067</td>
+        <td>4137</td>
+        <td>3.0</td>
+        <td>8624</td>
+        <td>24967</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>🔞🔥HOT PORN🔥🔞</td>
+        <td><a href="https://t.me/joinchat/AAAAAE7it2zMwS5oKuPijA">https://t.me/joinchat/AAAAAE7it2zMwS5oKuPijA</a></td>
+        <td>Для взрослых</td>
+        <td>172767</td>
+        <td>8588</td>
+        <td>5.0</td>
+        <td>2469</td>
+        <td>13691</td>
+        <td>5 лет 11 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>ДОМАШКА</td>
+        <td><a href="https://t.me/joinchat/sNup8vhUCws5Y2E6">https://t.me/joinchat/sNup8vhUCws5Y2E6</a></td>
+        <td>Для взрослых</td>
+        <td>171560</td>
+        <td>2586</td>
+        <td>2.0</td>
+        <td>12876</td>
+        <td>33191</td>
+        <td>1 год 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Знакомства - Общение❤️</td>
+        <td><a href="https://t.me/joinchat/RpZBLM1t2bNkZDJi">https://t.me/joinchat/RpZBLM1t2bNkZDJi</a></td>
+        <td>Для взрослых</td>
+        <td>170676</td>
+        <td>94</td>
+        <td>1.0</td>
+        <td>-2724</td>
+        <td>-13708</td>
+        <td>1 год 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🇷🇺RUSSIAN PORN</td>
+        <td><a href="https://t.me/joinchat/2m__Bu718hxmYzgy">https://t.me/joinchat/2m__Bu718hxmYzgy</a></td>
+        <td>Для взрослых</td>
+        <td>169809</td>
+        <td>2627</td>
+        <td>2.0</td>
+        <td>8452</td>
+        <td>25221</td>
+        <td>1 год 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Тинкино Гнездышко🪺</td>
+        <td><a href="https://t.me/joinchat/O4L3fXcaovxjZjZi">https://t.me/joinchat/O4L3fXcaovxjZjZi</a></td>
+        <td>Для взрослых</td>
+        <td>168790</td>
+        <td>69071</td>
+        <td>41.0</td>
+        <td>2096</td>
+        <td>8381</td>
+        <td>2 года 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>Скрытая камера 19+</td>
+        <td><a href="https://t.me/joinchat/VJ19UFGYYsE2MzU6">https://t.me/joinchat/VJ19UFGYYsE2MzU6</a></td>
+        <td>Для взрослых</td>
+        <td>168739</td>
+        <td>2305</td>
+        <td>2.0</td>
+        <td>9428</td>
+        <td>31906</td>
+        <td>1 год 30 дней</td>
+      </tr>
+
+      <tr>
+        <td>ONLYFANS</td>
+        <td><a href="https://t.me/joinchat/sraQHmbzcXA2MWQy">https://t.me/joinchat/sraQHmbzcXA2MWQy</a></td>
+        <td>Для взрослых</td>
+        <td>168364</td>
+        <td>1445</td>
+        <td>1.0</td>
+        <td>8852</td>
+        <td>30086</td>
+        <td>1 год 7 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>Ебать колотить</td>
+        <td><a href="https://t.me/joinchat/zYBWcs68gHtkMDIy">https://t.me/joinchat/zYBWcs68gHtkMDIy</a></td>
+        <td>Для взрослых</td>
+        <td>167342</td>
+        <td>46645</td>
+        <td>28.0</td>
+        <td>7389</td>
+        <td>62504</td>
+        <td>4 года 2 месяца</td>
+      </tr>
+
+      <tr>
+        <td>Я не шлюха, я анимешница</td>
+        <td><a href="https://t.me/joinchat/HkyjapVy7-tiYmYy">https://t.me/joinchat/HkyjapVy7-tiYmYy</a></td>
+        <td>Для взрослых</td>
+        <td>166993</td>
+        <td>17137</td>
+        <td>11.0</td>
+        <td>-955</td>
+        <td>-4557</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>СТУДЕНТКИ 19+</td>
+        <td><a href="https://t.me/joinchat/JIedQ0JEPA9kYjQy">https://t.me/joinchat/JIedQ0JEPA9kYjQy</a></td>
+        <td>Для взрослых</td>
+        <td>166319</td>
+        <td>2345</td>
+        <td>2.0</td>
+        <td>6886</td>
+        <td>27746</td>
+        <td>1 год 4 месяца</td>
+      </tr>
+
+      <tr>
+        <td>MILF🎒</td>
+        <td><a href="https://t.me/joinchat/AAAAAEXRIt4rYLq45J6oIQ">https://t.me/joinchat/AAAAAEXRIt4rYLq45J6oIQ</a></td>
+        <td>Для взрослых</td>
+        <td>165957</td>
+        <td>3291</td>
+        <td>2.0</td>
+        <td>1801</td>
+        <td>9165</td>
+        <td>6 лет 19 дней</td>
+      </tr>
+
+      <tr>
+        <td>Кастинг | PornHub</td>
+        <td><a href="https://t.me/joinchat/Xko0neqA3XI2NjQy">https://t.me/joinchat/Xko0neqA3XI2NjQy</a></td>
+        <td>Для взрослых</td>
+        <td>165701</td>
+        <td>1116</td>
+        <td>1.0</td>
+        <td>6992</td>
+        <td>28353</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>💋Stifler’s Mom</td>
+        <td><a href="https://t.me/joinchat/Nshmna0xN240NDYy">https://t.me/joinchat/Nshmna0xN240NDYy</a></td>
+        <td>Для взрослых</td>
+        <td>165567</td>
+        <td>15117</td>
+        <td>10.0</td>
+        <td>1712</td>
+        <td>-2245</td>
+        <td>7 лет 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>DIRTY SEX👉🏿👌🏻</td>
+        <td><a href="https://t.me/joinchat/AAAAAE7SA_Dy3JrwRzWo-g">https://t.me/joinchat/AAAAAE7SA_Dy3JrwRzWo-g</a></td>
+        <td>Для взрослых</td>
+        <td>165269</td>
+        <td>2906</td>
+        <td>2.0</td>
+        <td>1834</td>
+        <td>8253</td>
+        <td>5 лет 10 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>🇩🇪GERMAN PORN</td>
+        <td><a href="https://t.me/joinchat/q5PlaX0fCd45MDIy">https://t.me/joinchat/q5PlaX0fCd45MDIy</a></td>
+        <td>Для взрослых</td>
+        <td>165010</td>
+        <td>636</td>
+        <td>1.0</td>
+        <td>6999</td>
+        <td>25153</td>
+        <td>1 год 1 месяц</td>
+      </tr>
+
+      <tr>
+        <td>🌈𝐒𝐇𝐄𝐌𝐀𝐋𝐄</td>
+        <td><a href="https://t.me/joinchat/05ESRWVL2L84NWVl">https://t.me/joinchat/05ESRWVL2L84NWVl</a></td>
+        <td>Для взрослых</td>
+        <td>164320</td>
+        <td>16917</td>
+        <td>11.0</td>
+        <td>-595</td>
+        <td>2245</td>
+        <td>2 года 8 месяцев</td>
+      </tr>
+
+      <tr>
+        <td>БЕСПРЕДЕЛ</td>
+        <td><a href="https://t.me/joinchat/SLiNvOO22lI4N2My">https://t.me/joinchat/SLiNvOO22lI4N2My</a></td>
+        <td>Для взрослых</td>
+        <td>163595</td>
+        <td>11942</td>
+        <td>8.0</td>
+        <td>-483</td>
+        <td>-2266</td>
+        <td>3 года 10 месяцев</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <script>
+  function sortTable(n) {
+    var table = document.getElementById("channelsTable");
+    var rows = Array.from(table.rows).slice(1);
+    var asc = table.getAttribute("data-sort-col") != n || table.getAttribute("data-sort-order") == "desc";
+
+    rows.sort(function(rowA, rowB) {
+      var a = rowA.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var b = rowB.cells[n].innerText.replace(/\s+/g, '').replace(',', '.');
+      var numA = parseFloat(a);
+      var numB = parseFloat(b);
+      if (!isNaN(numA) && !isNaN(numB)) {
+        return asc ? numA - numB : numB - numA;
+      } else {
+        return asc ? a.localeCompare(b) : b.localeCompare(a);
+      }
+    });
+
+    for (var row of rows) table.tBodies[0].appendChild(row);
+
+    var ths = table.tHead.rows[0].cells;
+    for (var i = 0; i < ths.length; i++) {
+      ths[i].classList.remove("sorted-asc", "sorted-desc");
+    }
+
+    ths[n].classList.add(asc ? "sorted-asc" : "sorted-desc");
+
+    for (var r of rows) {
+      for (var i = 0; i < r.cells.length; i++) {
+        r.cells[i].classList.toggle("active-col", i == n);
+      }
+    }
+
+    table.setAttribute("data-sort-col", n);
+    table.setAttribute("data-sort-order", asc ? "asc" : "desc");
+  }
+  </script>
+
+</body>
+</html>
